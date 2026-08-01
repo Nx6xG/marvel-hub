@@ -1189,3 +1189,8 @@ details.season[open] summary::before { content: "▾ "; }
 .ep-o { font-size: 12.5px; color: var(--muted); margin-top: 2px; }
 .ep-d { font-family: var(--mono); font-size: 10px; color: var(--faint); white-space: nowrap; }
 @media (max-width: 560px) { .ep-d { display: none; } }
+
+/* Lore-Dropdown: unsichtbare Brücke über die 6px-Lücke, damit der Hover beim Rüberfahren nicht abreißt */
+.nav-drop-menu::before {
+  content: ""; position: absolute; top: -10px; left: -6px; right: -6px; height: 10px;
+}
