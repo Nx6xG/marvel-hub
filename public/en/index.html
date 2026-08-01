@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Marvel Hub — The Marvel wiki of every universe</title>
+<title>Earth-616 — the Marvel fan archive: films, shows, characters &amp; lore</title>
 <meta name="description" content="Marvel Hub: the fan wiki covering every Marvel movie universe — MCU, X-Men, Sony, classics and the TV era. With Doomsday countdown, watchlist, characters, teams and lore.">
 <link rel="canonical" href="https://marvel-hub.vercel.app/en/">
 <link rel="alternate" hreflang="en" href="https://marvel-hub.vercel.app/en/">
 <link rel="alternate" hreflang="de" href="https://marvel-hub.vercel.app/">
 <link rel="alternate" hreflang="x-default" href="https://marvel-hub.vercel.app/">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Marvel Hub">
-<meta property="og:title" content="Marvel Hub — The Marvel wiki of every universe">
+<meta property="og:site_name" content="Erde-616">
+<meta property="og:title" content="Earth-616 — the Marvel fan archive: films, shows, characters &amp; lore">
 <meta property="og:description" content="Marvel Hub: the fan wiki covering every Marvel movie universe — MCU, X-Men, Sony, classics and the TV era. With Doomsday countdown, watchlist, characters, teams and lore.">
 <meta property="og:url" content="https://marvel-hub.vercel.app/en/">
 <meta property="og:image" content="https://marvel-hub.vercel.app/img/p/doomsday.jpg">
@@ -23,31 +23,73 @@
 </head>
 <body class="neutral" data-page="home">
 <nav class="nav"><div class="nav-inner">
-  <a class="nav-brand" href="/en/">Marvel<b>·</b>Hub</a>
+  <a class="nav-brand" href="/en/">Erde<b>·</b>616</a>
   <div class="nav-links" id="navLinks"><a href="/en/" class="active">Home</a><a href="/en/filme/">Films & Shows</a><a href="/en/charaktere/">Characters</a><a href="/en/teams/">Teams</a><a href="/en/multiversum/">Multiverse</a><a href="/en/artefakte/">Artifacts</a><a href="/en/pfade/">Storylines</a><a href="/en/rekorde/">Records</a><a href="/en/chronik/">Timeline</a><a href="/en/faeden/">Loose Ends</a><a href="/en/event/" class="ev-link">★ Doomsday</a></div>
   <div class="nav-search"><input id="globalSearch" type="search" placeholder="Search …" aria-label="Search …" autocomplete="off"><div class="search-drop" id="searchDrop" hidden></div></div>
   <a class="spoiler-btn lang-btn" href="/" hreflang="de">Deutsch</a>
   <button class="spoiler-btn" id="spoilerToggle" aria-pressed="false">Spoilers: off</button>
 </div></nav>
+
 <header class="hub-hero">
-    <div class="hero-rule">The Archive of Every Marvel Universe</div>
-    <h1 class="metal">Marvel Hub</h1>
-    <p class="hub-sub">MCU, X-Men, Sony & Spider-Verse — 108 films and shows, 128 characters, teams, artifacts, lore. And when a big event approaches, it gets celebrated here. (Note: article texts are currently German-first — English translations are rolling out.)</p>
+    <div class="hero-rule">The Marvel fan archive of every universe</div>
+    <h1 class="metal">Erde-616</h1>
+    <p class="hub-sub">From Iron Man to Doomsday: films, shows, characters and all the lore — across every Marvel universe. (Article texts are German-first for now.)</p>
   </header>
   <main class="wrap" style="padding-bottom:50px">
-    <div class="radar">
-      <div class="radar-col"><div class="radar-k">Recently released</div><div class="radar-films"><a class="radar-film" href="/en/film/ironheart/"><img src="/img/p/ih.jpg" class="fit-contain" alt="Poster: Ironheart" width="173" height="260" loading="lazy" decoding="async"><div class="rf-t">Ironheart</div><div class="rf-d">Juni 2025 · Serie</div></a><a class="radar-film" href="/en/film/the-fantastic-four-first-steps/"><img src="/img/p/f4.jpg"  alt="Poster: The Fantastic Four: First Steps" width="173" height="260" loading="lazy" decoding="async"><div class="rf-t">First Steps</div><div class="rf-d">Juli 2025 · Kino</div></a></div></div>
-      <div class="radar-col now"><div class="radar-k">● In theaters now</div><div class="radar-films"><a class="radar-film" href="/en/film/spider-man-brand-new-day/"><img src="/img/p/bnd.jpg"  alt="Poster: Spider-Man: Brand New Day" width="173" height="260" loading="lazy" decoding="async"><div class="rf-t">Spider-Man: Brand New Day</div><div class="rf-d">seit 31. Juli 2026</div></a></div></div>
-      <div class="radar-col next"><div class="radar-k">Up next</div><div class="radar-films">
-        <a class="radar-film" href="/en/film/avengers-doomsday/"><img src="/img/p/doomsday.jpg"  alt="Poster: Avengers: Doomsday" width="173" height="260" loading="lazy" decoding="async"><div class="radar-cd" id="hubCd">···</div><div class="radar-cd-l">Days · Doomsday</div></a>
-        <a class="radar-film" href="/en/film/avengers-secret-wars/"><div class="poster-fallback"><div class="pf-t metal">Avengers: Secret Wars</div></div><div class="radar-cd" id="hubCdSW" style="font-size:28px">···</div><div class="radar-cd-l">Days · Secret Wars</div></a>
-      </div></div>
-    </div>
-    <a class="event-banner" href="/en/event/">
-      <div class="eb-k">· The Event ·</div><div class="eb-t">Avengers: Doomsday</div>
-      <div class="eb-s">Every Story leads to Doom — 18. Dezember 2026</div>
-      <span class="eb-cta">Enter the Event Hub ➤</span>
+
+    <a class="home-doom" href="/en/event/">
+      <div class="hd-poster"><img src="/img/p/doomsday.jpg" alt="Avengers: Doomsday" fetchpriority="high"></div>
+      <div class="hd-body">
+        <div class="hd-k">The Event · December 18, 2026</div>
+        <div class="hd-title metal">Avengers:<br>Doomsday</div>
+        <div class="hd-cd"><span class="hd-cd-n metal" id="hubCd">···</span><span class="hd-cd-l">Days</span><span class="hd-clock" id="hubClock"></span></div>
+        <p class="hd-s">Lore, a focused watchlist, theories and the full saga timeline — everything on the biggest Marvel film since Endgame.</p>
+        <span class="hd-cta">Enter the Event Hub ➤</span>
+      </div>
     </a>
+
+    <div class="strip">
+      <a class="strip-card now" href="/en/film/spider-man-brand-new-day/">
+    <img src="/img/p/bnd.jpg" alt="" loading="lazy">
+    <div><div class="sc-k">In theaters now</div><div class="sc-t">Spider-Man: Brand New Day</div><div class="sc-s">since July 31, 2026</div></div></a>
+      <a class="strip-card" href="/en/film/the-fantastic-four-first-steps/">
+    <img src="/img/p/f4.jpg" alt="" loading="lazy">
+    <div><div class="sc-k">Recently</div><div class="sc-t">The Fantastic Four: First Steps</div><div class="sc-s">Juli 2025</div></div></a>
+      <a class="strip-card" href="/en/film/ironheart/">
+    <img src="/img/p/ih.jpg" alt="" loading="lazy">
+    <div><div class="sc-k">Recently on Disney+</div><div class="sc-t">Ironheart</div><div class="sc-s">Juni 2025</div></div></a>
+      <a class="strip-card" href="/en/film/avengers-secret-wars/">
+    <img src="/img/p/secretwars.jpg" alt="" loading="lazy">
+    <div><div class="sc-k">After that</div><div class="sc-t">Avengers: Secret Wars</div><div class="sc-s">Dec 2027 · <span id="hubCdSW">…</span> days</div></div></a>
+    </div>
+
+    <div class="tiles">
+      <a class="tile" href="/en/filme/">
+        <div class="tile-imgs"><img src="/img/p/eg.jpg" alt="" loading="lazy"><img src="/img/p/xmen1.jpg" alt="" loading="lazy"><img src="/img/p/sv1.jpg" alt="" loading="lazy"></div>
+        <div class="tile-body"><div class="tile-t">Films &amp; Shows</div><div class="tile-s">108 entries across five universes — scores, trivia & post-credits</div></div>
+        <span class="tile-arr">➤</span>
+      </a><a class="tile" href="/en/charaktere/">
+        <div class="tile-imgs"><img src="/img/c/doom.jpg" alt="" loading="lazy"><img src="/img/c/wolverine.jpg" alt="" loading="lazy"><img src="/img/c/wanda.jpg" alt="" loading="lazy"></div>
+        <div class="tile-body"><div class="tile-t">Characters</div><div class="tile-s">128 characters with bios and relationship webs</div></div>
+        <span class="tile-arr">➤</span>
+      </a><a class="tile" href="/en/chronik/">
+        <div class="tile-imgs"><img src="/img/p/cap1.jpg" alt="" loading="lazy"><img src="/img/p/av1.jpg" alt="" loading="lazy"><img src="/img/p/f4.jpg" alt="" loading="lazy"></div>
+        <div class="tile-body"><div class="tile-t">Timeline</div><div class="tile-s">The story in order — from 1943 to Battleworld</div></div>
+        <span class="tile-arr">➤</span>
+      </a><a class="tile" href="/en/faeden/">
+        <div class="tile-imgs"><img src="/img/p/sc.jpg" alt="" loading="lazy"><img src="/img/p/et.jpg" alt="" loading="lazy"><img src="/img/p/venom3.jpg" alt="" loading="lazy"></div>
+        <div class="tile-body"><div class="tile-t">Loose Ends</div><div class="tile-s">15 cliffhangers that were never resolved</div></div>
+        <span class="tile-arr">➤</span>
+      </a><a class="tile" href="/en/rekorde/">
+        <div class="tile-imgs"><img src="/img/p/logan.jpg" alt="" loading="lazy"><img src="/img/p/howard.jpg" alt="" loading="lazy"><img src="/img/p/morbius.jpg" alt="" loading="lazy"></div>
+        <div class="tile-body"><div class="tile-t">Records</div><div class="tile-s">Top 10, flop 10 — and every Stan Lee cameo</div></div>
+        <span class="tile-arr">➤</span>
+      </a><a class="tile" href="/en/multiversum/">
+        <div class="tile-imgs"><img src="/img/p/mom.jpg" alt="" loading="lazy"><img src="/img/p/dw.jpg" alt="" loading="lazy"><img src="/img/p/sv2.jpg" alt="" loading="lazy"></div>
+        <div class="tile-body"><div class="tile-t">Multiverse</div><div class="tile-s">Earth-616, 828, 838 … which film happens where</div></div>
+        <span class="tile-arr">➤</span>
+      </a>
+    </div>
     <div class="ad-slot" data-ad><span>Ad</span></div>
     <div class="subhead">News</div>
     <div class="news">
@@ -68,17 +110,9 @@
       </div>
       <div class="news-date" style="margin-top:18px"><a href="#/event" style="font-family:var(--mono);font-size:11px">Alle Event-News im Doomsday-Hub →</a></div>
     </div>
-    <div class="subhead">Dive in</div>
-    <div class="tl-controls" style="margin-bottom:40px">
-      <a class="backlink" href="/en/filme/">Films & Shows</a>
-      <a class="backlink" href="/en/charaktere/">Characters</a>
-      <a class="backlink" href="/en/chronik/">Timeline</a>
-      <a class="backlink" href="/en/faeden/">Loose Ends</a>
-      <a class="backlink" href="/en/rekorde/">Records</a>
-    </div>
   </main>
 <footer>
-  <p><strong style="color:var(--muted)">Marvel Hub</strong> · Fan project, not an official Marvel product · Updated: August 2026.</p>
+  <p><strong style="color:var(--muted)">Erde-616</strong> · Fan project, not an official Marvel product · Updated: August 2026.</p>
   <p>Posters/images: Wikipedia (fair use). Scores: Rotten Tomatoes/IMDb, rounded. Progress & settings are stored locally only.</p>
   <p class="f-sig">▚ Every Story leads to Doom ▞</p>
 </footer>

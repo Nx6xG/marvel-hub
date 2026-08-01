@@ -34,16 +34,17 @@
     put("hubCdSW", Math.max(0, Math.floor((tSW - now) / 864e5)));
     put("cdSW", Math.max(0, Math.floor((tSW - now) / 864e5)));
     var diff = tDoom - now;
-    if ($("#cdDays")) {
-      if (diff <= 0) { put("cdDays", "JETZT"); put("cdClock", "IM KINO"); }
-      else {
-        var s = Math.floor(diff / 1000);
-        put("cdDays", Math.floor(s / 86400));
-        put("cdClock", String(Math.floor(s % 86400 / 3600)).padStart(2, "0") + " Std · " + String(Math.floor(s % 3600 / 60)).padStart(2, "0") + " Min · " + String(s % 60).padStart(2, "0") + " Sek");
-      }
+    var clock, days;
+    if (diff <= 0) { days = "JETZT"; clock = "IM KINO"; }
+    else {
+      var s = Math.floor(diff / 1000);
+      days = Math.floor(s / 86400);
+      clock = String(Math.floor(s % 86400 / 3600)).padStart(2, "0") + " Std · " + String(Math.floor(s % 3600 / 60)).padStart(2, "0") + " Min · " + String(s % 60).padStart(2, "0") + " Sek";
     }
+    put("cdDays", days); put("cdClock", clock); put("hubClock", clock);
+    put("promoCd", Math.max(0, Math.floor((tDoom - now) / 864e5)));
   }
-  if ($("#cdDays") || $("#hubCd")) { tick(); setInterval(tick, 1000); }
+  if ($("#cdDays") || $("#hubCd") || $("#promoCd")) { tick(); setInterval(tick, 1000); }
 
   /* ---------- Watchlist ---------- */
   function watched() { return store("msa-watched") || {}; }
@@ -259,6 +260,20 @@
       if (row) applyHl(row.dataset.id);
     });
     map.addEventListener("mouseleave", function () { if (!pcSel) applyHl(null); });
+  }
+
+  /* ---------- Trailer: Click-to-Play (YouTube lädt erst beim Klick) ---------- */
+  var tc = $(".trailer-card[data-yt]");
+  if (tc) {
+    var playTrailer = function () {
+      var key = tc.getAttribute("data-yt");
+      tc.classList.add("playing");
+      tc.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + key +
+        '?autoplay=1&rel=0" title="Trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+      tc.removeAttribute("role"); tc.removeAttribute("tabindex");
+    };
+    tc.addEventListener("click", playTrailer, { once: true });
+    tc.addEventListener("keydown", function (ev) { if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); playTrailer(); } }, { once: true });
   }
 
   /* ---------- Mini-Beziehungsnetz (Charakterseiten) ---------- */

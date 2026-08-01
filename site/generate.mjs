@@ -4,7 +4,8 @@ import { readFileSync, writeFileSync, mkdirSync, cpSync, existsSync } from "node
 import { join } from "node:path";
 
 /* ================= Konfiguration ================= */
-const SITE_URL = process.env.SITE_URL || "https://marvel-hub.vercel.app"; // nach Domain-Wechsel anpassen
+const SITE_URL = process.env.SITE_URL || "https://marvel-hub.vercel.app";
+const SITE_NAME = "Erde-616"; // nach Domain-Wechsel anpassen
 const OUT = "public";
 const LANGS = ["de", "en"];
 
@@ -26,10 +27,10 @@ const REL_NAME = { verbuendet: "Verbündete", feind: "Feinde", familie: "Familie
 /* ================= i18n ================= */
 const T = {
   de: {
-    langName: "Deutsch", other: "English", tagline: "Das Archiv aller Marvel-Universen",
+    langName: "Deutsch", other: "English", tagline: "Das Marvel-Fanarchiv aller Universen",
     nav: { home: "Start", films: "Filme & Serien", chars: "Charaktere", teams: "Teams", multi: "Multiversum", arts: "Artefakte", paths: "Pfade", records: "Rekorde", chron: "Chronik", threads: "Offene Fäden", event: "★ Doomsday" },
     spoiler_off: "Spoiler: aus", search_ph: "Suche …",
-    home_sub: "MCU, X-Men, Sony & Spider-Verse — 108 Filme und Serien, 128 Charaktere, Teams, Artefakte, Lore. Und wenn ein großes Event ansteht, wird es hier zelebriert.",
+    home_sub: "Von Iron Man bis Doomsday: Filme, Serien, Charaktere und die ganze Lore — quer durch alle Marvel-Universen.",
     home_desc: "Marvel Hub: das Fan-Wiki über alle Marvel-Film-Universen — MCU, X-Men, Sony, Klassiker und TV-Ära. Mit Doomsday-Countdown, Watchlist, Charakteren, Teams und Lore.",
     days: "Tage", radar_last: "Zuletzt erschienen", radar_now: "● Jetzt im Kino", radar_next: "Als Nächstes",
     event_k: "· Das Event ·", event_cta: "Zum Event-Hub ➤", news: "Neuigkeiten", dive: "Direkt eintauchen",
@@ -49,10 +50,10 @@ const T = {
     ad: "Anzeige", nothing: "Nichts gefunden.", all: "Alle", only_series: "Nur Serien", classics: "Klassiker", tv_era: "TV-Ära",
   },
   en: {
-    langName: "English", other: "Deutsch", tagline: "The Archive of Every Marvel Universe",
+    langName: "English", other: "Deutsch", tagline: "The Marvel fan archive of every universe",
     nav: { home: "Home", films: "Films & Shows", chars: "Characters", teams: "Teams", multi: "Multiverse", arts: "Artifacts", paths: "Storylines", records: "Records", chron: "Timeline", threads: "Loose Ends", event: "★ Doomsday" },
     spoiler_off: "Spoilers: off", search_ph: "Search …",
-    home_sub: "MCU, X-Men, Sony & Spider-Verse — 108 films and shows, 128 characters, teams, artifacts, lore. And when a big event approaches, it gets celebrated here. (Note: article texts are currently German-first — English translations are rolling out.)",
+    home_sub: "From Iron Man to Doomsday: films, shows, characters and all the lore — across every Marvel universe. (Article texts are German-first for now.)",
     home_desc: "Marvel Hub: the fan wiki covering every Marvel movie universe — MCU, X-Men, Sony, classics and the TV era. With Doomsday countdown, watchlist, characters, teams and lore.",
     days: "Days", radar_last: "Recently released", radar_now: "● In theaters now", radar_next: "Up next",
     event_k: "· The Event ·", event_cta: "Enter the Event Hub ➤", news: "News", dive: "Dive in",
@@ -112,12 +113,19 @@ const charImg = (id, alt, cls = "cface") =>
     ? `<img src="/img/c/${id}.jpg" class="${cls}" alt="${esc(alt)}" loading="lazy" decoding="async">`
     : `<div class="poster-fallback"><div class="pf-t metal">${esc(alt)}</div></div>`;
 
-// Breitformat-Erkennung entfällt: alle Bilder sind Dateien; fit-contain-Liste aus wide.json
+// Breitformat-Bilder (Serien-Titelkarten): Letterbox mit geblurrtem Hintergrund statt gequetscht
 const WIDE = JSON.parse(readFileSync("build/wide.json", "utf8"));
 const posterImgW = (id, alt) => {
-  const html = posterImg(id, alt, WIDE.includes(id) ? "fit-contain" : "");
-  return html;
+  if (!existsSync(`public/img/p/${id}.jpg`)) return `<div class="poster-fallback"><div class="pf-t metal">${esc(alt)}</div></div>`;
+  if (!WIDE.includes(id)) return posterImg(id, alt);
+  return `<span class="lbox"><img class="lbox-bg" src="/img/p/${id}.jpg" alt="" aria-hidden="true" loading="lazy"><img class="lbox-fg" src="/img/p/${id}.jpg" alt="Poster: ${esc(alt)}" loading="lazy"></span>`;
 };
+
+// i18n: Feld mit _en-Suffix bevorzugen, sonst deutscher Fallback
+const tr = (o, f, lang) => (lang === "en" && o[f + "_en"] != null ? o[f + "_en"] : o[f]);
+
+// YouTube-Trailer-IDs (von fetch-tmdb.mjs erzeugt; ohne Key: leere Map → externer Link als Fallback)
+const TRAILERS = existsSync("site/data/trailers.json") ? JSON.parse(readFileSync("site/data/trailers.json", "utf8")) : {};
 
 const adSlot = (L) => `<div class="ad-slot" data-ad><span>${L.ad}</span></div>`;
 
@@ -150,7 +158,7 @@ function page({ lang, path, title, desc, ogImage, body, dataPage, jsonld, noinde
 <link rel="alternate" hreflang="${altLang}" href="${SITE_URL}${altPrefix}${path}">
 <link rel="alternate" hreflang="x-default" href="${SITE_URL}${path}">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Marvel Hub">
+<meta property="og:site_name" content="Erde-616">
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:url" content="${canonical}">
@@ -163,15 +171,16 @@ ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld)}</script
 </head>
 <body class="${dataPage === "event" ? "" : "neutral"}" data-page="${dataPage || ""}">
 <nav class="nav"><div class="nav-inner">
-  <a class="nav-brand" href="${prefix}/">Marvel<b>·</b>Hub</a>
+  <a class="nav-brand" href="${prefix}/">Erde<b>·</b>616</a>
   <div class="nav-links" id="navLinks">${nav}</div>
   <div class="nav-search"><input id="globalSearch" type="search" placeholder="${L.search_ph}" aria-label="${L.search_ph}" autocomplete="off"><div class="search-drop" id="searchDrop" hidden></div></div>
   <a class="spoiler-btn lang-btn" href="${altPrefix}${path}" hreflang="${altLang}">${L.other}</a>
   <button class="spoiler-btn" id="spoilerToggle" aria-pressed="false">${L.spoiler_off}</button>
 </div></nav>
+${dataPage !== "event" && dataPage !== "home" ? `<a class="promo" href="${prefix}/event/">★ <b>Avengers: Doomsday</b><span class="promo-x">${lang === "de" ? "Erfahre alles zum kommenden Film" : "Everything about the upcoming film"}</span><span class="promo-cd"><span id="promoCd">…</span> ${lang === "de" ? "Tage" : "days"}</span><span class="promo-arr">➤</span></a>` : ""}
 ${body}
 <footer>
-  <p><strong style="color:var(--muted)">Marvel Hub</strong> · ${L.footer1}</p>
+  <p><strong style="color:var(--muted)">Erde-616</strong> · ${L.footer1}</p>
   <p>${L.footer2}</p>
   <p class="f-sig">▚ Every Story leads to Doom ▞</p>
 </footer>
@@ -223,10 +232,15 @@ function filmBody(f, lang) {
       </div>
     </div>
   </div>
-  <a class="trailer-card" href="https://www.youtube.com/results?search_query=${trailerQ}" target="_blank" rel="noopener">
+  ${TRAILERS[id]
+    ? `<div class="trailer-card" data-yt="${TRAILERS[id]}" role="button" tabindex="0" aria-label="${L.trailer}">
+    ${existsSync(`public/img/p/${id}.jpg`) ? `<img src="/img/p/${id}.jpg" alt="" aria-hidden="true" loading="lazy">` : ""}
+    <div class="tc-overlay"><div class="tc-play">▶</div><div class="tc-t">${L.trailer}</div><div class="tc-s">${lang === "de" ? "Klick lädt den YouTube-Player" : "Click loads the YouTube player"}</div></div>
+  </div>`
+    : `<a class="trailer-card" href="https://www.youtube.com/results?search_query=${trailerQ}" target="_blank" rel="noopener">
     ${existsSync(`public/img/p/${id}.jpg`) ? `<img src="/img/p/${id}.jpg" alt="" aria-hidden="true" loading="lazy">` : ""}
     <div class="tc-overlay"><div class="tc-play">▶</div><div class="tc-t">${L.trailer}</div><div class="tc-s">${L.trailer_s}</div></div>
-  </a>
+  </a>`}
   <div class="fp-section"><div class="fp-label">${L.plot}</div><p>${esc(f.plot)}</p></div>
   <div class="fp-section"><div class="fp-label">${L.cast}</div><p>${f.cast.map(esc).join(" · ")}</p></div>
   ${inFilm.length ? `<div class="fp-section"><div class="fp-label">${L.figures}</div><div class="fp-chars">` +
@@ -314,11 +328,11 @@ function artBody(a, lang) {
   <a class="backlink" href="${prefix}/artefakte/">${L.back}</a>
   <div class="art-sym metal" style="font-size:64px">${a.sym}</div>
   <h1 class="metal fp-h1">${esc(a.n)}</h1>
-  <div class="fp-meta"><b>${esc(a.sub)}</b><br>${L.status}: ${esc(a.status)}</div>
-  <div class="fp-section"><div class="fp-label">${L.story}</div><p>${esc(a.d)}</p></div>
+  <div class="fp-meta"><b>${esc(tr(a, "sub", lang))}</b><br>${L.status}: ${esc(tr(a, "status", lang))}</div>
+  <div class="fp-section"><div class="fp-label">${L.story}</div><p>${esc(tr(a, "d", lang))}</p></div>
   ${a.stones ? `<div class="fp-section"><div class="fp-label">${L.stones}</div><div class="cp-rel">` +
-    a.stones.map((s) => `<a style="cursor:default"><span><b>${esc(s.n)}</b></span><span class="rl" style="text-align:right;max-width:60%">${esc(s.d)}</span></a>`).join("") + `</div></div>` : ""}
-  <div class="fp-section"><div class="fp-label">${L.stations}</div><ul>${a.stations.map((s) => `<li>${esc(s)}</li>`).join("")}</ul></div>
+    tr(a, "stones", lang).map((s) => `<a style="cursor:default"><span><b>${esc(s.n)}</b></span><span class="rl" style="text-align:right;max-width:60%">${esc(s.d)}</span></a>`).join("") + `</div></div>` : ""}
+  <div class="fp-section"><div class="fp-label">${L.stations}</div><ul>${tr(a, "stations", lang).map((s) => `<li>${esc(s)}</li>`).join("")}</ul></div>
   <div class="fp-section"><div class="fp-label">${L.seen_in}</div>${miniFilmChips(a.films, lang)}</div>
 </main>`;
 }
@@ -566,38 +580,54 @@ function eventBody(lang) {
 /* ================= Home ================= */
 function homeBody(lang) {
   const L = T[lang];
+  const de = lang === "de";
   const prefix = lang === "en" ? "/en" : "";
-  const radarFilm = (id, t, d) => `<a class="radar-film" href="${prefix}${filmUrl(id)}">${posterImgW(id, byId[id].t)}<div class="rf-t">${esc(t)}</div><div class="rf-d">${esc(d)}</div></a>`;
+  const tiles = [
+    { href: "/filme/", t: L.nav.films, s: de ? "108 Einträge aus fünf Universen — mit Scores, Trivia & Post-Credits" : "108 entries across five universes — scores, trivia & post-credits", imgs: ["p/eg", "p/xmen1", "p/sv1"] },
+    { href: "/charaktere/", t: L.nav.chars, s: de ? "128 Figuren mit Biografien und Beziehungs-Netz" : "128 characters with bios and relationship webs", imgs: ["c/doom", "c/wolverine", "c/wanda"] },
+    { href: "/chronik/", t: L.nav.chron, s: de ? "Die Geschichte in richtiger Reihenfolge — von 1943 bis Battleworld" : "The story in order — from 1943 to Battleworld", imgs: ["p/cap1", "p/av1", "p/f4"] },
+    { href: "/faeden/", t: L.nav.threads, s: de ? "15 Cliffhanger, die nie aufgelöst wurden" : "15 cliffhangers that were never resolved", imgs: ["p/sc", "p/et", "p/venom3"] },
+    { href: "/rekorde/", t: L.nav.records, s: de ? "Top 10, Flop 10 — und jeder Stan-Lee-Cameo" : "Top 10, flop 10 — and every Stan Lee cameo", imgs: ["p/logan", "p/howard", "p/morbius"] },
+    { href: "/multiversum/", t: L.nav.multi, s: de ? "Erde-616, 828, 838 … wo welcher Film spielt" : "Earth-616, 828, 838 … which film happens where", imgs: ["p/mom", "p/dw", "p/sv2"] },
+  ];
+  const strip = (id, label, sub, featured) => `<a class="strip-card${featured ? " now" : ""}" href="${prefix}${filmUrl(id)}">
+    <img src="/img/p/${id}.jpg" alt="" loading="lazy">
+    <div><div class="sc-k">${esc(label)}</div><div class="sc-t">${esc(byId[id].t)}</div><div class="sc-s">${sub}</div></div></a>`;
   return `<header class="hub-hero">
     <div class="hero-rule">${L.tagline}</div>
-    <h1 class="metal">Marvel Hub</h1>
+    <h1 class="metal">Erde-616</h1>
     <p class="hub-sub">${L.home_sub}</p>
   </header>
   <main class="wrap" style="padding-bottom:50px">
-    <div class="radar">
-      <div class="radar-col"><div class="radar-k">${L.radar_last}</div><div class="radar-films">${radarFilm("ih", "Ironheart", "Juni 2025 · Serie")}${radarFilm("f4", "First Steps", "Juli 2025 · Kino")}</div></div>
-      <div class="radar-col now"><div class="radar-k">${L.radar_now}</div><div class="radar-films">${radarFilm("bnd", "Spider-Man: Brand New Day", "seit 31. Juli 2026")}</div></div>
-      <div class="radar-col next"><div class="radar-k">${L.radar_next}</div><div class="radar-films">
-        <a class="radar-film" href="${prefix}${filmUrl("doomsday")}">${posterImgW("doomsday", "Avengers: Doomsday")}<div class="radar-cd" id="hubCd">···</div><div class="radar-cd-l">${L.days} · Doomsday</div></a>
-        <a class="radar-film" href="${prefix}${filmUrl("secretwars")}">${posterImgW("secretwars", "Avengers: Secret Wars")}<div class="radar-cd" id="hubCdSW" style="font-size:28px">···</div><div class="radar-cd-l">${L.days} · Secret Wars</div></a>
-      </div></div>
-    </div>
-    <a class="event-banner" href="${prefix}/event/">
-      <div class="eb-k">${L.event_k}</div><div class="eb-t">Avengers: Doomsday</div>
-      <div class="eb-s">Every Story leads to Doom — 18. Dezember 2026</div>
-      <span class="eb-cta">${L.event_cta}</span>
+
+    <a class="home-doom" href="${prefix}/event/">
+      <div class="hd-poster"><img src="/img/p/doomsday.jpg" alt="Avengers: Doomsday" fetchpriority="high"></div>
+      <div class="hd-body">
+        <div class="hd-k">${de ? "Das Event · 18. Dezember 2026" : "The Event · December 18, 2026"}</div>
+        <div class="hd-title metal">Avengers:<br>Doomsday</div>
+        <div class="hd-cd"><span class="hd-cd-n metal" id="hubCd">···</span><span class="hd-cd-l">${L.days}</span><span class="hd-clock" id="hubClock"></span></div>
+        <p class="hd-s">${de ? "Lore, fokussierte Watchlist, Theorien und die komplette Saga-Timeline — alles zum größten Marvel-Film seit Endgame." : "Lore, a focused watchlist, theories and the full saga timeline — everything on the biggest Marvel film since Endgame."}</p>
+        <span class="hd-cta">${L.event_cta}</span>
+      </div>
     </a>
+
+    <div class="strip">
+      ${strip("bnd", de ? "Jetzt im Kino" : "In theaters now", de ? "seit 31. Juli 2026" : "since July 31, 2026", true)}
+      ${strip("f4", de ? "Zuletzt im Kino" : "Recently", "Juli 2025")}
+      ${strip("ih", de ? "Zuletzt auf Disney+" : "Recently on Disney+", "Juni 2025")}
+      ${strip("secretwars", de ? "Danach" : "After that", de ? `Dez 2027 · in <span id="hubCdSW">…</span> Tagen` : `Dec 2027 · <span id="hubCdSW">…</span> days`)}
+    </div>
+
+    <div class="tiles">
+      ${tiles.map((t) => `<a class="tile" href="${prefix}${t.href}">
+        <div class="tile-imgs">${t.imgs.map((i) => `<img src="/img/${i}.jpg" alt="" loading="lazy">`).join("")}</div>
+        <div class="tile-body"><div class="tile-t">${esc(t.t)}</div><div class="tile-s">${t.s}</div></div>
+        <span class="tile-arr">➤</span>
+      </a>`).join("")}
+    </div>
     ${adSlot(L)}
     <div class="subhead">${L.news}</div>
     ${frag("hub-news")}
-    <div class="subhead">${L.dive}</div>
-    <div class="tl-controls" style="margin-bottom:40px">
-      <a class="backlink" href="${prefix}/filme/">${T[lang].nav.films}</a>
-      <a class="backlink" href="${prefix}/charaktere/">${T[lang].nav.chars}</a>
-      <a class="backlink" href="${prefix}/chronik/">${T[lang].nav.chron}</a>
-      <a class="backlink" href="${prefix}/faeden/">${T[lang].nav.threads}</a>
-      <a class="backlink" href="${prefix}/rekorde/">${T[lang].nav.records}</a>
-    </div>
   </main>`;
 }
 
@@ -613,18 +643,18 @@ function emit(lang, path, html) {
 
 for (const lang of LANGS) {
   const L = T[lang];
-  const site = lang === "de" ? "Marvel Hub — Das Marvel-Wiki aller Universen" : "Marvel Hub — The Marvel wiki of every universe";
+  const site = lang === "de" ? "Erde-616 — Das Marvel-Fanarchiv: Filme, Serien, Charaktere & Lore" : "Earth-616 — the Marvel fan archive: films, shows, characters & lore";
   emit(lang, "/", page({ lang, path: "/", title: site, desc: L.home_desc, dataPage: "home", ogImage: "/img/p/doomsday.jpg", body: homeBody(lang) }));
-  emit(lang, "/filme/", page({ lang, path: "/filme/", title: (lang === "de" ? "Alle Marvel-Filme & -Serien" : "All Marvel films & shows") + " · Marvel Hub", desc: lang === "de" ? "108 Marvel-Filme und -Serien aus MCU, X-Men, Sony, Klassikern und TV-Ära — mit Scores, Trivia und Post-Credit-Szenen." : "108 Marvel films and shows across the MCU, X-Men, Sony, classics and the TV era.", dataPage: "wiki", body: wikiIndexBody(lang) }));
-  emit(lang, "/charaktere/", page({ lang, path: "/charaktere/", title: (lang === "de" ? "Marvel-Charaktere" : "Marvel characters") + " · Marvel Hub", desc: lang === "de" ? "128 Marvel-Charaktere mit Biografien, Kräften und Beziehungs-Netzen." : "128 Marvel characters with bios, powers and relationship webs.", dataPage: "wiki", body: charIndexBody(lang) }));
-  emit(lang, "/teams/", page({ lang, path: "/teams/", title: "Marvel-Teams · Marvel Hub", desc: lang === "de" ? "Von den Avengers bis Haus Doom: 21 Marvel-Teams und Schurken-Fraktionen." : "From the Avengers to House Doom: 21 Marvel teams and villain factions.", dataPage: "teams", body: teamsIndexBody(lang) }));
-  emit(lang, "/multiversum/", page({ lang, path: "/multiversum/", title: (lang === "de" ? "Das Marvel-Multiversum: alle Erde-Nummern" : "The Marvel multiverse: every Earth number") + " · Marvel Hub", desc: lang === "de" ? "Erde-616, 828, 838, 10005 & Co.: Welche Marvel-Filme in welchem Universum spielen." : "Earth-616, 828, 838, 10005 & co: which Marvel films happen in which universe.", dataPage: "multi", body: multiBody(lang) }));
-  emit(lang, "/artefakte/", page({ lang, path: "/artefakte/", title: (lang === "de" ? "Marvel-Artefakte" : "Marvel artifacts") + " · Marvel Hub", desc: lang === "de" ? "Infinity-Steine, Mjölnir, Darkhold & Co. — 26 legendäre Marvel-Objekte." : "Infinity Stones, Mjölnir, the Darkhold & more — 26 legendary Marvel objects.", dataPage: "arts", body: artsIndexBody(lang) }));
-  emit(lang, "/pfade/", page({ lang, path: "/pfade/", title: (lang === "de" ? "Storyline-Pfade & Post-Credit-Kette" : "Storylines & the post-credit chain") + " · Marvel Hub", desc: lang === "de" ? "16 kuratierte Handlungsstränge durchs Marvel-Universum plus die komplette Post-Credit-Verkettung." : "16 curated story threads plus the complete post-credit chain.", dataPage: "paths", body: pathsIndexBody(lang) }));
-  emit(lang, "/rekorde/", page({ lang, path: "/rekorde/", title: (lang === "de" ? "Marvel-Rekorde: Top & Flop" : "Marvel records: top & flop") + " · Marvel Hub", desc: lang === "de" ? "Die besten und schlechtesten Marvel-Filme, Kino-Rekorde und alle Stan-Lee-Cameos." : "The best and worst Marvel films, box-office records and every Stan Lee cameo.", dataPage: "records", body: recordsBody(lang) }));
-  emit(lang, "/chronik/", page({ lang, path: "/chronik/", title: (lang === "de" ? "Die MCU-Chronik: die Geschichte in richtiger Reihenfolge" : "The MCU timeline: the story in order") + " · Marvel Hub", desc: lang === "de" ? "Die Weltgeschichte des MCU von der Urzeit bis Battleworld — nach Ereignissen statt Kinostarts." : "The in-universe history of the MCU from prehistory to Battleworld.", dataPage: "chron", body: chronBody(lang) }));
-  emit(lang, "/faeden/", page({ lang, path: "/faeden/", title: (lang === "de" ? "Die offenen Fäden des Marvel-Universums" : "Marvel's loose ends") + " · Marvel Hub", desc: lang === "de" ? "15 Cliffhanger, die Marvel nie aufgelöst hat — vom Zehn-Ringe-Signal bis Knull." : "15 cliffhangers Marvel never resolved — from the Ten Rings signal to Knull.", dataPage: "threads", body: threadsBody(lang) }));
-  emit(lang, "/event/", page({ lang, path: "/event/", title: "Avengers: Doomsday — Event-Hub · Marvel Hub", desc: lang === "de" ? "Countdown, Saga-Timeline, Watchlist, Lore und Theorien zu Avengers: Doomsday (18. Dezember 2026)." : "Countdown, saga timeline, watchlist, lore and theories for Avengers: Doomsday (December 18, 2026).", dataPage: "event", ogImage: "/img/p/doomsday.jpg", body: eventBody(lang) }));
+  emit(lang, "/filme/", page({ lang, path: "/filme/", title: (lang === "de" ? "Alle Marvel-Filme & -Serien" : "All Marvel films & shows") + " · Erde-616", desc: lang === "de" ? "108 Marvel-Filme und -Serien aus MCU, X-Men, Sony, Klassikern und TV-Ära — mit Scores, Trivia und Post-Credit-Szenen." : "108 Marvel films and shows across the MCU, X-Men, Sony, classics and the TV era.", dataPage: "wiki", body: wikiIndexBody(lang) }));
+  emit(lang, "/charaktere/", page({ lang, path: "/charaktere/", title: (lang === "de" ? "Marvel-Charaktere" : "Marvel characters") + " · Erde-616", desc: lang === "de" ? "128 Marvel-Charaktere mit Biografien, Kräften und Beziehungs-Netzen." : "128 Marvel characters with bios, powers and relationship webs.", dataPage: "wiki", body: charIndexBody(lang) }));
+  emit(lang, "/teams/", page({ lang, path: "/teams/", title: "Marvel-Teams · Erde-616", desc: lang === "de" ? "Von den Avengers bis Haus Doom: 21 Marvel-Teams und Schurken-Fraktionen." : "From the Avengers to House Doom: 21 Marvel teams and villain factions.", dataPage: "teams", body: teamsIndexBody(lang) }));
+  emit(lang, "/multiversum/", page({ lang, path: "/multiversum/", title: (lang === "de" ? "Das Marvel-Multiversum: alle Erde-Nummern" : "The Marvel multiverse: every Earth number") + " · Erde-616", desc: lang === "de" ? "Erde-616, 828, 838, 10005 & Co.: Welche Marvel-Filme in welchem Universum spielen." : "Earth-616, 828, 838, 10005 & co: which Marvel films happen in which universe.", dataPage: "multi", body: multiBody(lang) }));
+  emit(lang, "/artefakte/", page({ lang, path: "/artefakte/", title: (lang === "de" ? "Marvel-Artefakte" : "Marvel artifacts") + " · Erde-616", desc: lang === "de" ? "Infinity-Steine, Mjölnir, Darkhold & Co. — 26 legendäre Marvel-Objekte." : "Infinity Stones, Mjölnir, the Darkhold & more — 26 legendary Marvel objects.", dataPage: "arts", body: artsIndexBody(lang) }));
+  emit(lang, "/pfade/", page({ lang, path: "/pfade/", title: (lang === "de" ? "Storyline-Pfade & Post-Credit-Kette" : "Storylines & the post-credit chain") + " · Erde-616", desc: lang === "de" ? "16 kuratierte Handlungsstränge durchs Marvel-Universum plus die komplette Post-Credit-Verkettung." : "16 curated story threads plus the complete post-credit chain.", dataPage: "paths", body: pathsIndexBody(lang) }));
+  emit(lang, "/rekorde/", page({ lang, path: "/rekorde/", title: (lang === "de" ? "Marvel-Rekorde: Top & Flop" : "Marvel records: top & flop") + " · Erde-616", desc: lang === "de" ? "Die besten und schlechtesten Marvel-Filme, Kino-Rekorde und alle Stan-Lee-Cameos." : "The best and worst Marvel films, box-office records and every Stan Lee cameo.", dataPage: "records", body: recordsBody(lang) }));
+  emit(lang, "/chronik/", page({ lang, path: "/chronik/", title: (lang === "de" ? "Die MCU-Chronik: die Geschichte in richtiger Reihenfolge" : "The MCU timeline: the story in order") + " · Erde-616", desc: lang === "de" ? "Die Weltgeschichte des MCU von der Urzeit bis Battleworld — nach Ereignissen statt Kinostarts." : "The in-universe history of the MCU from prehistory to Battleworld.", dataPage: "chron", body: chronBody(lang) }));
+  emit(lang, "/faeden/", page({ lang, path: "/faeden/", title: (lang === "de" ? "Die offenen Fäden des Marvel-Universums" : "Marvel's loose ends") + " · Erde-616", desc: lang === "de" ? "15 Cliffhanger, die Marvel nie aufgelöst hat — vom Zehn-Ringe-Signal bis Knull." : "15 cliffhangers Marvel never resolved — from the Ten Rings signal to Knull.", dataPage: "threads", body: threadsBody(lang) }));
+  emit(lang, "/event/", page({ lang, path: "/event/", title: "Avengers: Doomsday — Event-Hub · Erde-616", desc: lang === "de" ? "Countdown, Saga-Timeline, Watchlist, Lore und Theorien zu Avengers: Doomsday (18. Dezember 2026)." : "Countdown, saga timeline, watchlist, lore and theories for Avengers: Doomsday (December 18, 2026).", dataPage: "event", ogImage: "/img/p/doomsday.jpg", body: eventBody(lang) }));
 
   for (const f of FILMS) {
     const sc = SCORES[f.id];
@@ -639,20 +669,20 @@ for (const lang of LANGS) {
     };
     emit(lang, filmUrl(f.id), page({
       lang, path: filmUrl(f.id),
-      title: `${f.t} (${parseInt(f.y) || f.y}) — ${f.type}, Cast, Trivia & Post-Credits · Marvel Hub`,
+      title: `${f.t} (${parseInt(f.y) || f.y}) — ${f.type}, Cast, Trivia & Post-Credits · Erde-616`,
       desc: stripTags(f.plot).slice(0, 158),
       ogImage: `/img/p/${f.id}.jpg`, dataPage: "film", jsonld,
       body: filmBody(f, lang),
     }));
   }
-  for (const c of CHARS) emit(lang, charUrl(c.id), page({ lang, path: charUrl(c.id), title: `${c.n} (${c.a}) — Marvel-Charakter · Marvel Hub`, desc: stripTags(c.bio).slice(0, 158), ogImage: existsSync(`public/img/c/${c.id}.jpg`) ? `/img/c/${c.id}.jpg` : undefined, dataPage: "char", body: charBody(c, lang) }));
-  for (const t of TEAMS) emit(lang, teamUrl(t.id), page({ lang, path: teamUrl(t.id), title: `${t.n} — Marvel-Team · Marvel Hub`, desc: stripTags(t.desc).slice(0, 158), dataPage: "team", body: teamBody(t, lang) }));
-  for (const a of ARTIFACTS) emit(lang, artUrl(a.id), page({ lang, path: artUrl(a.id), title: `${a.n} — Marvel-Artefakt · Marvel Hub`, desc: stripTags(a.d).slice(0, 158), dataPage: "art", body: artBody(a, lang) }));
-  for (const p of PATHS) emit(lang, pathUrl(p.id), page({ lang, path: pathUrl(p.id), title: `${p.n} — Storyline-Pfad · Marvel Hub`, desc: stripTags(p.intro).slice(0, 158), dataPage: "path", body: pathBody(p, lang) }));
+  for (const c of CHARS) emit(lang, charUrl(c.id), page({ lang, path: charUrl(c.id), title: `${c.n} (${c.a}) — Marvel-Charakter · Erde-616`, desc: stripTags(c.bio).slice(0, 158), ogImage: existsSync(`public/img/c/${c.id}.jpg`) ? `/img/c/${c.id}.jpg` : undefined, dataPage: "char", body: charBody(c, lang) }));
+  for (const t of TEAMS) emit(lang, teamUrl(t.id), page({ lang, path: teamUrl(t.id), title: `${t.n} — Marvel-Team · Erde-616`, desc: stripTags(t.desc).slice(0, 158), dataPage: "team", body: teamBody(t, lang) }));
+  for (const a of ARTIFACTS) emit(lang, artUrl(a.id), page({ lang, path: artUrl(a.id), title: `${a.n} — Marvel-Artefakt · Erde-616`, desc: stripTags(a.d).slice(0, 158), dataPage: "art", body: artBody(a, lang) }));
+  for (const p of PATHS) emit(lang, pathUrl(p.id), page({ lang, path: pathUrl(p.id), title: `${p.n} — Storyline-Pfad · Erde-616`, desc: stripTags(p.intro).slice(0, 158), dataPage: "path", body: pathBody(p, lang) }));
 }
 
 /* 404 */
-writeFileSync(join(OUT, "404.html"), page({ lang: "de", path: "/404", title: "404 · Marvel Hub", desc: "Seite nicht gefunden.", dataPage: "404", noindex: true, body: `<main class="wrap" style="padding:120px 22px;text-align:center"><h1 class="metal" style="font-size:80px">404</h1><p class="hub-sub">Diese Seite wurde gesnapt. <a href="/">Zurück zum Hub</a> — oder frag die TVA.</p></main>` }));
+writeFileSync(join(OUT, "404.html"), page({ lang: "de", path: "/404", title: "404 · Erde-616", desc: "Seite nicht gefunden.", dataPage: "404", noindex: true, body: `<main class="wrap" style="padding:120px 22px;text-align:center"><h1 class="metal" style="font-size:80px">404</h1><p class="hub-sub">Diese Seite wurde gesnapt. <a href="/">Zurück zum Hub</a> — oder frag die TVA.</p></main>` }));
 
 /* Suche-Index */
 const search = [

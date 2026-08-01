@@ -49,6 +49,42 @@
    "iw",
    "eg",
    "l1"
+  ],
+  "sub_en": "Six singularities",
+  "status_en": "Destroyed (2018 & 2023) — variants exist across the multiverse",
+  "d_en": "Six remnants of creation, each an aspect of existence. Thanos needed them for the Snap, the Avengers for the Blip — then Thanos destroyed them in the past, and the borrowed duplicates were returned. The TVA, by the way, keeps whole drawers full of them. As paperweights.",
+  "stations_en": [
+   "1942: Red Skull finds the Tesseract",
+   "2012: Battle of New York — two stones in Manhattan",
+   "2018: The Snap",
+   "2023: The Blip & Tony's counter-snap",
+   "Today: dust — except at the TVA"
+  ],
+  "stones_en": [
+   {
+    "n": "Space Stone · Tesseract",
+    "d": "From Hydra weapon to S.H.I.E.L.D. lab to Loki's 2012 theft — the best-travelled object in the MCU."
+   },
+   {
+    "n": "Mind Stone · the Scepter",
+    "d": "From Loki via Hydra to Ultron — and, as Vision's forehead jewel, finally a living being."
+   },
+   {
+    "n": "Reality Stone · the Aether",
+    "d": "A liquid parasite inside Jane Foster, then left with the Collector — the strangest of the six."
+   },
+   {
+    "n": "Power Stone · the Orb",
+    "d": "Found on Morag, guarded by Xandar, claimed first by Thanos."
+   },
+   {
+    "n": "Time Stone · Eye of Agamotto",
+    "d": "Guarded by Kamar-Taj, used 14 million times by Strange — Thanos got it anyway."
+   },
+   {
+    "n": "Soul Stone · Vormir",
+    "d": "Demands a sacrifice: Gamora fell for Thanos, Natasha for the Avengers."
+   }
   ]
  },
  {
@@ -73,6 +109,17 @@
    "thor3",
    "eg",
    "tlt"
+  ],
+  "sub_en": "Whosoever holds this hammer …",
+  "status_en": "Destroyed (2017) — the 2013 version rests in New Asgard",
+  "d_en": "Forged in the heart of a dying star, with a built-in worthiness test. Hela crushed it with one hand; Cap proved in Endgame what everyone suspected since Age of Ultron — the elevator moment of cinema history. The version borrowed from 2013 stayed with Jane and now rests in New Asgard.",
+  "stations_en": [
+   "Odin's vault",
+   "2011: a crater in New Mexico",
+   "2015: Vision casually picks it up",
+   "2017: crushed by Hela",
+   "2023: 'Cap is worthy!'",
+   "2024: Jane Foster / New Asgard"
   ]
  },
  {
@@ -93,6 +140,15 @@
    "eg",
    "tlt",
    "doomsday"
+  ],
+  "sub_en": "The Thanos-killing axe",
+  "status_en": "With Thor — for now",
+  "d_en": "Forged on Nidavellir with Groot's arm as a handle. Beheaded Thanos on the second try. The reason the SDCC footage electrified everyone: Doom stops this axe with his bare hand.",
+  "stations_en": [
+   "2018: forged with Eitri's help",
+   "2018: 'You should have gone for the head'",
+   "2023: he does",
+   "2026: stopped by Doom's hand?"
   ]
  },
  {
@@ -116,6 +172,16 @@
    "eg",
    "fws",
    "bnw"
+  ],
+  "sub_en": "Vibranium, a proto-adamantium legacy",
+  "status_en": "With Sam Wilson",
+  "d_en": "Howard Stark's vibranium masterpiece and the symbol of three generations: Steve carried it, dropped it after Civil War, and handed it to Sam as an old man. In between, John Walker defiled it with blood — perhaps the strongest single scene of the streaming era.",
+  "stations_en": [
+   "1943: built by Howard Stark",
+   "2016: left behind in Siberia",
+   "2023: handed to Sam",
+   "2024: Walker's bloodstain",
+   "Today: Sam Wilson, Captain America"
   ]
  },
  {
@@ -135,6 +201,15 @@
    "wv",
    "mom",
    "ag"
+  ],
+  "sub_en": "The Book of the Damned",
+  "status_en": "All copies destroyed — the knowledge is immortal",
+  "d_en": "Chthon's compendium of dark magic that corrupts every reader. It turned Wanda's grief into a multiversal rampage. She destroyed every copy in every universe — but Agatha had already proven how many paths dark knowledge finds.",
+  "stations_en": [
+   "Centuries: with Chthon / in Kamar-Taj's vaults",
+   "2023: Agatha's possession",
+   "2025: Wanda's reading & the Mount Wundagore finale",
+   "Destroyed — in every universe"
   ]
  },
  {
@@ -152,6 +227,14 @@
   "films": [
    "sc",
    "doomsday"
+  ],
+  "sub_en": "Older than anything we know",
+  "status_en": "With Shang-Chi — and they are transmitting",
+  "d_en": "Wenwu's source of power for a thousand years of conquest. Their origin is unknown, their energy matches no known pattern — and since Shang-Chi took them up, they have been beaming a signal into the dark. Who answers is one of the biggest open questions before Doomsday.",
+  "stations_en": [
+   "~1,000 years: Wenwu's conquests",
+   "2024: passed to Shang-Chi",
+   "Since then: the signal transmits"
   ]
  },
  {
@@ -168,6 +251,14 @@
   ],
   "films": [
    "et"
+  ],
+  "sub_en": "The cursed sword",
+  "status_en": "Waiting for Dane Whitman",
+  "d_en": "A sword that demands blood and corrupts its bearer. Dane Whitman hesitated in the Eternals post-credit scene — and a voice off-screen (Blade!) asked if he was ready. Since then: four years of silence. One of the most lost threads in the MCU.",
+  "stations_en": [
+   "Generations: the Whitman family inheritance",
+   "2021: Dane opens the case",
+   "Since then: nothing"
   ]
  },
  {
@@ -188,6 +279,15 @@
    "f4",
    "doomsday",
    "secretwars"
+  ],
+  "sub_en": "The face of Latveria",
+  "status_en": "In theaters December 18, 2026",
+  "d_en": "In the comics it hides a disfigured face — or a single scar that Doom's vanity cannot bear; the legend changes with the writer. In the MCU it carries the face of Robert Downey Jr., and that is precisely the point: 'New mask, same task.' What lies beneath is Doomsday's best-kept secret.",
+  "stations_en": [
+   "1962: Fantastic Four #5",
+   "July 2024: RDJ lifts it in Hall H",
+   "July 2026: first full trailer look",
+   "12/18/2026: release"
   ]
  },
  {
@@ -210,6 +310,15 @@
    "bnw",
    "xmen1",
    "logan"
+  ],
+  "sub_en": "The two wonder metals",
+  "status_en": "Vibranium: Wakanda/Talokan · Adamantium: being mined",
+  "d_en": "Vibranium absorbs energy (Wakanda's meteorite, Cap's shield, Talokan's reefs) — adamantium is virtually indestructible (Wolverine's skeleton, the Fox legacy). Brave New World officially brought adamantium into the MCU: harvested from the dead Celestial in the Indian Ocean. A metal with X-Men written all over it.",
+  "stations_en": [
+   "Prehistory: the vibranium meteorite hits Wakanda",
+   "1945: Cap's shield sinks into the ice",
+   "2021: the Celestial freezes",
+   "2025: adamantium mining begins — the race is on"
   ]
  },
  {
@@ -230,6 +339,15 @@
    "antman2",
    "eg",
    "qm"
+  ],
+  "sub_en": "Physics is more of a suggestion",
+  "status_en": "Closely guarded by Hank Pym",
+  "d_en": "Hank Pym's life's work: particles that change the distance between atoms. Sounds like a niche superpower, yet it saved the universe — no Pym Particles, no Time Heist, no Endgame. Which is why Hank guards them like a state secret, and why everyone has tried to steal them.",
+  "stations_en": [
+   "Cold War: Pym's S.H.I.E.L.D. years",
+   "2015: Scott in the suit",
+   "2023: fuel for the time travel",
+   "2026: the Quantum Realm is quiet — for now"
   ]
  },
  {
@@ -248,6 +366,15 @@
   "films": [
    "msm",
    "mv"
+  ],
+  "sub_en": "A quantum band with family history",
+  "status_en": "On Kamala's wrist",
+  "d_en": "The family heirloom that awakened Kamala's powers — actually a quantum band with an unknown counterpart. It tore holes in space, swapped three heroines across the universe, and is waiting for someone to find the second band. Another thread pointing at the future.",
+  "stations_en": [
+   "Generations: the Khan family",
+   "2025: Kamala activates it",
+   "2026: the Marvels swap",
+   "The second band: missing"
   ]
  },
  {
@@ -267,6 +394,15 @@
    "thor3",
    "iw",
    "eg"
+  ],
+  "sub_en": "Two gauntlets, two snaps",
+  "status_en": "Both destroyed",
+  "d_en": "Eitri forged the first on Nidavellir — under duress, as the last of his people. Tony's nano version was Earth's answer. Both gauntlets united all six stones, and both took their price: Thanos' arm, Hulk's arm, Tony's life. No object in the MCU has cost more.",
+  "stations_en": [
+   "2018: forged on Nidavellir",
+   "2018: the Snap",
+   "2023: Hulk's Blip snap",
+   "2023: 'I am Iron Man' — the last snap"
   ]
  },
  {
@@ -289,6 +425,16 @@
    "iw",
    "eg",
    "ih"
+  ],
+  "sub_en": "Mark I through Mark LXXXV",
+  "status_en": "The legacy is distributed",
+  "d_en": "From the cave-built tin can to the nanotech marvel: 85 iterations in eleven years, each a chapter of Tony's paranoia and genius. The legacy lives on — in Rescue's armor, War Machine's arsenal, Riri's DIY build. And now a man with the same face wears Latverian steel.",
+  "stations_en": [
+   "2008: Mark I, built in a cave",
+   "2013: the 'House Party' swarm",
+   "2018: Bleeding Edge nanotech",
+   "2023: Mark LXXXV — the final suit",
+   "2025: Riri's build in Chicago"
   ]
  },
  {
@@ -309,6 +455,15 @@
    "iw",
    "nwh",
    "mom"
+  ],
+  "sub_en": "The most loyal supporting actor",
+  "status_en": "With Strange",
+  "d_en": "A relic with a will of its own and strong opinions: it chose Strange in the Sanctum, wipes away his tears and yanks him out of the line of fire. Officially a cloak, in practice a pet.",
+  "stations_en": [
+   "Centuries: on display in the New York Sanctum",
+   "2016: chooses Strange",
+   "2018: dusted — and back",
+   "Today: inseparable"
   ]
  },
  {
@@ -325,6 +480,14 @@
   ],
   "films": [
    "mom"
+  ],
+  "sub_en": "The good counterpart to the Darkhold",
+  "status_en": "Destroyed — allegedly",
+  "d_en": "The weapon against all darkness: it gives a sorcerer exactly the spell they need. Strange and America reached it after a multiverse marathon — and Wanda destroyed it seconds later. Whether the original book is truly gone, the film deliberately left open.",
+  "stations_en": [
+   "Timeless: in the space between universes",
+   "2025: destroyed by Wanda",
+   "Status: 'destroyed' — a stretchy term in a multiverse"
   ]
  },
  {
@@ -343,6 +506,15 @@
   "films": [
    "spider2",
    "nwh"
+  ],
+  "sub_en": "Even Dead, I'm The Hero",
+  "status_en": "Whereabouts unknown since the forgetting spell",
+  "d_en": "Tony's parting gift to Peter: glasses with access to Stark's entire defense network, drone fleet included. Peter gave them to Mysterio within five minutes — the mistake that led to his unmasking and thus to No Way Home. Where E.D.I.T.H. is since the great forgetting, no one has answered.",
+  "stations_en": [
+   "2023: Tony's legacy",
+   "2024: the Mysterio mistake",
+   "2024: reclaimed",
+   "Since the spell: unknown"
   ]
  },
  {
@@ -361,6 +533,15 @@
   "films": [
    "bp1",
    "bpwf"
+  ],
+  "sub_en": "Wakanda's kingmaker",
+  "status_en": "Burned — synthetically recreated",
+  "d_en": "The vibranium-infused plant that grants the Black Panthers their power and leads them to the Ancestral Plane. Killmonger burned the reserves; Shuri recreated the herb synthetically — and met him, of all people, on the Ancestral Plane. Talokan, by the way, has its own version of this story.",
+  "stations_en": [
+   "Prehistory: grows on vibranium soil",
+   "2018: burned by Killmonger",
+   "2025: Shuri's synthesis",
+   "Today: Wakanda's secret, again"
   ]
  },
  {
@@ -379,6 +560,14 @@
    "l1",
    "l2",
    "dw"
+  ],
+  "sub_en": "TemPads, prune sticks, Miss Minutes",
+  "status_en": "In constant use",
+  "d_en": "The agency at the end of time runs on retro tech that mocks all physics: TemPads open doors through space and time, prune sticks erase things from existence (well — into the Void), and Miss Minutes is an AI with a southern accent and her own agenda. Deadpool stole a TemPad. Of course he did.",
+  "stations_en": [
+   "Timeless: TVA standard issue",
+   "2024: Sylvie's TemPad escape",
+   "2029: Deadpool's 'loan'"
   ]
  },
  {
@@ -397,6 +586,14 @@
    "gotg1",
    "gotg2",
    "g3"
+  ],
+  "sub_en": "A whistle is enough",
+  "status_en": "With Kraglin",
+  "d_en": "An arrow of Yaka metal, steered by whistling alone — in Yondu's hands a one-man army: the corridor sequence in Vol. 2 is one of the most iconic scenes in the MCU. After his sacrifice, Kraglin inherited arrow and fin, and needed two movies to learn the whistle.",
+  "stations_en": [
+   "Ravager years: Yondu's trademark",
+   "2017: 'I'm Mary Poppins, y'all!'",
+   "Today: Kraglin, Guardian"
   ]
  },
  {
@@ -414,6 +611,14 @@
   "films": [
    "tlt",
    "venom3"
+  ],
+  "sub_en": "All-Black, the god-slayer",
+  "status_en": "Destroyed — along with Gorr's revenge",
+  "d_en": "The first weapon of the symbiote god Knull (in the comics) — in the MCU, the blade that found a grieving Gorr and made him the God Butcher. It whispers, corrupts, and in the end opened the gate to Eternity. Destroyed — but Venom 3 teased Knull. Symbiote threads never end cleanly.",
+  "stations_en": [
+   "Ancient: Knull's forge work",
+   "2024: finds the grieving Gorr",
+   "The gate to Eternity — and its end"
   ]
  },
  {
@@ -432,6 +637,14 @@
    "strange1",
    "eg",
    "nwh"
+  ],
+  "sub_en": "Portals for advanced students",
+  "status_en": "Kamar-Taj standard equipment",
+  "d_en": "Two fingers, one circle, a sparking portal: the everyday tool of the Masters of the Mystic Arts — and secretly one of the most powerful technologies in the MCU (portals decapitate, see the Endgame battle). Ned Leeds opened one with zero training. That should worry everyone.",
+  "stations_en": [
+   "Kamar-Taj: first lesson",
+   "2023: 'Portals open!' — the Endgame cavalry",
+   "2024: Ned just… does it"
   ]
  },
  {
@@ -451,6 +664,15 @@
    "iron1",
    "iron3",
    "eg"
+  ],
+  "sub_en": "Proof that Tony Stark has a heart",
+  "status_en": "On the lake — as a wreath",
+  "d_en": "First a life-saver (kept the shrapnel from Tony's heart), then the power source of every suit, finally a funeral offering: 'Proof that Tony Stark has a heart' floated across the lake. Howard conceived the technology; Tony built it in a cave. With a box of scraps.",
+  "stations_en": [
+   "Cold War: Howard's concept",
+   "2008: built in a cave",
+   "2013: surgery & farewell",
+   "2023: the wreath on the lake"
   ]
  },
  {
@@ -472,6 +694,15 @@
    "dofp",
    "mom",
    "doomsday"
+  ],
+  "sub_en": "Xavier's window to the world",
+  "status_en": "Intact, depending on the timeline",
+  "d_en": "The amplifier that lets Xavier find every mutant on Earth — and, as X2 proved, potentially paralyze every human: Cerebro is a tracking device AND a weapon of mass destruction, depending on who wears the helmet. On Earth-838, Professor X used it to his final second.",
+  "stations_en": [
+   "X-Mansion: beneath the basketball court",
+   "2003: Stryker's Dark Cerebro attack",
+   "838: the Illuminati version",
+   "Doomsday: Stewart returns — helmet included?"
   ]
  },
  {
@@ -493,6 +724,15 @@
    "cw",
    "nwh",
    "bnd"
+  ],
+  "sub_en": "A chemistry genius on your wrist",
+  "status_en": "Home-built, 2026 edition",
+  "d_en": "The eternal nerd debate: Maguire's Peter produces webbing organically, Holland and Garfield build shooters themselves — and Peter's web formula is canonically one of New York's most valuable inventions that nobody pays him a cent for. After the forgetting spell, Holland's Peter rebuilt everything: suit, shooters, life.",
+  "stations_en": [
+   "2002: organic (Raimi-verse)",
+   "2012: home-built (Amazing-verse)",
+   "2016: Stark upgrade",
+   "2026: fully DIY again"
   ]
  },
  {
@@ -511,6 +751,15 @@
   "films": [
    "l1",
    "l2"
+  ],
+  "sub_en": "The heart of the TVA — and its death sentence",
+  "status_en": "Replaced — by Loki",
+  "d_en": "The machine at the end of time that wove raw time into the Sacred Timeline. When the multiverse bloomed, it couldn't scale — it was never meant to weave, but to fail-safe: a device that shreds everything except the one timeline. Loki destroyed it and took its place. A god as infrastructure.",
+  "stations_en": [
+   "Always: at the end of time",
+   "2023: the overload",
+   "Victor Timely's last walk",
+   "Today: Loki IS the loom"
   ]
  },
  {
@@ -529,6 +778,14 @@
    "cm",
    "iw",
    "eg"
+  ],
+  "sub_en": "The retro device that paged hope",
+  "status_en": "Purpose served",
+  "d_en": "A 90s pager with a Kree upgrade and exactly one function: call Carol. Fury carried it for 23 years and pressed the button only as he crumbled to dust — perhaps the best prop punchline in the MCU: the entire Infinity War post-credit scene was this device.",
+  "stations_en": [
+   "1995: Carol's parting gift",
+   "2018: the last button press",
+   "2019: 'Where's Fury?'"
   ]
  }
 ]
