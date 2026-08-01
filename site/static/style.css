@@ -1357,8 +1357,7 @@ a.ens-card:hover .ens-img { transform: scale(1.08); border-color: #3fdc8c; box-s
   animation: doom-in 2.6s ease forwards; pointer-events: none;
 }
 @keyframes doom-in {
-  0% { opacity: 0; } 6% { opacity: 1; } 10% { opacity: 0.75; } 14% { opacity: 1; }
-  80% { opacity: 1; } 100% { opacity: 0; }
+  0% { opacity: 0; } 10% { opacity: 1; } 78% { opacity: 1; } 100% { opacity: 0; }
 }
 .doom-q {
   font-family: var(--display); font-weight: 700; font-size: clamp(28px, 6vw, 72px);
