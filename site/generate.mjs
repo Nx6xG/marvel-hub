@@ -226,6 +226,7 @@ function filmBody(f, lang) {
     if (n && n !== "—") figActors.add(n);
   }));
   const restCast = (CREDITS[id] || []).filter((c) => !figActors.has(c.n.trim().toLowerCase()));
+  const restHtml = restCast.map((c) => `<div class="fp-char">${c.p ? `<img class="fc-img" src="/img/a/${c.p}.jpg" alt="${esc(c.n)}" loading="lazy">` : `<div class="fc-img fc-fallback">${esc(c.n.charAt(0))}</div>`}<div class="fc-n">${esc(c.n)}</div><div class="fc-a">${esc(c.r)}</div></div>`).join("");
   const pc = PC[id];
   const stream = STREAM[id] || (f.uni === "sony" ? "Netflix / wechselnd (DE)" : f.uni === "alt" ? "Wechselnd (Leihe/Disney+)" : "Disney+");
   const trailerQ = encodeURIComponent(`${f.t} ${parseInt(f.y)} trailer${lang === "de" ? " deutsch" : ""}`);
@@ -261,10 +262,11 @@ function filmBody(f, lang) {
   </a>`}
   <div class="fp-section"><div class="fp-label">${L.plot}</div><p>${esc(f.plot)}</p></div>
   ${inFilm.length ? `<div class="fp-section"><div class="fp-label">${L.figures}</div><div class="fp-chars">` +
-    inFilm.map((c) => `<a class="fp-char" href="${prefix}${charUrl(c.id)}">${charImg(c.id, c.n, "fc-img")}<div class="fc-n">${esc(c.n)}</div><div class="fc-a">${esc(c.act.split("·")[0].split("(")[0].trim())}</div></a>`).join("") + `</div></div>` : ""}
-  ${restCast.length
-    ? `<div class="fp-section"><div class="fp-label">${inFilm.length ? L.cast_more : L.cast}</div><div class="fp-chars">` + restCast.map((c) => `<div class="fp-char">${c.p ? `<img class="fc-img" src="/img/a/${c.p}.jpg" alt="${esc(c.n)}" loading="lazy">` : `<div class="fc-img fc-fallback">${esc(c.n.charAt(0))}</div>`}<div class="fc-n">${esc(c.n)}</div><div class="fc-a">${esc(c.r)}</div></div>`).join("") + `</div></div>`
-    : (!inFilm.length ? `<div class="fp-section"><div class="fp-label">${L.cast}</div><p>${f.cast.map(esc).join(" · ")}</p></div>` : "")}
+    inFilm.map((c) => `<a class="fp-char" href="${prefix}${charUrl(c.id)}">${charImg(c.id, c.n, "fc-img")}<div class="fc-n">${esc(c.n)}</div><div class="fc-a">${esc(c.act.split("·")[0].split("(")[0].trim())}</div></a>`).join("") + `</div>` +
+    (restCast.length ? `<details class="more-cast"><summary>${L.cast_more} · ${restCast.length}</summary><div class="fp-chars">${restHtml}</div></details>` : "") + `</div>`
+  : restCast.length
+    ? `<div class="fp-section"><div class="fp-label">${L.cast}</div><div class="fp-chars">${restHtml}</div></div>`
+    : `<div class="fp-section"><div class="fp-label">${L.cast}</div><p>${f.cast.map(esc).join(" · ")}</p></div>`}
   ${TRIVIA[id] ? `<div class="fp-section"><div class="fp-label">${L.trivia}</div><ul>${TRIVIA[id].map((t) => `<li>${esc(t)}</li>`).join("")}</ul></div>` : ""}
   ${(pc || f.prio !== "future") ? `<div class="fp-section"><div class="fp-label">${L.pc}${pc && pc.scenes.length ? " · " + pc.scenes.length : ""}</div>` +
     (!pc ? `<p style="color:var(--faint)">${L.pc_none}</p>` :

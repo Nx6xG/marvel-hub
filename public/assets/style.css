@@ -1088,3 +1088,16 @@ body.neutral .tool-btn.on { background: rgba(232, 53, 59, 0.1); }
 
 /* Als <a> umgebaute Karten brauchen Block-Layout */
 .stop .poster-wrap { display: block; }
+
+/* Weitere Besetzung: aufklappbar in der Figuren-Kachel */
+details.more-cast { margin-top: 16px; border-top: 1px solid rgba(170, 175, 182, 0.12); padding-top: 12px; }
+details.more-cast summary {
+  cursor: pointer; list-style: none;
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.26em; text-transform: uppercase;
+  color: var(--muted);
+}
+details.more-cast summary::-webkit-details-marker { display: none; }
+details.more-cast summary::before { content: "▸ "; color: var(--green); }
+details.more-cast[open] summary::before { content: "▾ "; }
+details.more-cast summary:hover { color: var(--text); }
+details.more-cast .fp-chars { margin-top: 16px; }
