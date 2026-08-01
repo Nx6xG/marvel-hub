@@ -301,6 +301,15 @@
     tc.addEventListener("keydown", function (ev) { if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); playTrailer(); } }, { once: true });
   }
 
+  /* ---------- Event: Scroll-Reveal ---------- */
+  if (document.body.getAttribute("data-page") === "event" && !matchMedia("(prefers-reduced-motion: reduce)").matches && "IntersectionObserver" in window) {
+    var targets = $$(".act, .block .sec-head, .chapter, .theory, .facts, .news-item");
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+    }, { rootMargin: "0px 0px -8% 0px" });
+    targets.forEach(function (t) { t.classList.add("rv"); io.observe(t); });
+  }
+
   /* ---------- Lightbox: Galerie-Bilder & Videos ---------- */
   function openLightbox(contentHtml) {
     var lb = document.createElement("div");

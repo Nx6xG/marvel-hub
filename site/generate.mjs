@@ -644,9 +644,28 @@ function ewlHtml(lang) {
   </div>`).join("");
 }
 function eventBody(lang) {
-  let saga = frag("event-saga").replace('<div class="road" id="road"></div>', `<div class="road" id="road">${roadHtml(lang)}</div>`);
-  let wl = frag("event-wl").replace('<div class="ewl" id="ewlList"></div>', `<div class="ewl" id="ewlList">${ewlHtml(lang)}</div>`);
-  return `<div class="event-theme">${frag("event-hero")}<main>${saga}${wl}${frag("event-doom")}${frag("event-lore")}${frag("event-theo")}${frag("event-glos")}</main></div>`;
+  const de = lang === "de";
+  const saga = frag("event-saga").replace('<div class="road" id="road"></div>', `<div class="road" id="road">${roadHtml(lang)}</div>`);
+  const act = (num, t, s) => `<div class="act"><div class="act-num metal">${num}</div><div class="act-t">${t}</div><div class="act-s">${s}</div></div>`;
+  const trailer = `<section class="wrap" id="ev-trailer" style="padding-top:40px">
+    <div class="trailer-card ev-trailer-card" data-yt="${TRAILERS.doomsday || ""}" role="button" tabindex="0" aria-label="Trailer">
+      <img src="/img/b/doomsday.jpg" alt="" aria-hidden="true" loading="lazy">
+      <div class="tc-overlay"><div class="tc-play">▶</div><div class="tc-t">${de ? "Der erste Trailer" : "The first trailer"}</div><div class="tc-s">${de ? "veröffentlicht am 20. Juli 2026 · Klick lädt YouTube" : "released July 20, 2026 · click loads YouTube"}</div></div>
+    </div>
+  </section>`;
+  return `<div class="event-theme">${frag("event-hero")}<main>
+    ${trailer}
+    ${act("I", de ? "Der Weg" : "The Road", de ? "33 Filme & Serien. Ein Ziel. Deine Watchlist." : "33 films & shows. One destination. Your watchlist.")}
+    ${saga}
+    ${act("II", de ? "Die Lage" : "The Situation", de ? "Fakten, News und das größte Ensemble aller Zeiten" : "Facts, news and the biggest ensemble ever")}
+    ${frag("event-doom")}
+    ${act("III", de ? "Das Wissen" : "The Knowledge", de ? "Die komplette Lore hinter Doom" : "The complete lore behind Doom")}
+    ${frag("event-lore")}
+    ${act("IV", de ? "Die Theorien" : "The Theories", de ? "Was passieren könnte — und wie wahrscheinlich es ist" : "What might happen — and how likely it is")}
+    ${frag("event-theo")}
+    ${act("V", de ? "Das Archiv" : "The Archive", de ? "Jeder Begriff für den Kinosaal" : "Every term you need for the theater")}
+    ${frag("event-glos")}
+  </main></div>`;
 }
 
 /* ================= Home ================= */
