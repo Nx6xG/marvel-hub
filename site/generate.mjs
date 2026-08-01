@@ -182,7 +182,7 @@ ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld)}</script
   <div class="nav-tools">
     <div class="nav-search"><input id="globalSearch" type="search" placeholder="${L.search_ph}" aria-label="${L.search_ph}" autocomplete="off"><div class="search-drop" id="searchDrop" hidden></div></div>
     <a class="tool-btn lang-btn" href="${altPrefix}${path}" hreflang="${altLang}" title="${L.other}">${lang === "de" ? "EN" : "DE"}</a>
-    <button class="tool-btn" id="spoilerToggle" aria-pressed="false" title="${L.spoiler_off}">◉</button>
+    <button class="tool-btn" id="spoilerToggle" aria-pressed="false" title="${L.spoiler_off}">◉ Spoiler</button>
   </div>
 </div></nav>
 ${dataPage !== "event" && dataPage !== "home" ? `<a class="promo" href="${prefix}/event/">★ <b>Avengers: Doomsday</b><span class="promo-x">${lang === "de" ? "Erfahre alles zum kommenden Film" : "Everything about the upcoming film"}</span><span class="promo-cd"><span id="promoCd">…</span> ${lang === "de" ? "Tage" : "days"}</span><span class="promo-arr">➤</span></a>` : ""}
