@@ -1009,3 +1009,27 @@ a.wcard, a.char-card, a.rec-row, a.cameo-row, a.ewl-row, a.fp-char, a.radar-film
 .trailer-card { cursor: pointer; }
 .trailer-card.playing { aspect-ratio: 16 / 9; }
 .trailer-card iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+/* ===== Lesbarkeit: Abschnitte als klar getrennte Karten ===== */
+.fp .fp-section {
+  background: rgba(16, 14, 16, 0.5);
+  border: 1px solid rgba(170, 175, 182, 0.12);
+  border-radius: 12px;
+  padding: 20px 24px 22px;
+  margin-top: 14px;
+}
+body:not(.neutral) .fp .fp-section { background: rgba(12, 20, 15, 0.5); border-color: rgba(170, 205, 182, 0.12); }
+.fp .fp-label {
+  font-size: 10.5px; letter-spacing: 0.26em;
+  padding-bottom: 10px; margin-bottom: 14px;
+  border-bottom: 1px solid rgba(170, 175, 182, 0.12);
+}
+.fp .fp-doom { margin-top: 14px; }
+.fp .fp-doom .fp-label { border-bottom-color: rgba(63, 220, 140, 0.25); }
+.fp .fp-section p { line-height: 1.7; }
+.fp-top { margin-bottom: 6px; }
+.trailer-card { margin-top: 14px; }
+
+/* Wichtige Figuren: Schauspieler-Name unter der Figur */
+.fp-char { width: 86px; }
+.fc-a { font-size: 9.5px; color: var(--faint); margin-top: 2px; line-height: 1.2; }
