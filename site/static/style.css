@@ -1040,3 +1040,29 @@ a { text-decoration: none; }
 img { height: auto; }  /* height-Attribut nie über CSS-Breite hinaus erzwingen */
 .stop .poster-wrap img, .wcard .pw img, .lbox .lbox-bg, .lbox .lbox-fg, .hd-poster img { height: 100%; }
 .radar-film img, .fp-poster img { aspect-ratio: 2 / 3; object-fit: cover; }
+
+/* ===== Navigation: Untermenü statt Scroll-Leiste ===== */
+.nav-links { overflow: visible !important; flex-wrap: wrap; }
+.nav-inner { flex-wrap: wrap; padding-top: 6px; padding-bottom: 6px; height: auto; min-height: 54px; }
+.nav-drop { position: relative; }
+.nav-drop-btn {
+  font-family: var(--display); font-weight: 600; font-size: 13.5px;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  background: none; border: none; color: var(--muted); cursor: pointer;
+  padding: 6px 11px; border-radius: 3px; white-space: nowrap;
+}
+.nav-drop-btn:hover, .nav-drop-btn.active { color: var(--text); }
+.nav-drop.child-active .nav-drop-btn { color: var(--green); }
+.nd-arr { font-size: 9px; opacity: 0.7; }
+.nav-drop-menu {
+  position: absolute; top: calc(100% + 6px); left: 0; z-index: 90;
+  min-width: 200px; display: none; flex-direction: column; gap: 2px;
+  background: rgba(12, 10, 12, 0.97); border: 1px solid var(--line); border-radius: 10px;
+  padding: 8px; box-shadow: 0 18px 44px rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+}
+.nav-drop:hover .nav-drop-menu, .nav-drop.open .nav-drop-menu { display: flex; }
+.nav-drop-menu a { padding: 8px 12px; border-radius: 6px; font-size: 14px; }
+.nav-drop-menu a:hover { background: rgba(232, 53, 59, 0.12); color: var(--text); }
+body:not(.neutral) .nav-drop-menu a:hover { background: rgba(63, 220, 140, 0.12); }
+.nav-drop-menu a.active { color: var(--green); }

@@ -136,16 +136,22 @@ function page({ lang, path, title, desc, ogImage, body, dataPage, jsonld, noinde
   const altLang = lang === "en" ? "de" : "en";
   const altPrefix = altLang === "en" ? "/en" : "";
   const canonical = SITE_URL + prefix + path;
-  const nav = [
-    ["home", "/"], ["films", "/filme/"], ["chars", "/charaktere/"], ["teams", "/teams/"],
-    ["multi", "/multiversum/"], ["arts", "/artefakte/"], ["paths", "/pfade/"],
-    ["records", "/rekorde/"], ["chron", "/chronik/"], ["threads", "/faeden/"], ["event", "/event/"],
-  ].map(([k, p]) => {
+  const isActive = (p) => (p !== "/" && path.startsWith(p)) || (p === "/" && path === "/");
+  const navLink = (k, p, extra = "") => {
     const cls = [];
-    if ((p !== "/" && path.startsWith(p)) || (p === "/" && path === "/")) cls.push("active");
-    if (k === "event") cls.push("ev-link");
+    if (isActive(p)) cls.push("active");
+    if (extra) cls.push(extra);
     return `<a href="${prefix}${p}"${cls.length ? ` class="${cls.join(" ")}"` : ""}>${L.nav[k]}</a>`;
-  }).join("");
+  };
+  const loreItems = [["chron", "/chronik/"], ["multi", "/multiversum/"], ["arts", "/artefakte/"], ["paths", "/pfade/"], ["threads", "/faeden/"], ["records", "/rekorde/"]];
+  const loreActive = loreItems.some(([, p]) => isActive(p));
+  const nav =
+    navLink("home", "/") + navLink("films", "/filme/") + navLink("chars", "/charaktere/") + navLink("teams", "/teams/") +
+    `<div class="nav-drop${loreActive ? " child-active" : ""}">
+      <button class="nav-drop-btn${loreActive ? " active" : ""}" aria-haspopup="true" aria-expanded="false">${lang === "de" ? "Lore" : "Lore"} <span class="nd-arr">▾</span></button>
+      <div class="nav-drop-menu">${loreItems.map(([k, p]) => navLink(k, p)).join("")}</div>
+    </div>` +
+    navLink("event", "/event/", "ev-link");
   return `<!doctype html>
 <html lang="${lang}" data-prefix="${prefix}">
 <head>

@@ -182,6 +182,19 @@
     document.addEventListener("click", function (ev) { if (!ev.target.closest(".nav-search")) gsClose(); });
   }
 
+  /* ---------- Nav-Untermenü: Klick-Toggle für Touch ---------- */
+  var drop = $(".nav-drop"), dropBtn = $(".nav-drop-btn");
+  if (dropBtn) {
+    dropBtn.addEventListener("click", function (ev) {
+      ev.stopPropagation();
+      var open = drop.classList.toggle("open");
+      dropBtn.setAttribute("aria-expanded", String(open));
+    });
+    document.addEventListener("click", function (ev) {
+      if (!ev.target.closest(".nav-drop")) { drop.classList.remove("open"); dropBtn.setAttribute("aria-expanded", "false"); }
+    });
+  }
+
   /* ---------- Wiki-/Charakter-Index: Filter ---------- */
   var wikiGrid = $("#wikiGrid");
   if (wikiGrid) {
