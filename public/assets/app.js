@@ -321,13 +321,35 @@
   /* ---------- Doom-Modus (Easter Egg) ---------- */
   var evLogo = $(".ev-logo");
   if (document.body.getAttribute("data-page") === "event") {
-    var QUOTES = ["KNIET.", "DOOM BITTET NICHT. DOOM BEFIEHLT.", "EVERY STORY LEADS TO DOOM.", "IHR NENNT ES EROBERUNG. DOOM NENNT ES ORDNUNG.", "NEW MASK. SAME TASK."];
+    var QUOTES = [
+      "KNIET.",
+      "DOOM BITTET NICHT. DOOM BEFIEHLT.",
+      "EVERY STORY LEADS TO DOOM.",
+      "IHR NENNT ES EROBERUNG. DOOM NENNT ES ORDNUNG.",
+      "NEW MASK. SAME TASK.",
+      "GÖTTER? ES GIBT KEINE GÖTTER. NUR DOOM.",
+      "RICHARDS!",
+      "DOOM WIEDERHOLT SICH NICHT.",
+      "ES GIBT NIEMANDEN WIE DOOM.",
+      "DOOM VERGIBT NICHT. DOOM VERGISST NICHT.",
+      "EIN LAND. EIN KÖNIG. KEINE FRAGEN.",
+      "IHR HABT EURE HELDEN. LATVERIA HAT DOOM.",
+      "PERFEKTION IST KEINE KUNST. SIE IST PFLICHT.",
+      "SELBST DAS MULTIVERSUM KNIET.",
+      "ALLES, WAS IHR FÜRCHTET, TRÄGT MEINEN NAMEN.",
+      "MASKEN LÜGEN NICHT. GESICHTER SCHON.",
+      "ZEIT IST EIN WERKZEUG. DOOM FÜHRT ES.",
+      "WER DOOM KOPIERT, STIRBT ALS KOPIE.",
+      "18. DEZEMBER. KEIN AUFSCHUB.",
+      "BATTLEWORLD WARTET."
+    ];
     var buf = "", clicks = 0, lastClick = 0;
     function doomMode() {
       if ($(".doom-flash")) return;
       var d = document.createElement("div");
       d.className = "doom-flash";
-      d.innerHTML = '<div class="doom-q metal">' + QUOTES[Math.floor(Math.random() * QUOTES.length)] + "</div>";
+      if (!doomMode.deck || !doomMode.deck.length) doomMode.deck = QUOTES.slice().sort(function () { return Math.random() - 0.5; });
+      d.innerHTML = '<div class="doom-q metal">' + doomMode.deck.pop() + "</div>";
       document.body.appendChild(d);
       setTimeout(function () { d.remove(); }, 2600);
     }
