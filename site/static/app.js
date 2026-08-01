@@ -318,7 +318,7 @@
         var im = getImg(node.img, draw);
         if (im && im.complete && im.naturalWidth) {
           var s = Math.max(rad * 2 / im.naturalWidth, rad * 2 / im.naturalHeight);
-          ctx.drawImage(im, x - im.naturalWidth * s / 2, y - im.naturalHeight * s / 2 + rad * 0.15, im.naturalWidth * s, im.naturalHeight * s);
+          ctx.drawImage(im, x - im.naturalWidth * s / 2, y - im.naturalHeight * s / 2, im.naturalWidth * s, im.naturalHeight * s);
         } else {
           ctx.fillStyle = "#cfc8cb"; ctx.font = "700 " + rad + "px 'Avenir Next Condensed', sans-serif";
           ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.fillText(node.n.charAt(0), x, y);

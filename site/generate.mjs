@@ -126,6 +126,7 @@ const tr = (o, f, lang) => (lang === "en" && o[f + "_en"] != null ? o[f + "_en"]
 
 // YouTube-Trailer-IDs (von fetch-tmdb.mjs erzeugt; ohne Key: leere Map → externer Link als Fallback)
 const TRAILERS = existsSync("site/data/trailers.json") ? JSON.parse(readFileSync("site/data/trailers.json", "utf8")) : {};
+const CREDITS = existsSync("site/data/credits.json") ? JSON.parse(readFileSync("site/data/credits.json", "utf8")) : {};
 
 const adSlot = (L) => `<div class="ad-slot" data-ad><span>${L.ad}</span></div>`;
 
@@ -250,7 +251,9 @@ function filmBody(f, lang) {
     <div class="tc-overlay"><div class="tc-play">▶</div><div class="tc-t">${L.trailer}</div><div class="tc-s">${L.trailer_s}</div></div>
   </a>`}
   <div class="fp-section"><div class="fp-label">${L.plot}</div><p>${esc(f.plot)}</p></div>
-  <div class="fp-section"><div class="fp-label">${L.cast}</div><p>${f.cast.map(esc).join(" · ")}</p></div>
+  <div class="fp-section"><div class="fp-label">${L.cast}</div>${CREDITS[id] && CREDITS[id].length
+    ? `<div class="fp-chars">` + CREDITS[id].map((c) => `<div class="fp-char">${c.p ? `<img class="fc-img" src="/img/a/${c.p}.jpg" alt="${esc(c.n)}" loading="lazy">` : `<div class="fc-img fc-fallback">${esc(c.n.charAt(0))}</div>`}<div class="fc-n">${esc(c.n)}</div><div class="fc-a">${esc(c.r)}</div></div>`).join("") + `</div>`
+    : `<p>${f.cast.map(esc).join(" · ")}</p>`}</div>
   ${inFilm.length ? `<div class="fp-section"><div class="fp-label">${L.figures}</div><div class="fp-chars">` +
     inFilm.map((c) => `<a class="fp-char" href="${prefix}${charUrl(c.id)}">${charImg(c.id, c.n, "fc-img")}<div class="fc-n">${esc(c.n)}</div><div class="fc-a">${esc(c.act.split("·")[0].split("(")[0].trim())}</div></a>`).join("") + `</div></div>` : ""}
   ${TRIVIA[id] ? `<div class="fp-section"><div class="fp-label">${L.trivia}</div><ul>${TRIVIA[id].map((t) => `<li>${esc(t)}</li>`).join("")}</ul></div>` : ""}

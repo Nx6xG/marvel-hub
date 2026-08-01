@@ -1082,3 +1082,6 @@ body:not(.neutral) .nav-drop-menu a:hover { background: rgba(63, 220, 140, 0.12)
 .tool-btn.on { color: var(--green); border-color: var(--green-deep); background: rgba(63, 220, 140, 0.08); }
 body.neutral .tool-btn.on { background: rgba(232, 53, 59, 0.1); }
 @media (max-width: 720px) { .nav-search input { width: 70px; } .nav-search input:focus { width: 140px; } }
+
+/* TMDB-Porträts: Gesicht mittig statt oben angeschnitten */
+.fc-img, img.cface, .tstack img, .sd-row img.sd-round { object-position: 50% 22%; }
