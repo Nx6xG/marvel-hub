@@ -1,0 +1,5514 @@
+{
+ "iron1": [
+  {
+   "n": "Robert Downey Jr.",
+   "r": "Tony Stark",
+   "p": 3223
+  },
+  {
+   "n": "Terrence Howard",
+   "r": "Rhodey",
+   "p": 18288
+  },
+  {
+   "n": "Jeff Bridges",
+   "r": "Obadiah Stane",
+   "p": 1229
+  },
+  {
+   "n": "Gwyneth Paltrow",
+   "r": "Pepper Potts",
+   "p": 12052
+  },
+  {
+   "n": "Leslie Bibb",
+   "r": "Christine Everhart",
+   "p": 57451
+  },
+  {
+   "n": "Shaun Toub",
+   "r": "Yinsen",
+   "p": 17857
+  },
+  {
+   "n": "Faran Tahir",
+   "r": "Raza",
+   "p": 57452
+  },
+  {
+   "n": "Clark Gregg",
+   "r": "Agent Coulson",
+   "p": 9048
+  },
+  {
+   "n": "Bill Smitrovich",
+   "r": "General Gabriel",
+   "p": 17200
+  },
+  {
+   "n": "Sayed Badreya",
+   "r": "Abu Bakaar",
+   "p": 173810
+  }
+ ],
+ "hulk": [
+  {
+   "n": "Edward Norton",
+   "r": "Bruce Banner",
+   "p": 819
+  },
+  {
+   "n": "Liv Tyler",
+   "r": "Betty Ross",
+   "p": 882
+  },
+  {
+   "n": "Tim Roth",
+   "r": "Emil Blonsky",
+   "p": 3129
+  },
+  {
+   "n": "William Hurt",
+   "r": "General 'Thunderbolt' Ross",
+   "p": 227
+  },
+  {
+   "n": "Tim Blake Nelson",
+   "r": "Samuel Sterns",
+   "p": 1462
+  },
+  {
+   "n": "Ty Burrell",
+   "r": "Leonard",
+   "p": 15232
+  },
+  {
+   "n": "Christina Cabot",
+   "r": "Major Kathleen Sparr",
+   "p": 68277
+  },
+  {
+   "n": "Peter Mensah",
+   "r": "General Joe Greller",
+   "p": 68278
+  },
+  {
+   "n": "Lou Ferrigno",
+   "r": "Voice of The Incredible Hulk / Security Guard",
+   "p": 19137
+  },
+  {
+   "n": "Paul Soles",
+   "r": "Stanley",
+   "p": 1215283
+  }
+ ],
+ "iron2": [
+  {
+   "n": "Robert Downey Jr.",
+   "r": "Tony Stark",
+   "p": 3223
+  },
+  {
+   "n": "Gwyneth Paltrow",
+   "r": "Pepper Potts",
+   "p": 12052
+  },
+  {
+   "n": "Don Cheadle",
+   "r": "Lt. Col. James 'Rhodey' Rhodes",
+   "p": 1896
+  },
+  {
+   "n": "Scarlett Johansson",
+   "r": "Natalie Rushman / Natasha Romanoff",
+   "p": 1245
+  },
+  {
+   "n": "Sam Rockwell",
+   "r": "Justin Hammer",
+   "p": 6807
+  },
+  {
+   "n": "Mickey Rourke",
+   "r": "Ivan Vanko",
+   "p": 2295
+  },
+  {
+   "n": "Samuel L. Jackson",
+   "r": "Nick Fury",
+   "p": 2231
+  },
+  {
+   "n": "Clark Gregg",
+   "r": "Agent Coulson",
+   "p": 9048
+  },
+  {
+   "n": "John Slattery",
+   "r": "Howard Stark",
+   "p": 21134
+  },
+  {
+   "n": "Garry Shandling",
+   "r": "Senator Stern",
+   "p": 52865
+  }
+ ],
+ "thor1": [
+  {
+   "n": "Chris Hemsworth",
+   "r": "Thor",
+   "p": 74568
+  },
+  {
+   "n": "Natalie Portman",
+   "r": "Jane Foster",
+   "p": 524
+  },
+  {
+   "n": "Tom Hiddleston",
+   "r": "Loki",
+   "p": 91606
+  },
+  {
+   "n": "Anthony Hopkins",
+   "r": "Odin",
+   "p": 4173
+  },
+  {
+   "n": "Stellan Skarsgård",
+   "r": "Erik Selvig",
+   "p": 1640
+  },
+  {
+   "n": "Kat Dennings",
+   "r": "Darcy Lewis",
+   "p": 52852
+  },
+  {
+   "n": "Clark Gregg",
+   "r": "Agent Coulson",
+   "p": 9048
+  },
+  {
+   "n": "Colm Feore",
+   "r": "King Laufey",
+   "p": 10132
+  },
+  {
+   "n": "Idris Elba",
+   "r": "Heimdall",
+   "p": 17605
+  },
+  {
+   "n": "Ray Stevenson",
+   "r": "Volstagg",
+   "p": 56614
+  }
+ ],
+ "cap1": [
+  {
+   "n": "Chris Evans",
+   "r": "Captain America / Steve Rogers",
+   "p": 16828
+  },
+  {
+   "n": "Hayley Atwell",
+   "r": "Peggy Carter",
+   "p": 39459
+  },
+  {
+   "n": "Sebastian Stan",
+   "r": "James Buchanan 'Bucky' Barnes",
+   "p": 60898
+  },
+  {
+   "n": "Tommy Lee Jones",
+   "r": "Colonel Chester Phillips",
+   "p": 2176
+  },
+  {
+   "n": "Hugo Weaving",
+   "r": "Johann Schmidt / Red Skull",
+   "p": 1331
+  },
+  {
+   "n": "Dominic Cooper",
+   "r": "Howard Stark",
+   "p": 55470
+  },
+  {
+   "n": "Richard Armitage",
+   "r": "Heinz Kruger",
+   "p": 30315
+  },
+  {
+   "n": "Stanley Tucci",
+   "r": "Dr. Abraham Erskine",
+   "p": 2283
+  },
+  {
+   "n": "Samuel L. Jackson",
+   "r": "Nick Fury",
+   "p": 2231
+  },
+  {
+   "n": "Toby Jones",
+   "r": "Dr. Arnim Zola",
+   "p": 13014
+  }
+ ],
+ "av1": [
+  {
+   "n": "Robert Downey Jr.",
+   "r": "Tony Stark / Iron Man",
+   "p": 3223
+  },
+  {
+   "n": "Chris Evans",
+   "r": "Steve Rogers / Captain America",
+   "p": 16828
+  },
+  {
+   "n": "Mark Ruffalo",
+   "r": "Bruce Banner / The Hulk",
+   "p": 103
+  },
+  {
+   "n": "Chris Hemsworth",
+   "r": "Thor",
+   "p": 74568
+  },
+  {
+   "n": "Scarlett Johansson",
+   "r": "Natasha Romanoff / Black Widow",
+   "p": 1245
+  },
+  {
+   "n": "Jeremy Renner",
+   "r": "Clint Barton / Hawkeye",
+   "p": 17604
+  },
+  {
+   "n": "Tom Hiddleston",
+   "r": "Loki",
+   "p": 91606
+  },
+  {
+   "n": "Clark Gregg",
+   "r": "Agent Phil Coulson",
+   "p": 9048
+  },
+  {
+   "n": "Cobie Smulders",
+   "r": "Agent Maria Hill",
+   "p": 71189
+  },
+  {
+   "n": "Stellan Skarsgård",
+   "r": "Selvig",
+   "p": 1640
+  }
+ ],
+ "iron3": [
+  {
+   "n": "Robert Downey Jr.",
+   "r": "Tony Stark",
+   "p": 3223
+  },
+  {
+   "n": "Gwyneth Paltrow",
+   "r": "Pepper Potts",
+   "p": 12052
+  },
+  {
+   "n": "Don Cheadle",
+   "r": "Colonel James Rhodes",
+   "p": 1896
+  },
+  {
+   "n": "Guy Pearce",
+   "r": "Aldrich Killian",
+   "p": 529
+  },
+  {
+   "n": "Rebecca Hall",
+   "r": "Maya Hansen",
+   "p": 15556
+  },
+  {
+   "n": "Jon Favreau",
+   "r": "Happy Hogan",
+   "p": 15277
+  },
+  {
+   "n": "Ben Kingsley",
+   "r": "Trevor Slattery",
+   "p": 2282
+  },
+  {
+   "n": "James Badge Dale",
+   "r": "Savin",
+   "p": 18473
+  },
+  {
+   "n": "Stephanie Szostak",
+   "r": "Brandt",
+   "p": 121953
+  },
+  {
+   "n": "Paul Bettany",
+   "r": "Jarvis (voice)",
+   "p": 6162
+  }
+ ],
+ "thor2": [
+  {
+   "n": "Chris Hemsworth",
+   "r": "Thor",
+   "p": 74568
+  },
+  {
+   "n": "Natalie Portman",
+   "r": "Jane Foster",
+   "p": 524
+  },
+  {
+   "n": "Tom Hiddleston",
+   "r": "Loki",
+   "p": 91606
+  },
+  {
+   "n": "Christopher Eccleston",
+   "r": "Malekith",
+   "p": 2040
+  },
+  {
+   "n": "Anthony Hopkins",
+   "r": "Odin",
+   "p": 4173
+  },
+  {
+   "n": "Jaimie Alexander",
+   "r": "Sif",
+   "p": 59817
+  },
+  {
+   "n": "Zachary Levi",
+   "r": "Fandral",
+   "p": 69899
+  },
+  {
+   "n": "Ray Stevenson",
+   "r": "Volstagg",
+   "p": 56614
+  },
+  {
+   "n": "Tadanobu Asano",
+   "r": "Hogun",
+   "p": 13275
+  },
+  {
+   "n": "Idris Elba",
+   "r": "Heimdall",
+   "p": 17605
+  }
+ ],
+ "cap2": [
+  {
+   "n": "Chris Evans",
+   "r": "Steve Rogers / Captain America",
+   "p": 16828
+  },
+  {
+   "n": "Samuel L. Jackson",
+   "r": "Nick Fury",
+   "p": 2231
+  },
+  {
+   "n": "Scarlett Johansson",
+   "r": "Natasha Romanoff / Black Widow",
+   "p": 1245
+  },
+  {
+   "n": "Robert Redford",
+   "r": "Alexander Pierce",
+   "p": 4135
+  },
+  {
+   "n": "Sebastian Stan",
+   "r": "Bucky Barnes / Winter Soldier",
+   "p": 60898
+  },
+  {
+   "n": "Anthony Mackie",
+   "r": "Sam Wilson / Falcon",
+   "p": 53650
+  },
+  {
+   "n": "Cobie Smulders",
+   "r": "Maria Hill",
+   "p": 71189
+  },
+  {
+   "n": "Frank Grillo",
+   "r": "Brock Rumlow",
+   "p": 81685
+  },
+  {
+   "n": "Maximiliano Hernández",
+   "r": "Jasper Sitwell",
+   "p": 1018947
+  },
+  {
+   "n": "Emily VanCamp",
+   "r": "Kate / Agent 13",
+   "p": 84247
+  }
+ ],
+ "gotg1": [
+  {
+   "n": "Chris Pratt",
+   "r": "Peter Quill",
+   "p": 73457
+  },
+  {
+   "n": "Zoe Saldaña",
+   "r": "Gamora",
+   "p": 8691
+  },
+  {
+   "n": "Dave Bautista",
+   "r": "Drax",
+   "p": 543530
+  },
+  {
+   "n": "Vin Diesel",
+   "r": "Groot (voice)",
+   "p": 12835
+  },
+  {
+   "n": "Bradley Cooper",
+   "r": "Rocket (voice)",
+   "p": 51329
+  },
+  {
+   "n": "Lee Pace",
+   "r": "Ronan",
+   "p": 72095
+  },
+  {
+   "n": "Michael Rooker",
+   "r": "Yondu Udonta",
+   "p": 12132
+  },
+  {
+   "n": "Karen Gillan",
+   "r": "Nebula",
+   "p": 543261
+  },
+  {
+   "n": "Djimon Hounsou",
+   "r": "Korath",
+   "p": 938
+  },
+  {
+   "n": "John C. Reilly",
+   "r": "Corpsman Dey",
+   "p": 4764
+  }
+ ],
+ "av2": [
+  {
+   "n": "Robert Downey Jr.",
+   "r": "Tony Stark / Iron Man",
+   "p": 3223
+  },
+  {
+   "n": "Chris Hemsworth",
+   "r": "Thor",
+   "p": 74568
+  },
+  {
+   "n": "Mark Ruffalo",
+   "r": "Bruce Banner / Hulk",
+   "p": 103
+  },
+  {
+   "n": "Chris Evans",
+   "r": "Steve Rogers / Captain America",
+   "p": 16828
+  },
+  {
+   "n": "Scarlett Johansson",
+   "r": "Natasha Romanoff / Black Widow",
+   "p": 1245
+  },
+  {
+   "n": "Jeremy Renner",
+   "r": "Clint Barton / Hawkeye",
+   "p": 17604
+  },
+  {
+   "n": "James Spader",
+   "r": "Ultron (voice)",
+   "p": 13548
+  },
+  {
+   "n": "Samuel L. Jackson",
+   "r": "Nick Fury",
+   "p": 2231
+  },
+  {
+   "n": "Don Cheadle",
+   "r": "James Rhodes / War Machine",
+   "p": 1896
+  },
+  {
+   "n": "Aaron Taylor-Johnson",
+   "r": "Pietro Maximoff / Quicksilver",
+   "p": 27428
+  }
+ ],
+ "antman1": [
+  {
+   "n": "Paul Rudd",
+   "r": "Scott Lang / Ant-Man",
+   "p": 22226
+  },
+  {
+   "n": "Michael Douglas",
+   "r": "Dr. Hank Pym",
+   "p": 3392
+  },
+  {
+   "n": "Evangeline Lilly",
+   "r": "Hope van Dyne",
+   "p": 19034
+  },
+  {
+   "n": "Corey Stoll",
+   "r": "Darren Cross / Yellowjacket",
+   "p": 74541
+  },
+  {
+   "n": "Bobby Cannavale",
+   "r": "Paxton",
+   "p": 21127
+  },
+  {
+   "n": "Anthony Mackie",
+   "r": "Sam Wilson / Falcon",
+   "p": 53650
+  },
+  {
+   "n": "Judy Greer",
+   "r": "Maggie Lang",
+   "p": 20750
+  },
+  {
+   "n": "Abby Ryder Fortson",
+   "r": "Cassie Lang",
+   "p": 1360010
+  },
+  {
+   "n": "Michael Peña",
+   "r": "Luis",
+   "p": 454
+  },
+  {
+   "n": "David Dastmalchian",
+   "r": "Kurt",
+   "p": 83854
+  }
+ ],
+ "cw": [
+  {
+   "n": "Chris Evans",
+   "r": "Steve Rogers / Captain America",
+   "p": 16828
+  },
+  {
+   "n": "Robert Downey Jr.",
+   "r": "Tony Stark / Iron Man",
+   "p": 3223
+  },
+  {
+   "n": "Scarlett Johansson",
+   "r": "Natasha Romanoff / Black Widow",
+   "p": 1245
+  },
+  {
+   "n": "Sebastian Stan",
+   "r": "Bucky Barnes / Winter Soldier",
+   "p": 60898
+  },
+  {
+   "n": "Anthony Mackie",
+   "r": "Sam Wilson / Falcon",
+   "p": 53650
+  },
+  {
+   "n": "Don Cheadle",
+   "r": "Lieutenant James Rhodes / War Machine",
+   "p": 1896
+  },
+  {
+   "n": "Jeremy Renner",
+   "r": "Clint Barton / Hawkeye",
+   "p": 17604
+  },
+  {
+   "n": "Chadwick Boseman",
+   "r": "T'Challa / Black Panther",
+   "p": 172069
+  },
+  {
+   "n": "Paul Bettany",
+   "r": "Vision",
+   "p": 6162
+  },
+  {
+   "n": "Elizabeth Olsen",
+   "r": "Wanda Maximoff / Scarlet Witch",
+   "p": 550843
+  }
+ ],
+ "strange1": [
+  {
+   "n": "Benedict Cumberbatch",
+   "r": "Dr. Stephen Strange",
+   "p": 71580
+  },
+  {
+   "n": "Chiwetel Ejiofor",
+   "r": "Mordo",
+   "p": 5294
+  },
+  {
+   "n": "Rachel McAdams",
+   "r": "Dr. Christine Palmer",
+   "p": 53714
+  },
+  {
+   "n": "Benedict Wong",
+   "r": "Wong",
+   "p": 30082
+  },
+  {
+   "n": "Mads Mikkelsen",
+   "r": "Kaecilius",
+   "p": 1019
+  },
+  {
+   "n": "Tilda Swinton",
+   "r": "The Ancient One",
+   "p": 3063
+  },
+  {
+   "n": "Michael Stuhlbarg",
+   "r": "Dr. Nicodemus West",
+   "p": 72873
+  },
+  {
+   "n": "Benjamin Bratt",
+   "r": "Jonathan Pangborn",
+   "p": 4589
+  },
+  {
+   "n": "Scott Adkins",
+   "r": "Lucian / Strong Zealot",
+   "p": 78110
+  },
+  {
+   "n": "Zara Phythian",
+   "r": "Brunette Zealot",
+   "p": 1070721
+  }
+ ],
+ "gotg2": [
+  {
+   "n": "Chris Pratt",
+   "r": "Peter Quill / Star-Lord",
+   "p": 73457
+  },
+  {
+   "n": "Zoe Saldaña",
+   "r": "Gamora",
+   "p": 8691
+  },
+  {
+   "n": "Dave Bautista",
+   "r": "Drax",
+   "p": 543530
+  },
+  {
+   "n": "Vin Diesel",
+   "r": "Baby Groot (voice)",
+   "p": 12835
+  },
+  {
+   "n": "Bradley Cooper",
+   "r": "Rocket (voice)",
+   "p": 51329
+  },
+  {
+   "n": "Kurt Russell",
+   "r": "Ego",
+   "p": 6856
+  },
+  {
+   "n": "Michael Rooker",
+   "r": "Yondu",
+   "p": 12132
+  },
+  {
+   "n": "Karen Gillan",
+   "r": "Nebula",
+   "p": 543261
+  },
+  {
+   "n": "Pom Klementieff",
+   "r": "Mantis",
+   "p": 139820
+  },
+  {
+   "n": "Sylvester Stallone",
+   "r": "Stakar Ogord",
+   "p": 16483
+  }
+ ],
+ "spider1": [
+  {
+   "n": "Tom Holland",
+   "r": "Peter Parker / Spider-Man",
+   "p": 1136406
+  },
+  {
+   "n": "Michael Keaton",
+   "r": "Adrian Toomes / Vulture",
+   "p": 2232
+  },
+  {
+   "n": "Robert Downey Jr.",
+   "r": "Tony Stark / Iron Man",
+   "p": 3223
+  },
+  {
+   "n": "Marisa Tomei",
+   "r": "May Parker",
+   "p": 3141
+  },
+  {
+   "n": "Jon Favreau",
+   "r": "Happy Hogan",
+   "p": 15277
+  },
+  {
+   "n": "Gwyneth Paltrow",
+   "r": "Pepper Potts",
+   "p": 12052
+  },
+  {
+   "n": "Zendaya",
+   "r": "Michelle",
+   "p": 505710
+  },
+  {
+   "n": "Donald Glover",
+   "r": "Aaron Davis",
+   "p": 119589
+  },
+  {
+   "n": "Jacob Batalon",
+   "r": "Ned",
+   "p": 1649152
+  },
+  {
+   "n": "Laura Harrier",
+   "r": "Liz",
+   "p": 1606394
+  }
+ ],
+ "thor3": [
+  {
+   "n": "Chris Hemsworth",
+   "r": "Thor",
+   "p": 74568
+  },
+  {
+   "n": "Mark Ruffalo",
+   "r": "Bruce Banner / Hulk",
+   "p": 103
+  },
+  {
+   "n": "Tom Hiddleston",
+   "r": "Loki",
+   "p": 91606
+  },
+  {
+   "n": "Cate Blanchett",
+   "r": "Hela",
+   "p": 112
+  },
+  {
+   "n": "Idris Elba",
+   "r": "Heimdall",
+   "p": 17605
+  },
+  {
+   "n": "Jeff Goldblum",
+   "r": "Grandmaster",
+   "p": 4785
+  },
+  {
+   "n": "Tessa Thompson",
+   "r": "Valkyrie",
+   "p": 62561
+  },
+  {
+   "n": "Karl Urban",
+   "r": "Skurge",
+   "p": 1372
+  },
+  {
+   "n": "Anthony Hopkins",
+   "r": "Odin",
+   "p": 4173
+  },
+  {
+   "n": "Benedict Cumberbatch",
+   "r": "Doctor Strange",
+   "p": 71580
+  }
+ ],
+ "bp1": [
+  {
+   "n": "Chadwick Boseman",
+   "r": "T'Challa / Black Panther",
+   "p": 172069
+  },
+  {
+   "n": "Michael B. Jordan",
+   "r": "Erik Killmonger",
+   "p": 135651
+  },
+  {
+   "n": "Lupita Nyong'o",
+   "r": "Nakia",
+   "p": 1267329
+  },
+  {
+   "n": "Danai Gurira",
+   "r": "Okoye",
+   "p": 82104
+  },
+  {
+   "n": "Martin Freeman",
+   "r": "Everett K. Ross",
+   "p": 7060
+  },
+  {
+   "n": "Daniel Kaluuya",
+   "r": "W'Kabi",
+   "p": 206919
+  },
+  {
+   "n": "Letitia Wright",
+   "r": "Shuri",
+   "p": 1083010
+  },
+  {
+   "n": "Winston Duke",
+   "r": "M'Baku",
+   "p": 1447932
+  },
+  {
+   "n": "Sterling K. Brown",
+   "r": "N'Jobu",
+   "p": 1225953
+  },
+  {
+   "n": "Angela Bassett",
+   "r": "Ramonda",
+   "p": 9780
+  }
+ ],
+ "iw": [
+  {
+   "n": "Robert Downey Jr.",
+   "r": "Tony Stark / Iron Man",
+   "p": 3223
+  },
+  {
+   "n": "Chris Evans",
+   "r": "Steve Rogers / Captain America",
+   "p": 16828
+  },
+  {
+   "n": "Chris Hemsworth",
+   "r": "Thor",
+   "p": 74568
+  },
+  {
+   "n": "Josh Brolin",
+   "r": "Thanos",
+   "p": 16851
+  },
+  {
+   "n": "Mark Ruffalo",
+   "r": "Bruce Banner / Hulk",
+   "p": 103
+  },
+  {
+   "n": "Scarlett Johansson",
+   "r": "Natasha Romanoff / Black Widow",
+   "p": 1245
+  },
+  {
+   "n": "Don Cheadle",
+   "r": "James Rhodes / War Machine",
+   "p": 1896
+  },
+  {
+   "n": "Benedict Cumberbatch",
+   "r": "Doctor Strange",
+   "p": 71580
+  },
+  {
+   "n": "Tom Holland",
+   "r": "Peter Parker / Spider-Man",
+   "p": 1136406
+  },
+  {
+   "n": "Chadwick Boseman",
+   "r": "T'Challa / Black Panther",
+   "p": 172069
+  }
+ ],
+ "antman2": [
+  {
+   "n": "Paul Rudd",
+   "r": "Scott Lang / Ant-Man",
+   "p": 22226
+  },
+  {
+   "n": "Evangeline Lilly",
+   "r": "Hope Van Dyne / Wasp",
+   "p": 19034
+  },
+  {
+   "n": "Michael Douglas",
+   "r": "Dr. Hank Pym",
+   "p": 3392
+  },
+  {
+   "n": "Hannah John-Kamen",
+   "r": "Ava / Ghost",
+   "p": 1408809
+  },
+  {
+   "n": "Randall Park",
+   "r": "Jimmy Woo",
+   "p": 79082
+  },
+  {
+   "n": "Michelle Pfeiffer",
+   "r": "Janet Van Dyne / Wasp",
+   "p": 1160
+  },
+  {
+   "n": "Laurence Fishburne",
+   "r": "Dr. Bill Foster",
+   "p": 2975
+  },
+  {
+   "n": "Michael Peña",
+   "r": "Luis",
+   "p": 454
+  },
+  {
+   "n": "Walton Goggins",
+   "r": "Sonny Burch",
+   "p": 27740
+  },
+  {
+   "n": "Bobby Cannavale",
+   "r": "Paxton",
+   "p": 21127
+  }
+ ],
+ "cm": [
+  {
+   "n": "Brie Larson",
+   "r": "Carol Danvers / Vers / Captain Marvel",
+   "p": 60073
+  },
+  {
+   "n": "Samuel L. Jackson",
+   "r": "Nick Fury",
+   "p": 2231
+  },
+  {
+   "n": "Ben Mendelsohn",
+   "r": "Talos / Keller",
+   "p": 77335
+  },
+  {
+   "n": "Jude Law",
+   "r": "Yon-Rogg",
+   "p": 9642
+  },
+  {
+   "n": "Annette Bening",
+   "r": "Supreme Intelligence / Dr. Wendy Lawson",
+   "p": 516
+  },
+  {
+   "n": "Djimon Hounsou",
+   "r": "Korath",
+   "p": 938
+  },
+  {
+   "n": "Lee Pace",
+   "r": "Ronan",
+   "p": 72095
+  },
+  {
+   "n": "Lashana Lynch",
+   "r": "Maria Rambeau",
+   "p": 1360281
+  },
+  {
+   "n": "Gemma Chan",
+   "r": "Minn-Erva",
+   "p": 97576
+  },
+  {
+   "n": "Clark Gregg",
+   "r": "Agent Coulson",
+   "p": 9048
+  }
+ ],
+ "eg": [
+  {
+   "n": "Robert Downey Jr.",
+   "r": "Tony Stark / Iron Man",
+   "p": 3223
+  },
+  {
+   "n": "Chris Evans",
+   "r": "Steve Rogers / Captain America",
+   "p": 16828
+  },
+  {
+   "n": "Mark Ruffalo",
+   "r": "Bruce Banner / Hulk",
+   "p": 103
+  },
+  {
+   "n": "Chris Hemsworth",
+   "r": "Thor",
+   "p": 74568
+  },
+  {
+   "n": "Scarlett Johansson",
+   "r": "Natasha Romanoff / Black Widow",
+   "p": 1245
+  },
+  {
+   "n": "Jeremy Renner",
+   "r": "Clint Barton / Hawkeye",
+   "p": 17604
+  },
+  {
+   "n": "Josh Brolin",
+   "r": "Thanos",
+   "p": 16851
+  },
+  {
+   "n": "Don Cheadle",
+   "r": "James Rhodes / War Machine",
+   "p": 1896
+  },
+  {
+   "n": "Paul Rudd",
+   "r": "Scott Lang / Ant-Man",
+   "p": 22226
+  },
+  {
+   "n": "Benedict Cumberbatch",
+   "r": "Doctor Strange",
+   "p": 71580
+  }
+ ],
+ "spider2": [
+  {
+   "n": "Tom Holland",
+   "r": "Peter Parker / Spider-Man",
+   "p": 1136406
+  },
+  {
+   "n": "Jake Gyllenhaal",
+   "r": "Quentin Beck / Mysterio",
+   "p": 131
+  },
+  {
+   "n": "Samuel L. Jackson",
+   "r": "Nick Fury",
+   "p": 2231
+  },
+  {
+   "n": "Marisa Tomei",
+   "r": "May Parker",
+   "p": 3141
+  },
+  {
+   "n": "Jon Favreau",
+   "r": "Happy Hogan",
+   "p": 15277
+  },
+  {
+   "n": "Zendaya",
+   "r": "MJ",
+   "p": 505710
+  },
+  {
+   "n": "Jacob Batalon",
+   "r": "Ned Leeds",
+   "p": 1649152
+  },
+  {
+   "n": "Tony Revolori",
+   "r": "Flash Thompson",
+   "p": 1291350
+  },
+  {
+   "n": "Angourie Rice",
+   "r": "Betty Brant",
+   "p": 1265629
+  },
+  {
+   "n": "Remy Hii",
+   "r": "Brad Davis",
+   "p": 1347947
+  }
+ ],
+ "wv": [
+  {
+   "n": "Josh Stamberg",
+   "r": "Director Hayward",
+   "p": 21882
+  },
+  {
+   "n": "Evan Peters",
+   "r": "Pietro Maximoff / Quicksilver / Ralph Bohner",
+   "p": 55089
+  },
+  {
+   "n": "Elizabeth Olsen",
+   "r": "Wanda Maximoff / Scarlet Witch",
+   "p": 550843
+  },
+  {
+   "n": "Paul Bettany",
+   "r": "Vision / The Vision",
+   "p": 6162
+  },
+  {
+   "n": "Kathryn Hahn",
+   "r": "Agnes / Agatha Harkness",
+   "p": 17696
+  },
+  {
+   "n": "Teyonah Parris",
+   "r": "Monica Rambeau / Geraldine",
+   "p": 970219
+  },
+  {
+   "n": "Randall Park",
+   "r": "Jimmy Woo",
+   "p": 79082
+  },
+  {
+   "n": "Kat Dennings",
+   "r": "Darcy Lewis / The Escape Artist",
+   "p": 52852
+  },
+  {
+   "n": "Amos Glick",
+   "r": "The Delivery Man (a.k.a. Dennis)",
+   "p": 2815800
+  },
+  {
+   "n": "David Payton",
+   "r": "John Collins (a.k.a. Herb)",
+   "p": 2937190
+  }
+ ],
+ "fws": [
+  {
+   "n": "Anthony Mackie",
+   "r": "Sam Wilson / Falcon",
+   "p": 53650
+  },
+  {
+   "n": "Sebastian Stan",
+   "r": "Bucky Barnes / Winter Soldier",
+   "p": 60898
+  },
+  {
+   "n": "Wyatt Russell",
+   "r": "John Walker",
+   "p": 986808
+  },
+  {
+   "n": "Erin Kellyman",
+   "r": "Karli Morgenthau",
+   "p": 1672504
+  },
+  {
+   "n": "Daniel Brühl",
+   "r": "Baron Zemo",
+   "p": 3872
+  },
+  {
+   "n": "Emily VanCamp",
+   "r": "Sharon Carter",
+   "p": 84247
+  },
+  {
+   "n": "Danny Ramirez",
+   "r": "Joaquin Torres",
+   "p": 1773397
+  },
+  {
+   "n": "Adepero Oduye",
+   "r": "Sarah Wilson",
+   "p": 467633
+  },
+  {
+   "n": "Dani Deetté",
+   "r": "Gigi",
+   "p": 2347707
+  },
+  {
+   "n": "Indya Bussey",
+   "r": "DeeDee",
+   "p": 3016100
+  }
+ ],
+ "l1": [
+  {
+   "n": "Tom Hiddleston",
+   "r": "Loki Laufeyson",
+   "p": 91606
+  },
+  {
+   "n": "Sophia Di Martino",
+   "r": "Sylvie / The Variant",
+   "p": 1252533
+  },
+  {
+   "n": "Wunmi Mosaku",
+   "r": "Hunter B-15",
+   "p": 134774
+  },
+  {
+   "n": "Gugu Mbatha-Raw",
+   "r": "Ravonna Renslayer",
+   "p": 1216606
+  },
+  {
+   "n": "Owen Wilson",
+   "r": "Mobius M. Mobius",
+   "p": 887
+  },
+  {
+   "n": "Eugene Cordero",
+   "r": "Casey / Hunter K-5E",
+   "p": 1370567
+  },
+  {
+   "n": "Tara Strong",
+   "r": "Miss Minutes (voice)",
+   "p": 15762
+  },
+  {
+   "n": "Neil Ellice",
+   "r": "Hunter D-90",
+   "p": null
+  },
+  {
+   "n": "Ke Huy Quan",
+   "r": "Ouroboros 'OB'",
+   "p": 690
+  },
+  {
+   "n": "Lauren Revard",
+   "r": "Miss Minutes On-Set Reader",
+   "p": 1561639
+  }
+ ],
+ "bw": [
+  {
+   "n": "Scarlett Johansson",
+   "r": "Natasha Romanoff / Black Widow",
+   "p": 1245
+  },
+  {
+   "n": "Florence Pugh",
+   "r": "Yelena Belova",
+   "p": 1373737
+  },
+  {
+   "n": "Rachel Weisz",
+   "r": "Melina",
+   "p": 3293
+  },
+  {
+   "n": "David Harbour",
+   "r": "Alexei",
+   "p": 35029
+  },
+  {
+   "n": "Ray Winstone",
+   "r": "Dreykov",
+   "p": 5538
+  },
+  {
+   "n": "Ever Anderson",
+   "r": "Young Natasha",
+   "p": 1743933
+  },
+  {
+   "n": "Violet McGraw",
+   "r": "Young Yelena",
+   "p": 2131391
+  },
+  {
+   "n": "O-T Fagbenle",
+   "r": "Mason",
+   "p": 113970
+  },
+  {
+   "n": "William Hurt",
+   "r": "Secretary Ross",
+   "p": 227
+  },
+  {
+   "n": "Olga Kurylenko",
+   "r": "Antonia / Taskmaster",
+   "p": 18182
+  }
+ ],
+ "wi": [
+  {
+   "n": "Jeffrey Wright",
+   "r": "The Watcher (voice)",
+   "p": 2954
+  },
+  {
+   "n": "Terri Douglas",
+   "r": "Additional Voices (voice)",
+   "p": 186605
+  },
+  {
+   "n": "Matthew Wood",
+   "r": "Additional Voices (voice)",
+   "p": 71536
+  },
+  {
+   "n": "Fred Tatasciore",
+   "r": "Additional Voices (voice)",
+   "p": 60279
+  },
+  {
+   "n": "Robin Atkin Downes",
+   "r": "Additional Voices (voice)",
+   "p": 130081
+  },
+  {
+   "n": "Shelby Young",
+   "r": "Additional Voices (voice)",
+   "p": 25113
+  },
+  {
+   "n": "Debra Wilson",
+   "r": "Additional Voices (voice)",
+   "p": 83105
+  },
+  {
+   "n": "Dave B. Mitchell",
+   "r": "Additional Voices (voice)",
+   "p": 1082094
+  },
+  {
+   "n": "Helen Sadler",
+   "r": "Additional Voices (voice)",
+   "p": 1471378
+  },
+  {
+   "n": "Piotr Michael",
+   "r": "Additional Voices (voice)",
+   "p": 1449707
+  }
+ ],
+ "sc": [
+  {
+   "n": "Simu Liu",
+   "r": "Shaun / Shang-Chi",
+   "p": 1489211
+  },
+  {
+   "n": "Tony Leung Chiu-wai",
+   "r": "Xu Wenwu",
+   "p": 1337
+  },
+  {
+   "n": "Awkwafina",
+   "r": "Katy",
+   "p": 1625558
+  },
+  {
+   "n": "Ben Kingsley",
+   "r": "Trevor Slattery",
+   "p": 2282
+  },
+  {
+   "n": "Zhang Meng'er",
+   "r": "Xialing",
+   "p": 2979464
+  },
+  {
+   "n": "Fala Chen",
+   "r": "Li",
+   "p": 123701
+  },
+  {
+   "n": "Michelle Yeoh",
+   "r": "Ying Nan",
+   "p": 1620
+  },
+  {
+   "n": "Yuen Wah",
+   "r": "Master Guang Bo",
+   "p": 57609
+  },
+  {
+   "n": "Florian Munteanu",
+   "r": "Razor Fist",
+   "p": 1998541
+  },
+  {
+   "n": "Andy Le",
+   "r": "Death Dealer",
+   "p": 1068877
+  }
+ ],
+ "et": [
+  {
+   "n": "Gemma Chan",
+   "r": "Sersi",
+   "p": 97576
+  },
+  {
+   "n": "Richard Madden",
+   "r": "Ikaris",
+   "p": 512991
+  },
+  {
+   "n": "Angelina Jolie",
+   "r": "Thena",
+   "p": 11701
+  },
+  {
+   "n": "Salma Hayek Pinault",
+   "r": "Ajak",
+   "p": 3136
+  },
+  {
+   "n": "Kumail Nanjiani",
+   "r": "Kingo",
+   "p": 466505
+  },
+  {
+   "n": "Lia McHugh",
+   "r": "Sprite",
+   "p": 1791619
+  },
+  {
+   "n": "Brian Tyree Henry",
+   "r": "Phastos",
+   "p": 226366
+  },
+  {
+   "n": "Lauren Ridloff",
+   "r": "Makkari",
+   "p": 2287101
+  },
+  {
+   "n": "Barry Keoghan",
+   "r": "Druig",
+   "p": 1290466
+  },
+  {
+   "n": "Don Lee",
+   "r": "Gilgamesh",
+   "p": 1024395
+  }
+ ],
+ "hk": [
+  {
+   "n": "Jeremy Renner",
+   "r": "Clint Barton / Hawkeye",
+   "p": 17604
+  },
+  {
+   "n": "Hailee Steinfeld",
+   "r": "Kate Bishop",
+   "p": 130640
+  },
+  {
+   "n": "Tony Dalton",
+   "r": "Jack Duquesne",
+   "p": 76855
+  },
+  {
+   "n": "Alaqua Cox",
+   "r": "Maya Lopez",
+   "p": 2880523
+  },
+  {
+   "n": "Fra Fee",
+   "r": "Kazimierz 'Kazi' Kazimierczak",
+   "p": 1278528
+  },
+  {
+   "n": "Aleks Paunovic",
+   "r": "Ivan",
+   "p": 107810
+  },
+  {
+   "n": "Piotr Adamczyk",
+   "r": "Tomas",
+   "p": 118762
+  },
+  {
+   "n": "Vera Farmiga",
+   "r": "Eleanor Bishop",
+   "p": 21657
+  },
+  {
+   "n": "Linda Cardellini",
+   "r": "Laura Barton",
+   "p": 1817
+  },
+  {
+   "n": "Cade Woodward",
+   "r": "Nathaniel Barton",
+   "p": 1924769
+  }
+ ],
+ "nwh": [
+  {
+   "n": "Tom Holland",
+   "r": "Peter Parker / Spider-Man",
+   "p": 1136406
+  },
+  {
+   "n": "Zendaya",
+   "r": "MJ",
+   "p": 505710
+  },
+  {
+   "n": "Benedict Cumberbatch",
+   "r": "Doctor Strange",
+   "p": 71580
+  },
+  {
+   "n": "Jacob Batalon",
+   "r": "Ned Leeds",
+   "p": 1649152
+  },
+  {
+   "n": "Jon Favreau",
+   "r": "Happy Hogan",
+   "p": 15277
+  },
+  {
+   "n": "Jamie Foxx",
+   "r": "Max Dillon / Electro",
+   "p": 134
+  },
+  {
+   "n": "Willem Dafoe",
+   "r": "Norman Osborn / Green Goblin",
+   "p": 5293
+  },
+  {
+   "n": "Alfred Molina",
+   "r": "Dr. Otto Octavius / Doc Ock",
+   "p": 658
+  },
+  {
+   "n": "Benedict Wong",
+   "r": "Wong",
+   "p": 30082
+  },
+  {
+   "n": "Tony Revolori",
+   "r": "Flash Thompson",
+   "p": 1291350
+  }
+ ],
+ "mk": [
+  {
+   "n": "Oscar Isaac",
+   "r": "Marc Spector / Steven Grant / Moon Knight / Mr. Knight",
+   "p": 25072
+  },
+  {
+   "n": "Ethan Hawke",
+   "r": "Arthur Harrow",
+   "p": 569
+  },
+  {
+   "n": "May Calamawy",
+   "r": "Layla El-Faouly",
+   "p": 1952051
+  },
+  {
+   "n": "Ann Akinjirin",
+   "r": "Bobbi",
+   "p": 1765199
+  },
+  {
+   "n": "David Ganly",
+   "r": "Billy",
+   "p": 77505
+  },
+  {
+   "n": "Karim El Hakim",
+   "r": "Khonshu Performer",
+   "p": 3132784
+  },
+  {
+   "n": "F. Murray Abraham",
+   "r": "Khonshu (voice)",
+   "p": 1164
+  },
+  {
+   "n": "Michael Benjamin Hernandez",
+   "r": "Marc Spector / Steven Grant Double",
+   "p": 2143050
+  },
+  {
+   "n": "Shaun Scott",
+   "r": "Crawley",
+   "p": 229961
+  },
+  {
+   "n": "Khalid Abdalla",
+   "r": "Selim",
+   "p": 53480
+  }
+ ],
+ "mom": [
+  {
+   "n": "Benedict Cumberbatch",
+   "r": "Doctor Stephen Strange",
+   "p": 71580
+  },
+  {
+   "n": "Xochitl Gomez",
+   "r": "America Chavez",
+   "p": 1912381
+  },
+  {
+   "n": "Elizabeth Olsen",
+   "r": "Wanda Maximoff / The Scarlet Witch",
+   "p": 550843
+  },
+  {
+   "n": "Chiwetel Ejiofor",
+   "r": "Baron Mordo",
+   "p": 5294
+  },
+  {
+   "n": "Benedict Wong",
+   "r": "Wong",
+   "p": 30082
+  },
+  {
+   "n": "Rachel McAdams",
+   "r": "Dr. Christine Palmer",
+   "p": 53714
+  },
+  {
+   "n": "Jett Klyne",
+   "r": "Tommy Maximoff",
+   "p": 1538879
+  },
+  {
+   "n": "Julian Hilliard",
+   "r": "Billy Maximoff",
+   "p": 2047847
+  },
+  {
+   "n": "Michael Stuhlbarg",
+   "r": "Dr. Nic West",
+   "p": 72873
+  },
+  {
+   "n": "Hayley Atwell",
+   "r": "Captain Carter",
+   "p": 39459
+  }
+ ],
+ "msm": [
+  {
+   "n": "Iman Vellani",
+   "r": "Kamala Khan",
+   "p": 2798462
+  },
+  {
+   "n": "Matt Lintz",
+   "r": "Bruno",
+   "p": 570775
+  },
+  {
+   "n": "Yasmeen Fletcher",
+   "r": "Nakia",
+   "p": 2346450
+  },
+  {
+   "n": "Zenobia Shroff",
+   "r": "Muneeba",
+   "p": 1809782
+  },
+  {
+   "n": "Mohan Kapur",
+   "r": "Yusuf",
+   "p": 1014905
+  },
+  {
+   "n": "Saagar Shaikh",
+   "r": "Aamir",
+   "p": 2889306
+  },
+  {
+   "n": "Rish Shah",
+   "r": "Kamran",
+   "p": 2341794
+  },
+  {
+   "n": "Sophia Mahmud",
+   "r": "Auntie Zara",
+   "p": null
+  },
+  {
+   "n": "Anjali Bhimani",
+   "r": "Auntie Ruby",
+   "p": 1487375
+  },
+  {
+   "n": "Alysia Reiner",
+   "r": "Agent Deever",
+   "p": 109740
+  }
+ ],
+ "tlt": [
+  {
+   "n": "Chris Hemsworth",
+   "r": "Thor",
+   "p": 74568
+  },
+  {
+   "n": "Natalie Portman",
+   "r": "Jane Foster / The Mighty Thor",
+   "p": 524
+  },
+  {
+   "n": "Christian Bale",
+   "r": "Gorr",
+   "p": 3894
+  },
+  {
+   "n": "Tessa Thompson",
+   "r": "King Valkyrie",
+   "p": 62561
+  },
+  {
+   "n": "Taika Waititi",
+   "r": "Korg / Old Kronan God (voice)",
+   "p": 55934
+  },
+  {
+   "n": "Russell Crowe",
+   "r": "Zeus",
+   "p": 934
+  },
+  {
+   "n": "Jaimie Alexander",
+   "r": "Sif",
+   "p": 59817
+  },
+  {
+   "n": "Idris Elba",
+   "r": "Heimdall",
+   "p": 17605
+  },
+  {
+   "n": "Chris Pratt",
+   "r": "Peter Quill / Star-Lord",
+   "p": 73457
+  },
+  {
+   "n": "Dave Bautista",
+   "r": "Drax",
+   "p": 543530
+  }
+ ],
+ "shk": [
+  {
+   "n": "Tatiana Maslany",
+   "r": "Jennifer Walters / She-Hulk",
+   "p": 61134
+  },
+  {
+   "n": "Ginger Gonzaga",
+   "r": "Nikki Ramos",
+   "p": 1181314
+  },
+  {
+   "n": "Jameela Jamil",
+   "r": "Mary MacPherran / Titania",
+   "p": 1624816
+  },
+  {
+   "n": "Renée Elise Goldsberry",
+   "r": "Mallory Book",
+   "p": 87932
+  },
+  {
+   "n": "Josh Segarra",
+   "r": "Augustus 'Pug' Pugliese",
+   "p": 426216
+  },
+  {
+   "n": "Maliah Arrayah",
+   "r": "On-Set She-Hulk Reference",
+   "p": 3668027
+  },
+  {
+   "n": "Steve Coulter",
+   "r": "Holden Holliway",
+   "p": 80619
+  },
+  {
+   "n": "Drew Matthews",
+   "r": "Dennis Bukowski",
+   "p": 1407964
+  },
+  {
+   "n": "Mark Linn-Baker",
+   "r": "Morris Walters",
+   "p": 95975
+  },
+  {
+   "n": "Nicholas Cirillo",
+   "r": "Cousin Ched",
+   "p": 1499398
+  }
+ ],
+ "bpwf": [
+  {
+   "n": "Letitia Wright",
+   "r": "Shuri",
+   "p": 1083010
+  },
+  {
+   "n": "Tenoch Huerta Mejía",
+   "r": "Namor",
+   "p": 87265
+  },
+  {
+   "n": "Lupita Nyong'o",
+   "r": "Nakia",
+   "p": 1267329
+  },
+  {
+   "n": "Danai Gurira",
+   "r": "Okoye",
+   "p": 82104
+  },
+  {
+   "n": "Winston Duke",
+   "r": "M'Baku",
+   "p": 1447932
+  },
+  {
+   "n": "Angela Bassett",
+   "r": "Ramonda",
+   "p": 9780
+  },
+  {
+   "n": "Martin Freeman",
+   "r": "Everett Ross",
+   "p": 7060
+  },
+  {
+   "n": "Julia Louis-Dreyfus",
+   "r": "Valentina Allegra de Fontaine",
+   "p": 15886
+  },
+  {
+   "n": "Dominique Thorne",
+   "r": "Riri",
+   "p": 2133996
+  },
+  {
+   "n": "Florence Kasumba",
+   "r": "Ayo",
+   "p": 139900
+  }
+ ],
+ "qm": [
+  {
+   "n": "Paul Rudd",
+   "r": "Scott Lang / Ant-Man",
+   "p": 22226
+  },
+  {
+   "n": "Evangeline Lilly",
+   "r": "Hope Van Dyne / The Wasp",
+   "p": 19034
+  },
+  {
+   "n": "Michael Douglas",
+   "r": "Dr. Hank Pym",
+   "p": 3392
+  },
+  {
+   "n": "Michelle Pfeiffer",
+   "r": "Janet Van Dyne",
+   "p": 1160
+  },
+  {
+   "n": "Jonathan Majors",
+   "r": "Kang the Conqueror",
+   "p": 1674162
+  },
+  {
+   "n": "Kathryn Newton",
+   "r": "Cassie Lang",
+   "p": 221192
+  },
+  {
+   "n": "Corey Stoll",
+   "r": "M.O.D.O.K.",
+   "p": 74541
+  },
+  {
+   "n": "Bill Murray",
+   "r": "Lord Krylar",
+   "p": 1532
+  },
+  {
+   "n": "Katy O'Brian",
+   "r": "Jentorra",
+   "p": 2252989
+  },
+  {
+   "n": "William Jackson Harper",
+   "r": "Quaz",
+   "p": 1410478
+  }
+ ],
+ "g3": [
+  {
+   "n": "Chris Pratt",
+   "r": "Peter Quill / Star-Lord",
+   "p": 73457
+  },
+  {
+   "n": "Zoe Saldaña",
+   "r": "Gamora",
+   "p": 8691
+  },
+  {
+   "n": "Dave Bautista",
+   "r": "Drax",
+   "p": 543530
+  },
+  {
+   "n": "Karen Gillan",
+   "r": "Nebula",
+   "p": 543261
+  },
+  {
+   "n": "Pom Klementieff",
+   "r": "Mantis",
+   "p": 139820
+  },
+  {
+   "n": "Vin Diesel",
+   "r": "Groot (voice)",
+   "p": 12835
+  },
+  {
+   "n": "Bradley Cooper",
+   "r": "Rocket (voice)",
+   "p": 51329
+  },
+  {
+   "n": "Sean Gunn",
+   "r": "Kraglin / Young Rocket (voice)",
+   "p": 51663
+  },
+  {
+   "n": "Chukwudi Iwuji",
+   "r": "The High Evolutionary",
+   "p": 105238
+  },
+  {
+   "n": "Will Poulter",
+   "r": "Adam Warlock",
+   "p": 93491
+  }
+ ],
+ "si": [
+  {
+   "n": "Samuel L. Jackson",
+   "r": "Nick Fury",
+   "p": 2231
+  },
+  {
+   "n": "Ben Mendelsohn",
+   "r": "Talos",
+   "p": 77335
+  },
+  {
+   "n": "Kingsley Ben-Adir",
+   "r": "Gravik",
+   "p": 1417352
+  },
+  {
+   "n": "Killian Scott",
+   "r": "Pagon",
+   "p": 1189005
+  },
+  {
+   "n": "Samuel Adewunmi",
+   "r": "Beto",
+   "p": 1831731
+  },
+  {
+   "n": "Dermot Mulroney",
+   "r": "President Ritson",
+   "p": 20212
+  },
+  {
+   "n": "Emilia Clarke",
+   "r": "G'iah",
+   "p": 1223786
+  },
+  {
+   "n": "Olivia Colman",
+   "r": "Sonya Falsworth",
+   "p": 39187
+  },
+  {
+   "n": "Don Cheadle",
+   "r": "James 'Rhodey' Rhodes",
+   "p": 1896
+  },
+  {
+   "n": "Irmena Chichikova",
+   "r": "Kreega",
+   "p": 1283535
+  }
+ ],
+ "l2": [
+  {
+   "n": "Tom Hiddleston",
+   "r": "Loki Laufeyson",
+   "p": 91606
+  },
+  {
+   "n": "Sophia Di Martino",
+   "r": "Sylvie / The Variant",
+   "p": 1252533
+  },
+  {
+   "n": "Wunmi Mosaku",
+   "r": "Hunter B-15",
+   "p": 134774
+  },
+  {
+   "n": "Gugu Mbatha-Raw",
+   "r": "Ravonna Renslayer",
+   "p": 1216606
+  },
+  {
+   "n": "Owen Wilson",
+   "r": "Mobius M. Mobius",
+   "p": 887
+  },
+  {
+   "n": "Eugene Cordero",
+   "r": "Casey / Hunter K-5E",
+   "p": 1370567
+  },
+  {
+   "n": "Tara Strong",
+   "r": "Miss Minutes (voice)",
+   "p": 15762
+  },
+  {
+   "n": "Neil Ellice",
+   "r": "Hunter D-90",
+   "p": null
+  },
+  {
+   "n": "Ke Huy Quan",
+   "r": "Ouroboros 'OB'",
+   "p": 690
+  },
+  {
+   "n": "Lauren Revard",
+   "r": "Miss Minutes On-Set Reader",
+   "p": 1561639
+  }
+ ],
+ "mv": [
+  {
+   "n": "Brie Larson",
+   "r": "Carol Danvers / Captain Marvel",
+   "p": 60073
+  },
+  {
+   "n": "Teyonah Parris",
+   "r": "Monica Rambeau",
+   "p": 970219
+  },
+  {
+   "n": "Iman Vellani",
+   "r": "Kamala Khan / Ms. Marvel",
+   "p": 2798462
+  },
+  {
+   "n": "Samuel L. Jackson",
+   "r": "Nick Fury",
+   "p": 2231
+  },
+  {
+   "n": "Zawe Ashton",
+   "r": "Dar-Benn",
+   "p": 118034
+  },
+  {
+   "n": "Gary Lewis",
+   "r": "Emperor Dro'ge",
+   "p": 480
+  },
+  {
+   "n": "Park Seo-jun",
+   "r": "Prince Yan",
+   "p": 1347525
+  },
+  {
+   "n": "Zenobia Shroff",
+   "r": "Muneeba Khan",
+   "p": 1809782
+  },
+  {
+   "n": "Mohan Kapur",
+   "r": "Yusuf Khan",
+   "p": 1014905
+  },
+  {
+   "n": "Saagar Shaikh",
+   "r": "Aamir Khan",
+   "p": 2889306
+  }
+ ],
+ "ec": [
+  {
+   "n": "Alaqua Cox",
+   "r": "Maya Lopez / Echo",
+   "p": 2880523
+  },
+  {
+   "n": "Chaske Spencer",
+   "r": "Henry 'Black Crow' Lopez",
+   "p": 84219
+  },
+  {
+   "n": "Tantoo Cardinal",
+   "r": "Chula Battiest",
+   "p": 7863
+  },
+  {
+   "n": "Devery Jacobs",
+   "r": "Bonnie",
+   "p": 1197101
+  },
+  {
+   "n": "Cody Lightning",
+   "r": "Biscuits",
+   "p": 60918
+  },
+  {
+   "n": "Graham Greene",
+   "r": "Skully",
+   "p": 6804
+  },
+  {
+   "n": "Vincent D'Onofrio",
+   "r": "Wilson Fisk / Kingpin",
+   "p": 7132
+  },
+  {
+   "n": "MorningStar Angeline",
+   "r": "Lowak",
+   "p": 1591305
+  },
+  {
+   "n": "Dannie McCallum",
+   "r": "Tuklo",
+   "p": 4240057
+  },
+  {
+   "n": "Braydee Cardinal",
+   "r": "Ancestor",
+   "p": 4471707
+  }
+ ],
+ "x97": [
+  {
+   "n": "Terri Douglas",
+   "r": "Additional Voices (voice)",
+   "p": 186605
+  },
+  {
+   "n": "Ray Chase",
+   "r": "Cyclops (voice)",
+   "p": 1656863
+  },
+  {
+   "n": "Jennifer Hale",
+   "r": "Jean Grey (voice)",
+   "p": 81667
+  },
+  {
+   "n": "Matthew Wood",
+   "r": "Additional Voices (voice)",
+   "p": 71536
+  },
+  {
+   "n": "George Buza",
+   "r": "Beast (voice)",
+   "p": 128176
+  },
+  {
+   "n": "Ross Marquand",
+   "r": "Professor X (voice)",
+   "p": 555249
+  },
+  {
+   "n": "Cal Dodd",
+   "r": "Wolverine (voice)",
+   "p": 1234162
+  },
+  {
+   "n": "Matthew Waterson",
+   "r": "Magneto (voice)",
+   "p": 1662744
+  },
+  {
+   "n": "Robin Atkin Downes",
+   "r": "Additional Voices (voice)",
+   "p": 130081
+  },
+  {
+   "n": "Lenore Zann",
+   "r": "Rogue (voice)",
+   "p": 158360
+  }
+ ],
+ "dw": [
+  {
+   "n": "Ryan Reynolds",
+   "r": "Wade Wilson / Deadpool / Nicepool",
+   "p": 10859
+  },
+  {
+   "n": "Hugh Jackman",
+   "r": "Logan / Wolverine",
+   "p": 6968
+  },
+  {
+   "n": "Emma Corrin",
+   "r": "Cassandra Nova",
+   "p": 2324569
+  },
+  {
+   "n": "Matthew Macfadyen",
+   "r": "Mr. Paradox",
+   "p": 15576
+  },
+  {
+   "n": "Dafne Keen",
+   "r": "Laura / X-23",
+   "p": 1464650
+  },
+  {
+   "n": "Jon Favreau",
+   "r": "Happy Hogan",
+   "p": 15277
+  },
+  {
+   "n": "Morena Baccarin",
+   "r": "Vanessa",
+   "p": 54882
+  },
+  {
+   "n": "Rob Delaney",
+   "r": "Peter",
+   "p": 1091324
+  },
+  {
+   "n": "Leslie Uggams",
+   "r": "Blind Al",
+   "p": 122750
+  },
+  {
+   "n": "Jennifer Garner",
+   "r": "Elektra",
+   "p": 9278
+  }
+ ],
+ "ag": [
+  {
+   "n": "Kathryn Hahn",
+   "r": "Agnes O'Connor / Agatha Harkness",
+   "p": 17696
+  },
+  {
+   "n": "Joe Locke",
+   "r": "Teen",
+   "p": 3467732
+  },
+  {
+   "n": "Sasheer Zamata",
+   "r": "Jennifer Kale",
+   "p": 1395348
+  },
+  {
+   "n": "Ali Ahn",
+   "r": "Alice Wu-Gulliver",
+   "p": 1323810
+  },
+  {
+   "n": "Debra Jo Rupp",
+   "r": "Mrs. Hart",
+   "p": 15453
+  },
+  {
+   "n": "Patti LuPone",
+   "r": "Lilia Calderu",
+   "p": 5699
+  },
+  {
+   "n": "Aubrey Plaza",
+   "r": "Rio Vidal",
+   "p": 119592
+  },
+  {
+   "n": "David Payton",
+   "r": "Herb",
+   "p": 2937190
+  },
+  {
+   "n": "Chau Naumova",
+   "r": "Salem Seven / Coyote",
+   "p": 4256338
+  },
+  {
+   "n": "Bethany Curry",
+   "r": "Salem Seven / Crow",
+   "p": 3387590
+  }
+ ],
+ "dba": [
+  {
+   "n": "Charlie Cox",
+   "r": "Matt Murdock / Daredevil",
+   "p": 23458
+  },
+  {
+   "n": "Vincent D'Onofrio",
+   "r": "Wilson Fisk",
+   "p": 7132
+  },
+  {
+   "n": "Margarita Levieva",
+   "r": "Heather Glenn",
+   "p": 59237
+  },
+  {
+   "n": "Michael Gandolfini",
+   "r": "Daniel Blake",
+   "p": 1900369
+  },
+  {
+   "n": "Nikki M. James",
+   "r": "Kirsten Mcduffie",
+   "p": 292214
+  },
+  {
+   "n": "Arty Froushan",
+   "r": "Buck Cashman",
+   "p": 2399904
+  },
+  {
+   "n": "Genneya Walton",
+   "r": "BB Urich",
+   "p": 1352920
+  },
+  {
+   "n": "Zabryna Guevara",
+   "r": "Sheila Rivera",
+   "p": 171955
+  },
+  {
+   "n": "Ayelet Zurer",
+   "r": "Vanessa Fisk",
+   "p": 8786
+  },
+  {
+   "n": "Hamish Allan-Headley",
+   "r": "Powell",
+   "p": 1154844
+  }
+ ],
+ "bnw": [
+  {
+   "n": "Anthony Mackie",
+   "r": "Sam Wilson / Captain America",
+   "p": 53650
+  },
+  {
+   "n": "Harrison Ford",
+   "r": "President Thaddeus Ross",
+   "p": 3
+  },
+  {
+   "n": "Danny Ramirez",
+   "r": "Joaquin Torres",
+   "p": 1773397
+  },
+  {
+   "n": "Shira Haas",
+   "r": "Ruth Bat-Seraph",
+   "p": 1394332
+  },
+  {
+   "n": "Tim Blake Nelson",
+   "r": "Samuel Sterns",
+   "p": 1462
+  },
+  {
+   "n": "Carl Lumbly",
+   "r": "Isaiah Bradley",
+   "p": 29382
+  },
+  {
+   "n": "Giancarlo Esposito",
+   "r": "Sidewinder",
+   "p": 4808
+  },
+  {
+   "n": "Liv Tyler",
+   "r": "Betty Ross",
+   "p": 882
+  },
+  {
+   "n": "Xosha Roquemore",
+   "r": "Leila Taylor",
+   "p": 109565
+  },
+  {
+   "n": "Jóhannes Haukur Jóhannesson",
+   "r": "Copperhead",
+   "p": 238164
+  }
+ ],
+ "tb": [
+  {
+   "n": "Florence Pugh",
+   "r": "Yelena Belova",
+   "p": 1373737
+  },
+  {
+   "n": "Sebastian Stan",
+   "r": "Bucky Barnes",
+   "p": 60898
+  },
+  {
+   "n": "Julia Louis-Dreyfus",
+   "r": "Valentina Allegra de Fontaine",
+   "p": 15886
+  },
+  {
+   "n": "Lewis Pullman",
+   "r": "Robert Reynolds",
+   "p": 1700685
+  },
+  {
+   "n": "David Harbour",
+   "r": "Alexei Shostakov",
+   "p": 35029
+  },
+  {
+   "n": "Wyatt Russell",
+   "r": "John Walker",
+   "p": 986808
+  },
+  {
+   "n": "Hannah John-Kamen",
+   "r": "Ava Starr",
+   "p": 1408809
+  },
+  {
+   "n": "Olga Kurylenko",
+   "r": "Antonia Dreykov",
+   "p": 18182
+  },
+  {
+   "n": "Geraldine Viswanathan",
+   "r": "Mel",
+   "p": 1803287
+  },
+  {
+   "n": "Wendell Pierce",
+   "r": "Congressman Gary",
+   "p": 17859
+  }
+ ],
+ "ih": [
+  {
+   "n": "Dominique Thorne",
+   "r": "Riri Williams",
+   "p": 2133996
+  },
+  {
+   "n": "Lyric Ross",
+   "r": "N.A.T.A.L.I.E.",
+   "p": 1991183
+  },
+  {
+   "n": "Manny Montana",
+   "r": "Cousin John",
+   "p": 1182725
+  },
+  {
+   "n": "Matthew Elam",
+   "r": "Xavier",
+   "p": 2794859
+  },
+  {
+   "n": "Anji White",
+   "r": "Ronnie Williams",
+   "p": 2090871
+  },
+  {
+   "n": "Eric André",
+   "r": "Rampage",
+   "p": 934159
+  },
+  {
+   "n": "Sonia Denis",
+   "r": "Clown",
+   "p": 2440362
+  },
+  {
+   "n": "Shea Couleé",
+   "r": "Slug",
+   "p": 1838220
+  },
+  {
+   "n": "Zoe Terakes",
+   "r": "Jeri",
+   "p": 2659518
+  },
+  {
+   "n": "Shakira Barrera",
+   "r": "Roz",
+   "p": 1317154
+  }
+ ],
+ "f4": [
+  {
+   "n": "Pedro Pascal",
+   "r": "Reed Richards / Mister Fantastic",
+   "p": 1253360
+  },
+  {
+   "n": "Vanessa Kirby",
+   "r": "Sue Storm / Invisible Woman",
+   "p": 556356
+  },
+  {
+   "n": "Ebon Moss-Bachrach",
+   "r": "Ben Grimm / The Thing",
+   "p": 21042
+  },
+  {
+   "n": "Joseph Quinn",
+   "r": "Johnny Storm / Human Torch",
+   "p": 1597365
+  },
+  {
+   "n": "Ralph Ineson",
+   "r": "Galactus",
+   "p": 202032
+  },
+  {
+   "n": "Julia Garner",
+   "r": "Shalla-Bal / Silver Surfer",
+   "p": 936970
+  },
+  {
+   "n": "Paul Walter Hauser",
+   "r": "Harvey Elder / Mole Man",
+   "p": 1294982
+  },
+  {
+   "n": "Natasha Lyonne",
+   "r": "Rachel Rozman",
+   "p": 10871
+  },
+  {
+   "n": "Sarah Niles",
+   "r": "Lynne Nichols / F4 Chief of Staff",
+   "p": 65447
+  },
+  {
+   "n": "Mark Gatiss",
+   "r": "Ted Gilbert",
+   "p": 34546
+  }
+ ],
+ "eow": [
+  {
+   "n": "Terri Douglas",
+   "r": "Additional Voices (voice)",
+   "p": 186605
+  },
+  {
+   "n": "Michael Woodley",
+   "r": "Additional Voices (voice)",
+   "p": null
+  },
+  {
+   "n": "David Boat",
+   "r": "Additional Voices (voice)",
+   "p": 87176
+  },
+  {
+   "n": "Dave B. Mitchell",
+   "r": "Additional Voices (voice)",
+   "p": 1082094
+  },
+  {
+   "n": "Michael Ralph",
+   "r": "Additional Voices (voice)",
+   "p": 138897
+  },
+  {
+   "n": "Fred Tatasciore",
+   "r": "Additional Voices (voice)",
+   "p": 60279
+  },
+  {
+   "n": "Kimberly Bailey",
+   "r": "Additional Voices (voice)",
+   "p": 1542616
+  },
+  {
+   "n": "Secunda Wood",
+   "r": "Additional Voices (voice)",
+   "p": 79915
+  },
+  {
+   "n": "Alexi Stavrou",
+   "r": "Additional Voices (voice)",
+   "p": 2513246
+  },
+  {
+   "n": "Debra Wilson",
+   "r": "Additional Voices (voice)",
+   "p": 83105
+  }
+ ],
+ "wm": [
+  {
+   "n": "Yahya Abdul-Mateen II",
+   "r": "Simon Williams",
+   "p": 1639847
+  },
+  {
+   "n": "Arian Moayed",
+   "r": "Agent Cleary",
+   "p": 457386
+  },
+  {
+   "n": "X Mayo",
+   "r": "Janelle Jackson",
+   "p": 2267887
+  },
+  {
+   "n": "Ben Kingsley",
+   "r": "Trevor Slattery",
+   "p": 2282
+  },
+  {
+   "n": "Kameron J Meadows",
+   "r": "Young Simon",
+   "p": 5318114
+  },
+  {
+   "n": "Dan Donohue",
+   "r": "Deputy Secretary Heyerdahl",
+   "p": 943222
+  },
+  {
+   "n": "Zlatko Burić",
+   "r": "Von Kovak",
+   "p": 31960
+  },
+  {
+   "n": "Bechir Sylvain",
+   "r": "Sanford",
+   "p": 1517537
+  },
+  {
+   "n": "Olivia Thirlby",
+   "r": "Vivian",
+   "p": 52442
+  },
+  {
+   "n": "Shola Adewusi",
+   "r": "Martha",
+   "p": 1512451
+  }
+ ],
+ "bnd": [
+  {
+   "n": "Tom Holland",
+   "r": "Peter Parker / Spider-Man",
+   "p": 1136406
+  },
+  {
+   "n": "Zendaya",
+   "r": "MJ",
+   "p": 505710
+  },
+  {
+   "n": "Mark Ruffalo",
+   "r": "Bruce Banner / Hulk",
+   "p": 103
+  },
+  {
+   "n": "Jon Bernthal",
+   "r": "Frank Castle / Punisher",
+   "p": 19498
+  },
+  {
+   "n": "Jacob Batalon",
+   "r": "Ned Leeds",
+   "p": 1649152
+  },
+  {
+   "n": "Sadie Sink",
+   "r": "Jean Grey",
+   "p": 1590797
+  },
+  {
+   "n": "Florence Pugh",
+   "r": "Yelena Belova / Black Widow",
+   "p": 1373737
+  },
+  {
+   "n": "Liza Colón-Zayas",
+   "r": "Detective Jean DeWolff",
+   "p": 59693
+  },
+  {
+   "n": "Tramell Tillman",
+   "r": "William 'Bill' Metzger",
+   "p": 2028037
+  },
+  {
+   "n": "Marisa Tomei",
+   "r": "May Parker",
+   "p": 3141
+  }
+ ],
+ "vq": [
+  {
+   "n": "Paul Bettany",
+   "r": "The Vision",
+   "p": 6162
+  },
+  {
+   "n": "Henry Lewis",
+   "r": "D.U.M.-E",
+   "p": 1730562
+  },
+  {
+   "n": "Jonathan Sayer",
+   "r": "U",
+   "p": 1730563
+  },
+  {
+   "n": "James D'Arcy",
+   "r": "J.A.R.V.I.S.",
+   "p": 19655
+  },
+  {
+   "n": "Orla Brady",
+   "r": "F.R.I.D.A.Y.",
+   "p": 107734
+  },
+  {
+   "n": "Emily Hampshire",
+   "r": "E.D.I.T.H.",
+   "p": 4570
+  },
+  {
+   "n": "James Spader",
+   "r": "Ultron",
+   "p": 13548
+  },
+  {
+   "n": "Todd Stashwick",
+   "r": "Paladin",
+   "p": 19277
+  },
+  {
+   "n": "Faran Tahir",
+   "r": "Raza",
+   "p": 57452
+  },
+  {
+   "n": "Ruaridh Mollica",
+   "r": "Thomas Shepherd",
+   "p": 2307679
+  }
+ ],
+ "doomsday": [
+  {
+   "n": "Robert Downey Jr.",
+   "r": "Victor von Doom  / Doctor Doom",
+   "p": 3223
+  },
+  {
+   "n": "Chris Evans",
+   "r": "Steve Rogers",
+   "p": 16828
+  },
+  {
+   "n": "Chris Hemsworth",
+   "r": "Thor",
+   "p": 74568
+  },
+  {
+   "n": "Pedro Pascal",
+   "r": "Reed Richards / Mister Fantastic",
+   "p": 1253360
+  },
+  {
+   "n": "Paul Rudd",
+   "r": "Scott Lang / Ant-Man",
+   "p": 22226
+  },
+  {
+   "n": "Anthony Mackie",
+   "r": "Sam Wilson / Captain America",
+   "p": 53650
+  },
+  {
+   "n": "Florence Pugh",
+   "r": "Yelena Belova",
+   "p": 1373737
+  },
+  {
+   "n": "Vanessa Kirby",
+   "r": "Sue Storm / Invisible Woman",
+   "p": 556356
+  },
+  {
+   "n": "Ebon Moss-Bachrach",
+   "r": "Ben Grimm / The Thing",
+   "p": 21042
+  },
+  {
+   "n": "Wyatt Russell",
+   "r": "John Walker",
+   "p": 986808
+  }
+ ],
+ "secretwars": [
+  {
+   "n": "Robert Downey Jr.",
+   "r": "Victor von Doom  / Doctor Doom",
+   "p": 3223
+  },
+  {
+   "n": "Pedro Pascal",
+   "r": "Reed Richards / Mister Fantastic",
+   "p": 1253360
+  },
+  {
+   "n": "Vanessa Kirby",
+   "r": "Sue Storm / Invisible Woman",
+   "p": 556356
+  },
+  {
+   "n": "Ebon Moss-Bachrach",
+   "r": "Ben Grimm / The Thing",
+   "p": 21042
+  },
+  {
+   "n": "Joseph Quinn",
+   "r": "Johnny Storm / Human Torch",
+   "p": 1597365
+  },
+  {
+   "n": "Sebastian Stan",
+   "r": "Bucky Barnes / Winter Soldier",
+   "p": 60898
+  },
+  {
+   "n": "Florence Pugh",
+   "r": "Yelena Belova",
+   "p": 1373737
+  },
+  {
+   "n": "David Harbour",
+   "r": "Alexei Shostakov",
+   "p": 35029
+  },
+  {
+   "n": "Wyatt Russell",
+   "r": "John Walker",
+   "p": 986808
+  },
+  {
+   "n": "Hannah John-Kamen",
+   "r": "Ava Starr",
+   "p": 1408809
+  }
+ ],
+ "xmen1": [
+  {
+   "n": "Bruce Davison",
+   "r": "Sen. Robert Kelly",
+   "p": 52374
+  },
+  {
+   "n": "Terry Anzur",
+   "r": "Terry Anzur",
+   "p": null
+  },
+  {
+   "n": "Bryan Singer",
+   "r": "Self - Director",
+   "p": 9032
+  },
+  {
+   "n": "Hugh Jackman",
+   "r": "Self - 'Logan / 'Wolverine'",
+   "p": 6968
+  },
+  {
+   "n": "Tom DeSanto",
+   "r": "Self - Executive Producer / Story",
+   "p": 10994
+  },
+  {
+   "n": "Patrick Stewart",
+   "r": "Self - 'Xavier'",
+   "p": 2387
+  },
+  {
+   "n": "Ian McKellen",
+   "r": "Self - 'Magneto'",
+   "p": 1327
+  },
+  {
+   "n": "Dick Anthony Williams",
+   "r": "Sen. Frank Radler",
+   "p": 1911
+  },
+  {
+   "n": "Halle Berry",
+   "r": "Self - 'Storm'",
+   "p": 4587
+  },
+  {
+   "n": "Lauren Shuler Donner",
+   "r": "Self - Producer",
+   "p": 7200
+  }
+ ],
+ "x2": [
+  {
+   "n": "Hugh Jackman",
+   "r": "Logan / Wolverine",
+   "p": 6968
+  },
+  {
+   "n": "Patrick Stewart",
+   "r": "Professor Charles Xavier",
+   "p": 2387
+  },
+  {
+   "n": "Ian McKellen",
+   "r": "Eric Lehnsherr / Magneto",
+   "p": 1327
+  },
+  {
+   "n": "James Marsden",
+   "r": "Scott Summers / Cyclops",
+   "p": 11006
+  },
+  {
+   "n": "Brian Cox",
+   "r": "William Stryker",
+   "p": 1248
+  },
+  {
+   "n": "Famke Janssen",
+   "r": "Jean Grey",
+   "p": 10696
+  },
+  {
+   "n": "Halle Berry",
+   "r": "Ororo Munroe / Storm",
+   "p": 4587
+  },
+  {
+   "n": "Alan Cumming",
+   "r": "Kurt Wagner / Nightcrawler",
+   "p": 10697
+  },
+  {
+   "n": "Aaron Stanford",
+   "r": "John Allerdyce / Pyro",
+   "p": 11022
+  },
+  {
+   "n": "Rebecca Romijn",
+   "r": "Raven Darkholme / Mystique",
+   "p": 11008
+  }
+ ],
+ "x3": [
+  {
+   "n": "Hugh Jackman",
+   "r": "Logan / Wolverine",
+   "p": 6968
+  },
+  {
+   "n": "Halle Berry",
+   "r": "Ororo Munroe / Storm",
+   "p": 4587
+  },
+  {
+   "n": "Ian McKellen",
+   "r": "Erik Lehnsherr / Magneto",
+   "p": 1327
+  },
+  {
+   "n": "Patrick Stewart",
+   "r": "Professor Charles Xavier",
+   "p": 2387
+  },
+  {
+   "n": "Famke Janssen",
+   "r": "Jean Grey / Phoenix",
+   "p": 10696
+  },
+  {
+   "n": "Anna Paquin",
+   "r": "Marie / Rogue",
+   "p": 10690
+  },
+  {
+   "n": "Kelsey Grammer",
+   "r": "Dr. Henry 'Hank' McCoy / Beast",
+   "p": 7090
+  },
+  {
+   "n": "James Marsden",
+   "r": "Scott Summers / Cyclops",
+   "p": 11006
+  },
+  {
+   "n": "Rebecca Romijn",
+   "r": "Raven Darkholme / Mystique",
+   "p": 11008
+  },
+  {
+   "n": "Shawn Ashmore",
+   "r": "Bobby Drake / Iceman",
+   "p": 11023
+  }
+ ],
+ "origins": [
+  {
+   "n": "Hugh Jackman",
+   "r": "Logan / Wolverine",
+   "p": 6968
+  },
+  {
+   "n": "Liev Schreiber",
+   "r": "Victor Creed",
+   "p": 23626
+  },
+  {
+   "n": "Danny Huston",
+   "r": "Stryker",
+   "p": 6413
+  },
+  {
+   "n": "Lynn Collins",
+   "r": "Kayla Silverfox",
+   "p": 21044
+  },
+  {
+   "n": "Kevin Durand",
+   "r": "Fred Dukes",
+   "p": 79072
+  },
+  {
+   "n": "Dominic Monaghan",
+   "r": "Bradley",
+   "p": 1330
+  },
+  {
+   "n": "Taylor Kitsch",
+   "r": "Remy LeBeau",
+   "p": 60900
+  },
+  {
+   "n": "Daniel Henney",
+   "r": "Agent Zero",
+   "p": 82093
+  },
+  {
+   "n": "Ryan Reynolds",
+   "r": "Wade Wilson",
+   "p": 10859
+  },
+  {
+   "n": "will.i.am",
+   "r": "John Wraith",
+   "p": 82092
+  }
+ ],
+ "firstclass": [
+  {
+   "n": "James McAvoy",
+   "r": "Charles Xavier",
+   "p": 5530
+  },
+  {
+   "n": "Michael Fassbender",
+   "r": "Erik Lehnsherr",
+   "p": 17288
+  },
+  {
+   "n": "Jennifer Lawrence",
+   "r": "Raven / Mystique",
+   "p": 72129
+  },
+  {
+   "n": "Rose Byrne",
+   "r": "Moira MacTaggert",
+   "p": 9827
+  },
+  {
+   "n": "Kevin Bacon",
+   "r": "Sebastian Shaw",
+   "p": 4724
+  },
+  {
+   "n": "January Jones",
+   "r": "Emma Frost",
+   "p": 31717
+  },
+  {
+   "n": "Nicholas Hoult",
+   "r": "Hank / Beast",
+   "p": 3292
+  },
+  {
+   "n": "Lucas Till",
+   "r": "Alex Summers / Havok",
+   "p": 429
+  },
+  {
+   "n": "Zoë Kravitz",
+   "r": "Angel Salvadore",
+   "p": 37153
+  },
+  {
+   "n": "Caleb Landry Jones",
+   "r": "Cassidy / Banshee",
+   "p": 572541
+  }
+ ],
+ "wolv13": [
+  {
+   "n": "Hugh Jackman",
+   "r": "Logan / Wolverine",
+   "p": 6968
+  },
+  {
+   "n": "Hiroyuki Sanada",
+   "r": "Shingen Harada / Lord Shingen",
+   "p": 9195
+  },
+  {
+   "n": "Tao Okamoto",
+   "r": "Mariko Yashida / Scarlet Samurai",
+   "p": 1156024
+  },
+  {
+   "n": "Rila Fukushima",
+   "r": "Yukio / Pinkie Pie",
+   "p": 1179243
+  },
+  {
+   "n": "Famke Janssen",
+   "r": "Jean Grey / Phoenix",
+   "p": 10696
+  },
+  {
+   "n": "Will Yun Lee",
+   "r": "Harada",
+   "p": 10884
+  },
+  {
+   "n": "Svetlana Khodchenkova",
+   "r": "Madame Hydra / Viper",
+   "p": 94064
+  },
+  {
+   "n": "Hal Yamanouchi",
+   "r": "Ichiro Yashida / Silver Samurai",
+   "p": 74540
+  },
+  {
+   "n": "Brian Tee",
+   "r": "Noburo Mori",
+   "p": 116278
+  },
+  {
+   "n": "Ken Yamamura",
+   "r": "Young Yashida",
+   "p": 1155715
+  }
+ ],
+ "dofp": [
+  {
+   "n": "Hugh Jackman",
+   "r": "Logan / Wolverine",
+   "p": 6968
+  },
+  {
+   "n": "James McAvoy",
+   "r": "Charles Xavier",
+   "p": 5530
+  },
+  {
+   "n": "Michael Fassbender",
+   "r": "Erik Lehnsherr",
+   "p": 17288
+  },
+  {
+   "n": "Patrick Stewart",
+   "r": "Professor X",
+   "p": 2387
+  },
+  {
+   "n": "Ian McKellen",
+   "r": "Magneto",
+   "p": 1327
+  },
+  {
+   "n": "Jennifer Lawrence",
+   "r": "Raven / Mystique",
+   "p": 72129
+  },
+  {
+   "n": "Halle Berry",
+   "r": "Storm",
+   "p": 4587
+  },
+  {
+   "n": "Nicholas Hoult",
+   "r": "Hank / Beast",
+   "p": 3292
+  },
+  {
+   "n": "Anna Paquin",
+   "r": "Rogue",
+   "p": 10690
+  },
+  {
+   "n": "Elliot Page",
+   "r": "Kitty Pryde",
+   "p": 27578
+  }
+ ],
+ "apoc": [
+  {
+   "n": "James McAvoy",
+   "r": "Professor Charles Xavier",
+   "p": 5530
+  },
+  {
+   "n": "Michael Fassbender",
+   "r": "Erik Lehnsherr / Magneto",
+   "p": 17288
+  },
+  {
+   "n": "Jennifer Lawrence",
+   "r": "Raven / Mystique",
+   "p": 72129
+  },
+  {
+   "n": "Nicholas Hoult",
+   "r": "Hank McCoy / Beast",
+   "p": 3292
+  },
+  {
+   "n": "Oscar Isaac",
+   "r": "En Sabah Nur / Apocalypse",
+   "p": 25072
+  },
+  {
+   "n": "Rose Byrne",
+   "r": "Moira MacTaggert",
+   "p": 9827
+  },
+  {
+   "n": "Evan Peters",
+   "r": "Peter Maximoff / Quicksilver",
+   "p": 55089
+  },
+  {
+   "n": "Josh Helman",
+   "r": "Col. William Stryker",
+   "p": 1056053
+  },
+  {
+   "n": "Sophie Turner",
+   "r": "Jean Grey",
+   "p": 1001657
+  },
+  {
+   "n": "Tye Sheridan",
+   "r": "Scott Summers / Cyclops",
+   "p": 1034681
+  }
+ ],
+ "darkphoenix": [
+  {
+   "n": "Sophie Turner",
+   "r": "Jean Grey / Dark Phoenix",
+   "p": 1001657
+  },
+  {
+   "n": "James McAvoy",
+   "r": "Charles Xavier / Professor X",
+   "p": 5530
+  },
+  {
+   "n": "Nicholas Hoult",
+   "r": "Hank McCoy / Beast",
+   "p": 3292
+  },
+  {
+   "n": "Tye Sheridan",
+   "r": "Scott Summers / Cyclops",
+   "p": 1034681
+  },
+  {
+   "n": "Michael Fassbender",
+   "r": "Erik Lensherr / Magneto",
+   "p": 17288
+  },
+  {
+   "n": "Alexandra Shipp",
+   "r": "Ororo Munroe / Storm",
+   "p": 1253199
+  },
+  {
+   "n": "Evan Peters",
+   "r": "Peter Maximoff / Quicksilver",
+   "p": 55089
+  },
+  {
+   "n": "Jessica Chastain",
+   "r": "Vuk",
+   "p": 83002
+  },
+  {
+   "n": "Kodi Smit-McPhee",
+   "r": "Kurt Wagner / Nightcrawler",
+   "p": 113505
+  },
+  {
+   "n": "Jennifer Lawrence",
+   "r": "Raven Darkholme / Mystique",
+   "p": 72129
+  }
+ ],
+ "logan": [
+  {
+   "n": "Hugh Jackman",
+   "r": "Logan / X-24",
+   "p": 6968
+  },
+  {
+   "n": "Dafne Keen",
+   "r": "Laura",
+   "p": 1464650
+  },
+  {
+   "n": "Patrick Stewart",
+   "r": "Charles",
+   "p": 2387
+  },
+  {
+   "n": "Elizabeth Rodriguez",
+   "r": "Gabriela",
+   "p": 65421
+  },
+  {
+   "n": "Boyd Holbrook",
+   "r": "Pierce",
+   "p": 467645
+  },
+  {
+   "n": "Stephen Merchant",
+   "r": "Caliban",
+   "p": 39189
+  },
+  {
+   "n": "Richard E. Grant",
+   "r": "Dr. Rice",
+   "p": 20766
+  },
+  {
+   "n": "Stephen Dunlevy",
+   "r": "Macon",
+   "p": 1492293
+  },
+  {
+   "n": "Eriq La Salle",
+   "r": "Will Munson",
+   "p": 23628
+  },
+  {
+   "n": "Elise Neal",
+   "r": "Kathryn Munson",
+   "p": 21215
+  }
+ ],
+ "dp1": [
+  {
+   "n": "Ryan Reynolds",
+   "r": "Wade / Deadpool",
+   "p": 10859
+  },
+  {
+   "n": "Morena Baccarin",
+   "r": "Vanessa",
+   "p": 54882
+  },
+  {
+   "n": "Ed Skrein",
+   "r": "Ajax",
+   "p": 1047649
+  },
+  {
+   "n": "T.J. Miller",
+   "r": "Weasel",
+   "p": 51990
+  },
+  {
+   "n": "Gina Carano",
+   "r": "Angel Dust",
+   "p": 78452
+  },
+  {
+   "n": "Leslie Uggams",
+   "r": "Blind Al",
+   "p": 122750
+  },
+  {
+   "n": "Brianna Hildebrand",
+   "r": "Negasonic Teenage Warhead",
+   "p": 1492326
+  },
+  {
+   "n": "Stefan Kapičić",
+   "r": "Colossus (voice)",
+   "p": 80507
+  },
+  {
+   "n": "Karan Soni",
+   "r": "Dopinder",
+   "p": 1109702
+  },
+  {
+   "n": "Randal Reeder",
+   "r": "Buck",
+   "p": 215887
+  }
+ ],
+ "dp2": [
+  {
+   "n": "Ryan Reynolds",
+   "r": "Wade Wilson / Deadpool / Juggernaut (voice)",
+   "p": 10859
+  },
+  {
+   "n": "Josh Brolin",
+   "r": "Cable",
+   "p": 16851
+  },
+  {
+   "n": "Morena Baccarin",
+   "r": "Vanessa",
+   "p": 54882
+  },
+  {
+   "n": "Julian Dennison",
+   "r": "Firefist",
+   "p": 1139349
+  },
+  {
+   "n": "Zazie Beetz",
+   "r": "Domino",
+   "p": 1545693
+  },
+  {
+   "n": "T.J. Miller",
+   "r": "Weasel",
+   "p": 51990
+  },
+  {
+   "n": "Leslie Uggams",
+   "r": "Blind Al",
+   "p": 122750
+  },
+  {
+   "n": "Karan Soni",
+   "r": "Dopinder",
+   "p": 1109702
+  },
+  {
+   "n": "Brianna Hildebrand",
+   "r": "Negasonic Teenage Warhead",
+   "p": 1492326
+  },
+  {
+   "n": "Jack Kesy",
+   "r": "Black Tom",
+   "p": 1292258
+  }
+ ],
+ "newmutants": [
+  {
+   "n": "Blu Hunt",
+   "r": "Dani Moonstar",
+   "p": 1827498
+  },
+  {
+   "n": "Charlie Heaton",
+   "r": "Samuel Guthrie",
+   "p": 1448222
+  },
+  {
+   "n": "Maisie Williams",
+   "r": "Rahne Sinclair",
+   "p": 1181313
+  },
+  {
+   "n": "Henrique Zaga",
+   "r": "Roberto da Costa",
+   "p": 1563169
+  },
+  {
+   "n": "Anya Taylor-Joy",
+   "r": "Illyana Rasputin",
+   "p": 1397778
+  },
+  {
+   "n": "Alice Braga",
+   "r": "Dr. Reyes",
+   "p": 8602
+  },
+  {
+   "n": "Adam Beach",
+   "r": "Dani's Father",
+   "p": 33527
+  },
+  {
+   "n": "Happy Anderson",
+   "r": "Reverend Craig",
+   "p": 1370986
+  },
+  {
+   "n": "Dustin Ceithamer",
+   "r": "Smiling Man",
+   "p": null
+  },
+  {
+   "n": "Marilyn Manson",
+   "r": "Smiling Man (voice)",
+   "p": 9315
+  }
+ ],
+ "f405": [
+  {
+   "n": "Ioan Gruffudd",
+   "r": "Reed Richards / Mr. Fantastic",
+   "p": 65524
+  },
+  {
+   "n": "Jessica Alba",
+   "r": "Sue Storm / Invisible Woman",
+   "p": 56731
+  },
+  {
+   "n": "Chris Evans",
+   "r": "Johnny Storm / Human Torch",
+   "p": 16828
+  },
+  {
+   "n": "Michael Chiklis",
+   "r": "Ben Grimm / The Thing",
+   "p": 19654
+  },
+  {
+   "n": "Julian McMahon",
+   "r": "Victor von Doom / Doctor Doom",
+   "p": 20402
+  },
+  {
+   "n": "Hamish Linklater",
+   "r": "Leonard",
+   "p": 184581
+  },
+  {
+   "n": "Kerry Washington",
+   "r": "Alicia Masters",
+   "p": 11703
+  },
+  {
+   "n": "Laurie Holden",
+   "r": "Debbie McIlvane",
+   "p": 8332
+  },
+  {
+   "n": "David Parker",
+   "r": "Ernie",
+   "p": 77036
+  },
+  {
+   "n": "Kevin McNulty",
+   "r": "Jimmy O'Hoolihan",
+   "p": 27111
+  }
+ ],
+ "f407": [
+  {
+   "n": "Ioan Gruffudd",
+   "r": "Reed Richards / Mr. Fantastic",
+   "p": 65524
+  },
+  {
+   "n": "Jessica Alba",
+   "r": "Sue Richards / Invisible Woman",
+   "p": 56731
+  },
+  {
+   "n": "Chris Evans",
+   "r": "Johnny Storm / Human Torch",
+   "p": 16828
+  },
+  {
+   "n": "Michael Chiklis",
+   "r": "Ben Grimm / The Thing",
+   "p": 19654
+  },
+  {
+   "n": "Julian McMahon",
+   "r": "Victor von Doom / Doctor Doom",
+   "p": 20402
+  },
+  {
+   "n": "Laurence Fishburne",
+   "r": "Norrin Radd / Silver Surfer (voice)",
+   "p": 2975
+  },
+  {
+   "n": "Doug Jones",
+   "r": "Norrin Radd / Silver Surfer",
+   "p": 17005
+  },
+  {
+   "n": "Kerry Washington",
+   "r": "Alicia Masters",
+   "p": 11703
+  },
+  {
+   "n": "Andre Braugher",
+   "r": "General Hager",
+   "p": 6861
+  },
+  {
+   "n": "Beau Garrett",
+   "r": "Frankie Raye",
+   "p": 20403
+  }
+ ],
+ "f415": [
+  {
+   "n": "Miles Teller",
+   "r": "Reed Richards",
+   "p": 996701
+  },
+  {
+   "n": "Michael B. Jordan",
+   "r": "Johnny Storm",
+   "p": 135651
+  },
+  {
+   "n": "Kate Mara",
+   "r": "Sue Storm",
+   "p": 51072
+  },
+  {
+   "n": "Jamie Bell",
+   "r": "Ben Grimm / The Thing",
+   "p": 478
+  },
+  {
+   "n": "Toby Kebbell",
+   "r": "Victor von Doom / Dr. Doom",
+   "p": 20286
+  },
+  {
+   "n": "Reg E. Cathey",
+   "r": "Dr. Franklin Storm",
+   "p": 38951
+  },
+  {
+   "n": "Tim Blake Nelson",
+   "r": "Dr. Allen",
+   "p": 1462
+  },
+  {
+   "n": "Tim Heidecker",
+   "r": "Mr. Richards",
+   "p": 132856
+  },
+  {
+   "n": "Joshua Montes",
+   "r": "Quarterback Speech School Kid",
+   "p": 1529004
+  },
+  {
+   "n": "Dan Castellaneta",
+   "r": "Mr. Kenny",
+   "p": 198
+  }
+ ],
+ "raimi1": [
+  {
+   "n": "Tobey Maguire",
+   "r": "Spider-Man / Peter Parker",
+   "p": 2219
+  },
+  {
+   "n": "Willem Dafoe",
+   "r": "Green Goblin / Norman Osborn",
+   "p": 5293
+  },
+  {
+   "n": "Kirsten Dunst",
+   "r": "Mary Jane Watson",
+   "p": 205
+  },
+  {
+   "n": "James Franco",
+   "r": "Harry Osborn",
+   "p": 17051
+  },
+  {
+   "n": "Cliff Robertson",
+   "r": "Ben Parker",
+   "p": 19153
+  },
+  {
+   "n": "Rosemary Harris",
+   "r": "May Parker",
+   "p": 18998
+  },
+  {
+   "n": "J.K. Simmons",
+   "r": "J. Jonah Jameson",
+   "p": 18999
+  },
+  {
+   "n": "Joe Manganiello",
+   "r": "Flash Thompson",
+   "p": 20580
+  },
+  {
+   "n": "Gerry Becker",
+   "r": "Maximilian Fargas",
+   "p": 19468
+  },
+  {
+   "n": "Bill Nunn",
+   "r": "Joseph 'Robbie' Robertson",
+   "p": 5502
+  }
+ ],
+ "raimi2": [
+  {
+   "n": "Tobey Maguire",
+   "r": "Spider-Man / Peter Parker",
+   "p": 2219
+  },
+  {
+   "n": "Kirsten Dunst",
+   "r": "Mary Jane Watson",
+   "p": 205
+  },
+  {
+   "n": "James Franco",
+   "r": "Harry Osborn",
+   "p": 17051
+  },
+  {
+   "n": "Alfred Molina",
+   "r": "Doc Ock / Otto Octavius",
+   "p": 658
+  },
+  {
+   "n": "Rosemary Harris",
+   "r": "May Parker",
+   "p": 18998
+  },
+  {
+   "n": "J.K. Simmons",
+   "r": "J. Jonah Jameson",
+   "p": 18999
+  },
+  {
+   "n": "Donna Murphy",
+   "r": "Rosalie Octavius",
+   "p": 2517
+  },
+  {
+   "n": "Daniel Gillies",
+   "r": "John Jameson",
+   "p": 19154
+  },
+  {
+   "n": "Dylan Baker",
+   "r": "Dr. Curt Connors",
+   "p": 19152
+  },
+  {
+   "n": "Bill Nunn",
+   "r": "Joseph 'Robbie' Robertson",
+   "p": 5502
+  }
+ ],
+ "raimi3": [
+  {
+   "n": "Tobey Maguire",
+   "r": "Spider-Man / Peter Parker",
+   "p": 2219
+  },
+  {
+   "n": "Kirsten Dunst",
+   "r": "Mary Jane Watson",
+   "p": 205
+  },
+  {
+   "n": "James Franco",
+   "r": "New Goblin / Harry Osborn",
+   "p": 17051
+  },
+  {
+   "n": "Thomas Haden Church",
+   "r": "Sandman / Flint Marko",
+   "p": 19159
+  },
+  {
+   "n": "Topher Grace",
+   "r": "Venom / Eddie Brock",
+   "p": 17052
+  },
+  {
+   "n": "Bryce Dallas Howard",
+   "r": "Gwen Stacy",
+   "p": 18997
+  },
+  {
+   "n": "Rosemary Harris",
+   "r": "May Parker",
+   "p": 18998
+  },
+  {
+   "n": "J.K. Simmons",
+   "r": "J. Jonah Jameson",
+   "p": 18999
+  },
+  {
+   "n": "James Cromwell",
+   "r": "Captain Stacy",
+   "p": 2505
+  },
+  {
+   "n": "Dylan Baker",
+   "r": "Dr. Curt Connors",
+   "p": 19152
+  }
+ ],
+ "tasm1": [
+  {
+   "n": "Andrew Garfield",
+   "r": "Spider-Man / Peter Parker",
+   "p": 37625
+  },
+  {
+   "n": "Emma Stone",
+   "r": "Gwen Stacy",
+   "p": 54693
+  },
+  {
+   "n": "Rhys Ifans",
+   "r": "The Lizard / Dr. Curt Connors",
+   "p": 7026
+  },
+  {
+   "n": "Denis Leary",
+   "r": "Captain Stacy",
+   "p": 5724
+  },
+  {
+   "n": "Martin Sheen",
+   "r": "Uncle Ben",
+   "p": 8349
+  },
+  {
+   "n": "Sally Field",
+   "r": "Aunt May",
+   "p": 35
+  },
+  {
+   "n": "Irrfan Khan",
+   "r": "Rajit Ratha",
+   "p": 76793
+  },
+  {
+   "n": "Campbell Scott",
+   "r": "Richard Parker",
+   "p": 55152
+  },
+  {
+   "n": "Embeth Davidtz",
+   "r": "Mary Parker",
+   "p": 6368
+  },
+  {
+   "n": "Chris Zylka",
+   "r": "Flash Thompson",
+   "p": 231547
+  }
+ ],
+ "tasm2": [
+  {
+   "n": "Andrew Garfield",
+   "r": "Spider-Man / Peter Parker",
+   "p": 37625
+  },
+  {
+   "n": "Emma Stone",
+   "r": "Gwen Stacy",
+   "p": 54693
+  },
+  {
+   "n": "Jamie Foxx",
+   "r": "Electro / Max Dillon",
+   "p": 134
+  },
+  {
+   "n": "Dane DeHaan",
+   "r": "Green Goblin / Harry Osborn",
+   "p": 122889
+  },
+  {
+   "n": "Colm Feore",
+   "r": "Donald Menken",
+   "p": 10132
+  },
+  {
+   "n": "Felicity Jones",
+   "r": "Felicia",
+   "p": 72855
+  },
+  {
+   "n": "Paul Giamatti",
+   "r": "Aleksei Sytsevich",
+   "p": 13242
+  },
+  {
+   "n": "Sally Field",
+   "r": "Aunt May",
+   "p": 35
+  },
+  {
+   "n": "Embeth Davidtz",
+   "r": "Mary Parker",
+   "p": 6368
+  },
+  {
+   "n": "Campbell Scott",
+   "r": "Richard Parker",
+   "p": 55152
+  }
+ ],
+ "venom1": [
+  {
+   "n": "Tom Hardy",
+   "r": "Eddie Brock / Venom",
+   "p": 2524
+  },
+  {
+   "n": "Michelle Williams",
+   "r": "Anne Weying",
+   "p": 1812
+  },
+  {
+   "n": "Riz Ahmed",
+   "r": "Carlton Drake / Riot",
+   "p": 53240
+  },
+  {
+   "n": "Scott Haze",
+   "r": "Security Chief Roland Treece",
+   "p": 87954
+  },
+  {
+   "n": "Reid Scott",
+   "r": "Dr. Dan Lewis",
+   "p": 81316
+  },
+  {
+   "n": "Jenny Slate",
+   "r": "Dr. Dora Skirth",
+   "p": 213001
+  },
+  {
+   "n": "Melora Walters",
+   "r": "Homeless Woman Maria",
+   "p": 4766
+  },
+  {
+   "n": "Woody Harrelson",
+   "r": "Cletus Kasady / Carnage",
+   "p": 57755
+  },
+  {
+   "n": "Peggy Lu",
+   "r": "Mrs. Chen",
+   "p": 2141479
+  },
+  {
+   "n": "Malcolm C. Murray",
+   "r": "Lewis Donate",
+   "p": 1765806
+  }
+ ],
+ "venom2": [
+  {
+   "n": "Tom Hardy",
+   "r": "Eddie Brock / Venom",
+   "p": 2524
+  },
+  {
+   "n": "Woody Harrelson",
+   "r": "Cletus Kasady / Carnage",
+   "p": 57755
+  },
+  {
+   "n": "Michelle Williams",
+   "r": "Anne Weying",
+   "p": 1812
+  },
+  {
+   "n": "Naomie Harris",
+   "r": "Frances Louise Barrison / Shriek",
+   "p": 2038
+  },
+  {
+   "n": "Reid Scott",
+   "r": "Dr. Dan Lewis",
+   "p": 81316
+  },
+  {
+   "n": "Stephen Graham",
+   "r": "Detective Mulligan",
+   "p": 1115
+  },
+  {
+   "n": "Peggy Lu",
+   "r": "Mrs. Chen",
+   "p": 2141479
+  },
+  {
+   "n": "Sian Webber",
+   "r": "Dr. Pazzo",
+   "p": 1225043
+  },
+  {
+   "n": "Michelle Greenidge",
+   "r": "Mugging Victim",
+   "p": 1966036
+  },
+  {
+   "n": "Rob Bowen",
+   "r": "Beaten Mugger",
+   "p": null
+  }
+ ],
+ "venom3": [
+  {
+   "n": "Tom Hardy",
+   "r": "Eddie Brock / Venom",
+   "p": 2524
+  },
+  {
+   "n": "Chiwetel Ejiofor",
+   "r": "Strickland",
+   "p": 5294
+  },
+  {
+   "n": "Juno Temple",
+   "r": "Dr. Teddy Paine",
+   "p": 36594
+  },
+  {
+   "n": "Rhys Ifans",
+   "r": "Martin",
+   "p": 7026
+  },
+  {
+   "n": "Stephen Graham",
+   "r": "Detective Mulligan",
+   "p": 1115
+  },
+  {
+   "n": "Peggy Lu",
+   "r": "Mrs. Chen",
+   "p": 2141479
+  },
+  {
+   "n": "Clark Backo",
+   "r": "Sadie",
+   "p": 1861573
+  },
+  {
+   "n": "Alanna Ubach",
+   "r": "Nova",
+   "p": 10402
+  },
+  {
+   "n": "Cristo Fernández",
+   "r": "Barman",
+   "p": 2627590
+  },
+  {
+   "n": "Jared Abrahamson",
+   "r": "Captain Forrest",
+   "p": 1011019
+  }
+ ],
+ "morbius": [
+  {
+   "n": "Jared Leto",
+   "r": "Dr. Michael Morbius",
+   "p": 7499
+  },
+  {
+   "n": "Matt Smith",
+   "r": "Milo",
+   "p": 136532
+  },
+  {
+   "n": "Adria Arjona",
+   "r": "Martine Bancroft",
+   "p": 1371297
+  },
+  {
+   "n": "Jared Harris",
+   "r": "Dr. Emil Nicholas",
+   "p": 15440
+  },
+  {
+   "n": "Tyrese Gibson",
+   "r": "Agent Simon Stroud",
+   "p": 8169
+  },
+  {
+   "n": "Al Madrigal",
+   "r": "Agent Rodriguez",
+   "p": 90534
+  },
+  {
+   "n": "Michael Keaton",
+   "r": "Adrian Toomes",
+   "p": 2232
+  },
+  {
+   "n": "Zaris-Angel Hator",
+   "r": "Anna",
+   "p": 2127280
+  },
+  {
+   "n": "Joe Ferrara",
+   "r": "Bush Pilot",
+   "p": 1315513
+  },
+  {
+   "n": "Charlie Shotwell",
+   "r": "Young Michael",
+   "p": 1637129
+  }
+ ],
+ "madameweb": [
+  {
+   "n": "Dakota Johnson",
+   "r": "Cassandra Webb",
+   "p": 118545
+  },
+  {
+   "n": "Sydney Sweeney",
+   "r": "Julia Cornwall",
+   "p": 115440
+  },
+  {
+   "n": "Isabela Merced",
+   "r": "Anya Corazón",
+   "p": 1428070
+  },
+  {
+   "n": "Celeste O'Connor",
+   "r": "Mattie Franklin",
+   "p": 1972881
+  },
+  {
+   "n": "Tahar Rahim",
+   "r": "Ezekiel Sims",
+   "p": 81051
+  },
+  {
+   "n": "Mike Epps",
+   "r": "O'Neil",
+   "p": 51944
+  },
+  {
+   "n": "Emma Roberts",
+   "r": "Mary Parker",
+   "p": 34847
+  },
+  {
+   "n": "Adam Scott",
+   "r": "Ben Parker",
+   "p": 36801
+  },
+  {
+   "n": "Kerry Bishé",
+   "r": "Constance",
+   "p": 58356
+  },
+  {
+   "n": "Zosia Mamet",
+   "r": "Amaria",
+   "p": 206966
+  }
+ ],
+ "kraven": [
+  {
+   "n": "Aaron Taylor-Johnson",
+   "r": "Sergei Kravinoff / Kraven the Hunter",
+   "p": 27428
+  },
+  {
+   "n": "Ariana DeBose",
+   "r": "Calypso Ezili",
+   "p": 1437491
+  },
+  {
+   "n": "Fred Hechinger",
+   "r": "Dmitri Kravinoff",
+   "p": 2099497
+  },
+  {
+   "n": "Alessandro Nivola",
+   "r": "Aleksei Sytsevich",
+   "p": 4941
+  },
+  {
+   "n": "Christopher Abbott",
+   "r": "The Foreigner",
+   "p": 984629
+  },
+  {
+   "n": "Russell Crowe",
+   "r": "Nikolai Kravinoff",
+   "p": 934
+  },
+  {
+   "n": "Yuri Kolokolnikov",
+   "r": "Semyon Chorney",
+   "p": 238130
+  },
+  {
+   "n": "Levi Miller",
+   "r": "Young Sergei",
+   "p": 1313583
+  },
+  {
+   "n": "Tom Reed",
+   "r": "Bert",
+   "p": 1546022
+  },
+  {
+   "n": "Billy Barratt",
+   "r": "Young Dmitri",
+   "p": 1840063
+  }
+ ],
+ "sv1": [
+  {
+   "n": "Shameik Moore",
+   "r": "Miles Morales (voice)",
+   "p": 587506
+  },
+  {
+   "n": "Jake Johnson",
+   "r": "Peter B. Parker (voice)",
+   "p": 543505
+  },
+  {
+   "n": "Hailee Steinfeld",
+   "r": "Gwen Stacy (voice)",
+   "p": 130640
+  },
+  {
+   "n": "Mahershala Ali",
+   "r": "Uncle Aaron (voice)",
+   "p": 932967
+  },
+  {
+   "n": "Brian Tyree Henry",
+   "r": "Jefferson Davis (voice)",
+   "p": 226366
+  },
+  {
+   "n": "Lily Tomlin",
+   "r": "Aunt May (voice)",
+   "p": 10437
+  },
+  {
+   "n": "Luna Lauren Vélez",
+   "r": "Rio Morales (voice)",
+   "p": 141610
+  },
+  {
+   "n": "Zoë Kravitz",
+   "r": "Mary Jane (voice)",
+   "p": 37153
+  },
+  {
+   "n": "John Mulaney",
+   "r": "Spider-Ham (voice)",
+   "p": 933558
+  },
+  {
+   "n": "Kimiko Glenn",
+   "r": "Peni Parker (voice)",
+   "p": 1443708
+  }
+ ],
+ "sv2": [
+  {
+   "n": "Shameik Moore",
+   "r": "Miles Morales (voice)",
+   "p": 587506
+  },
+  {
+   "n": "Hailee Steinfeld",
+   "r": "Gwen Stacy (voice)",
+   "p": 130640
+  },
+  {
+   "n": "Brian Tyree Henry",
+   "r": "Jeff Morales (voice)",
+   "p": 226366
+  },
+  {
+   "n": "Luna Lauren Vélez",
+   "r": "Rio Morales (voice)",
+   "p": 141610
+  },
+  {
+   "n": "Jake Johnson",
+   "r": "Peter B. Parker (voice)",
+   "p": 543505
+  },
+  {
+   "n": "Oscar Isaac",
+   "r": "Miguel O'Hara (voice)",
+   "p": 25072
+  },
+  {
+   "n": "Jason Schwartzman",
+   "r": "Spot (voice)",
+   "p": 17881
+  },
+  {
+   "n": "Issa Rae",
+   "r": "Jessica Drew (voice)",
+   "p": 1455336
+  },
+  {
+   "n": "Daniel Kaluuya",
+   "r": "Hobie Brown (voice)",
+   "p": 206919
+  },
+  {
+   "n": "Karan Soni",
+   "r": "Pavitr Prabhakar (voice)",
+   "p": 1109702
+  }
+ ],
+ "howard": [
+  {
+   "n": "Lea Thompson",
+   "r": "Beverly Switzler",
+   "p": 1063
+  },
+  {
+   "n": "Jeffrey Jones",
+   "r": "Dr. Walter Jenning",
+   "p": 4004
+  },
+  {
+   "n": "Tim Robbins",
+   "r": "Phil Blumburtt",
+   "p": 504
+  },
+  {
+   "n": "Ed Gale",
+   "r": "Howard T. Duck",
+   "p": 1471
+  },
+  {
+   "n": "Chip Zien",
+   "r": "Howard T. Duck (voice)",
+   "p": 90039
+  },
+  {
+   "n": "Tim Rose",
+   "r": "Howard T. Duck",
+   "p": 114761
+  },
+  {
+   "n": "Steve Sleap",
+   "r": "Howard T. Duck",
+   "p": null
+  },
+  {
+   "n": "Peter Baird",
+   "r": "Howard T. Duck",
+   "p": null
+  },
+  {
+   "n": "Mary Wells",
+   "r": "Howard T. Duck",
+   "p": null
+  },
+  {
+   "n": "Lisa Sturz",
+   "r": "Howard T. Duck",
+   "p": null
+  }
+ ],
+ "blade1": [
+  {
+   "n": "Wesley Snipes",
+   "r": "Blade",
+   "p": 10814
+  },
+  {
+   "n": "Stephen Dorff",
+   "r": "Deacon Frost",
+   "p": 10822
+  },
+  {
+   "n": "Kris Kristofferson",
+   "r": "Whistler",
+   "p": 10823
+  },
+  {
+   "n": "N'Bushe Wright",
+   "r": "Karen",
+   "p": 10824
+  },
+  {
+   "n": "Donal Logue",
+   "r": "Quinn",
+   "p": 10825
+  },
+  {
+   "n": "Udo Kier",
+   "r": "Dragonetti",
+   "p": 1646
+  },
+  {
+   "n": "Arly Jover",
+   "r": "Mercury",
+   "p": 66147
+  },
+  {
+   "n": "Traci Lords",
+   "r": "Racquel",
+   "p": 10826
+  },
+  {
+   "n": "Kevin Patrick Walls",
+   "r": "Krieger",
+   "p": 10827
+  },
+  {
+   "n": "Tim Guinee",
+   "r": "Curtis Webb",
+   "p": 40275
+  }
+ ],
+ "blade2": [
+  {
+   "n": "Wesley Snipes",
+   "r": "Blade",
+   "p": 10814
+  },
+  {
+   "n": "Kris Kristofferson",
+   "r": "Whistler",
+   "p": 10823
+  },
+  {
+   "n": "Ron Perlman",
+   "r": "Reinhardt",
+   "p": 2372
+  },
+  {
+   "n": "Leonor Varela",
+   "r": "Nyssa",
+   "p": 10839
+  },
+  {
+   "n": "Norman Reedus",
+   "r": "Scud",
+   "p": 4886
+  },
+  {
+   "n": "Thomas Kretschmann",
+   "r": "Damaskinos",
+   "p": 3491
+  },
+  {
+   "n": "Luke Goss",
+   "r": "Nomak",
+   "p": 10843
+  },
+  {
+   "n": "Matt Schulze",
+   "r": "Chupa",
+   "p": 31841
+  },
+  {
+   "n": "Danny John-Jules",
+   "r": "Asad",
+   "p": 115787
+  },
+  {
+   "n": "Donnie Yen",
+   "r": "Snowman",
+   "p": 1341
+  }
+ ],
+ "blade3": [
+  {
+   "n": "Wesley Snipes",
+   "r": "Eric Brooks / Blade",
+   "p": 10814
+  },
+  {
+   "n": "Jessica Biel",
+   "r": "Abigail Whistler",
+   "p": 10860
+  },
+  {
+   "n": "Ryan Reynolds",
+   "r": "Hannibal King",
+   "p": 10859
+  },
+  {
+   "n": "Kris Kristofferson",
+   "r": "Abraham Whistler",
+   "p": 10823
+  },
+  {
+   "n": "Dominic Purcell",
+   "r": "Dracula / Drake",
+   "p": 10862
+  },
+  {
+   "n": "Parker Posey",
+   "r": "Danica Talos",
+   "p": 7489
+  },
+  {
+   "n": "Natasha Lyonne",
+   "r": "Sommerfield",
+   "p": 10871
+  },
+  {
+   "n": "James Remar",
+   "r": "Ray Cumberland",
+   "p": 1736
+  },
+  {
+   "n": "John Michael Higgins",
+   "r": "Dr. Edgar Vance",
+   "p": 8265
+  },
+  {
+   "n": "Patton Oswalt",
+   "r": "Hedges",
+   "p": 10872
+  }
+ ],
+ "hulk03": [
+  {
+   "n": "Eric Bana",
+   "r": "Bruce Banner",
+   "p": 8783
+  },
+  {
+   "n": "Jennifer Connelly",
+   "r": "Betty Ross",
+   "p": 6161
+  },
+  {
+   "n": "Sam Elliott",
+   "r": "Ross",
+   "p": 16431
+  },
+  {
+   "n": "Josh Lucas",
+   "r": "Talbot",
+   "p": 6164
+  },
+  {
+   "n": "Nick Nolte",
+   "r": "Father",
+   "p": 1733
+  },
+  {
+   "n": "Paul Kersey",
+   "r": "Young David Banner",
+   "p": 20048
+  },
+  {
+   "n": "Todd Tesen",
+   "r": "Young Ross",
+   "p": 155873
+  },
+  {
+   "n": "Cara Buono",
+   "r": "Edith Banner",
+   "p": 20047
+  },
+  {
+   "n": "Kevin Rankin",
+   "r": "Harper",
+   "p": 114000
+  },
+  {
+   "n": "Celia Weston",
+   "r": "Mrs. Krenzler",
+   "p": 1989
+  }
+ ],
+ "daredevil03": [
+  {
+   "n": "Ben Affleck",
+   "r": "Matt Murdock / Daredevil",
+   "p": 880
+  },
+  {
+   "n": "Jennifer Garner",
+   "r": "Elektra Natchios",
+   "p": 9278
+  },
+  {
+   "n": "Colin Farrell",
+   "r": "Bullseye",
+   "p": 72466
+  },
+  {
+   "n": "Michael Clarke Duncan",
+   "r": "Wilson Fisk / The Kingpin",
+   "p": 61981
+  },
+  {
+   "n": "Jon Favreau",
+   "r": "Franklin \"Foggy\" Nelson",
+   "p": 15277
+  },
+  {
+   "n": "Scott Terra",
+   "r": "Young Matt",
+   "p": 56153
+  },
+  {
+   "n": "Ellen Pompeo",
+   "r": "Karen Page",
+   "p": 9280
+  },
+  {
+   "n": "Joe Pantoliano",
+   "r": "Ben Urich",
+   "p": 532
+  },
+  {
+   "n": "Leland Orser",
+   "r": "Wesley Owen Welch",
+   "p": 2221
+  },
+  {
+   "n": "Lennie Loftin",
+   "r": "Nick Manolis",
+   "p": 42200
+  }
+ ],
+ "elektra05": [
+  {
+   "n": "Jennifer Garner",
+   "r": "Elektra",
+   "p": 9278
+  },
+  {
+   "n": "Terence Stamp",
+   "r": "Stick",
+   "p": 28641
+  },
+  {
+   "n": "Kirsten Zien",
+   "r": "Abby",
+   "p": 60715
+  },
+  {
+   "n": "Goran Višnjić",
+   "r": "Mark",
+   "p": 5725
+  },
+  {
+   "n": "Cary-Hiroyuki Tagawa",
+   "r": "Roshi",
+   "p": 11398
+  },
+  {
+   "n": "Will Yun Lee",
+   "r": "Kirigi",
+   "p": 10884
+  },
+  {
+   "n": "Chris Ackerman",
+   "r": "Tattoo",
+   "p": 60717
+  },
+  {
+   "n": "Edson T. Ribeiro",
+   "r": "Kinkou",
+   "p": 60718
+  },
+  {
+   "n": "Natassia Malthe",
+   "r": "Typhoid",
+   "p": 21430
+  },
+  {
+   "n": "Bob Sapp",
+   "r": "Stone",
+   "p": 60716
+  }
+ ],
+ "punisher04": [
+  {
+   "n": "Thomas Jane",
+   "r": "Frank Castle / The Punisher",
+   "p": 11155
+  },
+  {
+   "n": "John Travolta",
+   "r": "Howard Saint",
+   "p": 8891
+  },
+  {
+   "n": "Will Patton",
+   "r": "Quentin Glass",
+   "p": 883
+  },
+  {
+   "n": "Roy Scheider",
+   "r": "Frank Castle, Sr.",
+   "p": 6355
+  },
+  {
+   "n": "Laura Harring",
+   "r": "Livia Saint",
+   "p": 15007
+  },
+  {
+   "n": "Ben Foster",
+   "r": "Specker Dave",
+   "p": 11107
+  },
+  {
+   "n": "Samantha Mathis",
+   "r": "Maria  Castle",
+   "p": 20767
+  },
+  {
+   "n": "James Carpinello",
+   "r": "Bobby Saint / John Saint",
+   "p": 53198
+  },
+  {
+   "n": "A. Russell Andrews",
+   "r": "Jimmy Weeks",
+   "p": 1215657
+  },
+  {
+   "n": "Eddie Jemison",
+   "r": "Mickey Duka",
+   "p": 1898
+  }
+ ],
+ "ghostrider07": [
+  {
+   "n": "Nicolas Cage",
+   "r": "Johnny Blaze / Ghost Rider",
+   "p": 2963
+  },
+  {
+   "n": "Eva Mendes",
+   "r": "Roxanne Simpson",
+   "p": 8170
+  },
+  {
+   "n": "Sam Elliott",
+   "r": "Carter Slade / Phantom Rider",
+   "p": 16431
+  },
+  {
+   "n": "Wes Bentley",
+   "r": "Blackheart / Black King",
+   "p": 8210
+  },
+  {
+   "n": "Peter Fonda",
+   "r": "Mephistopheles / Mephisto",
+   "p": 8949
+  },
+  {
+   "n": "Matt Long",
+   "r": "Young Johnny Blaze",
+   "p": 16839
+  },
+  {
+   "n": "Brett Cullen",
+   "r": "Barton Blaze",
+   "p": 16841
+  },
+  {
+   "n": "Raquel Alessi",
+   "r": "Young Roxanne Simpson",
+   "p": 16840
+  },
+  {
+   "n": "Donal Logue",
+   "r": "Mack",
+   "p": 10825
+  },
+  {
+   "n": "Tony Ghosthawk",
+   "r": "Team Blaze",
+   "p": 1297400
+  }
+ ],
+ "ghostrider12": [
+  {
+   "n": "Nicolas Cage",
+   "r": "Johnny Blaze / Ghost Rider",
+   "p": 2963
+  },
+  {
+   "n": "Fergus Riordan",
+   "r": "Danny",
+   "p": 567332
+  },
+  {
+   "n": "Violante Placido",
+   "r": "Nadya",
+   "p": 44649
+  },
+  {
+   "n": "Ciarán Hinds",
+   "r": "Roarke",
+   "p": 8785
+  },
+  {
+   "n": "Johnny Whitworth",
+   "r": "Ray Carrigan",
+   "p": 73589
+  },
+  {
+   "n": "Idris Elba",
+   "r": "Moreau",
+   "p": 17605
+  },
+  {
+   "n": "Spencer Wilding",
+   "r": "Grannik",
+   "p": 25451
+  },
+  {
+   "n": "Sorin Tofan",
+   "r": "Kurdish",
+   "p": 2284559
+  },
+  {
+   "n": "Jacek Koman",
+   "r": "Terrokov",
+   "p": 12210
+  },
+  {
+   "n": "Anthony Stewart Head",
+   "r": "Benedict",
+   "p": 34257
+  }
+ ],
+ "dd1": [
+  {
+   "n": "Charlie Cox",
+   "r": "Matt Murdock / Daredevil",
+   "p": 23458
+  },
+  {
+   "n": "Deborah Ann Woll",
+   "r": "Karen Page",
+   "p": 212154
+  },
+  {
+   "n": "Elden Henson",
+   "r": "Foggy Nelson",
+   "p": 20220
+  },
+  {
+   "n": "Vincent D'Onofrio",
+   "r": "Wilson Fisk / Kingpin",
+   "p": 7132
+  },
+  {
+   "n": "Royce Johnson",
+   "r": "Sgt. Brett Mahoney",
+   "p": 1580404
+  },
+  {
+   "n": "Geoffrey Cantor",
+   "r": "Mitchell Ellison",
+   "p": 944717
+  },
+  {
+   "n": "Jon Bernthal",
+   "r": "Frank Castle / Punisher",
+   "p": 19498
+  },
+  {
+   "n": "Jay Ali",
+   "r": "Rahul 'Ray' Nadeem",
+   "p": 1435955
+  },
+  {
+   "n": "Wilson Bethel",
+   "r": "Benjamin 'Dex' Poindexter",
+   "p": 85779
+  },
+  {
+   "n": "Stephen Rider",
+   "r": "Blake Tower",
+   "p": 936403
+  }
+ ],
+ "jj": [
+  {
+   "n": "Krysten Ritter",
+   "r": "Jessica Jones",
+   "p": 78080
+  },
+  {
+   "n": "Rachael Taylor",
+   "r": "Patricia 'Trish' Walker",
+   "p": 19538
+  },
+  {
+   "n": "Eka Darville",
+   "r": "Malcolm Ducasse",
+   "p": 966554
+  },
+  {
+   "n": "Carrie-Anne Moss",
+   "r": "Jeryn 'Jeri' Hogarth",
+   "p": 530
+  },
+  {
+   "n": "David Tennant",
+   "r": "Kilgrave",
+   "p": 20049
+  },
+  {
+   "n": "J.R. Ramirez",
+   "r": "Oscar Arocho",
+   "p": 1467350
+  },
+  {
+   "n": "John Ventimiglia",
+   "r": "Detective Eddy Costa",
+   "p": 87707
+  },
+  {
+   "n": "Benjamin Walker",
+   "r": "Erik Gelden",
+   "p": 239996
+  },
+  {
+   "n": "Janet McTeer",
+   "r": "Alisa Jones",
+   "p": 47627
+  },
+  {
+   "n": "Rebecca De Mornay",
+   "r": "Dorothy Walker",
+   "p": 28412
+  }
+ ],
+ "lc": [
+  {
+   "n": "Mike Colter",
+   "r": "Luke Cage",
+   "p": 450
+  },
+  {
+   "n": "Alfre Woodard",
+   "r": "Mariah Dillard",
+   "p": 1981
+  },
+  {
+   "n": "Simone Missick",
+   "r": "Misty Knight",
+   "p": 1034765
+  },
+  {
+   "n": "Theo Rossi",
+   "r": "Hernan ‘Shades’ Alvarez",
+   "p": 51995
+  },
+  {
+   "n": "Justin Swain",
+   "r": "Detective Mark Bailey",
+   "p": 1945811
+  },
+  {
+   "n": "Sean Ringgold",
+   "r": "Sugar",
+   "p": 208709
+  },
+  {
+   "n": "Mustafa Shakir",
+   "r": "John 'Bushmaster' McIver",
+   "p": 62385
+  },
+  {
+   "n": "Gabrielle Dennis",
+   "r": "Tilda Johnson",
+   "p": 124501
+  },
+  {
+   "n": "Ron Cephas Jones",
+   "r": "Bobby Fish",
+   "p": 58525
+  },
+  {
+   "n": "John Clarence Stewart",
+   "r": "Alex Wesley",
+   "p": 1761713
+  }
+ ],
+ "if1": [
+  {
+   "n": "Finn Jones",
+   "r": "Danny Rand",
+   "p": 1223787
+  },
+  {
+   "n": "Jessica Henwick",
+   "r": "Colleen Wing",
+   "p": 1202689
+  },
+  {
+   "n": "Jessica Stroup",
+   "r": "Joy Meachum",
+   "p": 55463
+  },
+  {
+   "n": "Tom Pelphrey",
+   "r": "Ward Meachum",
+   "p": 207442
+  },
+  {
+   "n": "Sacha Dhawan",
+   "r": "Davos",
+   "p": 55472
+  },
+  {
+   "n": "David Wenham",
+   "r": "Harold Meachum",
+   "p": 1371
+  },
+  {
+   "n": "Alice Eve",
+   "r": "Mary Walker",
+   "p": 59860
+  },
+  {
+   "n": "Wai Ching Ho",
+   "r": "Madame Gao",
+   "p": 1269910
+  },
+  {
+   "n": "Giullian Yao Gioiello",
+   "r": "BB",
+   "p": 1724696
+  },
+  {
+   "n": "Barrett Doss",
+   "r": "Megan",
+   "p": 1702827
+  }
+ ],
+ "pun": [
+  {
+   "n": "Jon Bernthal",
+   "r": "Frank Castle / Punisher",
+   "p": 19498
+  },
+  {
+   "n": "Ben Barnes",
+   "r": "Billy Russo",
+   "p": 25130
+  },
+  {
+   "n": "Amber Rose Revah",
+   "r": "Dinah Madani",
+   "p": 574378
+  },
+  {
+   "n": "Jason R. Moore",
+   "r": "Curtis Hoyle",
+   "p": 555252
+  },
+  {
+   "n": "Ebon Moss-Bachrach",
+   "r": "David Lieberman / Micro",
+   "p": 21042
+  },
+  {
+   "n": "Daniel Webber",
+   "r": "Lewis Wilson",
+   "p": 234548
+  },
+  {
+   "n": "Paul Schulze",
+   "r": "William Rawlins",
+   "p": 36189
+  },
+  {
+   "n": "Josh Stewart",
+   "r": "John Pilgrim",
+   "p": 40039
+  },
+  {
+   "n": "Michael Nathanson",
+   "r": "Sam Stein",
+   "p": 995514
+  },
+  {
+   "n": "Jaime Ray Newman",
+   "r": "Sarah Lieberman",
+   "p": 109151
+  }
+ ],
+ "def": [
+  {
+   "n": "Charlie Cox",
+   "r": "Matt Murdock / Daredevil",
+   "p": 23458
+  },
+  {
+   "n": "Krysten Ritter",
+   "r": "Jessica Jones",
+   "p": 78080
+  },
+  {
+   "n": "Mike Colter",
+   "r": "Luke Cage",
+   "p": 450
+  },
+  {
+   "n": "Finn Jones",
+   "r": "Danny Rand / Iron Fist",
+   "p": 1223787
+  },
+  {
+   "n": "Élodie Yung",
+   "r": "Elektra Natchios",
+   "p": 78147
+  },
+  {
+   "n": "Wai Ching Ho",
+   "r": "Madame Gao",
+   "p": 1269910
+  },
+  {
+   "n": "Rosario Dawson",
+   "r": "Claire Temple",
+   "p": 5916
+  },
+  {
+   "n": "Jessica Henwick",
+   "r": "Colleen Wing",
+   "p": 1202689
+  },
+  {
+   "n": "Scott Glenn",
+   "r": "Stick",
+   "p": 349
+  },
+  {
+   "n": "Sigourney Weaver",
+   "r": "Alexandra Reid",
+   "p": 10205
+  }
+ ],
+ "agentcarter": [
+  {
+   "n": "Hayley Atwell",
+   "r": "Peggy Carter",
+   "p": 39459
+  },
+  {
+   "n": "James D'Arcy",
+   "r": "Edwin Jarvis",
+   "p": 19655
+  },
+  {
+   "n": "Enver Gjokaj",
+   "r": "Daniel Sousa",
+   "p": 1224022
+  },
+  {
+   "n": "Chad Michael Murray",
+   "r": "Jack Thompson",
+   "p": 62747
+  },
+  {
+   "n": "Bridget Regan",
+   "r": "Dottie Underwood",
+   "p": 1222298
+  },
+  {
+   "n": "Wynn Everett",
+   "r": "Whitney Frost",
+   "p": 203734
+  },
+  {
+   "n": "Lesley Boone",
+   "r": "Rose",
+   "p": 99407
+  },
+  {
+   "n": "Currie Graham",
+   "r": "Calvin Chadwick",
+   "p": 156590
+  },
+  {
+   "n": "Reggie Austin",
+   "r": "Jason Wilkes",
+   "p": 1215799
+  },
+  {
+   "n": "Kyle Bornheimer",
+   "r": "Ray Krzeminski",
+   "p": 1215836
+  }
+ ],
+ "aos": [
+  {
+   "n": "Clark Gregg",
+   "r": "Phil Coulson",
+   "p": 9048
+  },
+  {
+   "n": "Chloe Bennet",
+   "r": "Daisy 'Skye' Johnson / Quake",
+   "p": 1181303
+  },
+  {
+   "n": "Elizabeth Henstridge",
+   "r": "Jemma Simmons",
+   "p": 1223886
+  },
+  {
+   "n": "Ming-Na Wen",
+   "r": "Melinda May",
+   "p": 21702
+  },
+  {
+   "n": "Iain De Caestecker",
+   "r": "Leo Fitz",
+   "p": 956764
+  },
+  {
+   "n": "Henry Simmons",
+   "r": "Alphonso 'Mack' Mackenzie",
+   "p": 67913
+  },
+  {
+   "n": "Brett Dalton",
+   "r": "Grant Ward",
+   "p": 1181302
+  },
+  {
+   "n": "Natalia Cordova-Buckley",
+   "r": "Elena 'Yo-Yo' Rodriguez / Slingshot",
+   "p": 1693947
+  },
+  {
+   "n": "Jeff Ward",
+   "r": "Deke Shaw",
+   "p": 1031249
+  },
+  {
+   "n": "Nick Blood",
+   "r": "Lance Hunter",
+   "p": 222052
+  }
+ ],
+ "inhumans": [
+  {
+   "n": "Anson Mount",
+   "r": "Blackagar Boltagon / Black Bolt",
+   "p": 56675
+  },
+  {
+   "n": "Serinda Swan",
+   "r": "Medusalith Amaquelin / Medusa",
+   "p": 86268
+  },
+  {
+   "n": "Iwan Rheon",
+   "r": "Maximus Boltagon",
+   "p": 221978
+  },
+  {
+   "n": "Isabelle Cornish",
+   "r": "Crystalia Amaquelin / Crystal",
+   "p": 1769524
+  },
+  {
+   "n": "Ken Leung",
+   "r": "Karnak Mander-Azur / Karnak",
+   "p": 2131
+  },
+  {
+   "n": "Eme Ikwuakor",
+   "r": "Gorgon Petragon / Gorgon",
+   "p": 92748
+  },
+  {
+   "n": "Sonya Balmores",
+   "r": "Auran",
+   "p": 1226852
+  },
+  {
+   "n": "Ellen Woglom",
+   "r": "Louise",
+   "p": 202946
+  },
+  {
+   "n": "Henry Ian Cusick",
+   "r": "Dr. Evan Declan",
+   "p": 31166
+  },
+  {
+   "n": "Ari Dalbert",
+   "r": "Bronaja",
+   "p": 2738896
+  }
+ ]
+}
