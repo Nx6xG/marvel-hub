@@ -46,7 +46,7 @@ const T = {
     story: "Die Geschichte", members: "Mitglieder", status: "Status", stations: "Stationen", stones: "Die sechs Steine",
     path_lbl: "Der Pfad", steps: "Stationen", unknown: "Unbekannt",
     footer1: "Fan-Projekt, kein offizielles Marvel-Angebot · Stand: August 2026.",
-    footer2: "Poster/Bilder: Wikipedia (Fair Use). Scores: Rotten Tomatoes/IMDb, gerundet. Fortschritt & Einstellungen werden nur lokal gespeichert.",
+    footer2: 'Filmdaten & Bilder: <a href="https://www.themoviedb.org" target="_blank" rel="noopener">TMDB</a> (diese Seite wird von TMDB weder unterstützt noch zertifiziert) · Streaming-Verfügbarkeiten via JustWatch · Charakterbilder: Wikipedia (Fair Use) · Scores: RT/IMDb, gerundet. Fortschritt & Einstellungen bleiben lokal.',
     ad: "Anzeige", nothing: "Nichts gefunden.", all: "Alle", only_series: "Nur Serien", classics: "Klassiker", tv_era: "TV-Ära",
   },
   en: {
@@ -69,7 +69,7 @@ const T = {
     story: "The story", members: "Members", status: "Status", stations: "Milestones", stones: "The six stones",
     path_lbl: "The path", steps: "steps", unknown: "Unknown",
     footer1: "Fan project, not an official Marvel product · Updated: August 2026.",
-    footer2: "Posters/images: Wikipedia (fair use). Scores: Rotten Tomatoes/IMDb, rounded. Progress & settings are stored locally only.",
+    footer2: 'Film data & images: <a href="https://www.themoviedb.org" target="_blank" rel="noopener">TMDB</a> (this site is not endorsed or certified by TMDB) · streaming availability via JustWatch · character images: Wikipedia (fair use) · scores: RT/IMDb, rounded. Progress & settings stay local.',
     ad: "Ad", nothing: "Nothing found.", all: "All", only_series: "Series only", classics: "Classics", tv_era: "TV era",
   },
 };
@@ -127,6 +127,9 @@ const tr = (o, f, lang) => (lang === "en" && o[f + "_en"] != null ? o[f + "_en"]
 // YouTube-Trailer-IDs (von fetch-tmdb.mjs erzeugt; ohne Key: leere Map → externer Link als Fallback)
 const TRAILERS = existsSync("site/data/trailers.json") ? JSON.parse(readFileSync("site/data/trailers.json", "utf8")) : {};
 const CREDITS = existsSync("site/data/credits.json") ? JSON.parse(readFileSync("site/data/credits.json", "utf8")) : {};
+const DETAILS = existsSync("site/data/details.json") ? JSON.parse(readFileSync("site/data/details.json", "utf8")) : {};
+const fmtMoney = (v) => v >= 1e9 ? (v / 1e9).toFixed(2).replace(".", ",") + " Mrd. $" : Math.round(v / 1e6) + " Mio. $";
+const fmtDate = (s) => { const [y, m, dd] = s.split("-"); return `${dd}.${m}.${y}`; };
 const ACTOR_IMG = {};
 Object.values(CREDITS).forEach((list) => list.forEach((c) => { if (c.p) ACTOR_IMG[c.n.trim().toLowerCase()] = c.p; }));
 const actorNames = (act) => act.split("·").map((p) => p.replace(/\(.*?\)/g, "").replace(/zuvor.*$/i, "").trim()).filter((n) => n && n !== "—" && !/^und /.test(n));
@@ -217,6 +220,7 @@ function filmBody(f, lang) {
   const L = T[lang];
   const prefix = lang === "en" ? "/en" : "";
   const id = f.id, sc = SCORES[id];
+  const d = DETAILS[id] || {};
   const wt = WIKI[id] || WIKI[id === "l2" ? "l1" : ""] || f.t;
   const q = encodeURIComponent(f.t + (f.type === "Film" ? " film" : " series"));
   const inFilm = CHARS.filter((c) => c.films.includes(id));
@@ -231,22 +235,22 @@ function filmBody(f, lang) {
   const stream = STREAM[id] || (f.uni === "sony" ? "Netflix / wechselnd (DE)" : f.uni === "alt" ? "Wechselnd (Leihe/Disney+)" : "Disney+");
   const trailerQ = encodeURIComponent(`${f.t} ${parseInt(f.y)} trailer${lang === "de" ? " deutsch" : ""}`);
   return `<main class="wrap fp" style="padding-bottom:70px">
+  ${d.bd ? `<div class="fp-backdrop"><img src="/img/b/${id}.jpg" alt="" aria-hidden="true" fetchpriority="high"></div>` : ""}
   <a class="backlink" href="${prefix}/filme/">${L.back}</a>
   <div class="fp-top">
     <div class="fp-poster">${posterImgW(id, f.t)}</div>
     <div class="fp-head">
       <h1 class="metal fp-h1">${esc(f.t)}</h1>
       <span class="uni-badge ub-${f.uni}">${UNI_LABEL[f.uni]}</span>
-      <div class="fp-meta"><b>${f.type} · ${f.y}</b>${f.min ? " · ≈ " + fmtMin(f.min) : ""}${f.uni === "mcu" && f.ph ? ` · ${L.phase} ${f.ph}` : ""}<br>${esc(f.dir)}</div>
-      <div class="stream-line">📺 ${L.where}: <b>${esc(stream)}</b> · ${L.asof}</div>
-      ${sc ? `<div class="scores">
-        <div class="score ${scoreCls(sc[0], 60, 40)}"><div class="sv">${sc[0]} %</div><div class="sk">Rotten Tomatoes</div></div>
-        <div class="score ${scoreCls(sc[1], 7, 5.5)}"><div class="sv">${sc[1].toFixed(1)}</div><div class="sk">IMDb / 10</div></div>
-      </div>` : ""}
+      <div class="fp-meta"><b>${f.type} · ${f.y}</b>${d.rt ? " · " + fmtMin(d.rt) : (d.seasons ? ` · ${d.seasons} ${d.seasons > 1 ? (lang === "de" ? "Staffeln" : "seasons") : (lang === "de" ? "Staffel" : "season")} · ${d.episodes} Ep.` : (f.min ? " · ≈ " + fmtMin(f.min) : ""))}${f.uni === "mcu" && f.ph ? ` · ${L.phase} ${f.ph}` : ""}<br>${esc(f.dir)}${d.genres && d.genres.length ? `<br><span style="color:var(--faint)">${d.genres.map(esc).join(" · ")}</span>` : ""}</div>
+      <div class="stream-line">📺 ${L.where}: <b>${d.prov && (d.prov.s.length || d.prov.r.length) ? esc([d.prov.s.join(" · "), d.prov.r.length ? (lang === "de" ? "Leihe: " : "Rent: ") + d.prov.r.slice(0, 2).join(", ") : ""].filter(Boolean).join(" · ")) : esc(stream)}</b>${d.prov ? "" : " · " + L.asof}</div>
+      ${(sc || d.vote) ? `<div class="scores">` +
+        (sc ? `<div class="score ${scoreCls(sc[0], 60, 40)}"><div class="sv">${sc[0]} %</div><div class="sk">Rotten Tomatoes</div></div><div class="score ${scoreCls(sc[1], 7, 5.5)}"><div class="sv">${sc[1].toFixed(1)}</div><div class="sk">IMDb / 10</div></div>` : "") +
+        (d.vote ? `<div class="score ${scoreCls(d.vote[0], 7, 5.5)}"><div class="sv">${d.vote[0].toFixed(1)}</div><div class="sk">TMDB · ${d.vote[1].toLocaleString("de-DE")} Stimmen</div></div>` : "") + `</div>` : ""}
       <div class="ext-links">
         <a href="https://en.wikipedia.org/wiki/${encodeURIComponent(wt.replace(/ /g, "_"))}" target="_blank" rel="noopener">Wikipedia</a>
         <a href="https://de.wikipedia.org/w/index.php?search=${q}" target="_blank" rel="noopener">Wikipedia (DE)</a>
-        <a href="https://www.imdb.com/find/?q=${q}" target="_blank" rel="noopener">IMDb</a>
+        <a href="${d.imdb ? `https://www.imdb.com/title/${d.imdb}/` : `https://www.imdb.com/find/?q=${q}`}" target="_blank" rel="noopener">IMDb</a>
         <a href="https://www.rottentomatoes.com/search?search=${encodeURIComponent(f.t)}" target="_blank" rel="noopener">Rotten Tomatoes</a>
       </div>
     </div>
@@ -260,6 +264,11 @@ function filmBody(f, lang) {
     ${existsSync(`public/img/p/${id}.jpg`) ? `<img src="/img/p/${id}.jpg" alt="" aria-hidden="true" loading="lazy">` : ""}
     <div class="tc-overlay"><div class="tc-play">▶</div><div class="tc-t">${L.trailer}</div><div class="tc-s">${L.trailer_s}</div></div>
   </a>`}
+  ${(d.deDate || d.cert || d.budget || d.revenue) ? `<div class="fact-strip">` +
+    (d.deDate ? `<div class="fact-box"><div class="fb-k">${lang === "de" ? "Kinostart (DE)" : "DE release"}</div><div class="fb-v">${fmtDate(d.deDate)}</div></div>` : "") +
+    (d.cert ? `<div class="fact-box"><div class="fb-k">FSK</div><div class="fb-v">ab ${esc(d.cert)}</div></div>` : "") +
+    (d.budget ? `<div class="fact-box"><div class="fb-k">Budget</div><div class="fb-v">${fmtMoney(d.budget)}</div></div>` : "") +
+    (d.revenue ? `<div class="fact-box"><div class="fb-k">${lang === "de" ? "Einspielergebnis" : "Box office"}</div><div class="fb-v">${fmtMoney(d.revenue)}</div></div>` : "") + `</div>` : ""}
   <div class="fp-section"><div class="fp-label">${L.plot}</div><p>${esc(f.plot)}</p></div>
   ${inFilm.length ? `<div class="fp-section"><div class="fp-label">${L.figures}</div><div class="fp-chars">` +
     inFilm.map((c) => `<a class="fp-char" href="${prefix}${charUrl(c.id)}">${charImg(c.id, c.n, "fc-img")}<div class="fc-n">${esc(c.n)}</div><div class="fc-a">${esc(c.act.split("·")[0].split("(")[0].trim())}</div></a>`).join("") + `</div>` +
@@ -550,6 +559,12 @@ function recordsBody(lang) {
   <div class="subhead">Top 10 (Rotten Tomatoes)</div>${byRt.slice(0, 10).map((f, i) => recRow(f, i, SCORES[f.id][0] + " %")).join("")}
   <div class="subhead">Flop 10</div>${byRt.slice(-10).reverse().map((f, i) => recRow(f, i, SCORES[f.id][0] + " %")).join("")}
   <div class="subhead">${lang === "de" ? "Serien-Ranking · Top 5" : "Series ranking · top 5"}</div>${scored.filter((f) => f.type === "Serie").sort((a, b) => SCORES[b.id][0] - SCORES[a.id][0]).slice(0, 5).map((f, i) => recRow(f, i, SCORES[f.id][0] + " %")).join("")}
+  <div class="subhead">${lang === "de" ? "Box Office · Top 10" : "Box office · top 10"}</div>
+  ${(() => {
+    const byRev = FILMS.filter((x) => DETAILS[x.id] && DETAILS[x.id].revenue).sort((a, b) => DETAILS[b.id].revenue - DETAILS[a.id].revenue).slice(0, 10);
+    const max = DETAILS[byRev[0].id].revenue;
+    return byRev.map((x, i) => `<a class="rec-row" href="${prefix}${filmUrl(x.id)}"><div class="rec-rank">${i + 1}</div><img src="/img/p/${x.id}.jpg" alt="" loading="lazy"><div class="rec-main"><div class="rec-t">${esc(x.t)}</div><div class="rec-s">${x.y} · ${UNI_LABEL[x.uni]}</div></div><div class="rec-bar"><div style="width:${Math.round(DETAILS[x.id].revenue / max * 100)}%"></div></div><div class="rec-val">${fmtMoney(DETAILS[x.id].revenue)}</div></a>`).join("");
+  })()}
   <div class="subhead">${lang === "de" ? "Die Universen im Vergleich" : "Universes compared"}</div>
   ${["mcu", "fox", "sony", "net", "alt"].map((u) => {
     const us = scored.filter((f) => f.uni === u);

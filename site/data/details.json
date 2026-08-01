@@ -1,0 +1,2823 @@
+{
+ "iron1": {
+  "imdb": "tt0371746",
+  "genres": [
+   "Action",
+   "Science Fiction",
+   "Abenteuer"
+  ],
+  "rt": 125,
+  "budget": 140000000,
+  "revenue": 585174222,
+  "deDate": "2008-04-30",
+  "cert": "12",
+  "vote": [
+   7.7,
+   28412
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus",
+    "Joyn Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "hulk": {
+  "imdb": "tt0800080",
+  "genres": [
+   "Science Fiction",
+   "Action",
+   "Abenteuer"
+  ],
+  "rt": 112,
+  "budget": 150000000,
+  "revenue": 264770996,
+  "deDate": "2008-07-08",
+  "cert": "16",
+  "vote": [
+   6.2,
+   12867
+  ],
+  "prov": {
+   "s": [
+    "Filmtastic Amazon Channel",
+    "Filmtastic"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "iron2": {
+  "imdb": "tt1228705",
+  "genres": [
+   "Abenteuer",
+   "Action",
+   "Science Fiction"
+  ],
+  "rt": 125,
+  "budget": 200000000,
+  "revenue": 623933331,
+  "deDate": "2010-05-05",
+  "cert": "12",
+  "vote": [
+   6.9,
+   22596
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus",
+    "Joyn Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "thor1": {
+  "imdb": "tt0800369",
+  "genres": [
+   "Abenteuer",
+   "Fantasy",
+   "Action"
+  ],
+  "rt": 115,
+  "budget": 150000000,
+  "revenue": 449326618,
+  "deDate": "2011-04-27",
+  "cert": "12",
+  "vote": [
+   6.8,
+   22525
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "cap1": {
+  "imdb": "tt0458339",
+  "genres": [
+   "Action",
+   "Abenteuer",
+   "Science Fiction"
+  ],
+  "rt": 124,
+  "budget": 140000000,
+  "revenue": 370569774,
+  "deDate": "2011-08-17",
+  "cert": "12",
+  "vote": [
+   7,
+   22934
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "av1": {
+  "imdb": "tt0848228",
+  "genres": [
+   "Science Fiction",
+   "Action",
+   "Abenteuer"
+  ],
+  "rt": 143,
+  "budget": 220000000,
+  "revenue": 1518815515,
+  "deDate": "2012-04-26",
+  "cert": "12",
+  "vote": [
+   8.1,
+   38961
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "iron3": {
+  "imdb": "tt1300854",
+  "genres": [
+   "Action",
+   "Abenteuer",
+   "Science Fiction"
+  ],
+  "rt": 140,
+  "budget": 200000000,
+  "revenue": 1215577205,
+  "deDate": "2013-05-01",
+  "cert": "12",
+  "vote": [
+   6.9,
+   23614
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Sky Store"
+   ]
+  },
+  "bd": 1
+ },
+ "thor2": {
+  "imdb": "tt1981115",
+  "genres": [
+   "Action",
+   "Abenteuer",
+   "Fantasy"
+  ],
+  "rt": 112,
+  "budget": 170000000,
+  "revenue": 644783140,
+  "deDate": "2013-10-31",
+  "cert": "12",
+  "vote": [
+   6.5,
+   18478
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "cap2": {
+  "imdb": "tt1843866",
+  "genres": [
+   "Action",
+   "Abenteuer",
+   "Science Fiction"
+  ],
+  "rt": 128,
+  "budget": 170000000,
+  "revenue": 714766572,
+  "deDate": "2014-03-27",
+  "cert": "12",
+  "vote": [
+   7.7,
+   20199
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "gotg1": {
+  "imdb": "tt2015381",
+  "genres": [
+   "Action",
+   "Science Fiction",
+   "Abenteuer"
+  ],
+  "rt": 122,
+  "budget": 170000000,
+  "revenue": 772776600,
+  "deDate": "2014-08-28",
+  "cert": "12",
+  "vote": [
+   7.9,
+   29981
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "av2": {
+  "imdb": "tt2395427",
+  "genres": [
+   "Action",
+   "Abenteuer",
+   "Science Fiction"
+  ],
+  "rt": 141,
+  "budget": 235000000,
+  "revenue": 1405403694,
+  "deDate": "2015-04-23",
+  "cert": "12",
+  "vote": [
+   7.3,
+   24683
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "antman1": {
+  "imdb": "tt0478970",
+  "genres": [
+   "Science Fiction",
+   "Abenteuer",
+   "Action"
+  ],
+  "rt": 117,
+  "budget": 130000000,
+  "revenue": 519311965,
+  "deDate": "2015-07-23",
+  "cert": "12",
+  "vote": [
+   7.1,
+   21023
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "cw": {
+  "imdb": "tt3498820",
+  "genres": [
+   "Abenteuer",
+   "Action",
+   "Science Fiction"
+  ],
+  "rt": 147,
+  "budget": 250000000,
+  "revenue": 1155046416,
+  "deDate": "2016-04-28",
+  "cert": "12",
+  "vote": [
+   7.5,
+   24236
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "strange1": {
+  "imdb": "tt1211837",
+  "genres": [
+   "Fantasy",
+   "Abenteuer",
+   "Action"
+  ],
+  "rt": 115,
+  "budget": 180000000,
+  "revenue": 676343174,
+  "deDate": "2016-10-27",
+  "cert": "12",
+  "vote": [
+   7.4,
+   23620
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "gotg2": {
+  "imdb": "tt3896198",
+  "genres": [
+   "Science Fiction",
+   "Abenteuer",
+   "Action"
+  ],
+  "rt": 137,
+  "budget": 200000000,
+  "revenue": 863756051,
+  "deDate": "2017-04-27",
+  "cert": "12",
+  "vote": [
+   7.6,
+   23128
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "spider1": {
+  "imdb": "tt2250912",
+  "genres": [
+   "Action",
+   "Abenteuer",
+   "Science Fiction"
+  ],
+  "rt": 133,
+  "budget": 175000000,
+  "revenue": 880978185,
+  "deDate": "2017-07-13",
+  "cert": "12",
+  "vote": [
+   7.3,
+   23426
+  ],
+  "prov": {
+   "s": [],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "thor3": {
+  "imdb": "tt3501632",
+  "genres": [
+   "Action",
+   "Science Fiction",
+   "Komödie",
+   "Abenteuer"
+  ],
+  "rt": 131,
+  "budget": 180000000,
+  "revenue": 855301806,
+  "deDate": "2017-10-31",
+  "cert": "12",
+  "vote": [
+   7.6,
+   22204
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Rakuten TV",
+    "maxdome Store"
+   ]
+  },
+  "bd": 1
+ },
+ "bp1": {
+  "imdb": "tt1825683",
+  "genres": [
+   "Action",
+   "Abenteuer",
+   "Science Fiction"
+  ],
+  "rt": 134,
+  "budget": 200000000,
+  "revenue": 1349926083,
+  "deDate": "2018-02-15",
+  "cert": "12",
+  "vote": [
+   7.4,
+   23682
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "iw": {
+  "imdb": "tt4154756",
+  "genres": [
+   "Abenteuer",
+   "Action",
+   "Science Fiction"
+  ],
+  "rt": 150,
+  "budget": 300000000,
+  "revenue": 2052415039,
+  "deDate": "2018-04-26",
+  "cert": "12",
+  "vote": [
+   8.2,
+   32410
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "antman2": {
+  "imdb": "tt5095030",
+  "genres": [
+   "Action",
+   "Abenteuer",
+   "Science Fiction"
+  ],
+  "rt": 118,
+  "budget": 140000000,
+  "revenue": 622674139,
+  "deDate": "2018-07-26",
+  "cert": "12",
+  "vote": [
+   6.9,
+   14309
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "cm": {
+  "imdb": "tt4154664",
+  "genres": [
+   "Action",
+   "Abenteuer",
+   "Science Fiction"
+  ],
+  "rt": 124,
+  "budget": 152000000,
+  "revenue": 1131416446,
+  "deDate": "2019-03-07",
+  "cert": "12",
+  "vote": [
+   6.8,
+   16917
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "eg": {
+  "imdb": "tt4154796",
+  "genres": [
+   "Abenteuer",
+   "Science Fiction",
+   "Action"
+  ],
+  "rt": 181,
+  "budget": 356000000,
+  "revenue": 2799439100,
+  "deDate": "2019-04-24",
+  "cert": "12",
+  "vote": [
+   8.2,
+   28155
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "spider2": {
+  "imdb": "tt6320628",
+  "genres": [
+   "Action",
+   "Abenteuer",
+   "Science Fiction"
+  ],
+  "rt": 130,
+  "budget": 160000000,
+  "revenue": 1132723226,
+  "deDate": "2019-07-04",
+  "cert": "12",
+  "vote": [
+   7.4,
+   17211
+  ],
+  "prov": {
+   "s": [],
+   "r": [
+    "Amazon Video",
+    "Google Play Movies",
+    "YouTube"
+   ]
+  },
+  "bd": 1
+ },
+ "wv": {
+  "imdb": "tt9140560",
+  "genres": [
+   "Sci-Fi & Fantasy",
+   "Mystery",
+   "Drama"
+  ],
+  "seasons": 1,
+  "episodes": 9,
+  "cert": "12",
+  "vote": [
+   8.2,
+   12787
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": []
+  },
+  "bd": 1
+ },
+ "fws": {
+  "imdb": "tt9208876",
+  "genres": [
+   "Action & Adventure",
+   "Sci-Fi & Fantasy"
+  ],
+  "seasons": 1,
+  "episodes": 6,
+  "cert": "12",
+  "vote": [
+   7.6,
+   8946
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": []
+  },
+  "bd": 1
+ },
+ "l1": {
+  "imdb": "tt9140554",
+  "genres": [
+   "Drama",
+   "Sci-Fi & Fantasy"
+  ],
+  "seasons": 2,
+  "episodes": 12,
+  "cert": "12",
+  "vote": [
+   8.2,
+   12540
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": []
+  },
+  "bd": 1
+ },
+ "bw": {
+  "imdb": "tt3480822",
+  "genres": [
+   "Action",
+   "Abenteuer",
+   "Science Fiction"
+  ],
+  "rt": 133,
+  "budget": 200000000,
+  "revenue": 379751131,
+  "deDate": "2021-07-08",
+  "cert": "12",
+  "vote": [
+   7.2,
+   11393
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "wi": {
+  "imdb": "tt10168312",
+  "genres": [
+   "Animation",
+   "Action & Adventure",
+   "Sci-Fi & Fantasy"
+  ],
+  "seasons": 3,
+  "episodes": 26,
+  "cert": "12",
+  "vote": [
+   8,
+   4673
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": []
+  },
+  "bd": 1
+ },
+ "sc": {
+  "imdb": "tt9376612",
+  "genres": [
+   "Action",
+   "Abenteuer",
+   "Fantasy"
+  ],
+  "rt": 132,
+  "budget": 150000000,
+  "revenue": 432243292,
+  "deDate": "2021-09-02",
+  "cert": "12",
+  "vote": [
+   7.5,
+   10539
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "et": {
+  "imdb": "tt9032400",
+  "genres": [
+   "Science Fiction",
+   "Action",
+   "Abenteuer"
+  ],
+  "rt": 149,
+  "budget": 200000000,
+  "revenue": 402064899,
+  "deDate": "2021-11-04",
+  "cert": "12",
+  "vote": [
+   6.8,
+   9261
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Sky Store"
+   ]
+  },
+  "bd": 1
+ },
+ "hk": {
+  "imdb": "tt10160804",
+  "genres": [
+   "Drama",
+   "Komödie",
+   "Action & Adventure"
+  ],
+  "seasons": 1,
+  "episodes": 6,
+  "cert": "12",
+  "vote": [
+   7.8,
+   3776
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": []
+  },
+  "bd": 1
+ },
+ "nwh": {
+  "imdb": "tt10872600",
+  "genres": [
+   "Action",
+   "Abenteuer",
+   "Science Fiction"
+  ],
+  "rt": 159,
+  "budget": 200000000,
+  "revenue": 1921206586,
+  "deDate": "2021-12-16",
+  "cert": "12",
+  "vote": [
+   7.9,
+   22384
+  ],
+  "prov": {
+   "s": [],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "mk": {
+  "imdb": "tt10234724",
+  "genres": [
+   "Sci-Fi & Fantasy",
+   "Mystery",
+   "Action & Adventure"
+  ],
+  "seasons": 1,
+  "episodes": 6,
+  "cert": "12",
+  "vote": [
+   7.6,
+   3595
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": []
+  },
+  "bd": 1
+ },
+ "mom": {
+  "imdb": "tt9419884",
+  "genres": [
+   "Fantasy",
+   "Action",
+   "Abenteuer"
+  ],
+  "rt": 126,
+  "budget": 295400000,
+  "revenue": 955775804,
+  "deDate": "2022-05-05",
+  "cert": "12",
+  "vote": [
+   7.2,
+   10537
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "msm": {
+  "imdb": "tt10857164",
+  "genres": [
+   "Sci-Fi & Fantasy",
+   "Action & Adventure",
+   "Komödie"
+  ],
+  "seasons": 1,
+  "episodes": 6,
+  "cert": "12",
+  "vote": [
+   6.3,
+   1484
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": []
+  },
+  "bd": 1
+ },
+ "tlt": {
+  "imdb": "tt10648342",
+  "genres": [
+   "Fantasy",
+   "Action",
+   "Komödie"
+  ],
+  "rt": 119,
+  "budget": 250000000,
+  "revenue": 760928081,
+  "deDate": "2022-07-07",
+  "cert": "12",
+  "vote": [
+   6.4,
+   8718
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "shk": {
+  "imdb": "tt10857160",
+  "genres": [
+   "Komödie",
+   "Sci-Fi & Fantasy"
+  ],
+  "seasons": 1,
+  "episodes": 9,
+  "cert": "12",
+  "vote": [
+   6.1,
+   2540
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": []
+  },
+  "bd": 1
+ },
+ "bpwf": {
+  "imdb": "tt9114286",
+  "genres": [
+   "Action",
+   "Abenteuer",
+   "Science Fiction"
+  ],
+  "rt": 155,
+  "budget": 250000000,
+  "revenue": 859102154,
+  "deDate": "2022-11-09",
+  "cert": "12",
+  "vote": [
+   7,
+   7602
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Sky Store"
+   ]
+  },
+  "bd": 1
+ },
+ "qm": {
+  "imdb": "tt10954600",
+  "genres": [
+   "Action",
+   "Abenteuer",
+   "Science Fiction"
+  ],
+  "rt": 125,
+  "budget": 200000000,
+  "revenue": 476071180,
+  "deDate": "2023-02-15",
+  "cert": "12",
+  "vote": [
+   6.2,
+   5947
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "g3": {
+  "imdb": "tt6791350",
+  "genres": [
+   "Science Fiction",
+   "Abenteuer",
+   "Action"
+  ],
+  "rt": 150,
+  "budget": 250000000,
+  "revenue": 845550000,
+  "deDate": "2023-05-03",
+  "cert": "12",
+  "vote": [
+   7.9,
+   8548
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "si": {
+  "imdb": "tt13157618",
+  "genres": [
+   "Drama",
+   "Sci-Fi & Fantasy",
+   "Action & Adventure"
+  ],
+  "seasons": 1,
+  "episodes": 6,
+  "cert": "12",
+  "vote": [
+   6.5,
+   1417
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": []
+  },
+  "bd": 1
+ },
+ "l2": {
+  "imdb": "tt9140554",
+  "genres": [
+   "Drama",
+   "Sci-Fi & Fantasy"
+  ],
+  "seasons": 2,
+  "episodes": 12,
+  "cert": "12",
+  "vote": [
+   8.2,
+   12540
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": []
+  },
+  "bd": 1
+ },
+ "mv": {
+  "imdb": "tt10676048",
+  "genres": [
+   "Science Fiction",
+   "Abenteuer",
+   "Action"
+  ],
+  "rt": 105,
+  "budget": 274800000,
+  "revenue": 206136825,
+  "deDate": "2023-11-08",
+  "cert": "12",
+  "vote": [
+   5.9,
+   3499
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "ec": {
+  "imdb": "tt13966962",
+  "genres": [
+   "Action & Adventure",
+   "Krimi",
+   "Drama"
+  ],
+  "seasons": 1,
+  "episodes": 5,
+  "cert": "16",
+  "vote": [
+   6,
+   638
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": []
+  },
+  "bd": 1
+ },
+ "x97": {
+  "imdb": "tt16026746",
+  "genres": [
+   "Animation",
+   "Action & Adventure",
+   "Sci-Fi & Fantasy"
+  ],
+  "seasons": 2,
+  "episodes": 19,
+  "cert": "12",
+  "vote": [
+   8.7,
+   812
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": []
+  },
+  "bd": 1
+ },
+ "dw": {
+  "imdb": "tt6263850",
+  "genres": [
+   "Action",
+   "Komödie",
+   "Science Fiction"
+  ],
+  "rt": 127,
+  "budget": 200000000,
+  "revenue": 1338073645,
+  "deDate": "2024-07-24",
+  "cert": "16",
+  "vote": [
+   7.6,
+   9030
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "ag": {
+  "imdb": "tt15571732",
+  "genres": [
+   "Sci-Fi & Fantasy",
+   "Mystery"
+  ],
+  "seasons": 1,
+  "episodes": 9,
+  "cert": "12",
+  "vote": [
+   7.4,
+   991
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": []
+  },
+  "bd": 1
+ },
+ "dba": {
+  "imdb": "tt18923754",
+  "genres": [
+   "Drama",
+   "Action & Adventure",
+   "Krimi"
+  ],
+  "seasons": 2,
+  "episodes": 17,
+  "cert": "18",
+  "vote": [
+   8.2,
+   1031
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": []
+  },
+  "bd": 1
+ },
+ "bnw": {
+  "imdb": "tt14513804",
+  "genres": [
+   "Action",
+   "Thriller",
+   "Science Fiction"
+  ],
+  "rt": 118,
+  "budget": 180000000,
+  "revenue": 415101577,
+  "deDate": "2025-02-13",
+  "cert": "12",
+  "vote": [
+   6,
+   3217
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Sky Store"
+   ]
+  },
+  "bd": 1
+ },
+ "tb": {
+  "imdb": "tt20969586",
+  "genres": [
+   "Action",
+   "Science Fiction",
+   "Abenteuer"
+  ],
+  "rt": 126,
+  "budget": 180000000,
+  "revenue": 382436917,
+  "deDate": "2025-05-01",
+  "cert": "12",
+  "vote": [
+   7.3,
+   3760
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Sky Store"
+   ]
+  },
+  "bd": 1
+ },
+ "ih": {
+  "imdb": "tt13623126",
+  "genres": [
+   "Sci-Fi & Fantasy",
+   "Krimi",
+   "Action & Adventure"
+  ],
+  "seasons": 1,
+  "episodes": 6,
+  "cert": "12",
+  "vote": [
+   5.3,
+   479
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": []
+  },
+  "bd": 1
+ },
+ "f4": {
+  "imdb": "tt10676052",
+  "genres": [
+   "Science Fiction",
+   "Abenteuer",
+   "Action"
+  ],
+  "rt": 114,
+  "budget": 200000000,
+  "revenue": 521858728,
+  "deDate": "2025-07-24",
+  "cert": "12",
+  "vote": [
+   7,
+   3584
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Sky Store"
+   ]
+  },
+  "bd": 1
+ },
+ "eow": {
+  "imdb": "tt13968252",
+  "genres": [
+   "Animation",
+   "Sci-Fi & Fantasy",
+   "Action & Adventure"
+  ],
+  "seasons": 1,
+  "episodes": 4,
+  "cert": "12",
+  "vote": [
+   6.2,
+   180
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": []
+  },
+  "bd": 1
+ },
+ "wm": {
+  "imdb": "tt21066182",
+  "genres": [
+   "Komödie",
+   "Drama"
+  ],
+  "seasons": 1,
+  "episodes": 8,
+  "cert": "12",
+  "vote": [
+   7.1,
+   322
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": []
+  },
+  "bd": 1
+ },
+ "bnd": {
+  "imdb": "tt22084616",
+  "genres": [
+   "Science Fiction",
+   "Action",
+   "Abenteuer"
+  ],
+  "rt": 150,
+  "budget": 225000000,
+  "revenue": 167500000,
+  "deDate": "2026-07-29",
+  "cert": "12",
+  "vote": [
+   8.1,
+   448
+  ],
+  "bd": 1
+ },
+ "vq": {
+  "imdb": "tt23112594",
+  "genres": [
+   "Sci-Fi & Fantasy"
+  ],
+  "seasons": 1,
+  "episodes": 8,
+  "cert": null,
+  "bd": 1
+ },
+ "doomsday": {
+  "imdb": "tt21357150",
+  "genres": [
+   "Science Fiction",
+   "Action",
+   "Abenteuer"
+  ],
+  "rt": 165,
+  "budget": null,
+  "revenue": null,
+  "deDate": "2026-12-16",
+  "cert": null,
+  "bd": 1
+ },
+ "secretwars": {
+  "imdb": "tt21361444",
+  "genres": [
+   "Science Fiction",
+   "Action",
+   "Abenteuer"
+  ],
+  "rt": null,
+  "budget": null,
+  "revenue": null,
+  "deDate": null,
+  "cert": null,
+  "bd": 1
+ },
+ "xmen1": {
+  "imdb": "tt0285761",
+  "genres": [
+   "Dokumentarfilm"
+  ],
+  "rt": 22,
+  "budget": null,
+  "revenue": null,
+  "deDate": null,
+  "cert": null,
+  "vote": [
+   7,
+   244
+  ]
+ },
+ "x2": {
+  "imdb": "tt0290334",
+  "genres": [
+   "Abenteuer",
+   "Action",
+   "Science Fiction"
+  ],
+  "rt": 133,
+  "budget": 110000000,
+  "revenue": 407711549,
+  "deDate": "2003-05-01",
+  "cert": "12",
+  "vote": [
+   7,
+   10999
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "x3": {
+  "imdb": "tt0376994",
+  "genres": [
+   "Abenteuer",
+   "Action",
+   "Science Fiction"
+  ],
+  "rt": 104,
+  "budget": 210000000,
+  "revenue": 459359555,
+  "deDate": "2006-05-25",
+  "cert": "12",
+  "vote": [
+   6.4,
+   10499
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "origins": {
+  "imdb": "tt0458525",
+  "genres": [
+   "Abenteuer",
+   "Action",
+   "Science Fiction"
+  ],
+  "rt": 107,
+  "budget": 150000000,
+  "revenue": 373062864,
+  "deDate": "2009-04-29",
+  "cert": "16",
+  "vote": [
+   6.3,
+   11367
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "firstclass": {
+  "imdb": "tt1270798",
+  "genres": [
+   "Action",
+   "Science Fiction",
+   "Abenteuer"
+  ],
+  "rt": 132,
+  "budget": 160000000,
+  "revenue": 353624124,
+  "deDate": "2011-06-09",
+  "cert": "12",
+  "vote": [
+   7.3,
+   13665
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "wolv13": {
+  "imdb": "tt1430132",
+  "genres": [
+   "Action",
+   "Science Fiction",
+   "Abenteuer"
+  ],
+  "rt": 138,
+  "budget": 120000000,
+  "revenue": 415440673,
+  "deDate": "2013-07-25",
+  "cert": "12",
+  "vote": [
+   6.4,
+   10398
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Sky Store"
+   ]
+  },
+  "bd": 1
+ },
+ "dofp": {
+  "imdb": "tt1877832",
+  "genres": [
+   "Action",
+   "Abenteuer",
+   "Science Fiction"
+  ],
+  "rt": 131,
+  "budget": 250000000,
+  "revenue": 748045700,
+  "deDate": "2014-05-22",
+  "cert": "12",
+  "vote": [
+   7.5,
+   16424
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "apoc": {
+  "imdb": "tt3385516",
+  "genres": [
+   "Science Fiction",
+   "Fantasy",
+   "Action"
+  ],
+  "rt": 144,
+  "budget": 178000000,
+  "revenue": 543934787,
+  "deDate": "2016-05-19",
+  "cert": "12",
+  "vote": [
+   6.5,
+   13907
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "logan": {
+  "imdb": "tt3315342",
+  "genres": [
+   "Action",
+   "Drama",
+   "Science Fiction"
+  ],
+  "rt": 138,
+  "budget": 97000000,
+  "revenue": 619021436,
+  "deDate": "2017-03-02",
+  "cert": "16",
+  "vote": [
+   7.8,
+   20587
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "dp1": {
+  "imdb": "tt1431045",
+  "genres": [
+   "Action",
+   "Abenteuer",
+   "Komödie"
+  ],
+  "rt": 109,
+  "budget": 58000000,
+  "revenue": 782837347,
+  "deDate": "2016-02-11",
+  "cert": "16",
+  "vote": [
+   7.6,
+   32986
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus",
+    "Sky Go"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "dp2": {
+  "imdb": "tt5463162",
+  "genres": [
+   "Action",
+   "Komödie",
+   "Abenteuer"
+  ],
+  "rt": 119,
+  "budget": 110000000,
+  "revenue": 785896632,
+  "deDate": "2018-05-17",
+  "cert": "16",
+  "vote": [
+   7.5,
+   19418
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "newmutants": {
+  "imdb": "tt4682266",
+  "genres": [
+   "Science Fiction",
+   "Horror"
+  ],
+  "rt": 98,
+  "budget": 67000000,
+  "revenue": 49169594,
+  "deDate": "2020-09-10",
+  "cert": "16",
+  "vote": [
+   6.1,
+   3758
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Amazon Video",
+    "Google Play Movies",
+    "YouTube"
+   ]
+  },
+  "bd": 1
+ },
+ "f405": {
+  "imdb": "tt0120667",
+  "genres": [
+   "Action",
+   "Fantasy",
+   "Science Fiction"
+  ],
+  "rt": 106,
+  "budget": 100000000,
+  "revenue": 333535934,
+  "deDate": "2005-07-13",
+  "cert": "12",
+  "vote": [
+   5.8,
+   10090
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "f407": {
+  "imdb": "tt0486576",
+  "genres": [
+   "Science Fiction",
+   "Abenteuer",
+   "Action"
+  ],
+  "rt": 92,
+  "budget": 130000000,
+  "revenue": 301913131,
+  "deDate": "2007-08-13",
+  "cert": "12",
+  "vote": [
+   5.6,
+   8484
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "f415": {
+  "imdb": "tt1502712",
+  "genres": [
+   "Action",
+   "Abenteuer",
+   "Science Fiction"
+  ],
+  "rt": 101,
+  "budget": 120000000,
+  "revenue": 167977596,
+  "deDate": "2015-08-13",
+  "cert": "12",
+  "vote": [
+   4.4,
+   6469
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Sky Store"
+   ]
+  },
+  "bd": 1
+ },
+ "raimi1": {
+  "imdb": "tt0145487",
+  "genres": [
+   "Action",
+   "Science Fiction"
+  ],
+  "rt": 121,
+  "budget": 139000000,
+  "revenue": 821708551,
+  "deDate": "2002-06-06",
+  "cert": "12",
+  "vote": [
+   7.3,
+   20967
+  ],
+  "prov": {
+   "s": [],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "raimi2": {
+  "imdb": "tt0316654",
+  "genres": [
+   "Action",
+   "Abenteuer",
+   "Science Fiction"
+  ],
+  "rt": 127,
+  "budget": 200000000,
+  "revenue": 788976453,
+  "deDate": "2004-07-08",
+  "cert": "12",
+  "vote": [
+   7.3,
+   16580
+  ],
+  "prov": {
+   "s": [],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Sky Store"
+   ]
+  },
+  "bd": 1
+ },
+ "raimi3": {
+  "imdb": "tt0413300",
+  "genres": [
+   "Action",
+   "Abenteuer",
+   "Science Fiction"
+  ],
+  "rt": 139,
+  "budget": 258000000,
+  "revenue": 894983373,
+  "deDate": "2007-05-01",
+  "cert": "12",
+  "vote": [
+   6.5,
+   15428
+  ],
+  "prov": {
+   "s": [],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "tasm1": {
+  "imdb": "tt0948470",
+  "genres": [
+   "Action",
+   "Abenteuer",
+   "Science Fiction"
+  ],
+  "rt": 136,
+  "budget": 215000000,
+  "revenue": 758725893,
+  "deDate": "2012-06-27",
+  "cert": "12",
+  "vote": [
+   6.7,
+   18753
+  ],
+  "prov": {
+   "s": [
+    "Magenta TV+"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "tasm2": {
+  "imdb": "tt1872181",
+  "genres": [
+   "Action",
+   "Abenteuer",
+   "Science Fiction"
+  ],
+  "rt": 142,
+  "budget": 200000000,
+  "revenue": 716934779,
+  "deDate": "2014-04-17",
+  "cert": "12",
+  "vote": [
+   6.5,
+   14446
+  ],
+  "prov": {
+   "s": [
+    "Magenta TV+"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "venom1": {
+  "imdb": "tt1270797",
+  "genres": [
+   "Science Fiction",
+   "Action"
+  ],
+  "rt": 112,
+  "budget": 116000000,
+  "revenue": 856085151,
+  "deDate": "2018-10-03",
+  "cert": "12",
+  "vote": [
+   6.8,
+   17391
+  ],
+  "prov": {
+   "s": [
+    "RTL+",
+    "RTL+ Max Amazon Channel",
+    "WOW",
+    "Sky Go"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "venom2": {
+  "imdb": "tt7097896",
+  "genres": [
+   "Science Fiction",
+   "Action",
+   "Abenteuer"
+  ],
+  "rt": 97,
+  "budget": 110000000,
+  "revenue": 506863592,
+  "deDate": "2021-10-21",
+  "cert": "12",
+  "vote": [
+   6.7,
+   11274
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus",
+    "RTL+",
+    "RTL+ Max Amazon Channel",
+    "Sky Go"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "venom3": {
+  "imdb": "tt16366836",
+  "genres": [
+   "Science Fiction",
+   "Action",
+   "Abenteuer"
+  ],
+  "rt": 110,
+  "budget": 120000000,
+  "revenue": 478937618,
+  "deDate": "2024-10-24",
+  "cert": "12",
+  "vote": [
+   6.7,
+   4363
+  ],
+  "prov": {
+   "s": [
+    "RTL+",
+    "RTL+ Max Amazon Channel"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "morbius": {
+  "imdb": "tt5108870",
+  "genres": [
+   "Action",
+   "Science Fiction",
+   "Fantasy"
+  ],
+  "rt": 105,
+  "budget": 75000000,
+  "revenue": 167635712,
+  "deDate": "2022-03-31",
+  "cert": "12",
+  "vote": [
+   5.9,
+   4878
+  ],
+  "prov": {
+   "s": [
+    "Amazon Prime Video",
+    "Disney Plus",
+    "WOW",
+    "Amazon Prime Video with Ads"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "madameweb": {
+  "imdb": "tt11057302",
+  "genres": [
+   "Action",
+   "Fantasy"
+  ],
+  "rt": 117,
+  "budget": 80000000,
+  "revenue": 100498764,
+  "deDate": "2024-02-14",
+  "cert": "12",
+  "vote": [
+   5.3,
+   2624
+  ],
+  "prov": {
+   "s": [
+    "RTL+",
+    "RTL+ Max Amazon Channel"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Sky Store"
+   ]
+  },
+  "bd": 1
+ },
+ "kraven": {
+  "imdb": "tt8790086",
+  "genres": [
+   "Action",
+   "Abenteuer",
+   "Thriller"
+  ],
+  "rt": 127,
+  "budget": 130000000,
+  "revenue": 62076533,
+  "deDate": "2024-12-12",
+  "cert": "16",
+  "vote": [
+   6.4,
+   2413
+  ],
+  "prov": {
+   "s": [
+    "RTL+",
+    "RTL+ Max Amazon Channel"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "sv1": {
+  "imdb": "tt4633694",
+  "genres": [
+   "Animation",
+   "Action",
+   "Abenteuer",
+   "Science Fiction"
+  ],
+  "rt": 116,
+  "budget": 90000000,
+  "revenue": 394884133,
+  "deDate": "2018-12-13",
+  "cert": "6",
+  "vote": [
+   8.4,
+   17508
+  ],
+  "prov": {
+   "s": [
+    "Sony Pictures Core Amazon Channel"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "sv2": {
+  "imdb": "tt9362722",
+  "genres": [
+   "Animation",
+   "Action",
+   "Abenteuer",
+   "Science Fiction"
+  ],
+  "rt": 141,
+  "budget": 100000000,
+  "revenue": 690897910,
+  "deDate": "2023-06-01",
+  "cert": "12",
+  "vote": [
+   8.3,
+   8876
+  ],
+  "prov": {
+   "s": [],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "howard": {
+  "imdb": "tt0091225",
+  "genres": [
+   "Komödie",
+   "Abenteuer",
+   "Science Fiction"
+  ],
+  "rt": 110,
+  "budget": 37000000,
+  "revenue": 38000000,
+  "deDate": "1986-12-17",
+  "cert": "16",
+  "vote": [
+   5.5,
+   1152
+  ],
+  "prov": {
+   "s": [],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "blade1": {
+  "imdb": "tt0120611",
+  "genres": [
+   "Horror",
+   "Action"
+  ],
+  "rt": 120,
+  "budget": 45000000,
+  "revenue": 131183530,
+  "deDate": "1998-12-03",
+  "cert": "18",
+  "vote": [
+   6.8,
+   6832
+  ],
+  "prov": {
+   "s": [
+    "Amazon Prime Video",
+    "Amazon Prime Video with Ads"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "blade2": {
+  "imdb": "tt0187738",
+  "genres": [
+   "Fantasy",
+   "Horror",
+   "Action",
+   "Thriller"
+  ],
+  "rt": 117,
+  "budget": 54000000,
+  "revenue": 155010032,
+  "deDate": "2002-05-02",
+  "cert": "18",
+  "vote": [
+   6.6,
+   5299
+  ],
+  "prov": {
+   "s": [
+    "Amazon Prime Video",
+    "Amazon Prime Video with Ads"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "blade3": {
+  "imdb": "tt0359013",
+  "genres": [
+   "Action",
+   "Horror",
+   "Science Fiction"
+  ],
+  "rt": 113,
+  "budget": 65000000,
+  "revenue": 128905366,
+  "deDate": "2005-01-20",
+  "cert": "18",
+  "vote": [
+   5.9,
+   4382
+  ],
+  "prov": {
+   "s": [
+    "Amazon Prime Video",
+    "Amazon Prime Video with Ads"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "hulk03": {
+  "imdb": "tt0286716",
+  "genres": [
+   "Science Fiction",
+   "Abenteuer",
+   "Action"
+  ],
+  "rt": 138,
+  "budget": 137000000,
+  "revenue": 245360480,
+  "deDate": "2003-07-03",
+  "cert": "16",
+  "vote": [
+   5.6,
+   6346
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "daredevil03": {
+  "imdb": "tt0287978",
+  "genres": [
+   "Fantasy",
+   "Action"
+  ],
+  "rt": 103,
+  "budget": 78000000,
+  "revenue": 179179718,
+  "deDate": "2003-03-20",
+  "cert": "16",
+  "vote": [
+   5.3,
+   5523
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Google Play Movies",
+    "YouTube"
+   ]
+  },
+  "bd": 1
+ },
+ "elektra05": {
+  "imdb": "tt0357277",
+  "genres": [
+   "Action",
+   "Fantasy",
+   "Abenteuer"
+  ],
+  "rt": 97,
+  "budget": 43000000,
+  "revenue": 56681566,
+  "deDate": "2005-03-10",
+  "cert": "12",
+  "vote": [
+   5.1,
+   2703
+  ],
+  "prov": {
+   "s": [
+    "Netflix",
+    "Disney Plus",
+    "Netflix Standard with Ads"
+   ],
+   "r": [
+    "Amazon Video"
+   ]
+  },
+  "bd": 1
+ },
+ "punisher04": {
+  "imdb": "tt0330793",
+  "genres": [
+   "Action",
+   "Krimi",
+   "Drama"
+  ],
+  "rt": 124,
+  "budget": 33000000,
+  "revenue": 54700105,
+  "deDate": "2004-06-10",
+  "cert": "18",
+  "vote": [
+   6.4,
+   3209
+  ],
+  "prov": {
+   "s": [
+    "Moviedome Plus Amazon Channel"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Sky Store"
+   ]
+  },
+  "bd": 1
+ },
+ "ghostrider07": {
+  "imdb": "tt0259324",
+  "genres": [
+   "Thriller",
+   "Action",
+   "Fantasy"
+  ],
+  "rt": 114,
+  "budget": 110000000,
+  "revenue": 228738393,
+  "deDate": "2007-02-21",
+  "cert": "12",
+  "vote": [
+   5.6,
+   6562
+  ],
+  "prov": {
+   "s": [
+    "Galactic Stream Amazon Channel"
+   ],
+   "r": [
+    "Google Play Movies",
+    "YouTube",
+    "Sky Store"
+   ]
+  },
+  "bd": 1
+ },
+ "ghostrider12": {
+  "imdb": "tt1071875",
+  "genres": [
+   "Action",
+   "Fantasy",
+   "Thriller"
+  ],
+  "rt": 96,
+  "budget": 57000000,
+  "revenue": 132563930,
+  "deDate": "2012-02-22",
+  "cert": "12",
+  "vote": [
+   5,
+   4128
+  ],
+  "prov": {
+   "s": [
+    "Home of Horror Amazon Channel",
+    "Galactic Stream Amazon Channel"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ },
+ "dd1": {
+  "imdb": "tt3322312",
+  "genres": [
+   "Krimi",
+   "Drama",
+   "Action & Adventure"
+  ],
+  "seasons": 3,
+  "episodes": 39,
+  "cert": "18",
+  "vote": [
+   8.2,
+   5275
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "MagentaTV"
+   ]
+  },
+  "bd": 1
+ },
+ "jj": {
+  "imdb": "tt2357547",
+  "genres": [
+   "Sci-Fi & Fantasy",
+   "Drama"
+  ],
+  "seasons": 3,
+  "episodes": 39,
+  "cert": "16",
+  "vote": [
+   7.5,
+   2667
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "maxdome Store"
+   ]
+  },
+  "bd": 1
+ },
+ "lc": {
+  "imdb": "tt3322314",
+  "genres": [
+   "Drama",
+   "Action & Adventure",
+   "Krimi"
+  ],
+  "seasons": 2,
+  "episodes": 26,
+  "cert": "16",
+  "vote": [
+   6.9,
+   2054
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "maxdome Store"
+   ]
+  },
+  "bd": 1
+ },
+ "if1": {
+  "imdb": "tt3322310",
+  "genres": [
+   "Action & Adventure",
+   "Drama",
+   "Sci-Fi & Fantasy"
+  ],
+  "seasons": 2,
+  "episodes": 23,
+  "cert": "16",
+  "vote": [
+   6.5,
+   2710
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "maxdome Store"
+   ]
+  },
+  "bd": 1
+ },
+ "pun": {
+  "imdb": "tt5675620",
+  "genres": [
+   "Action & Adventure",
+   "Krimi",
+   "Drama"
+  ],
+  "seasons": 2,
+  "episodes": 26,
+  "cert": "18",
+  "vote": [
+   8.2,
+   3244
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "maxdome Store"
+   ]
+  },
+  "bd": 1
+ },
+ "def": {
+  "imdb": "tt4230076",
+  "genres": [
+   "Sci-Fi & Fantasy",
+   "Action & Adventure",
+   "Krimi"
+  ],
+  "seasons": 1,
+  "episodes": 8,
+  "cert": "16",
+  "vote": [
+   7,
+   1690
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "maxdome Store"
+   ]
+  },
+  "bd": 1
+ },
+ "agentcarter": {
+  "imdb": "tt3475734",
+  "genres": [
+   "Drama",
+   "Sci-Fi & Fantasy"
+  ],
+  "seasons": 2,
+  "episodes": 18,
+  "cert": "12",
+  "vote": [
+   7.5,
+   2013
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "maxdome Store"
+   ]
+  },
+  "bd": 1
+ },
+ "aos": {
+  "imdb": "tt2364582",
+  "genres": [
+   "Drama",
+   "Sci-Fi & Fantasy",
+   "Action & Adventure"
+  ],
+  "seasons": 7,
+  "episodes": 136,
+  "cert": "16",
+  "vote": [
+   7.5,
+   3855
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "maxdome Store"
+   ]
+  },
+  "bd": 1
+ },
+ "inhumans": {
+  "imdb": "tt4154858",
+  "genres": [
+   "Drama",
+   "Sci-Fi & Fantasy",
+   "Action & Adventure"
+  ],
+  "seasons": 1,
+  "episodes": 8,
+  "cert": "12",
+  "vote": [
+   5.8,
+   775
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "maxdome Store"
+   ]
+  },
+  "bd": 1
+ },
+ "wbn": {
+  "imdb": "tt15318872",
+  "genres": [
+   "Action",
+   "Fantasy",
+   "Horror"
+  ],
+  "rt": 60,
+  "budget": null,
+  "revenue": null,
+  "deDate": "2022-10-07",
+  "cert": "16",
+  "vote": [
+   7,
+   1566
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": []
+  },
+  "bd": 1
+ },
+ "ghs": {
+  "imdb": "tt13623136",
+  "genres": [
+   "Komödie",
+   "Science Fiction",
+   "Abenteuer"
+  ],
+  "rt": 45,
+  "budget": null,
+  "revenue": null,
+  "deDate": "2022-11-25",
+  "cert": "12",
+  "vote": [
+   7.1,
+   2411
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": []
+  },
+  "bd": 1
+ },
+ "darkphoenix": {
+  "imdb": "tt6565702",
+  "genres": [
+   "Science Fiction",
+   "Action",
+   "Abenteuer"
+  ],
+  "rt": 114,
+  "budget": 200000000,
+  "revenue": 252442974,
+  "deDate": "2019-06-06",
+  "cert": "12",
+  "vote": [
+   6,
+   7167
+  ],
+  "prov": {
+   "s": [
+    "Disney Plus"
+   ],
+   "r": [
+    "Apple TV Store",
+    "Amazon Video",
+    "Google Play Movies"
+   ]
+  },
+  "bd": 1
+ }
+}
