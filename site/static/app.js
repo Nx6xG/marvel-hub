@@ -301,6 +301,51 @@
     tc.addEventListener("keydown", function (ev) { if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); playTrailer(); } }, { once: true });
   }
 
+  /* ---------- Event: Partikel, Sticky-Countdown ---------- */
+  var embers = $(".ev-embers");
+  if (embers && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    var ectx = embers.getContext("2d"), EW, EH, motes = [];
+    function esize() {
+      EW = embers.offsetWidth; EH = embers.offsetHeight;
+      var dpr = Math.min(window.devicePixelRatio || 1, 2);
+      embers.width = EW * dpr; embers.height = EH * dpr;
+      ectx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+    esize(); window.addEventListener("resize", esize);
+    for (var i = 0; i < 45; i++) motes.push({
+      x: Math.random(), y: Math.random(),
+      r: 0.6 + Math.random() * 1.8, s: 0.12 + Math.random() * 0.35,
+      d: Math.random() * 6.28, a: 0.15 + Math.random() * 0.4
+    });
+    (function eloop() {
+      if (!document.contains(embers)) return;
+      ectx.clearRect(0, 0, EW, EH);
+      motes.forEach(function (m) {
+        m.y -= m.s / EH * 60; m.d += 0.01;
+        if (m.y < -0.02) { m.y = 1.02; m.x = Math.random(); }
+        var x = m.x * EW + Math.sin(m.d) * 14;
+        ectx.beginPath();
+        ectx.arc(x, m.y * EH, m.r, 0, 6.28);
+        ectx.fillStyle = "rgba(63, 220, 140, " + m.a + ")";
+        ectx.shadowColor = "rgba(63, 220, 140, 0.8)"; ectx.shadowBlur = 6;
+        ectx.fill(); ectx.shadowBlur = 0;
+      });
+      requestAnimationFrame(eloop);
+    })();
+  }
+  var sticky = $("#evSticky"), hero = $(".ev-hero");
+  if (sticky && hero && "IntersectionObserver" in window) {
+    new IntersectionObserver(function (en) {
+      sticky.hidden = en[0].isIntersecting;
+    }, { threshold: 0 }).observe(hero);
+    setInterval(function () {
+      var s = Math.max(0, Math.floor((tDoom - Date.now()) / 1000));
+      $("#evStickyD").textContent = Math.floor(s / 86400) + " T · " +
+        String(Math.floor(s % 86400 / 3600)).padStart(2, "0") + ":" +
+        String(Math.floor(s % 3600 / 60)).padStart(2, "0") + ":" + String(s % 60).padStart(2, "0");
+    }, 1000);
+  }
+
   /* ---------- Event: Scroll-Reveal ---------- */
   if (document.body.getAttribute("data-page") === "event" && !matchMedia("(prefers-reduced-motion: reduce)").matches && "IntersectionObserver" in window) {
     var targets = $$(".act, .block .sec-head, .chapter, .theory, .facts, .news-item");

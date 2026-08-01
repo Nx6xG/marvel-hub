@@ -653,7 +653,9 @@ function eventBody(lang) {
       <div class="tc-overlay"><div class="tc-play">▶</div><div class="tc-t">${de ? "Der erste Trailer" : "The first trailer"}</div><div class="tc-s">${de ? "veröffentlicht am 20. Juli 2026 · Klick lädt YouTube" : "released July 20, 2026 · click loads YouTube"}</div></div>
     </div>
   </section>`;
-  return `<div class="event-theme">${frag("event-hero")}<main>
+  return `<div class="event-theme">${frag("event-hero").replace('<div class="ev-hero-inner">', '<canvas class="ev-embers" aria-hidden="true"></canvas><div class="ev-hero-inner">')}
+  <a class="ev-sticky" id="evSticky" href="#event-top" hidden>★ <span id="evStickyD">…</span></a>
+  <main>
     ${trailer}
     ${act("I", de ? "Der Weg" : "The Road", de ? "33 Filme & Serien. Ein Ziel. Deine Watchlist." : "33 films & shows. One destination. Your watchlist.")}
     ${saga}
@@ -661,10 +663,16 @@ function eventBody(lang) {
     ${frag("event-doom")}
     ${act("III", de ? "Das Wissen" : "The Knowledge", de ? "Die komplette Lore hinter Doom" : "The complete lore behind Doom")}
     ${frag("event-lore")}
+    <div class="ev-card rv-always"><div class="ev-card-bg"><img src="/img/g/doomsday-0.jpg" alt="" loading="lazy"></div><div class="ev-card-q metal">„New mask, same task."</div><div class="ev-card-s">— Robert Downey Jr., San Diego Comic-Con, Juli 2024</div></div>
     ${act("IV", de ? "Die Theorien" : "The Theories", de ? "Was passieren könnte — und wie wahrscheinlich es ist" : "What might happen — and how likely it is")}
     ${frag("event-theo")}
     ${act("V", de ? "Das Archiv" : "The Archive", de ? "Jeder Begriff für den Kinosaal" : "Every term you need for the theater")}
     ${frag("event-glos")}
+    <div class="ev-card ev-end"><div class="ev-card-bg"><img src="/img/g/doomsday-1.jpg" alt="" loading="lazy"></div>
+      <div class="ev-card-q metal">18. Dezember 2026</div>
+      <div class="ev-card-s">${de ? "Every Story leads to Doom — sei bereit." : "Every story leads to Doom — be ready."}</div>
+      <a class="hd-cta" href="#event-top" style="margin-top:22px">${de ? "↑ Zurück zum Countdown" : "↑ Back to the countdown"}</a>
+    </div>
   </main></div>`;
 }
 
