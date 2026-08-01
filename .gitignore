@@ -1,0 +1,5 @@
+build/raw/
+build/small/
+build/craw/
+build/csmall/
+.DS_Store

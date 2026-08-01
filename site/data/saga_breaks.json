@@ -1,0 +1,22 @@
+{
+ "iron1": {
+  "saga": "Die Infinity Saga",
+  "phase": "Phase 1 · 2008 – 2012"
+ },
+ "iron3": {
+  "phase": "Phase 2 · 2013 – 2015"
+ },
+ "cw": {
+  "phase": "Phase 3 · 2016 – 2019"
+ },
+ "wv": {
+  "saga": "Die Multiverse Saga",
+  "phase": "Phase 4 · 2021 – 2022"
+ },
+ "qm": {
+  "phase": "Phase 5 · 2023 – 2025"
+ },
+ "f4": {
+  "phase": "Phase 6 · 2025 – 2027"
+ }
+}

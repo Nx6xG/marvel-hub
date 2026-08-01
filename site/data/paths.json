@@ -1,0 +1,510 @@
+[
+ {
+  "id": "bucky",
+  "n": "Buckys 80 Jahre",
+  "tag": "Vom besten Freund zur Waffe zur Erlösung",
+  "intro": "Keine MCU-Figur hat einen längeren Bogen: 1943 fällt Bucky vom Zug — und steht 2026 als New Avenger gegen Doom. Dazwischen: Gehirnwäsche, Schuld und der langsamste Heilungsprozess des Franchise.",
+  "steps": [
+   {
+    "f": "cap1",
+    "note": "Der beste Freund: Bucky fällt — scheinbar in den Tod."
+   },
+   {
+    "f": "cap2",
+    "note": "Der Twist: Hydras Winter Soldier ist Bucky. 'Wer zur Hölle ist Bucky?'"
+   },
+   {
+    "f": "cw",
+    "note": "Das Tonband: Zemo aktiviert ihn, die Avengers zerbrechen an ihm."
+   },
+   {
+    "f": "fws",
+    "note": "Die Therapie: Amends-Liste, Wakanda-Freispruch, Frieden mit sich."
+   },
+   {
+    "f": "tb",
+    "note": "Die neue Familie: Kongressabgeordneter, dann New Avenger."
+   },
+   {
+    "f": "doomsday",
+    "note": "Die Bewährung: 80 Jahre Erfahrung gegen Doom."
+   }
+  ]
+ },
+ {
+  "id": "wanda",
+  "n": "Wandas Tragödie",
+  "tag": "Vom Opfer zur Bedrohung — und zurück?",
+  "intro": "Die vielleicht konsequenteste Tragödie des MCU: Jede Station nimmt Wanda etwas — Eltern, Bruder, Vision, ihre Kinder, zuletzt sich selbst. Und jede Station macht sie mächtiger.",
+  "steps": [
+   {
+    "f": "av2",
+    "note": "Der Anfang: Experimente, Ultron, Pietros Tod."
+   },
+   {
+    "f": "cw",
+    "note": "Lagos: Die Welt lernt, sie zu fürchten."
+   },
+   {
+    "f": "iw",
+    "note": "Das Unmögliche: Sie zerstört Vision — und Thanos dreht die Zeit zurück."
+   },
+   {
+    "f": "wv",
+    "note": "Die Hex: Trauer erschafft eine Familie, die es nie gab."
+   },
+   {
+    "f": "mom",
+    "note": "Der Absturz: Der Darkhold macht aus Trauer einen Feldzug."
+   },
+   {
+    "f": "ag",
+    "note": "Das Vermächtnis: Billy lebt. Wandas Geschichte ist nicht vorbei."
+   }
+  ]
+ },
+ {
+  "id": "steine",
+  "n": "Der Weg der Infinity-Steine",
+  "tag": "Sechs Steine, elf Jahre, ein Schnipsen",
+  "intro": "Das Uhrwerk hinter der Infinity Saga: Jeder Stein wurde einzeln eingeführt, lange bevor Thanos zugriff. Der Pfad zum Nachverfolgen — oder Nachschauen im Artefakte-Eintrag.",
+  "steps": [
+   {
+    "f": "cap1",
+    "note": "Raumstein: Der Tesseract in Red Skulls Händen."
+   },
+   {
+    "f": "av1",
+    "note": "Gedankenstein: Lokis Zepter — geschenkt von Thanos."
+   },
+   {
+    "f": "thor2",
+    "note": "Realitätsstein: Der Äther, abgegeben an den Collector."
+   },
+   {
+    "f": "gotg1",
+    "note": "Machtstein: Der Orb von Morag."
+   },
+   {
+    "f": "strange1",
+    "note": "Zeitstein: Das Auge von Agamotto."
+   },
+   {
+    "f": "iw",
+    "note": "Seelenstein & alle anderen: Thanos sammelt ein. Snap."
+   },
+   {
+    "f": "eg",
+    "note": "Der Zeit-Raub: Alle sechs, noch einmal — und Tonys Preis."
+   }
+  ]
+ },
+ {
+  "id": "multiversum",
+  "n": "Wie das Multiversum aufbrach",
+  "tag": "Vom ersten Riss bis Doomsday",
+  "intro": "Die Kausalkette der Multiverse Saga in sieben Schritten — wer die versteht, ist bereit für den 18. Dezember.",
+  "steps": [
+   {
+    "f": "eg",
+    "note": "Die Tür: Zeitreisen beweisen — Zeitlinien sind verhandelbar."
+   },
+   {
+    "f": "l1",
+    "note": "Der Dammbruch: Sylvie tötet 'Er, der bleibt'. Alles verzweigt."
+   },
+   {
+    "f": "nwh",
+    "note": "Der erste Crossover: Fremde Universen fallen in New York ein."
+   },
+   {
+    "f": "mom",
+    "note": "Das Vokabular: Inkursionen — Welten können kollidieren."
+   },
+   {
+    "f": "l2",
+    "note": "Der Halt: Loki wird zum Baum, der alles trägt."
+   },
+   {
+    "f": "dw",
+    "note": "Die Brücke: Anker-Wesen, Void, Fox-Erbe angeschlossen."
+   },
+   {
+    "f": "doomsday",
+    "note": "Die Rechnung: Doom tritt in ein sturmreifes Multiversum."
+   }
+  ]
+ },
+ {
+  "id": "spidey",
+  "n": "Spider-Mans drei Leben",
+  "tag": "Maguire · Garfield · Holland",
+  "intro": "Drei Universen, drei Peters, eine Regel: Aus großer Kraft folgt große Verantwortung — und großes Leid. Der Pfad durch 24 Jahre Spinnen-Kino bis zum aktuellen Neuanfang.",
+  "steps": [
+   {
+    "f": "raimi1",
+    "note": "Erde-96283: Der Biss, Onkel Ben, der erste Schwung."
+   },
+   {
+    "f": "raimi2",
+    "note": "Der Höhepunkt: Doc Ock und die Zug-Szene — Genre-Referenz bis heute."
+   },
+   {
+    "f": "tasm1",
+    "note": "Erde-120703: Der Neustart mit Garfield und Gwen."
+   },
+   {
+    "f": "tasm2",
+    "note": "Der Fall: Gwens Tod bricht Peter — und das Franchise."
+   },
+   {
+    "f": "cw",
+    "note": "Erde-616: 'Hey everyone' — Holland betritt das MCU."
+   },
+   {
+    "f": "nwh",
+    "note": "Die Vereinigung: Drei Peters, eine Therapiesitzung mit Fäusten."
+   },
+   {
+    "f": "bnd",
+    "note": "Der Neuanfang: Vergessen, allein, freundlich — seit 31.07. im Kino."
+   }
+  ]
+ },
+ {
+  "id": "youngav",
+  "n": "Die Young Avengers sammeln sich",
+  "tag": "Marvels leiser Langzeitplan",
+  "intro": "Seit Jahren baut Marvel unauffällig ein Junior-Team auf — Figur für Figur, Serie für Serie. Offiziell existiert es nicht. Schaut man genau hin, ist es fast komplett.",
+  "steps": [
+   {
+    "f": "eg",
+    "note": "Der Samen: Cassie wächst im Blip fünf Jahre ohne Vater auf."
+   },
+   {
+    "f": "hk",
+    "note": "Kate Bishop: bessere Bogenschützin, chaotischere Energie."
+   },
+   {
+    "f": "msm",
+    "note": "Kamala Khan: der Fan, der zum Helden wird — erste Mutantin."
+   },
+   {
+    "f": "mom",
+    "note": "America Chavez: das Mädchen, das zwischen Welten geht."
+   },
+   {
+    "f": "qm",
+    "note": "Cassie Lang: eigener Anzug, erste Schlacht, Kang-Erfahrung."
+   },
+   {
+    "f": "ag",
+    "note": "Wiccan: Wandas Sohn, Realitäts-Magier."
+   },
+   {
+    "f": "mv",
+    "note": "Der Startschuss: Kamala rekrutiert Kate — 'Avengers assemble'-Energie."
+   }
+  ]
+ },
+ {
+  "id": "shield",
+  "n": "Aufstieg und Fall von S.H.I.E.L.D.",
+  "tag": "Die Behörde, die alles begann — und Hydra war",
+  "intro": "Bevor es Avengers gab, gab es die Organisation, die sie sammelte. Ihr Kollaps 2014 ist bis heute der beste Twist des MCU — und ihr Geist spukt durch jede Geheimdienst-Story seither.",
+  "steps": [
+   {
+    "f": "cap1",
+    "note": "Der Ursprung: Peggy Carter und die SSR im Krieg gegen Hydra."
+   },
+   {
+    "f": "iron1",
+    "note": "Der erste Kontakt: Coulson wartet geduldig im Flur, Fury im Abspann."
+   },
+   {
+    "f": "av1",
+    "note": "Der Höhepunkt: Helicarrier, Avengers-Initiative, Coulsons Opfer."
+   },
+   {
+    "f": "cap2",
+    "note": "Der Kollaps: 'Hail Hydra' — der Feind saß seit 1945 im eigenen Haus."
+   },
+   {
+    "f": "si",
+    "note": "Die Geister: Fury allein gegen die Unterwanderung, diesmal von Skrullen."
+   },
+   {
+    "f": "mv",
+    "note": "Das Danach: Fury leitet S.A.B.E.R. im Orbit — S.H.I.E.L.D. ist Geschichte."
+   }
+  ]
+ },
+ {
+  "id": "thanosweg",
+  "n": "Thanos' langer Schatten",
+  "tag": "Sechs Jahre Vorlauf, zwei Handschuhe, ein Grinsen",
+  "intro": "Kein Schurke wurde je geduldiger aufgebaut: 2012 ein Grinsen im Abspann, 2018 der Snap. Der Maßstab, an dem Doom jetzt gemessen wird — und die Blaupause, wie Marvel Endgegner erzählt.",
+  "steps": [
+   {
+    "f": "av1",
+    "note": "Das Grinsen: 'Sich den Menschen zu widersetzen, hieße den Tod umwerben.'"
+   },
+   {
+    "f": "gotg1",
+    "note": "Der erste Auftritt: auf dem Thron, noch outgesourct an Ronan."
+   },
+   {
+    "f": "av2",
+    "note": "Selbst ist der Titan: 'Fine, I'll do it myself.'"
+   },
+   {
+    "f": "iw",
+    "note": "Der Sieg: Er opfert Gamora, schlägt alle — und ruht sich aus."
+   },
+   {
+    "f": "eg",
+    "note": "Zweimal Staub: enthauptet in der Hütte, zerschnipst in der Schlacht."
+   }
+  ]
+ },
+ {
+  "id": "magie",
+  "n": "Die Magie des MCU",
+  "tag": "Von Kamar-Taj bis Mephisto",
+  "intro": "Lange war das MCU Technik-Land — dann kam Strange, und mit ihm Chaosmagie, dunkle Bücher, Hexenpfade und zuletzt der Teufel persönlich. Gegen Doom, den Magier-Wissenschaftler, ist dieser Strang plötzlich zentral.",
+  "steps": [
+   {
+    "f": "strange1",
+    "note": "Die Grundlagen: Kamar-Taj, Astralebene, der Zeitstein."
+   },
+   {
+    "f": "wv",
+    "note": "Chaosmagie: Wanda erschafft Realität aus Trauer."
+   },
+   {
+    "f": "nwh",
+    "note": "Der Zauber: Ein missglückter Spruch öffnet das Multiversum."
+   },
+   {
+    "f": "mom",
+    "note": "Eskalation: Darkhold, Traumwandeln, Inkursionen."
+   },
+   {
+    "f": "ag",
+    "note": "Der Hexenpfad: Agatha, Billy und die Kosten der Magie."
+   },
+   {
+    "f": "ih",
+    "note": "Der Teufel: Mephisto macht seinen ersten Deal."
+   }
+  ]
+ },
+ {
+  "id": "wakandaweg",
+  "n": "Wakandas Weg",
+  "tag": "Vom verborgenen Königreich zur Weltmacht",
+  "intro": "Wakanda trat aus dem Schatten, verlor zwei Könige und fand einen Rivalen unter dem Meer. In Doomsday ist sein Vibranium einer der Preise, um die gekämpft wird.",
+  "steps": [
+   {
+    "f": "cw",
+    "note": "Der Verlust: König T'Chaka stirbt in Wien, T'Challa jagt Bucky."
+   },
+   {
+    "f": "bp1",
+    "note": "Die Öffnung: Wakanda zeigt sich der Welt — und übersteht Killmonger."
+   },
+   {
+    "f": "iw",
+    "note": "Das Schlachtfeld: 'Wakanda forever!' gegen Thanos' Horden."
+   },
+   {
+    "f": "bpwf",
+    "note": "Die Trauer: T'Challas Tod, Namors Krieg, Shuris Mantel."
+   },
+   {
+    "f": "eow",
+    "note": "Die Geschichte: Jahrhunderte wakandischer Krieger im Rückblick."
+   },
+   {
+    "f": "doomsday",
+    "note": "Die Zukunft: Shuri, M'Baku — und ein neuer Black Panther?"
+   }
+  ]
+ },
+ {
+  "id": "deadpoolweg",
+  "n": "Deadpools Reise zur Selbstachtung",
+  "tag": "Vom zugenähten Mund zum Marvel Jesus",
+  "intro": "Keine Figur hat einen absurderen Karriereweg: 2009 als stummer Frankenstein verheizt, 2016 aus Trotz perfekt, 2024 Retter zweier Franchises. Meta-Kino in vier Akten plus Trauerfall.",
+  "steps": [
+   {
+    "f": "origins",
+    "note": "Der Sündenfall: Deadpool ohne Mund. Reynolds vergisst nie."
+   },
+   {
+    "f": "dp1",
+    "note": "Die Rache: Geleaktes Footage erzwingt den Film, der alles richtig macht."
+   },
+   {
+    "f": "dp2",
+    "note": "Die Familie: X-Force stirbt, Herz wächst."
+   },
+   {
+    "f": "logan",
+    "note": "Der Stachel: Der Tod, der Wade später antreibt — Logans Ende ist sein Trauma."
+   },
+   {
+    "f": "dw",
+    "note": "Die Erlösung: Anker-Wesen, Void, 'Marvel Jesus' — und ein Wolverine, der bleibt."
+   }
+  ]
+ },
+ {
+  "id": "kangweg",
+  "n": "Kang: Geschichte eines gescheiterten Schurken",
+  "tag": "Der Saga-Endgegner, den es nie gab",
+  "intro": "Ein Lehrstück in Echtzeit: Marvel baute drei Jahre einen Endgegner auf, verlor seinen Darsteller — und ersetzte ihn durch etwas Größeres. Dieser Pfad ist Kino-Geschichte UND Making-of zugleich.",
+  "steps": [
+   {
+    "f": "l1",
+    "note": "Der Anfang: 'Er, der bleibt' erklärt den multiversalen Krieg — und stirbt."
+   },
+   {
+    "f": "qm",
+    "note": "Der Kinostart: Kang der Eroberer verliert gegen Ameisen. Kein guter Auftakt."
+   },
+   {
+    "f": "l2",
+    "note": "Alle seine Leben: Victor Timely, der Zeitwebstuhl — Lokis Opfer entmachtet ihn nebenbei."
+   },
+   {
+    "f": "doomsday",
+    "note": "Das Erbe: Der Council of Kangs wartet noch — und Doom übernimmt den Platz."
+   }
+  ]
+ },
+ {
+  "id": "hulkweg",
+  "n": "Hulks langer Weg",
+  "tag": "Vom Monster zum Smart Hulk zum Vater",
+  "intro": "Drei Darsteller-Anläufe, kein zweiter Solo-Film (Universal-Rechte!), und trotzdem einer der vollständigsten Bögen des MCU — erzählt komplett in fremden Filmen.",
+  "steps": [
+   {
+    "f": "hulk",
+    "note": "Der Flüchtige: Norton-Banner gegen Ross und Abomination."
+   },
+   {
+    "f": "av1",
+    "note": "Der Befreiungsschlag: 'Das ist mein Geheimnis — ich bin immer wütend.'"
+   },
+   {
+    "f": "thor3",
+    "note": "Das Exil: Zwei Jahre nur Hulk, Gladiator auf Sakaar."
+   },
+   {
+    "f": "eg",
+    "note": "Die Fusion: Smart Hulk — und der Blip-Schnipser, der seinen Arm kostete."
+   },
+   {
+    "f": "shk",
+    "note": "Der Mentor: Jen erbt sein Blut, er zeigt ihr die Basics."
+   },
+   {
+    "f": "bnd",
+    "note": "Der Vater: Skaar ist da — und Hulk mischt Peters Straßen auf."
+   }
+  ]
+ },
+ {
+  "id": "furyweg",
+  "n": "Nick Furys Jahrhundert",
+  "tag": "Der Mann, der die Helden sammelte",
+  "intro": "Er hat kein Superserum und keine Rüstung — nur Weitblick und Misstrauen. Ohne Fury keine Avengers: Der Pfad des größten Strippenziehers, vom Kalten Krieg bis zur Raumstation.",
+  "steps": [
+   {
+    "f": "cm",
+    "note": "1995: Ein Skrull-Krieg, ein Flerken, ein verlorenes Auge, eine Idee."
+   },
+   {
+    "f": "iron1",
+    "note": "2008: 'Sie sind Teil eines größeren Universums' — die Initiative startet."
+   },
+   {
+    "f": "av1",
+    "note": "2012: Sein Lebenswerk versammelt sich — gegen den Willen des Rats."
+   },
+   {
+    "f": "cap2",
+    "note": "2014: Sein eigener Apparat war Hydra. Fury stirbt (offiziell)."
+   },
+   {
+    "f": "si",
+    "note": "2025: Müde, allein, paranoid — der Skrull-Krieg holt ihn ein."
+   },
+   {
+    "f": "mv",
+    "note": "2026: S.A.B.E.R. im Orbit — Fury wacht jetzt von oben."
+   }
+  ]
+ },
+ {
+  "id": "weltlage",
+  "n": "Die Weltlage vor Doomsday",
+  "tag": "Warum die Erde 2026 so verwundbar ist",
+  "intro": "Doom greift keine starke Welt an — er greift DIESE an: kein stehendes Avengers-Team, ein gestürzter Präsident, zerstrittene Namensrechte, ein instabiler Sentry. Die Kette der Schwächung, Film für Film.",
+  "steps": [
+   {
+    "f": "eg",
+    "note": "Die Lücke: Tony tot, Steve alt, Natasha weg — niemand füllt das Vakuum."
+   },
+   {
+    "f": "fws",
+    "note": "Das Chaos: Blip-Rückkehrer, Flüchtlingskrisen, ein gescheiterter Cap."
+   },
+   {
+    "f": "nwh",
+    "note": "Die Wunde: New York erlebt das Multiversum — und vergisst seinen Helden."
+   },
+   {
+    "f": "bnw",
+    "note": "Der Skandal: Der Präsident wird zum Red Hulk, Adamantium-Wettlauf beginnt."
+   },
+   {
+    "f": "tb",
+    "note": "Der Void-Tag: Halb New York verschlungen — die 'New Avengers' sind PR."
+   },
+   {
+    "f": "doomsday",
+    "note": "Die Rechnung: Ein sturmreifer Planet trifft auf einen Gott mit Plan."
+   }
+  ]
+ },
+ {
+  "id": "symbionten",
+  "n": "Die Symbionten-Saga",
+  "tag": "Vom schwarzen Anzug zum schlafenden Gott",
+  "intro": "Sonys klebrigster Handlungsstrang: dreimal Venom, ein erzwungener Anfang, ein Meme-Umweg — und ein Tropfen, der immer noch auf einem Tresen in Erde-616 liegt.",
+  "steps": [
+   {
+    "f": "raimi3",
+    "note": "Der erzwungene Anfang: Das Studio wollte Venom, Raimi nicht. Man sah es."
+   },
+   {
+    "f": "venom1",
+    "note": "Der Neustart: Eddie und sein hungriger Mitbewohner — Kritiker entsetzt, Kasse voll."
+   },
+   {
+    "f": "venom2",
+    "note": "Die Eskalation: Carnage — und der Sprung ins MCU im Abspann."
+   },
+   {
+    "f": "nwh",
+    "note": "Der Tropfen: Eddie reist zurück, ein Rest Symbiont bleibt in Erde-616."
+   },
+   {
+    "f": "venom3",
+    "note": "Das Ende: Abschied von Eddie — und Knull öffnet die Augen. Unaufgelöst."
+   }
+  ]
+ }
+]

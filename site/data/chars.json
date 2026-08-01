@@ -1,0 +1,3740 @@
+[
+ {
+  "id": "doom",
+  "n": "Doctor Doom",
+  "a": "Victor von Doom",
+  "act": "Robert Downey Jr.",
+  "uni": "MCU (ab Doomsday)",
+  "first": "F4 #5 (1962) · Kino: Doomsday",
+  "pow": "Genie-Intellekt, Magie, Rüstungstechnik, absoluter Wille",
+  "bio": "Monarch von Latveria, Wissenschaftler UND Magier — überzeugt, dass die Welt unter ihm besser wäre. Der größte Schurke, den Marvel je geschrieben hat, jetzt gespielt vom Gesicht des MCU selbst.",
+  "rel": [
+   [
+    "reed",
+    "feind",
+    "Erzrivale seit Studientagen"
+   ],
+   [
+    "franklin",
+    "komplex",
+    "will seine Macht"
+   ],
+   [
+    "tony",
+    "komplex",
+    "dasselbe Gesicht …"
+   ],
+   [
+    "thanos",
+    "komplex",
+    "Vorgänger als Saga-Endgegner"
+   ]
+  ],
+  "films": [
+   "doomsday",
+   "secretwars"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "tony",
+  "n": "Iron Man",
+  "a": "Tony Stark",
+  "act": "Robert Downey Jr.",
+  "uni": "MCU · Erde-616 († 2023)",
+  "first": "Iron Man (2008)",
+  "pow": "Genie, Milliardär, Playboy, Philanthrop — und die Rüstung",
+  "bio": "Der Mann, der das MCU eröffnete und mit einem Schnipsen beendete, was Thanos begann. Sein Tod in Endgame ist der emotionale Nullpunkt, vor dem RDJs Rückkehr als Doom erst richtig wirkt.",
+  "rel": [
+   [
+    "steve",
+    "verbuendet",
+    "Bruder im Streit"
+   ],
+   [
+    "spidey",
+    "familie",
+    "Mentor & Vaterfigur"
+   ],
+   [
+    "thanos",
+    "feind",
+    "der Snap"
+   ],
+   [
+    "doom",
+    "komplex",
+    "dasselbe Gesicht …"
+   ]
+  ],
+  "films": [
+   "iron1",
+   "av1",
+   "cw",
+   "iw",
+   "eg"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "steve",
+  "n": "Captain America",
+  "a": "Steve Rogers",
+  "act": "Chris Evans",
+  "uni": "MCU · im Ruhestand",
+  "first": "The First Avenger (2011)",
+  "pow": "Supersoldat, unzerstörbares Schild, unbeugsame Moral",
+  "bio": "Der erste Avenger — gab das Schild an Sam Wilson weiter und blieb in der Vergangenheit. Evans ist für Doomsday bestätigt, seine Rolle nicht: Steve? Johnny Storm? Niemand weiß es.",
+  "rel": [
+   [
+    "bucky",
+    "familie",
+    "beste Freunde seit 1930"
+   ],
+   [
+    "tony",
+    "verbuendet",
+    "Bruder im Streit"
+   ],
+   [
+    "sam",
+    "familie",
+    "Nachfolger"
+   ]
+  ],
+  "films": [
+   "cap1",
+   "cap2",
+   "cw",
+   "eg"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "sam",
+  "n": "Captain America II",
+  "a": "Sam Wilson",
+  "act": "Anthony Mackie",
+  "uni": "MCU · aktiv",
+  "first": "The Winter Soldier (2014)",
+  "pow": "Vibranium-Flügel, Schild, Taktik — kein Serum",
+  "bio": "Der Cap ohne Superkräfte. Führt in Doomsday vermutlich eine der Fraktionen — im offenen Konkurrenzkampf mit Yelenas New Avengers um den Avengers-Namen.",
+  "rel": [
+   [
+    "steve",
+    "familie",
+    "Erbe des Schilds"
+   ],
+   [
+    "bucky",
+    "verbuendet",
+    "widerwillige Buddys"
+   ],
+   [
+    "yelena",
+    "komplex",
+    "Team-Rivalität"
+   ]
+  ],
+  "films": [
+   "cap2",
+   "fws",
+   "bnw",
+   "doomsday"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "bucky",
+  "n": "Winter Soldier",
+  "a": "Bucky Barnes",
+  "act": "Sebastian Stan",
+  "uni": "MCU · New Avengers",
+  "first": "The First Avenger (2011)",
+  "pow": "Supersoldat, Vibranium-Arm, 70 Jahre Kampferfahrung",
+  "bio": "Hydras Attentäter, Steves bester Freund, inzwischen Kongressabgeordneter und New Avenger. Eine der wenigen Figuren, die seit 2011 durchgehend dabei sind.",
+  "rel": [
+   [
+    "steve",
+    "familie",
+    "beste Freunde seit 1930"
+   ],
+   [
+    "sam",
+    "verbuendet",
+    "widerwillige Buddys"
+   ],
+   [
+    "yelena",
+    "verbuendet",
+    "New Avengers"
+   ]
+  ],
+  "films": [
+   "cap1",
+   "cap2",
+   "cw",
+   "fws",
+   "tb",
+   "doomsday"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "thor",
+  "n": "Thor",
+  "a": "Thor Odinson",
+  "act": "Chris Hemsworth",
+  "uni": "MCU · aktiv",
+  "first": "Thor (2011)",
+  "pow": "Donnergott, Stormbreaker, ~1500 Jahre Erfahrung",
+  "bio": "Der letzte aktive Gründungs-Avenger. Im SDCC-Material stoppt Doom seinen Stormbreaker mit einer Hand — Thors Rolle in Doomsday dürfte zentral und schmerzhaft werden.",
+  "rel": [
+   [
+    "loki",
+    "familie",
+    "Brüder, ewig kompliziert"
+   ],
+   [
+    "doom",
+    "feind",
+    "Stormbreaker gestoppt"
+   ],
+   [
+    "thanos",
+    "feind",
+    "'Du hättest auf den Kopf zielen sollen'"
+   ]
+  ],
+  "films": [
+   "thor1",
+   "av1",
+   "thor3",
+   "iw",
+   "eg",
+   "tlt",
+   "doomsday"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "loki",
+  "n": "Loki",
+  "a": "Gott der Geschichten",
+  "act": "Tom Hiddleston",
+  "uni": "MCU · Ende der Zeit",
+  "first": "Thor (2011)",
+  "pow": "Magie, Gestaltwandel — und jetzt: hält alle Zeitlinien zusammen",
+  "bio": "Vom Schurken zum Gott der Geschichten: Loki hält am Ende der Zeit das gesamte Multiversum wie einen lebenden Baum zusammen. Der offensichtlichste Angriffspunkt für Doom — und das wichtigste offene Chekhovs Gewehr der Saga.",
+  "rel": [
+   [
+    "thor",
+    "familie",
+    "Brüder, ewig kompliziert"
+   ],
+   [
+    "kang",
+    "komplex",
+    "erbte sein Problem"
+   ],
+   [
+    "doom",
+    "feind",
+    "sein Baum, Dooms Ziel?"
+   ]
+  ],
+  "films": [
+   "thor1",
+   "av1",
+   "l1",
+   "l2",
+   "doomsday"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "wanda",
+  "n": "Scarlet Witch",
+  "a": "Wanda Maximoff",
+  "act": "Elizabeth Olsen",
+  "uni": "MCU · Status unklar",
+  "first": "Age of Ultron (2015)",
+  "pow": "Chaosmagie, Realitäts-Umschreibung — Nexus-Wesen",
+  "bio": "Erschuf aus Trauer eine eigene Realität, löschte auf Erde-838 die Illuminati aus und 'starb' unter einem Berg — sehr vage. Ihr Sohn Billy lebt als Wiccan weiter.",
+  "rel": [
+   [
+    "vision",
+    "liebe",
+    "die große MCU-Tragödie"
+   ],
+   [
+    "strange",
+    "komplex",
+    "von Verbündeter zu Gegnerin"
+   ],
+   [
+    "franklin",
+    "komplex",
+    "die zwei Realitätsformer"
+   ]
+  ],
+  "films": [
+   "av2",
+   "cw",
+   "wv",
+   "mom"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "vision",
+  "n": "Vision",
+  "a": "White Vision",
+  "act": "Paul Bettany",
+  "uni": "MCU · auf Sinnsuche",
+  "first": "Age of Ultron (2015)",
+  "pow": "Synthezoid: Dichte-Kontrolle, Flug, Mind-Stone-Erbe",
+  "bio": "Zweimal gestorben, einmal weiß wiederaufgebaut: White Vision sucht in Vision Quest nach seiner Identität — und trifft dabei auf die Stimme seines Schöpfers Ultron (James Spader).",
+  "rel": [
+   [
+    "wanda",
+    "liebe",
+    "die große MCU-Tragödie"
+   ],
+   [
+    "tony",
+    "familie",
+    "Mit-Schöpfer"
+   ]
+  ],
+  "films": [
+   "av2",
+   "cw",
+   "wv",
+   "vq"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "strange",
+  "n": "Doctor Strange",
+  "a": "Stephen Strange",
+  "act": "Benedict Cumberbatch",
+  "uni": "MCU · dritte Auge offen",
+  "first": "Doctor Strange (2016)",
+  "pow": "Meister der Mystik, Zeitstein-Veteran, Multiversum-Reisender",
+  "bio": "Sah 14 Millionen Zukünfte, brach das Multiversum für einen Teenager auf und traumwandelte durch Leichen. Läuft seit MoM mit einem dritten Auge herum — und schuldet dem Multiversum eine Inkursions-Reparatur.",
+  "rel": [
+   [
+    "spidey",
+    "verbuendet",
+    "der fatale Zauber"
+   ],
+   [
+    "wanda",
+    "komplex",
+    "von Verbündetem zu Gegner"
+   ],
+   [
+    "doom",
+    "feind",
+    "Magier gegen Magier"
+   ]
+  ],
+  "films": [
+   "strange1",
+   "iw",
+   "nwh",
+   "mom"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "spidey",
+  "n": "Spider-Man",
+  "a": "Peter Parker",
+  "act": "Tom Holland",
+  "uni": "MCU · von allen vergessen",
+  "first": "Civil War (2016)",
+  "pow": "Spinnensinn, Wandkraft, Webshooter — jetzt selbstgebaut",
+  "bio": "Die Welt hat vergessen, dass es ihn gibt. In Brand New Day (seit 31.07.2026 im Kino) baut er sich allein neu auf — bevor Doomsday vermutlich auch ihn einsammelt.",
+  "rel": [
+   [
+    "tony",
+    "familie",
+    "Mentor & Vaterfigur"
+   ],
+   [
+    "strange",
+    "verbuendet",
+    "der fatale Zauber"
+   ],
+   [
+    "venom",
+    "komplex",
+    "ein Rest Symbiont ist im MCU …"
+   ]
+  ],
+  "films": [
+   "cw",
+   "spider1",
+   "nwh",
+   "bnd"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "yelena",
+  "n": "Yelena Belova",
+  "a": "Black Widow II",
+  "act": "Florence Pugh",
+  "uni": "MCU · New Avengers",
+  "first": "Black Widow (2021)",
+  "pow": "Red-Room-Ausbildung, trockener Humor als Waffe",
+  "bio": "Natashas Schwester, inoffizielle Anführerin der New Avengers — und heimliches Herz der Post-Endgame-Ära. Führt das Team, das in Doomsday an vorderster Front steht.",
+  "rel": [
+   [
+    "natasha",
+    "familie",
+    "Schwestern"
+   ],
+   [
+    "sentry",
+    "verbuendet",
+    "holte Bob zurück"
+   ],
+   [
+    "bucky",
+    "verbuendet",
+    "New Avengers"
+   ],
+   [
+    "sam",
+    "komplex",
+    "Team-Rivalität"
+   ]
+  ],
+  "films": [
+   "bw",
+   "hk",
+   "tb",
+   "doomsday"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "natasha",
+  "n": "Black Widow",
+  "a": "Natasha Romanoff",
+  "act": "Scarlett Johansson",
+  "uni": "MCU († 2023, Vormir)",
+  "first": "Iron Man 2 (2010)",
+  "pow": "Spionin, Kampfkunst, Selbstopfer",
+  "bio": "Opferte sich auf Vormir für den Seelenstein. Im Multiversum ist kein Tod endgültig — eine Widow-Variante gehört zu den meisterwarteten Doomsday-Gerüchten.",
+  "rel": [
+   [
+    "yelena",
+    "familie",
+    "Schwestern"
+   ],
+   [
+    "steve",
+    "verbuendet",
+    "engste Vertraute"
+   ]
+  ],
+  "films": [
+   "iron2",
+   "av1",
+   "cw",
+   "eg",
+   "bw"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "shuri",
+  "n": "Black Panther",
+  "a": "Shuri",
+  "act": "Letitia Wright",
+  "uni": "MCU · Wakanda",
+  "first": "Black Panther (2018)",
+  "pow": "Genie-Intellekt, Herzkraut, Vibranium-Suit",
+  "bio": "Übernahm nach T'Challas Tod Mantel und Bürde. In Doomsday steht Wakanda zwischen den Fronten — und auf der SDCC wurde ein weiterer, neuer Black Panther enthüllt.",
+  "rel": [
+   [
+    "doom",
+    "feind",
+    "Vibranium weckt Begehren"
+   ]
+  ],
+  "films": [
+   "bp1",
+   "bpwf",
+   "doomsday"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "sentry",
+  "n": "Sentry",
+  "a": "Bob Reynolds / Void",
+  "act": "Lewis Pullman",
+  "uni": "MCU · New Avengers",
+  "first": "Thunderbolts* (2025)",
+  "pow": "Kraft von tausend explodierenden Sonnen — und deren Schatten",
+  "bio": "Das mächtigste und instabilste Wesen des MCU: Sein dunkles Ich, der Void, verschlang halb New York. Die einzige heldenseitige Figur auf Doom-Niveau — wenn er sich hält.",
+  "rel": [
+   [
+    "yelena",
+    "verbuendet",
+    "holte ihn zurück"
+   ],
+   [
+    "doom",
+    "komplex",
+    "die Waffe, die Doom will?"
+   ]
+  ],
+  "films": [
+   "tb",
+   "doomsday"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "deadpool",
+  "n": "Deadpool",
+  "a": "Wade Wilson",
+  "act": "Ryan Reynolds",
+  "uni": "Fox → MCU (Erde-10005)",
+  "first": "Deadpool (2016)",
+  "pow": "Heilfaktor, vierte-Wand-Bruch, Katana-Chaos",
+  "bio": "Rettete seine sterbende Zeitlinie, indem er der TVA ein neues Anker-Wesen lieferte: Wolverine. Marvels 'Jesus', wie er sich selbst nennt — Doomsday-Auftritt gilt als sicher, bestätigt ist nichts.",
+  "rel": [
+   [
+    "wolverine",
+    "verbuendet",
+    "das ungleiche Traumpaar"
+   ],
+   [
+    "xavier",
+    "komplex",
+    "dessen Schwester wollte ihn töten"
+   ]
+  ],
+  "films": [
+   "dp1",
+   "dp2",
+   "dw"
+  ],
+  "u": "fox"
+ },
+ {
+  "id": "wolverine",
+  "n": "Wolverine",
+  "a": "Logan",
+  "act": "Hugh Jackman",
+  "uni": "Fox → MCU (Variante)",
+  "first": "X-Men (2000)",
+  "pow": "Adamantium-Skelett, Heilfaktor, 200 Jahre Wut",
+  "bio": "Der 'schlechteste Wolverine seiner Welt', der zur Erlösung fand. Sein Universum hängt an ihm als Anker-Wesen. Offiziell nicht im Doomsday-Cast — glaubt aber niemand.",
+  "rel": [
+   [
+    "deadpool",
+    "verbuendet",
+    "das ungleiche Traumpaar"
+   ],
+   [
+    "xavier",
+    "familie",
+    "Ersatzvater"
+   ],
+   [
+    "magneto",
+    "feind",
+    "Metallskelett, schlechte Idee"
+   ]
+  ],
+  "films": [
+   "xmen1",
+   "x2",
+   "dofp",
+   "logan",
+   "dw"
+  ],
+  "u": "fox"
+ },
+ {
+  "id": "xavier",
+  "n": "Professor X",
+  "a": "Charles Xavier",
+  "act": "Patrick Stewart",
+  "uni": "Fox / Erde-838 / Doomsday",
+  "first": "X-Men (2000)",
+  "pow": "Stärkster Telepath der Welt",
+  "bio": "Gründer der X-Men, Träumer der Koexistenz. Auf Erde-838 von Wanda getötet, in Doomsday kehrt Stewart erneut zurück — welcher Xavier es ist, weiß niemand.",
+  "rel": [
+   [
+    "magneto",
+    "komplex",
+    "beste Feinde, alte Freunde"
+   ],
+   [
+    "wolverine",
+    "familie",
+    "Ersatzvater"
+   ]
+  ],
+  "films": [
+   "xmen1",
+   "x2",
+   "dofp",
+   "logan",
+   "mom",
+   "doomsday"
+  ],
+  "u": "fox"
+ },
+ {
+  "id": "magneto",
+  "n": "Magneto",
+  "a": "Erik Lehnsherr",
+  "act": "Ian McKellen",
+  "uni": "Fox → Doomsday",
+  "first": "X-Men (2000)",
+  "pow": "Herr über Magnetismus",
+  "bio": "Holocaust-Überlebender, Mutanten-Radikaler, Xaviers Spiegelbild. McKellens Rückkehr nach über 10 Jahren ist eine der größten Doomsday-Sensationen.",
+  "rel": [
+   [
+    "xavier",
+    "komplex",
+    "beste Feinde, alte Freunde"
+   ],
+   [
+    "doom",
+    "komplex",
+    "zwei Herrscher, ein Problem"
+   ]
+  ],
+  "films": [
+   "xmen1",
+   "x2",
+   "x3",
+   "dofp",
+   "doomsday"
+  ],
+  "u": "fox"
+ },
+ {
+  "id": "reed",
+  "n": "Mister Fantastic",
+  "a": "Reed Richards",
+  "act": "Pedro Pascal",
+  "uni": "MCU · Erde-828",
+  "first": "First Steps (2025)",
+  "pow": "Elastischer Körper, klügster Mann seiner Welt",
+  "bio": "Rettete seine Erde vor Galactus — und verlor vier Jahre später seinen Sohn an Doom. In den Comics ist Reed der Einzige, der Doom am Ende wirklich schlägt.",
+  "rel": [
+   [
+    "doom",
+    "feind",
+    "Erzrivale"
+   ],
+   [
+    "franklin",
+    "familie",
+    "Sohn"
+   ],
+   [
+    "sue",
+    "liebe",
+    "Ehe & Team"
+   ]
+  ],
+  "films": [
+   "f4",
+   "doomsday",
+   "secretwars"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "sue",
+  "n": "Invisible Woman",
+  "a": "Sue Storm",
+  "act": "Vanessa Kirby",
+  "uni": "MCU · Erde-828",
+  "first": "First Steps (2025)",
+  "pow": "Unsichtbarkeit, Kraftfelder — stärkste der Vier",
+  "bio": "Gebar Franklin im Orbit und stoppte Galactus mit bloßer Willenskraft. Die Mutter, deren Kind Doom geholt hat: Unterschätze sie niemand.",
+  "rel": [
+   [
+    "reed",
+    "liebe",
+    "Ehe & Team"
+   ],
+   [
+    "franklin",
+    "familie",
+    "Sohn"
+   ],
+   [
+    "doom",
+    "feind",
+    "hat ihr Kind"
+   ]
+  ],
+  "films": [
+   "f4",
+   "doomsday"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "franklin",
+  "n": "Franklin Richards",
+  "a": "das mächtigste Kind",
+  "act": "—",
+  "uni": "MCU · Erde-828",
+  "first": "First Steps (2025)",
+  "pow": "Kann (in den Comics) ganze Universen erschaffen",
+  "bio": "Galactus wollte ihn, Doom hat ihn: In den Comics hält Franklins Omega-Kraft Dooms Battleworld am Leben. Vermutlich der wichtigste MacGuffin der ganzen Saga — und er ist vier.",
+  "rel": [
+   [
+    "reed",
+    "familie",
+    "Vater"
+   ],
+   [
+    "sue",
+    "familie",
+    "Mutter"
+   ],
+   [
+    "doom",
+    "komplex",
+    "Entführer? Ziehvater? Batterie?"
+   ]
+  ],
+  "films": [
+   "f4",
+   "doomsday",
+   "secretwars"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "venom",
+  "n": "Venom",
+  "a": "Eddie Brock",
+  "act": "Tom Hardy",
+  "uni": "Sony · Erde-unbekannt",
+  "first": "Venom (2018)",
+  "pow": "Symbiont: Stärke, Tentakel, Hunger auf Köpfe",
+  "bio": "Journalist mit Alien-Mitbewohner. Rutschte in Let There Be Carnage kurz ins MCU und ließ dort einen Rest Symbiont zurück — ein offener Faden, den bisher niemand eingelöst hat.",
+  "rel": [
+   [
+    "spidey",
+    "komplex",
+    "der zurückgelassene Symbiont"
+   ]
+  ],
+  "films": [
+   "venom1",
+   "venom2",
+   "venom3"
+  ],
+  "u": "sony"
+ },
+ {
+  "id": "thanos",
+  "n": "Thanos",
+  "a": "der Verrückte Titan",
+  "act": "Josh Brolin",
+  "uni": "MCU († 2023, zweimal)",
+  "first": "The Avengers (2012, Cameo)",
+  "pow": "Titanen-Physis, Infinity-Steine, eiserne Überzeugung",
+  "bio": "Löschte die Hälfte allen Lebens und wurde selbst zweimal ausgelöscht. Der Maßstab, an dem Doom gemessen wird — und laut Comics dessen bloße Vorstufe.",
+  "rel": [
+   [
+    "tony",
+    "feind",
+    "der Snap"
+   ],
+   [
+    "thor",
+    "feind",
+    "zweimal enthauptet"
+   ],
+   [
+    "doom",
+    "komplex",
+    "sein Nachfolger als Endgegner"
+   ]
+  ],
+  "films": [
+   "av1",
+   "iw",
+   "eg"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "kang",
+  "n": "Kang",
+  "a": "der Eroberer / Er, der bleibt",
+  "act": "Jonathan Majors",
+  "uni": "MCU · Status: verwaist",
+  "first": "Loki (2021)",
+  "pow": "Zeitreise-Technologie, unendliche Varianten",
+  "bio": "Der geplante Saga-Endgegner, dessen Geschichte nie zu Ende erzählt wurde. Der Council of Kangs wartet theoretisch noch — in den Comics ist es Doom, der solches Chaos beendet.",
+  "rel": [
+   [
+    "loki",
+    "komplex",
+    "erbte sein Problem"
+   ],
+   [
+    "doom",
+    "komplex",
+    "der Nachfolger"
+   ]
+  ],
+  "films": [
+   "l1",
+   "qm"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "hulk",
+  "n": "Hulk",
+  "a": "Bruce Banner",
+  "act": "Mark Ruffalo (zuvor Edward Norton)",
+  "uni": "MCU · Smart Hulk",
+  "first": "The Incredible Hulk (2008)",
+  "pow": "Grenzenlose Kraft durch Wut — heute mit Banners Verstand",
+  "bio": "Vom Fluch zur Fusion: Seit Endgame sind Banner und Hulk eine Person. Zuletzt mischte er in Brand New Day Peters Straßen auf — sein Sohn Skaar ist auch schon aufgetaucht.",
+  "rel": [
+   [
+    "tony",
+    "verbuendet",
+    "Science Bros"
+   ],
+   [
+    "thor",
+    "verbuendet",
+    "Ragnarok-Arena-Duo"
+   ],
+   [
+    "natasha",
+    "komplex",
+    "was auch immer das war"
+   ]
+  ],
+  "films": [
+   "hulk",
+   "av1",
+   "thor3",
+   "iw",
+   "eg",
+   "bnd"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "clint",
+  "n": "Hawkeye",
+  "a": "Clint Barton",
+  "act": "Jeremy Renner",
+  "uni": "MCU · im Ruhestand",
+  "first": "Thor (2011)",
+  "pow": "Verfehlt nie — egal womit",
+  "bio": "Der Familienvater unter den Avengers, zwischenzeitlich als Ronin auf Rachefeldzug. Übergab Bogen und Verantwortung an Kate Bishop.",
+  "rel": [
+   [
+    "natasha",
+    "familie",
+    "Budapest"
+   ],
+   [
+    "yelena",
+    "komplex",
+    "der Vormir-Streit"
+   ]
+  ],
+  "films": [
+   "av1",
+   "av2",
+   "eg",
+   "hk"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "kamala",
+  "n": "Ms. Marvel",
+  "a": "Kamala Khan",
+  "act": "Iman Vellani",
+  "uni": "MCU · Young Avenger",
+  "first": "Ms. Marvel (2022)",
+  "pow": "Lichtkonstrukte — und die erste bestätigte Mutation des MCU",
+  "bio": "Jersey Citys größter Fangirl-Superheld und der heimliche Motor der Young Avengers: Am Ende von The Marvels beginnt sie, ihr Team zu rekrutieren.",
+  "rel": [
+   [
+    "carol",
+    "verbuendet",
+    "Idol & Mentorin"
+   ],
+   [
+    "wiccan",
+    "verbuendet",
+    "künftige Young Avengers"
+   ]
+  ],
+  "films": [
+   "msm",
+   "mv"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "carol",
+  "n": "Captain Marvel",
+  "a": "Carol Danvers",
+  "act": "Brie Larson",
+  "uni": "MCU · kosmisch unterwegs",
+  "first": "Captain Marvel (2019)",
+  "pow": "Photonenenergie, Flug, kosmische Ausdauer",
+  "bio": "Eine der stärksten Figuren des MCU — und eine der einsamsten. Nach The Marvels sitzt ihre Freundin Monica in einem fremden Universum fest: direkte X-Men-Brücke.",
+  "rel": [
+   [
+    "kamala",
+    "familie",
+    "gegenseitige Bewunderung"
+   ],
+   [
+    "thanos",
+    "feind",
+    "rammte sein Schiff"
+   ]
+  ],
+  "films": [
+   "cm",
+   "eg",
+   "mv"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "tchalla",
+  "n": "Black Panther",
+  "a": "T'Challa",
+  "act": "Chadwick Boseman",
+  "uni": "MCU († 2022 in memoriam)",
+  "first": "Civil War (2016)",
+  "pow": "Herzkraut, Vibranium-Suit, Königswürde",
+  "bio": "König von Wakanda, Herz einer Kino-Ära. Nach Chadwick Bosemans Tod wurde die Rolle nicht neu besetzt — sein Vermächtnis trägt Shuri weiter.",
+  "rel": [
+   [
+    "shuri",
+    "familie",
+    "Geschwister"
+   ],
+   [
+    "bucky",
+    "komplex",
+    "jagte ihn, vergab ihm"
+   ],
+   [
+    "storm",
+    "liebe",
+    "Comic-Ehe, nie im Film"
+   ]
+  ],
+  "films": [
+   "cw",
+   "bp1",
+   "iw"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "namor",
+  "n": "Namor",
+  "a": "K'uk'ulkan",
+  "act": "Tenoch Huerta Mejía",
+  "uni": "MCU · Talokan",
+  "first": "Wakanda Forever (2022)",
+  "pow": "Mutant: Flug, Amphibien-Physis, Jahrhunderte alt",
+  "bio": "Herrscher des Unterwasserreichs Talokan und der erste, der sich im MCU selbst 'Mutant' nannte. In Doomsday zurück — auf welcher Seite, ist offen.",
+  "rel": [
+   [
+    "shuri",
+    "komplex",
+    "Krieg, dann Respekt"
+   ],
+   [
+    "doom",
+    "komplex",
+    "zwei Monarchen, ein Problem"
+   ]
+  ],
+  "films": [
+   "bpwf",
+   "doomsday"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "redguardian",
+  "n": "Red Guardian",
+  "a": "Alexei Shostakov",
+  "act": "David Harbour",
+  "uni": "MCU · New Avengers",
+  "first": "Black Widow (2021)",
+  "pow": "Sowjet-Supersoldat, unerschütterliches Selbstbild",
+  "bio": "Russlands Antwort auf Captain America — laut, stolz, herzlicher als er zugibt. Der Ziehvater, der Yelenas New Avengers zusammenhält.",
+  "rel": [
+   [
+    "yelena",
+    "familie",
+    "Ziehvater"
+   ],
+   [
+    "natasha",
+    "familie",
+    "Ziehtochter"
+   ]
+  ],
+  "films": [
+   "bw",
+   "tb",
+   "doomsday"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "usagent",
+  "n": "U.S. Agent",
+  "a": "John Walker",
+  "act": "Wyatt Russell",
+  "uni": "MCU · New Avengers",
+  "first": "Falcon & Winter Soldier (2021)",
+  "pow": "Serum-Soldat mit Kontrollproblem",
+  "bio": "Der Captain America, der scheiterte — und als U.S. Agent eine zweite Chance bekam. Der wandelnde Beweis, dass das Schild mehr wiegt, als es aussieht.",
+  "rel": [
+   [
+    "sam",
+    "komplex",
+    "das Schild zwischen ihnen"
+   ],
+   [
+    "valentina",
+    "komplex",
+    "ihr erster Rekrut"
+   ]
+  ],
+  "films": [
+   "fws",
+   "tb",
+   "doomsday"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "valentina",
+  "n": "Valentina",
+  "a": "Contessa Val de Fontaine",
+  "act": "Julia Louis-Dreyfus",
+  "uni": "MCU · CIA-Direktorin",
+  "first": "Falcon & Winter Soldier (2021)",
+  "pow": "Intrigen, Budgets, keinerlei Skrupel",
+  "bio": "Sammelte jahrelang im Hintergrund Antihelden ein und schuf mit dem Sentry-Projekt fast den Weltuntergang. Nick Furys dunkles Spiegelbild.",
+  "rel": [
+   [
+    "yelena",
+    "komplex",
+    "Auftraggeberin wider Willen"
+   ],
+   [
+    "sentry",
+    "komplex",
+    "hat ihn erschaffen"
+   ],
+   [
+    "usagent",
+    "komplex",
+    "rekrutierte ihn"
+   ]
+  ],
+  "films": [
+   "fws",
+   "bw",
+   "tb"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "wiccan",
+  "n": "Wiccan",
+  "a": "Billy Maximoff / Kaplan",
+  "act": "Joe Locke",
+  "uni": "MCU · Young Avenger",
+  "first": "Agatha All Along (2024)",
+  "pow": "Realitäts- und Chaosmagie — Wandas Erbe",
+  "bio": "Wandas totgeglaubter Sohn, wiedergeboren im Körper von Billy Kaplan. Einer der mächtigsten Magier der neuen Generation — die Young Avengers stehen praktisch bereit.",
+  "rel": [
+   [
+    "wanda",
+    "familie",
+    "Mutter"
+   ],
+   [
+    "vision",
+    "familie",
+    "Vater (irgendwie)"
+   ],
+   [
+    "agatha",
+    "komplex",
+    "Hexenpfad-Duo"
+   ]
+  ],
+  "films": [
+   "wv",
+   "ag"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "agatha",
+  "n": "Agatha Harkness",
+  "a": "die Hexe von Westview",
+  "act": "Kathryn Hahn",
+  "uni": "MCU · Geist",
+  "first": "WandaVision (2021)",
+  "pow": "Jahrhundertealte Hexe, stiehlt fremde Magie",
+  "bio": "Stahl 1693 ihrem Coven die Magie und Wanda fast die Show. Endete auf dem Hexenpfad als Geist an Billys Seite — 'Agatha All Along' wurde trotzdem ein Grammy-Meme.",
+  "rel": [
+   [
+    "wanda",
+    "feind",
+    "wollte ihre Magie"
+   ],
+   [
+    "wiccan",
+    "komplex",
+    "Reisegefährte wider Willen"
+   ]
+  ],
+  "films": [
+   "wv",
+   "ag"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "galactus",
+  "n": "Galactus",
+  "a": "der Weltenverschlinger",
+  "act": "Ralph Ineson",
+  "uni": "MCU · Erde-828-Kosmos",
+  "first": "First Steps (2025)",
+  "pow": "Verschlingt Planeten. Ganze Planeten.",
+  "bio": "Älter als das Universum, ewig hungrig. Wollte Franklin als Nachfolger und wurde von Sue Storm durch ein Portal geschoben — gedemütigt, nicht besiegt.",
+  "rel": [
+   [
+    "franklin",
+    "komplex",
+    "wollte ihn als Erben"
+   ],
+   [
+    "reed",
+    "feind",
+    "ausgetrickst"
+   ],
+   [
+    "sue",
+    "feind",
+    "von ihr besiegt"
+   ]
+  ],
+  "films": [
+   "f4"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "mephisto",
+  "n": "Mephisto",
+  "a": "der Deal-Macher",
+  "act": "Sacha Baron Cohen",
+  "uni": "MCU · frisch etabliert",
+  "first": "Ironheart (2025)",
+  "pow": "Marvels Teufel: Verträge, Versuchung, Dimension der Qual",
+  "bio": "Seit WandaVision von Fans in jede Theorie geschrieben — seit Ironheart real. Sein erster Deal läuft bereits; wer sonst noch unterschrieben hat, weiß niemand.",
+  "rel": [
+   [
+    "doom",
+    "komplex",
+    "zwei Teufel, eine Bühne?"
+   ],
+   [
+    "wanda",
+    "komplex",
+    "ewiger Theorie-Verdächtiger"
+   ]
+  ],
+  "films": [
+   "ih"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "miles",
+  "n": "Spider-Man",
+  "a": "Miles Morales",
+  "act": "Shameik Moore (Stimme)",
+  "uni": "Sony · Spider-Verse (Erde-1610)",
+  "first": "Into the Spider-Verse (2018)",
+  "pow": "Spinnenkräfte plus Venom-Blast und Unsichtbarkeit",
+  "bio": "Der Spider-Man, der bewies, dass jeder die Maske tragen kann. Steht nach Across the Spider-Verse gegen die gesamte Spider-Society — Teil 3 lässt auf sich warten.",
+  "rel": [
+   [
+    "spidey",
+    "komplex",
+    "anderer Peter, andere Welt"
+   ]
+  ],
+  "films": [
+   "sv1",
+   "sv2"
+  ],
+  "u": "sony"
+ },
+ {
+  "id": "cyclops",
+  "n": "Cyclops",
+  "a": "Scott Summers",
+  "act": "James Marsden",
+  "uni": "Fox → Doomsday",
+  "first": "X-Men (2000)",
+  "pow": "Optische Energiestrahlen, geborener Feldkommandant",
+  "bio": "Xaviers erster Schüler und ewig unterschätzter Anführer — in den Fox-Filmen zweimal unwürdig entsorgt. Marsdens Doomsday-Rückkehr ist späte Gerechtigkeit.",
+  "rel": [
+   [
+    "jean",
+    "liebe",
+    "die große Liebe"
+   ],
+   [
+    "xavier",
+    "verbuendet",
+    "erster Schüler"
+   ],
+   [
+    "wolverine",
+    "komplex",
+    "der Rivale"
+   ]
+  ],
+  "films": [
+   "xmen1",
+   "x2",
+   "x3",
+   "doomsday"
+  ],
+  "u": "fox"
+ },
+ {
+  "id": "jean",
+  "n": "Jean Grey",
+  "a": "Phoenix",
+  "act": "Famke Janssen · Sophie Turner",
+  "uni": "Fox",
+  "first": "X-Men (2000)",
+  "pow": "Telepathie & Telekinese — Omega-Level mit Phoenix-Problem",
+  "bio": "Zweimal verfilmt, zweimal von der Phoenix-Force verschlungen. Die mächtigste und tragischste Figur der X-Men-Saga.",
+  "rel": [
+   [
+    "cyclops",
+    "liebe",
+    "die große Liebe"
+   ],
+   [
+    "wolverine",
+    "komplex",
+    "das Dreieck"
+   ],
+   [
+    "xavier",
+    "komplex",
+    "hielt Phoenix im Käfig"
+   ]
+  ],
+  "films": [
+   "xmen1",
+   "x2",
+   "x3",
+   "darkphoenix"
+  ],
+  "u": "fox"
+ },
+ {
+  "id": "storm",
+  "n": "Storm",
+  "a": "Ororo Munroe",
+  "act": "Halle Berry",
+  "uni": "Fox",
+  "first": "X-Men (2000)",
+  "pow": "Kontrolle über das Wetter — Omega-Level",
+  "bio": "Wettergöttin, Lehrerin, spätere Schulleiterin. In den Comics zeitweise Königin von Wakanda — eine Verbindung, die das Kino nie erzählt hat.",
+  "rel": [
+   [
+    "xavier",
+    "verbuendet",
+    "Vertraute"
+   ],
+   [
+    "tchalla",
+    "liebe",
+    "Comic-Ehe, nie im Film"
+   ]
+  ],
+  "films": [
+   "xmen1",
+   "x2",
+   "x3",
+   "apoc"
+  ],
+  "u": "fox"
+ },
+ {
+  "id": "beast",
+  "n": "Beast",
+  "a": "Hank McCoy",
+  "act": "Kelsey Grammer · Nicholas Hoult",
+  "uni": "Fox → MCU",
+  "first": "X2 (Cameo) · X3 (2006)",
+  "pow": "Genie-Intellekt in Raubtier-Gestalt",
+  "bio": "Wissenschaftler, Diplomat, blaues Fell. Grammers Überraschungs-Cameo in The Marvels machte ihn zur ersten Fox-Figur im MCU-Kanon — Doomsday folgt.",
+  "rel": [
+   [
+    "xavier",
+    "verbuendet",
+    "Weggefährte seit Jahrzehnten"
+   ],
+   [
+    "carol",
+    "komplex",
+    "hat ihre Freundin im Labor"
+   ]
+  ],
+  "films": [
+   "x3",
+   "firstclass",
+   "mv",
+   "doomsday"
+  ],
+  "u": "fox"
+ },
+ {
+  "id": "mystique",
+  "n": "Mystique",
+  "a": "Raven Darkhölme",
+  "act": "Rebecca Romijn · Jennifer Lawrence",
+  "uni": "Fox → Doomsday",
+  "first": "X-Men (2000)",
+  "pow": "Perfekte Gestaltwandlerin, über 100 Jahre alt",
+  "bio": "Magnetos tödlichste Waffe und Xaviers verlorene Ziehschwester — je nach Zeitlinie. Romijns Rückkehr in Doomsday bringt die ikonische Version zurück.",
+  "rel": [
+   [
+    "magneto",
+    "verbuendet",
+    "seine rechte Hand"
+   ],
+   [
+    "xavier",
+    "familie",
+    "Ziehgeschwister (First Class)"
+   ],
+   [
+    "wolverine",
+    "feind",
+    "alte Rechnungen"
+   ]
+  ],
+  "films": [
+   "xmen1",
+   "x2",
+   "dofp",
+   "doomsday"
+  ],
+  "u": "fox"
+ },
+ {
+  "id": "gambit",
+  "n": "Gambit",
+  "a": "Remy LeBeau",
+  "act": "Channing Tatum",
+  "uni": "Fox-Void → Doomsday",
+  "first": "Deadpool & Wolverine (2024)",
+  "pow": "Auflädt Objekte mit kinetischer Energie — Karten bevorzugt",
+  "bio": "Zwanzig Jahre Development Hell, dann das Debüt im Void: Tatums Gambit wurde der Publikumsliebling von D&W — und bekommt in Doomsday endlich seine Bühne.",
+  "rel": [
+   [
+    "wolverine",
+    "verbuendet",
+    "Void-Widerstand"
+   ],
+   [
+    "deadpool",
+    "verbuendet",
+    "Void-Widerstand"
+   ]
+  ],
+  "films": [
+   "dw",
+   "doomsday"
+  ],
+  "u": "fox"
+ },
+ {
+  "id": "scott",
+  "n": "Ant-Man",
+  "a": "Scott Lang",
+  "act": "Paul Rudd",
+  "uni": "MCU · aktiv",
+  "first": "Ant-Man (2015)",
+  "pow": "Schrumpfen, Wachsen, Ameisen-Kommando",
+  "bio": "Der Ex-Dieb, dessen Quantenreich-Zufall Endgame möglich machte — und der Kang als Erster besiegte. Der unterschätzteste Lebenslauf des MCU, und er steht im Doomsday-Cast.",
+  "rel": [
+   [
+    "cassie",
+    "familie",
+    "Tochter"
+   ],
+   [
+    "kang",
+    "feind",
+    "Quantumania-Duell"
+   ],
+   [
+    "tony",
+    "verbuendet",
+    "Zeitreise-Kollegen"
+   ]
+  ],
+  "films": [
+   "antman1",
+   "cw",
+   "antman2",
+   "eg",
+   "qm",
+   "doomsday"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "cassie",
+  "n": "Cassie Lang",
+  "a": "Stature in spe",
+  "act": "Kathryn Newton",
+  "uni": "MCU · Young Avenger",
+  "first": "Ant-Man (2015)",
+  "pow": "Eigener Pym-Anzug, Wissenschafts-Talent",
+  "bio": "Wuchs zwischen Snap und Blip fünf Jahre ohne Vater auf und baute heimlich Quantensatelliten. In Doomsday dabei — die Young-Avengers-Bank füllt sich.",
+  "rel": [
+   [
+    "scott",
+    "familie",
+    "Vater"
+   ],
+   [
+    "kang",
+    "feind",
+    "schlug zurück"
+   ],
+   [
+    "kate",
+    "verbuendet",
+    "künftige Young Avengers"
+   ]
+  ],
+  "films": [
+   "antman1",
+   "eg",
+   "qm",
+   "doomsday"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "quill",
+  "n": "Star-Lord",
+  "a": "Peter Quill",
+  "act": "Chris Pratt",
+  "uni": "MCU · zurück auf der Erde",
+  "first": "Guardians of the Galaxy (2014)",
+  "pow": "Halbcelestial a. D., Blaster, makelloser Musikgeschmack",
+  "bio": "Führte die Guardians durch drei Filme und einen fatalen Wutanfall auf Titan. Lebt seit Vol. 3 wieder auf der Erde — 'Star-Lord kehrt zurück' versprach der Abspann.",
+  "rel": [
+   [
+    "rocket",
+    "verbuendet",
+    "Guardians-Familie"
+   ],
+   [
+    "thanos",
+    "feind",
+    "vermasselte den Plan auf Titan"
+   ]
+  ],
+  "films": [
+   "gotg1",
+   "gotg2",
+   "iw",
+   "eg",
+   "g3"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "rocket",
+  "n": "Rocket",
+  "a": "Rocket Raccoon",
+  "act": "Bradley Cooper (Stimme)",
+  "uni": "MCU · Guardians-Captain",
+  "first": "Guardians of the Galaxy (2014)",
+  "pow": "Genie für Waffen, Schlösser und Sarkasmus",
+  "bio": "Vom Versuchstier zum Captain der Guardians — Vol. 3 erzählte seine Geschichte und brach damit ein ganzes Kino-Publikum. Kein Waschbär.",
+  "rel": [
+   [
+    "quill",
+    "verbuendet",
+    "Guardians-Familie"
+   ],
+   [
+    "thor",
+    "verbuendet",
+    "'der Hase'"
+   ]
+  ],
+  "films": [
+   "gotg1",
+   "iw",
+   "eg",
+   "g3",
+   "ghs"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "nick",
+  "n": "Nick Fury",
+  "a": "der Direktor",
+  "act": "Samuel L. Jackson",
+  "uni": "MCU · im Orbit",
+  "first": "Iron Man (2008, Post-Credits)",
+  "pow": "Spionage, Paranoia, immer einen Plan B",
+  "bio": "Der Mann, der die Avengers-Initiative erfand — in der allerersten Post-Credit-Szene des MCU. Nach Secret Invasion angeschlagen, aber niemand glaubt, dass er fertig ist.",
+  "rel": [
+   [
+    "carol",
+    "verbuendet",
+    "Pager-Freunde seit 1995"
+   ],
+   [
+    "natasha",
+    "verbuendet",
+    "engste Agentin"
+   ],
+   [
+    "valentina",
+    "komplex",
+    "sein dunkles Spiegelbild"
+   ]
+  ],
+  "films": [
+   "iron1",
+   "av1",
+   "cm",
+   "si",
+   "mv"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "monica",
+  "n": "Monica Rambeau",
+  "a": "Photon",
+  "act": "Teyonah Parris",
+  "uni": "MCU · im falschen Universum",
+  "first": "Captain Marvel (1995) · WandaVision",
+  "pow": "Sieht und absorbiert das gesamte Energiespektrum",
+  "bio": "Flog durch Wandas Hex und wurde übermenschlich. Opferte sich in The Marvels — und wachte in einem X-Men-Universum auf, neben Beast. Die lebende Brücke zu Doomsday.",
+  "rel": [
+   [
+    "carol",
+    "komplex",
+    "Tante Carol, lange Funkstille"
+   ],
+   [
+    "kamala",
+    "verbuendet",
+    "Marvels-Trio"
+   ],
+   [
+    "beast",
+    "komplex",
+    "wachte in seinem Labor auf"
+   ]
+  ],
+  "films": [
+   "cm",
+   "wv",
+   "mv"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "kate",
+  "n": "Kate Bishop",
+  "a": "Hawkeye II",
+  "act": "Hailee Steinfeld",
+  "uni": "MCU · Young Avenger",
+  "first": "Hawkeye (2021)",
+  "pow": "Beste Bogenschützin ihrer Generation, chaotische Energie",
+  "bio": "Rettete Clints Weihnachten und erbte den Hawkeye-Mantel. Kamala hat sie bereits rekrutiert — die Young Avengers sind längst im Aufbau.",
+  "rel": [
+   [
+    "clint",
+    "familie",
+    "Mentor wider Willen"
+   ],
+   [
+    "yelena",
+    "verbuendet",
+    "beste Feindinnen"
+   ],
+   [
+    "kingpin",
+    "feind",
+    "Weihnachts-Showdown"
+   ]
+  ],
+  "films": [
+   "hk"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "america",
+  "n": "America Chavez",
+  "a": "Miss America",
+  "act": "Xochitl Gomez",
+  "uni": "MCU · Kamar-Taj",
+  "first": "Multiverse of Madness (2022)",
+  "pow": "Einzige Person im Multiversum, die physisch zwischen Universen reisen kann",
+  "bio": "Wurde von Wanda durchs halbe Multiversum gejagt, weil ihre Kraft nicht kopierbar ist. Strategisch die vielleicht wertvollste Figur der ganzen Saga — Doom dürfte das wissen.",
+  "rel": [
+   [
+    "strange",
+    "verbuendet",
+    "Reise-Duo"
+   ],
+   [
+    "wanda",
+    "feind",
+    "von ihr gejagt"
+   ]
+  ],
+  "films": [
+   "mom"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "mbaku",
+  "n": "M'Baku",
+  "a": "Lord der Jabari",
+  "act": "Winston Duke",
+  "uni": "MCU · Wakanda",
+  "first": "Black Panther (2018)",
+  "pow": "Jabari-Kampfkunst, Charisma, Prinzipien",
+  "bio": "Vom Herausforderer zum moralischen Kompass Wakandas. Am Ende von Wakanda Forever griff er nach dem Thron — in Doomsday steht er für Wakandas Härte.",
+  "rel": [
+   [
+    "shuri",
+    "verbuendet",
+    "loyaler Herausforderer"
+   ],
+   [
+    "tchalla",
+    "verbuendet",
+    "vom Rivalen zum Bruder"
+   ]
+  ],
+  "films": [
+   "bp1",
+   "iw",
+   "bpwf",
+   "doomsday"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "daredevil",
+  "n": "Daredevil",
+  "a": "Matt Murdock",
+  "act": "Charlie Cox",
+  "uni": "MCU · Hell's Kitchen",
+  "first": "Netflix (2015) · MCU: NWH (2021)",
+  "pow": "Radar-Sinne, Anwalt bei Tag, Teufel bei Nacht",
+  "bio": "Der blinde Anwalt, der nachts austeilt, was das Gesetz nicht schafft. Born Again brachte ihn zurück in den Ring gegen Bürgermeister Fisk — Street-Level-Marvel in Bestform.",
+  "rel": [
+   [
+    "kingpin",
+    "feind",
+    "der ewige Tanz"
+   ],
+   [
+    "punisher",
+    "komplex",
+    "Moral-Debatte mit Fäusten"
+   ],
+   [
+    "spidey",
+    "verbuendet",
+    "Anwalt der Wahl"
+   ]
+  ],
+  "films": [
+   "nwh",
+   "shk",
+   "ec",
+   "dba"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "kingpin",
+  "n": "Kingpin",
+  "a": "Wilson Fisk",
+  "act": "Vincent D'Onofrio",
+  "uni": "MCU · Bürgermeister von NYC",
+  "first": "Netflix (2015) · MCU: Hawkeye",
+  "pow": "Brutale Kraft, Imperium, politische Macht",
+  "bio": "Vom Unterwelt-König zum Bürgermeister von New York — Fisk hat den legalen Weg zur Macht gefunden und ist gefährlicher denn je.",
+  "rel": [
+   [
+    "daredevil",
+    "feind",
+    "der ewige Tanz"
+   ],
+   [
+    "kate",
+    "feind",
+    "Weihnachts-Showdown"
+   ]
+  ],
+  "films": [
+   "hk",
+   "ec",
+   "dba"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "punisher",
+  "n": "Punisher",
+  "a": "Frank Castle",
+  "act": "Jon Bernthal",
+  "uni": "MCU · Street-Level",
+  "first": "Daredevil S2 (2016)",
+  "pow": "Ein-Mann-Krieg: Taktik, Waffen, kein Zurück",
+  "bio": "Marvels umstrittenste Figur: kein Held, keine Gnade. Nach Born Again mischt er jetzt in Brand New Day Peters Nachbarschaft auf — Moralkonflikt garantiert.",
+  "rel": [
+   [
+    "daredevil",
+    "komplex",
+    "Moral-Debatte mit Fäusten"
+   ],
+   [
+    "spidey",
+    "komplex",
+    "zwei Welten, eine Stadt"
+   ]
+  ],
+  "films": [
+   "dba",
+   "bnd"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "johnny",
+  "n": "Human Torch",
+  "a": "Johnny Storm",
+  "act": "Joseph Quinn",
+  "uni": "MCU · Erde-828",
+  "first": "First Steps (2025)",
+  "pow": "Flammenkörper, Flug — 'Flame on!'",
+  "bio": "Der Heißsporn der Fantastic Four, deutlich nachdenklicher als seine Fox-Vorgänger. Kurios: Sein Vorgänger im Blauen war Chris Evans — dessen Doomsday-Rolle noch geheim ist.",
+  "rel": [
+   [
+    "sue",
+    "familie",
+    "Geschwister"
+   ],
+   [
+    "ben",
+    "verbuendet",
+    "ewiges Necken"
+   ],
+   [
+    "reed",
+    "familie",
+    "Schwager"
+   ]
+  ],
+  "films": [
+   "f4",
+   "doomsday"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "ben",
+  "n": "The Thing",
+  "a": "Ben Grimm",
+  "act": "Ebon Moss-Bachrach",
+  "uni": "MCU · Erde-828",
+  "first": "First Steps (2025)",
+  "pow": "Lebender Fels, 'It's clobberin' time!'",
+  "bio": "Pilot, bester Freund, Fels in jeder Brandung — wörtlich. Das Herz der Fantastic Four und ihre stärkste Faust, wenn Doom vor der Tür steht.",
+  "rel": [
+   [
+    "reed",
+    "verbuendet",
+    "ältester Freund"
+   ],
+   [
+    "johnny",
+    "verbuendet",
+    "ewiges Necken"
+   ]
+  ],
+  "films": [
+   "f4",
+   "doomsday"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "nightcrawler",
+  "n": "Nightcrawler",
+  "a": "Kurt Wagner",
+  "act": "Alan Cumming",
+  "uni": "Fox → Doomsday",
+  "first": "X2 (2003)",
+  "pow": "Teleportation — BAMF",
+  "bio": "Der fromme Teleporter mit dem Teufels-Look; seine Weißes-Haus-Szene in X2 ist bis heute eine der besten X-Men-Sequenzen. Cumming kehrt nach 23 Jahren für Doomsday zurück.",
+  "rel": [
+   [
+    "xavier",
+    "verbuendet",
+    "fand bei ihm Heimat"
+   ],
+   [
+    "mystique",
+    "familie",
+    "seine Mutter (Comics)"
+   ]
+  ],
+  "films": [
+   "x2",
+   "apoc",
+   "doomsday"
+  ],
+  "u": "fox"
+ },
+ {
+  "id": "cassandra",
+  "n": "Cassandra Nova",
+  "a": "Xaviers Schatten",
+  "act": "Emma Corrin",
+  "uni": "Fox-Void",
+  "first": "Deadpool & Wolverine (2024)",
+  "pow": "Telepathie auf Xavier-Niveau, ohne dessen Gewissen",
+  "bio": "Xaviers böse Zwillingsschwester, Herrscherin des Void. Steckte ihre Finger buchstäblich in fremde Köpfe — und könnte im Multiversum-Chaos jederzeit wieder auftauchen.",
+  "rel": [
+   [
+    "xavier",
+    "familie",
+    "Zwillingsschwester"
+   ],
+   [
+    "deadpool",
+    "feind",
+    "Void-Showdown"
+   ],
+   [
+    "wolverine",
+    "feind",
+    "Void-Showdown"
+   ]
+  ],
+  "films": [
+   "dw"
+  ],
+  "u": "fox"
+ },
+ {
+  "id": "gwen",
+  "n": "Spider-Gwen",
+  "a": "Gwen Stacy (Erde-65)",
+  "act": "Hailee Steinfeld (Stimme)",
+  "uni": "Sony · Spider-Verse",
+  "first": "Into the Spider-Verse (2018)",
+  "pow": "Spinnenkräfte, Drums, Bandprobleme",
+  "bio": "Die Gwen, die gebissen wurde, während ihr Peter starb. Gründete am Ende von Across the Spider-Verse ihre eigene Truppe, um Miles zu retten.",
+  "rel": [
+   [
+    "miles",
+    "liebe",
+    "über Dimensionen hinweg"
+   ],
+   [
+    "spidey",
+    "komplex",
+    "andere Gwen, andere Welt"
+   ]
+  ],
+  "films": [
+   "sv1",
+   "sv2"
+  ],
+  "u": "sony"
+ },
+ {
+  "id": "goblin",
+  "n": "Green Goblin",
+  "a": "Norman Osborn",
+  "act": "Willem Dafoe",
+  "uni": "Sony (Raimi) → MCU-Besuch",
+  "first": "Spider-Man (2002)",
+  "pow": "Goblin-Serum, Gleiter, Kürbisbomben, zwei Gesichter",
+  "bio": "Der erste große Kino-Bösewicht des Genres — und 19 Jahre später in No Way Home noch furchteinflößender: Er nahm Peter dort Tante May. Dafoe bestand auf eigene Stunts.",
+  "rel": [
+   [
+    "spidey",
+    "feind",
+    "nahm ihm Tante May"
+   ],
+   [
+    "strange",
+    "komplex",
+    "sein Zauber holte ihn"
+   ]
+  ],
+  "films": [
+   "raimi1",
+   "nwh"
+  ],
+  "u": "sony"
+ },
+ {
+  "id": "hope",
+  "n": "The Wasp",
+  "a": "Hope van Dyne",
+  "act": "Evangeline Lilly",
+  "uni": "MCU · aktiv",
+  "first": "Ant-Man (2015)",
+  "pow": "Pym-Anzug mit Flügeln und Blastern — 'die es von Anfang an hätte machen sollen'",
+  "bio": "Trägerin des Wasp-Anzugs und die kompetente Hälfte des Ant-Man-Duos. Rettete ihre Mutter aus dem Quantenreich und stand Kang gegenüber.",
+  "rel": [
+   [
+    "scott",
+    "liebe",
+    "Partner in allem"
+   ],
+   [
+    "hank",
+    "familie",
+    "Vater"
+   ],
+   [
+    "janet",
+    "familie",
+    "Mutter"
+   ]
+  ],
+  "films": [
+   "antman1",
+   "antman2",
+   "eg",
+   "qm"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "hank",
+  "n": "Hank Pym",
+  "a": "der erste Ant-Man",
+  "act": "Michael Douglas",
+  "uni": "MCU",
+  "first": "Ant-Man (2015)",
+  "pow": "Erfinder der Pym-Partikel",
+  "bio": "Der Original-Ant-Man des Kalten Krieges, dessen Partikel Endgames Zeitreisen erst möglich machten. Misstrauisch gegenüber allem, was Stark heißt.",
+  "rel": [
+   [
+    "hope",
+    "familie",
+    "Tochter"
+   ],
+   [
+    "janet",
+    "liebe",
+    "30 Jahre gesucht"
+   ],
+   [
+    "scott",
+    "komplex",
+    "vom Einbrecher zum Schwiegersohn"
+   ]
+  ],
+  "films": [
+   "antman1",
+   "antman2",
+   "qm"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "janet",
+  "n": "Janet van Dyne",
+  "a": "die erste Wasp",
+  "act": "Michelle Pfeiffer",
+  "uni": "MCU",
+  "first": "Ant-Man and the Wasp (2018)",
+  "pow": "30 Jahre Quantenreich-Erfahrung",
+  "bio": "Überlebte drei Jahrzehnte im Quantenreich — und verschwieg allen, dass sie dort Kang kannte. Ihr Geheimnis trat Quantumania los.",
+  "rel": [
+   [
+    "hank",
+    "liebe",
+    "wieder vereint"
+   ],
+   [
+    "kang",
+    "feind",
+    "kannte ihn im Exil"
+   ],
+   [
+    "hope",
+    "familie",
+    "Tochter"
+   ]
+  ],
+  "films": [
+   "antman2",
+   "eg",
+   "qm"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "gamora",
+  "n": "Gamora",
+  "a": "die tödlichste Frau der Galaxis",
+  "act": "Zoe Saldaña",
+  "uni": "MCU · andere Zeitlinie",
+  "first": "Guardians of the Galaxy (2014)",
+  "pow": "Perfekte Kämpferin, Thanos' Ausbildung",
+  "bio": "Von Thanos für den Seelenstein geopfert — die Gamora von heute ist eine Variante aus 2014, die ihre eigene Liebesgeschichte nie erlebt hat. Multiversum im Kleinen.",
+  "rel": [
+   [
+    "thanos",
+    "familie",
+    "Adoptivvater und Mörder"
+   ],
+   [
+    "quill",
+    "liebe",
+    "in einer anderen Zeitlinie"
+   ],
+   [
+    "nebula",
+    "familie",
+    "Schwestern"
+   ]
+  ],
+  "films": [
+   "gotg1",
+   "iw",
+   "eg",
+   "g3"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "nebula",
+  "n": "Nebula",
+  "a": "die Überlebende",
+  "act": "Karen Gillan",
+  "uni": "MCU · Knowhere",
+  "first": "Guardians of the Galaxy (2014)",
+  "pow": "Kybernetischer Körper, unzerstörbarer Wille",
+  "bio": "Von Thanos Stück für Stück durch Maschinen ersetzt, von den Guardians Stück für Stück zusammengesetzt. Leitet heute Knowhere.",
+  "rel": [
+   [
+    "gamora",
+    "familie",
+    "Schwestern"
+   ],
+   [
+    "thanos",
+    "familie",
+    "entkam seinem Schatten"
+   ],
+   [
+    "rocket",
+    "verbuendet",
+    "raue Freundschaft"
+   ]
+  ],
+  "films": [
+   "gotg1",
+   "iw",
+   "eg",
+   "g3"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "drax",
+  "n": "Drax",
+  "a": "der Zerstörer",
+  "act": "Dave Bautista",
+  "uni": "MCU · im Ruhestand",
+  "first": "Guardians of the Galaxy (2014)",
+  "pow": "Unbewegliche Kraft, absolut wörtliches Denken",
+  "bio": "Wollte Thanos für seine Familie töten, fand stattdessen eine neue. Steht am Ende von Vol. 3 als das da, was er immer sein wollte: ein Vater.",
+  "rel": [
+   [
+    "thanos",
+    "feind",
+    "der Grund seines Kreuzzugs"
+   ],
+   [
+    "mantis",
+    "verbuendet",
+    "das beste Duo"
+   ]
+  ],
+  "films": [
+   "gotg1",
+   "iw",
+   "g3",
+   "ghs"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "mantis",
+  "n": "Mantis",
+  "a": "die Empathin",
+  "act": "Pom Klementieff",
+  "uni": "MCU · eigene Wege",
+  "first": "Guardians Vol. 2 (2017)",
+  "pow": "Empathie — fühlt und beeinflusst Gefühle",
+  "bio": "Quills Halbschwester (Weihnachts-Enthüllung!) und die heimliche Retterin auf Titan: Ihr 'Schlaf!' hätte fast das Universum gerettet.",
+  "rel": [
+   [
+    "quill",
+    "familie",
+    "Halbgeschwister"
+   ],
+   [
+    "drax",
+    "verbuendet",
+    "das beste Duo"
+   ]
+  ],
+  "films": [
+   "gotg2",
+   "iw",
+   "g3",
+   "ghs"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "groot",
+  "n": "Groot",
+  "a": "I am Groot",
+  "act": "Vin Diesel (Stimme)",
+  "uni": "MCU · Guardians",
+  "first": "Guardians of the Galaxy (2014)",
+  "pow": "Flora colossus: wächst, schlägt, opfert sich, wächst nach",
+  "bio": "Starb als Baum, kehrte als Zweig zurück, wuchs zum Koloss. Sagt einen Satz und meint damit alles — am Ende von Vol. 3 sogar hörbar: 'I love you guys.'",
+  "rel": [
+   [
+    "rocket",
+    "familie",
+    "unzertrennlich"
+   ]
+  ],
+  "films": [
+   "gotg1",
+   "iw",
+   "eg",
+   "g3"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "yondu",
+  "n": "Yondu",
+  "a": "Yondu Udonta",
+  "act": "Michael Rooker",
+  "uni": "MCU († 2017)",
+  "first": "Guardians of the Galaxy (2014)",
+  "pow": "Yaka-Pfeil — ein Pfiff, hundert Gegner",
+  "bio": "Der Ravager, der Quill großzog, statt ihn abzuliefern. 'He may have been your father, boy, but he wasn't your daddy' — einer der besten Abschiede des MCU.",
+  "rel": [
+   [
+    "quill",
+    "familie",
+    "der echte Daddy"
+   ],
+   [
+    "rocket",
+    "verbuendet",
+    "verstand ihn als Einziger"
+   ]
+  ],
+  "films": [
+   "gotg1",
+   "gotg2"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "hela",
+  "n": "Hela",
+  "a": "Göttin des Todes",
+  "act": "Cate Blanchett",
+  "uni": "MCU († mit Asgard)",
+  "first": "Thor: Ragnarok (2017)",
+  "pow": "Unbegrenzte Klingen, tötete Asgards Armeen allein",
+  "bio": "Odins verheimlichte Erstgeborene, die Mjölnir mit einer Hand zerdrückte. Ging mit Asgard unter — Ragnarök war ihr Preis.",
+  "rel": [
+   [
+    "thor",
+    "familie",
+    "große Schwester"
+   ],
+   [
+    "loki",
+    "familie",
+    "Familientradition: Überraschungsgeschwister"
+   ]
+  ],
+  "films": [
+   "thor3"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "valkyrie",
+  "n": "Valkyrie",
+  "a": "König von Neu-Asgard",
+  "act": "Tessa Thompson",
+  "uni": "MCU · Neu-Asgard",
+  "first": "Thor: Ragnarok (2017)",
+  "pow": "Asgardische Kriegerin, Pegasus inklusive",
+  "bio": "Letzte der Walküren, versoffen auf Sakaar gestrandet, heute König von Neu-Asgard. Übernahm den Thron, weil Thor flog — im Doppelsinn.",
+  "rel": [
+   [
+    "thor",
+    "verbuendet",
+    "übergab ihr den Thron"
+   ],
+   [
+    "hela",
+    "feind",
+    "überlebte ihr Massaker"
+   ]
+  ],
+  "films": [
+   "thor3",
+   "eg",
+   "tlt",
+   "mv"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "gorr",
+  "n": "Gorr",
+  "a": "der Götterschlächter",
+  "act": "Christian Bale",
+  "uni": "MCU († 2022)",
+  "first": "Love and Thunder (2022)",
+  "pow": "Die Nekroschwert-Klinge, die Götter tötet",
+  "bio": "Verlor Tochter und Glauben, nahm die Klinge und machte Jagd auf alle Götter. Wünschte sich am Ende keine Rache, sondern ihr Leben zurück — Thor zieht Love heute groß.",
+  "rel": [
+   [
+    "thor",
+    "feind",
+    "und irgendwie Mitvater"
+   ]
+  ],
+  "films": [
+   "tlt"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "peggy",
+  "n": "Peggy Carter",
+  "a": "Agent Carter / Captain Carter",
+  "act": "Hayley Atwell",
+  "uni": "MCU · zwei Leben",
+  "first": "The First Avenger (2011)",
+  "pow": "Gründete S.H.I.E.L.D.; als Variante: Supersoldatin",
+  "bio": "Steves große Liebe und Gründerin von S.H.I.E.L.D. — und im Multiversum selbst Supersoldatin: Captain Carter kämpfte in What If und auf Erde-838.",
+  "rel": [
+   [
+    "steve",
+    "liebe",
+    "der nachgeholte Tanz"
+   ],
+   [
+    "natasha",
+    "komplex",
+    "838-Kollegin ihrer Freundin"
+   ]
+  ],
+  "films": [
+   "cap1",
+   "cap2",
+   "eg",
+   "wi",
+   "mom"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "pepper",
+  "n": "Pepper Potts",
+  "a": "Rescue",
+  "act": "Gwyneth Paltrow",
+  "uni": "MCU · zurückgezogen",
+  "first": "Iron Man (2008)",
+  "pow": "CEO von Stark Industries, Rescue-Rüstung",
+  "bio": "Führte Starks Firma, heiratete Stark, flog in Endgame selbst in die Schlacht — und verabschiedete ihn: 'You can rest now.'",
+  "rel": [
+   [
+    "tony",
+    "liebe",
+    "Mrs. Stark"
+   ]
+  ],
+  "films": [
+   "iron1",
+   "iron3",
+   "eg"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "rhodey",
+  "n": "War Machine",
+  "a": "James Rhodes",
+  "act": "Don Cheadle",
+  "uni": "MCU · unklarer Status",
+  "first": "Iron Man (2008)",
+  "pow": "War-Machine-Arsenal, Air-Force-Disziplin",
+  "bio": "Tonys bester Freund — mit Secret-Invasion-Sternchen: Ein Teil seiner jüngeren Auftritte war ein Skrull. Was echt war, sortiert das MCU noch.",
+  "rel": [
+   [
+    "tony",
+    "verbuendet",
+    "bester Freund"
+   ],
+   [
+    "nick",
+    "komplex",
+    "die Skrull-Frage"
+   ]
+  ],
+  "films": [
+   "iron2",
+   "cw",
+   "iw",
+   "eg",
+   "si"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "ultron",
+  "n": "Ultron",
+  "a": "die Schutz-KI",
+  "act": "James Spader (Stimme)",
+  "uni": "MCU · zurück in Vision Quest",
+  "first": "Age of Ultron (2015)",
+  "pow": "Schwarm-Körper, Netz-Allgegenwart, Starks Sarkasmus",
+  "bio": "Sollte die Welt beschützen und beschloss, sie zu entvölkern. Spaders Rückkehr in Vision Quest ist eine der spannendsten Serien-Nachrichten vor Doomsday.",
+  "rel": [
+   [
+    "tony",
+    "familie",
+    "Schöpfer"
+   ],
+   [
+    "vision",
+    "familie",
+    "unfreiwilliger 'Vater'"
+   ],
+   [
+    "wanda",
+    "feind",
+    "Sokovia vergisst nicht"
+   ]
+  ],
+  "films": [
+   "av2",
+   "vq"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "shangchi",
+  "n": "Shang-Chi",
+  "a": "Meister der Zehn Ringe",
+  "act": "Simu Liu",
+  "uni": "MCU · aktiv",
+  "first": "Shang-Chi (2021)",
+  "pow": "Perfekte Kampfkunst plus die Zehn Ringe",
+  "bio": "Erbte die Zehn Ringe seines Vaters — uralte Artefakte, die seit dem Finale ein ungeklärtes Signal senden. Steht im Doomsday-Cast; die Antwort kommt vielleicht dort.",
+  "rel": [
+   [
+    "wong",
+    "verbuendet",
+    "Karaoke-Partner"
+   ],
+   [
+    "hulk",
+    "verbuendet",
+    "Ringe-Forschungsgruppe"
+   ]
+  ],
+  "films": [
+   "sc",
+   "doomsday"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "wong",
+  "n": "Wong",
+  "a": "Sorcerer Supreme",
+  "act": "Benedict Wong",
+  "uni": "MCU · Kamar-Taj",
+  "first": "Doctor Strange (2016)",
+  "pow": "Meister der Mystik — mit Amtstitel",
+  "bio": "Wurde Sorcerer Supreme, während Strange geblippt war, und gibt den Titel sichtlich gern nicht zurück. Der beste Nebendarsteller des MCU — in gefühlt jedem Projekt.",
+  "rel": [
+   [
+    "strange",
+    "verbuendet",
+    "er ist der Chef, nicht Strange"
+   ],
+   [
+    "shehulk",
+    "verbuendet",
+    "Anwältin seines Vertrauens"
+   ],
+   [
+    "shangchi",
+    "verbuendet",
+    "Karaoke-Partner"
+   ]
+  ],
+  "films": [
+   "strange1",
+   "sc",
+   "nwh",
+   "mom",
+   "shk"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "clea",
+  "n": "Clea",
+  "a": "Erbin der Dunklen Dimension",
+  "act": "Charlize Theron",
+  "uni": "MCU · Dunkle Dimension",
+  "first": "MoM Post-Credits (2022)",
+  "pow": "Magie der Dunklen Dimension, schneidet Portale in die Realität",
+  "bio": "Erschien in der Post-Credit-Szene von Multiverse of Madness, rekrutierte Strange für eine Inkursions-Reparatur — und wurde seitdem nie wieder gesehen. Offener Faden Nummer eins der Magie-Ecke.",
+  "rel": [
+   [
+    "strange",
+    "liebe",
+    "Comic-Ehe, Kino-Andeutung"
+   ]
+  ],
+  "films": [
+   "mom"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "mj",
+  "n": "MJ",
+  "a": "Michelle Jones-Watson",
+  "act": "Zendaya",
+  "uni": "MCU · erinnert sich nicht",
+  "first": "Homecoming (2017)",
+  "pow": "Beobachtungsgabe, trockenster Humor New Yorks",
+  "bio": "Kannte Peters Geheimnis, liebte ihn — und vergaß ihn durch den Zauber. In Brand New Day kreuzen sich ihre Wege wieder, ohne dass sie es weiß. Herzschmerz mit Ansage.",
+  "rel": [
+   [
+    "spidey",
+    "liebe",
+    "hat ihn vergessen"
+   ],
+   [
+    "ned",
+    "verbuendet",
+    "beste Freunde"
+   ]
+  ],
+  "films": [
+   "spider1",
+   "spider2",
+   "nwh",
+   "bnd"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "ned",
+  "n": "Ned Leeds",
+  "a": "der Guy in the Chair",
+  "act": "Jacob Batalon",
+  "uni": "MCU · erinnert sich nicht",
+  "first": "Homecoming (2017)",
+  "pow": "Hacker-Talent — und einmal Slingring-Magie",
+  "bio": "Peters bester Freund, der in No Way Home plötzlich Portale öffnen konnte (Doctor-Strange-Vibes!) und schwor, nie zum Bösewicht zu werden — in den Comics wird Ned Leeds der Hobgoblin. Chekhov lacht.",
+  "rel": [
+   [
+    "spidey",
+    "verbuendet",
+    "vergessene beste Freunde"
+   ],
+   [
+    "mj",
+    "verbuendet",
+    "beste Freunde"
+   ]
+  ],
+  "films": [
+   "spider1",
+   "spider2",
+   "nwh"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "moonknight",
+  "n": "Moon Knight",
+  "a": "Marc Spector / Steven Grant",
+  "act": "Oscar Isaac",
+  "uni": "MCU · Solo-Ecke",
+  "first": "Moon Knight (2022)",
+  "pow": "Avatar des Mondgottes Khonshu, mehrere Identitäten",
+  "bio": "Söldner, Museums-Shop-Mitarbeiter und Mond-Avatar in einem Körper. Marvels beste Charakterstudie — wartet seit 2022 auf seinen zweiten Auftritt.",
+  "rel": [],
+  "films": [
+   "mk"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "shehulk",
+  "n": "She-Hulk",
+  "a": "Jennifer Walters",
+  "act": "Tatiana Maslany",
+  "uni": "MCU · Anwältin",
+  "first": "She-Hulk (2022)",
+  "pow": "Hulk-Kraft mit Jura-Examen — und Kontrolle ab Tag eins",
+  "bio": "Bekam Bruce' Blut und besser im Griff, was er jahrelang lernen musste. Verklagte am Ende buchstäblich Marvels Drehbuch — Meta-Finale inklusive K.E.V.I.N.",
+  "rel": [
+   [
+    "hulk",
+    "familie",
+    "Cousin Bruce"
+   ],
+   [
+    "daredevil",
+    "liebe",
+    "Matts Walk of Shame"
+   ],
+   [
+    "wong",
+    "verbuendet",
+    "Mandant der besonderen Art"
+   ]
+  ],
+  "films": [
+   "shk"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "riri",
+  "n": "Ironheart",
+  "a": "Riri Williams",
+  "act": "Dominique Thorne",
+  "uni": "MCU · Chicago",
+  "first": "Wakanda Forever (2022)",
+  "pow": "Selbstgebaute Rüstung, MIT-Genie",
+  "bio": "Baute mit 19 einen besseren Anzug als mancher Milliardär — und schloss im Ironheart-Finale einen Deal mit Mephisto. Der Preis steht noch aus.",
+  "rel": [
+   [
+    "shuri",
+    "verbuendet",
+    "Wakanda-Verbindung"
+   ],
+   [
+    "mephisto",
+    "komplex",
+    "der Deal"
+   ],
+   [
+    "tony",
+    "komplex",
+    "sein Erbe, ihr eigener Weg"
+   ]
+  ],
+  "films": [
+   "bpwf",
+   "ih"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "redhulk",
+  "n": "Red Hulk",
+  "a": "Präsident Thaddeus Ross",
+  "act": "Harrison Ford (zuvor W. Hurt)",
+  "uni": "MCU · abgesetzt & inhaftiert",
+  "first": "The Incredible Hulk (2008)",
+  "pow": "Hulk-Kraft, rot glühend bei Wut",
+  "bio": "Jagte Banner jahrzehntelang, wurde Präsident — und explodierte vor laufenden Kameras zum Red Hulk. Sitzt jetzt dort, wo er Hulk immer haben wollte.",
+  "rel": [
+   [
+    "hulk",
+    "feind",
+    "jahrzehntelange Jagd"
+   ],
+   [
+    "sam",
+    "komplex",
+    "sein Cap, sein Untergang"
+   ]
+  ],
+  "films": [
+   "hulk",
+   "cw",
+   "bnw"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "zemo",
+  "n": "Baron Zemo",
+  "a": "Helmut Zemo",
+  "act": "Daniel Brühl",
+  "uni": "MCU · Raft",
+  "first": "Civil War (2016)",
+  "pow": "Kein Superkraft-Gramm — nur Geduld und ein Plan",
+  "bio": "Zerbrach die Avengers ohne eine einzige Superkraft, nur mit einem Tonband. Sein Tanz in Falcon & Winter Soldier wurde größer als mancher Filmstart.",
+  "rel": [
+   [
+    "bucky",
+    "komplex",
+    "aktivierte ihn — tanzte trotzdem"
+   ],
+   [
+    "steve",
+    "feind",
+    "zerbrach sein Team"
+   ]
+  ],
+  "films": [
+   "cw",
+   "fws"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "ghostmcu",
+  "n": "Ghost",
+  "a": "Ava Starr",
+  "act": "Hannah John-Kamen",
+  "uni": "MCU · New Avengers",
+  "first": "Ant-Man and the Wasp (2018)",
+  "pow": "Phasing — durch Wände, durch Schläge, durch alles",
+  "bio": "Vom Quantenunfall gezeichnet, jahrelang nur am Überleben — jetzt New Avenger. Vom tragischsten 'Bösewicht' der Phase 3 ins Doomsday-Ensemble.",
+  "rel": [
+   [
+    "yelena",
+    "verbuendet",
+    "New-Avengers-Kollegin"
+   ],
+   [
+    "hope",
+    "komplex",
+    "stahl einst Pym-Tech"
+   ]
+  ],
+  "films": [
+   "antman2",
+   "tb",
+   "doomsday"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "watcher",
+  "n": "The Watcher",
+  "a": "Uatu",
+  "act": "Jeffrey Wright (Stimme)",
+  "uni": "MCU · über allem",
+  "first": "What If…? (2021)",
+  "pow": "Sieht jedes Universum — schwor, nie einzugreifen",
+  "bio": "Der Erzähler des Multiversums, der seinen eigenen Schwur brach, als Infinity Ultron zu gewinnen drohte. Wenn Doomsday eskaliert: Er schaut zu. Vermutlich.",
+  "rel": [],
+  "films": [
+   "wi"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "sylvie",
+  "n": "Sylvie",
+  "a": "die Loki-Variante",
+  "act": "Sophia Di Martino",
+  "uni": "MCU · verzweigte Zeitlinie",
+  "first": "Loki (2021)",
+  "pow": "Verzauberung — übernimmt jeden Geist",
+  "bio": "Als Kind von der TVA gestohlen, ein Leben auf der Flucht — bis sie 'Er, der bleibt' tötete und damit das Multiversum öffnete. Lebt heute demonstrativ normal in einem McDonald's-Job.",
+  "rel": [
+   [
+    "loki",
+    "liebe",
+    "es ist kompliziert — sie ist er"
+   ],
+   [
+    "kang",
+    "feind",
+    "ihr Schwertstoß startete alles"
+   ],
+   [
+    "mobius",
+    "verbuendet",
+    "spätes Vertrauen"
+   ]
+  ],
+  "films": [
+   "l1",
+   "l2"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "mobius",
+  "n": "Mobius",
+  "a": "Mobius M. Mobius",
+  "act": "Owen Wilson",
+  "uni": "MCU · TVA",
+  "first": "Loki (2021)",
+  "pow": "Bester Analyst der TVA, unerschütterliche Freundlichkeit",
+  "bio": "Der TVA-Agent, der an Loki glaubte, bevor es irgendjemand sonst tat. Bekam am Ende, was er verdiente: einen Jetski. Fast.",
+  "rel": [
+   [
+    "loki",
+    "verbuendet",
+    "der Freund, der blieb"
+   ],
+   [
+    "sylvie",
+    "verbuendet",
+    "spätes Vertrauen"
+   ]
+  ],
+  "films": [
+   "l1",
+   "l2"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "echo",
+  "n": "Echo",
+  "a": "Maya Lopez",
+  "act": "Alaqua Cox",
+  "uni": "MCU · Oklahoma",
+  "first": "Hawkeye (2021)",
+  "pow": "Fotografisches Bewegungsgedächtnis, Choctaw-Ahnenkraft",
+  "bio": "Fisks Ziehtochter, die ihm eine Kugel verpasste und in Oklahoma ihre Wurzeln fand. Erste gehörlose Marvel-Hauptfigur.",
+  "rel": [
+   [
+    "kingpin",
+    "familie",
+    "Ziehvater — angeschossen"
+   ],
+   [
+    "daredevil",
+    "komplex",
+    "alte Rechnung aus New York"
+   ]
+  ],
+  "films": [
+   "hk",
+   "ec"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "rogue",
+  "n": "Rogue",
+  "a": "Marie D'Ancanto",
+  "act": "Anna Paquin",
+  "uni": "Fox",
+  "first": "X-Men (2000)",
+  "pow": "Absorbiert Kräfte und Erinnerungen durch Berührung",
+  "bio": "Das Mädchen, dessen Berührung Koma bedeutet — die emotionale Einstiegsfigur des ersten X-Men-Films und Logans erster Schützling.",
+  "rel": [
+   [
+    "wolverine",
+    "familie",
+    "sein erster Schützling"
+   ],
+   [
+    "magneto",
+    "feind",
+    "wollte sie opfern"
+   ]
+  ],
+  "films": [
+   "xmen1",
+   "x2",
+   "x3",
+   "dofp"
+  ],
+  "u": "fox"
+ },
+ {
+  "id": "colossus",
+  "n": "Colossus",
+  "a": "Piotr Rasputin",
+  "act": "Stefan Kapičić (Stimme)",
+  "uni": "Fox",
+  "first": "X2 (2003) · groß: Deadpool",
+  "pow": "Organischer Stahl von Kopf bis Fuß",
+  "bio": "Der höflichste Ganzkörper-Stahlkoloss des Kinos und Deadpools unfreiwilliger Moralcoach: 'Vier oder fünf Momente — mehr braucht es nicht, um ein Held zu sein.'",
+  "rel": [
+   [
+    "deadpool",
+    "komplex",
+    "ewiger Moralcoach"
+   ]
+  ],
+  "films": [
+   "x2",
+   "dp1",
+   "dp2"
+  ],
+  "u": "fox"
+ },
+ {
+  "id": "cable",
+  "n": "Cable",
+  "a": "Nathan Summers",
+  "act": "Josh Brolin",
+  "uni": "Fox · aus der Zukunft",
+  "first": "Deadpool 2 (2018)",
+  "pow": "Techno-organischer Arm, Zeitreise-Gerät, schlechte Laune",
+  "bio": "Kam aus der Zukunft, um ein Kind zu töten, und blieb, um es zu retten. Brolin spielte im selben Jahr Thanos UND Cable — Marvel-Doppelschicht.",
+  "rel": [
+   [
+    "deadpool",
+    "komplex",
+    "vom Feind zum X-Force-Rest"
+   ]
+  ],
+  "films": [
+   "dp2"
+  ],
+  "u": "fox"
+ },
+ {
+  "id": "quicksilver",
+  "n": "Quicksilver",
+  "a": "Peter Maximoff",
+  "act": "Evan Peters",
+  "uni": "Fox — und ein WandaVision-Scherz",
+  "first": "Days of Future Past (2014)",
+  "pow": "Superspeed — die Küchen-Szene ist Legende",
+  "bio": "Seine Zeitlupen-Rettungen sind die besten Szenen zweier X-Men-Filme. Sein WandaVision-Auftritt war der gemeinste Fake-Out der Serie: nicht Pietro, sondern 'Ralph Bohner'.",
+  "rel": [
+   [
+    "magneto",
+    "familie",
+    "Vater — er weiß es (fast)"
+   ],
+   [
+    "wanda",
+    "komplex",
+    "der falsche Pietro"
+   ]
+  ],
+  "films": [
+   "dofp",
+   "apoc",
+   "wv"
+  ],
+  "u": "fox"
+ },
+ {
+  "id": "x23",
+  "n": "X-23",
+  "a": "Laura Kinney",
+  "act": "Dafne Keen",
+  "uni": "Fox → Void → ?",
+  "first": "Logan (2017)",
+  "pow": "Wolverines Klon: Krallen, Heilfaktor, doppelte Wut",
+  "bio": "Logans 'Tochter', für die er starb — und die in Deadpool & Wolverine dem falschen richtigen Logan begegnete. Die Zukunft der Wolverine-Linie, egal welches Universum gewinnt.",
+  "rel": [
+   [
+    "wolverine",
+    "familie",
+    "Klon-Tochter"
+   ],
+   [
+    "deadpool",
+    "verbuendet",
+    "Void-Widerstand"
+   ]
+  ],
+  "films": [
+   "logan",
+   "dw"
+  ],
+  "u": "fox"
+ },
+ {
+  "id": "juggernaut",
+  "n": "Juggernaut",
+  "a": "Cain Marko",
+  "act": "Ryan Reynolds (Stimme, DP2)",
+  "uni": "Fox",
+  "first": "The Last Stand (2006)",
+  "pow": "Einmal in Bewegung, hält ihn nichts auf",
+  "bio": "Xaviers Stiefbruder (Comics) und der Grund, warum Deadpool in DP2 buchstäblich zerrissen wurde. 'I'm the Juggernaut, bitch' bleibt unsterblich.",
+  "rel": [
+   [
+    "xavier",
+    "familie",
+    "Stiefbruder (Comics)"
+   ],
+   [
+    "deadpool",
+    "feind",
+    "riss ihn entzwei"
+   ]
+  ],
+  "films": [
+   "x3",
+   "dp2"
+  ],
+  "u": "fox"
+ },
+ {
+  "id": "tobey",
+  "n": "Spider-Man (Raimi)",
+  "a": "Peter Parker · Erde-96283",
+  "act": "Tobey Maguire",
+  "uni": "Sony (Raimi-Trilogie)",
+  "first": "Spider-Man (2002)",
+  "pow": "Organische Netze — der einzige Kino-Spidey ohne Shooter",
+  "bio": "Der erste große Kino-Spider-Man. Kehrte in No Way Home mit Rückenschmerzen und Altersweisheit zurück und hielt Hollands Peter von der Rache ab.",
+  "rel": [
+   [
+    "docock",
+    "feind",
+    "Feind, dann Umarmung"
+   ],
+   [
+    "goblin",
+    "feind",
+    "sein erster und letzter Feind"
+   ],
+   [
+    "spidey",
+    "verbuendet",
+    "die drei Peters"
+   ]
+  ],
+  "films": [
+   "raimi1",
+   "raimi2",
+   "raimi3",
+   "nwh"
+  ],
+  "u": "sony"
+ },
+ {
+  "id": "andrew",
+  "n": "Spider-Man (TASM)",
+  "a": "Peter Parker · Erde-120703",
+  "act": "Andrew Garfield",
+  "uni": "Sony (Amazing-Reihe)",
+  "first": "The Amazing Spider-Man (2012)",
+  "pow": "Akrobatischster aller Kino-Spideys",
+  "bio": "Verlor Gwen und sich selbst — bis er in No Way Home MJ auffing und damit seinen eigenen Frieden. Die Fan-Kampagne für einen dritten Amazing-Film lebt bis heute.",
+  "rel": [
+   [
+    "spidey",
+    "verbuendet",
+    "die Erlösung: MJ aufgefangen"
+   ],
+   [
+    "electro",
+    "feind",
+    "zweimal derselbe Blitz"
+   ],
+   [
+    "gwen",
+    "komplex",
+    "die Gwen, die er nicht halten konnte"
+   ]
+  ],
+  "films": [
+   "tasm1",
+   "tasm2",
+   "nwh"
+  ],
+  "u": "sony"
+ },
+ {
+  "id": "docock",
+  "n": "Doctor Octopus",
+  "a": "Otto Octavius",
+  "act": "Alfred Molina",
+  "uni": "Sony (Raimi) → MCU-Besuch",
+  "first": "Spider-Man 2 (2004)",
+  "pow": "Vier KI-Tentakel mit eigenem Willen",
+  "bio": "Der tragischste Schurke der Raimi-Ära — und der Grund, warum No Way Home mit 'Hello, Peter' die Kinos zum Beben brachte. Wurde am Ende geheilt statt besiegt.",
+  "rel": [
+   [
+    "tobey",
+    "feind",
+    "Feind, dann Freund"
+   ],
+   [
+    "spidey",
+    "komplex",
+    "'Hello, Peter.'"
+   ]
+  ],
+  "films": [
+   "raimi2",
+   "nwh"
+  ],
+  "u": "sony"
+ },
+ {
+  "id": "electro",
+  "n": "Electro",
+  "a": "Max Dillon",
+  "act": "Jamie Foxx",
+  "uni": "Sony (Webb) → MCU-Besuch",
+  "first": "The Amazing Spider-Man 2 (2014)",
+  "pow": "Lebender Strom",
+  "bio": "Vom übersehenen Ingenieur zum Blitz-Gott. In No Way Home cooler, gelber und mit Arc-Reactor — und dem besten Meta-Satz: Er dachte, Peter wäre schwarz.",
+  "rel": [
+   [
+    "andrew",
+    "feind",
+    "zweimal derselbe Blitz"
+   ],
+   [
+    "spidey",
+    "feind",
+    "NWH-Sinistre-Runde"
+   ]
+  ],
+  "films": [
+   "tasm2",
+   "nwh"
+  ],
+  "u": "sony"
+ },
+ {
+  "id": "carnage",
+  "n": "Carnage",
+  "a": "Cletus Kasady",
+  "act": "Woody Harrelson",
+  "uni": "Sony († 2021)",
+  "first": "Venom: Let There Be Carnage (2021)",
+  "pow": "Symbiont ohne jede Hemmung — Venoms roter Albtraum",
+  "bio": "Serienmörder plus Symbiontenblut: Venoms 'Sohn' und schlimmster Feind. Hielt genau einen Film — der Hunger gewann.",
+  "rel": [
+   [
+    "venom",
+    "familie",
+    "Symbionten-Vater — und Todfeind"
+   ]
+  ],
+  "films": [
+   "venom2"
+  ],
+  "u": "sony"
+ },
+ {
+  "id": "peterb",
+  "n": "Peter B. Parker",
+  "a": "der müde Mentor",
+  "act": "Jake Johnson (Stimme)",
+  "uni": "Sony · Spider-Verse (Erde-616B)",
+  "first": "Into the Spider-Verse (2018)",
+  "pow": "20 Jahre Spidey-Erfahrung, Jogginghosen-Ära überwunden",
+  "bio": "Der Peter, bei dem alles schiefging — bis ein Teenager aus Brooklyn ihn daran erinnerte, warum er die Maske trägt. Inzwischen Vater von Mayday.",
+  "rel": [
+   [
+    "miles",
+    "familie",
+    "Mentor wider Willen"
+   ],
+   [
+    "gwen",
+    "verbuendet",
+    "alte Dimension-Freunde"
+   ]
+  ],
+  "films": [
+   "sv1",
+   "sv2"
+  ],
+  "u": "sony"
+ },
+ {
+  "id": "spiderman2099",
+  "n": "Spider-Man 2099",
+  "a": "Miguel O'Hara",
+  "act": "Oscar Isaac (Stimme)",
+  "uni": "Sony · Spider-Verse (Nueva York)",
+  "first": "Across the Spider-Verse (2023)",
+  "pow": "Krallen, Fangzähne — der Spider-Man ohne Spinnensinn und ohne Humor",
+  "bio": "Gründer der Spider-Society und Verfechter der 'Kanon-Ereignisse': Lieber ein Opfer zulassen, als ein Universum riskieren. Miles hält dagegen — Teil 3 entscheidet.",
+  "rel": [
+   [
+    "miles",
+    "feind",
+    "'Du bist die Anomalie'"
+   ],
+   [
+    "gwen",
+    "komplex",
+    "Chefin mit Zweifeln"
+   ]
+  ],
+  "films": [
+   "sv2"
+  ],
+  "u": "sony"
+ },
+ {
+  "id": "mysterio",
+  "n": "Mysterio",
+  "a": "Quentin Beck",
+  "act": "Jake Gyllenhaal",
+  "uni": "MCU († 2019 — angeblich)",
+  "first": "Far From Home (2019)",
+  "pow": "Illusions-Drohnen, Hollywood-Instinkt",
+  "bio": "Verkaufte der Welt ein falsches Multiversum, bevor das echte kam — und enttarnte Peter mit seinem letzten Atemzug. Ob er wirklich tot ist? Bei Mysterio zählt nur, was man sieht.",
+  "rel": [
+   [
+    "spidey",
+    "feind",
+    "enttarnte ihn im Tod"
+   ],
+   [
+    "nick",
+    "komplex",
+    "täuschte die Skrulls, die ihn spielten"
+   ]
+  ],
+  "films": [
+   "spider2"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "vulture",
+  "n": "Vulture",
+  "a": "Adrian Toomes",
+  "act": "Michael Keaton",
+  "uni": "MCU → kurios: Morbius-Cameo",
+  "first": "Homecoming (2017)",
+  "pow": "Exo-Flügel aus Alien-Schrott",
+  "bio": "Der Arbeiterklasse-Schurke, der Peters Homecoming-Date zum Horror machte — beste Auto-Szene des MCU. Rutschte per Post-Credits unerklärt ins Morbius-Universum: bis heute Marvels seltsamster Crossover.",
+  "rel": [
+   [
+    "spidey",
+    "feind",
+    "das Homecoming-Date"
+   ]
+  ],
+  "films": [
+   "spider1",
+   "morbius"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "ghostrider",
+  "n": "Ghost Rider",
+  "a": "der Geist der Rache",
+  "act": "Ryan Gosling",
+  "uni": "MCU · ab Doomsday",
+  "first": "SDCC-Enthüllung Juli 2026",
+  "pow": "Höllenfeuer, Bußstarren, brennender Schädel",
+  "bio": "Die Comic-Con-Bombe 2026: Ryan Gosling fährt als Ghost Rider in Doomsday vor. Welcher Reiter er ist (Blaze? Ketch? Jemand Neues?) hält Marvel noch geheim.",
+  "rel": [
+   [
+    "doom",
+    "komplex",
+    "auf welcher Seite steht er?"
+   ],
+   [
+    "mephisto",
+    "komplex",
+    "der klassische Vertragspartner"
+   ]
+  ],
+  "films": [
+   "doomsday"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "odin",
+  "n": "Odin",
+  "a": "der Allvater",
+  "act": "Anthony Hopkins",
+  "uni": "MCU († 2017)",
+  "first": "Thor (2011)",
+  "pow": "Odinkraft — stärkste Macht Asgards",
+  "bio": "König, Kriegsherr, fragwürdiger Vater: verbannte Thor, belog Loki, versteckte Hela. Löste sich in Norwegen in Sternenstaub auf — und gab damit versehentlich den Startschuss für Ragnarök.",
+  "rel": [
+   [
+    "thor",
+    "familie",
+    "Sohn und Erbe"
+   ],
+   [
+    "loki",
+    "familie",
+    "der adoptierte Schatten"
+   ],
+   [
+    "hela",
+    "familie",
+    "die weggesperrte Tochter"
+   ]
+  ],
+  "films": [
+   "thor1",
+   "thor2",
+   "thor3"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "jane",
+  "n": "Jane Foster",
+  "a": "Mighty Thor",
+  "act": "Natalie Portman",
+  "uni": "MCU · Valhalla",
+  "first": "Thor (2011)",
+  "pow": "Astrophysikerin; als Mighty Thor: alles, was Mjölnir hergibt",
+  "bio": "Entdeckte die Bifrost-Brücke wissenschaftlich, trug den Äther im Blut und schwang am Ende Mjölnir gegen Gorr — im Wissen, dass jede Verwandlung ihre Krebstherapie zunichtemachte. Starb als Heldin, kam in Valhalla an.",
+  "rel": [
+   [
+    "thor",
+    "liebe",
+    "die große, verpasste Liebe"
+   ],
+   [
+    "gorr",
+    "feind",
+    "ihr letzter Kampf"
+   ]
+  ],
+  "films": [
+   "thor1",
+   "thor2",
+   "eg",
+   "tlt"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "korg",
+  "n": "Korg",
+  "a": "der Kronaner",
+  "act": "Taika Waititi",
+  "uni": "MCU · Neu-Asgard",
+  "first": "Ragnarok (2017)",
+  "pow": "Aus Steinen. Sehr höflich.",
+  "bio": "Gescheiterter Revolutionär von Sakaar (es kamen nur seine Mutter und deren Freund), Thors treuester Begleiter und Erzähler von Love and Thunder. Gespielt und gesprochen vom Regisseur selbst.",
+  "rel": [
+   [
+    "thor",
+    "verbuendet",
+    "beste Freunde"
+   ],
+   [
+    "valkyrie",
+    "verbuendet",
+    "Neu-Asgard-Familie"
+   ]
+  ],
+  "films": [
+   "thor3",
+   "eg",
+   "tlt"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "okoye",
+  "n": "Okoye",
+  "a": "General der Dora Milaje",
+  "act": "Danai Gurira",
+  "uni": "MCU · Wakanda",
+  "first": "Civil War (2016)",
+  "pow": "Beste Speerkämpferin Wakandas, unbeugsame Loyalität",
+  "bio": "Diente zwei Königen und einer Königin, stellte sich Killmonger entgegen und verlor nach Talokans Angriff ihren Rang — um als Midnight Angel weiterzukämpfen. Wakandas Rückgrat.",
+  "rel": [
+   [
+    "tchalla",
+    "verbuendet",
+    "ihr König"
+   ],
+   [
+    "shuri",
+    "verbuendet",
+    "beschützt sie — auch vor sich selbst"
+   ],
+   [
+    "namor",
+    "feind",
+    "Talokans Angriff"
+   ]
+  ],
+  "films": [
+   "cw",
+   "bp1",
+   "iw",
+   "bpwf"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "killmonger",
+  "n": "Killmonger",
+  "a": "Erik 'N'Jadaka' Stevens",
+  "act": "Michael B. Jordan",
+  "uni": "MCU († 2018)",
+  "first": "Black Panther (2018)",
+  "pow": "Black-Ops-Ausbildung, Herzkraut, ein Leben voller Wut",
+  "bio": "Der Vetter, den Wakanda im Stich ließ — und der zurückkam, um es zu übernehmen. Sein 'Begrabt mich im Ozean' gehört zu den besten Schurken-Abgängen des Kinos. Erschien Shuri später auf der Ahnenebene.",
+  "rel": [
+   [
+    "tchalla",
+    "familie",
+    "Cousins, Gegner"
+   ],
+   [
+    "shuri",
+    "komplex",
+    "ihr Ahnenebene-Besuch"
+   ]
+  ],
+  "films": [
+   "bp1"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "wenwu",
+  "n": "Wenwu",
+  "a": "der echte Mandarin",
+  "act": "Tony Leung",
+  "uni": "MCU († 2024)",
+  "first": "Shang-Chi (2021)",
+  "pow": "Die Zehn Ringe — 1000 Jahre Jugend und Macht",
+  "bio": "Tausend Jahre Eroberer, dann Ehemann und Vater — dann trauernder Witwer, den eine Stimme aus dem Jenseits in die Falle lockte. Gab die Ringe im Tod an seinen Sohn weiter. Tony Leungs MCU-Debüt gilt als beste Schurken-Performance der Phase 4.",
+  "rel": [
+   [
+    "shangchi",
+    "familie",
+    "Sohn und Erbe"
+   ]
+  ],
+  "films": [
+   "sc"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "highevo",
+  "n": "High Evolutionary",
+  "a": "Herr der Schöpfung, selbsternannt",
+  "act": "Chukwudi Iwuji",
+  "uni": "MCU · gefangen",
+  "first": "Guardians Vol. 3 (2023)",
+  "pow": "Genetik als Religion, null Empathie",
+  "bio": "Erschuf Rocket in einem Käfiglabor und eine Ersatz-Erde aus Tierwesen — und zerstörte beides, wenn es nicht perfekt war. Kein kosmischer Plan, nur Grausamkeit: vielleicht der meistgehasste MCU-Schurke. Lebt. In einer Zelle auf Knowhere.",
+  "rel": [
+   [
+    "rocket",
+    "feind",
+    "sein 'Experiment 89P13'"
+   ],
+   [
+    "quill",
+    "feind",
+    "unterschätzte die Guardians"
+   ]
+  ],
+  "films": [
+   "g3"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "dormammu",
+  "n": "Dormammu",
+  "a": "Herrscher der Dunklen Dimension",
+  "act": "Benedict Cumberbatch (Motion Capture)",
+  "uni": "MCU · Dunkle Dimension",
+  "first": "Doctor Strange (2016)",
+  "pow": "Zeitloses Wesen, verschlingt Welten",
+  "bio": "'Dormammu, ich bin gekommen, um zu verhandeln' — Strange besiegte ihn nicht, er nervte ihn in die Kapitulation: eine Zeitschleife, unendlich oft zu sterben. Der Deal hält. Noch. Cleas Herkunft führt direkt zu ihm.",
+  "rel": [
+   [
+    "strange",
+    "feind",
+    "die Zeitschleifen-Verhandlung"
+   ],
+   [
+    "clea",
+    "familie",
+    "seine Nichte (Comics)"
+   ]
+  ],
+  "films": [
+   "strange1"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "ego",
+  "n": "Ego",
+  "a": "der lebende Planet",
+  "act": "Kurt Russell",
+  "uni": "MCU († 2017)",
+  "first": "Guardians Vol. 2 (2017)",
+  "pow": "Celestial: ein Planet mit Gesicht und Expansionsplänen",
+  "bio": "Quills Vater, wörtlich ein Planet, der die Galaxis mit sich selbst überziehen wollte — und beiläufig gestand, Quills Mutter den Hirntumor eingepflanzt zu haben. Der Satz kostete ihn alles.",
+  "rel": [
+   [
+    "quill",
+    "familie",
+    "'He may have been your father …'"
+   ],
+   [
+    "yondu",
+    "komplex",
+    "der bessere Daddy gewann"
+   ]
+  ],
+  "films": [
+   "gotg2"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "stane",
+  "n": "Obadiah Stane",
+  "a": "Iron Monger",
+  "act": "Jeff Bridges",
+  "uni": "MCU († 2008)",
+  "first": "Iron Man (2008)",
+  "pow": "Konzern-Intrigen, geklaute Rüstungstechnik",
+  "bio": "Howards Partner, Tonys Mentor, Auftraggeber seiner Entführung — der allererste MCU-Schurke und bis heute die Vorlage: der Verrat aus dem eigenen Haus.",
+  "rel": [
+   [
+    "tony",
+    "feind",
+    "Mentor und Mörder in spe"
+   ]
+  ],
+  "films": [
+   "iron1"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "ronan",
+  "n": "Ronan",
+  "a": "der Ankläger",
+  "act": "Lee Pace",
+  "uni": "MCU († 2014)",
+  "first": "Guardians of the Galaxy (2014)",
+  "pow": "Kree-Fanatiker mit Universalwaffe",
+  "bio": "Kree-Fundamentalist, der mit dem Machtstein Xandar auslöschen wollte — und von einem Tanzduell abgelenkt wurde. 1995 (Captain Marvel) war er noch Carols disziplinierter Vorgesetzten-Feind.",
+  "rel": [
+   [
+    "quill",
+    "feind",
+    "das Tanzduell"
+   ],
+   [
+    "thanos",
+    "komplex",
+    "unzuverlässiger Partner"
+   ],
+   [
+    "carol",
+    "feind",
+    "1995er-Begegnung"
+   ]
+  ],
+  "films": [
+   "gotg1",
+   "cm"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "leader",
+  "n": "The Leader",
+  "a": "Samuel Sterns",
+  "act": "Tim Blake Nelson",
+  "uni": "MCU · inhaftiert",
+  "first": "The Incredible Hulk (2008)",
+  "pow": "Gamma-mutiertes Superhirn — sieht jede Wahrscheinlichkeit",
+  "bio": "17 Jahre zwischen Setup und Payoff: 2008 tropfte Banners Blut in seine Wunde, 2025 zog er als Denker hinter Ross' Sturz die Fäden. Warnte aus der Zelle: 'Die anderen kommen.' Er meinte andere Welten.",
+  "rel": [
+   [
+    "hulk",
+    "feind",
+    "sein Blut, sein Fluch"
+   ],
+   [
+    "redhulk",
+    "komplex",
+    "Marionettenspieler & Präsident"
+   ]
+  ],
+  "films": [
+   "hulk",
+   "bnw"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "apocalypse",
+  "n": "Apocalypse",
+  "a": "En Sabah Nur",
+  "act": "Oscar Isaac",
+  "uni": "Fox († 2016)",
+  "first": "X-Men: Apocalypse (2016)",
+  "pow": "Ältester Mutant der Welt, sammelt Kräfte wie Briefmarken",
+  "bio": "Jahrtausende alt, vier Reiter, große Reden — und am Ende von Jean Greys Phoenix-Feuer zerlegt. Oscar Isaacs zweite Marvel-Rolle neben Moon Knight und Spider-Man 2099: Er hat heimlich ein eigenes Multiversum.",
+  "rel": [
+   [
+    "magneto",
+    "komplex",
+    "rekrutierte ihn als Reiter"
+   ],
+   [
+    "jean",
+    "feind",
+    "unterschätzte den Phoenix"
+   ]
+  ],
+  "films": [
+   "apoc"
+  ],
+  "u": "fox"
+ },
+ {
+  "id": "silversurfer",
+  "n": "Silver Surfer",
+  "a": "Shalla-Bal",
+  "act": "Julia Garner",
+  "uni": "MCU · Erde-828-Kosmos",
+  "first": "First Steps (2025)",
+  "pow": "Power Cosmic, Herold von Galactus",
+  "bio": "Verkaufte ihre Freiheit an Galactus, um ihre Welt zu retten — und kündigt seither anderen Welten das Ende an. Die Fox-Version von 2007 war Norrin Radd; das MCU wählte mit Shalla-Bal die Comic-Geliebte als Herold.",
+  "rel": [
+   [
+    "galactus",
+    "komplex",
+    "Herold wider Willen"
+   ],
+   [
+    "johnny",
+    "komplex",
+    "er erreichte sie"
+   ]
+  ],
+  "films": [
+   "f4",
+   "f407"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "may",
+  "n": "Tante May",
+  "a": "May Parker",
+  "act": "Marisa Tomei",
+  "uni": "MCU († 2024)",
+  "first": "Civil War (2016)",
+  "pow": "Bedingungslose Menschlichkeit",
+  "bio": "Die jüngste, aktivste May des Kinos — Sozialarbeiterin, die Peter beibrachte zu helfen, wo man helfen kann. Starb durch Goblins Hand, aber erst nach DEM Satz: 'Aus großer Kraft folgt große Verantwortung.' Im MCU sagt ihn May, nicht Ben.",
+  "rel": [
+   [
+    "spidey",
+    "familie",
+    "hat ihn großgezogen"
+   ],
+   [
+    "goblin",
+    "feind",
+    "ihr Mörder"
+   ],
+   [
+    "happy",
+    "liebe",
+    "die Lasagne-Affäre"
+   ]
+  ],
+  "films": [
+   "cw",
+   "spider1",
+   "spider2",
+   "nwh"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "happy",
+  "n": "Happy Hogan",
+  "a": "Harold Hogan",
+  "act": "Jon Favreau",
+  "uni": "MCU · aktiv",
+  "first": "Iron Man (2008)",
+  "pow": "Loyalität, Boxen, Asset-Management",
+  "bio": "Tonys Fahrer, Freund und Nachlassverwalter — und Peters unfreiwilliger Ersatz-Erwachsener. Gespielt vom Mann, der das MCU als Regisseur von Iron Man überhaupt erst startete.",
+  "rel": [
+   [
+    "tony",
+    "familie",
+    "mehr Bruder als Angestellter"
+   ],
+   [
+    "spidey",
+    "familie",
+    "der Ersatz-Onkel"
+   ],
+   [
+    "may",
+    "liebe",
+    "die Lasagne-Affäre"
+   ]
+  ],
+  "films": [
+   "iron1",
+   "spider1",
+   "spider2",
+   "nwh"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "sersi",
+  "n": "Sersi",
+  "a": "die Eternal der Herzen",
+  "act": "Gemma Chan",
+  "uni": "MCU · von Arishem entführt",
+  "first": "Eternals (2021)",
+  "pow": "Materie-Transmutation",
+  "bio": "Liebte die Menschheit genug, um die Geburt eines Celestials zu stoppen — und wurde dafür von Arishem ins All gezerrt: Das Urteil über die Erde steht seit 2021 aus. Einer der größten unaufgelösten Fäden des MCU.",
+  "rel": [
+   [
+    "thanos",
+    "komplex",
+    "Eros ist sein Bruder"
+   ],
+   [
+    "blade",
+    "komplex",
+    "beide warten auf ihr Marvel-Comeback"
+   ]
+  ],
+  "films": [
+   "et"
+  ],
+  "u": "mcu"
+ },
+ {
+  "id": "blade",
+  "n": "Blade",
+  "a": "der Daywalker",
+  "act": "Mahershala Ali",
+  "uni": "MCU · in der Warteschleife",
+  "first": "Eternals, Post-Credits (nur Stimme)",
+  "pow": "Halbvampir: alle Stärken, keine Schwächen",
+  "bio": "2019 mit Fanfare angekündigt, 2021 als Stimme im Eternals-Abspann zu hören ('Sicher, dass du dafür bereit bist, Mr. Whitman?') — seitdem: Drehbuch-Neustarts, Regisseur-Wechsel, Funkstille. Das berühmteste Geisterprojekt Marvels.",
+  "rel": [
+   [
+    "mephisto",
+    "komplex",
+    "Vampirjäger trifft irgendwann Teufel"
+   ]
+  ],
+  "films": [
+   "et"
+  ],
+  "u": "mcu"
+ }
+]

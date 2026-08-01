@@ -1,0 +1,1082 @@
+<title>Marvel Hub — The Road to Doomsday</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #050806;
+    --panel: rgba(16, 26, 19, 0.55);
+    --line: rgba(170, 205, 182, 0.13);
+    --text: #dfe9e1;
+    --muted: #90a396;
+    --faint: #5d7064;
+    --green: #3fdc8c;
+    --green-deep: #1a5c3c;
+    --green-dark: #0c2418;
+    --gold: #d9a441;
+    --red: #e5484d;
+    --blue: #5aa9e6;
+    --display: "Avenir Next Condensed", "HelveticaNeue-CondensedBold", "Arial Narrow", sans-serif;
+    --body: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --mono: "SF Mono", ui-monospace, Menlo, monospace;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: 0.001s !important; transition-duration: 0.001s !important; }
+  }
+  body {
+    background-color: var(--bg);
+    background-image:
+      radial-gradient(1100px 650px at 50% -120px, rgba(42, 150, 90, 0.20), transparent 70%),
+      radial-gradient(900px 600px at 12% 35%, rgba(22, 90, 55, 0.10), transparent 70%),
+      radial-gradient(900px 650px at 88% 70%, rgba(22, 90, 55, 0.09), transparent 70%);
+    color: var(--text);
+    font-family: var(--body);
+    font-size: 16px;
+    line-height: 1.65;
+  }
+  body::before {
+    content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 0;
+    background: radial-gradient(ellipse 120% 90% at 50% 40%, transparent 55%, rgba(0, 0, 0, 0.55) 100%);
+  }
+  main, header, footer, nav { position: relative; z-index: 1; }
+  ::selection { background: var(--green-deep); color: #fff; }
+  a { color: var(--green); }
+  img { max-width: 100%; }
+
+  .wrap { max-width: 1060px; margin: 0 auto; padding: 0 22px; }
+
+  /* ---------- Nav ---------- */
+  .nav {
+    position: sticky; top: 0; z-index: 60;
+    background: rgba(4, 7, 5, 0.82);
+    backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(170, 205, 182, 0.08);
+  }
+  .nav-inner {
+    max-width: 1060px; margin: 0 auto; padding: 0 22px;
+    display: flex; align-items: center; gap: 22px; height: 54px;
+  }
+  .nav-brand {
+    font-family: var(--display); font-weight: 700; font-size: 16px;
+    letter-spacing: 0.22em; text-transform: uppercase; color: #cfe0d4;
+    text-decoration: none; white-space: nowrap;
+  }
+  .nav-brand b { color: var(--green); font-weight: 700; }
+  .nav-links { display: flex; gap: 2px; margin-left: auto; overflow-x: auto; scrollbar-width: none; }
+  .nav-links::-webkit-scrollbar { display: none; }
+  .nav-links a {
+    font-family: var(--display); font-weight: 600; font-size: 13.5px;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--muted); text-decoration: none; padding: 6px 11px; border-radius: 3px;
+    white-space: nowrap;
+  }
+  .nav-links a:hover { color: var(--text); }
+  .nav-links a.active { color: var(--green); }
+  .spoiler-btn {
+    font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em;
+    background: none; border: 1px solid var(--line); color: var(--muted);
+    border-radius: 3px; padding: 5px 10px; cursor: pointer; white-space: nowrap;
+  }
+  .spoiler-btn.on { color: var(--green); border-color: var(--green-deep); background: var(--green-dark); }
+  .spoiler-btn:focus-visible, .nav-links a:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
+
+  /* ---------- Hero ---------- */
+  .hero { text-align: center; padding: 76px 22px 30px; }
+  .hero-rule {
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.55em; text-transform: uppercase;
+    color: #b7c9bc; display: flex; align-items: center; gap: 18px; justify-content: center;
+    max-width: 560px; margin: 0 auto 6px;
+  }
+  .hero-rule::before, .hero-rule::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, transparent, rgba(170,205,182,0.35)); }
+  .hero-rule::after { background: linear-gradient(90deg, rgba(170,205,182,0.35), transparent); }
+  .hero-roadto { font-family: var(--mono); font-size: 10px; letter-spacing: 0.5em; text-transform: uppercase; color: var(--faint); margin: 14px 0 4px; }
+  .metal {
+    background: linear-gradient(178deg, #f2f9f4 0%, #ccdcd1 28%, #7b9884 46%, #eaf5ed 54%, #a3bbab 72%, #5f7a68 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  h1 {
+    font-family: var(--display); font-weight: 700;
+    font-size: clamp(58px, 10vw, 124px); line-height: 0.9;
+    text-transform: uppercase; letter-spacing: 0.015em;
+    filter: drop-shadow(0 3px 18px rgba(63, 220, 140, 0.22));
+    text-wrap: balance;
+  }
+  h1 small { display: block; font-size: 0.34em; letter-spacing: 0.3em; font-weight: 600; }
+  .hero-tag {
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.42em; text-transform: uppercase;
+    color: var(--green); margin-top: 18px;
+  }
+
+  /* Countdown */
+  .cd { margin-top: 34px; }
+  .cd-days { font-family: var(--display); font-weight: 700; font-size: clamp(64px, 9vw, 104px); line-height: 1; font-variant-numeric: tabular-nums; }
+  .cd-days-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.45em; text-transform: uppercase; color: var(--muted); margin-top: 2px; }
+  .cd-sub { font-family: var(--mono); font-size: 14px; color: #aabfae; margin-top: 14px; font-variant-numeric: tabular-nums; letter-spacing: 0.12em; }
+  .cd-info { font-size: 13px; color: var(--muted); margin-top: 18px; }
+  .cd-info b { color: var(--text); font-weight: 600; }
+
+  /* ---------- Sections ---------- */
+  section.block { padding: 72px 0 10px; }
+  .sec-head { text-align: center; margin-bottom: 34px; }
+  .sec-kicker {
+    font-family: var(--mono); font-size: 10px; letter-spacing: 0.45em;
+    text-transform: uppercase; color: var(--faint); margin-bottom: 8px;
+  }
+  h2 {
+    font-family: var(--display); font-weight: 700; font-size: clamp(34px, 5vw, 52px);
+    text-transform: uppercase; letter-spacing: 0.03em; line-height: 1; text-wrap: balance;
+  }
+  .sec-sub { color: var(--muted); max-width: 62ch; margin: 14px auto 0; font-size: 15px; }
+  .sec-sub b, .sec-sub strong { color: var(--text); }
+
+  /* ---------- Timeline ---------- */
+  .tl-controls {
+    display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;
+    margin-bottom: 10px;
+  }
+  .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 4px; overflow: hidden; }
+  .seg button {
+    font-family: var(--display); font-weight: 600; font-size: 13px; letter-spacing: 0.1em;
+    text-transform: uppercase; background: none; border: none; color: var(--muted);
+    padding: 8px 16px; cursor: pointer;
+  }
+  .seg button + button { border-left: 1px solid var(--line); }
+  .seg button.sel { background: var(--green-dark); color: var(--green); }
+  .seg button:focus-visible { outline: 2px solid var(--green); outline-offset: -2px; }
+
+  .tl-progress { max-width: 560px; margin: 18px auto 8px; }
+  .tl-bar { height: 5px; border-radius: 3px; background: rgba(170, 205, 182, 0.1); overflow: hidden; }
+  .tl-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--green-deep), var(--green)); transition: width 0.4s ease; }
+  .tl-stats { font-family: var(--mono); font-size: 11px; color: var(--muted); text-align: center; margin-top: 8px; letter-spacing: 0.04em; }
+  .tl-stats b { color: var(--green); font-weight: 600; }
+  .tl-hint { font-size: 12.5px; color: var(--faint); text-align: center; margin-bottom: 26px; }
+
+  .road {
+    display: grid; grid-template-columns: repeat(6, 1fr);
+    column-gap: 30px; row-gap: 30px; padding: 10px 4px;
+  }
+  @media (max-width: 900px) { .road { grid-template-columns: repeat(4, 1fr); column-gap: 26px; } }
+  @media (max-width: 560px) { .road { grid-template-columns: repeat(3, 1fr); column-gap: 20px; } }
+
+  .sep { grid-column: 1 / -1; text-align: center; padding: 26px 0 6px; }
+  .sep .sep-saga {
+    font-family: var(--display); font-weight: 700; font-size: 24px; letter-spacing: 0.28em;
+    text-transform: uppercase;
+  }
+  .sep .sep-phase {
+    font-family: var(--mono); font-size: 10px; letter-spacing: 0.4em; text-transform: uppercase;
+    color: var(--faint); display: flex; align-items: center; gap: 16px; justify-content: center;
+    margin-top: 4px;
+  }
+  .sep .sep-phase::before, .sep .sep-phase::after { content: ""; width: 60px; height: 1px; background: rgba(170, 205, 182, 0.18); }
+
+  .stop { position: relative; text-align: center; }
+  .stop .poster-wrap {
+    position: relative; cursor: pointer; border-radius: 5px;
+    aspect-ratio: 2 / 3; overflow: hidden;
+    border: 1px solid rgba(190, 220, 200, 0.16);
+    background: linear-gradient(165deg, #10241a, #071009);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  }
+  .stop .poster-wrap:hover {
+    transform: translateY(-4px) scale(1.03);
+    border-color: rgba(63, 220, 140, 0.55);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.6), 0 0 22px rgba(63, 220, 140, 0.18);
+  }
+  .stop img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .stop .poster-fallback {
+    width: 100%; height: 100%; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 6px; padding: 8px;
+  }
+  .poster-fallback .pf-t { font-family: var(--display); font-weight: 700; font-size: 15px; line-height: 1.1; text-transform: uppercase; letter-spacing: 0.06em; }
+  .poster-fallback .pf-y { font-family: var(--mono); font-size: 9px; color: var(--faint); letter-spacing: 0.2em; }
+
+  .stop .arrow {
+    position: absolute; right: -25px; top: 42%;
+    color: rgba(63, 220, 140, 0.65); font-size: 15px; font-family: var(--mono);
+    pointer-events: none;
+  }
+  @media (max-width: 900px) { .stop .arrow { right: -22px; } }
+  @media (max-width: 560px) { .stop .arrow { right: -18px; font-size: 12px; } }
+  .stop[data-id="secretwars"] .arrow { display: none; }
+
+  .stop .check {
+    position: absolute; top: 6px; right: 6px; z-index: 3;
+    width: 24px; height: 24px; border-radius: 50%;
+    border: 1.5px solid rgba(255, 255, 255, 0.55);
+    background: rgba(0, 0, 0, 0.45); color: transparent;
+    font-size: 13px; font-weight: 700; line-height: 1;
+    cursor: pointer; display: grid; place-items: center;
+    backdrop-filter: blur(3px);
+  }
+  .stop .check:hover { border-color: var(--green); color: rgba(63, 220, 140, 0.7); }
+  .stop.watched .check { background: var(--green); border-color: var(--green); color: #04170d; }
+  .stop.watched img { opacity: 0.45; filter: saturate(0.4); }
+  .stop.watched .poster-wrap { border-color: rgba(63, 220, 140, 0.5); }
+  .stop.future .check { display: none; }
+
+  .stop .s-title {
+    font-family: var(--display); font-weight: 600; font-size: 12.5px; line-height: 1.15;
+    letter-spacing: 0.04em; text-transform: uppercase; margin-top: 8px; color: #c9d8cd;
+  }
+  .stop .s-year { font-family: var(--mono); font-size: 9.5px; color: var(--faint); margin-top: 2px; letter-spacing: 0.14em; }
+  .stop .s-year .prio-dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; margin-right: 5px; vertical-align: 1px; }
+  .pd-pflicht { background: var(--green); }
+  .pd-empfohlen { background: var(--blue); }
+  .pd-optional { background: var(--gold); }
+  .pd-komplettist { background: #55665c; }
+  .pd-future { background: var(--red); }
+
+  .stop.dimmed { opacity: 0.22; }
+  .stop.dimmed .poster-wrap { pointer-events: none; }
+  .stop .chrono-n {
+    position: absolute; top: 6px; left: 6px; z-index: 3;
+    font-family: var(--mono); font-size: 9px; color: #dfe9e1;
+    background: rgba(0, 0, 0, 0.55); border-radius: 3px; padding: 2px 5px;
+    letter-spacing: 0.05em; backdrop-filter: blur(3px);
+  }
+
+  .legend {
+    display: flex; flex-wrap: wrap; gap: 14px; justify-content: center;
+    font-size: 11.5px; color: var(--muted); margin-top: 26px;
+    font-family: var(--mono); letter-spacing: 0.03em;
+  }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+
+  .finale { grid-column: 1 / -1; text-align: center; padding: 34px 0 8px; }
+  .finale .f-title { font-family: var(--display); font-weight: 700; font-size: clamp(30px, 4.5vw, 44px); text-transform: uppercase; letter-spacing: 0.06em; }
+  .finale .f-tag { font-family: var(--mono); font-size: 10px; letter-spacing: 0.42em; text-transform: uppercase; color: var(--green); margin-top: 6px; }
+
+  /* ---------- Doomsday-Sektion ---------- */
+  .facts {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px 30px;
+    max-width: 900px; margin: 0 auto 54px; text-align: center;
+  }
+  @media (max-width: 760px) { .facts { grid-template-columns: repeat(2, 1fr); } }
+  .fact .k { font-family: var(--mono); font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--faint); }
+  .fact .v { font-family: var(--display); font-weight: 700; font-size: 21px; letter-spacing: 0.03em; margin-top: 5px; text-transform: uppercase; }
+  .fact .v small { display: block; font-family: var(--body); font-size: 12px; color: var(--muted); font-weight: 400; text-transform: none; letter-spacing: 0; margin-top: 2px; }
+
+  .subhead {
+    font-family: var(--display); font-weight: 700; font-size: 22px; letter-spacing: 0.14em;
+    text-transform: uppercase; text-align: center; margin: 60px 0 24px;
+  }
+  .subhead::after { content: ""; display: block; width: 54px; height: 2px; background: var(--green); margin: 10px auto 0; }
+
+  .news { max-width: 720px; margin: 0 auto; }
+  .news-item { padding: 18px 0; border-bottom: 1px solid rgba(170, 205, 182, 0.09); }
+  .news-item:last-child { border-bottom: none; }
+  .news-date { font-family: var(--mono); font-size: 10.5px; color: var(--green); letter-spacing: 0.16em; text-transform: uppercase; }
+  .news-item h4 { font-family: var(--display); font-weight: 600; font-size: 19px; letter-spacing: 0.03em; margin: 4px 0 4px; }
+  .news-item p { font-size: 14px; color: var(--muted); max-width: 66ch; }
+
+  .cast-cols { max-width: 880px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 8px 56px; }
+  @media (max-width: 700px) { .cast-cols { grid-template-columns: 1fr; } }
+  .cast-g { break-inside: avoid; margin-bottom: 22px; }
+  .cast-g h4 {
+    font-family: var(--mono); font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--green); margin-bottom: 10px;
+  }
+  .cast-row { display: flex; justify-content: space-between; gap: 14px; padding: 5px 0; border-bottom: 1px solid rgba(170, 205, 182, 0.06); font-size: 14px; }
+  .cast-row .cn { font-weight: 600; color: #d5e2d8; }
+  .cast-row .cr { color: var(--muted); text-align: right; font-size: 13px; }
+
+  /* ---------- Lore ---------- */
+  .lore-wrap { max-width: 700px; margin: 0 auto; }
+  .chapter { margin-bottom: 52px; }
+  .chapter .ch-num {
+    font-family: var(--display); font-weight: 700; font-size: 15px; color: var(--green);
+    letter-spacing: 0.3em; text-transform: uppercase;
+  }
+  .chapter h3 { font-family: var(--display); font-weight: 700; font-size: 27px; text-transform: uppercase; letter-spacing: 0.04em; margin: 4px 0 12px; text-wrap: balance; }
+  .chapter p { color: #b9c8bd; font-size: 15.5px; margin-bottom: 12px; }
+  .chapter p strong { color: var(--text); }
+  .doom-quote {
+    text-align: center; margin: 56px auto; max-width: 560px;
+  }
+  .doom-quote .q {
+    font-family: var(--display); font-weight: 700; font-size: clamp(22px, 3.4vw, 30px);
+    text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.25; text-wrap: balance;
+  }
+  .doom-quote .qs { font-family: var(--mono); font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--faint); margin-top: 12px; }
+
+  /* ---------- Theorien ---------- */
+  .theories { max-width: 760px; margin: 0 auto; }
+  .theory { padding: 26px 0; border-bottom: 1px solid rgba(170, 205, 182, 0.09); }
+  .theory:last-child { border-bottom: none; }
+  .theory h3 { font-family: var(--display); font-weight: 600; font-size: 21px; text-transform: uppercase; letter-spacing: 0.04em; text-wrap: balance; }
+  .theory .t-src { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-top: 2px; }
+  .theory p { font-size: 14.5px; color: #b3c2b7; margin-top: 8px; max-width: 72ch; }
+  .plaus { display: flex; align-items: center; gap: 14px; margin-top: 14px; }
+  .plaus-track { flex: 0 1 260px; height: 4px; border-radius: 2px; background: rgba(170, 205, 182, 0.1); overflow: hidden; }
+  .plaus-fill { height: 100%; background: linear-gradient(90deg, var(--green-deep), var(--green)); }
+  .plaus-fill.mid { background: linear-gradient(90deg, #6b5320, var(--gold)); }
+  .plaus-fill.low { background: linear-gradient(90deg, #5c2426, var(--red)); }
+  .plaus-pct { font-family: var(--mono); font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+  /* ---------- Glossar ---------- */
+  .gloss-search {
+    display: block; width: 100%; max-width: 380px; margin: 0 auto 28px;
+    background: rgba(10, 18, 13, 0.7); border: 1px solid var(--line); border-radius: 4px;
+    color: var(--text); font-family: var(--body); font-size: 14px; padding: 11px 16px; text-align: center;
+  }
+  .gloss-search::placeholder { color: var(--faint); }
+  .gloss-search:focus { outline: none; border-color: var(--green-deep); }
+  .gloss-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 40px; max-width: 880px; margin: 0 auto; }
+  @media (max-width: 760px) { .gloss-grid { grid-template-columns: 1fr; } }
+  .gloss { padding: 13px 0; border-bottom: 1px solid rgba(170, 205, 182, 0.07); }
+  .gloss dt { font-family: var(--display); font-weight: 600; font-size: 16.5px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .gloss dt small { font-family: var(--mono); font-size: 9px; color: var(--faint); letter-spacing: 0.16em; margin-left: 8px; text-transform: none; }
+  .gloss dd { font-size: 13.5px; color: var(--muted); margin-top: 3px; }
+
+  /* ---------- Spoiler ---------- */
+  .spoiler { filter: blur(6px); cursor: pointer; user-select: none; transition: filter 0.25s ease; border-radius: 2px; }
+  body.show-spoilers .spoiler, .spoiler.revealed { filter: none; user-select: auto; cursor: auto; }
+
+  /* ---------- Modal ---------- */
+  .modal-back {
+    position: fixed; inset: 0; z-index: 100;
+    background: rgba(3, 6, 4, 0.82);
+    backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    display: none; align-items: flex-start; justify-content: center;
+    padding: 6vh 18px 40px; overflow-y: auto;
+  }
+  .modal-back.open { display: flex; }
+  .modal {
+    background: linear-gradient(170deg, #0d1a12, #070d09 60%);
+    border: 1px solid rgba(63, 220, 140, 0.25);
+    border-radius: 8px; max-width: 660px; width: 100%;
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.7);
+    animation: modalin 0.25s ease; overflow: hidden;
+  }
+  @keyframes modalin { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+  .m-top { display: flex; gap: 22px; padding: 26px 28px 20px; }
+  .m-poster { flex: 0 0 128px; }
+  .m-poster img, .m-poster .poster-fallback {
+    width: 128px; aspect-ratio: 2/3; object-fit: cover; border-radius: 5px;
+    border: 1px solid rgba(190, 220, 200, 0.2); display: block;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+  .m-poster .poster-fallback { display: flex; background: linear-gradient(165deg, #10241a, #071009); }
+  .m-head h3 { font-family: var(--display); font-weight: 700; font-size: 27px; text-transform: uppercase; letter-spacing: 0.03em; line-height: 1.05; text-wrap: balance; }
+  .m-facts { font-family: var(--mono); font-size: 11px; color: var(--muted); margin-top: 8px; line-height: 1.9; letter-spacing: 0.04em; }
+  .m-facts b { color: #cfdfd4; font-weight: 600; }
+  .m-close {
+    position: absolute; top: 14px; right: 14px;
+    background: rgba(0, 0, 0, 0.4); border: 1px solid var(--line); border-radius: 4px;
+    color: var(--muted); width: 30px; height: 30px; cursor: pointer; font-size: 13px;
+  }
+  .m-close:hover { color: var(--text); border-color: var(--green-deep); }
+  .m-body { padding: 0 28px 24px; }
+  .m-label { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--green); margin: 16px 0 5px; }
+  .m-body p { font-size: 14.5px; color: #b9c8bd; }
+  .m-castline { font-size: 13.5px; color: var(--muted); }
+  .m-castline b { color: #d5e2d8; font-weight: 600; }
+  .m-watch {
+    margin-top: 20px; width: 100%;
+    font-family: var(--display); font-weight: 600; font-size: 15px; letter-spacing: 0.14em;
+    text-transform: uppercase; padding: 12px; cursor: pointer; border-radius: 4px;
+    background: none; border: 1px solid rgba(63, 220, 140, 0.4); color: var(--green);
+  }
+  .m-watch:hover { background: var(--green-dark); }
+  .m-watch.is-watched { background: var(--green); color: #04170d; border-color: var(--green); }
+  .m-prio { display: inline-block; font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; margin-top: 10px; }
+
+  footer { text-align: center; padding: 70px 22px 54px; color: var(--faint); font-size: 12.5px; }
+  footer .f-sig { font-family: var(--mono); font-size: 9px; letter-spacing: 0.4em; text-transform: uppercase; color: rgba(63, 220, 140, 0.35); margin-top: 18px; }
+  footer a { color: var(--muted); }
+  footer p { max-width: 70ch; margin: 0 auto 6px; }
+</style>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="#top">Marvel<b>·</b>Hub</a>
+    <div class="nav-links" id="navLinks">
+      <a href="#saga">Saga-Timeline</a>
+      <a href="#doomsday">Doomsday</a>
+      <a href="#lore">Lore</a>
+      <a href="#theorien">Theorien</a>
+      <a href="#glossar">Glossar</a>
+    </div>
+    <button class="spoiler-btn" id="spoilerToggle" aria-pressed="false">Spoiler: aus</button>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-rule">The Multiverse Saga</div>
+  <div class="hero-roadto">· The Road to ·</div>
+  <h1 class="metal"><small>Avengers</small>Doomsday</h1>
+  <div class="hero-tag">Every Story leads to Doom</div>
+  <div class="cd">
+    <div class="cd-days metal" id="cdDays">···</div>
+    <div class="cd-days-label">Tage bis zum Kinostart</div>
+    <div class="cd-sub" id="cdClock"></div>
+    <div class="cd-info">
+      Deutschland vsl. <b>16. Dezember 2026</b> · USA 18. Dezember 2026<br>
+      Danach: <b>Avengers: Secret Wars</b> — 17. Dezember 2027 (<span id="cdSW">…</span> Tage)
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- ============ SAGA-TIMELINE ============ -->
+  <section class="block" id="saga">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-kicker">Jede Geschichte zählt</div>
+        <h2 class="metal">Die Saga-Timeline</h2>
+        <p class="sec-sub">Der komplette Weg von Iron Man bis Doomsday — <b>klick auf ein Poster</b> für Story, Cast, Regie und die Bedeutung für Doomsday. Mit dem <b>✓</b> hakst du ab, was du gesehen hast; dein Fortschritt bleibt gespeichert.</p>
+      </div>
+
+      <div class="tl-controls">
+        <div class="seg" id="segSort" role="group" aria-label="Sortierung">
+          <button class="sel" data-sort="release">Release</button>
+          <button data-sort="chrono">Chronologisch</button>
+        </div>
+        <div class="seg" id="segFilter" role="group" aria-label="Filter">
+          <button class="sel" data-filter="alle">Alles</button>
+          <button data-filter="empfohlen">Der schnelle Weg</button>
+          <button data-filter="pflicht">Nur Pflicht</button>
+        </div>
+      </div>
+
+      <div class="tl-progress">
+        <div class="tl-bar"><div class="tl-fill" id="tlFill"></div></div>
+        <div class="tl-stats" id="tlStats">…</div>
+      </div>
+      <div class="tl-hint" id="tlHint">„Der schnelle Weg" = Pflicht + Empfohlen. Ausgegraute Titel kannst du fürs Doomsday-Verständnis überspringen.</div>
+
+      <div class="road" id="road"></div>
+
+      <div class="legend">
+        <span><i class="prio-dot pd-pflicht" style="display:inline-block;width:7px;height:7px;border-radius:50%"></i> Pflicht</span>
+        <span><i class="prio-dot pd-empfohlen" style="display:inline-block;width:7px;height:7px;border-radius:50%"></i> Empfohlen</span>
+        <span><i class="prio-dot pd-optional" style="display:inline-block;width:7px;height:7px;border-radius:50%"></i> Optional</span>
+        <span><i class="prio-dot pd-komplettist" style="display:inline-block;width:7px;height:7px;border-radius:50%"></i> Komplettist</span>
+        <span><i class="prio-dot pd-future" style="display:inline-block;width:7px;height:7px;border-radius:50%"></i> Kommend</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DOOMSDAY ============ -->
+  <section class="block" id="doomsday">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-kicker">Dossier · Phase Sechs</div>
+        <h2 class="metal">Avengers: Doomsday</h2>
+        <p class="sec-sub">Alles Bestätigte zum größten Marvel-Film seit Endgame — Stand 31. Juli 2026.</p>
+      </div>
+
+      <div class="facts">
+        <div class="fact"><div class="k">Kinostart</div><div class="v">18. Dez 2026<small>Deutschland vsl. 16. Dez</small></div></div>
+        <div class="fact"><div class="k">Regie</div><div class="v">Russo-Brüder<small>Infinity War · Endgame</small></div></div>
+        <div class="fact"><div class="k">Drehbuch</div><div class="v">Stephen McFeely<small>Endgame-Co-Autor</small></div></div>
+        <div class="fact"><div class="k">Der Schurke</div><div class="v">Doctor Doom<small>Robert Downey Jr.</small></div></div>
+        <div class="fact"><div class="k">Dreh</div><div class="v">London 2025<small>Nachdrehs 2026</small></div></div>
+        <div class="fact"><div class="k">Ensemble</div><div class="v">30+ Stars<small>größter MCU-Cast aller Zeiten</small></div></div>
+        <div class="fact"><div class="k">Trailer</div><div class="v">20. Juli 2026<small>+ exklusiver SDCC-Trailer</small></div></div>
+        <div class="fact"><div class="k">Teil 2</div><div class="v">Secret Wars<small>17. Dez 2027 · Saga-Finale</small></div></div>
+      </div>
+
+      <div class="subhead">Aktuelle News</div>
+      <div class="news">
+        <div class="news-item">
+          <div class="news-date">Juli 2026 · Comic-Con</div>
+          <h4>Hall H eskaliert komplett</h4>
+          <p>Exklusiver Trailer nur für den Saal: Doom <span class="spoiler">stoppt Thors Stormbreaker mit bloßer Hand und erweckt eine Sentinel-Armee</span>. Außerdem bestätigt: <span class="spoiler">Ryan Gosling spielt Ghost Rider, David Jonsson ist der neue Black Panther</span>.</p>
+        </div>
+        <div class="news-item">
+          <div class="news-date">20. Juli 2026</div>
+          <h4>Der erste offizielle Trailer ist da</h4>
+          <p>Nach über einem Jahr Funkstille zeigt Marvel bewegte Bilder — inklusive erstem vollen Blick auf RDJs Doom in Maske und Umhang.</p>
+        </div>
+        <div class="news-item">
+          <div class="news-date">Mai 2025</div>
+          <h4>Verschiebung auf Dezember</h4>
+          <p>Doomsday rückt vom Mai auf den 18. Dezember 2026, Secret Wars auf den 17. Dezember 2027 — mehr Zeit für die zwei größten Disney-Produktionen aller Zeiten.</p>
+        </div>
+        <div class="news-item">
+          <div class="news-date">26. März 2025</div>
+          <h4>Der legendäre Stühle-Livestream</h4>
+          <p>Über 5 Stunden enthüllt Marvel Cast-Namen auf Regiestühlen — und lässt die Bombe platzen: Die originalen X-Men-Stars (Stewart, McKellen, Grammer, Marsden, Romijn, Cumming) sind dabei.</p>
+        </div>
+        <div class="news-item">
+          <div class="news-date">Juli 2024 · Comic-Con</div>
+          <h4>„New mask, same task" — RDJ ist Doom</h4>
+          <p>Robert Downey Jr. nimmt in Hall H die Doom-Maske ab. Der Kang-Plan ist tot, Doctor Doom übernimmt die Saga. Kinogeschichte, live.</p>
+        </div>
+      </div>
+
+      <div class="subhead">Der Cast</div>
+      <div class="cast-cols">
+        <div>
+          <div class="cast-g">
+            <h4>Latveria</h4>
+            <div class="cast-row"><span class="cn">Robert Downey Jr.</span><span class="cr">Victor von Doom / Doctor Doom</span></div>
+          </div>
+          <div class="cast-g">
+            <h4>Avengers &amp; Verbündete</h4>
+            <div class="cast-row"><span class="cn">Chris Hemsworth</span><span class="cr">Thor</span></div>
+            <div class="cast-row"><span class="cn">Anthony Mackie</span><span class="cr">Captain America</span></div>
+            <div class="cast-row"><span class="cn">Paul Rudd</span><span class="cr">Ant-Man</span></div>
+            <div class="cast-row"><span class="cn">Tom Hiddleston</span><span class="cr">Loki</span></div>
+            <div class="cast-row"><span class="cn">Letitia Wright</span><span class="cr">Shuri / Black Panther</span></div>
+            <div class="cast-row"><span class="cn">Winston Duke</span><span class="cr">M'Baku</span></div>
+            <div class="cast-row"><span class="cn">Simu Liu</span><span class="cr">Shang-Chi</span></div>
+            <div class="cast-row"><span class="cn">Danny Ramirez</span><span class="cr">Falcon</span></div>
+            <div class="cast-row"><span class="cn">Kathryn Newton</span><span class="cr">Cassie Lang</span></div>
+            <div class="cast-row"><span class="cn">Tenoch Huerta Mejía</span><span class="cr">Namor</span></div>
+            <div class="cast-row"><span class="cn">Mabel Cadena</span><span class="cr">Namora</span></div>
+            <div class="cast-row"><span class="cn">Chris Evans</span><span class="cr">Rolle geheim — Steve? Johnny?</span></div>
+          </div>
+          <div class="cast-g">
+            <h4>New Avengers (Thunderbolts*)</h4>
+            <div class="cast-row"><span class="cn">Florence Pugh</span><span class="cr">Yelena Belova</span></div>
+            <div class="cast-row"><span class="cn">Sebastian Stan</span><span class="cr">Bucky Barnes</span></div>
+            <div class="cast-row"><span class="cn">David Harbour</span><span class="cr">Red Guardian</span></div>
+            <div class="cast-row"><span class="cn">Wyatt Russell</span><span class="cr">U.S. Agent</span></div>
+            <div class="cast-row"><span class="cn">Hannah John-Kamen</span><span class="cr">Ghost</span></div>
+            <div class="cast-row"><span class="cn">Lewis Pullman</span><span class="cr">Sentry / Void</span></div>
+          </div>
+        </div>
+        <div>
+          <div class="cast-g">
+            <h4>Fantastic Four (Erde-828)</h4>
+            <div class="cast-row"><span class="cn">Pedro Pascal</span><span class="cr">Mister Fantastic</span></div>
+            <div class="cast-row"><span class="cn">Vanessa Kirby</span><span class="cr">Invisible Woman</span></div>
+            <div class="cast-row"><span class="cn">Joseph Quinn</span><span class="cr">Human Torch</span></div>
+            <div class="cast-row"><span class="cn">Ebon Moss-Bachrach</span><span class="cr">The Thing</span></div>
+          </div>
+          <div class="cast-g">
+            <h4>X-Men · Das Fox-Erbe</h4>
+            <div class="cast-row"><span class="cn">Patrick Stewart</span><span class="cr">Professor X</span></div>
+            <div class="cast-row"><span class="cn">Ian McKellen</span><span class="cr">Magneto</span></div>
+            <div class="cast-row"><span class="cn">Kelsey Grammer</span><span class="cr">Beast</span></div>
+            <div class="cast-row"><span class="cn">James Marsden</span><span class="cr">Cyclops</span></div>
+            <div class="cast-row"><span class="cn">Rebecca Romijn</span><span class="cr">Mystique</span></div>
+            <div class="cast-row"><span class="cn">Alan Cumming</span><span class="cr">Nightcrawler</span></div>
+            <div class="cast-row"><span class="cn">Channing Tatum</span><span class="cr">Gambit</span></div>
+          </div>
+          <div class="cast-g">
+            <h4>Comic-Con-Enthüllungen 2026</h4>
+            <div class="cast-row"><span class="cn spoiler">Ryan Gosling</span><span class="cr spoiler">Ghost Rider</span></div>
+            <div class="cast-row"><span class="cn spoiler">David Jonsson</span><span class="cr spoiler">der neue Black Panther</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LORE ============ -->
+  <section class="block" id="lore">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-kicker">Das Hintergrund-Dossier</div>
+        <h2 class="metal">Die Lore</h2>
+        <p class="sec-sub">Von Comic-Wurzeln aus 1962 bis zum aktuellen Stand des Multiversums — alles, was du brauchst, um Doomsday wirklich zu verstehen.</p>
+      </div>
+
+      <div class="lore-wrap">
+        <div class="chapter">
+          <div class="ch-num">Kapitel I</div>
+          <h3>Wer ist Doctor Doom?</h3>
+          <p>Victor von Doom debütierte 1962 in <strong>Fantastic Four #5</strong> und gilt als der größte Schurke, den Marvel je erschaffen hat. Er ist Monarch des osteuropäischen Kleinstaats <strong>Latveria</strong>, ein Genie auf Augenhöhe mit Reed Richards — und zugleich einer der mächtigsten Magier des Marvel-Universums. Wissenschaft, Magie und absoluter Herrschaftsanspruch in einer Person: Das macht ihn einzigartig.</p>
+          <p>Sein Kernmotiv: Doom ist überzeugt, dass die Welt unter seiner Herrschaft besser wäre — und das Erschreckende ist, dass er in den Comics gelegentlich <strong>Recht behält</strong>. Er ist kein Zerstörer wie Thanos, sondern ein Möchtegern-Erlöser mit grenzenlosem Ego, der seine Mutter aus der Hölle befreien wollte und Reed Richards die Schuld an seinem vernarbten Gesicht gibt.</p>
+        </div>
+
+        <div class="chapter">
+          <div class="ch-num">Kapitel II</div>
+          <h3>Die Kang-Krise und der große Pivot</h3>
+          <p>Dieser Film hieß ursprünglich <strong>„Avengers: The Kang Dynasty"</strong>. Kang der Eroberer (Jonathan Majors) wurde seit Loki Staffel 1 als Saga-Schurke aufgebaut — inklusive Council of Kangs in Quantumania. Nach Majors' Verurteilung trennte sich Marvel im Dezember 2023 von ihm, und die Saga brauchte ein neues Zentrum.</p>
+          <p>Auf der Comic-Con im Juli 2024 folgte der historische Moment: Die Russos kehren zurück, der Film heißt <strong>Doomsday</strong> — und unter der Maske steckt Robert Downey Jr. Marvel ersetzte den gescheiterten Plan nicht mit einem Notnagel, sondern mit der größten Figur, die noch übrig war, gespielt vom Gesicht des MCU selbst.</p>
+        </div>
+
+        <div class="chapter">
+          <div class="ch-num">Kapitel III</div>
+          <h3>Heilige Zeitlinie, TVA und Varianten</h3>
+          <p>Loki Staffel 1 etablierte die Regeln: Es gab einen <strong>multiversalen Krieg</strong> zwischen unzähligen Zeitlinien. Eine Kang-Variante („Er, der bleibt") beendete ihn, indem sie alles auf eine einzige <strong>Heilige Zeitlinie</strong> stutzte, bewacht von der <strong>TVA</strong>. Sylvies Königsmord öffnete den Ast-Dschungel wieder — seitdem wuchert das Multiversum unkontrolliert.</p>
+          <p>In Staffel 2 opfert sich Loki und wird zum <strong>Gott der Geschichten</strong>: Er hält am Ende der Zeit sämtliche Zeitlinien wie einen lebenden Baum eigenhändig zusammen. Merk dir das — es ist das wichtigste offene Chekhovs Gewehr der Saga.</p>
+        </div>
+
+        <div class="chapter">
+          <div class="ch-num">Kapitel IV</div>
+          <h3>Inkursionen — wenn Universen kollidieren</h3>
+          <p><strong>Multiverse of Madness</strong> lieferte den Begriff, der Doomsday antreibt: Eine <strong>Inkursion</strong> ist die Kollision zweier Universen, bei der eines oder beide vollständig zerstört werden — ausgelöst, wenn die Grenzen zwischen Welten zu oft verletzt werden.</p>
+          <p>Wir haben bereits eine gesehen: Strange besucht ein kollabierendes Universum in Trümmern, und Clea holt ihn am Ende ab, um eine Inkursion zu reparieren, „die du verursacht hast". In den Comics sind Inkursionen der direkte Auslöser von Secret Wars — der Untergang aller Welten, aus deren Trümmern Doom sein Battleworld formt.</p>
+        </div>
+
+        <div class="doom-quote">
+          <div class="q metal">„Götter? Der einzige Gott, den diese Welt braucht, trägt eine Maske aus Eisen."</div>
+          <div class="qs">— sinngemäß jede zweite Doom-Comicseite seit 1962</div>
+        </div>
+
+        <div class="chapter">
+          <div class="ch-num">Kapitel V</div>
+          <h3>Secret Wars: Die Blaupause</h3>
+          <p>Zwei Comic-Vorlagen tragen den Namen: die Original-<strong>Secret Wars (1984)</strong> — und Jonathan Hickmans <strong>Secret Wars (2015)</strong>, das eigentliche Vorbild. Dort stirbt das Multiversum durch Inkursionen, und im letzten Moment reißt Doom die Macht der Beyonder an sich.</p>
+          <p>Er erschafft <strong>Battleworld</strong>: einen Flickenteppich-Planeten aus den Überresten zerstörter Universen, den er als <strong>God Emperor Doom</strong> regiert — mit umgeschriebener Realität, in der sich niemand an die alte Welt erinnert. Nur eine Handvoll Überlebender stellt sich ihm, allen voran Reed Richards. Wenn Doomsday dieser Struktur auch nur grob folgt, wissen wir, wohin die Reise geht.</p>
+        </div>
+
+        <div class="chapter">
+          <div class="ch-num">Kapitel VI</div>
+          <h3>Franklin Richards — das mächtigste Kind des Multiversums</h3>
+          <p>Die Post-Credit-Szene von <strong>First Steps</strong> ist der direkte Einstieg in Doomsday: <span class="spoiler">Vier Jahre später findet Sue den kleinen Franklin bei einer Gestalt mit grünem Umhang und Metallmaske — Doom kniet vor dem Jungen.</span> In den Comics ist Franklin ein Realitätsformer der Omega-Stufe, der <strong>ganze Universen erschaffen</strong> kann — und in Hickmans Secret Wars hält seine Kraft Dooms Battleworld am Leben.</p>
+          <p>Wenn das MCU dem folgt, ist Franklin nicht einfach ein Kind in Gefahr. Er ist die Batterie, mit der Doom Gott spielen will.</p>
+        </div>
+
+        <div class="chapter">
+          <div class="ch-num">Kapitel VII</div>
+          <h3>Anker-Wesen, Erde-838 und das Fox-Erbe</h3>
+          <p><strong>Deadpool &amp; Wolverine</strong> erklärte zwei entscheidende Konzepte: Jedes Universum hat ein <strong>Anker-Wesen</strong>, dessen Tod die ganze Zeitlinie sterben lässt — und das alte Fox-Universum existiert als eigener Ast im MCU-Multiversum, inklusive Void als Müllhalde für aussortierte Charaktere.</p>
+          <p>Dazu kommen <strong>Erde-838</strong> mit ihren Illuminati und der Post-Credit-Auftritt von <strong>Beast</strong> in The Marvels. Die Mauern zwischen Fox-Vergangenheit und MCU-Gegenwart sind längst durchlöchert — Doomsday muss sie nur noch einreißen. Genau dafür steht der halbe Cast.</p>
+        </div>
+
+        <div class="chapter">
+          <div class="ch-num">Kapitel VIII</div>
+          <h3>Was sonst noch auf dem Brett liegt</h3>
+          <p><strong>Sentry &amp; Void:</strong> Das MCU hat ein Wesen auf Weltenzerstörer-Level im Team der New Avengers — instabil, traumatisiert, und exakt die Art Waffe, um die in einem Multiversum-Krieg gekämpft wird.</p>
+          <p><strong>Mephisto:</strong> <span class="spoiler">Sacha Baron Cohen ist seit Ironheart als Marvels Teufel etabliert — ein Deal-Macher, der langfristig ein eigenes Schwergewicht wird.</span></p>
+          <p><strong>Der Council of Kangs:</strong> Nie aufgelöst. Tausende Kang-Varianten warten theoretisch noch — und in den Comics ist es Doom, der aufräumt, was Kang nie zu Ende bringt.</p>
+          <p><strong>Wiccan:</strong> <span class="spoiler">Billy Maximoff lebt (Agatha All Along) — Wandas Sohn ist ein Realitäts-Magier, und die halbe Young-Avengers-Gründung ist damit komplett.</span></p>
+        </div>
+
+        <div class="chapter">
+          <div class="ch-num">Kapitel IX</div>
+          <h3>Latveria — der Staat, der bald auf jeder Karte steht</h3>
+          <p>In den Comics ist Latveria ein osteuropäischer Kleinstaat zwischen Rumänien, Serbien und Ungarn: malerische Dörfer, Doombots als Polizei, null Kriminalität, null Freiheit. Der Trick, der Doom von jedem anderen Schurken unterscheidet: Er ist ein <strong>Staatsoberhaupt mit diplomatischer Immunität</strong>. Man kann ihn nicht einfach verhaften — jeder Angriff auf Doom ist völkerrechtlich ein Angriff auf sein Land.</p>
+          <p>Für Doomsday heißt das: Die Avengers bekommen einen Gegner, gegen den Faustrecht diplomatische Krisen auslöst. Und seine Bevölkerung? Liebt ihn größtenteils wirklich — Latveria hat keine Armut, keine Kriege, keine Wahlen. Die unbequemste Frage der Comics seit 60 Jahren: Was, wenn der Tyrann liefert?</p>
+        </div>
+
+        <div class="chapter">
+          <div class="ch-num">Kapitel X</div>
+          <h3>Der Fahrplan bis zum Finale</h3>
+          <p>So liegt die Strecke vor uns: <strong>Doomsday</strong> (Dezember 2026) eröffnet den Zweiteiler — nach allem, was Struktur und Comics nahelegen, mit einem Ende, das wehtut. Dazwischen liegt ein Jahr, das Marvel vermutlich mit gezielten Serien füllt, bevor <strong>Secret Wars</strong> (Dezember 2027) die Saga beendet und die Karten neu mischt: eine vereinte Zeitlinie, Mutanten inklusive, X-Men-Neustart dahinter.</p>
+          <p>Merksatz für alles, was bis dahin erscheint: Wenn es um <strong>Varianten, Inkursionen, Anker-Wesen oder Franklin</strong> geht, ist es Pflichtstoff. Der Rest ist Kür. Dieses Dossier sortiert das laufend — und wird nach jedem Trailer aktualisiert.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THEORIEN ============ -->
+  <section class="block" id="theorien">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-kicker">Spekulation · Kein Kanon</div>
+        <h2 class="metal">Der Theorien-Tisch</h2>
+        <p class="sec-sub">Die heißesten Fan-Theorien mit redaktioneller Plausibilitäts-Einschätzung — auf Basis von Comics, Cast-Liste und Leaks.</p>
+      </div>
+
+      <div class="theories">
+        <div class="theory">
+          <h3>Nach Secret Wars: eine neue, vereinte Zeitlinie mit Mutanten</h3>
+          <p>Der Meta-Zweck der Saga: Secret Wars als eleganter Reset, der Fox-Erbe, Sony-Verträge und 17 Jahre Kontinuität in eine frische Zeitlinie verschmilzt — mit Mutanten, die „schon immer da waren". Danach: X-Men-Neustart. Praktisch jede Insider-Quelle deutet in diese Richtung.</p>
+          <div class="plaus"><div class="plaus-track"><div class="plaus-fill" style="width:90%"></div></div><div class="plaus-pct">90 %</div></div>
+        </div>
+        <div class="theory">
+          <h3>Doomsday endet mit der Geburt von Battleworld</h3>
+          <div class="t-src">Comic-Vorlage</div>
+          <p>Die naheliegende Zweiteiler-Struktur nach Hickman: Die Helden <em>verlieren</em>, die Inkursionen gewinnen — und der Cliffhanger ist Dooms zusammengeflickte Welt, auf der Secret Wars dann spielt. Infinity War hat bewiesen, dass die Russos den Mut zum Schurken-Sieg haben.</p>
+          <div class="plaus"><div class="plaus-track"><div class="plaus-fill" style="width:88%"></div></div><div class="plaus-pct">88 %</div></div>
+        </div>
+        <div class="theory">
+          <h3>Franklin Richards ist Dooms Machtquelle</h3>
+          <div class="t-src">Comic-Vorlage</div>
+          <p>In den Comics speist Franklins universumserschaffende Kraft Battleworld. Das MCU hat den Weg gepflastert: <span class="spoiler">Doom steht in der F4-Post-Credit-Szene neben dem Jungen.</span> Der emotionale Motor des Films könnte schlicht sein: Reed und Sue wollen ihr Kind zurück — von einem Gott.</p>
+          <div class="plaus"><div class="plaus-track"><div class="plaus-fill" style="width:82%"></div></div><div class="plaus-pct">82 %</div></div>
+        </div>
+        <div class="theory">
+          <h3>Lokis Zeitlinien-Baum ist das eigentliche Ziel</h3>
+          <p>Loki hält alle Zeitlinien physisch zusammen. Wer das Multiversum kontrollieren oder kollabieren lassen will, muss durch ihn hindurch. Entweder bricht Doom den Baum — oder Loki muss die schwerste Entscheidung der Saga treffen: Äste sterben lassen, um den Stamm zu retten. Hiddlestons Casting ergibt sonst wenig Sinn.</p>
+          <div class="plaus"><div class="plaus-track"><div class="plaus-fill" style="width:78%"></div></div><div class="plaus-pct">78 %</div></div>
+        </div>
+        <div class="theory">
+          <h3>Hugh Jackman taucht (wieder) auf</h3>
+          <p>Nicht offiziell im Cast — aber sein Wolverine überlebte Deadpool &amp; Wolverine, sein Universum hängt an ihm als Anker-Wesen, und Secret Wars ohne den besten X-Man wäre ein seltsames Abschiedsfest. Wenn nicht in Doomsday, dann im Finale.</p>
+          <div class="plaus"><div class="plaus-track"><div class="plaus-fill" style="width:72%"></div></div><div class="plaus-pct">72 %</div></div>
+        </div>
+        <div class="theory">
+          <h3>Der Council of Kangs wird von Doom ausgelöscht</h3>
+          <div class="t-src">Comic-Logik</div>
+          <p>Elegant für Marvel: Der offene Kang-Faden wird zur Charakterisierung genutzt — Doom eliminiert den Council in einer Sequenz und beweist, in welcher Liga er spielt. Das SDCC-Material (<span class="spoiler">Doom stoppt Stormbreaker mit einer Hand</span>) deutet genau diese Machtdemonstration an.</p>
+          <div class="plaus"><div class="plaus-track"><div class="plaus-fill" style="width:68%"></div></div><div class="plaus-pct">68 %</div></div>
+        </div>
+        <div class="theory">
+          <h3>Chris Evans spielt NICHT Steve Rogers</h3>
+          <p>Evans ist bestätigt, seine Rolle nicht. Er hat Steve-Comebacks jahrelang abgewunken — spielte aber 2024 genüsslich Johnny Storm. Eine Human-Torch-Variante oder ein dunkler Steve aus einem anderen Universum wäre der interessantere Weg; Old-Man-Steve als emotionaler Schlusspunkt bleibt denkbar.</p>
+          <div class="plaus"><div class="plaus-track"><div class="plaus-fill mid" style="width:60%"></div></div><div class="plaus-pct">60 %</div></div>
+        </div>
+        <div class="theory">
+          <h3>Tote kehren als Varianten zurück</h3>
+          <p>Das Multiversum macht jeden Abschied verhandelbar: eine Iron-Man-Variante, eine Black Widow, ein T'Challa aus einer anderen Welt. Marvel wird das sparsam einsetzen müssen, sonst entwertet es Endgame — aber ein, zwei gezielte Auftritte gelten als sicher. <span class="spoiler">Der neue Black Panther könnte genau so eine Variante sein.</span></p>
+          <div class="plaus"><div class="plaus-track"><div class="plaus-fill mid" style="width:58%"></div></div><div class="plaus-pct">58 %</div></div>
+        </div>
+        <div class="theory">
+          <h3>Doom ist eine Tony-Stark-Variante</h3>
+          <div class="t-src">Heiß diskutiert</div>
+          <p>Warum sonst RDJ? Die Theorie: In einem anderen Universum wurde Tony nicht Iron Man, sondern Doom — ein Tony, der nie aufhören konnte, „die Welt zu retten". Dagegen: Die Russos betonen, Doom sei eine komplett eigene Figur. Dafür: Marvel castet RDJ nicht ohne Grund.</p>
+          <div class="plaus"><div class="plaus-track"><div class="plaus-fill mid" style="width:55%"></div></div><div class="plaus-pct">55 %</div></div>
+        </div>
+        <div class="theory">
+          <h3>Mephisto ist der Strippenzieher hinter Doom</h3>
+          <p>Seit Ironheart ist Mephisto real. Die Theorie: Dooms Magie hat einen Preis, und der Teufel kassiert am Ende. Aktuell mehr Wunschdenken als Indizienlage — Doom hat es in den Comics nie nötig gehabt, für irgendwen die zweite Geige zu spielen.</p>
+          <div class="plaus"><div class="plaus-track"><div class="plaus-fill low" style="width:30%"></div></div><div class="plaus-pct">30 %</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GLOSSAR ============ -->
+  <section class="block" id="glossar">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-kicker">Nachschlagewerk</div>
+        <h2 class="metal">Das Nerd-Glossar</h2>
+      </div>
+      <input class="gloss-search" id="glossSearch" type="search" placeholder="Begriff suchen …" aria-label="Glossar durchsuchen">
+      <div class="gloss-grid" id="glossGrid">
+        <dl class="gloss"><dt>Inkursion <small>MoM · 2022</small></dt><dd>Kollision zweier Universen, die eines oder beide auslöscht. Der Motor von Secret Wars.</dd></dl>
+        <dl class="gloss"><dt>Anker-Wesen <small>Deadpool &amp; Wolverine</small></dt><dd>Person, an deren Existenz die Stabilität ihres gesamten Universums hängt. Stirbt sie, stirbt die Zeitlinie.</dd></dl>
+        <dl class="gloss"><dt>Heilige Zeitlinie <small>Loki S1</small></dt><dd>Die eine erlaubte Zeitlinie, die „Er, der bleibt" übrig ließ — bis Sylvie ihn tötete und alles wieder verzweigte.</dd></dl>
+        <dl class="gloss"><dt>TVA <small>Time Variance Authority</small></dt><dd>Behörde außerhalb von Raum und Zeit. Früher Zeitlinien-Polizei, heute Multiversums-Katastrophenschutz.</dd></dl>
+        <dl class="gloss"><dt>Battleworld <small>Comics</small></dt><dd>Dooms Flickenteppich-Planet aus Fragmenten zerstörter Universen. Mutmaßliches Setting von Secret Wars.</dd></dl>
+        <dl class="gloss"><dt>God Emperor Doom <small>Secret Wars 2015</small></dt><dd>Doom mit der Macht der Beyonder: Schöpfer und Alleinherrscher von Battleworld mit umgeschriebener Realität.</dd></dl>
+        <dl class="gloss"><dt>Erde-616 <small>Haupt-MCU</small></dt><dd>Bezeichnung des Haupt-MCU-Universums (so in MoM benannt — Comic-Puristen meinen mit 616 die Comicwelt; herrlicher Nerd-Streit).</dd></dl>
+        <dl class="gloss"><dt>Erde-838 <small>MoM</small></dt><dd>Illuminati-Universum: Professor X, Captain Carter, Black Bolt, Mr. Fantastic — von Wanda ausgelöscht.</dd></dl>
+        <dl class="gloss"><dt>Erde-828 <small>First Steps</small></dt><dd>Retro-Zukunftswelt der Fantastic Four. Die Nummer ehrt Jack Kirbys Geburtstag (28.8.).</dd></dl>
+        <dl class="gloss"><dt>Erde-10005 <small>Fox-Universum</small></dt><dd>Welt der alten X-Men-Filme. Anker-Wesen: Logan. Seit Deadpool &amp; Wolverine Teil des MCU-Multiversums.</dd></dl>
+        <dl class="gloss"><dt>Latveria <small>Comics · bald MCU</small></dt><dd>Osteuropäischer Kleinstaat, absolute Monarchie unter Doom — diplomatisch unantastbar.</dd></dl>
+        <dl class="gloss"><dt>Der Void <small>zwei Bedeutungen!</small></dt><dd>1) Müllhalde am Ende der Zeit, bewacht von Alioth. 2) Sentrys dunkle Hälfte. Kontext beachten.</dd></dl>
+        <dl class="gloss"><dt>Sentry <small>Thunderbolts*</small></dt><dd>Bob Reynolds — „die Macht von tausend explodierenden Sonnen". Instabilstes Superwesen des MCU.</dd></dl>
+        <dl class="gloss"><dt>Nexus-Wesen <small>Loki / WandaVision</small></dt><dd>Individuen, die Zeitlinien massiv beeinflussen können (Wanda, Loki). Selten und gefährlich.</dd></dl>
+        <dl class="gloss"><dt>Er, der bleibt <small>He Who Remains</small></dt><dd>Kang-Variante, die den multiversalen Krieg gewann und die Heilige Zeitlinie schuf. Von Sylvie getötet.</dd></dl>
+        <dl class="gloss"><dt>Council of Kangs <small>Quantumania</small></dt><dd>Versammlung unzähliger Kang-Varianten. Seit 2023 nie wieder gezeigt — der größte offene Faden.</dd></dl>
+        <dl class="gloss"><dt>Gott der Geschichten <small>Loki S2</small></dt><dd>Lokis finale Form: Er hält alle Zeitlinien wie einen lebenden Baum zusammen.</dd></dl>
+        <dl class="gloss"><dt>Franklin Richards <small>First Steps</small></dt><dd>Sohn von Reed und Sue. In den Comics Omega-Level-Realitätsformer — und Battleworlds Energiequelle.</dd></dl>
+        <dl class="gloss"><dt>Molecule Man <small>noch nicht im MCU</small></dt><dd>Unscheinbarster Gott der Comics; in Secret Wars 2015 die Bombe, auf der Dooms Macht ruht. Augen offen halten.</dd></dl>
+        <dl class="gloss"><dt>Beyonder <small>Comics</small></dt><dd>Allmächtige Wesen jenseits des Multiversums; Auslöser beider Comic-Secret-Wars.</dd></dl>
+        <dl class="gloss"><dt>Sentinels <small>SDCC-Trailer</small></dt><dd>Mutantenjagende Riesenroboter aus den X-Men-Comics. <span class="spoiler">Doom erweckt im Hall-H-Material eine ganze Armee.</span></dd></dl>
+        <dl class="gloss"><dt>Pruning <small>Loki</small></dt><dd>TVA-Verfahren, Zeitlinien-Äste oder Personen aus der Zeit zu „schneiden". Landet alles im Void.</dd></dl>
+        <dl class="gloss"><dt>Multiversaler Krieg <small>Vorgeschichte</small></dt><dd>Der Ur-Krieg zwischen Zeitlinien. Doomsday/Secret Wars ist im Kern: Runde zwei.</dd></dl>
+        <dl class="gloss"><dt>Young Avengers <small>im Aufbau</small></dt><dd>Kamala, Cassie, America Chavez, Kate Bishop, <span class="spoiler">Wiccan</span> — die Ernte kommt nach der Saga.</dd></dl>
+        <dl class="gloss"><dt>Snap &amp; Blip <small>2018 / 2023</small></dt><dd>Der Snap löschte die Hälfte allen Lebens, der Blip brachte sie fünf Jahre später zurück. Das Trauma dazwischen prägt jede Figur der Post-Endgame-Ära.</dd></dl>
+        <dl class="gloss"><dt>Variante <small>Loki / TVA</small></dt><dd>Jede alternative Version einer Person aus einer anderen Zeitlinie — vom Krokodil-Loki bis zur Frage, ob Doom eine ist.</dd></dl>
+        <dl class="gloss"><dt>Kanon-Ereignis <small>Spider-Verse</small></dt><dd>Miguel O'Haras Dogma: Bestimmte Tragödien MÜSSEN geschehen, sonst kollabiert das Universum. Miles hält dagegen.</dd></dl>
+        <dl class="gloss"><dt>Quantenreich <small>Ant-Man</small></dt><dd>Subatomare Welt außerhalb von Zeit und Raum — Endgames Zeitmaschine, Kangs Gefängnis, Janets 30-Jahre-Exil.</dd></dl>
+        <dl class="gloss"><dt>Celestials <small>Eternals</small></dt><dd>Kosmische Titanen, die in Planeten heranwachsen. Der erstarrte Tiamut im Indischen Ozean ist heute eine Adamantium-Mine.</dd></dl>
+        <dl class="gloss"><dt>Sokovia-Abkommen <small>Civil War</small></dt><dd>Das UN-Gesetz zur Helden-Kontrolle, das die Avengers spaltete. Später still beerdigt — das Misstrauen blieb.</dd></dl>
+        <dl class="gloss"><dt>Symbionten <small>Venom</small></dt><dd>Außerirdische Lebewesen, die Wirte verstärken (und gern Köpfe essen). Ein Rest davon liegt seit NWH auf einem Tresen in Erde-616.</dd></dl>
+        <dl class="gloss"><dt>Flerken <small>Captain Marvel</small></dt><dd>Sieht aus wie eine Katze, ist aber ein Alien mit Taschendimensionen im Maul. Goose kratzte Fury das Auge aus. Kein Witz.</dd></dl>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p><strong style="color:var(--muted)">Marvel Hub</strong> · Fan-Projekt, kein offizielles Marvel-Angebot · Stand: 31. Juli 2026.</p>
+  <p>Quellen u. a.: <a href="https://www.marvel.com/movies/avengers-doomsday">Marvel.com</a> · <a href="https://editorial.rottentomatoes.com/article/everything-we-know-about-avengers-doomsday/">Rotten Tomatoes</a> · <a href="https://deadline.com/gallery/avengers-doomsday-cast-photos-marvel/">Deadline</a>. Poster: Wikipedia (Fair Use). Theorien sind redaktionelle Einschätzung. Fortschritt &amp; Einstellungen werden nur lokal gespeichert.</p>
+  <p class="f-sig">▚ Every Story leads to Doom ▞</p>
+</footer>
+
+<div class="modal-back" id="modalBack" role="dialog" aria-modal="true" aria-label="Film-Dossier">
+  <div class="modal" id="modalBox" style="position:relative"></div>
+</div>
+
+<script>
+var POSTERS = __POSTERS_JSON__;
+</script>
+<script>
+(function () {
+  "use strict";
+
+  /* ---------- Daten: alle Filme & Serien ---------- */
+  /* prio: pflicht | empfohlen | optional | komplettist | future  ·  min: Laufzeit  ·  chrono: In-Universe-Reihenfolge */
+  var FILMS = [
+    { id: "iron1", t: "Iron Man", y: "2008", ph: 1, chrono: 3, type: "Film", prio: "empfohlen", min: 126, dir: "Jon Favreau", cast: ["Robert Downey Jr.", "Gwyneth Paltrow", "Jeff Bridges"], plot: "Tony Stark baut sich in einer Höhle aus Schrott eine Rüstung — und startet damit das gesamte MCU.", note: "Der Anfang von allem. Und der Mann, der jetzt Doom spielt, wurde hier zur Ikone — genau deshalb trifft das Casting so hart." },
+    { id: "hulk", t: "The Incredible Hulk", y: "2008", ph: 1, chrono: 5, type: "Film", prio: "komplettist", min: 112, dir: "Louis Leterrier", cast: ["Edward Norton", "Liv Tyler", "Tim Roth", "William Hurt"], plot: "Bruce Banner auf der Flucht vor General Ross — der vergessene MCU-Film.", note: "Ross wird später Präsident und Red Hulk (Brave New World). Sonst verzichtbar." },
+    { id: "iron2", t: "Iron Man 2", y: "2010", ph: 1, chrono: 4, type: "Film", prio: "komplettist", min: 124, dir: "Jon Favreau", cast: ["Robert Downey Jr.", "Mickey Rourke", "Scarlett Johansson"], plot: "Tony gegen Whiplash und sein eigenes Ego — mit dem Debüt von Black Widow.", note: "Erster Auftritt von Natasha Romanoff. Für Doomsday nicht nötig." },
+    { id: "thor1", t: "Thor", y: "2011", ph: 1, chrono: 6, type: "Film", prio: "optional", min: 115, dir: "Kenneth Branagh", cast: ["Chris Hemsworth", "Tom Hiddleston", "Natalie Portman", "Anthony Hopkins"], plot: "Der arrogante Donnergott wird auf die Erde verbannt — und Loki betritt die Bühne.", note: "Ursprung von Thor UND Loki, zwei zentralen Doomsday-Figuren." },
+    { id: "cap1", t: "Captain America: The First Avenger", y: "2011", ph: 1, chrono: 1, type: "Film", prio: "optional", min: 124, dir: "Joe Johnston", cast: ["Chris Evans", "Hayley Atwell", "Hugo Weaving"], plot: "Steve Rogers wird 1943 zum Supersoldaten — der chronologische Anfang des MCU.", note: "Evans-Ursprung; chronologisch Startpunkt 1943." },
+    { id: "av1", t: "The Avengers", y: "2012", ph: 1, chrono: 7, type: "Film", prio: "empfohlen", min: 143, dir: "Joss Whedon", cast: ["Robert Downey Jr.", "Chris Evans", "Scarlett Johansson", "Mark Ruffalo"], plot: "Sechs Helden, ein Team, die Schlacht von New York — das erste große Crossover der Kinogeschichte.", note: "Die Schlacht von New York ist der Dreh- und Angelpunkt von Endgame UND Loki: Genau hier entsteht die Variante, die heute alle Zeitlinien hält." },
+    { id: "iron3", t: "Iron Man 3", y: "2013", ph: 2, chrono: 8, type: "Film", prio: "komplettist", min: 130, dir: "Shane Black", cast: ["Robert Downey Jr.", "Ben Kingsley", "Guy Pearce"], plot: "Tony nach dem New-York-Trauma — Panikattacken, Mandarin-Twist, Trevor Slattery.", note: "Trevor kehrt in Wonder Man zurück. Sonst optional." },
+    { id: "thor2", t: "Thor: The Dark World", y: "2013", ph: 2, chrono: 9, type: "Film", prio: "komplettist", min: 112, dir: "Alan Taylor", cast: ["Chris Hemsworth", "Tom Hiddleston", "Natalie Portman"], plot: "Dunkelelfen jagen den Äther — den späteren Realitätsstein.", note: "Lokis 'Tod' Nr. 2; Endgame-Zeitreise-Ziel. Verzichtbar." },
+    { id: "cap2", t: "Captain America: The Winter Soldier", y: "2014", ph: 2, chrono: 10, type: "Film", prio: "empfohlen", min: 136, dir: "Anthony & Joe Russo", cast: ["Chris Evans", "Scarlett Johansson", "Sebastian Stan", "Anthony Mackie"], plot: "Hydra sitzt in S.H.I.E.L.D., Steves toter bester Freund ist eine Killermaschine — der erste Russo-Film.", note: "Debüt von Sam UND Bucky-als-Winter-Soldier — zwei Doomsday-Hauptfiguren. Und der Film, mit dem die Russos das Vertrauen für Endgame & Doomsday verdienten." },
+    { id: "gotg1", t: "Guardians of the Galaxy", y: "2014", ph: 2, chrono: 11, type: "Film", prio: "optional", min: 121, dir: "James Gunn", cast: ["Chris Pratt", "Zoe Saldaña", "Dave Bautista"], plot: "Ein Dieb, zwei Killer, ein Baum und ein Waschbär retten die Galaxie.", note: "Kosmisches MCU-Fundament; für Doomsday randständig." },
+    { id: "av2", t: "Avengers: Age of Ultron", y: "2015", ph: 2, chrono: 13, type: "Film", prio: "empfohlen", min: 141, dir: "Joss Whedon", cast: ["Robert Downey Jr.", "James Spader (Ultron)", "Elizabeth Olsen", "Paul Bettany"], plot: "Tonys Schutz-KI wird zum Auslöschungsprogramm; Wanda und Vision debütieren.", note: "Wegen Vision Quest wieder hochrelevant: Ultron (James Spader!) und Visions Ursprung liegen hier." },
+    { id: "antman1", t: "Ant-Man", y: "2015", ph: 2, chrono: 14, type: "Film", prio: "optional", min: 117, dir: "Peyton Reed", cast: ["Paul Rudd", "Michael Douglas", "Evangeline Lilly"], plot: "Meisterdieb Scott Lang schrumpft — und öffnet nebenbei die Tür zum Quantenreich.", note: "Das Quantenreich wird später Endgames Zeitmaschine und Kangs Gefängnis." },
+    { id: "cw", t: "Captain America: Civil War", y: "2016", ph: 3, chrono: 15, type: "Film", prio: "pflicht", min: 147, dir: "Anthony & Joe Russo", cast: ["Chris Evans", "Robert Downey Jr.", "Chadwick Boseman", "Sebastian Stan"], plot: "Das Sokovia-Abkommen spaltet die Avengers in Team Stark und Team Cap — am Ende steht der Bruch.", note: "Das Fundament: Die Avengers zerbrechen. Ohne diesen Bruch ergibt nichts danach Sinn." },
+    { id: "strange1", t: "Doctor Strange", y: "2016", ph: 3, chrono: 18, type: "Film", prio: "empfohlen", min: 115, dir: "Scott Derrickson", cast: ["Benedict Cumberbatch", "Tilda Swinton", "Chiwetel Ejiofor"], plot: "Ein arroganter Chirurg verliert seine Hände und findet die Magie — Multiversum inklusive.", note: "Magie-Grundlagen des MCU. Dooms zweite Machtquelle neben der Technik." },
+    { id: "gotg2", t: "Guardians of the Galaxy Vol. 2", y: "2017", ph: 3, chrono: 12, type: "Film", prio: "komplettist", min: 136, dir: "James Gunn", cast: ["Chris Pratt", "Kurt Russell", "Michael Rooker"], plot: "Quill trifft seinen Gott-Vater Ego — Familiendrama in Neonfarben.", note: "Für Doomsday ohne Fäden." },
+    { id: "spider1", t: "Spider-Man: Homecoming", y: "2017", ph: 3, chrono: 17, type: "Film", prio: "optional", min: 133, dir: "Jon Watts", cast: ["Tom Holland", "Michael Keaton", "Robert Downey Jr."], plot: "Peter Parker zwischen Abschlussball und Vulture — mit Tony als Mentor.", note: "Hollands Peter beginnt hier; sein Weg endet (vorerst) in Brand New Day." },
+    { id: "thor3", t: "Thor: Ragnarok", y: "2017", ph: 3, chrono: 19, type: "Film", prio: "optional", min: 130, dir: "Taika Waititi", cast: ["Chris Hemsworth", "Cate Blanchett", "Tessa Thompson", "Mark Ruffalo"], plot: "Asgard fällt, Thor verliert Hammer und Auge — und findet seinen Humor.", note: "Thors Neuerfindung; Asgards Ende erklärt seinen heutigen Status." },
+    { id: "bp1", t: "Black Panther", y: "2018", ph: 3, chrono: 20, type: "Film", prio: "optional", min: 134, dir: "Ryan Coogler", cast: ["Chadwick Boseman", "Michael B. Jordan", "Letitia Wright"], plot: "T'Challa wird König von Wakanda und öffnet das verborgene Land der Welt.", note: "Wakanda-Fundament für Shuri, M'Baku und Wakanda Forever." },
+    { id: "iw", t: "Avengers: Infinity War", y: "2018", ph: 3, chrono: 21, type: "Film", prio: "pflicht", min: 149, dir: "Anthony & Joe Russo", cast: ["Josh Brolin", "Robert Downey Jr.", "Chris Hemsworth", "Benedict Cumberbatch"], plot: "Thanos sammelt alle sechs Infinity-Steine und löscht mit einem Schnipsen die Hälfte allen Lebens aus.", note: "Die Russo-Blaupause für Doomsday: Der Schurke gewinnt." },
+    { id: "antman2", t: "Ant-Man and the Wasp", y: "2018", ph: 3, chrono: 22, type: "Film", prio: "komplettist", min: 118, dir: "Peyton Reed", cast: ["Paul Rudd", "Evangeline Lilly", "Michelle Pfeiffer"], plot: "Rettung aus dem Quantenreich — und Scott sitzt beim Snap genau dort fest.", note: "Der Quantenreich-Zufall, der Endgame überhaupt möglich macht." },
+    { id: "cm", t: "Captain Marvel", y: "2019", ph: 3, chrono: 2, type: "Film", prio: "optional", min: 123, dir: "Anna Boden & Ryan Fleck", cast: ["Brie Larson", "Samuel L. Jackson", "Ben Mendelsohn"], plot: "Carol Danvers entdeckt 1995 ihre Kräfte und ihre Vergangenheit — mit jungem Nick Fury.", note: "Carols Ursprung; Basis für The Marvels." },
+    { id: "eg", t: "Avengers: Endgame", y: "2019", ph: 3, chrono: 23, type: "Film", prio: "pflicht", min: 181, dir: "Anthony & Joe Russo", cast: ["Robert Downey Jr.", "Chris Evans", "Scarlett Johansson", "Chris Hemsworth"], plot: "Fünf Jahre nach dem Snap holen die Avengers die Steine per Zeitreise zurück. Tony opfert sich, Steve bleibt in der Vergangenheit.", note: "Die Zeitreise-Mechanik öffnet die Multiversum-Tür — und Tonys Abschied ist der Kontext, vor dem RDJs Rückkehr als Doom erst richtig wehtut." },
+    { id: "spider2", t: "Spider-Man: Far From Home", y: "2019", ph: 3, chrono: 24, type: "Film", prio: "optional", min: 129, dir: "Jon Watts", cast: ["Tom Holland", "Jake Gyllenhaal", "Zendaya"], plot: "Mysterio verkauft Peter ein falsches Multiversum — und enttarnt ihn am Ende vor der ganzen Welt.", note: "Die Enttarnung ist der direkte Auslöser von No Way Home. Fun Fact: Mysterios Multiversum-Lüge wurde zwei Jahre später wahr." },
+    { id: "wv", t: "WandaVision", y: "2021", ph: 4, chrono: 26, type: "Serie", prio: "empfohlen", min: 350, dir: "Regie: Matt Shakman · Creator: Jac Schaeffer", cast: ["Elizabeth Olsen", "Paul Bettany", "Kathryn Hahn"], plot: "In der Sitcom-Blase von Westview verarbeitet Wanda ihre Trauer, erschafft Ehemann und Zwillinge — und wird zur Scarlet Witch.", note: "9 Episoden. Chaosmagie und Realitäts-Umschreibung — Basis für MoM, Agatha und Vision Quest." },
+    { id: "fws", t: "The Falcon and the Winter Soldier", y: "2021", ph: 4, chrono: 27, type: "Serie", prio: "empfohlen", min: 300, dir: "Regie: Kari Skogland", cast: ["Anthony Mackie", "Sebastian Stan", "Wyatt Russell"], plot: "Sam ringt mit dem Erbe des Schilds, John Walker zeigt, wie Cap nicht geht — am Ende nimmt Sam den Titel an.", note: "6 Episoden. Sams Weg zum Captain America, der in Doomsday die Helden führt." },
+    { id: "l1", t: "Loki · Staffel 1", y: "2021", ph: 4, chrono: 25, type: "Serie", prio: "pflicht", min: 300, dir: "Regie: Kate Herron · Creator: Michael Waldron", cast: ["Tom Hiddleston", "Owen Wilson", "Sophia Di Martino", "Jonathan Majors"], plot: "Ein 2012er-Loki landet bei der TVA und erfährt die Wahrheit über die Heilige Zeitlinie. Sylvie tötet 'Er, der bleibt' — das Multiversum verzweigt unkontrolliert.", note: "DIE Grundlagen-Serie der Saga: TVA, Zeitlinien, Kang. Ohne sie versteht man Doomsday nur halb." },
+    { id: "bw", t: "Black Widow", y: "2021", ph: 4, chrono: 16, type: "Film", prio: "empfohlen", min: 134, dir: "Cate Shortland", cast: ["Scarlett Johansson", "Florence Pugh", "David Harbour", "Rachel Weisz"], plot: "Natashas Vergangenheit, ihre Ersatzfamilie — und das Debüt von Yelena und Red Guardian.", note: "Die halbe Thunderbolts-Familie startet hier. Direkter Zulauf zu den New Avengers." },
+    { id: "wi", t: "What If…? · S1–3", y: "2021–24", ph: 4, chrono: 45, type: "Serie", prio: "optional", min: 780, dir: "Regie: Bryan Andrews", cast: ["Jeffrey Wright (Watcher)", "Hayley Atwell"], plot: "Der Watcher erzählt Was-wäre-wenn-Geschichten aus dem ganzen Multiversum — und greift am Ende selbst ein.", note: "Multiversum-Gefühl in Reinform; Captain Carter und Infinity Ultron als Vorgeschmack auf Varianten-Chaos." },
+    { id: "sc", t: "Shang-Chi", y: "2021", ph: 4, chrono: 28, type: "Film", prio: "optional", min: 132, dir: "Destin Daniel Cretton", cast: ["Simu Liu", "Tony Leung", "Michelle Yeoh"], plot: "Shang-Chi stellt sich seinem Vater und übernimmt die Zehn Ringe — die am Ende ein ungeklärtes Signal senden.", note: "Simu Liu ist im Doomsday-Cast; das Ringe-Signal ist bis heute offen." },
+    { id: "et", t: "Eternals", y: "2021", ph: 4, chrono: 29, type: "Film", prio: "optional", min: 156, dir: "Chloé Zhao", cast: ["Gemma Chan", "Richard Madden", "Angelina Jolie"], plot: "Uralte Beschützer verhindern die Geburt eines Celestials aus dem Erdkern — dessen Hand seitdem aus dem Ozean ragt.", note: "Der tote Celestial wird zur Adamantium-Quelle von Brave New World." },
+    { id: "hk", t: "Hawkeye", y: "2021", ph: 4, chrono: 32, type: "Serie", prio: "optional", min: 270, dir: "Regie: Rhys Thomas, Bert & Bertie", cast: ["Jeremy Renner", "Hailee Steinfeld", "Florence Pugh"], plot: "Clint will nur Weihnachten nach Hause — bekommt aber Nachfolgerin Kate Bishop und Kingpin-Ärger.", note: "6 Episoden. Kate Bishop — Young-Avengers-Baustein." },
+    { id: "nwh", t: "Spider-Man: No Way Home", y: "2021", ph: 4, chrono: 30, type: "Film", prio: "pflicht", min: 148, dir: "Jon Watts", cast: ["Tom Holland", "Benedict Cumberbatch", "Tobey Maguire", "Andrew Garfield"], plot: "Ein verpatzter Vergessenszauber zieht Schurken und Spider-Männer aus fremden Universen an. Am Ende vergisst die Welt Peter komplett.", note: "Das Multiversum bricht erstmals groß ins Kino — Fox- und Sony-Welten sind offiziell real." },
+    { id: "mk", t: "Moon Knight", y: "2022", ph: 4, chrono: 33, type: "Serie", prio: "komplettist", min: 280, dir: "Regie: Mohamed Diab u. a.", cast: ["Oscar Isaac", "Ethan Hawke"], plot: "Marc, Steven und der Mondgott Khonshu teilen sich einen Körper — Marvels psychologischster Trip.", note: "6 Episoden. Stark, aber (bisher) ohne Saga-Anschluss." },
+    { id: "mom", t: "Doctor Strange in the Multiverse of Madness", y: "2022", ph: 4, chrono: 31, type: "Film", prio: "pflicht", min: 126, dir: "Sam Raimi", cast: ["Benedict Cumberbatch", "Elizabeth Olsen", "Xochitl Gomez"], plot: "Strange und America Chavez fliehen durchs Multiversum vor der Scarlet Witch, die auf Erde-838 die Illuminati auslöscht.", note: "Führt Inkursionen ein — den Mechanismus hinter Doomsday und Secret Wars. Plus: Welten, in denen X-Men und F4 längst existieren." },
+    { id: "msm", t: "Ms. Marvel", y: "2022", ph: 4, chrono: 34, type: "Serie", prio: "optional", min: 240, dir: "Regie: Adil & Bilall u. a.", cast: ["Iman Vellani", "Matt Lintz"], plot: "Kamala Khan entdeckt ihre Kräfte — und im Finale fällt zum ersten Mal im MCU das Wort 'Mutation'.", note: "6 Episoden. Die allererste Mutanten-Erwähnung des MCU. Post-Credits führt in The Marvels." },
+    { id: "tlt", t: "Thor: Love and Thunder", y: "2022", ph: 4, chrono: 35, type: "Film", prio: "komplettist", min: 119, dir: "Taika Waititi", cast: ["Chris Hemsworth", "Natalie Portman", "Christian Bale"], plot: "Thor gegen Gorr den Götterschlächter; Jane schwingt Mjölnir. Am Ende adoptiert Thor Gorrs Tochter Love.", note: "Thors Status quo vor seiner Doomsday-Rückkehr." },
+    { id: "shk", t: "She-Hulk", y: "2022", ph: 4, chrono: 36, type: "Serie", prio: "komplettist", min: 315, dir: "Creator: Jessica Gao", cast: ["Tatiana Maslany", "Mark Ruffalo", "Charlie Cox"], plot: "Jen Walters wird unfreiwillig Hulk-Anwältin und bricht im Finale die vierte Wand bis in Marvels Autorenzimmer.", note: "9 Episoden. Meta-Multiversum inklusive K.E.V.I.N.-KI." },
+    { id: "wbn", t: "Werewolf by Night", y: "2022", ph: 4, chrono: 37, type: "Special", prio: "komplettist", min: 53, dir: "Michael Giacchino", cast: ["Gael García Bernal", "Laura Donnelly"], plot: "Monsterjäger konkurrieren in Schwarz-Weiß um den Bloodstone — Marvels Horror-Ecke in 53 Minuten.", note: "Stimmungsvoller Einzelgänger ohne Saga-Fäden." },
+    { id: "bpwf", t: "Black Panther: Wakanda Forever", y: "2022", ph: 4, chrono: 38, type: "Film", prio: "empfohlen", min: 161, dir: "Ryan Coogler", cast: ["Letitia Wright", "Angela Bassett", "Tenoch Huerta Mejía"], plot: "Wakanda trauert um T'Challa, Namors Unterwasserreich erklärt den Krieg — Shuri wird zur neuen Black Panther.", note: "Shuri, M'Baku, Namor und Namora sind alle im Doomsday-Cast." },
+    { id: "ghs", t: "Guardians Holiday Special", y: "2022", ph: 4, chrono: 39, type: "Special", prio: "komplettist", min: 44, dir: "James Gunn", cast: ["Chris Pratt", "Pom Klementieff", "Kevin Bacon"], plot: "Mantis und Drax entführen Kevin Bacon als Weihnachtsgeschenk für Quill. Genau so albern, wie es klingt.", note: "44 Minuten Weihnachten. Phase-4-Abschluss." },
+    { id: "qm", t: "Ant-Man and the Wasp: Quantumania", y: "2023", ph: 5, chrono: 40, type: "Film", prio: "empfohlen", min: 125, dir: "Peyton Reed", cast: ["Paul Rudd", "Jonathan Majors", "Kathryn Newton", "Michelle Pfeiffer"], plot: "Familie Lang strandet im Quantenreich beim verbannten Kang. Post-Credits: eine Arena voller Kang-Varianten.", note: "Der Saga-Plan, den Doom beerbt — und der Council of Kangs ist bis heute ein offener Faden. Cassie Lang startet hier." },
+    { id: "g3", t: "Guardians of the Galaxy Vol. 3", y: "2023", ph: 5, chrono: 42, type: "Film", prio: "optional", min: 150, dir: "James Gunn", cast: ["Chris Pratt", "Zoe Saldaña", "Chukwudi Iwuji"], plot: "Rockets Vergangenheit, der High Evolutionary — der emotionale Schlusspunkt der Guardians.", note: "Abschluss der Trilogie; für Doomsday ohne direkte Fäden." },
+    { id: "si", t: "Secret Invasion", y: "2023", ph: 5, chrono: 43, type: "Serie", prio: "komplettist", min: 270, dir: "Regie: Ali Selim", cast: ["Samuel L. Jackson", "Ben Mendelsohn", "Olivia Colman"], plot: "Gestaltwandelnde Skrulle unterwandern die Erde; Nick Furys einsamster Kampf — mit folgenreichem Rhodey-Twist.", note: "6 Episoden. Für Doomsday randständig." },
+    { id: "l2", t: "Loki · Staffel 2", y: "2023", ph: 5, chrono: 41, type: "Serie", prio: "pflicht", min: 300, dir: "Regie: Justin Benson & Aaron Moorhead", cast: ["Tom Hiddleston", "Owen Wilson", "Ke Huy Quan"], plot: "Der Zeitwebstuhl kollabiert. Loki lernt Jahrhunderte, scheitert unendlich oft — und opfert sich: Als Gott der Geschichten hält er alle Zeitlinien zusammen.", note: "Vermutlich das wichtigste Einzel-Setup für Doomsday überhaupt. Lokis Zeitlinien-Thron ist der offensichtlichste Angriffspunkt für Doom." },
+    { id: "mv", t: "The Marvels", y: "2023", ph: 5, chrono: 44, type: "Film", prio: "empfohlen", min: 105, dir: "Nia DaCosta", cast: ["Brie Larson", "Teyonah Parris", "Iman Vellani"], plot: "Carol, Monica und Kamala tauschen bei jeder Kraftnutzung die Plätze; Monica verschließt am Ende einen Riss — von der falschen Seite.", note: "Die Post-Credit-Szene ist der X-Men-Türöffner: Monica erwacht in einem fremden Universum neben Beast (Kelsey Grammer, Doomsday-Cast)." },
+    { id: "ec", t: "Echo", y: "2024", ph: 5, chrono: 46, type: "Serie", prio: "komplettist", min: 200, dir: "Regie: Sydney Freeland", cast: ["Alaqua Cox", "Vincent D'Onofrio"], plot: "Maya Lopez kehrt nach Oklahoma zurück und stellt sich Kingpin — Street-Level pur.", note: "5 Episoden. Brücke zu Daredevil: Born Again." },
+    { id: "x97", t: "X-Men '97", y: "2024", ph: 5, chrono: 58, type: "Serie", prio: "optional", min: 300, dir: "Marvel Animation", cast: ["Ray Chase (Cyclops)", "Cal Dodd (Wolverine)"], plot: "Die Fortsetzung der 90er-Zeichentrickserie — von Genosha bis Bastion emotional gnadenloser als die meisten Realfilme.", note: "Eigenes (Animations-)Universum, aber DER Liebesbrief an genau die X-Men-Ära, die Doomsday zurückbringt." },
+    { id: "dw", t: "Deadpool & Wolverine", y: "2024", ph: 5, chrono: 47, type: "Film", prio: "pflicht", min: 128, dir: "Shawn Levy", cast: ["Ryan Reynolds", "Hugh Jackman", "Emma Corrin", "Channing Tatum"], plot: "Die TVA eröffnet Wade: Seine Zeitlinie stirbt, weil ihr Anker-Wesen Logan tot ist. Im Void warten Cassandra Nova, das Fox-Erbe — und der eine Wolverine, der mitkommt.", note: "Anker-Wesen, Void, Fox-Multiversum, Gambit-Debüt — die Brücke, über die die alten X-Men ins MCU laufen." },
+    { id: "ag", t: "Agatha All Along", y: "2024", ph: 5, chrono: 48, type: "Serie", prio: "empfohlen", min: 315, dir: "Creator: Jac Schaeffer", cast: ["Kathryn Hahn", "Joe Locke", "Aubrey Plaza"], plot: "Agatha wandert den Hexenpfad — mit einem Teen, der sich als Billy Maximoff entpuppt: Wandas Sohn lebt, als Wiccan.", note: "9 Episoden. Wiccan ist der Young-Avengers-Schlüsselstein — und Wandas Vermächtnis wirkt weiter." },
+    { id: "dba", t: "Daredevil: Born Again", y: "2025", ph: 5, chrono: 49, type: "Serie", prio: "optional", min: 405, dir: "Regie: u. a. Benson & Moorhead", cast: ["Charlie Cox", "Vincent D'Onofrio", "Jon Bernthal"], plot: "Matt Murdock hat den Anzug abgelegt, Fisk ist Bürgermeister von New York — bis beide wieder werden, was sie sind.", note: "9 Episoden. Der Zustand der Straßen vor Doomsday." },
+    { id: "bnw", t: "Captain America: Brave New World", y: "2025", ph: 5, chrono: 50, type: "Film", prio: "empfohlen", min: 118, dir: "Julius Onah", cast: ["Anthony Mackie", "Harrison Ford", "Danny Ramirez"], plot: "Sam beweist sich als Cap ohne Serum, Präsident Ross wird zum Red Hulk — und aus dem toten Celestial wird Adamantium gewonnen.", note: "Sam als amtierender Captain America, Adamantium im Spiel, kein stehendes Avengers-Team: die verwundbare Welt, die Doom vorfindet." },
+    { id: "tb", t: "Thunderbolts*", y: "2025", ph: 5, chrono: 52, type: "Film", prio: "pflicht", min: 127, dir: "Jake Schreier", cast: ["Florence Pugh", "Sebastian Stan", "David Harbour", "Lewis Pullman"], plot: "Valentinas Himmelfahrtskommando trifft auf Bob — den Sentry, dessen dunkles Ich halb New York verschlingt. Danach werden sie als 'New Avengers' vermarktet.", note: "Das aktive Heldenteam von Doomsday formiert sich — und mit Sentry hat das MCU erstmals ein heldenseitiges Wesen auf Doom-Niveau. Instabil allerdings." },
+    { id: "ih", t: "Ironheart", y: "2025", ph: 5, chrono: 51, type: "Serie", prio: "empfohlen", min: 270, dir: "Regie: Sam Bailey & Angela Barnes", cast: ["Dominique Thorne", "Anthony Ramos", "Sacha Baron Cohen"], plot: "Riri Williams baut ihre eigene Rüstung und gerät an The Hood — dessen Gönner sich im Finale als Mephisto offenbart.", note: "6 Episoden. Mephistos MCU-Debüt, direkt vor dem Multiversum-Finale — kein Zufall. Phase-5-Abschluss." },
+    { id: "f4", t: "The Fantastic Four: First Steps", y: "2025", ph: 6, chrono: 55, type: "Film", prio: "pflicht", min: 115, dir: "Matt Shakman", cast: ["Pedro Pascal", "Vanessa Kirby", "Joseph Quinn", "Ebon Moss-Bachrach"], plot: "Auf der Retro-Zukunftswelt Erde-828 retten die F4 ihre Erde vor Galactus — der als Preis das Baby Franklin fordert.", note: "Der direkte Vorfilm: Die Post-Credit-Szene ist praktisch die erste Szene von Doomsday. Phase-6-Auftakt." },
+    { id: "eow", t: "Eyes of Wakanda", y: "2025", ph: 6, chrono: 53, type: "Serie", prio: "komplettist", min: 120, dir: "Marvel Animation", cast: ["Anthologie"], plot: "Wakandas Krieger jagen über Jahrhunderte verlorene Vibranium-Artefakte.", note: "4 Episoden Animation. Für Doomsday verzichtbar." },
+    { id: "wm", t: "Wonder Man", y: "2025/26", ph: 6, chrono: 54, type: "Serie", prio: "komplettist", min: 240, dir: "Regie: Destin Daniel Cretton", cast: ["Yahya Abdul-Mateen II", "Ben Kingsley"], plot: "Stuntman Simon Williams kämpft sich durch Hollywood — Marvels Satire aufs eigene Geschäft, mit Trevor Slattery.", note: "Randnotiz zur Saga." },
+    { id: "bnd", t: "Spider-Man: Brand New Day", y: "2026", ph: 6, chrono: 56, type: "Film", prio: "empfohlen", min: 130, dir: "Destin Daniel Cretton", cast: ["Tom Holland", "Zendaya", "Sadie Sink", "Jon Bernthal"], plot: "Peter, von aller Welt vergessen, baut sich ein neues Leben als Spider-Man aus der Nachbarschaft — bis Punisher und Hulk seine Straßen aufmischen.", note: "Seit HEUTE (31.07.2026) im Kino — der letzte Kinofilm vor Doomsday." },
+    { id: "vq", t: "Vision Quest", y: "2026", ph: 6, chrono: 57, type: "Serie", prio: "empfohlen", min: 300, dir: "Showrunner: Terry Matalas", cast: ["Paul Bettany", "James Spader (Ultron)"], plot: "White Vision sucht nach Erinnerung und Identität — und trifft auf die Stimme seines Schöpfers: Ultron.", note: "Die letzte Serie vor Doomsday; Visions Rückkehr könnte im Avengers-Konflikt zählen." },
+    { id: "doomsday", t: "Avengers: Doomsday", y: "2026", ph: 6, chrono: 59, type: "Film", prio: "future", min: 0, dir: "Anthony & Joe Russo", cast: ["Robert Downey Jr.", "und 30+ weitere — siehe Cast-Sektion"], plot: "Doctor Doom tritt aus dem Schatten des Multiversums — Avengers, New Avengers, Fantastic Four und die originalen X-Men kollidieren im größten Ensemble der MCU-Geschichte.", note: "Das Ziel dieser Timeline. Kinostart: 18.12.2026 (DE vsl. 16.12.)." },
+    { id: "secretwars", t: "Avengers: Secret Wars", y: "2027", ph: 6, chrono: 60, type: "Film", prio: "future", min: 0, dir: "Anthony & Joe Russo", cast: ["Robert Downey Jr.", "Chris Evans", "u. v. m."], plot: "Das Finale der Multiverse Saga. Wenn die Comics die Richtung vorgeben: Battleworld, God Emperor Doom — und danach ein neu geordnetes Marvel-Universum.", note: "Kinostart: 17.12.2027. Sobald der Fokus wechselt, wird dieser Hub dafür erweitert." }
+  ];
+
+  var SAGA_BREAKS = {
+    iron1: { saga: "Die Infinity Saga", phase: "Phase 1 · 2008 – 2012" },
+    iron3: { phase: "Phase 2 · 2013 – 2015" },
+    cw: { phase: "Phase 3 · 2016 – 2019" },
+    wv: { saga: "Die Multiverse Saga", phase: "Phase 4 · 2021 – 2022" },
+    qm: { phase: "Phase 5 · 2023 – 2025" },
+    f4: { phase: "Phase 6 · 2025 – 2027" }
+  };
+  var PRIO_LABEL = { pflicht: "Pflicht", empfohlen: "Empfohlen", optional: "Optional", komplettist: "Komplettist", future: "Kommend" };
+
+  /* ---------- State ---------- */
+  var watched = {};
+  try { watched = JSON.parse(localStorage.getItem("msa-watched") || "{}"); } catch (e) {}
+  var sortMode = "release", filterMode = "alle";
+
+  function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;"); }
+  function fmtMin(total) {
+    var h = Math.floor(total / 60), m = total % 60;
+    return h + " h" + (m ? " " + m + " min" : "");
+  }
+  function passesFilter(f) {
+    if (f.prio === "future") return true;
+    if (filterMode === "pflicht") return f.prio === "pflicht";
+    if (filterMode === "empfohlen") return f.prio === "pflicht" || f.prio === "empfohlen";
+    return true;
+  }
+
+  /* ---------- Timeline ---------- */
+  var road = document.getElementById("road");
+  function renderRoad() {
+    var list = FILMS.slice();
+    if (sortMode === "chrono") list.sort(function (a, b) { return a.chrono - b.chrono; });
+    var html = "";
+    list.forEach(function (f) {
+      if (sortMode === "release" && SAGA_BREAKS[f.id]) {
+        var b = SAGA_BREAKS[f.id];
+        html += '<div class="sep">' +
+          (b.saga ? '<div class="sep-saga metal">' + b.saga + "</div>" : "") +
+          '<div class="sep-phase">' + b.phase + "</div></div>";
+      }
+      var isW = !!watched[f.id];
+      var dim = !passesFilter(f);
+      var poster = POSTERS[f.id]
+        ? '<img src="' + POSTERS[f.id] + '" alt="Poster: ' + esc(f.t) + '" loading="lazy">'
+        : '<div class="poster-fallback"><div class="pf-t metal">' + esc(f.t) + '</div><div class="pf-y">' + f.y + "</div></div>";
+      html += '<div class="stop' + (isW ? " watched" : "") + (dim ? " dimmed" : "") + (f.prio === "future" ? " future" : "") + '" data-id="' + f.id + '">' +
+        '<div class="poster-wrap" role="button" tabindex="0" aria-label="' + esc(f.t) + ' öffnen">' +
+          (sortMode === "chrono" ? '<div class="chrono-n">' + f.chrono + "</div>" : "") +
+          poster +
+          '<span class="arrow">➤</span>' +
+        "</div>" +
+        (f.prio !== "future" ? '<button class="check" aria-label="' + esc(f.t) + ' als gesehen markieren" aria-pressed="' + isW + '">✓</button>' : "") +
+        '<div class="s-title">' + esc(f.t) + "</div>" +
+        '<div class="s-year"><span class="prio-dot pd-' + f.prio + '"></span>' + f.y + "</div>" +
+      "</div>";
+    });
+    html += '<div class="finale"><div class="f-tag">18. Dezember 2026</div><div class="f-title metal">Every Story leads to Doom</div></div>';
+    road.innerHTML = html;
+    renderProgress();
+  }
+
+  function renderProgress() {
+    var total = 0, done = 0, minLeft = 0, pflichtTotal = 0, pflichtDone = 0;
+    FILMS.forEach(function (f) {
+      if (f.prio === "future") return;
+      total++;
+      var w = !!watched[f.id];
+      if (w) done++;
+      if (passesFilter(f) && !w) minLeft += f.min;
+      if (f.prio === "pflicht") { pflichtTotal++; if (w) pflichtDone++; }
+    });
+    var pct = total ? Math.round((done / total) * 100) : 0;
+    document.getElementById("tlFill").style.width = pct + "%";
+    var scope = filterMode === "alle" ? "alles" : (filterMode === "pflicht" ? "Pflicht-Route" : "schneller Weg");
+    document.getElementById("tlStats").innerHTML = done === total
+      ? "<b>Alle " + total + " gesehen — Doom wäre stolz, falls er Stolz kennen würde.</b>"
+      : "<b>" + done + " / " + total + "</b> gesehen · Pflicht <b>" + pflichtDone + " / " + pflichtTotal + "</b> · Rest (" + scope + "): <b>≈ " + fmtMin(minLeft) + "</b>";
+  }
+
+  road.addEventListener("click", function (ev) {
+    var check = ev.target.closest(".check");
+    var stop = ev.target.closest(".stop");
+    if (!stop) return;
+    var id = stop.dataset.id;
+    if (check) {
+      if (watched[id]) delete watched[id]; else watched[id] = true;
+      try { localStorage.setItem("msa-watched", JSON.stringify(watched)); } catch (e) {}
+      renderRoad();
+      return;
+    }
+    if (ev.target.closest(".poster-wrap")) openDossier(id);
+  });
+  road.addEventListener("keydown", function (ev) {
+    if (ev.key !== "Enter" && ev.key !== " ") return;
+    var pw = ev.target.closest(".poster-wrap");
+    if (pw) { ev.preventDefault(); openDossier(pw.parentElement.dataset.id); }
+  });
+
+  function wireSeg(id, apply) {
+    var box = document.getElementById(id);
+    box.addEventListener("click", function (ev) {
+      var b = ev.target.closest("button");
+      if (!b) return;
+      box.querySelectorAll("button").forEach(function (x) { x.classList.remove("sel"); });
+      b.classList.add("sel");
+      apply(b.dataset);
+      renderRoad();
+    });
+  }
+  wireSeg("segSort", function (d) { sortMode = d.sort; });
+  wireSeg("segFilter", function (d) { filterMode = d.filter; });
+  renderRoad();
+
+  /* ---------- Modal ---------- */
+  var modalBack = document.getElementById("modalBack");
+  var modalBox = document.getElementById("modalBox");
+  function openDossier(id) {
+    var f = null;
+    for (var i = 0; i < FILMS.length; i++) if (FILMS[i].id === id) { f = FILMS[i]; break; }
+    if (!f) return;
+    var isW = !!watched[id];
+    var poster = POSTERS[id]
+      ? '<img src="' + POSTERS[id] + '" alt="">'
+      : '<div class="poster-fallback"><div class="pf-t metal">' + esc(f.t) + "</div></div>";
+    modalBox.innerHTML =
+      '<div class="m-top">' +
+        '<div class="m-poster">' + poster + "</div>" +
+        '<div class="m-head" style="flex:1">' +
+          "<h3>" + esc(f.t) + "</h3>" +
+          '<div class="m-facts">' +
+            "<b>" + f.type + " · " + f.y + "</b>" + (f.min ? " · ≈ " + fmtMin(f.min) : "") + "<br>" +
+            esc(f.dir) +
+          "</div>" +
+          '<div class="m-prio"><span class="prio-dot pd-' + f.prio + '" style="display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:6px"></span>' + PRIO_LABEL[f.prio] + "</div>" +
+        "</div>" +
+        '<button class="m-close" id="mClose" aria-label="Schließen">✕</button>' +
+      "</div>" +
+      '<div class="m-body">' +
+        '<div class="m-label">Worum es geht</div><p>' + esc(f.plot) + "</p>" +
+        '<div class="m-label">Bedeutung für Doomsday</div><p>' + esc(f.note) + "</p>" +
+        '<div class="m-label">Besetzung</div><p class="m-castline">' + f.cast.map(function (c) { return "<b>" + esc(c) + "</b>"; }).join(" · ") + "</p>" +
+        (f.prio !== "future"
+          ? '<button class="m-watch' + (isW ? " is-watched" : "") + '" id="mWatch">' + (isW ? "✓ Gesehen" : "Als gesehen markieren") + "</button>"
+          : "") +
+      "</div>";
+    modalBack.classList.add("open");
+    var mw = document.getElementById("mWatch");
+    if (mw) mw.addEventListener("click", function () {
+      if (watched[id]) delete watched[id]; else watched[id] = true;
+      try { localStorage.setItem("msa-watched", JSON.stringify(watched)); } catch (e) {}
+      renderRoad();
+      openDossier(id);
+    });
+    document.getElementById("mClose").focus();
+  }
+  modalBack.addEventListener("click", function (ev) {
+    if (ev.target === modalBack || ev.target.closest(".m-close")) modalBack.classList.remove("open");
+  });
+  document.addEventListener("keydown", function (ev) {
+    if (ev.key === "Escape") modalBack.classList.remove("open");
+  });
+
+  /* ---------- Countdown ---------- */
+  var tDoom = new Date("2026-12-16T00:00:00").getTime();
+  var tSW = new Date("2027-12-17T00:00:00").getTime();
+  function tick() {
+    var diff = tDoom - Date.now();
+    if (diff <= 0) {
+      document.getElementById("cdDays").textContent = "JETZT";
+      document.getElementById("cdClock").textContent = "IM KINO";
+    } else {
+      var s = Math.floor(diff / 1000);
+      document.getElementById("cdDays").textContent = Math.floor(s / 86400);
+      var h = Math.floor((s % 86400) / 3600), m = Math.floor((s % 3600) / 60), sec = s % 60;
+      document.getElementById("cdClock").textContent =
+        String(h).padStart(2, "0") + " Std · " + String(m).padStart(2, "0") + " Min · " + String(sec).padStart(2, "0") + " Sek";
+    }
+    document.getElementById("cdSW").textContent = Math.max(0, Math.floor((tSW - Date.now()) / 86400000));
+  }
+  tick();
+  setInterval(tick, 1000);
+
+  /* ---------- Spoiler ---------- */
+  var spBtn = document.getElementById("spoilerToggle");
+  var showSpoilers = false;
+  try { showSpoilers = localStorage.getItem("msa-spoilers") === "1"; } catch (e) {}
+  function applySpoilers() {
+    document.body.classList.toggle("show-spoilers", showSpoilers);
+    spBtn.classList.toggle("on", showSpoilers);
+    spBtn.setAttribute("aria-pressed", String(showSpoilers));
+    spBtn.textContent = showSpoilers ? "Spoiler: an" : "Spoiler: aus";
+  }
+  spBtn.addEventListener("click", function () {
+    showSpoilers = !showSpoilers;
+    try { localStorage.setItem("msa-spoilers", showSpoilers ? "1" : "0"); } catch (e) {}
+    applySpoilers();
+  });
+  document.addEventListener("click", function (ev) {
+    var t = ev.target.closest(".spoiler");
+    if (t && !showSpoilers) t.classList.add("revealed");
+  });
+  applySpoilers();
+
+  /* ---------- Scroll-Spy ---------- */
+  var links = document.querySelectorAll("#navLinks a");
+  var secs = ["saga", "doomsday", "lore", "theorien", "glossar"].map(function (id) { return document.getElementById(id); });
+  var obs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      links.forEach(function (l) { l.classList.toggle("active", l.getAttribute("href") === "#" + e.target.id); });
+    });
+  }, { rootMargin: "-30% 0px -60% 0px" });
+  secs.forEach(function (s) { obs.observe(s); });
+
+  /* ---------- Glossar-Suche ---------- */
+  var gs = document.getElementById("glossSearch");
+  gs.addEventListener("input", function () {
+    var q = gs.value.trim().toLowerCase();
+    document.querySelectorAll("#glossGrid .gloss").forEach(function (g) {
+      g.style.display = !q || g.textContent.toLowerCase().indexOf(q) !== -1 ? "" : "none";
+    });
+  });
+})();
+</script>

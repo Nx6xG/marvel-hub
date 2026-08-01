@@ -1,0 +1,574 @@
+{
+ "iron1": {
+  "scenes": [
+   {
+    "d": "Nick Fury wartet in Tonys Villa: 'Sie sind Teil eines größeren Universums' — die Avenger-Initiative ist geboren. DIE Szene, die das Konzept Post-Credits erfand.",
+    "to": "av1"
+   }
+  ]
+ },
+ "hulk": {
+  "scenes": [
+   {
+    "d": "Tony Stark setzt sich zu General Ross an die Bar — die erste Film-übergreifende Verknüpfung des MCU.",
+    "to": "av1"
+   }
+  ]
+ },
+ "iron2": {
+  "scenes": [
+   {
+    "d": "Agent Coulson meldet einen Fund in New Mexico: Mjölnir im Krater.",
+    "to": "thor1"
+   }
+  ]
+ },
+ "thor1": {
+  "scenes": [
+   {
+    "d": "Selvig trifft Fury — und in seinem Spiegelbild lauert Loki. Der Tesseract betritt die Bühne.",
+    "to": "av1"
+   }
+  ]
+ },
+ "cap1": {
+  "scenes": [
+   {
+    "d": "Steve erwacht in der Gegenwart; Fury hat einen Auftrag — direkt in den ersten Avengers-Teaser.",
+    "to": "av1"
+   }
+  ]
+ },
+ "av1": {
+  "scenes": [
+   {
+    "d": "Der Andere warnt seinen Meister — Thanos dreht sich grinsend um. Sechs Jahre Vorlauf beginnen hier.",
+    "to": "iw"
+   },
+   {
+    "d": "Die erschöpften Avengers essen schweigend Schawarma. Wurde einen Tag nach der Weltpremiere nachgedreht.",
+    "to": null
+   }
+  ]
+ },
+ "iron3": {
+  "scenes": [
+   {
+    "d": "Tony erzählt die ganze Geschichte Bruce Banner — der als Therapeut ungeeignet ist: 'Ich bin nicht diese Art von Doktor.'",
+    "to": null
+   }
+  ]
+ },
+ "thor2": {
+  "scenes": [
+   {
+    "d": "Sif und Volstagg übergeben den Äther dem Collector: 'Einer runter, fünf übrig.'",
+    "to": "gotg1"
+   },
+   {
+    "d": "Thor kehrt zu Jane zurück; ein Frostbiest jagt Londoner Tauben.",
+    "to": null
+   }
+  ]
+ },
+ "cap2": {
+  "scenes": [
+   {
+    "d": "Baron von Strucker experimentiert mit Lokis Zepter — in den Zellen: 'die Zwillinge' Wanda und Pietro.",
+    "to": "av2"
+   },
+   {
+    "d": "Bucky steht im Smithsonian vor seiner eigenen Gedenktafel.",
+    "to": null
+   }
+  ]
+ },
+ "gotg1": {
+  "scenes": [
+   {
+    "d": "Baby Groot tanzt zu 'I Want You Back' — solange Drax nicht hinschaut.",
+    "to": null
+   },
+   {
+    "d": "Der Collector sitzt in den Trümmern — neben Howard the Duck.",
+    "to": null
+   }
+  ]
+ },
+ "av2": {
+  "scenes": [
+   {
+    "d": "Thanos greift selbst zum Handschuh: 'Fine, I'll do it myself.'",
+    "to": "iw"
+   }
+  ]
+ },
+ "antman1": {
+  "scenes": [
+   {
+    "d": "Hank zeigt Hope den Wasp-Prototyp: 'Es wird Zeit.'",
+    "to": "antman2"
+   },
+   {
+    "d": "Sam und Steve haben Bucky gefunden — 'Ich kenne da jemanden.'",
+    "to": "cw"
+   }
+  ]
+ },
+ "cw": {
+  "scenes": [
+   {
+    "d": "Bucky lässt sich in Wakanda einfrieren; T'Challa gewährt Asyl.",
+    "to": "bp1"
+   },
+   {
+    "d": "Peter entdeckt das Spider-Signal in seinem neuen Web-Shooter.",
+    "to": "spider1"
+   }
+  ]
+ },
+ "strange1": {
+  "scenes": [
+   {
+    "d": "Strange berät Thor bei Bier aus dem Nachfüll-Krug: 'Also — Loki.'",
+    "to": "thor3"
+   },
+   {
+    "d": "Mordo nimmt Pangborns Magie: 'Zu viele Zauberer.'",
+    "to": "mom"
+   }
+  ]
+ },
+ "gotg2": {
+  "scenes": [
+   {
+    "d": "Gleich fünf Szenen — die wichtigste: Ayeshas Geheimprojekt in der Brutkammer heißt 'Adam'. Adam Warlock kommt.",
+    "to": "g3"
+   },
+   {
+    "d": "Teenager-Groot will nicht aufräumen; Stakar versammelt die alten Ravagers.",
+    "to": null
+   }
+  ]
+ },
+ "spider1": {
+  "scenes": [
+   {
+    "d": "Vulture schützt Peters Identität im Gefängnis — Ehre unter Nachbarn.",
+    "to": null
+   },
+   {
+    "d": "Captain America doziert über Geduld: 'Manchmal wartet man… umsonst.' Meta-Gag über die Wartezeit.",
+    "to": null
+   }
+  ]
+ },
+ "thor3": {
+  "scenes": [
+   {
+    "d": "Ein gigantisches Schiff schiebt sich vor die Asgardier-Arche: Sanctuary II. Thanos ist da.",
+    "to": "iw"
+   },
+   {
+    "d": "Der Grandmaster gratuliert seinen Revolutionären zum Unentschieden.",
+    "to": null
+   }
+  ]
+ },
+ "bp1": {
+  "scenes": [
+   {
+    "d": "T'Challa öffnet Wakanda vor der UN: 'Wir werden teilen.'",
+    "to": null
+   },
+   {
+    "d": "Bucky erwacht geheilt in Wakanda — die Kinder nennen ihn 'Weißer Wolf'.",
+    "to": "iw"
+   }
+  ]
+ },
+ "iw": {
+  "scenes": [
+   {
+    "d": "Fury zerfällt zu Staub — sein letzter Griff gilt einem Retro-Pager mit einem Stern-Logo.",
+    "to": "cm"
+   }
+  ]
+ },
+ "antman2": {
+  "scenes": [
+   {
+    "d": "Scott sammelt Quantenpartikel — dann zerfallen Hank, Hope und Janet zu Staub. Der Snap aus nächster Nähe.",
+    "to": "eg"
+   },
+   {
+    "d": "Die Riesenameise spielt seelenruhig Schlagzeug.",
+    "to": null
+   }
+  ]
+ },
+ "cm": {
+  "scenes": [
+   {
+    "d": "Der Pager verstummt — Carol steht plötzlich im Avengers-HQ: 'Wo ist Fury?'",
+    "to": "eg"
+   },
+   {
+    "d": "Goose würgt den Tesseract auf Furys Schreibtisch.",
+    "to": null
+   }
+  ]
+ },
+ "eg": {
+  "note": "Keine Szene — als einziger großer MCU-Film. Stattdessen: das Hämmern von Tonys erster Rüstung als Audio-Abschied.",
+  "scenes": []
+ },
+ "spider2": {
+  "scenes": [
+   {
+    "d": "J. Jonah Jameson (Original-Simmons!) enthüllt Mysterios manipuliertes Video — und Peters Identität. Weltweit.",
+    "to": "nwh"
+   },
+   {
+    "d": "'Fury' war die ganze Zeit Talos — der echte sitzt auf einem Skrull-Raumschiff im Urlaub.",
+    "to": "si"
+   }
+  ]
+ },
+ "bw": {
+  "scenes": [
+   {
+    "d": "Yelena am Grab ihrer Schwester — Valentina gibt ihr ein Ziel: den Mann, 'der dafür verantwortlich ist'. Ein Foto von Clint.",
+    "to": "hk"
+   }
+  ]
+ },
+ "sc": {
+  "scenes": [
+   {
+    "d": "Wong, Carol und Bruce rätseln: Die Zehn Ringe senden ein Signal — an wen? Bis heute unbeantwortet.",
+    "to": "doomsday"
+   },
+   {
+    "d": "Xialing übernimmt die Ten-Rings-Organisation, entgegen ihrer Ansage.",
+    "to": null
+   }
+  ]
+ },
+ "et": {
+  "scenes": [
+   {
+    "d": "Eros — Thanos' Bruder, gespielt von Harry Styles — bietet den Eternals Hilfe an. Seitdem: Funkstille.",
+    "to": null
+   },
+   {
+    "d": "Dane Whitman zögert vor dem Ebony Blade, eine Stimme fragt: 'Bist du sicher, dass du bereit bist, Mr. Whitman?' — es ist Blade.",
+    "to": null
+   }
+  ]
+ },
+ "nwh": {
+  "scenes": [
+   {
+    "d": "Eddie Brock verschwindet zurück in sein Universum — auf dem Tresen bleibt ein Tropfen Symbiont zurück. Er ist noch da draußen.",
+    "to": "venom2"
+   },
+   {
+    "d": "Der komplette erste MoM-Trailer als 'Szene' — Stranges Chaos beginnt.",
+    "to": "mom"
+   }
+  ]
+ },
+ "mom": {
+  "scenes": [
+   {
+    "d": "Clea (Charlize Theron) schneidet ein Portal in die Realität: 'Du hast eine Inkursion verursacht, und wir werden sie beheben.' Strange folgt ihr — offener Faden Nummer eins.",
+    "to": "doomsday"
+   },
+   {
+    "d": "Pizza-Poppa hört endlich auf, sich zu schlagen: 'Es ist vorbei!'",
+    "to": null
+   }
+  ]
+ },
+ "tlt": {
+  "scenes": [
+   {
+    "d": "Zeus schickt seinen Sohn los: Hercules — gespielt von Brett Goldstein. Seitdem nicht wieder gesehen.",
+    "to": null
+   },
+   {
+    "d": "Jane erreicht Valhalla, begrüßt von Heimdall.",
+    "to": null
+   }
+  ]
+ },
+ "bpwf": {
+  "scenes": [
+   {
+    "d": "Shuri trifft Nakias Sohn: Toussaint — T'Challas Kind, Prinz von Wakanda. Die Zukunft der Panther-Linie.",
+    "to": null
+   }
+  ]
+ },
+ "qm": {
+  "scenes": [
+   {
+    "d": "Eine Arena voller Kang-Varianten: Der Council of Kangs beruft sich ein — Rama-Tut, Immortus, Scarlet Centurion. Nie wieder aufgegriffen.",
+    "to": "doomsday"
+   },
+   {
+    "d": "Victor Timely präsentiert 1901 seine Erfindungen — im Publikum: ein alarmierter Loki und Mobius.",
+    "to": "l2"
+   }
+  ]
+ },
+ "g3": {
+  "scenes": [
+   {
+    "d": "Die neuen Guardians um Captain Rocket, Adam Warlock und Phyla — Groots erster hörbarer Satz.",
+    "to": null
+   },
+   {
+    "d": "Legendary Star-Lord: Quill frühstückt mit seinem Großvater. Tafel: 'Star-Lord kehrt zurück.'",
+    "to": null
+   }
+  ]
+ },
+ "mv": {
+  "scenes": [
+   {
+    "d": "Kamala rekrutiert Kate Bishop für ein Team — die Young Avengers beginnen hier.",
+    "to": "hk"
+   },
+   {
+    "d": "Monica erwacht in einem fremden Universum — neben ihrer 'Mutter' und einem sehr blauen Dr. Hank McCoy: Beast. Willkommen bei den X-Men.",
+    "to": "doomsday"
+   }
+  ]
+ },
+ "dw": {
+  "scenes": [
+   {
+    "d": "Deadpool 'beweist' mit Archivmaterial Johnny Storms Unschuld — und verewigt Chris Evans' Fluch-Tirade.",
+    "to": null
+   }
+  ]
+ },
+ "bnw": {
+  "scenes": [
+   {
+    "d": "Der Leader warnt Sam aus der Zelle: 'Die anderen kommen' — andere Welten.",
+    "to": "doomsday"
+   }
+  ]
+ },
+ "tb": {
+  "scenes": [
+   {
+    "d": "Die New Avengers im Alltag — inklusive Namensstreit mit Sams Anwälten.",
+    "to": null
+   },
+   {
+    "d": "14 Monate später: Ein Schiff mit einer '4' auf dem Rumpf erreicht Erde-616. Die Fantastic Four sind da.",
+    "to": "f4"
+   }
+  ]
+ },
+ "f4": {
+  "scenes": [
+   {
+    "d": "Vier Jahre später: Sue findet Franklin nicht allein — vor ihm kniet eine Gestalt mit grünem Umhang und Metallmaske. Doom hat ihn gefunden. Die erste Szene des Doomsday-Vorlaufs.",
+    "to": "doomsday"
+   },
+   {
+    "d": "Ein Zeichentrick-Abspann im Stil der 60er — Herzstück: die F4 als Cartoon.",
+    "to": null
+   }
+  ]
+ },
+ "wv": {
+  "scenes": [
+   {
+    "d": "Monica erfährt von einem Skrull: 'Ein alter Freund deiner Mutter' will sie sehen — oben.",
+    "to": "mv"
+   },
+   {
+    "d": "Wanda studiert als Astralprojektion den Darkhold — und hört ihre Söhne rufen.",
+    "to": "mom"
+   }
+  ]
+ },
+ "fws": {
+  "scenes": [
+   {
+    "d": "Sharon Carter, begnadigt, telefoniert: Der Power Broker ist zurück im Geschäft — mit Regierungszugang.",
+    "to": null
+   }
+  ]
+ },
+ "msm": {
+  "scenes": [
+   {
+    "d": "Kamalas Bangle zieht sie fort — und Captain Marvel steht verwirrt in ihrem Zimmer. Direkter Übergang in The Marvels.",
+    "to": "mv"
+   }
+  ]
+ },
+ "mk": {
+  "scenes": [
+   {
+    "d": "Eine dritte Persönlichkeit: Jake Lockley chauffiert Harrow im Auftrag von Khonshu davon.",
+    "to": null
+   }
+  ]
+ },
+ "ag": {
+  "scenes": [
+   {
+    "d": "Agathas Geist begleitet Billy — draußen wartet die Suche nach Tommy: der zweite Zwilling.",
+    "to": null
+   }
+  ]
+ },
+ "ih": {
+  "scenes": [
+   {
+    "d": "Riri hat unterschrieben: Mephisto lächelt, ihre Trauer ist weg — der Preis noch offen.",
+    "to": "doomsday"
+   }
+  ]
+ },
+ "hk": {
+  "scenes": [
+   {
+    "d": "Kein Twist, kein Teaser — stattdessen die komplette Musical-Nummer 'Save The City' aus Rogers: The Musical in voller Länge. Marvels frechster Abspann.",
+    "to": null
+   }
+  ]
+ },
+ "x3": {
+  "scenes": [
+   {
+    "d": "Moira MacTaggerts komatöser Patient spricht mit Xaviers Stimme: 'Hallo, Moira.' Er lebt.",
+    "to": null
+   }
+  ]
+ },
+ "origins": {
+  "scenes": [
+   {
+    "d": "Weapon XI alias 'Deadpool' — der zugenähte Wade greift nach seinem Kopf. Ryan Reynolds rächte sich sieben Jahre später.",
+    "to": "dp1"
+   }
+  ]
+ },
+ "wolv13": {
+  "scenes": [
+   {
+    "d": "Zwei Jahre später am Flughafen: Magneto UND Professor X rekrutieren Logan — eine Bedrohung naht.",
+    "to": "dofp"
+   }
+  ]
+ },
+ "dofp": {
+  "scenes": [
+   {
+    "d": "Ägypten, Jahrtausende zuvor: Eine Menge huldigt En Sabah Nur, der Pyramiden mit Gedanken baut. Vier Reiter am Horizont.",
+    "to": "apoc"
+   }
+  ]
+ },
+ "apoc": {
+  "scenes": [
+   {
+    "d": "Männer der Essex Corp sichern Wolverines Blutproben — der Name hinter X-23 und Mister Sinister.",
+    "to": "logan"
+   }
+  ]
+ },
+ "dp1": {
+  "scenes": [
+   {
+    "d": "Deadpool im Ferris-Bueller-Bademantel: 'Geht nach Hause!' — und kündigt Cable an.",
+    "to": "dp2"
+   }
+  ]
+ },
+ "dp2": {
+  "scenes": [
+   {
+    "d": "Deadpool nutzt Cables Zeitgerät, um die Timeline zu 'reparieren' — inklusive Exekution des Origins-Deadpool und des Green-Lantern-Skripts.",
+    "to": null
+   }
+  ]
+ },
+ "logan": {
+  "note": "Keine Szene. Mangold bestand darauf: Nach diesem Ende hat niemand zu lachen.",
+  "scenes": []
+ },
+ "tasm1": {
+  "scenes": [
+   {
+    "d": "Ein Mann aus dem Schatten fragt Connors in der Zelle: 'Hast du dem Jungen die Wahrheit über seinen Vater gesagt?' Nie aufgelöst.",
+    "to": "tasm2"
+   }
+  ]
+ },
+ "tasm2": {
+  "note": "Kurios: Mitten im Abspann lief eine X-Men-DoFP-Szene — Ergebnis eines Fox/Sony-Vertragsdeals, keine Story-Verbindung.",
+  "scenes": []
+ },
+ "venom1": {
+  "scenes": [
+   {
+    "d": "Eddie interviewt in San Quentin einen rothaarigen Häftling: Cletus Kasady verspricht 'Carnage'.",
+    "to": "venom2"
+   },
+   {
+    "d": "Dazu: eine komplette Spider-Verse-Vorschau-Szene — Sony bewarb den eigenen Animationsfilm.",
+    "to": "sv1"
+   }
+  ]
+ },
+ "venom2": {
+  "scenes": [
+   {
+    "d": "Ein Lichtblitz — und Eddie sitzt plötzlich in einem fremden Hotelzimmer, im TV: J. Jonah Jameson über Peter Parker. Venom ist im MCU.",
+    "to": "nwh"
+   }
+  ]
+ },
+ "venom3": {
+  "scenes": [
+   {
+    "d": "Im Dunkel der Symbionten-Heimat öffnet Knull die Augen: 'Mein Todesbringer wird kommen.' Ein Tease ohne geplanten Film.",
+    "to": null
+   }
+  ]
+ },
+ "morbius": {
+  "scenes": [
+   {
+    "d": "Vulture materialisiert — durch den NWH-Zauber?? — in Morbius' Universum und schlägt eine Team-Gründung vor. Ergibt bis heute keinen Sinn und bleibt Marvels wirrster Abspann.",
+    "to": null
+   }
+  ]
+ },
+ "madameweb": {
+  "note": "Keine Post-Credit-Szene — das Franchise war schneller vorbei als der Abspann.",
+  "scenes": []
+ },
+ "sv1": {
+  "scenes": [
+   {
+    "d": "Miguel O'Hara — Spider-Man 2099 — testet den Dimensionssprung und landet ausgerechnet in der 60er-Zeichentrickserie: das Doppel-Zeige-Meme, offiziell.",
+    "to": "sv2"
+   }
+  ]
+ },
+ "sv2": {
+  "note": "Kein Abspann-Bonus — der Film selbst IST der Cliffhanger. 'Beyond the Spider-Verse' steht noch aus.",
+  "scenes": []
+ }
+}

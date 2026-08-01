@@ -1,0 +1,534 @@
+[
+ {
+  "id": "steine",
+  "sym": "♦",
+  "n": "Die Infinity-Steine",
+  "sub": "Sechs Singularitäten",
+  "status": "Vernichtet (2018 & 2023) — Varianten existieren im Multiversum",
+  "d": "Sechs Überbleibsel der Schöpfung, jede ein Aspekt der Existenz. Thanos brauchte sie für den Snap, die Avengers für den Blip — danach zerstörte Thanos sie in der Vergangenheit, und die zurückgeholten Duplikate wurden zurückgebracht. Bei der TVA liegen übrigens ganze Schubladen voller Steine — als Briefbeschwerer.",
+  "stones": [
+   {
+    "n": "Raumstein · Tesseract",
+    "d": "Von Hydra-Waffe über S.H.I.E.L.D.-Labor bis Lokis Diebstahl 2012 — das meistgereiste Objekt des MCU."
+   },
+   {
+    "n": "Gedankenstein · Zepter",
+    "d": "Von Loki über Hydra zu Ultron — und als Visions Stirnjuwel schließlich ein Lebewesen. Wanda musste ihn zerstören."
+   },
+   {
+    "n": "Realitätsstein · Äther",
+    "d": "Als flüssiger Parasit in Jane Foster, dann beim Collector — der seltsamste der sechs."
+   },
+   {
+    "n": "Machtstein · Orb",
+    "d": "Auf Morag gefunden, von Xandar bewacht, von Thanos als Erstes geholt."
+   },
+   {
+    "n": "Zeitstein · Auge von Agamotto",
+    "d": "Von Kamar-Taj gehütet, von Strange 14 Millionen Mal benutzt, von Thanos trotzdem bekommen."
+   },
+   {
+    "n": "Seelenstein · Vormir",
+    "d": "Verlangt ein Opfer: Gamora fiel für Thanos, Natasha für die Avengers."
+   }
+  ],
+  "stations": [
+   "1942: Red Skull findet den Tesseract",
+   "2012: Schlacht von New York — zwei Steine in Manhattan",
+   "2018: Der Snap",
+   "2023: Der Blip & Tonys Gegen-Snap",
+   "Heute: Staub — außer bei der TVA"
+  ],
+  "films": [
+   "cap1",
+   "av1",
+   "thor2",
+   "gotg1",
+   "av2",
+   "strange1",
+   "iw",
+   "eg",
+   "l1"
+  ]
+ },
+ {
+  "id": "mjoelnir",
+  "sym": "🔨",
+  "n": "Mjölnir",
+  "sub": "Wer würdig ist …",
+  "status": "Zerstört (2017) — 2013er-Version in Neu-Asgard",
+  "d": "Geschmiedet im Herzen eines sterbenden Sterns, mit eingebauter Würdigkeitsprüfung. Hela zerdrückte ihn mit einer Hand; Cap bewies in Endgame, was alle seit Age of Ultron ahnten — der Aufzug-Moment der Kinogeschichte. Die aus 2013 entliehene Version blieb bei Jane und liegt heute in Neu-Asgard.",
+  "stations": [
+   "Odins Waffenkammer",
+   "2011: Krater in New Mexico",
+   "2015: Vision hebt ihn beiläufig auf",
+   "2017: Von Hela zerstört",
+   "2023: 'Cap ist würdig!'",
+   "2024: Jane Foster / Neu-Asgard"
+  ],
+  "films": [
+   "thor1",
+   "av1",
+   "av2",
+   "thor3",
+   "eg",
+   "tlt"
+  ]
+ },
+ {
+  "id": "stormbreaker",
+  "sym": "⚡",
+  "n": "Stormbreaker",
+  "sub": "Die Thanos-tötende Axt",
+  "status": "Bei Thor — vorerst",
+  "d": "Auf Nidavellir geschmiedet, mit Groots Arm als Griff. Enthauptete Thanos beim zweiten Versuch. Der Grund, warum die SDCC-Szene alle elektrisiert hat: Doom stoppt diese Axt mit bloßer Hand.",
+  "stations": [
+   "2018: Geschmiedet mit Eitris Hilfe",
+   "2018: 'Du hättest auf den Kopf zielen sollen'",
+   "2023: Tut es dann",
+   "2026: Von Dooms Hand gestoppt?"
+  ],
+  "films": [
+   "iw",
+   "eg",
+   "tlt",
+   "doomsday"
+  ]
+ },
+ {
+  "id": "schild",
+  "sym": "🛡",
+  "n": "Captain Americas Schild",
+  "sub": "Vibranium, Proto-Adamantium-Erbe",
+  "status": "Bei Sam Wilson",
+  "d": "Howard Starks Vibranium-Meisterstück, Symbol dreier Generationen: Steve trug es, warf es nach Civil War hin, übergab es als alter Mann an Sam. Zwischendurch entweihte John Walker es mit Blut — die vielleicht stärkste Einzelszene der Serie-Ära.",
+  "stations": [
+   "1943: Von Howard Stark gebaut",
+   "2016: In Sibirien zurückgelassen",
+   "2023: Übergabe an Sam",
+   "2024: Walkers Blutfleck",
+   "Heute: Sam Wilson, Captain America"
+  ],
+  "films": [
+   "cap1",
+   "av1",
+   "cw",
+   "eg",
+   "fws",
+   "bnw"
+  ]
+ },
+ {
+  "id": "darkhold",
+  "sym": "📖",
+  "n": "Der Darkhold",
+  "sub": "Das Buch der Verdammten",
+  "status": "Alle Kopien zerstört — Inhalt unsterblich",
+  "d": "Chthons Schwarzmagie-Kompendium, das jeden Leser korrumpiert. Machte aus Wandas Trauer einen multiversalen Amoklauf. Sie zerstörte am Ende jede Kopie in jedem Universum — aber Agatha bewies vorher, wie viele Wege dunkles Wissen findet.",
+  "stations": [
+   "Jahrhunderte: Bei Chthon / in Kamar-Tajs Alben",
+   "2023: Agathas Besitz",
+   "2025: Wandas Lektüre & Mount-Wundagore-Finale",
+   "Zerstört — in jedem Universum"
+  ],
+  "films": [
+   "wv",
+   "mom",
+   "ag"
+  ]
+ },
+ {
+  "id": "zehnringe",
+  "sym": "◐",
+  "n": "Die Zehn Ringe",
+  "sub": "Älter als alles, was wir kennen",
+  "status": "Bei Shang-Chi — sie senden",
+  "d": "Wenwus Machtquelle für tausend Jahre Eroberung. Ihre Herkunft ist unbekannt, ihre Energie kein bekanntes Vibranium- oder Chi-Muster — und seit Shang-Chi sie trägt, funken sie wie ein Leuchtfeuer in die Dunkelheit. Wer antwortet, ist eine der offensten Fragen vor Doomsday.",
+  "stations": [
+   "~1000 Jahre: Wenwus Eroberungen",
+   "2024: Übergang an Shang-Chi",
+   "Seitdem: Das Signal sendet"
+  ],
+  "films": [
+   "sc",
+   "doomsday"
+  ]
+ },
+ {
+  "id": "ebonyblade",
+  "sym": "🗡",
+  "n": "Das Ebony Blade",
+  "sub": "Das verfluchte Schwert",
+  "status": "Wartet auf Dane Whitman",
+  "d": "Ein Schwert, das Blut verlangt und seinen Träger korrumpiert. Dane Whitman zögerte in der Eternals-Post-Credit-Szene — eine Stimme aus dem Off (Blade!) fragte, ob er bereit sei. Seitdem: vier Jahre Funkstille. Einer der verlorensten Fäden des MCU.",
+  "stations": [
+   "Generationen: Whitman-Familienerbe",
+   "2021: Dane öffnet die Kiste",
+   "Seitdem: nichts"
+  ],
+  "films": [
+   "et"
+  ]
+ },
+ {
+  "id": "doomsmaske",
+  "sym": "▚",
+  "n": "Dooms Maske",
+  "sub": "Das Gesicht Latverias",
+  "status": "Im Kino ab 18.12.2026",
+  "ev": true,
+  "d": "In den Comics verbirgt sie ein entstelltes Gesicht — oder nur eine einzige Narbe, die Dooms Eitelkeit nicht erträgt: Die Legende ändert sich je nach Autor. Im MCU trägt sie das Gesicht von Robert Downey Jr., und genau das ist die Pointe: 'New mask, same task.' Was darunter liegt, ist Doomsdays bestgehütetes Geheimnis.",
+  "stations": [
+   "1962: Fantastic Four #5",
+   "Juli 2024: RDJ nimmt sie in Hall H ab",
+   "Juli 2026: Erster voller Trailer-Blick",
+   "18.12.2026: Kinostart"
+  ],
+  "films": [
+   "f4",
+   "doomsday",
+   "secretwars"
+  ]
+ },
+ {
+  "id": "metalle",
+  "sym": "⛏",
+  "n": "Vibranium & Adamantium",
+  "sub": "Die zwei Wundermetalle",
+  "status": "Vibranium: Wakanda/Talokan · Adamantium: im Abbau",
+  "d": "Vibranium absorbiert Energie (Wakandas Meteorit, Caps Schild, Talokans Riffe) — Adamantium ist praktisch unzerstörbar (Wolverines Skelett, Fox-Erbe). Brave New World brachte Adamantium offiziell ins MCU: gewonnen aus dem toten Celestial im Indischen Ozean. Ein Metall mit X-Men-Signalwirkung.",
+  "stations": [
+   "Urzeit: Vibranium-Meteorit trifft Wakanda",
+   "1945: Caps Schild versinkt im Eis",
+   "2021: Der Celestial erstarrt",
+   "2025: Adamantium-Abbau beginnt — der Wettlauf läuft"
+  ],
+  "films": [
+   "bp1",
+   "bpwf",
+   "et",
+   "bnw",
+   "xmen1",
+   "logan"
+  ]
+ },
+ {
+  "id": "pym",
+  "sym": "⚛",
+  "n": "Pym-Partikel",
+  "sub": "Die Physik ist eher eine Empfehlung",
+  "status": "Streng gehütet von Hank Pym",
+  "d": "Hank Pyms Lebenswerk: Teilchen, die den Abstand zwischen Atomen ändern. Klingt nach Nischen-Superkraft, rettete aber das Universum — ohne Pym-Partikel kein Zeit-Raub, kein Endgame. Deshalb bewacht Hank sie wie ein Staatsgeheimnis, und deshalb wollte sie schon jeder stehlen.",
+  "stations": [
+   "Kalter Krieg: Pyms S.H.I.E.L.D.-Ära",
+   "2015: Scott im Anzug",
+   "2023: Treibstoff der Zeitreisen",
+   "2026: Das Quantenreich schweigt — noch"
+  ],
+  "films": [
+   "antman1",
+   "antman2",
+   "eg",
+   "qm"
+  ]
+ },
+ {
+  "id": "bangle",
+  "sym": "◈",
+  "n": "Kamalas Bangle",
+  "sub": "Ein Quantum-Armreif mit Familiengeschichte",
+  "status": "An Kamalas Handgelenk",
+  "d": "Das Familienerbstück, das Kamalas Kräfte weckte — tatsächlich ein Quantum-Band mit unbekanntem Gegenstück. Es riss Löcher in den Raum, tauschte drei Heldinnen quer durchs Universum und wartet darauf, dass jemand das zweite Band findet. Noch so ein Faden Richtung Zukunft.",
+  "stations": [
+   "Generationen: Familie Khan",
+   "2025: Kamala aktiviert es",
+   "2026: Der Marvels-Tausch",
+   "Das zweite Band: verschollen"
+  ],
+  "films": [
+   "msm",
+   "mv"
+  ]
+ },
+ {
+  "id": "gauntlet",
+  "sym": "✊",
+  "n": "Der Infinity Gauntlet",
+  "sub": "Zwei Handschuhe, zwei Schnipser",
+  "status": "Beide zerstört",
+  "d": "Eitri schmiedete den ersten auf Nidavellir — unter Zwang, als letzter seines Volkes. Tonys Nano-Version war die Antwort der Erde. Beide Handschuhe bündelten alle sechs Steine, und beide forderten ihren Preis: Thanos' Arm, Hulks Arm, Tonys Leben. Kein Objekt des MCU hat mehr gekostet.",
+  "stations": [
+   "2018: Auf Nidavellir geschmiedet",
+   "2018: Der Snap",
+   "2023: Hulks Blip-Schnipsen",
+   "2023: 'I am Iron Man' — der letzte Schnipser"
+  ],
+  "films": [
+   "thor3",
+   "iw",
+   "eg"
+  ]
+ },
+ {
+  "id": "ruestungen",
+  "sym": "⚙",
+  "n": "Die Iron-Man-Rüstungen",
+  "sub": "Mark I bis Mark LXXXV",
+  "status": "Das Vermächtnis ist verteilt",
+  "d": "Von der Höhlen-Blechbüchse bis zum Nanotech-Wunder: 85 Iterationen in elf Jahren, jede ein Kapitel von Tonys Paranoia und Genie. Das Erbe lebt weiter — in Rescues Rüstung, War Machines Arsenal, Riris Eigenbau. Und jetzt trägt ein Mann mit demselben Gesicht Latveria-Stahl.",
+  "stations": [
+   "2008: Mark I, gebaut in einer Höhle",
+   "2013: Der 'House Party'-Schwarm",
+   "2018: Bleeding-Edge-Nanotech",
+   "2023: Mark LXXXV — der letzte Anzug",
+   "2025: Riris Eigenbau in Chicago"
+  ],
+  "films": [
+   "iron1",
+   "iron3",
+   "iw",
+   "eg",
+   "ih"
+  ]
+ },
+ {
+  "id": "umhang",
+  "sym": "🪶",
+  "n": "Der Cloak of Levitation",
+  "sub": "Der loyalste Nebendarsteller",
+  "status": "Bei Strange",
+  "d": "Ein Relikt mit eigenem Willen und ausgeprägten Meinungen: Er wählte Strange im Sanctum aus, wischt ihm Tränen weg und zieht ihn im Kampf aus der Schusslinie. Offiziell ein Umhang, praktisch ein Haustier.",
+  "stations": [
+   "Jahrhunderte: im New Yorker Sanctum ausgestellt",
+   "2016: Wählt Strange",
+   "2018: Zu Staub — und zurück",
+   "Heute: unzertrennlich"
+  ],
+  "films": [
+   "strange1",
+   "iw",
+   "nwh",
+   "mom"
+  ]
+ },
+ {
+  "id": "vishanti",
+  "sym": "📕",
+  "n": "Das Book of Vishanti",
+  "sub": "Das gute Gegenstück zum Darkhold",
+  "status": "Zerstört — angeblich",
+  "d": "Die Waffe gegen alles Dunkle: gibt dem Magier genau den Zauber, den er braucht. Strange und America erreichten es nach einem Multiversums-Marathon — und Wanda zerstörte es Sekunden später. Ob das Original-Buch wirklich weg ist oder nur diese Kopie, ließ der Film bewusst offen.",
+  "stations": [
+   "Zeitlos: im Raum zwischen den Universen",
+   "2025: Von Wanda vernichtet",
+   "Status: 'zerstört' — in einem Multiversum ein dehnbarer Begriff"
+  ],
+  "films": [
+   "mom"
+  ]
+ },
+ {
+  "id": "edith",
+  "sym": "🕶",
+  "n": "E.D.I.T.H.",
+  "sub": "Even Dead, I'm The Hero",
+  "status": "Verbleib: unklar seit dem Vergessenszauber",
+  "d": "Tonys Abschiedsgeschenk an Peter: eine Brille mit Zugriff auf Starks komplettes Verteidigungsnetz inklusive Drohnenflotte. Peter schenkte sie in fünf Minuten an Mysterio weg — der Fehler, der zur Enttarnung und damit zu No Way Home führte. Wo E.D.I.T.H. nach dem großen Vergessen ist, hat nie jemand beantwortet.",
+  "stations": [
+   "2023: Tonys Vermächtnis",
+   "2024: Der Mysterio-Fehler",
+   "2024: Zurückerobert",
+   "Seit dem Zauber: unbekannt"
+  ],
+  "films": [
+   "spider2",
+   "nwh"
+  ]
+ },
+ {
+  "id": "herzkraut",
+  "sym": "🌿",
+  "n": "Das Herzkraut",
+  "sub": "Wakandas Königsmacher",
+  "status": "Vernichtet — synthetisch wiedererschaffen",
+  "d": "Die vibraniumgetränkte Pflanze, die Black Panthers ihre Kraft gibt und sie ins Reich der Ahnen führt. Killmonger verbrannte die Bestände; Shuri erschuf das Kraut synthetisch neu — und traf auf der Ahnenebene ausgerechnet ihn statt T'Challa. Namors Talokan hat übrigens eine eigene Version dieser Geschichte.",
+  "stations": [
+   "Urzeit: Wächst auf Vibranium-Boden",
+   "2018: Von Killmonger verbrannt",
+   "2025: Shuris Synthese",
+   "Heute: Wakandas Geheimnis, wieder"
+  ],
+  "films": [
+   "bp1",
+   "bpwf"
+  ]
+ },
+ {
+  "id": "tempad",
+  "sym": "⌛",
+  "n": "TVA-Technik",
+  "sub": "TemPads, Prune-Stäbe, Miss Minutes",
+  "status": "Im Dauereinsatz",
+  "d": "Die Behörde am Ende der Zeit arbeitet mit Retro-Tech, die jeder Physik spottet: TemPads öffnen Türen durch Raum und Zeit, Prune-Stäbe löschen Dinge aus der Existenz (bzw. schicken sie in den Void), und Miss Minutes ist eine KI mit Südstaaten-Akzent und eigener Agenda. Deadpool hat ein TemPad gestohlen — natürlich.",
+  "stations": [
+   "Zeitlos: Standardausrüstung der TVA",
+   "2024: Sylvies TemPad-Flucht",
+   "2029: Deadpools 'Leihgabe'"
+  ],
+  "films": [
+   "l1",
+   "l2",
+   "dw"
+  ]
+ },
+ {
+  "id": "yaka",
+  "sym": "➳",
+  "n": "Yondus Yaka-Pfeil",
+  "sub": "Ein Pfiff genügt",
+  "status": "Bei Kraglin",
+  "d": "Ein Pfeil aus Yaka-Metall, gesteuert allein durch Pfeifen — in Yondus Händen eine Ein-Mann-Armee: Die Flur-Sequenz in Vol. 2 ist eine der ikonischsten Tötungsszenen des MCU. Nach seinem Opfertod erbte Kraglin Pfeil und Flosse, und brauchte zwei Filme, um das Pfeifen zu lernen.",
+  "stations": [
+   "Ravager-Jahre: Yondus Markenzeichen",
+   "2017: 'I'm Mary Poppins, y'all!'",
+   "Heute: Kraglin, Guardians-Mitglied"
+  ],
+  "films": [
+   "gotg1",
+   "gotg2",
+   "g3"
+  ]
+ },
+ {
+  "id": "necroschwert",
+  "sym": "🌑",
+  "n": "Die Necroschwert-Klinge",
+  "sub": "All-Black, die Götter-Töterin",
+  "status": "Zerstört — mit Gorrs Rache",
+  "d": "Die erste Waffe des Symbionten-Gottes Knull (Comics) — im MCU die Klinge, die den trauernden Gorr fand und zum Götterschlächter machte. Sie flüstert, korrumpiert, und öffnete am Ende das Tor zur Ewigkeit. Zerstört, aber: Venom 3 hat Knull geteasert. Symbionten-Fäden enden nie sauber.",
+  "stations": [
+   "Uralt: Knulls Schmiedewerk",
+   "2024: Findet den trauernden Gorr",
+   "Das Tor zur Ewigkeit — und ihr Ende"
+  ],
+  "films": [
+   "tlt",
+   "venom3"
+  ]
+ },
+ {
+  "id": "slingring",
+  "sym": "⭕",
+  "n": "Die Sling-Ringe",
+  "sub": "Portale für Fortgeschrittene",
+  "status": "Standardausrüstung von Kamar-Taj",
+  "d": "Zwei Finger, ein Kreis, ein Funkenportal: das Alltagswerkzeug der Meister der Mystik — und heimlich eine der mächtigsten Technologien des MCU (Portale enthaupten, siehe Endgame-Schlacht). Ned Leeds öffnete eines ohne jede Ausbildung. Das sollte alle beunruhigen.",
+  "stations": [
+   "Kamar-Taj: Erste Lektion",
+   "2023: 'Portale auf!' — die Endgame-Kavallerie",
+   "2024: Ned kann es einfach so"
+  ],
+  "films": [
+   "strange1",
+   "eg",
+   "nwh"
+  ]
+ },
+ {
+  "id": "arcreaktor",
+  "sym": "◉",
+  "n": "Der Arc-Reaktor",
+  "sub": "Proof that Tony Stark has a heart",
+  "status": "Am Seeufer — als Kranz",
+  "d": "Erst Lebensretter (hielt die Splitter von Tonys Herzen fern), dann Energiequelle jeder Rüstung, am Ende Grabbeigabe: 'Proof that Tony Stark has a heart' trieb bei der Beerdigung auf dem See. Howard hatte die Technologie erdacht, Tony baute sie in einer Höhle. Mit einem Haufen Schrott.",
+  "stations": [
+   "Kalter Krieg: Howards Konzept",
+   "2008: In der Höhle gebaut",
+   "2013: Operation & Abschied",
+   "2023: Der Kranz auf dem See"
+  ],
+  "films": [
+   "iron1",
+   "iron3",
+   "eg"
+  ]
+ },
+ {
+  "id": "cerebro",
+  "sym": "🧠",
+  "n": "Cerebro",
+  "sub": "Xaviers Fenster zur Welt",
+  "status": "Je nach Zeitlinie intakt",
+  "d": "Der Verstärker, mit dem Xavier jeden Mutanten der Erde findet — und theoretisch jeden Menschen lähmen kann, wie X2 bewies: Cerebro ist Ortungsgerät UND Massenvernichtungswaffe, je nachdem, wer den Helm trägt. Auf Erde-838 nutzte ihn Professor X bis zu seiner letzten Sekunde.",
+  "stations": [
+   "X-Mansion: unter dem Basketballplatz",
+   "2003: Strykers Dark-Cerebro-Attacke",
+   "838: Die Illuminati-Version",
+   "Doomsday: Stewart kehrt zurück — mit Helm?"
+  ],
+  "films": [
+   "xmen1",
+   "x2",
+   "dofp",
+   "mom",
+   "doomsday"
+  ]
+ },
+ {
+  "id": "webshooter",
+  "sym": "🕸",
+  "n": "Web-Shooter & Spinnennetz",
+  "sub": "Chemie-Genie am Handgelenk",
+  "status": "Selbstgebaut, Version 2026",
+  "d": "Der ewige Nerd-Streit: Maguires Peter produziert Netz organisch, Holland und Garfield bauen Shooter selbst — Peters Netzformel ist kanonisch eine der wertvollsten Erfindungen New Yorks, und niemand zahlt ihm dafür einen Cent. Nach dem Vergessenszauber baute Holland-Peter alles neu: Anzug, Shooter, Leben.",
+  "stations": [
+   "2002: Organisch (Raimi-Welt)",
+   "2012: Selbstgebaut (Amazing-Welt)",
+   "2016: Stark-Upgrade",
+   "2026: Wieder komplett DIY"
+  ],
+  "films": [
+   "raimi1",
+   "tasm1",
+   "cw",
+   "nwh",
+   "bnd"
+  ]
+ },
+ {
+  "id": "zeitwebstuhl",
+  "sym": "🕸️",
+  "n": "Der Zeitwebstuhl",
+  "sub": "Das Herz der TVA — und ihr Todesurteil",
+  "status": "Ersetzt — durch Loki",
+  "d": "Die Maschine am Ende der Zeit, die rohe Zeit in die Heilige Zeitlinie webte. Als das Multiversum wucherte, skalierte sie nicht — sie war nie zum Weben gedacht, sondern als Notbremse: ein Failsafe, der alles außer der einen Zeitlinie schreddert. Loki zerstörte sie und nahm ihren Platz ein. Ein Gott als Infrastruktur.",
+  "stations": [
+   "Immer: Am Ende der Zeit",
+   "2023: Die Überlastung",
+   "Victor Timelys letzter Gang",
+   "Heute: Loki IST der Webstuhl"
+  ],
+  "films": [
+   "l1",
+   "l2"
+  ]
+ },
+ {
+  "id": "pager",
+  "sym": "📟",
+  "n": "Furys Pager",
+  "sub": "Das Retro-Gerät, das Hoffnung rief",
+  "status": "Zweck erfüllt",
+  "d": "Ein 90er-Jahre-Pager mit Kree-Upgrade und einer einzigen Funktion: Carol rufen. Fury trug ihn 23 Jahre bei sich und drückte den Knopf erst, als er zu Staub zerfiel — die vielleicht beste Requisiten-Pointe des MCU: Die Infinity-War-Post-Credit-Szene bestand nur aus diesem Gerät.",
+  "stations": [
+   "1995: Carols Abschiedsgeschenk",
+   "2018: Der letzte Knopfdruck",
+   "2019: 'Wo ist Fury?'"
+  ],
+  "films": [
+   "cm",
+   "iw",
+   "eg"
+  ]
+ }
+]

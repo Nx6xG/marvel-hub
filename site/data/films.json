@@ -1,0 +1,2062 @@
+[
+ {
+  "id": "iron1",
+  "t": "Iron Man",
+  "y": "2008",
+  "ph": 1,
+  "chrono": 3,
+  "type": "Film",
+  "prio": "empfohlen",
+  "min": 126,
+  "dir": "Jon Favreau",
+  "cast": [
+   "Robert Downey Jr.",
+   "Gwyneth Paltrow",
+   "Jeff Bridges"
+  ],
+  "plot": "Tony Stark baut sich in einer Höhle aus Schrott eine Rüstung — und startet damit das gesamte MCU.",
+  "note": "Der Anfang von allem. Und der Mann, der jetzt Doom spielt, wurde hier zur Ikone — genau deshalb trifft das Casting so hart.",
+  "uni": "mcu"
+ },
+ {
+  "id": "hulk",
+  "t": "The Incredible Hulk",
+  "y": "2008",
+  "ph": 1,
+  "chrono": 5,
+  "type": "Film",
+  "prio": "komplettist",
+  "min": 112,
+  "dir": "Louis Leterrier",
+  "cast": [
+   "Edward Norton",
+   "Liv Tyler",
+   "Tim Roth",
+   "William Hurt"
+  ],
+  "plot": "Bruce Banner auf der Flucht vor General Ross — der vergessene MCU-Film.",
+  "note": "Ross wird später Präsident und Red Hulk (Brave New World). Sonst verzichtbar.",
+  "uni": "mcu"
+ },
+ {
+  "id": "iron2",
+  "t": "Iron Man 2",
+  "y": "2010",
+  "ph": 1,
+  "chrono": 4,
+  "type": "Film",
+  "prio": "komplettist",
+  "min": 124,
+  "dir": "Jon Favreau",
+  "cast": [
+   "Robert Downey Jr.",
+   "Mickey Rourke",
+   "Scarlett Johansson"
+  ],
+  "plot": "Tony gegen Whiplash und sein eigenes Ego — mit dem Debüt von Black Widow.",
+  "note": "Erster Auftritt von Natasha Romanoff. Für Doomsday nicht nötig.",
+  "uni": "mcu"
+ },
+ {
+  "id": "thor1",
+  "t": "Thor",
+  "y": "2011",
+  "ph": 1,
+  "chrono": 6,
+  "type": "Film",
+  "prio": "optional",
+  "min": 115,
+  "dir": "Kenneth Branagh",
+  "cast": [
+   "Chris Hemsworth",
+   "Tom Hiddleston",
+   "Natalie Portman",
+   "Anthony Hopkins"
+  ],
+  "plot": "Der arrogante Donnergott wird auf die Erde verbannt — und Loki betritt die Bühne.",
+  "note": "Ursprung von Thor UND Loki, zwei zentralen Doomsday-Figuren.",
+  "uni": "mcu"
+ },
+ {
+  "id": "cap1",
+  "t": "Captain America: The First Avenger",
+  "y": "2011",
+  "ph": 1,
+  "chrono": 1,
+  "type": "Film",
+  "prio": "optional",
+  "min": 124,
+  "dir": "Joe Johnston",
+  "cast": [
+   "Chris Evans",
+   "Hayley Atwell",
+   "Hugo Weaving"
+  ],
+  "plot": "Steve Rogers wird 1943 zum Supersoldaten — der chronologische Anfang des MCU.",
+  "note": "Evans-Ursprung; chronologisch Startpunkt 1943.",
+  "uni": "mcu"
+ },
+ {
+  "id": "av1",
+  "t": "The Avengers",
+  "y": "2012",
+  "ph": 1,
+  "chrono": 7,
+  "type": "Film",
+  "prio": "empfohlen",
+  "min": 143,
+  "dir": "Joss Whedon",
+  "cast": [
+   "Robert Downey Jr.",
+   "Chris Evans",
+   "Scarlett Johansson",
+   "Mark Ruffalo"
+  ],
+  "plot": "Sechs Helden, ein Team, die Schlacht von New York — das erste große Crossover der Kinogeschichte.",
+  "note": "Die Schlacht von New York ist der Dreh- und Angelpunkt von Endgame UND Loki: Genau hier entsteht die Variante, die heute alle Zeitlinien hält.",
+  "uni": "mcu"
+ },
+ {
+  "id": "iron3",
+  "t": "Iron Man 3",
+  "y": "2013",
+  "ph": 2,
+  "chrono": 8,
+  "type": "Film",
+  "prio": "komplettist",
+  "min": 130,
+  "dir": "Shane Black",
+  "cast": [
+   "Robert Downey Jr.",
+   "Ben Kingsley",
+   "Guy Pearce"
+  ],
+  "plot": "Tony nach dem New-York-Trauma — Panikattacken, Mandarin-Twist, Trevor Slattery.",
+  "note": "Trevor kehrt in Wonder Man zurück. Sonst optional.",
+  "uni": "mcu"
+ },
+ {
+  "id": "thor2",
+  "t": "Thor: The Dark World",
+  "y": "2013",
+  "ph": 2,
+  "chrono": 9,
+  "type": "Film",
+  "prio": "komplettist",
+  "min": 112,
+  "dir": "Alan Taylor",
+  "cast": [
+   "Chris Hemsworth",
+   "Tom Hiddleston",
+   "Natalie Portman"
+  ],
+  "plot": "Dunkelelfen jagen den Äther — den späteren Realitätsstein.",
+  "note": "Lokis 'Tod' Nr. 2; Endgame-Zeitreise-Ziel. Verzichtbar.",
+  "uni": "mcu"
+ },
+ {
+  "id": "cap2",
+  "t": "Captain America: The Winter Soldier",
+  "y": "2014",
+  "ph": 2,
+  "chrono": 10,
+  "type": "Film",
+  "prio": "empfohlen",
+  "min": 136,
+  "dir": "Anthony & Joe Russo",
+  "cast": [
+   "Chris Evans",
+   "Scarlett Johansson",
+   "Sebastian Stan",
+   "Anthony Mackie"
+  ],
+  "plot": "Hydra sitzt in S.H.I.E.L.D., Steves toter bester Freund ist eine Killermaschine — der erste Russo-Film.",
+  "note": "Debüt von Sam UND Bucky-als-Winter-Soldier — zwei Doomsday-Hauptfiguren. Und der Film, mit dem die Russos das Vertrauen für Endgame & Doomsday verdienten.",
+  "uni": "mcu"
+ },
+ {
+  "id": "gotg1",
+  "t": "Guardians of the Galaxy",
+  "y": "2014",
+  "ph": 2,
+  "chrono": 11,
+  "type": "Film",
+  "prio": "optional",
+  "min": 121,
+  "dir": "James Gunn",
+  "cast": [
+   "Chris Pratt",
+   "Zoe Saldaña",
+   "Dave Bautista"
+  ],
+  "plot": "Ein Dieb, zwei Killer, ein Baum und ein Waschbär retten die Galaxie.",
+  "note": "Kosmisches MCU-Fundament; für Doomsday randständig.",
+  "uni": "mcu"
+ },
+ {
+  "id": "av2",
+  "t": "Avengers: Age of Ultron",
+  "y": "2015",
+  "ph": 2,
+  "chrono": 13,
+  "type": "Film",
+  "prio": "empfohlen",
+  "min": 141,
+  "dir": "Joss Whedon",
+  "cast": [
+   "Robert Downey Jr.",
+   "James Spader (Ultron)",
+   "Elizabeth Olsen",
+   "Paul Bettany"
+  ],
+  "plot": "Tonys Schutz-KI wird zum Auslöschungsprogramm; Wanda und Vision debütieren.",
+  "note": "Wegen Vision Quest wieder hochrelevant: Ultron (James Spader!) und Visions Ursprung liegen hier.",
+  "uni": "mcu"
+ },
+ {
+  "id": "antman1",
+  "t": "Ant-Man",
+  "y": "2015",
+  "ph": 2,
+  "chrono": 14,
+  "type": "Film",
+  "prio": "optional",
+  "min": 117,
+  "dir": "Peyton Reed",
+  "cast": [
+   "Paul Rudd",
+   "Michael Douglas",
+   "Evangeline Lilly"
+  ],
+  "plot": "Meisterdieb Scott Lang schrumpft — und öffnet nebenbei die Tür zum Quantenreich.",
+  "note": "Das Quantenreich wird später Endgames Zeitmaschine und Kangs Gefängnis.",
+  "uni": "mcu"
+ },
+ {
+  "id": "cw",
+  "t": "Captain America: Civil War",
+  "y": "2016",
+  "ph": 3,
+  "chrono": 15,
+  "type": "Film",
+  "prio": "pflicht",
+  "min": 147,
+  "dir": "Anthony & Joe Russo",
+  "cast": [
+   "Chris Evans",
+   "Robert Downey Jr.",
+   "Chadwick Boseman",
+   "Sebastian Stan"
+  ],
+  "plot": "Das Sokovia-Abkommen spaltet die Avengers in Team Stark und Team Cap — am Ende steht der Bruch.",
+  "note": "Das Fundament: Die Avengers zerbrechen. Ohne diesen Bruch ergibt nichts danach Sinn.",
+  "uni": "mcu"
+ },
+ {
+  "id": "strange1",
+  "t": "Doctor Strange",
+  "y": "2016",
+  "ph": 3,
+  "chrono": 18,
+  "type": "Film",
+  "prio": "empfohlen",
+  "min": 115,
+  "dir": "Scott Derrickson",
+  "cast": [
+   "Benedict Cumberbatch",
+   "Tilda Swinton",
+   "Chiwetel Ejiofor"
+  ],
+  "plot": "Ein arroganter Chirurg verliert seine Hände und findet die Magie — Multiversum inklusive.",
+  "note": "Magie-Grundlagen des MCU. Dooms zweite Machtquelle neben der Technik.",
+  "uni": "mcu"
+ },
+ {
+  "id": "gotg2",
+  "t": "Guardians of the Galaxy Vol. 2",
+  "y": "2017",
+  "ph": 3,
+  "chrono": 12,
+  "type": "Film",
+  "prio": "komplettist",
+  "min": 136,
+  "dir": "James Gunn",
+  "cast": [
+   "Chris Pratt",
+   "Kurt Russell",
+   "Michael Rooker"
+  ],
+  "plot": "Quill trifft seinen Gott-Vater Ego — Familiendrama in Neonfarben.",
+  "note": "Für Doomsday ohne Fäden.",
+  "uni": "mcu"
+ },
+ {
+  "id": "spider1",
+  "t": "Spider-Man: Homecoming",
+  "y": "2017",
+  "ph": 3,
+  "chrono": 17,
+  "type": "Film",
+  "prio": "optional",
+  "min": 133,
+  "dir": "Jon Watts",
+  "cast": [
+   "Tom Holland",
+   "Michael Keaton",
+   "Robert Downey Jr."
+  ],
+  "plot": "Peter Parker zwischen Abschlussball und Vulture — mit Tony als Mentor.",
+  "note": "Hollands Peter beginnt hier; sein Weg endet (vorerst) in Brand New Day.",
+  "uni": "mcu"
+ },
+ {
+  "id": "thor3",
+  "t": "Thor: Ragnarok",
+  "y": "2017",
+  "ph": 3,
+  "chrono": 19,
+  "type": "Film",
+  "prio": "optional",
+  "min": 130,
+  "dir": "Taika Waititi",
+  "cast": [
+   "Chris Hemsworth",
+   "Cate Blanchett",
+   "Tessa Thompson",
+   "Mark Ruffalo"
+  ],
+  "plot": "Asgard fällt, Thor verliert Hammer und Auge — und findet seinen Humor.",
+  "note": "Thors Neuerfindung; Asgards Ende erklärt seinen heutigen Status.",
+  "uni": "mcu"
+ },
+ {
+  "id": "bp1",
+  "t": "Black Panther",
+  "y": "2018",
+  "ph": 3,
+  "chrono": 20,
+  "type": "Film",
+  "prio": "optional",
+  "min": 134,
+  "dir": "Ryan Coogler",
+  "cast": [
+   "Chadwick Boseman",
+   "Michael B. Jordan",
+   "Letitia Wright"
+  ],
+  "plot": "T'Challa wird König von Wakanda und öffnet das verborgene Land der Welt.",
+  "note": "Wakanda-Fundament für Shuri, M'Baku und Wakanda Forever.",
+  "uni": "mcu"
+ },
+ {
+  "id": "iw",
+  "t": "Avengers: Infinity War",
+  "y": "2018",
+  "ph": 3,
+  "chrono": 21,
+  "type": "Film",
+  "prio": "pflicht",
+  "min": 149,
+  "dir": "Anthony & Joe Russo",
+  "cast": [
+   "Josh Brolin",
+   "Robert Downey Jr.",
+   "Chris Hemsworth",
+   "Benedict Cumberbatch"
+  ],
+  "plot": "Thanos sammelt alle sechs Infinity-Steine und löscht mit einem Schnipsen die Hälfte allen Lebens aus.",
+  "note": "Die Russo-Blaupause für Doomsday: Der Schurke gewinnt.",
+  "uni": "mcu"
+ },
+ {
+  "id": "antman2",
+  "t": "Ant-Man and the Wasp",
+  "y": "2018",
+  "ph": 3,
+  "chrono": 22,
+  "type": "Film",
+  "prio": "komplettist",
+  "min": 118,
+  "dir": "Peyton Reed",
+  "cast": [
+   "Paul Rudd",
+   "Evangeline Lilly",
+   "Michelle Pfeiffer"
+  ],
+  "plot": "Rettung aus dem Quantenreich — und Scott sitzt beim Snap genau dort fest.",
+  "note": "Der Quantenreich-Zufall, der Endgame überhaupt möglich macht.",
+  "uni": "mcu"
+ },
+ {
+  "id": "cm",
+  "t": "Captain Marvel",
+  "y": "2019",
+  "ph": 3,
+  "chrono": 2,
+  "type": "Film",
+  "prio": "optional",
+  "min": 123,
+  "dir": "Anna Boden & Ryan Fleck",
+  "cast": [
+   "Brie Larson",
+   "Samuel L. Jackson",
+   "Ben Mendelsohn"
+  ],
+  "plot": "Carol Danvers entdeckt 1995 ihre Kräfte und ihre Vergangenheit — mit jungem Nick Fury.",
+  "note": "Carols Ursprung; Basis für The Marvels.",
+  "uni": "mcu"
+ },
+ {
+  "id": "eg",
+  "t": "Avengers: Endgame",
+  "y": "2019",
+  "ph": 3,
+  "chrono": 23,
+  "type": "Film",
+  "prio": "pflicht",
+  "min": 181,
+  "dir": "Anthony & Joe Russo",
+  "cast": [
+   "Robert Downey Jr.",
+   "Chris Evans",
+   "Scarlett Johansson",
+   "Chris Hemsworth"
+  ],
+  "plot": "Fünf Jahre nach dem Snap holen die Avengers die Steine per Zeitreise zurück. Tony opfert sich, Steve bleibt in der Vergangenheit.",
+  "note": "Die Zeitreise-Mechanik öffnet die Multiversum-Tür — und Tonys Abschied ist der Kontext, vor dem RDJs Rückkehr als Doom erst richtig wehtut.",
+  "uni": "mcu"
+ },
+ {
+  "id": "spider2",
+  "t": "Spider-Man: Far From Home",
+  "y": "2019",
+  "ph": 3,
+  "chrono": 24,
+  "type": "Film",
+  "prio": "optional",
+  "min": 129,
+  "dir": "Jon Watts",
+  "cast": [
+   "Tom Holland",
+   "Jake Gyllenhaal",
+   "Zendaya"
+  ],
+  "plot": "Mysterio verkauft Peter ein falsches Multiversum — und enttarnt ihn am Ende vor der ganzen Welt.",
+  "note": "Die Enttarnung ist der direkte Auslöser von No Way Home. Fun Fact: Mysterios Multiversum-Lüge wurde zwei Jahre später wahr.",
+  "uni": "mcu"
+ },
+ {
+  "id": "wv",
+  "t": "WandaVision",
+  "y": "2021",
+  "ph": 4,
+  "chrono": 26,
+  "type": "Serie",
+  "prio": "empfohlen",
+  "min": 350,
+  "dir": "Regie: Matt Shakman · Creator: Jac Schaeffer",
+  "cast": [
+   "Elizabeth Olsen",
+   "Paul Bettany",
+   "Kathryn Hahn"
+  ],
+  "plot": "In der Sitcom-Blase von Westview verarbeitet Wanda ihre Trauer, erschafft Ehemann und Zwillinge — und wird zur Scarlet Witch.",
+  "note": "9 Episoden. Chaosmagie und Realitäts-Umschreibung — Basis für MoM, Agatha und Vision Quest.",
+  "uni": "mcu"
+ },
+ {
+  "id": "fws",
+  "t": "The Falcon and the Winter Soldier",
+  "y": "2021",
+  "ph": 4,
+  "chrono": 27,
+  "type": "Serie",
+  "prio": "empfohlen",
+  "min": 300,
+  "dir": "Regie: Kari Skogland",
+  "cast": [
+   "Anthony Mackie",
+   "Sebastian Stan",
+   "Wyatt Russell"
+  ],
+  "plot": "Sam ringt mit dem Erbe des Schilds, John Walker zeigt, wie Cap nicht geht — am Ende nimmt Sam den Titel an.",
+  "note": "6 Episoden. Sams Weg zum Captain America, der in Doomsday die Helden führt.",
+  "uni": "mcu"
+ },
+ {
+  "id": "l1",
+  "t": "Loki · Staffel 1",
+  "y": "2021",
+  "ph": 4,
+  "chrono": 25,
+  "type": "Serie",
+  "prio": "pflicht",
+  "min": 300,
+  "dir": "Regie: Kate Herron · Creator: Michael Waldron",
+  "cast": [
+   "Tom Hiddleston",
+   "Owen Wilson",
+   "Sophia Di Martino",
+   "Jonathan Majors"
+  ],
+  "plot": "Ein 2012er-Loki landet bei der TVA und erfährt die Wahrheit über die Heilige Zeitlinie. Sylvie tötet 'Er, der bleibt' — das Multiversum verzweigt unkontrolliert.",
+  "note": "DIE Grundlagen-Serie der Saga: TVA, Zeitlinien, Kang. Ohne sie versteht man Doomsday nur halb.",
+  "uni": "mcu"
+ },
+ {
+  "id": "bw",
+  "t": "Black Widow",
+  "y": "2021",
+  "ph": 4,
+  "chrono": 16,
+  "type": "Film",
+  "prio": "empfohlen",
+  "min": 134,
+  "dir": "Cate Shortland",
+  "cast": [
+   "Scarlett Johansson",
+   "Florence Pugh",
+   "David Harbour",
+   "Rachel Weisz"
+  ],
+  "plot": "Natashas Vergangenheit, ihre Ersatzfamilie — und das Debüt von Yelena und Red Guardian.",
+  "note": "Die halbe Thunderbolts-Familie startet hier. Direkter Zulauf zu den New Avengers.",
+  "uni": "mcu"
+ },
+ {
+  "id": "wi",
+  "t": "What If…? · S1–3",
+  "y": "2021–24",
+  "ph": 4,
+  "chrono": 45,
+  "type": "Serie",
+  "prio": "optional",
+  "min": 780,
+  "dir": "Regie: Bryan Andrews",
+  "cast": [
+   "Jeffrey Wright (Watcher)",
+   "Hayley Atwell"
+  ],
+  "plot": "Der Watcher erzählt Was-wäre-wenn-Geschichten aus dem ganzen Multiversum — und greift am Ende selbst ein.",
+  "note": "Multiversum-Gefühl in Reinform; Captain Carter und Infinity Ultron als Vorgeschmack auf Varianten-Chaos.",
+  "uni": "mcu"
+ },
+ {
+  "id": "sc",
+  "t": "Shang-Chi",
+  "y": "2021",
+  "ph": 4,
+  "chrono": 28,
+  "type": "Film",
+  "prio": "optional",
+  "min": 132,
+  "dir": "Destin Daniel Cretton",
+  "cast": [
+   "Simu Liu",
+   "Tony Leung",
+   "Michelle Yeoh"
+  ],
+  "plot": "Shang-Chi stellt sich seinem Vater und übernimmt die Zehn Ringe — die am Ende ein ungeklärtes Signal senden.",
+  "note": "Simu Liu ist im Doomsday-Cast; das Ringe-Signal ist bis heute offen.",
+  "uni": "mcu"
+ },
+ {
+  "id": "et",
+  "t": "Eternals",
+  "y": "2021",
+  "ph": 4,
+  "chrono": 29,
+  "type": "Film",
+  "prio": "optional",
+  "min": 156,
+  "dir": "Chloé Zhao",
+  "cast": [
+   "Gemma Chan",
+   "Richard Madden",
+   "Angelina Jolie"
+  ],
+  "plot": "Uralte Beschützer verhindern die Geburt eines Celestials aus dem Erdkern — dessen Hand seitdem aus dem Ozean ragt.",
+  "note": "Der tote Celestial wird zur Adamantium-Quelle von Brave New World.",
+  "uni": "mcu"
+ },
+ {
+  "id": "hk",
+  "t": "Hawkeye",
+  "y": "2021",
+  "ph": 4,
+  "chrono": 32,
+  "type": "Serie",
+  "prio": "optional",
+  "min": 270,
+  "dir": "Regie: Rhys Thomas, Bert & Bertie",
+  "cast": [
+   "Jeremy Renner",
+   "Hailee Steinfeld",
+   "Florence Pugh"
+  ],
+  "plot": "Clint will nur Weihnachten nach Hause — bekommt aber Nachfolgerin Kate Bishop und Kingpin-Ärger.",
+  "note": "6 Episoden. Kate Bishop — Young-Avengers-Baustein.",
+  "uni": "mcu"
+ },
+ {
+  "id": "nwh",
+  "t": "Spider-Man: No Way Home",
+  "y": "2021",
+  "ph": 4,
+  "chrono": 30,
+  "type": "Film",
+  "prio": "pflicht",
+  "min": 148,
+  "dir": "Jon Watts",
+  "cast": [
+   "Tom Holland",
+   "Benedict Cumberbatch",
+   "Tobey Maguire",
+   "Andrew Garfield"
+  ],
+  "plot": "Ein verpatzter Vergessenszauber zieht Schurken und Spider-Männer aus fremden Universen an. Am Ende vergisst die Welt Peter komplett.",
+  "note": "Das Multiversum bricht erstmals groß ins Kino — Fox- und Sony-Welten sind offiziell real.",
+  "uni": "mcu"
+ },
+ {
+  "id": "mk",
+  "t": "Moon Knight",
+  "y": "2022",
+  "ph": 4,
+  "chrono": 33,
+  "type": "Serie",
+  "prio": "komplettist",
+  "min": 280,
+  "dir": "Regie: Mohamed Diab u. a.",
+  "cast": [
+   "Oscar Isaac",
+   "Ethan Hawke"
+  ],
+  "plot": "Marc, Steven und der Mondgott Khonshu teilen sich einen Körper — Marvels psychologischster Trip.",
+  "note": "6 Episoden. Stark, aber (bisher) ohne Saga-Anschluss.",
+  "uni": "mcu"
+ },
+ {
+  "id": "mom",
+  "t": "Doctor Strange in the Multiverse of Madness",
+  "y": "2022",
+  "ph": 4,
+  "chrono": 31,
+  "type": "Film",
+  "prio": "pflicht",
+  "min": 126,
+  "dir": "Sam Raimi",
+  "cast": [
+   "Benedict Cumberbatch",
+   "Elizabeth Olsen",
+   "Xochitl Gomez"
+  ],
+  "plot": "Strange und America Chavez fliehen durchs Multiversum vor der Scarlet Witch, die auf Erde-838 die Illuminati auslöscht.",
+  "note": "Führt Inkursionen ein — den Mechanismus hinter Doomsday und Secret Wars. Plus: Welten, in denen X-Men und F4 längst existieren.",
+  "uni": "mcu"
+ },
+ {
+  "id": "msm",
+  "t": "Ms. Marvel",
+  "y": "2022",
+  "ph": 4,
+  "chrono": 34,
+  "type": "Serie",
+  "prio": "optional",
+  "min": 240,
+  "dir": "Regie: Adil & Bilall u. a.",
+  "cast": [
+   "Iman Vellani",
+   "Matt Lintz"
+  ],
+  "plot": "Kamala Khan entdeckt ihre Kräfte — und im Finale fällt zum ersten Mal im MCU das Wort 'Mutation'.",
+  "note": "6 Episoden. Die allererste Mutanten-Erwähnung des MCU. Post-Credits führt in The Marvels.",
+  "uni": "mcu"
+ },
+ {
+  "id": "tlt",
+  "t": "Thor: Love and Thunder",
+  "y": "2022",
+  "ph": 4,
+  "chrono": 35,
+  "type": "Film",
+  "prio": "komplettist",
+  "min": 119,
+  "dir": "Taika Waititi",
+  "cast": [
+   "Chris Hemsworth",
+   "Natalie Portman",
+   "Christian Bale"
+  ],
+  "plot": "Thor gegen Gorr den Götterschlächter; Jane schwingt Mjölnir. Am Ende adoptiert Thor Gorrs Tochter Love.",
+  "note": "Thors Status quo vor seiner Doomsday-Rückkehr.",
+  "uni": "mcu"
+ },
+ {
+  "id": "shk",
+  "t": "She-Hulk",
+  "y": "2022",
+  "ph": 4,
+  "chrono": 36,
+  "type": "Serie",
+  "prio": "komplettist",
+  "min": 315,
+  "dir": "Creator: Jessica Gao",
+  "cast": [
+   "Tatiana Maslany",
+   "Mark Ruffalo",
+   "Charlie Cox"
+  ],
+  "plot": "Jen Walters wird unfreiwillig Hulk-Anwältin und bricht im Finale die vierte Wand bis in Marvels Autorenzimmer.",
+  "note": "9 Episoden. Meta-Multiversum inklusive K.E.V.I.N.-KI.",
+  "uni": "mcu"
+ },
+ {
+  "id": "wbn",
+  "t": "Werewolf by Night",
+  "y": "2022",
+  "ph": 4,
+  "chrono": 37,
+  "type": "Special",
+  "prio": "komplettist",
+  "min": 53,
+  "dir": "Michael Giacchino",
+  "cast": [
+   "Gael García Bernal",
+   "Laura Donnelly"
+  ],
+  "plot": "Monsterjäger konkurrieren in Schwarz-Weiß um den Bloodstone — Marvels Horror-Ecke in 53 Minuten.",
+  "note": "Stimmungsvoller Einzelgänger ohne Saga-Fäden.",
+  "uni": "mcu"
+ },
+ {
+  "id": "bpwf",
+  "t": "Black Panther: Wakanda Forever",
+  "y": "2022",
+  "ph": 4,
+  "chrono": 38,
+  "type": "Film",
+  "prio": "empfohlen",
+  "min": 161,
+  "dir": "Ryan Coogler",
+  "cast": [
+   "Letitia Wright",
+   "Angela Bassett",
+   "Tenoch Huerta Mejía"
+  ],
+  "plot": "Wakanda trauert um T'Challa, Namors Unterwasserreich erklärt den Krieg — Shuri wird zur neuen Black Panther.",
+  "note": "Shuri, M'Baku, Namor und Namora sind alle im Doomsday-Cast.",
+  "uni": "mcu"
+ },
+ {
+  "id": "ghs",
+  "t": "Guardians Holiday Special",
+  "y": "2022",
+  "ph": 4,
+  "chrono": 39,
+  "type": "Special",
+  "prio": "komplettist",
+  "min": 44,
+  "dir": "James Gunn",
+  "cast": [
+   "Chris Pratt",
+   "Pom Klementieff",
+   "Kevin Bacon"
+  ],
+  "plot": "Mantis und Drax entführen Kevin Bacon als Weihnachtsgeschenk für Quill. Genau so albern, wie es klingt.",
+  "note": "44 Minuten Weihnachten. Phase-4-Abschluss.",
+  "uni": "mcu"
+ },
+ {
+  "id": "qm",
+  "t": "Ant-Man and the Wasp: Quantumania",
+  "y": "2023",
+  "ph": 5,
+  "chrono": 40,
+  "type": "Film",
+  "prio": "empfohlen",
+  "min": 125,
+  "dir": "Peyton Reed",
+  "cast": [
+   "Paul Rudd",
+   "Jonathan Majors",
+   "Kathryn Newton",
+   "Michelle Pfeiffer"
+  ],
+  "plot": "Familie Lang strandet im Quantenreich beim verbannten Kang. Post-Credits: eine Arena voller Kang-Varianten.",
+  "note": "Der Saga-Plan, den Doom beerbt — und der Council of Kangs ist bis heute ein offener Faden. Cassie Lang startet hier.",
+  "uni": "mcu"
+ },
+ {
+  "id": "g3",
+  "t": "Guardians of the Galaxy Vol. 3",
+  "y": "2023",
+  "ph": 5,
+  "chrono": 42,
+  "type": "Film",
+  "prio": "optional",
+  "min": 150,
+  "dir": "James Gunn",
+  "cast": [
+   "Chris Pratt",
+   "Zoe Saldaña",
+   "Chukwudi Iwuji"
+  ],
+  "plot": "Rockets Vergangenheit, der High Evolutionary — der emotionale Schlusspunkt der Guardians.",
+  "note": "Abschluss der Trilogie; für Doomsday ohne direkte Fäden.",
+  "uni": "mcu"
+ },
+ {
+  "id": "si",
+  "t": "Secret Invasion",
+  "y": "2023",
+  "ph": 5,
+  "chrono": 43,
+  "type": "Serie",
+  "prio": "komplettist",
+  "min": 270,
+  "dir": "Regie: Ali Selim",
+  "cast": [
+   "Samuel L. Jackson",
+   "Ben Mendelsohn",
+   "Olivia Colman"
+  ],
+  "plot": "Gestaltwandelnde Skrulle unterwandern die Erde; Nick Furys einsamster Kampf — mit folgenreichem Rhodey-Twist.",
+  "note": "6 Episoden. Für Doomsday randständig.",
+  "uni": "mcu"
+ },
+ {
+  "id": "l2",
+  "t": "Loki · Staffel 2",
+  "y": "2023",
+  "ph": 5,
+  "chrono": 41,
+  "type": "Serie",
+  "prio": "pflicht",
+  "min": 300,
+  "dir": "Regie: Justin Benson & Aaron Moorhead",
+  "cast": [
+   "Tom Hiddleston",
+   "Owen Wilson",
+   "Ke Huy Quan"
+  ],
+  "plot": "Der Zeitwebstuhl kollabiert. Loki lernt Jahrhunderte, scheitert unendlich oft — und opfert sich: Als Gott der Geschichten hält er alle Zeitlinien zusammen.",
+  "note": "Vermutlich das wichtigste Einzel-Setup für Doomsday überhaupt. Lokis Zeitlinien-Thron ist der offensichtlichste Angriffspunkt für Doom.",
+  "uni": "mcu"
+ },
+ {
+  "id": "mv",
+  "t": "The Marvels",
+  "y": "2023",
+  "ph": 5,
+  "chrono": 44,
+  "type": "Film",
+  "prio": "empfohlen",
+  "min": 105,
+  "dir": "Nia DaCosta",
+  "cast": [
+   "Brie Larson",
+   "Teyonah Parris",
+   "Iman Vellani"
+  ],
+  "plot": "Carol, Monica und Kamala tauschen bei jeder Kraftnutzung die Plätze; Monica verschließt am Ende einen Riss — von der falschen Seite.",
+  "note": "Die Post-Credit-Szene ist der X-Men-Türöffner: Monica erwacht in einem fremden Universum neben Beast (Kelsey Grammer, Doomsday-Cast).",
+  "uni": "mcu"
+ },
+ {
+  "id": "ec",
+  "t": "Echo",
+  "y": "2024",
+  "ph": 5,
+  "chrono": 46,
+  "type": "Serie",
+  "prio": "komplettist",
+  "min": 200,
+  "dir": "Regie: Sydney Freeland",
+  "cast": [
+   "Alaqua Cox",
+   "Vincent D'Onofrio"
+  ],
+  "plot": "Maya Lopez kehrt nach Oklahoma zurück und stellt sich Kingpin — Street-Level pur.",
+  "note": "5 Episoden. Brücke zu Daredevil: Born Again.",
+  "uni": "mcu"
+ },
+ {
+  "id": "x97",
+  "t": "X-Men '97",
+  "y": "2024",
+  "ph": 5,
+  "chrono": 58,
+  "type": "Serie",
+  "prio": "optional",
+  "min": 300,
+  "dir": "Marvel Animation",
+  "cast": [
+   "Ray Chase (Cyclops)",
+   "Cal Dodd (Wolverine)"
+  ],
+  "plot": "Die Fortsetzung der 90er-Zeichentrickserie — von Genosha bis Bastion emotional gnadenloser als die meisten Realfilme.",
+  "note": "Eigenes (Animations-)Universum, aber DER Liebesbrief an genau die X-Men-Ära, die Doomsday zurückbringt.",
+  "uni": "mcu"
+ },
+ {
+  "id": "dw",
+  "t": "Deadpool & Wolverine",
+  "y": "2024",
+  "ph": 5,
+  "chrono": 47,
+  "type": "Film",
+  "prio": "pflicht",
+  "min": 128,
+  "dir": "Shawn Levy",
+  "cast": [
+   "Ryan Reynolds",
+   "Hugh Jackman",
+   "Emma Corrin",
+   "Channing Tatum"
+  ],
+  "plot": "Die TVA eröffnet Wade: Seine Zeitlinie stirbt, weil ihr Anker-Wesen Logan tot ist. Im Void warten Cassandra Nova, das Fox-Erbe — und der eine Wolverine, der mitkommt.",
+  "note": "Anker-Wesen, Void, Fox-Multiversum, Gambit-Debüt — die Brücke, über die die alten X-Men ins MCU laufen.",
+  "uni": "mcu"
+ },
+ {
+  "id": "ag",
+  "t": "Agatha All Along",
+  "y": "2024",
+  "ph": 5,
+  "chrono": 48,
+  "type": "Serie",
+  "prio": "empfohlen",
+  "min": 315,
+  "dir": "Creator: Jac Schaeffer",
+  "cast": [
+   "Kathryn Hahn",
+   "Joe Locke",
+   "Aubrey Plaza"
+  ],
+  "plot": "Agatha wandert den Hexenpfad — mit einem Teen, der sich als Billy Maximoff entpuppt: Wandas Sohn lebt, als Wiccan.",
+  "note": "9 Episoden. Wiccan ist der Young-Avengers-Schlüsselstein — und Wandas Vermächtnis wirkt weiter.",
+  "uni": "mcu"
+ },
+ {
+  "id": "dba",
+  "t": "Daredevil: Born Again",
+  "y": "2025",
+  "ph": 5,
+  "chrono": 49,
+  "type": "Serie",
+  "prio": "optional",
+  "min": 405,
+  "dir": "Regie: u. a. Benson & Moorhead",
+  "cast": [
+   "Charlie Cox",
+   "Vincent D'Onofrio",
+   "Jon Bernthal"
+  ],
+  "plot": "Matt Murdock hat den Anzug abgelegt, Fisk ist Bürgermeister von New York — bis beide wieder werden, was sie sind.",
+  "note": "9 Episoden. Der Zustand der Straßen vor Doomsday.",
+  "uni": "mcu"
+ },
+ {
+  "id": "bnw",
+  "t": "Captain America: Brave New World",
+  "y": "2025",
+  "ph": 5,
+  "chrono": 50,
+  "type": "Film",
+  "prio": "empfohlen",
+  "min": 118,
+  "dir": "Julius Onah",
+  "cast": [
+   "Anthony Mackie",
+   "Harrison Ford",
+   "Danny Ramirez"
+  ],
+  "plot": "Sam beweist sich als Cap ohne Serum, Präsident Ross wird zum Red Hulk — und aus dem toten Celestial wird Adamantium gewonnen.",
+  "note": "Sam als amtierender Captain America, Adamantium im Spiel, kein stehendes Avengers-Team: die verwundbare Welt, die Doom vorfindet.",
+  "uni": "mcu"
+ },
+ {
+  "id": "tb",
+  "t": "Thunderbolts*",
+  "y": "2025",
+  "ph": 5,
+  "chrono": 52,
+  "type": "Film",
+  "prio": "pflicht",
+  "min": 127,
+  "dir": "Jake Schreier",
+  "cast": [
+   "Florence Pugh",
+   "Sebastian Stan",
+   "David Harbour",
+   "Lewis Pullman"
+  ],
+  "plot": "Valentinas Himmelfahrtskommando trifft auf Bob — den Sentry, dessen dunkles Ich halb New York verschlingt. Danach werden sie als 'New Avengers' vermarktet.",
+  "note": "Das aktive Heldenteam von Doomsday formiert sich — und mit Sentry hat das MCU erstmals ein heldenseitiges Wesen auf Doom-Niveau. Instabil allerdings.",
+  "uni": "mcu"
+ },
+ {
+  "id": "ih",
+  "t": "Ironheart",
+  "y": "2025",
+  "ph": 5,
+  "chrono": 51,
+  "type": "Serie",
+  "prio": "empfohlen",
+  "min": 270,
+  "dir": "Regie: Sam Bailey & Angela Barnes",
+  "cast": [
+   "Dominique Thorne",
+   "Anthony Ramos",
+   "Sacha Baron Cohen"
+  ],
+  "plot": "Riri Williams baut ihre eigene Rüstung und gerät an The Hood — dessen Gönner sich im Finale als Mephisto offenbart.",
+  "note": "6 Episoden. Mephistos MCU-Debüt, direkt vor dem Multiversum-Finale — kein Zufall. Phase-5-Abschluss.",
+  "uni": "mcu"
+ },
+ {
+  "id": "f4",
+  "t": "The Fantastic Four: First Steps",
+  "y": "2025",
+  "ph": 6,
+  "chrono": 55,
+  "type": "Film",
+  "prio": "pflicht",
+  "min": 115,
+  "dir": "Matt Shakman",
+  "cast": [
+   "Pedro Pascal",
+   "Vanessa Kirby",
+   "Joseph Quinn",
+   "Ebon Moss-Bachrach"
+  ],
+  "plot": "Auf der Retro-Zukunftswelt Erde-828 retten die F4 ihre Erde vor Galactus — der als Preis das Baby Franklin fordert.",
+  "note": "Der direkte Vorfilm: Die Post-Credit-Szene ist praktisch die erste Szene von Doomsday. Phase-6-Auftakt.",
+  "uni": "mcu"
+ },
+ {
+  "id": "eow",
+  "t": "Eyes of Wakanda",
+  "y": "2025",
+  "ph": 6,
+  "chrono": 53,
+  "type": "Serie",
+  "prio": "komplettist",
+  "min": 120,
+  "dir": "Marvel Animation",
+  "cast": [
+   "Anthologie"
+  ],
+  "plot": "Wakandas Krieger jagen über Jahrhunderte verlorene Vibranium-Artefakte.",
+  "note": "4 Episoden Animation. Für Doomsday verzichtbar.",
+  "uni": "mcu"
+ },
+ {
+  "id": "wm",
+  "t": "Wonder Man",
+  "y": "2025/26",
+  "ph": 6,
+  "chrono": 54,
+  "type": "Serie",
+  "prio": "komplettist",
+  "min": 240,
+  "dir": "Regie: Destin Daniel Cretton",
+  "cast": [
+   "Yahya Abdul-Mateen II",
+   "Ben Kingsley"
+  ],
+  "plot": "Stuntman Simon Williams kämpft sich durch Hollywood — Marvels Satire aufs eigene Geschäft, mit Trevor Slattery.",
+  "note": "Randnotiz zur Saga.",
+  "uni": "mcu"
+ },
+ {
+  "id": "bnd",
+  "t": "Spider-Man: Brand New Day",
+  "y": "2026",
+  "ph": 6,
+  "chrono": 56,
+  "type": "Film",
+  "prio": "empfohlen",
+  "min": 130,
+  "dir": "Destin Daniel Cretton",
+  "cast": [
+   "Tom Holland",
+   "Zendaya",
+   "Sadie Sink",
+   "Jon Bernthal"
+  ],
+  "plot": "Peter, von aller Welt vergessen, baut sich ein neues Leben als Spider-Man aus der Nachbarschaft — bis Punisher und Hulk seine Straßen aufmischen.",
+  "note": "Seit HEUTE (31.07.2026) im Kino — der letzte Kinofilm vor Doomsday.",
+  "uni": "mcu"
+ },
+ {
+  "id": "vq",
+  "t": "Vision Quest",
+  "y": "2026",
+  "ph": 6,
+  "chrono": 57,
+  "type": "Serie",
+  "prio": "empfohlen",
+  "min": 300,
+  "dir": "Showrunner: Terry Matalas",
+  "cast": [
+   "Paul Bettany",
+   "James Spader (Ultron)"
+  ],
+  "plot": "White Vision sucht nach Erinnerung und Identität — und trifft auf die Stimme seines Schöpfers: Ultron.",
+  "note": "Die letzte Serie vor Doomsday; Visions Rückkehr könnte im Avengers-Konflikt zählen.",
+  "uni": "mcu"
+ },
+ {
+  "id": "doomsday",
+  "t": "Avengers: Doomsday",
+  "y": "2026",
+  "ph": 6,
+  "chrono": 59,
+  "type": "Film",
+  "prio": "future",
+  "min": 0,
+  "dir": "Anthony & Joe Russo",
+  "cast": [
+   "Robert Downey Jr.",
+   "und 30+ weitere — siehe Cast-Sektion"
+  ],
+  "plot": "Doctor Doom tritt aus dem Schatten des Multiversums — Avengers, New Avengers, Fantastic Four und die originalen X-Men kollidieren im größten Ensemble der MCU-Geschichte.",
+  "note": "Das Ziel dieser Timeline. Kinostart: 18.12.2026 (DE vsl. 16.12.).",
+  "uni": "mcu"
+ },
+ {
+  "id": "secretwars",
+  "t": "Avengers: Secret Wars",
+  "y": "2027",
+  "ph": 6,
+  "chrono": 60,
+  "type": "Film",
+  "prio": "future",
+  "min": 0,
+  "dir": "Anthony & Joe Russo",
+  "cast": [
+   "Robert Downey Jr.",
+   "Chris Evans",
+   "u. v. m."
+  ],
+  "plot": "Das Finale der Multiverse Saga. Wenn die Comics die Richtung vorgeben: Battleworld, God Emperor Doom — und danach ein neu geordnetes Marvel-Universum.",
+  "note": "Kinostart: 17.12.2027. Sobald der Fokus wechselt, wird dieser Hub dafür erweitert.",
+  "uni": "mcu"
+ },
+ {
+  "id": "xmen1",
+  "t": "X-Men",
+  "y": "2000",
+  "type": "Film",
+  "min": 104,
+  "dir": "Bryan Singer",
+  "cast": [
+   "Patrick Stewart",
+   "Ian McKellen",
+   "Hugh Jackman",
+   "Famke Janssen"
+  ],
+  "plot": "Mutanten sind gefürchtet, Magneto plant einen Anschlag auf die Menschheit — und ein Einzelgänger namens Logan landet bei Xaviers Schule. Der Film, der das moderne Superhelden-Kino startete.",
+  "uni": "fox",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "x2",
+  "t": "X2: X-Men United",
+  "y": "2003",
+  "type": "Film",
+  "min": 134,
+  "dir": "Bryan Singer",
+  "cast": [
+   "Patrick Stewart",
+   "Hugh Jackman",
+   "Ian McKellen",
+   "Alan Cumming"
+  ],
+  "plot": "Colonel Stryker greift Xaviers Schule an; X-Men und Bruderschaft müssen sich verbünden. Für viele bis heute der beste X-Men-Film.",
+  "uni": "fox",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "x3",
+  "t": "X-Men: The Last Stand",
+  "y": "2006",
+  "type": "Film",
+  "min": 104,
+  "dir": "Brett Ratner",
+  "cast": [
+   "Hugh Jackman",
+   "Famke Janssen",
+   "Kelsey Grammer",
+   "Ian McKellen"
+  ],
+  "plot": "Ein 'Heilmittel' gegen Mutationen spaltet die Welt, während Jean Grey als Dark Phoenix wiederkehrt. Kelsey Grammers Beast-Debüt — die Rolle, die er in Doomsday wieder spielt.",
+  "uni": "fox",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "origins",
+  "t": "X-Men Origins: Wolverine",
+  "y": "2009",
+  "type": "Film",
+  "min": 107,
+  "dir": "Gavin Hood",
+  "cast": [
+   "Hugh Jackman",
+   "Liev Schreiber",
+   "Ryan Reynolds"
+  ],
+  "plot": "Logans Vorgeschichte — berüchtigt für den zugenähten Deadpool-Mund, den Ryan Reynolds nie vergessen hat.",
+  "uni": "fox",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "firstclass",
+  "t": "X-Men: First Class",
+  "y": "2011",
+  "type": "Film",
+  "min": 132,
+  "dir": "Matthew Vaughn",
+  "cast": [
+   "James McAvoy",
+   "Michael Fassbender",
+   "Jennifer Lawrence"
+  ],
+  "plot": "1962: Wie Charles und Erik Freunde wurden — und warum sie sich trennten. Der stilvolle Neustart mit jungem Cast.",
+  "uni": "fox",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "wolv13",
+  "t": "The Wolverine",
+  "y": "2013",
+  "type": "Film",
+  "min": 126,
+  "dir": "James Mangold",
+  "cast": [
+   "Hugh Jackman",
+   "Tao Okamoto",
+   "Rila Fukushima"
+  ],
+  "plot": "Logan in Japan, verfolgt von seiner Unsterblichkeit — Mangolds erste, unterschätzte Wolverine-Studie.",
+  "uni": "fox",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "dofp",
+  "t": "X-Men: Days of Future Past",
+  "y": "2014",
+  "type": "Film",
+  "min": 132,
+  "dir": "Bryan Singer",
+  "cast": [
+   "Hugh Jackman",
+   "James McAvoy",
+   "Patrick Stewart",
+   "Ian McKellen"
+  ],
+  "plot": "Sentinels haben die Zukunft vernichtet; Logan reist mental ins Jahr 1973, um alles zu verhindern. Beide X-Men-Generationen in einem Film — das Fox-Endgame.",
+  "uni": "fox",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "apoc",
+  "t": "X-Men: Apocalypse",
+  "y": "2016",
+  "type": "Film",
+  "min": 144,
+  "dir": "Bryan Singer",
+  "cast": [
+   "James McAvoy",
+   "Michael Fassbender",
+   "Oscar Isaac"
+  ],
+  "plot": "Der älteste Mutant der Welt erwacht und rekrutiert seine vier Reiter — Oscar Isaac unter viel Latex.",
+  "uni": "fox",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "darkphoenix",
+  "t": "Dark Phoenix",
+  "y": "2019",
+  "type": "Film",
+  "min": 114,
+  "dir": "Simon Kinberg",
+  "cast": [
+   "Sophie Turner",
+   "James McAvoy",
+   "Michael Fassbender"
+  ],
+  "plot": "Der zweite Anlauf an die Phoenix-Saga — und das leise Ende der Fox-X-Men-Hauptreihe.",
+  "uni": "fox",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "logan",
+  "t": "Logan",
+  "y": "2017",
+  "type": "Film",
+  "min": 137,
+  "dir": "James Mangold",
+  "cast": [
+   "Hugh Jackman",
+   "Patrick Stewart",
+   "Dafne Keen"
+  ],
+  "plot": "2029: Ein gealterter Logan beschützt ein Mädchen mit vertrauten Krallen. Oscar-nominiertes Drehbuch, brutal und würdevoll — der Tod, der D&W-Kanon blieb.",
+  "uni": "fox",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "dp1",
+  "t": "Deadpool",
+  "y": "2016",
+  "type": "Film",
+  "min": 108,
+  "dir": "Tim Miller",
+  "cast": [
+   "Ryan Reynolds",
+   "Morena Baccarin",
+   "T.J. Miller"
+  ],
+  "plot": "Wade Wilson bricht jede Regel und jede vierte Wand. Geleaktes Test-Footage zwang das Studio zum Greenlight — der erfolgreichste R-Rated-Film seiner Zeit.",
+  "uni": "fox",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "dp2",
+  "t": "Deadpool 2",
+  "y": "2018",
+  "type": "Film",
+  "min": 119,
+  "dir": "David Leitch",
+  "cast": [
+   "Ryan Reynolds",
+   "Josh Brolin",
+   "Zazie Beetz"
+  ],
+  "plot": "Cable reist aus der Zukunft, um ein Kind zu töten — Wade gründet dagegen die 'X-Force'. Für etwa neunzig Sekunden.",
+  "uni": "fox",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "newmutants",
+  "t": "The New Mutants",
+  "y": "2020",
+  "type": "Film",
+  "min": 94,
+  "dir": "Josh Boone",
+  "cast": [
+   "Maisie Williams",
+   "Anya Taylor-Joy"
+  ],
+  "plot": "Fünf junge Mutanten in einer unheimlichen Klinik — dreimal verschoben, mitten in der Pandemie veröffentlicht: der letzte Film des Fox-Marvel-Universums.",
+  "uni": "fox",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "f405",
+  "t": "Fantastic Four",
+  "y": "2005",
+  "type": "Film",
+  "min": 106,
+  "dir": "Tim Story",
+  "cast": [
+   "Ioan Gruffudd",
+   "Jessica Alba",
+   "Chris Evans",
+   "Michael Chiklis"
+  ],
+  "plot": "Die erste große F4-Verfilmung — mit Chris Evans als Johnny Storm, lange bevor er Captain America wurde. Sein Doomsday-Casting macht diesen Fakt wieder brandaktuell.",
+  "uni": "fox",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "f407",
+  "t": "Fantastic Four: Rise of the Silver Surfer",
+  "y": "2007",
+  "type": "Film",
+  "min": 92,
+  "dir": "Tim Story",
+  "cast": [
+   "Ioan Gruffudd",
+   "Jessica Alba",
+   "Doug Jones (Surfer)"
+  ],
+  "plot": "Der Silver Surfer kündigt Galactus an — der hier nur eine Wolke ist. First Steps (2025) zeigte, wie man es richtig macht.",
+  "uni": "fox",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "f415",
+  "t": "Fantastic Four (2015)",
+  "y": "2015",
+  "type": "Film",
+  "min": 100,
+  "dir": "Josh Trank",
+  "cast": [
+   "Miles Teller",
+   "Kate Mara",
+   "Michael B. Jordan"
+  ],
+  "plot": "Der düstere Reboot, von dem sich Regisseur Trank noch vor dem Kinostart öffentlich distanzierte. 9 % bei Rotten Tomatoes — ein Lehrstück.",
+  "uni": "fox",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "raimi1",
+  "t": "Spider-Man",
+  "y": "2002",
+  "type": "Film",
+  "min": 121,
+  "dir": "Sam Raimi",
+  "cast": [
+   "Tobey Maguire",
+   "Kirsten Dunst",
+   "Willem Dafoe"
+  ],
+  "plot": "Peter Parker, die Spinne, Onkel Ben, der Grüne Kobold — der Film, der als erster überhaupt 100 Mio. Dollar am Startwochenende einspielte.",
+  "uni": "sony",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "raimi2",
+  "t": "Spider-Man 2",
+  "y": "2004",
+  "type": "Film",
+  "min": 127,
+  "dir": "Sam Raimi",
+  "cast": [
+   "Tobey Maguire",
+   "Alfred Molina",
+   "Kirsten Dunst"
+  ],
+  "plot": "Peter will aufhören, Doc Ock will Fusion — für viele bis heute der beste Superheldenfilm überhaupt. Molina kehrte 2021 in No Way Home zurück.",
+  "uni": "sony",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "raimi3",
+  "t": "Spider-Man 3",
+  "y": "2007",
+  "type": "Film",
+  "min": 139,
+  "dir": "Sam Raimi",
+  "cast": [
+   "Tobey Maguire",
+   "Topher Grace",
+   "Thomas Haden Church"
+  ],
+  "plot": "Symbionten-Anzug, Sandman, erzwungener Venom — und der ewig memeträchtige Emo-Peter-Tanz. Raimi wollte Venom nie; das Studio bestand darauf.",
+  "uni": "sony",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "tasm1",
+  "t": "The Amazing Spider-Man",
+  "y": "2012",
+  "type": "Film",
+  "min": 136,
+  "dir": "Marc Webb",
+  "cast": [
+   "Andrew Garfield",
+   "Emma Stone",
+   "Rhys Ifans"
+  ],
+  "plot": "Der schnelle Reboot mit Andrew Garfield und Emma Stone — deren Chemie auch abseits der Kamera echt war.",
+  "uni": "sony",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "tasm2",
+  "t": "The Amazing Spider-Man 2",
+  "y": "2014",
+  "type": "Film",
+  "min": 142,
+  "dir": "Marc Webb",
+  "cast": [
+   "Andrew Garfield",
+   "Emma Stone",
+   "Jamie Foxx"
+  ],
+  "plot": "Electro, Goblin und Gwens Fall — das geplante Sinister-Six-Universum starb mit diesem Film. Garfields Erlösung kam erst 2021 in No Way Home.",
+  "uni": "sony",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "venom1",
+  "t": "Venom",
+  "y": "2018",
+  "type": "Film",
+  "min": 112,
+  "dir": "Ruben Fleischer",
+  "cast": [
+   "Tom Hardy",
+   "Michelle Williams",
+   "Riz Ahmed"
+  ],
+  "plot": "Journalist Eddie Brock und sein hungriger Alien-Mitbewohner. Von der Kritik zerrissen, vom Publikum geliebt: 856 Mio. Dollar weltweit.",
+  "uni": "sony",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "venom2",
+  "t": "Venom: Let There Be Carnage",
+  "y": "2021",
+  "type": "Film",
+  "min": 97,
+  "dir": "Andy Serkis",
+  "cast": [
+   "Tom Hardy",
+   "Woody Harrelson",
+   "Naomie Harris"
+  ],
+  "plot": "Carnage bricht aus — und in der Post-Credit-Szene rutscht Eddie kurzzeitig ins MCU: die bislang direkteste Sony-Marvel-Brücke.",
+  "uni": "sony",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "venom3",
+  "t": "Venom: The Last Dance",
+  "y": "2024",
+  "type": "Film",
+  "min": 109,
+  "dir": "Kelly Marcel",
+  "cast": [
+   "Tom Hardy",
+   "Chiwetel Ejiofor",
+   "Juno Temple"
+  ],
+  "plot": "Der Abschied von Eddie und Venom — mit einem Knull-Tease, der wohl nie eingelöst wird: Sonys Spider-Man-Universum wurde danach eingestellt.",
+  "uni": "sony",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "morbius",
+  "t": "Morbius",
+  "y": "2022",
+  "type": "Film",
+  "min": 104,
+  "dir": "Daniel Espinosa",
+  "cast": [
+   "Jared Leto",
+   "Matt Smith",
+   "Adria Arjona"
+  ],
+  "plot": "Der Vampir-Wissenschaftler, der zweimal floppte: Nach der Meme-Welle ('It's Morbin' Time') brachte Sony ihn erneut ins Kino — er floppte wieder.",
+  "uni": "sony",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "madameweb",
+  "t": "Madame Web",
+  "y": "2024",
+  "type": "Film",
+  "min": 116,
+  "dir": "S. J. Clarkson",
+  "cast": [
+   "Dakota Johnson",
+   "Sydney Sweeney",
+   "Isabela Merced"
+  ],
+  "plot": "'He was in the Amazon with my mom when she was researching spiders right before she died' — der Trailer-Satz wurde berühmter als der Film. Ein moderner Kult-Flop.",
+  "uni": "sony",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "kraven",
+  "t": "Kraven the Hunter",
+  "y": "2024",
+  "type": "Film",
+  "min": 127,
+  "dir": "J. C. Chandor",
+  "cast": [
+   "Aaron Taylor-Johnson",
+   "Russell Crowe",
+   "Ariana DeBose"
+  ],
+  "plot": "Kravens Origin als R-Rated-Jäger — der letzte Sargnagel des Sony-Spider-Verse ohne Spider-Man.",
+  "uni": "sony",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "sv1",
+  "t": "Spider-Man: Into the Spider-Verse",
+  "y": "2018",
+  "type": "Film",
+  "min": 117,
+  "dir": "Ramsey · Persichetti · Rothman",
+  "cast": [
+   "Shameik Moore (Miles)",
+   "Jake Johnson",
+   "Hailee Steinfeld"
+  ],
+  "plot": "Miles Morales und ein halbes Dutzend Spider-Leute aus fremden Dimensionen. Oscar für den besten Animationsfilm — und eine Revolution des Animations-Looks.",
+  "uni": "sony",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "sv2",
+  "t": "Spider-Man: Across the Spider-Verse",
+  "y": "2023",
+  "type": "Film",
+  "min": 140,
+  "dir": "Dos Santos · Powers · Thompson",
+  "cast": [
+   "Shameik Moore",
+   "Hailee Steinfeld",
+   "Oscar Isaac (Spider-Man 2099)"
+  ],
+  "plot": "Miles gegen die gesamte Spider-Society und ihr 'Kanon-Ereignis'-Dogma. Endet auf dem gemeinsten Cliffhanger des Genres — Teil 3 steht noch aus.",
+  "uni": "sony",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "howard",
+  "t": "Howard the Duck",
+  "y": "1986",
+  "type": "Film",
+  "min": 110,
+  "dir": "Willard Huyck · Produktion: George Lucas",
+  "cast": [
+   "Lea Thompson",
+   "Jeffrey Jones",
+   "Tim Robbins"
+  ],
+  "plot": "Eine außerirdische Ente strandet in Cleveland — der allererste Marvel-Kinofilm überhaupt, produziert von George Lucas, und einer der legendärsten Flops der Filmgeschichte. Howard bekam 2014 seine Ehrenrettung: ein Cameo bei den Guardians.",
+  "uni": "alt",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "blade1",
+  "t": "Blade",
+  "y": "1998",
+  "type": "Film",
+  "min": 120,
+  "dir": "Stephen Norrington",
+  "cast": [
+   "Wesley Snipes",
+   "Stephen Dorff",
+   "Kris Kristofferson"
+  ],
+  "plot": "Der Halbvampir, der Vampire jagt: Wesley Snipes' Blade bewies zwei Jahre vor X-Men, dass Marvel-Filme funktionieren — und rettete damit indirekt ein Studio, das gerade die Pleite hinter sich hatte. Die Blutrave-Eröffnung ist Genre-Geschichte.",
+  "uni": "alt",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "blade2",
+  "t": "Blade II",
+  "y": "2002",
+  "type": "Film",
+  "min": 117,
+  "dir": "Guillermo del Toro",
+  "cast": [
+   "Wesley Snipes",
+   "Kris Kristofferson",
+   "Ron Perlman"
+  ],
+  "plot": "Del Toro vor Hellboy: Blade verbündet sich mit Vampiren gegen die schlimmeren Reaper. Für viele der beste Teil der Trilogie — Monster-Design vom Meister persönlich.",
+  "uni": "alt",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "blade3",
+  "t": "Blade: Trinity",
+  "y": "2004",
+  "type": "Film",
+  "min": 123,
+  "dir": "David S. Goyer",
+  "cast": [
+   "Wesley Snipes",
+   "Ryan Reynolds",
+   "Jessica Biel"
+  ],
+  "plot": "Das chaotische Ende der Trilogie, berühmt für die Anekdoten hinter der Kamera — und dafür, dass ein gewisser Ryan Reynolds hier (als Hannibal King) seinen ersten Marvel-Auftritt hatte. Der Rest ist Deadpool-Geschichte.",
+  "uni": "alt",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "hulk03",
+  "t": "Hulk",
+  "y": "2003",
+  "type": "Film",
+  "min": 138,
+  "dir": "Ang Lee",
+  "cast": [
+   "Eric Bana",
+   "Jennifer Connelly",
+   "Nick Nolte"
+  ],
+  "plot": "Ang Lees Arthouse-Hulk: Comic-Panel-Schnitte, Vater-Trauma, Gamma-Pudel. Zu ambitioniert für sein Publikum, zu seltsam für die Kritik — und rückblickend faszinierender als sein Ruf.",
+  "uni": "alt",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "daredevil03",
+  "t": "Daredevil",
+  "y": "2003",
+  "type": "Film",
+  "min": 103,
+  "dir": "Mark Steven Johnson",
+  "cast": [
+   "Ben Affleck",
+   "Jennifer Garner",
+   "Colin Farrell",
+   "Michael Clarke Duncan"
+  ],
+  "plot": "Ben Affleck als blinder Anwalt im roten Leder, Colin Farrell als manischer Bullseye. Der Director's Cut ist deutlich besser als die Kinofassung — und Affleck lernte am Set Jennifer Garner kennen.",
+  "uni": "alt",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "elektra05",
+  "t": "Elektra",
+  "y": "2005",
+  "type": "Film",
+  "min": 97,
+  "dir": "Rob Bowman",
+  "cast": [
+   "Jennifer Garner",
+   "Terence Stamp",
+   "Goran Višnjić"
+  ],
+  "plot": "Das Daredevil-Spin-off, das niemand bestellt hatte: Elektra zwischen Auftragsmord und Erleuchtung. 11 % bei Rotten Tomatoes — das vorläufige Ende weiblicher Marvel-Solofilme für 14 Jahre.",
+  "uni": "alt",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "punisher04",
+  "t": "The Punisher",
+  "y": "2004",
+  "type": "Film",
+  "min": 124,
+  "dir": "Jonathan Hensleigh",
+  "cast": [
+   "Thomas Jane",
+   "John Travolta"
+  ],
+  "plot": "Thomas Janes Frank Castle rächt seine Familie an John Travoltas Bösewicht — B-Movie-Härte mit Kultstatus. Jane liebte die Rolle so sehr, dass er 2012 den Fan-Kurzfilm 'Dirty Laundry' drehte.",
+  "uni": "alt",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "ghostrider07",
+  "t": "Ghost Rider",
+  "y": "2007",
+  "type": "Film",
+  "min": 110,
+  "dir": "Mark Steven Johnson",
+  "cast": [
+   "Nicolas Cage",
+   "Eva Mendes",
+   "Peter Fonda"
+  ],
+  "plot": "Nicolas Cage — im echten Leben mit Ghost-Rider-Tattoo, das täglich überschminkt werden musste — verkauft seine Seele an Mephisto(!). Camp-Kino mit brennendem Schädel, 228 Mio. Dollar Einspiel.",
+  "uni": "alt",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "ghostrider12",
+  "t": "Ghost Rider: Spirit of Vengeance",
+  "y": "2012",
+  "type": "Film",
+  "min": 96,
+  "dir": "Neveldine / Taylor",
+  "cast": [
+   "Nicolas Cage",
+   "Idris Elba"
+  ],
+  "plot": "Der wilde, billigere Nachfolger: Cage pinkelt Feuer, Idris Elba trinkt Wein auf einem Motorrad. Objektiv kein guter Film, subjektiv ein Erlebnis — danach gingen die Rechte zurück zu Marvel. Und jetzt fährt Gosling.",
+  "uni": "alt",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "dd1",
+  "t": "Daredevil (Netflix)",
+  "y": "2015–18",
+  "type": "Serie",
+  "min": 1950,
+  "dir": "Showrunner: DeKnight · Petrie/Ramirez · Oleson",
+  "cast": [
+   "Charlie Cox",
+   "Vincent D'Onofrio",
+   "Deborah Ann Woll",
+   "Elden Henson"
+  ],
+  "plot": "Drei Staffeln Hell's Kitchen in Bestform: Matt gegen Fisk, der legendäre Flur-Kampf in einer Einstellung, Bullseye im Finale. Die Serie, deren Qualität Marvel zwang, Cox und D'Onofrio ins MCU zu übernehmen — der Rest der Netflix-Ära bleibt Kanon-Grauzone.",
+  "uni": "net",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "jj",
+  "t": "Jessica Jones",
+  "y": "2015–19",
+  "type": "Serie",
+  "min": 1900,
+  "dir": "Showrunnerin: Melissa Rosenberg",
+  "cast": [
+   "Krysten Ritter",
+   "David Tennant",
+   "Rachael Taylor"
+  ],
+  "plot": "Die erste Marvel-Heldin mit eigener Serie: Privatdetektivin, Trauma, Whiskey — und mit Kilgrave (David Tennant) einer der verstörendsten Marvel-Schurken überhaupt. Staffel 1 gilt als Höhepunkt der ganzen Netflix-Ära.",
+  "uni": "net",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "lc",
+  "t": "Luke Cage",
+  "y": "2016–18",
+  "type": "Serie",
+  "min": 1300,
+  "dir": "Showrunner: Cheo Hodari Coker",
+  "cast": [
+   "Mike Colter",
+   "Mahershala Ali",
+   "Alfre Woodard"
+  ],
+  "plot": "Der kugelsichere Mann von Harlem — mit dem besten Soundtrack der Marvel-TV-Geschichte und Mahershala Ali (dem späteren Blade!) als Cottonmouth.",
+  "uni": "net",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "if1",
+  "t": "Iron Fist",
+  "y": "2017–18",
+  "type": "Serie",
+  "min": 1150,
+  "dir": "Showrunner: Scott Buck",
+  "cast": [
+   "Finn Jones",
+   "Jessica Henwick"
+  ],
+  "plot": "Danny Rand kehrt aus K'un-Lun zurück — die schwächste Netflix-Serie (37 %), deren heimlicher Star Colleen Wing war. Danny wartet bis heute auf eine zweite Chance im MCU.",
+  "uni": "net",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "pun",
+  "t": "The Punisher (Netflix)",
+  "y": "2017–19",
+  "type": "Serie",
+  "min": 1300,
+  "dir": "Showrunner: Steve Lightfoot",
+  "cast": [
+   "Jon Bernthal",
+   "Ebon Moss-Bachrach",
+   "Ben Barnes"
+  ],
+  "plot": "Frank Castles Krieg gegen alle — brutal, ernst, mit Bernthal in seiner Lebensrolle. Kurios: Sein Micro ist Ebon Moss-Bachrach, der heute The Thing spielt. Bernthals Frank ist inzwischen offiziell zurück im MCU.",
+  "uni": "net",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "def",
+  "t": "The Defenders",
+  "y": "2017",
+  "type": "Serie",
+  "min": 400,
+  "dir": "Showrunner: Douglas Petrie & Marco Ramirez",
+  "cast": [
+   "Charlie Cox",
+   "Krysten Ritter",
+   "Mike Colter",
+   "Finn Jones"
+  ],
+  "plot": "Das Street-Level-Crossover: vier Helden, ein Flur, eine sehr alte Verschwörung namens 'Die Hand'. Kürzer und kleiner als erhofft — aber der Korridor-Fight ist den Eintritt wert.",
+  "uni": "net",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "agentcarter",
+  "t": "Agent Carter",
+  "y": "2015–16",
+  "type": "Serie",
+  "min": 750,
+  "dir": "Creator: Markus & McFeely",
+  "cast": [
+   "Hayley Atwell",
+   "James D'Arcy"
+  ],
+  "plot": "Peggy Carter 1946: Spionage, Sexismus und die Geburt von S.H.I.E.L.D. — geschrieben von den späteren Endgame-Autoren. Jarvis' menschlicher Butler wurde zur Vorlage für Tonys KI.",
+  "uni": "net",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "aos",
+  "t": "Agents of S.H.I.E.L.D.",
+  "y": "2013–20",
+  "type": "Serie",
+  "min": 6100,
+  "dir": "Showrunner: Whedon · Tancharoen",
+  "cast": [
+   "Clark Gregg",
+   "Ming-Na Wen",
+   "Chloe Bennet"
+  ],
+  "plot": "Coulson lebt! 136 Episoden über sieben Staffeln — das längste Marvel-Projekt aller Zeiten, von Hydra-Twist bis Zeitreise-Finale. Kanon-Status: offiziell vage, im Herzen der Fans absolut.",
+  "uni": "net",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ },
+ {
+  "id": "inhumans",
+  "t": "Marvel's Inhumans",
+  "y": "2017",
+  "type": "Serie",
+  "min": 350,
+  "dir": "Showrunner: Scott Buck",
+  "cast": [
+   "Anson Mount",
+   "Serinda Swan"
+  ],
+  "plot": "Die Königsfamilie von Attilan — als IMAX-Event geplant, als größtes Marvel-TV-Desaster geendet (11 %). Black Bolt bekam seine Ehrenrettung 2025: Anson Mounts Illuminati-Auftritt in Multiverse of Madness.",
+  "uni": "net",
+  "ph": 0,
+  "chrono": 0,
+  "prio": null,
+  "note": null
+ }
+]

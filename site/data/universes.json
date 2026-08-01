@@ -1,0 +1,146 @@
+[
+ {
+  "num": "616",
+  "n": "Das Haupt-MCU",
+  "status": "Aktiv — Schauplatz fast aller MCU-Geschichten",
+  "d": "Die Heimat der Avengers, von Iron Man 2008 bis Thunderbolts*. Fun Fact für Puristen: Offiziell hieß diese Welt lange Erde-199999 — erst Multiverse of Madness taufte sie auf 616, die Nummer der Haupt-Comicwelt. Der Nerd-Streit dazu läuft noch.",
+  "sample": [
+   "iron1",
+   "av1",
+   "eg",
+   "nwh",
+   "tb"
+  ]
+ },
+ {
+  "num": "828",
+  "n": "Welt der Fantastic Four",
+  "status": "Aktiv — bis Doom kam",
+  "d": "Die Retro-Zukunft der First Family: fliegende Autos, 60er-Optimismus, ein besiegter Galactus. Die Nummer ehrt Jack Kirbys Geburtstag (28. August). Wie die F4 von hier ins Haupt-MCU kommen, ist eine der Doomsday-Kernfragen.",
+  "sample": [
+   "f4"
+  ]
+ },
+ {
+  "num": "838",
+  "n": "Die Illuminati-Welt",
+  "status": "Angeschlagen — Illuminati tot",
+  "d": "Hier regierte ein Geheimrat aus Professor X, Captain Carter, Mister Fantastic und Co. — bis die Scarlet Witch vorbeischaute. Bewies: Es gibt Welten, in denen X-Men und F4 längst existieren.",
+  "sample": [
+   "mom"
+  ]
+ },
+ {
+  "num": "10005",
+  "n": "Das Fox-Universum",
+  "status": "Sterbend — Anker-Wesen verstorben",
+  "d": "20 Jahre X-Men-Filme spielen hier. Anker-Wesen war Logan; seit seinem Tod (2029) stirbt die Welt langsam — Deadpool verhinderte die Prune-Aktion der TVA und schloss die Welt ans MCU-Multiversum an.",
+  "sample": [
+   "xmen1",
+   "x2",
+   "dofp",
+   "logan",
+   "dw"
+  ]
+ },
+ {
+  "num": "96283",
+  "n": "Die Raimi-Welt",
+  "status": "Ruhend — Peter schwingt noch",
+  "d": "Tobey Maguires New York: organische Netze, Doc Ock, der Emo-Tanz. Ihr Peter half 2021 im MCU aus und kehrte mit heilem Rücken zurück.",
+  "sample": [
+   "raimi1",
+   "raimi2",
+   "raimi3"
+  ]
+ },
+ {
+  "num": "120703",
+  "n": "Die Amazing-Welt",
+  "status": "Ruhend — er hat sie aufgefangen",
+  "d": "Andrew Garfields Welt, gezeichnet von Gwens Tod. Sein NWH-Auftritt gab der Figur den Abschluss, den zwei eigene Filme nicht schafften.",
+  "sample": [
+   "tasm1",
+   "tasm2"
+  ]
+ },
+ {
+  "num": "???",
+  "n": "Sonys Venom-Welt",
+  "status": "Eingestellt — offiziell nie nummeriert",
+  "d": "Venom, Morbius, Madame Web, Kraven: ein Universum ohne Spider-Man, das nach fünf Jahren eingestellt wurde. Ein Tropfen Symbiont liegt allerdings noch auf einem Tresen im MCU …",
+  "sample": [
+   "venom1",
+   "venom2",
+   "venom3",
+   "morbius",
+   "madameweb",
+   "kraven"
+  ]
+ },
+ {
+  "num": "1610",
+  "n": "Miles' Welt",
+  "status": "Aktiv — Animation",
+  "d": "Die Heimat von Miles Morales im Spider-Verse (nummeriert nach den Ultimate-Comics). Aktuell in akuter Kanon-Krise — Fortsetzung steht aus.",
+  "sample": [
+   "sv1",
+   "sv2"
+  ]
+ },
+ {
+  "num": "65",
+  "n": "Gwens Welt",
+  "status": "Aktiv — Animation",
+  "d": "Erde-65: Hier wurde Gwen Stacy gebissen und Peter starb. Wasserfarben-Optik, Band-Drama, eigene Spider-Truppe.",
+  "sample": [
+   "sv1",
+   "sv2"
+  ]
+ },
+ {
+  "num": "∞",
+  "n": "Die What-If-Welten",
+  "status": "Unendlich — vom Watcher katalogisiert",
+  "d": "Jede Entscheidung gebiert ein Universum: Zombie-Apokalypsen, Captain Carter, ein Ultron mit allen sechs Steinen, Party-Thor. Der Watcher beobachtet sie alle — und die Guardians of the Multiverse bewiesen, dass auch Varianten Weltklasse-Teams bilden.",
+  "sample": [
+   "wi"
+  ]
+ },
+ {
+  "num": "∅",
+  "n": "TVA, Void & Ende der Zeit",
+  "status": "Außerhalb jeder Nummerierung",
+  "d": "Kein Universum, sondern der Raum dazwischen: die TVA-Zentrale, der Void mit Alioth als Müllschlucker — und am Ende der Zeit Lokis Thron, an dem alle Zeitlinien zusammenlaufen.",
+  "sample": [
+   "l1",
+   "l2",
+   "dw"
+  ]
+ },
+ {
+  "num": "≪",
+  "n": "Die Vor-MCU-Ära",
+  "status": "Verstreute Einzelwelten — 1986 bis 2012",
+  "d": "Bevor es ein 'Universum' gab, gab es Inseln: Blades Nächte, Ang Lees Hulk, Cages brennender Schädel, Afflecks Daredevil — und 1986 die Ente, mit der alles (schief) begann. Keine dieser Welten wurde je nummeriert; das Multiversum hat trotzdem Platz für sie.",
+  "sample": [
+   "howard",
+   "blade1",
+   "hulk03",
+   "daredevil03",
+   "punisher04",
+   "ghostrider07"
+  ]
+ },
+ {
+  "num": "?",
+  "n": "Battleworld",
+  "status": "Prognose — nach den Comics",
+  "ev": true,
+  "d": "Noch existiert es nicht: der Flickenteppich-Planet, den Doom in den Comics aus den Trümmern toter Universen formt. Wenn Doomsday endet, wie wir vermuten, ist DAS der Schauplatz von Secret Wars.",
+  "sample": [
+   "doomsday",
+   "secretwars"
+  ]
+ }
+]

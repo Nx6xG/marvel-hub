@@ -1,0 +1,532 @@
+[
+ {
+  "id": "avengers",
+  "n": "Die Avengers",
+  "sub": "Earth's Mightiest Heroes",
+  "u": "mcu",
+  "status": "Aufgelöst — seit Endgame ohne offizielle Formation",
+  "first": "The Avengers (2012)",
+  "lead": "steve",
+  "desc": "Nick Furys Antwort auf eine Welt voller Bedrohungen: sechs Egos, ein Team. Sie gewannen New York, verloren gegen Thanos, holten das Universum zurück — und zerfielen danach. Dass es seit Jahren kein stehendes Avengers-Team gibt, ist exakt die Lücke, in die Doom stößt: Doomsday muss die Frage beantworten, wer den Namen erbt.",
+  "members": [
+   "steve",
+   "tony",
+   "thor",
+   "hulk",
+   "natasha",
+   "clint",
+   "wanda",
+   "vision",
+   "rhodey",
+   "sam",
+   "spidey",
+   "scott"
+  ],
+  "films": [
+   "av1",
+   "av2",
+   "iw",
+   "eg"
+  ],
+  "side": "hero"
+ },
+ {
+  "id": "newavengers",
+  "n": "New Avengers",
+  "sub": "der Asterisk von Thunderbolts*",
+  "u": "mcu",
+  "status": "Aktiv — Namensrechte umstritten",
+  "first": "Thunderbolts* (2025)",
+  "lead": "yelena",
+  "desc": "Valentinas Himmelfahrtskommando aus Antihelden, das versehentlich zur Familie wurde — und von ihr als 'New Avengers' vermarktet wird, sehr zum Ärger von Sam Wilson. Mit Sentry haben sie die stärkste (und instabilste) Waffe des Planeten in den eigenen Reihen. In Doomsday stehen sie an vorderster Front.",
+  "members": [
+   "yelena",
+   "bucky",
+   "redguardian",
+   "usagent",
+   "ghostmcu",
+   "sentry",
+   "valentina"
+  ],
+  "films": [
+   "tb",
+   "doomsday"
+  ],
+  "side": "hero"
+ },
+ {
+  "id": "fantasticfour",
+  "n": "Fantastic Four",
+  "sub": "Marvels erste Familie",
+  "u": "mcu",
+  "status": "Aktiv — auf Erde-828",
+  "first": "First Steps (2025)",
+  "lead": "reed",
+  "desc": "Vier Astronauten, ein Sturm kosmischer Strahlung, eine Familie. Auf ihrer Retro-Zukunftswelt Erde-828 sind sie Weltretter und Popstars zugleich. Ihr größtes Wunder ist zugleich ihre größte Verwundbarkeit: Franklin — das Kind, das Doom geholt hat.",
+  "members": [
+   "reed",
+   "sue",
+   "johnny",
+   "ben",
+   "franklin"
+  ],
+  "films": [
+   "f4",
+   "doomsday",
+   "secretwars"
+  ],
+  "side": "hero"
+ },
+ {
+  "id": "xmen",
+  "n": "X-Men",
+  "sub": "Xaviers Traum",
+  "u": "fox",
+  "status": "Fox-Ära beendet — Doomsday-Comeback",
+  "first": "X-Men (2000)",
+  "lead": "xavier",
+  "desc": "Mutanten, die eine Welt beschützen, die sie fürchtet und hasst. Die Fox-Reihe startete das moderne Superhelden-Kino und endete leise mit Dark Phoenix — bis Doomsday die Original-Besetzung zurückholte. Xaviers Traum bekommt ein letztes großes Kapitel.",
+  "members": [
+   "xavier",
+   "cyclops",
+   "jean",
+   "storm",
+   "wolverine",
+   "rogue",
+   "beast",
+   "nightcrawler",
+   "colossus"
+  ],
+  "films": [
+   "xmen1",
+   "x2",
+   "x3",
+   "dofp",
+   "doomsday"
+  ],
+  "side": "hero"
+ },
+ {
+  "id": "bruderschaft",
+  "n": "Bruderschaft der Mutanten",
+  "sub": "Magnetos Weg",
+  "u": "fox",
+  "status": "Je nach Zeitlinie aufgelöst oder unterwegs",
+  "first": "X-Men (2000)",
+  "lead": "magneto",
+  "desc": "Magnetos Antwort auf Xaviers Traum: Wenn die Menschheit Mutanten jagt, schlagen Mutanten zuerst zu. Keine Schurken im eigenen Selbstbild — sondern Überlebende. Die ewige Gegenthese, die in Doomsday womöglich zur Verbündeten wird.",
+  "members": [
+   "magneto",
+   "mystique",
+   "juggernaut",
+   "quicksilver"
+  ],
+  "extras": [
+   "Sabretooth",
+   "Toad",
+   "Pyro"
+  ],
+  "films": [
+   "xmen1",
+   "x2",
+   "x3"
+  ],
+  "side": "villain"
+ },
+ {
+  "id": "guardians",
+  "n": "Guardians of the Galaxy",
+  "sub": "a-holes, aber unsere",
+  "u": "mcu",
+  "status": "Neu formiert unter Rocket",
+  "first": "Guardians of the Galaxy (2014)",
+  "lead": "rocket",
+  "desc": "Ein Dieb, zwei Killer, ein Zerstörer, ein Baum und ein genialer Nicht-Waschbär: die dysfunktionalste Familie der Galaxis. Nach Vol. 3 gingen fast alle eigene Wege — Captain Rocket führt die nächste Generation von Knowhere aus.",
+  "members": [
+   "quill",
+   "gamora",
+   "drax",
+   "rocket",
+   "groot",
+   "mantis",
+   "nebula",
+   "yondu"
+  ],
+  "films": [
+   "gotg1",
+   "gotg2",
+   "iw",
+   "eg",
+   "g3",
+   "ghs"
+  ],
+  "side": "hero"
+ },
+ {
+  "id": "youngavengers",
+  "n": "Young Avengers",
+  "sub": "die nächste Generation",
+  "u": "mcu",
+  "status": "Inoffiziell — Kamala rekrutiert bereits",
+  "first": "The Marvels, Post-Credits (2023)",
+  "lead": "kamala",
+  "desc": "Noch kein offizielles Team, aber die Bank ist voll besetzt: Kamala hat Kate bereits angeworben, Cassie kämpft seit Quantumania, America reist zwischen Welten, Wiccan schreibt Realität um. Marvels offensichtlichster Plan für die Zeit nach Secret Wars.",
+  "members": [
+   "kamala",
+   "kate",
+   "cassie",
+   "america",
+   "wiccan"
+  ],
+  "films": [
+   "msm",
+   "hk",
+   "qm",
+   "mom",
+   "ag",
+   "mv"
+  ],
+  "side": "hero"
+ },
+ {
+  "id": "tva",
+  "n": "Time Variance Authority",
+  "sub": "für alle Zeit. Immer.",
+  "u": "mcu",
+  "status": "Aktiv — jetzt Multiversums-Schutz statt Zeitlinien-Polizei",
+  "first": "Loki (2021)",
+  "lead": "mobius",
+  "desc": "Die Behörde am Ende der Zeit: früher Vollstrecker der Heiligen Zeitlinie, heute Katastrophenschutz für ein wucherndes Multiversum. Rekrutierte zuletzt sogar Deadpool. Wenn Doom die Zeitlinien angreift, ist die TVA die erste Verteidigungslinie — oder das erste Opfer.",
+  "members": [
+   "mobius",
+   "loki",
+   "sylvie"
+  ],
+  "films": [
+   "l1",
+   "l2",
+   "dw"
+  ],
+  "side": "hero"
+ },
+ {
+  "id": "illuminati",
+  "n": "Die Illuminati",
+  "sub": "Erde-838",
+  "u": "mcu",
+  "status": "Ausgelöscht — von Wanda",
+  "first": "Multiverse of Madness (2022)",
+  "lead": "xavier",
+  "desc": "Der Geheimrat von Erde-838: Professor X, Captain Carter, Captain Marvel (Maria Rambeau), Black Bolt, Mister Fantastic (John Krasinski) und Karl Mordo — sie richteten ihren eigenen Strange hin und hielten sich für unbesiegbar. Wanda brauchte ungefähr vier Minuten. Eine Machtdemonstration, die zeigt, was Varianten wert sind, wenn ein Wahnsinniger durchs Multiversum läuft.",
+  "members": [
+   "xavier",
+   "peggy"
+  ],
+  "films": [
+   "mom"
+  ],
+  "side": "hero"
+ },
+ {
+  "id": "wakanda",
+  "n": "Wakanda",
+  "sub": "Wakanda forever",
+  "u": "mcu",
+  "status": "Souverän — zwischen allen Fronten",
+  "first": "Civil War (2016)",
+  "lead": "shuri",
+  "desc": "Die fortschrittlichste Nation der Erde, Heimat des Vibraniums und der Black-Panther-Linie. Nach T'Challas Tod trägt Shuri den Mantel, M'Baku greift nach dem Thron — und mit Namors Talokan existiert erstmals eine ebenbürtige Macht. In Doomsday ist Wakandas Vibranium ein Preis, um den gekämpft wird.",
+  "members": [
+   "shuri",
+   "tchalla",
+   "mbaku"
+  ],
+  "films": [
+   "bp1",
+   "iw",
+   "bpwf",
+   "doomsday"
+  ],
+  "side": "hero"
+ },
+ {
+  "id": "spidersociety",
+  "n": "Spider-Society",
+  "sub": "jeder trägt die Maske — nach Vorschrift",
+  "u": "sony",
+  "status": "Aktiv — und hinter Miles her",
+  "first": "Across the Spider-Verse (2023)",
+  "lead": "spiderman2099",
+  "desc": "Hunderte Spider-Menschen aus allen Dimensionen, vereint unter Miguel O'Haras eisernem Dogma der 'Kanon-Ereignisse': Bestimmte Tragödien müssen geschehen, sonst stirbt das Universum. Miles Morales ist der lebende Widerspruch — und deshalb ihr meistgesuchter Mann.",
+  "members": [
+   "spiderman2099",
+   "gwen",
+   "peterb",
+   "miles"
+  ],
+  "films": [
+   "sv2"
+  ],
+  "side": "hero"
+ },
+ {
+  "id": "sinistersix",
+  "n": "Sinister Six (unvollendet)",
+  "sub": "fünf Schurken, ein Zauber",
+  "u": "sony",
+  "status": "Nie offiziell angetreten",
+  "first": "No Way Home (2021)",
+  "lead": "goblin",
+  "desc": "Das Team, das es nie ganz gab: Sony plante die Sinister Six seit der Amazing-Ära, No Way Home versammelte immerhin fünf Multiversums-Schurken (mit Sandman und Lizard) gegen drei Spider-Männer. Mysterio und Vulture gelten als ewige Anwärter. Green Goblin bewies derweil, dass ein Mann mit Bomben reicht, um alles zu zerstören.",
+  "members": [
+   "goblin",
+   "docock",
+   "electro",
+   "mysterio",
+   "vulture"
+  ],
+  "mlabel": "Angetreten & Anwärter",
+  "extras": [
+   "Sandman",
+   "Lizard"
+  ],
+  "films": [
+   "nwh"
+  ],
+  "side": "villain"
+ },
+ {
+  "id": "kamartaj",
+  "n": "Die Meister der Mystik",
+  "sub": "Kamar-Taj",
+  "u": "mcu",
+  "status": "Aktiv — Wong ist der Boss",
+  "first": "Doctor Strange (2016)",
+  "lead": "wong",
+  "desc": "Der uralte Orden, der die Erde vor magischen Bedrohungen schützt — von der Dunklen Dimension bis zu multiversalen Rissen. Sorcerer Supreme ist übrigens Wong, nicht Strange, und er lässt es niemanden vergessen. Gegen einen Magier wie Doom werden sie gebraucht wie nie.",
+  "members": [
+   "wong",
+   "strange",
+   "clea",
+   "america"
+  ],
+  "films": [
+   "strange1",
+   "nwh",
+   "mom",
+   "doomsday"
+  ],
+  "side": "hero"
+ },
+ {
+  "id": "hausdoom",
+  "n": "Haus Doom",
+  "sub": "Every Story leads to Doom",
+  "u": "mcu",
+  "ev": true,
+  "status": "Formiert sich — Details unter Verschluss",
+  "first": "Avengers: Doomsday (2026)",
+  "lead": "doom",
+  "mystery": 5,
+  "desc": "Die Fraktion, über die Marvel schweigt: Was wir wissen, stammt aus Trailern und Hall H — Doom gebietet über eine Sentinel-Armee, hat Franklin Richards bei sich und stoppt Stormbreaker mit bloßer Hand. Wer sonst noch für Latveria kämpft (gekaufte Varianten? gebrochene Helden? Mephisto-Verträge?), ist die größte offene Frage vor dem 18. Dezember. Die Plätze in diesem Dossier bleiben frei — noch.",
+  "members": [
+   "doom",
+   "franklin",
+   "ghostrider",
+   "mephisto"
+  ],
+  "mlabel": "Bestätigt & verdächtigt",
+  "films": [
+   "f4",
+   "doomsday",
+   "secretwars"
+  ],
+  "side": "villain"
+ },
+ {
+  "id": "blackorder",
+  "n": "Die Schwarze Ordnung",
+  "sub": "Kinder des Thanos",
+  "u": "mcu",
+  "status": "Ausgelöscht — zweimal",
+  "first": "Infinity War (2018)",
+  "lead": "thanos",
+  "desc": "Thanos' fanatische Adoptivkinder, die für den 'Vater' Welten entvölkerten: Ebony Maw, das flüsternde Sprachrohr, dazu Proxima Midnight, Corvus Glaive und Cull Obsidian. Gamora und Nebula waren die einzigen 'Kinder', die entkamen. Die Ordnung starb 2018 — und 2014er-Versionen von ihnen gleich nochmal in Endgame.",
+  "members": [
+   "thanos",
+   "gamora",
+   "nebula"
+  ],
+  "mlabel": "Der Vater & die Entkommenen",
+  "extras": [
+   "Ebony Maw",
+   "Proxima Midnight",
+   "Corvus Glaive",
+   "Cull Obsidian"
+  ],
+  "films": [
+   "iw",
+   "eg"
+  ],
+  "side": "villain"
+ },
+ {
+  "id": "hydra",
+  "n": "Hydra",
+  "sub": "Schneidet einen Kopf ab …",
+  "u": "mcu",
+  "status": "Zerschlagen — offiziell",
+  "first": "The First Avenger (1943/2011)",
+  "lead": null,
+  "desc": "Red Skulls Nazi-Wissenschaftskult, der nach dem Krieg heimlich in S.H.I.E.L.D. weiterlebte — 'Hail Hydra' wurde 2014 zum größten Twist des MCU. Ihre grausamste Schöpfung: der Winter Soldier, Buckys gestohlene 70 Jahre. Offiziell zerschlagen, aber bei Hydra bedeutet offiziell wenig.",
+  "members": [
+   "bucky",
+   "zemo"
+  ],
+  "mlabel": "Waffe wider Willen & Profiteur",
+  "extras": [
+   "Red Skull",
+   "Arnim Zola",
+   "Alexander Pierce",
+   "Crossbones"
+  ],
+  "films": [
+   "cap1",
+   "cap2",
+   "av2",
+   "cw"
+  ],
+  "side": "villain"
+ },
+ {
+  "id": "eternals",
+  "n": "Die Eternals",
+  "sub": "10 Unsterbliche, 7000 Jahre Geheimnis",
+  "u": "mcu",
+  "status": "Verstreut — Arishems Urteil steht aus",
+  "first": "Eternals (2021)",
+  "lead": "sersi",
+  "desc": "Von den Celestials geschickt, um die Menschheit zu beschützen — in Wahrheit, um sie als Brutkasten reifen zu lassen. Sie verhinderten die Geburt des Celestials Tiamut und wurden dafür zur Rechenschaft gezogen: Arishem nahm Sersi, Phastos und Kingo mit. Seit 2021 wartet das MCU auf die Auflösung.",
+  "members": [
+   "sersi"
+  ],
+  "extras": [
+   "Ikaris †",
+   "Thena",
+   "Kingo",
+   "Phastos",
+   "Makkari",
+   "Druig",
+   "Gilgamesh †",
+   "Ajak †",
+   "Sprite"
+  ],
+  "films": [
+   "et"
+  ],
+  "side": "hero"
+ },
+ {
+  "id": "ravagers",
+  "n": "Die Ravagers",
+  "sub": "Piraten mit Ehrenkodex",
+  "u": "mcu",
+  "status": "Aktiv — 100 Fraktionen, null Manieren",
+  "first": "Guardians of the Galaxy (2014)",
+  "lead": "yondu",
+  "desc": "Weltraum-Freibeuter mit eigenem Kodex ('Ravagers liefern keine Kinder aus' — Yondus Regelbruch rettete Quill). Bei Yondus Feuerbestattung erwies die gesamte Flotte die Ehre — der emotionale Höhepunkt von Vol. 2. Kraglin führt Yondus Erbe mit dem Yaka-Pfeil weiter.",
+  "members": [
+   "yondu",
+   "quill"
+  ],
+  "mlabel": "Captain & Ziehsohn",
+  "extras": [
+   "Kraglin",
+   "Stakar Ogord",
+   "Martinex",
+   "Taserface †"
+  ],
+  "films": [
+   "gotg1",
+   "gotg2",
+   "g3"
+  ],
+  "side": "hero"
+ },
+ {
+  "id": "talokan",
+  "n": "Talokan",
+  "sub": "Das Reich unter dem Meer",
+  "u": "mcu",
+  "status": "Souverän — im Zweckfrieden mit Wakanda",
+  "first": "Wakanda Forever (2022)",
+  "lead": "namor",
+  "desc": "Als die Konquistadoren kamen, floh ein Maya-Volk mit vibraniumhaltiger Pflanzenkraft ins Meer. Ihr Gott-König K'uk'ulkan — 'Namor', das Kind ohne Liebe — führte Krieg gegen Wakanda und schloss kalten Frieden. Die zweite Vibranium-Macht der Welt, und Doom will Vibranium.",
+  "members": [
+   "namor"
+  ],
+  "extras": [
+   "Namora",
+   "Attuma"
+  ],
+  "films": [
+   "bpwf",
+   "doomsday"
+  ],
+  "side": "hero"
+ },
+ {
+  "id": "xforce",
+  "n": "X-Force",
+  "sub": "Deadpools Elitetruppe™",
+  "u": "fox",
+  "status": "Zu 87,5 % beim Absprung gestorben",
+  "first": "Deadpool 2 (2018)",
+  "lead": "deadpool",
+  "desc": "Wades handverlesenes Team für genau einen Einsatz: Fallschirmsprung bei Böenwarnung. Zeitgeist im Häcksler, Vanisher in der Stromleitung, Peter — süßer, unschuldiger Peter. Nur Domino überlebte, weil 'Glück' tatsächlich eine Superkraft ist. Die böseste Team-Parodie des Genres.",
+  "members": [
+   "deadpool",
+   "cable"
+  ],
+  "mlabel": "Überlebende & Nachzügler",
+  "extras": [
+   "Domino",
+   "Peter",
+   "Zeitgeist †",
+   "Vanisher †",
+   "Bedlam †",
+   "Shatterstar †"
+  ],
+  "films": [
+   "dp2"
+  ],
+  "side": "hero"
+ },
+ {
+  "id": "doramilaje",
+  "n": "Die Dora Milaje",
+  "sub": "Wakandas Königinnengarde",
+  "u": "mcu",
+  "status": "Aktiv — General Okoye als Midnight Angel",
+  "first": "Civil War (2016)",
+  "lead": "okoye",
+  "desc": "Die Elitekriegerinnen Wakandas, dem Thron verschworen, nicht der Person darauf — was Okoye gegen Killmonger schmerzhaft bewies. Kämpften in jeder großen Schlacht seit 2016; Ayo und Aneka tragen inzwischen die Midnight-Angel-Rüstungen.",
+  "members": [
+   "okoye",
+   "shuri"
+  ],
+  "mlabel": "General & Schützling",
+  "extras": [
+   "Ayo",
+   "Aneka",
+   "Nakia (War Dog)"
+  ],
+  "films": [
+   "cw",
+   "bp1",
+   "iw",
+   "bpwf"
+  ],
+  "side": "hero"
+ }
+]

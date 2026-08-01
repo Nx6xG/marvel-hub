@@ -1,0 +1,1003 @@
+(function () {
+  "use strict";
+
+  __FILMS_JS__
+  __BREAKS_JS__
+  FILMS.forEach(function (f) { f.uni = "mcu"; });
+  var DB = FILMS.concat(FOX, SONY, KLASSIK, NETFLIX);
+  var byId = {};
+  DB.forEach(function (f) { byId[f.id] = f; });
+  var UNI_LABEL = { mcu: "MCU", fox: "X-Men / Fox", sony: "Sony / Spider-Verse", alt: "Frühe Marvel-Ära", net: "TV-Ära" };
+  var PRIO_LABEL = { pflicht: "Pflicht", empfohlen: "Empfohlen", optional: "Optional", komplettist: "Komplettist", future: "Kommend" };
+
+  function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;"); }
+  function fmtMin(m) { var h = Math.floor(m / 60); return h + " h" + (m % 60 ? " " + (m % 60) + " min" : ""); }
+  function posterImg(id, alt) {
+    if (!POSTERS[id]) return '<div class="poster-fallback"><div class="pf-t metal">' + esc(alt) + "</div></div>";
+    var cls = WIDE.indexOf(id) !== -1 ? ' class="fit-contain"' : "";
+    return '<img src="' + POSTERS[id] + '"' + cls + ' alt="Poster: ' + esc(alt) + '" loading="lazy">';
+  }
+  var watched = {};
+  try { watched = JSON.parse(localStorage.getItem("msa-watched") || "{}"); } catch (e) {}
+  function saveWatched() { try { localStorage.setItem("msa-watched", JSON.stringify(watched)); } catch (e) {} }
+  function goto(id) { location.hash = "#/film/" + id; }
+
+  /* ========== Router ========== */
+  var pages = ["hub", "wiki", "film", "chars", "char", "teams", "team", "multi", "arts", "art", "paths", "path", "records", "chron", "threads", "event"];
+  function route() {
+    var h = location.hash.replace(/^#\/?/, "");
+    var parts = h.split("/");
+    var name = "hub", arg = null;
+    if (parts[0] === "wiki") { name = "wiki"; arg = parts[1] || null; }
+    else if (parts[0] === "film" && parts[1]) { name = "film"; arg = parts[1]; }
+    else if (parts[0] === "charaktere") { name = "chars"; }
+    else if (parts[0] === "char" && parts[1]) { name = "char"; arg = parts[1]; }
+    else if (parts[0] === "teams") { name = "teams"; }
+    else if (parts[0] === "team" && parts[1]) { name = "team"; arg = parts[1]; }
+    else if (parts[0] === "multiversum") { name = "multi"; }
+    else if (parts[0] === "artefakte") { name = "arts"; }
+    else if (parts[0] === "artefakt" && parts[1]) { name = "art"; arg = parts[1]; }
+    else if (parts[0] === "pfade") { name = "paths"; }
+    else if (parts[0] === "pfad" && parts[1]) { name = "path"; arg = parts[1]; }
+    else if (parts[0] === "rekorde") { name = "records"; }
+    else if (parts[0] === "chronik") { name = "chron"; }
+    else if (parts[0] === "faeden") { name = "threads"; }
+    else if (parts[0] === "event") { name = "event"; }
+    pages.forEach(function (p) {
+      document.getElementById("page-" + p).classList.toggle("active", p === name);
+    });
+    document.body.classList.toggle("neutral", name !== "event");
+    document.querySelectorAll("#navLinks a").forEach(function (a) {
+      var r = a.dataset.route;
+      a.classList.toggle("active", r === name || (r === "wiki" && (name === "film")) || (r === "chars" && name === "char") || (r === "teams" && name === "team") || (r === "arts" && name === "art") || (r === "paths" && name === "path"));
+    });
+    if (name === "wiki") { if (arg) setWikiUni(arg); renderWiki(); }
+    if (name === "film") renderFilm(arg);
+    if (name === "chars") renderCharGrid();
+    if (name === "char") renderChar(arg);
+    if (name === "teams") renderTeams();
+    if (name === "team") renderTeam(arg);
+    if (name === "multi") renderMulti();
+    if (name === "arts") renderArts();
+    if (name === "art") renderArt(arg);
+    if (name === "paths") { renderPaths(); renderPcMap(); }
+    if (name === "path") renderPath(arg);
+    if (name === "records") renderRecords();
+    if (name === "chron") renderChronik();
+    if (name === "threads") renderThreads();
+    if (name === "event") { renderRoad(); renderEwl(); }
+    window.scrollTo(0, 0);
+  }
+  window.addEventListener("hashchange", route);
+
+  /* ========== Hub ========== */
+  document.querySelectorAll("[data-poster]").forEach(function (el) {
+    el.outerHTML = posterImg(el.dataset.poster, el.dataset.poster);
+  });
+  document.addEventListener("click", function (ev) {
+    var g = ev.target.closest("[data-goto]");
+    if (g) goto(g.dataset.goto);
+  });
+
+  /* ========== Wiki-Index ========== */
+  var wikiUniMode = "alle", wikiQuery = "";
+  function setWikiUni(u) {
+    wikiUniMode = u;
+    document.querySelectorAll("#wikiUni button").forEach(function (b) {
+      b.classList.toggle("sel", b.dataset.uni === u);
+    });
+  }
+  document.getElementById("wikiUni").addEventListener("click", function (ev) {
+    var b = ev.target.closest("button");
+    if (!b) return;
+    setWikiUni(b.dataset.uni);
+    renderWiki();
+  });
+  document.getElementById("wikiSearch").addEventListener("input", function (ev) {
+    wikiQuery = ev.target.value.trim().toLowerCase();
+    renderWiki();
+  });
+  function renderWiki() {
+    var list = DB.filter(function (f) {
+      if (wikiUniMode === "serie") { if (f.type === "Film") return false; }
+      else if (wikiUniMode !== "alle" && f.uni !== wikiUniMode) return false;
+      if (wikiQuery && f.t.toLowerCase().indexOf(wikiQuery) === -1) return false;
+      return true;
+    }).slice().sort(function (a, b) { return parseInt(a.y) - parseInt(b.y) || a.t.localeCompare(b.t); });
+    document.getElementById("wikiGrid").innerHTML = list.map(function (f) {
+      return '<div class="wcard" data-goto="' + f.id + '"><div class="pw">' + posterImg(f.id, f.t) + "</div>" +
+        '<div class="wt">' + esc(f.t) + "</div>" +
+        '<div class="wy">' + f.y + " · " + f.type + "</div>" +
+        '<span class="uni-badge ub-' + f.uni + '">' + UNI_LABEL[f.uni] + "</span></div>";
+    }).join("") || '<p style="grid-column:1/-1;text-align:center;color:var(--muted)">Nichts gefunden.</p>';
+  }
+
+  /* ========== Filmseite ========== */
+  function scoreCls(v, good, mid) { return v >= good ? "good" : v >= mid ? "mid" : "bad"; }
+  function renderFilm(id) {
+    var f = byId[id];
+    var el = document.getElementById("filmPage");
+    if (!f) { el.innerHTML = "<p>Eintrag nicht gefunden.</p>"; return; }
+    var sc = SCORES[id];
+    var wt = WIKI_TITLES[id] || WIKI_TITLES[id === "l2" ? "l1" : ""] || f.t;
+    var q = encodeURIComponent(f.t + (f.type === "Film" ? " film" : " serie"));
+    var isW = !!watched[id];
+    var sameUni = DB.filter(function (x) { return x.uni === f.uni; });
+    var idx = sameUni.indexOf(f);
+    var prev = sameUni[idx - 1], next = sameUni[idx + 1];
+    var html =
+      '<button class="backlink" id="fpBack">← Zurück</button>' +
+      '<div class="fp-top">' +
+        '<div class="fp-poster">' + posterImg(id, f.t) + "</div>" +
+        '<div class="fp-head">' +
+          "<h2>" + esc(f.t) + "</h2>" +
+          '<span class="uni-badge ub-' + f.uni + '">' + UNI_LABEL[f.uni] + "</span>" +
+          '<div class="fp-meta"><b>' + f.type + " · " + f.y + "</b>" +
+            (f.min ? " · ≈ " + fmtMin(f.min) : "") +
+            (f.uni === "mcu" && f.ph ? " · Phase " + f.ph : "") + "<br>" + esc(f.dir) + "</div>" +
+          '<div class="stream-line">📺 Wo schauen: <b>' + esc(STREAM_OVERRIDE[id] || (f.uni === "sony" ? "Netflix / wechselnd (DE)" : f.uni === "alt" ? "Wechselnd (Leihe/Disney+)" : "Disney+")) + "</b> · Stand 08/2026</div>" +
+          (sc ? '<div class="scores">' +
+            '<div class="score ' + scoreCls(sc[0], 60, 40) + '"><div class="sv">' + sc[0] + ' %</div><div class="sk">Rotten Tomatoes</div></div>' +
+            '<div class="score ' + scoreCls(sc[1], 7, 5.5) + '"><div class="sv">' + sc[1].toFixed(1) + '</div><div class="sk">IMDb / 10</div></div>' +
+          "</div>" : "") +
+          '<div class="ext-links">' +
+            '<a href="https://www.youtube.com/results?search_query=' + encodeURIComponent(f.t + " trailer deutsch") + '" target="_blank" rel="noopener">▶ Trailer (YouTube)</a>' +
+            '<a href="https://en.wikipedia.org/wiki/' + encodeURIComponent(wt.replace(/ /g, "_")) + '" target="_blank" rel="noopener">Wikipedia</a>' +
+            '<a href="https://de.wikipedia.org/w/index.php?search=' + q + '" target="_blank" rel="noopener">Wikipedia (DE)</a>' +
+            '<a href="https://www.imdb.com/find/?q=' + q + '" target="_blank" rel="noopener">IMDb</a>' +
+            '<a href="https://www.rottentomatoes.com/search?search=' + encodeURIComponent(f.t) + '" target="_blank" rel="noopener">Rotten Tomatoes</a>' +
+          "</div>" +
+        "</div>" +
+      "</div>" +
+      '<a class="trailer-card" href="https://www.youtube.com/results?search_query=' + encodeURIComponent(f.t + " " + parseInt(f.y) + " trailer deutsch") + '" target="_blank" rel="noopener">' +
+        (POSTERS[id] ? '<img src="' + POSTERS[id] + '" alt="" aria-hidden="true">' : "") +
+        '<div class="tc-overlay"><div class="tc-play">▶</div><div class="tc-t">Trailer ansehen</div><div class="tc-s">öffnet YouTube in neuem Tab</div></div>' +
+      "</a>" +
+      '<div class="fp-section"><div class="fp-label">Worum es geht</div><p>' + esc(f.plot) + "</p></div>" +
+      '<div class="fp-section"><div class="fp-label">Besetzung (Auswahl)</div><p>' + f.cast.map(esc).join(" · ") + "</p></div>" +
+      (function () {
+        var inFilm = CHARS.filter(function (c) { return c.films.indexOf(id) !== -1; });
+        if (!inFilm.length) return "";
+        return '<div class="fp-section"><div class="fp-label">Wichtige Figuren</div><div class="fp-chars">' +
+          inFilm.map(function (c) {
+            var img = CIMG[c.id]
+              ? '<img class="fc-img" src="' + CIMG[c.id] + '" alt="' + esc(c.n) + '" loading="lazy">'
+              : '<div class="fc-img fc-fallback">' + esc(c.n.charAt(0)) + "</div>";
+            return '<div class="fp-char" data-char="' + c.id + '">' + img + '<div class="fc-n">' + esc(c.n) + "</div></div>";
+          }).join("") + "</div></div>";
+      })() +
+      (TRIVIA[id] ? '<div class="fp-section"><div class="fp-label">Trivia &amp; Hintergrund</div><ul>' +
+        TRIVIA[id].map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul></div>" : "") +
+      (function () {
+        var pc = POSTCREDITS[id];
+        if (!pc && f.prio === "future") return "";
+        var inner;
+        if (!pc) inner = '<p style="color:var(--faint)">Keine (nennenswerte) Post-Credit-Szene verzeichnet.</p>';
+        else {
+          inner = (pc.note ? '<p class="pc-note">' + esc(pc.note) + "</p>" : "") +
+            pc.scenes.map(function (s, i) {
+              var toFilm = s.to ? byId[s.to] : null;
+              return '<div class="pc-scene"><div class="pc-num">' + (i + 1) + "</div><div>" +
+                '<p><span class="spoiler">' + esc(s.d) + "</span></p>" +
+                (toFilm ? '<span class="pc-to" data-goto="' + s.to + '">→ Führt zu: ' + esc(toFilm.t) + "</span>" : "") +
+              "</div></div>";
+            }).join("");
+        }
+        return '<div class="fp-section"><div class="fp-label">Post-Credit-Szenen' +
+          (pc && pc.scenes.length ? " · " + pc.scenes.length : "") + "</div>" + inner + "</div>";
+      })() +
+      (CAMEO[id] ? '<div class="fp-section"><div class="fp-label">🥸 Stan-Lee-Cameo</div><p>' + esc(CAMEO[id]) + "</p></div>" : "") +
+      (f.uni === "mcu" && f.note ? '<div class="fp-doom"><div class="fp-label">Bedeutung für Doomsday' +
+        (f.prio && f.prio !== "future" ? " · " + PRIO_LABEL[f.prio] : "") + "</div><p>" + esc(f.note) + '</p>' +
+        '<a href="#/event">Zum Doomsday-Event-Hub →</a></div>' : "") +
+      (f.prio !== "future" ? '<button class="fp-watch' + (isW ? " is-watched" : "") + '" id="fpWatch">' + (isW ? "✓ Gesehen" : "Als gesehen markieren") + "</button>" : "") +
+      '<div class="fp-nav">' +
+        (prev ? '<button class="backlink" data-goto="' + prev.id + '">← ' + esc(prev.t) + "</button>" : "<span></span>") +
+        (next ? '<button class="backlink" data-goto="' + next.id + '">' + esc(next.t) + " →</button>" : "<span></span>") +
+      "</div>";
+    el.innerHTML = html;
+    document.getElementById("fpBack").addEventListener("click", function () {
+      if (history.length > 1) history.back(); else location.hash = "#/wiki";
+    });
+    var wb = document.getElementById("fpWatch");
+    if (wb) wb.addEventListener("click", function () {
+      if (watched[id]) delete watched[id]; else watched[id] = true;
+      saveWatched();
+      renderFilm(id);
+    });
+  }
+
+  /* ========== Charaktere ========== */
+  var charById = {};
+  CHARS.forEach(function (c) { charById[c.id] = c; });
+  function charImg(c) {
+    if (!CIMG[c.id]) return '<div class="poster-fallback"><div class="pf-t metal">' + esc(c.n) + "</div></div>";
+    return '<img src="' + CIMG[c.id] + '" class="cface" alt="' + esc(c.n) + '" loading="lazy">';
+  }
+  var charQuery = "", charUniMode = "alle";
+  document.getElementById("charSearch").addEventListener("input", function (ev) {
+    charQuery = ev.target.value.trim().toLowerCase();
+    renderCharGrid();
+  });
+  document.getElementById("charUni").addEventListener("click", function (ev) {
+    var b = ev.target.closest("button");
+    if (!b) return;
+    ev.currentTarget.querySelectorAll("button").forEach(function (x) { x.classList.remove("sel"); });
+    b.classList.add("sel");
+    charUniMode = b.dataset.cu;
+    renderCharGrid();
+  });
+  function renderCharGrid() {
+    var list = CHARS.filter(function (c) {
+      if (charUniMode !== "alle" && c.u !== charUniMode) return false;
+      if (charQuery && (c.n + " " + c.a + " " + c.act).toLowerCase().indexOf(charQuery) === -1) return false;
+      return true;
+    });
+    document.getElementById("charGrid").innerHTML = list.map(function (c) {
+      return '<div class="wcard" data-char="' + c.id + '"><div class="pw">' + charImg(c) + "</div>" +
+        '<div class="wt">' + esc(c.n) + "</div>" +
+        '<div class="wy">' + esc(c.act) + "</div>" +
+        '<span class="uni-badge ub-' + c.u + '">' + UNI_LABEL[c.u] + "</span></div>";
+    }).join("") || '<p style="grid-column:1/-1;text-align:center;color:var(--muted)">Nichts gefunden.</p>';
+  }
+  document.addEventListener("click", function (ev) {
+    var cc = ev.target.closest("[data-char]");
+    if (cc) location.hash = "#/char/" + cc.dataset.char;
+  });
+  var REL_NAME = { verbuendet: "Verbündete", feind: "Feinde", familie: "Familie", liebe: "Liebe", komplex: "Es ist kompliziert" };
+  function renderChar(id) {
+    var c = charById[id];
+    var el = document.getElementById("charPage");
+    if (!c) { el.innerHTML = "<p>Charakter nicht gefunden.</p>"; return; }
+    var relations = allRelations(c);
+    el.innerHTML =
+      '<button class="backlink" id="cpBack">← Zurück</button>' +
+      '<div class="fp-top">' +
+        '<div class="fp-poster">' + charImg(c) + "</div>" +
+        '<div class="fp-head">' +
+          "<h2>" + esc(c.n) + "</h2>" +
+          '<span class="uni-badge ub-' + c.u + '">' + UNI_LABEL[c.u] + "</span>" +
+          '<div class="fp-meta"><b>' + esc(c.a) + "</b> · gespielt von " + esc(c.act) + "<br>" +
+            esc(c.uni) + "<br>Erster Auftritt: " + esc(c.first) + "</div>" +
+        "</div>" +
+      "</div>" +
+      '<div class="fp-section"><div class="fp-label">Kräfte</div><p>' + esc(c.pow) + "</p></div>" +
+      '<div class="fp-section"><div class="fp-label">Wer ist das?</div><p>' + esc(c.bio) + "</p></div>" +
+      (function () {
+        var ts = teamsOf(c.id);
+        return ts.length ? '<div class="fp-section"><div class="fp-label">Teams</div><div class="ext-links">' +
+          ts.map(function (t) { return '<a href="#/team/' + t.id + '">' + esc(t.n) + (t.lead === c.id ? " ★" : "") + "</a>"; }).join("") +
+          "</div></div>" : "";
+      })() +
+      (function () {
+        var g = null;
+        VARIANTS.forEach(function (v) { if (v.ids.indexOf(c.id) !== -1) g = v; });
+        if (!g) return "";
+        var others = g.ids.filter(function (x) { return x !== c.id; });
+        return '<div class="fp-section"><div class="fp-label">Varianten &amp; Doppelgänger · ' + esc(g.n) + "</div>" +
+          '<p style="font-size:13.5px;color:var(--muted);margin-bottom:12px">' + esc(g.note) + "</p>" +
+          '<div class="fp-chars">' + others.map(function (oid) {
+            var o = charById[oid];
+            var img = CIMG[oid]
+              ? '<img class="fc-img" src="' + CIMG[oid] + '" alt="' + esc(o.n) + '" loading="lazy">'
+              : '<div class="fc-img fc-fallback">' + esc(o.n.charAt(0)) + "</div>";
+            return '<div class="fp-char" data-char="' + oid + '">' + img + '<div class="fc-n">' + esc(o.n) + "</div></div>";
+          }).join("") + "</div></div>";
+      })() +
+      (relations.length ?
+        '<div class="fp-section"><div class="fp-label">Das Beziehungs-Netz</div>' +
+          '<canvas id="miniNet"></canvas>' +
+          '<div class="mm-legend">' +
+            '<span><i style="background:#5aa9e6"></i>Verbündete</span>' +
+            '<span><i style="background:#e8353b"></i>Feinde</span>' +
+            '<span><i style="background:#d9a441"></i>Familie &amp; Liebe</span>' +
+            '<span><i style="background:#a06be6"></i>Es ist kompliziert</span>' +
+          "</div></div>" +
+        '<div class="fp-section"><div class="fp-label">Im Detail</div><div class="cp-rel">' +
+          relations.map(function (r) {
+            var o = charById[r.id];
+            return '<a href="#/char/' + r.id + '"><span><b>' + esc(o.n) + "</b> — " + esc(REL_NAME[r.t]) + '</span><span class="rl">' + esc(r.l) + "</span></a>";
+          }).join("") + "</div></div>"
+        : '<div class="fp-section"><div class="fp-label">Beziehungen</div><p>Einzelgänger — (noch) keine kartierten Verbindungen.</p></div>') +
+      '<div class="fp-section"><div class="fp-label">Zu sehen in</div><div class="cp-films">' +
+        c.films.map(function (fid) {
+          var f = byId[fid];
+          return f ? '<div class="radar-film" data-goto="' + fid + '">' + posterImg(fid, f.t) + '<div class="rf-t">' + esc(f.t) + "</div></div>" : "";
+        }).join("") + "</div></div>";
+    document.getElementById("cpBack").addEventListener("click", function () {
+      if (history.length > 1) history.back(); else location.hash = "#/charaktere";
+    });
+    renderMiniNet(c, relations);
+  }
+
+  /* ========== Teams ========== */
+  var teamById = {};
+  TEAMS.forEach(function (t) { teamById[t.id] = t; });
+  function teamsOf(charId) {
+    return TEAMS.filter(function (t) { return t.members.indexOf(charId) !== -1; });
+  }
+  function teamCard(t) {
+    var stack = t.members.slice(0, 6).map(function (m) {
+      var c = charById[m];
+      return CIMG[m]
+        ? '<img src="' + CIMG[m] + '" alt="' + esc(c.n) + '">'
+        : "<span>" + esc(c.n.charAt(0)) + "</span>";
+    }).join("");
+    if (t.mystery) stack += '<span class="mystery">?</span><span class="mystery">?</span>';
+    var total = t.members.length + (t.extras ? t.extras.length : 0);
+    var badge = t.ev ? '<span class="uni-badge ub-ev">★ Doomsday</span>' : '<span class="uni-badge ub-' + t.u + '">' + UNI_LABEL[t.u] + "</span>";
+    return '<div class="char-card' + (t.ev ? " ev-team" : "") + '" data-team="' + t.id + '">' +
+      '<div class="tstack">' + stack + (t.members.length > 6 ? '<b>+' + (t.members.length - 6) + "</b>" : "") + "</div>" +
+      '<div class="cc-n">' + esc(t.n) + "</div>" +
+      '<div class="cc-a">' + esc(t.sub) + "</div>" +
+      '<div class="cc-p">' + (t.mystery ? t.members.length + " bekannt · " + t.mystery + " Plätze offen" : total + " Mitglieder") + " · seit " + esc(t.first) + "</div>" +
+      badge + "</div>";
+  }
+  function renderTeams() {
+    var heroes = TEAMS.filter(function (t) { return t.side !== "villain"; });
+    var villains = TEAMS.filter(function (t) { return t.side === "villain"; });
+    document.getElementById("teamsGrid").innerHTML =
+      '<div class="tgroup-head">Helden, Familien &amp; Institutionen</div>' + heroes.map(teamCard).join("") +
+      '<div class="tgroup-head vill">Schurken-Fraktionen</div>' + villains.map(teamCard).join("");
+  }
+  document.addEventListener("click", function (ev) {
+    var tc = ev.target.closest("[data-team]");
+    if (tc) location.hash = "#/team/" + tc.dataset.team;
+  });
+  function renderTeam(id) {
+    var t = teamById[id];
+    var el = document.getElementById("teamPage");
+    if (!t) { el.innerHTML = "<p>Team nicht gefunden.</p>"; return; }
+    el.innerHTML =
+      '<button class="backlink" id="tpBack">← Zurück</button>' +
+      "<h2>" + esc(t.n) + "</h2>" +
+      (t.ev ? '<span class="uni-badge ub-ev">★ Doomsday-Event</span>' : '<span class="uni-badge ub-' + t.u + '">' + UNI_LABEL[t.u] + "</span>") +
+      '<div class="fp-meta"><b>' + esc(t.sub) + "</b><br>Erster Auftritt: " + esc(t.first) + "<br>Status: " + esc(t.status) + "</div>" +
+      '<div class="fp-section"><div class="fp-label">Die Geschichte</div><p>' + esc(t.desc) + "</p></div>" +
+      '<div class="fp-section"><div class="fp-label">' + esc(t.mlabel || "Mitglieder") + '</div><div class="fp-chars">' +
+        t.members.map(function (m) {
+          var c = charById[m];
+          var img = CIMG[m]
+            ? '<img class="fc-img" src="' + CIMG[m] + '" alt="' + esc(c.n) + '" loading="lazy">'
+            : '<div class="fc-img fc-fallback">' + esc(c.n.charAt(0)) + "</div>";
+          var star = t.lead === m ? " ★" : "";
+          return '<div class="fp-char" data-char="' + m + '">' + img + '<div class="fc-n">' + esc(c.n) + star + "</div></div>";
+        }).join("") +
+        (t.extras ? t.extras.map(function (name) {
+          return '<div class="fp-char"><div class="fc-img fc-fallback">' + esc(name.charAt(0)) + '</div><div class="fc-n">' + esc(name) + "</div></div>";
+        }).join("") : "") +
+        (t.mystery ? Array.apply(null, Array(t.mystery)).map(function () {
+          return '<div class="fp-char"><div class="fc-img fc-fallback fc-mystery">?</div><div class="fc-n">Unbekannt</div></div>';
+        }).join("") : "") + "</div></div>" +
+      '<div class="fp-section"><div class="fp-label">Zu sehen in</div><div class="cp-films">' +
+        t.films.map(function (fid) {
+          var f = byId[fid];
+          return f ? '<div class="radar-film" data-goto="' + fid + '">' + posterImg(fid, f.t) + '<div class="rf-t">' + esc(f.t) + "</div></div>" : "";
+        }).join("") + "</div></div>";
+    document.getElementById("tpBack").addEventListener("click", function () {
+      if (history.length > 1) history.back(); else location.hash = "#/teams";
+    });
+  }
+
+  /* ========== Artefakte ========== */
+  var artById = {};
+  ARTIFACTS.forEach(function (a) { artById[a.id] = a; });
+  function renderArts() {
+    document.getElementById("artsGrid").innerHTML = ARTIFACTS.map(function (a) {
+      return '<div class="char-card' + (a.ev ? " ev-team" : "") + '" data-art="' + a.id + '">' +
+        '<div class="art-sym metal">' + a.sym + "</div>" +
+        '<div class="cc-n">' + esc(a.n) + "</div>" +
+        '<div class="cc-a">' + esc(a.sub) + "</div>" +
+        '<div class="cc-p">' + esc(a.status) + "</div></div>";
+    }).join("");
+  }
+  document.addEventListener("click", function (ev) {
+    var ac = ev.target.closest("[data-art]");
+    if (ac) location.hash = "#/artefakt/" + ac.dataset.art;
+  });
+  function renderArt(id) {
+    var a = artById[id];
+    var el = document.getElementById("artPage");
+    if (!a) { el.innerHTML = "<p>Artefakt nicht gefunden.</p>"; return; }
+    el.innerHTML =
+      '<button class="backlink" id="apBack">← Zurück</button>' +
+      '<div class="art-sym metal" style="font-size:64px">' + a.sym + "</div>" +
+      "<h2>" + esc(a.n) + "</h2>" +
+      '<div class="fp-meta"><b>' + esc(a.sub) + "</b><br>Status: " + esc(a.status) + "</div>" +
+      '<div class="fp-section"><div class="fp-label">Die Geschichte</div><p>' + esc(a.d) + "</p></div>" +
+      (a.stones ? '<div class="fp-section"><div class="fp-label">Die sechs Steine</div><div class="cp-rel">' +
+        a.stones.map(function (s) {
+          return '<a style="cursor:default"><span><b>' + esc(s.n) + '</b></span><span class="rl" style="text-align:right;max-width:60%">' + esc(s.d) + "</span></a>";
+        }).join("") + "</div></div>" : "") +
+      '<div class="fp-section"><div class="fp-label">Stationen</div><ul>' +
+        a.stations.map(function (s) { return "<li>" + esc(s) + "</li>"; }).join("") + "</ul></div>" +
+      '<div class="fp-section"><div class="fp-label">Zu sehen in</div><div class="cp-films">' +
+        a.films.map(function (fid) {
+          var f = byId[fid];
+          return f ? '<div class="radar-film" data-goto="' + fid + '">' + posterImg(fid, f.t) + '<div class="rf-t">' + esc(f.t) + "</div></div>" : "";
+        }).join("") + "</div></div>";
+    document.getElementById("apBack").addEventListener("click", function () {
+      if (history.length > 1) history.back(); else location.hash = "#/artefakte";
+    });
+  }
+
+  /* ========== Storyline-Pfade ========== */
+  var pathById = {};
+  PATHS.forEach(function (p) { pathById[p.id] = p; });
+  function renderPaths() {
+    document.getElementById("pathsGrid").innerHTML = PATHS.map(function (p) {
+      var stack = p.steps.slice(0, 5).map(function (s) {
+        return POSTERS[s.f] ? '<img src="' + POSTERS[s.f] + '" alt="">' : "";
+      }).join("");
+      return '<div class="char-card" data-path="' + p.id + '">' +
+        '<div class="pstack">' + stack + "</div>" +
+        '<div class="cc-n">' + esc(p.n) + "</div>" +
+        '<div class="cc-a">' + esc(p.tag) + "</div>" +
+        '<div class="cc-p">' + p.steps.length + " Stationen</div></div>";
+    }).join("");
+  }
+  document.addEventListener("click", function (ev) {
+    var pc = ev.target.closest("[data-path]");
+    if (pc) location.hash = "#/pfad/" + pc.dataset.path;
+  });
+  function renderPath(id) {
+    var p = pathById[id];
+    var el = document.getElementById("pathPage");
+    if (!p) { el.innerHTML = "<p>Pfad nicht gefunden.</p>"; return; }
+    el.innerHTML =
+      '<button class="backlink" id="ppBack">← Zurück</button>' +
+      "<h2>" + esc(p.n) + "</h2>" +
+      '<div class="fp-meta"><b>' + esc(p.tag) + "</b></div>" +
+      '<div class="fp-section"><p>' + esc(p.intro) + "</p></div>" +
+      '<div class="fp-section"><div class="fp-label">Der Pfad · ' + p.steps.length + ' Stationen</div>' +
+        p.steps.map(function (s, i) {
+          var f = byId[s.f];
+          return '<div class="ewl-row" data-goto="' + s.f + '" style="cursor:pointer">' +
+            '<div class="ewl-num">' + (i + 1) + "</div>" +
+            '<div class="ewl-poster">' + posterImg(s.f, f.t) + "</div>" +
+            '<div class="ewl-main"><div class="ewl-t">' + esc(f.t) + '</div><div class="ewl-sub">' + esc(s.note) + "</div></div></div>";
+        }).join("") + "</div>";
+    document.getElementById("ppBack").addEventListener("click", function () {
+      if (history.length > 1) history.back(); else location.hash = "#/pfade";
+    });
+  }
+
+  /* ========== Post-Credit-Kette (Arc-Karte) ========== */
+  function renderPcMap() {
+    var links = [];
+    Object.keys(POSTCREDITS).forEach(function (k) {
+      POSTCREDITS[k].scenes.forEach(function (s) {
+        if (s.to && byId[k] && byId[s.to]) links.push({ from: k, to: s.to });
+      });
+    });
+    var involved = {};
+    links.forEach(function (l) { involved[l.from] = 1; involved[l.to] = 1; });
+    var nodes = DB.filter(function (f) { return involved[f.id]; })
+      .sort(function (a, b) { return parseInt(a.y) - parseInt(b.y) || DB.indexOf(a) - DB.indexOf(b); });
+    var idx = {};
+    nodes.forEach(function (n, i) { idx[n.id] = i; });
+    var ROW = 42, H = nodes.length * ROW, ARCW = 170;
+    var rows = nodes.map(function (n, i) {
+      var th = POSTERS[n.id] ? '<img src="' + POSTERS[n.id] + '" alt="">' : "<span></span>";
+      return '<div class="pcm-row" data-id="' + n.id + '">' + th +
+        '<div class="pcm-t">' + esc(n.t) + '</div><div class="pcm-y">' + n.y + "</div></div>";
+    }).join("");
+    var paths = links.map(function (l) {
+      var y1 = idx[l.from] * ROW + ROW / 2, y2 = idx[l.to] * ROW + ROW / 2;
+      var d = Math.abs(idx[l.to] - idx[l.from]);
+      var cx = Math.min(30 + d * 6, ARCW - 12);
+      return '<path data-from="' + l.from + '" data-to="' + l.to + '" d="M0 ' + y1 + " C " + cx + " " + y1 + ", " + cx + " " + y2 + ", 0 " + y2 + '"/>';
+    }).join("");
+    document.getElementById("pcMap").innerHTML =
+      '<div class="pcm-rows">' + rows + "</div>" +
+      '<svg class="pcm-svg" width="' + ARCW + '" height="' + H + '" viewBox="0 0 ' + ARCW + " " + H + '" aria-hidden="true">' + paths + "</svg>";
+    var map = document.getElementById("pcMap");
+    var pcSel = null;
+
+    function applyHighlight(id) {
+      map.classList.toggle("focus", !!id);
+      map.querySelectorAll("path").forEach(function (p) {
+        p.classList.toggle("hl", !!id && (p.dataset.from === id || p.dataset.to === id));
+      });
+      map.querySelectorAll(".pcm-row").forEach(function (r) {
+        var rid = r.dataset.id;
+        var connected = !id || rid === id || links.some(function (l) {
+          return (l.from === id && l.to === rid) || (l.to === id && l.from === rid);
+        });
+        r.classList.toggle("dim", !!id && !connected);
+        r.classList.toggle("sel", rid === id);
+      });
+    }
+    function closePanel() {
+      var old = map.querySelector(".pcm-detail");
+      if (old) old.remove();
+    }
+    function select(id, scroll) {
+      closePanel();
+      if (pcSel === id) { pcSel = null; map.classList.remove("panel-open"); applyHighlight(null); return; }
+      map.classList.add("panel-open");
+      pcSel = id;
+      applyHighlight(id);
+      var row = map.querySelector('.pcm-row[data-id="' + id + '"]');
+      if (!row) return;
+      var out = (POSTCREDITS[id] ? POSTCREDITS[id].scenes : []).filter(function (s) { return s.to && byId[s.to]; });
+      var incoming = links.filter(function (l) { return l.to === id; });
+      var panel = document.createElement("div");
+      panel.className = "pcm-detail";
+      panel.innerHTML =
+        '<div class="pcm-d-title">' + esc(byId[id].t) + "</div>" +
+        (incoming.length ? '<div class="pcm-d-label">Kommt aus</div>' +
+          incoming.map(function (l) {
+            return '<button class="pcm-jump" data-jump="' + l.from + '">↑ ' + esc(byId[l.from].t) + "</button>";
+          }).join("") : "") +
+        (out.length ? '<div class="pcm-d-label">Abspann führt zu</div>' +
+          out.map(function (s) {
+            return '<button class="pcm-jump" data-jump="' + s.to + '">↓ ' + esc(byId[s.to].t) + "</button>";
+          }).join("") : "") +
+        (!incoming.length && !out.length ? '<div class="pcm-d-label">Keine Verkettung</div>' : "") +
+        '<button class="pcm-open" data-goto="' + id + '">Film-Dossier öffnen →</button>';
+      row.insertAdjacentElement("afterend", panel);
+      if (scroll) row.scrollIntoView({ block: "center", behavior: "smooth" });
+    }
+    map.addEventListener("click", function (ev) {
+      var jump = ev.target.closest(".pcm-jump");
+      if (jump) { select(jump.dataset.jump, true); return; }
+      if (ev.target.closest(".pcm-open")) return; /* data-goto übernimmt */
+      var row = ev.target.closest(".pcm-row");
+      if (row) select(row.dataset.id, false);
+    });
+    map.addEventListener("mouseover", function (ev) {
+      if (pcSel) return; /* Auswahl bleibt stabil */
+      var row = ev.target.closest(".pcm-row");
+      if (row) applyHighlight(row.dataset.id);
+    });
+    map.addEventListener("mouseleave", function () {
+      if (!pcSel) applyHighlight(null);
+    });
+  }
+
+  /* ========== Rekorde ========== */
+  function recRow(f, i, val) {
+    var sc = SCORES[f.id];
+    return '<div class="rec-row" data-goto="' + f.id + '">' +
+      '<div class="rec-rank">' + (i + 1) + "</div>" +
+      (POSTERS[f.id] ? '<img src="' + POSTERS[f.id] + '" alt="">' : "<span></span>") +
+      '<div class="rec-main"><div class="rec-t">' + esc(f.t) + '</div><div class="rec-s">' + f.y + " · " + UNI_LABEL[f.uni] + "</div></div>" +
+      '<div class="rec-bar"><div style="width:' + sc[0] + '%"></div></div>' +
+      '<div class="rec-val">' + val + "</div></div>";
+  }
+  function renderRecords() {
+    var scored = DB.filter(function (f) { return SCORES[f.id]; });
+    var byRt = scored.slice().sort(function (a, b) { return SCORES[b.id][0] - SCORES[a.id][0]; });
+    var top = byRt.slice(0, 10), flop = byRt.slice(-10).reverse();
+    var byGap = scored.slice().sort(function (a, b) {
+      return Math.abs(SCORES[b.id][1] * 10 - SCORES[b.id][0]) - Math.abs(SCORES[a.id][1] * 10 - SCORES[a.id][0]);
+    }).slice(0, 6);
+    var filmsOnly = DB.filter(function (f) { return f.type === "Film" && f.min; });
+    var longest = filmsOnly.slice().sort(function (a, b) { return b.min - a.min; })[0];
+    var shortest = filmsOnly.slice().sort(function (a, b) { return a.min - b.min; })[0];
+    var cameoIds = Object.keys(CAMEO);
+    document.getElementById("recordsBody").innerHTML =
+      '<div class="subhead">Hall of Fame · Top 10 (Rotten Tomatoes)</div>' +
+      top.map(function (f, i) { return recRow(f, i, SCORES[f.id][0] + " %"); }).join("") +
+      '<div class="subhead">Hall of Shame · Flop 10</div>' +
+      flop.map(function (f, i) { return recRow(f, i, SCORES[f.id][0] + " %"); }).join("") +
+      '<div class="subhead">Serien-Ranking · Top 5</div>' +
+      scored.filter(function (f) { return f.type === "Serie"; })
+        .sort(function (a, b) { return SCORES[b.id][0] - SCORES[a.id][0]; }).slice(0, 5)
+        .map(function (f, i) { return recRow(f, i, SCORES[f.id][0] + " %"); }).join("") +
+      '<div class="subhead">Die Universen im Vergleich</div>' +
+      '<p class="sec-sub" style="text-align:center;margin:-14px auto 20px">Durchschnittlicher Rotten-Tomatoes-Wert aller bewerteten Titel pro Universum.</p>' +
+      ["mcu", "fox", "sony"].map(function (u) {
+        var us = scored.filter(function (f) { return f.uni === u; });
+        var avg = Math.round(us.reduce(function (s, f) { return s + SCORES[f.id][0]; }, 0) / us.length);
+        return '<div class="rec-row" style="cursor:default"><div class="rec-rank">Ø</div>' +
+          '<div class="rec-main"><div class="rec-t">' + UNI_LABEL[u] + '</div><div class="rec-s">' + us.length + " bewertete Titel</div></div>" +
+          '<div class="rec-bar"><div style="width:' + avg + '%"></div></div>' +
+          '<div class="rec-val">' + avg + " %</div></div>";
+      }).join("") +
+      '<div class="subhead">Kritiker vs. Publikum · die größte Kluft</div>' +
+      '<p class="sec-sub" style="text-align:center;margin:-14px auto 20px">Näherung: IMDb-Publikumsnote (×10) gegen RT-Kritikerwert.</p>' +
+      byGap.map(function (f, i) {
+        var sc = SCORES[f.id];
+        var diff = Math.round(sc[1] * 10 - sc[0]);
+        return recRow(f, i, (diff > 0 ? "+" : "") + diff + " · " + (diff > 0 ? "Publikums-Liebling" : "Kritiker-Liebling"));
+      }).join("") +
+      '<div class="subhead">Kurioses &amp; Kino-Rekorde</div>' +
+      '<div class="lore-wrap"><ul style="padding-left:20px">' +
+      [
+        "Längster Film: <b>" + esc(longest.t) + "</b> (" + fmtMin(longest.min) + ") — kürzester: <b>" + esc(shortest.t) + "</b> (" + fmtMin(shortest.min) + ").",
+        "<b>Avengers: Endgame</b> spielte 2,799 Mrd. Dollar ein und war zeitweise der erfolgreichste Film aller Zeiten.",
+        "<b>Deadpool & Wolverine</b> ist mit 1,34 Mrd. der erfolgreichste R-Rated-Film der Geschichte.",
+        "<b>No Way Home</b> (1,9 Mrd.) ist der erfolgreichste Spider-Man-Film — und der größte Pandemie-Kinostart.",
+        "<b>Morbius</b> ist der einzige Film, der zweimal floppte: Sony brachte ihn wegen der Memes erneut ins Kino.",
+        "<b>Iron Man</b> wurde mit verpfändeten Figurenrechten finanziert — wäre er gefloppt, gäbe es dieses Wiki nicht.",
+        "<b>Madame Web</b> (11 %) und <b>Fantastic Four 2015</b> (9 %) liefern sich das ewige Duell um den RT-Tiefpunkt.",
+        "Der Stühle-Livestream zur Doomsday-Cast-Ankündigung lief über <b>5 Stunden</b> — Marvels längste Pressemitteilung.",
+        "Bestbewertetes Marvel-Projekt überhaupt: <b>X-Men '97</b> und <b>Ms. Marvel</b> (je 98 %) — vor jedem Kinofilm.",
+        "<b>Guardians Vol. 2</b> hält mit <b>5 Post-Credit-Szenen</b> den Abspann-Rekord.",
+        "<b>Ms. Marvel</b> ist das größte Review-Bombing-Lehrstück: 98 % Kritiker, 6,2 bei IMDb.",
+        "<b>Loki</b> ist die einzige MCU-Serie, die je eine zweite Staffel bekam.",
+        "<b>Secret Invasion</b> kostete ~212 Mio. Dollar für 6 Episoden — mehr pro Minute als mancher Kinofilm, bei 53 % RT.",
+        "<b>Into the Spider-Verse</b> gewann den Animations-Oscar und veränderte den Look einer ganzen Industrie."
+      ].map(function (x) { return '<li style="color:#bcb8ba;font-size:14.5px;margin-bottom:8px">' + x + "</li>"; }).join("") +
+      "</ul></div>" +
+      '<div class="subhead">🥸 Excelsior — die Stan-Lee-Cameos</div>' +
+      '<p class="sec-sub" style="text-align:center;margin:-14px auto 20px">' + cameoIds.length + ' dokumentierte Auftritte — laut Guardians Vol. 2 kanonisch ein und dieselbe Figur: ein Informant der Watcher.</p>' +
+      '<div class="cameo-list">' +
+      cameoIds.map(function (cid) {
+        var f = byId[cid];
+        return f ? '<div class="cameo-row" data-goto="' + cid + '"><b>' + esc(f.t) + "</b><span>" + esc(CAMEO[cid]) + "</span></div>" : "";
+      }).join("") + "</div>";
+  }
+
+  /* ========== In-Universe-Chronik ========== */
+  function miniFilmChips(ids) {
+    return '<div class="cp-films">' + ids.map(function (fid) {
+      var f = byId[fid];
+      return f ? '<div class="radar-film" data-goto="' + fid + '" title="' + esc(f.t) + '">' + posterImg(fid, f.t) + '<div class="rf-t">' + esc(f.t) + "</div></div>" : "";
+    }).join("") + "</div>";
+  }
+  function renderChronik() {
+    document.getElementById("chronList").innerHTML = CHRONIK.map(function (e) {
+      return '<div class="chron-item">' +
+        '<div class="chron-y metal">' + esc(e.y) + "</div>" +
+        '<div class="chron-body"><div class="chron-n">' + esc(e.n) + "</div>" +
+          '<div class="chron-more"><p>' + esc(e.d) + "</p>" + miniFilmChips(e.films) + "</div>" +
+        "</div></div>";
+    }).join("");
+    wireHoverExpand("#chronList .chron-item");
+  }
+
+  /* ========== Offene Fäden ========== */
+  function renderThreads() {
+    document.getElementById("threadList").innerHTML = THREADS.map(function (t) {
+      return '<div class="thread g-' + t.grade + '">' +
+        '<div class="thread-head">' +
+          '<span class="thread-dot"></span>' +
+          '<div><div class="thread-n">' + esc(t.n) + "</div>" +
+          '<div class="thread-s">' + esc(t.seit) + " · Status: " + esc(t.status) + "</div></div>" +
+        "</div>" +
+        '<div class="chron-more"><p>' + esc(t.d) + "</p>" + miniFilmChips(t.films) + "</div>" +
+      "</div>";
+    }).join("");
+    wireHoverExpand("#threadList .thread");
+  }
+
+  /* Hover öffnet, Klick pinnt (für Touch) — Poster-Klicks navigieren weiter */
+  function wireHoverExpand(sel) {
+    document.querySelectorAll(sel).forEach(function (el) {
+      el.addEventListener("click", function (ev) {
+        if (ev.target.closest("[data-goto]")) return;
+        el.classList.toggle("pinned");
+      });
+    });
+  }
+
+  /* ========== Multiversum ========== */
+  function renderMulti() {
+    document.getElementById("uniGrid").innerHTML = UNIVERSES.map(function (u) {
+      return '<div class="uni-card' + (u.ev ? " ev" : "") + '">' +
+        '<div class="uni-head"><div class="uni-num metal">' + esc(u.num) + "</div>" +
+          "<div><div class=\"uni-name\">" + esc(u.n) + '</div><div class="uni-status">' + esc(u.status) + "</div></div></div>" +
+        "<p>" + esc(u.d) + "</p>" +
+        '<div class="cp-films">' + u.sample.map(function (fid) {
+          var f = byId[fid];
+          return f ? '<div class="radar-film" data-goto="' + fid + '" title="' + esc(f.t) + '">' + posterImg(fid, f.t) + "</div>" : "";
+        }).join("") + "</div></div>";
+    }).join("");
+  }
+
+  /* Beziehungen inkl. Rueckrichtung (wer diesen Charakter nennt) */
+  function allRelations(c) {
+    var out = [], seen = {};
+    c.rel.forEach(function (r) {
+      if (charById[r[0]] && !seen[r[0]]) { seen[r[0]] = 1; out.push({ id: r[0], t: r[1], l: r[2] }); }
+    });
+    CHARS.forEach(function (o) {
+      if (o.id === c.id || seen[o.id]) return;
+      o.rel.forEach(function (r) {
+        if (r[0] === c.id && !seen[o.id]) { seen[o.id] = 1; out.push({ id: o.id, t: r[1], l: r[2] }); }
+      });
+    });
+    return out.slice(0, 10);
+  }
+
+  /* ========== Mini-Netz auf der Charakterseite ========== */
+  var REL_COLOR = { verbuendet: "#5aa9e6", feind: "#e8353b", familie: "#d9a441", liebe: "#d9a441", komplex: "#a06be6" };
+  var IMG_CACHE = {};
+  function getImg(id, onload) {
+    if (IMG_CACHE[id]) return IMG_CACHE[id];
+    if (!CIMG[id]) return null;
+    var im = new Image();
+    im.onload = onload;
+    im.src = CIMG[id];
+    IMG_CACHE[id] = im;
+    return im;
+  }
+  function renderMiniNet(c, relations) {
+    var cv = document.getElementById("miniNet");
+    if (!cv) return;
+    var W = cv.offsetWidth || 700, H = 340, dpr = window.devicePixelRatio || 1;
+    cv.width = W * dpr; cv.height = H * dpr;
+    var ctx = cv.getContext("2d");
+    ctx.scale(dpr, dpr);
+    var cx = W / 2, cy = H / 2 - 8;
+    var nodes = relations.map(function (r, i) {
+      var ang = -Math.PI / 2 + (i / relations.length) * Math.PI * 2;
+      return { r: r, c: charById[r.id],
+        x: cx + Math.cos(ang) * Math.min(W / 2 - 70, 230),
+        y: cy + Math.sin(ang) * (H / 2 - 62) };
+    });
+    function circleImg(id, x, y, rad, name, uni) {
+      ctx.save();
+      ctx.beginPath();
+      ctx.arc(x, y, rad, 0, Math.PI * 2);
+      ctx.fillStyle = "#181418";
+      ctx.fill();
+      ctx.clip();
+      var im = getImg(id, draw);
+      if (im && im.complete && im.naturalWidth) {
+        var s = Math.max(rad * 2 / im.naturalWidth, rad * 2 / im.naturalHeight);
+        ctx.drawImage(im, x - im.naturalWidth * s / 2, y - im.naturalHeight * s / 2 + rad * 0.15, im.naturalWidth * s, im.naturalHeight * s);
+      } else {
+        ctx.fillStyle = "#cfc8cb";
+        ctx.font = "700 " + rad + "px 'Avenir Next Condensed', sans-serif";
+        ctx.textAlign = "center"; ctx.textBaseline = "middle";
+        ctx.fillText(name.charAt(0), x, y);
+      }
+      ctx.restore();
+      ctx.beginPath();
+      ctx.arc(x, y, rad, 0, Math.PI * 2);
+      ctx.strokeStyle = uni === "fox" ? "#d9a441" : uni === "sony" ? "#5aa9e6" : "#e8353b";
+      ctx.lineWidth = 2;
+      ctx.stroke();
+      ctx.font = "600 10.5px 'Avenir Next Condensed', 'Arial Narrow', sans-serif";
+      ctx.textAlign = "center"; ctx.textBaseline = "alphabetic";
+      ctx.fillStyle = "#ddd6d8";
+      ctx.fillText(name.toUpperCase(), x, y + rad + 14);
+    }
+    function draw() {
+      ctx.clearRect(0, 0, W, H);
+      nodes.forEach(function (n) {
+        ctx.strokeStyle = REL_COLOR[n.r.t] || "#666";
+        ctx.globalAlpha = 0.55;
+        ctx.lineWidth = 2;
+        ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(n.x, n.y); ctx.stroke();
+        ctx.globalAlpha = 1;
+      });
+      nodes.forEach(function (n) { circleImg(n.c.id, n.x, n.y, 24, n.c.n, n.c.u); });
+      circleImg(c.id, cx, cy, 38, c.n, c.u);
+    }
+    draw();
+    cv.onmousemove = function (ev) {
+      var r = cv.getBoundingClientRect();
+      var x = ev.clientX - r.left, y = ev.clientY - r.top, hit = false;
+      nodes.forEach(function (n) {
+        if ((x - n.x) * (x - n.x) + (y - n.y) * (y - n.y) < 26 * 26) hit = true;
+      });
+      cv.style.cursor = hit ? "pointer" : "default";
+    };
+    cv.onclick = function (ev) {
+      var r = cv.getBoundingClientRect();
+      var x = ev.clientX - r.left, y = ev.clientY - r.top;
+      for (var i = 0; i < nodes.length; i++) {
+        var n = nodes[i];
+        if ((x - n.x) * (x - n.x) + (y - n.y) * (y - n.y) < 26 * 26) {
+          location.hash = "#/char/" + n.c.id;
+          return;
+        }
+      }
+    };
+  }
+
+  /* ========== Event: Saga-Timeline ========== */
+  var sortMode = "release", filterMode = "alle";
+  function passesFilter(f) {
+    if (f.prio === "future") return true;
+    if (filterMode === "pflicht") return f.prio === "pflicht";
+    if (filterMode === "empfohlen") return f.prio === "pflicht" || f.prio === "empfohlen";
+    return true;
+  }
+  function renderRoad() {
+    var list = FILMS.slice();
+    if (sortMode === "chrono") list.sort(function (a, b) { return a.chrono - b.chrono; });
+    var html = "";
+    list.forEach(function (f) {
+      if (sortMode === "release" && SAGA_BREAKS[f.id]) {
+        var b = SAGA_BREAKS[f.id];
+        html += '<div class="sep">' + (b.saga ? '<div class="sep-saga metal">' + b.saga + "</div>" : "") +
+          '<div class="sep-phase">' + b.phase + "</div></div>";
+      }
+      var isW = !!watched[f.id];
+      var dim = !passesFilter(f);
+      html += '<div class="stop' + (isW ? " watched" : "") + (dim ? " dimmed" : "") + (f.prio === "future" ? " future" : "") + '" data-id="' + f.id + '">' +
+        '<div class="poster-wrap" role="button" tabindex="0" aria-label="' + esc(f.t) + ' öffnen">' +
+          (sortMode === "chrono" ? '<div class="chrono-n">' + f.chrono + "</div>" : "") +
+          posterImg(f.id, f.t) +
+          '<span class="arrow">➤</span>' +
+        "</div>" +
+        (f.prio !== "future" ? '<button class="check" aria-label="gesehen" aria-pressed="' + isW + '">✓</button>' : "") +
+        '<div class="s-title">' + esc(f.t) + "</div>" +
+        '<div class="s-year"><span class="prio-dot pd-' + f.prio + '"></span>' + f.y + "</div>" +
+      "</div>";
+    });
+    html += '<div class="finale"><div class="f-tag">18. Dezember 2026</div><div class="f-title metal">Every Story leads to Doom</div></div>';
+    document.getElementById("road").innerHTML = html;
+    renderRoadProgress();
+  }
+  function renderRoadProgress() {
+    var total = 0, done = 0, minLeft = 0, pT = 0, pD = 0;
+    FILMS.forEach(function (f) {
+      if (f.prio === "future") return;
+      total++;
+      if (watched[f.id]) done++;
+      else if (passesFilter(f)) minLeft += f.min;
+      if (f.prio === "pflicht") { pT++; if (watched[f.id]) pD++; }
+    });
+    var pct = Math.round((done / total) * 100);
+    document.getElementById("tlFill").style.width = pct + "%";
+    document.getElementById("tlStats").innerHTML = "<b>" + done + " / " + total + "</b> gesehen · Pflicht <b>" + pD + " / " + pT + "</b> · Rest: <b>≈ " + fmtMin(minLeft) + "</b>";
+  }
+  document.getElementById("road").addEventListener("click", function (ev) {
+    var stop = ev.target.closest(".stop");
+    if (!stop) return;
+    if (ev.target.closest(".check")) {
+      var id = stop.dataset.id;
+      if (watched[id]) delete watched[id]; else watched[id] = true;
+      saveWatched(); renderRoad(); renderEwl();
+      return;
+    }
+    if (ev.target.closest(".poster-wrap")) goto(stop.dataset.id);
+  });
+  function wireSeg(id, apply) {
+    document.getElementById(id).addEventListener("click", function (ev) {
+      var b = ev.target.closest("button");
+      if (!b) return;
+      ev.currentTarget.querySelectorAll("button").forEach(function (x) { x.classList.remove("sel"); });
+      b.classList.add("sel");
+      apply(b.dataset);
+    });
+  }
+  wireSeg("segSort", function (d) { sortMode = d.sort; renderRoad(); });
+  wireSeg("segFilter", function (d) { filterMode = d.filter; renderRoad(); });
+
+  /* ========== Event: fokussierte Watchlist ========== */
+  var ewlMode = "relevanz";
+  var PRIO_RANK = { pflicht: 0, empfohlen: 1 };
+  wireSeg("ewlMode", function (d) { ewlMode = d.mode; renderEwl(); });
+  function renderEwl() {
+    var base = FILMS.filter(function (f) { return f.prio === "pflicht" || f.prio === "empfohlen"; });
+    var list = base.slice();
+    if (ewlMode === "speed") list = list.filter(function (f) { return f.prio === "pflicht"; });
+    if (ewlMode === "chrono") list.sort(function (a, b) { return a.chrono - b.chrono; });
+    else if (ewlMode === "relevanz") list.sort(function (a, b) { return PRIO_RANK[a.prio] - PRIO_RANK[b.prio] || FILMS.indexOf(a) - FILMS.indexOf(b); });
+    document.getElementById("ewlList").innerHTML = list.map(function (f, i) {
+      var isW = !!watched[f.id];
+      return '<div class="ewl-row' + (isW ? " watched" : "") + '" data-id="' + f.id + '">' +
+        '<div class="ewl-num">' + (i + 1) + "</div>" +
+        '<div class="ewl-poster" data-goto="' + f.id + '">' + posterImg(f.id, f.t) + "</div>" +
+        '<div class="ewl-main" data-goto="' + f.id + '"><div class="ewl-t">' + esc(f.t) + "</div>" +
+          '<div class="ewl-sub">' + f.y + " · " + f.type + " · " + PRIO_LABEL[f.prio] + "</div></div>" +
+        '<div class="ewl-side"><span class="ewl-time">≈ ' + fmtMin(f.min) + "</span>" +
+        '<button class="ewl-check" aria-label="gesehen" aria-pressed="' + isW + '">✓</button></div></div>';
+    }).join("");
+    var done = 0, left = 0;
+    list.forEach(function (f) { if (watched[f.id]) done++; else left += f.min; });
+    var scope = ewlMode === "speed" ? "Pflicht-Sprint" : "Doomsday-Programm";
+    document.getElementById("ewlFill").style.width = Math.round(done / list.length * 100) + "%";
+    document.getElementById("ewlStats").innerHTML = done === list.length
+      ? "<b>Bereit für Doomsday.</b>"
+      : "<b>" + done + " / " + list.length + "</b> gesehen (" + scope + ") · Restzeit: <b>≈ " + fmtMin(left) + "</b>";
+  }
+  document.getElementById("ewlList").addEventListener("click", function (ev) {
+    if (!ev.target.closest(".ewl-check")) return;
+    var id = ev.target.closest(".ewl-row").dataset.id;
+    if (watched[id]) delete watched[id]; else watched[id] = true;
+    saveWatched(); renderEwl(); renderRoad();
+  });
+
+  /* ========== Globale Suche ========== */
+  var gsInput = document.getElementById("globalSearch");
+  var gsDrop = document.getElementById("searchDrop");
+  function gsClose() { gsDrop.hidden = true; gsDrop.innerHTML = ""; }
+  function gsRow(attr, val, thumb, title, sub) {
+    return '<div class="sd-row" ' + attr + '="' + val + '">' + thumb +
+      "<div><div class=\"sd-t\">" + esc(title) + '</div><div class="sd-s">' + esc(sub) + "</div></div></div>";
+  }
+  function gsRun() {
+    var q = gsInput.value.trim().toLowerCase();
+    if (q.length < 2) { gsClose(); return; }
+    var films = DB.filter(function (f) { return f.t.toLowerCase().indexOf(q) !== -1; }).slice(0, 6);
+    var chars = CHARS.filter(function (c) {
+      return (c.n + " " + c.a + " " + c.act).toLowerCase().indexOf(q) !== -1;
+    }).slice(0, 6);
+    var teams = TEAMS.filter(function (t) { return (t.n + " " + t.sub).toLowerCase().indexOf(q) !== -1; }).slice(0, 4);
+    var html = "";
+    if (films.length) {
+      html += '<div class="sd-group">Filme &amp; Serien</div>' + films.map(function (f) {
+        var th = POSTERS[f.id] ? '<img src="' + POSTERS[f.id] + '" alt="">' : '<div class="sd-fb">' + esc(f.t.charAt(0)) + "</div>";
+        return gsRow("data-goto", f.id, th, f.t, f.y + " · " + f.type + " · " + UNI_LABEL[f.uni]);
+      }).join("");
+    }
+    if (chars.length) {
+      html += '<div class="sd-group">Charaktere</div>' + chars.map(function (c) {
+        var th = CIMG[c.id] ? '<img class="sd-round" src="' + CIMG[c.id] + '" alt="">' : '<div class="sd-fb">' + esc(c.n.charAt(0)) + "</div>";
+        return gsRow("data-char", c.id, th, c.n, c.a + " · " + c.act);
+      }).join("");
+    }
+    if (teams.length) {
+      html += '<div class="sd-group">Teams</div>' + teams.map(function (t) {
+        return gsRow("data-team", t.id, '<div class="sd-fb">' + esc(t.n.charAt(0)) + "</div>", t.n, t.members.length + " Mitglieder · " + t.sub);
+      }).join("");
+    }
+    gsDrop.innerHTML = html || '<div class="sd-empty">Nichts gefunden — nicht mal im Void.</div>';
+    gsDrop.hidden = false;
+  }
+  gsInput.addEventListener("input", gsRun);
+  gsInput.addEventListener("focus", gsRun);
+  gsInput.addEventListener("keydown", function (ev) {
+    if (ev.key === "Escape") { gsClose(); gsInput.blur(); }
+    if (ev.key === "Enter") {
+      var first = gsDrop.querySelector(".sd-row");
+      if (first) first.click();
+    }
+  });
+  document.addEventListener("click", function (ev) {
+    if (!ev.target.closest(".nav-search")) gsClose();
+    else if (ev.target.closest(".sd-row")) { gsInput.value = ""; gsClose(); }
+  });
+  window.addEventListener("hashchange", gsClose);
+
+  /* ========== Countdown ========== */
+  var tDoom = new Date("2026-12-16T00:00:00").getTime();
+  var tSW = new Date("2027-12-17T00:00:00").getTime();
+  function put(id, v) { var el = document.getElementById(id); if (el) el.textContent = v; }
+  function tick() {
+    var now = Date.now();
+    var d = Math.max(0, Math.floor((tDoom - now) / 86400000));
+    var sw = Math.max(0, Math.floor((tSW - now) / 86400000));
+    put("hubCd", d); put("hubCdSW", sw); put("cdSW", sw);
+    var diff = tDoom - now;
+    if (diff <= 0) { put("cdDays", "JETZT"); put("cdClock", "IM KINO"); }
+    else {
+      var s = Math.floor(diff / 1000);
+      put("cdDays", Math.floor(s / 86400));
+      put("cdClock", String(Math.floor(s % 86400 / 3600)).padStart(2, "0") + " Std · " +
+        String(Math.floor(s % 3600 / 60)).padStart(2, "0") + " Min · " + String(s % 60).padStart(2, "0") + " Sek");
+    }
+  }
+  tick();
+  setInterval(tick, 1000);
+
+  /* ========== Spoiler ========== */
+  var spBtn = document.getElementById("spoilerToggle");
+  var showSp = false;
+  try { showSp = localStorage.getItem("msa-spoilers") === "1"; } catch (e) {}
+  function applySp() {
+    document.body.classList.toggle("show-spoilers", showSp);
+    spBtn.classList.toggle("on", showSp);
+    spBtn.textContent = showSp ? "Spoiler: an" : "Spoiler: aus";
+  }
+  spBtn.addEventListener("click", function () {
+    showSp = !showSp;
+    try { localStorage.setItem("msa-spoilers", showSp ? "1" : "0"); } catch (e) {}
+    applySp();
+  });
+  document.addEventListener("click", function (ev) {
+    var t = ev.target.closest(".spoiler");
+    if (t && !showSp) t.classList.add("revealed");
+  });
+  applySp();
+
+  /* ========== Glossar-Suche ========== */
+  var gs = document.getElementById("glossSearch");
+  gs.addEventListener("input", function () {
+    var q = gs.value.trim().toLowerCase();
+    document.querySelectorAll("#glossGrid .gloss").forEach(function (g) {
+      g.style.display = !q || g.textContent.toLowerCase().indexOf(q) !== -1 ? "" : "none";
+    });
+  });
+
+  route();
+})();

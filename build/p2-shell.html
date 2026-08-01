@@ -1,0 +1,313 @@
+<title>Marvel Hub — Das Archiv aller Marvel-Universen</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+__OLD_CSS__
+__EXTRA_CSS__
+</style>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="#/">Marvel<b>·</b>Hub</a>
+    <div class="nav-links" id="navLinks">
+      <a href="#/" data-route="hub">Start</a>
+      <a href="#/wiki" data-route="wiki">Filme &amp; Serien</a>
+      <a href="#/charaktere" data-route="chars">Charaktere</a>
+      <a href="#/teams" data-route="teams">Teams</a>
+      <a href="#/multiversum" data-route="multi">Multiversum</a>
+      <a href="#/artefakte" data-route="arts">Artefakte</a>
+      <a href="#/pfade" data-route="paths">Pfade</a>
+      <a href="#/rekorde" data-route="records">Rekorde</a>
+      <a href="#/chronik" data-route="chron">Chronik</a>
+      <a href="#/faeden" data-route="threads">Offene Fäden</a>
+      <a href="#/event" data-route="event" class="ev-link">★ Doomsday</a>
+    </div>
+    <div class="nav-search">
+      <input id="globalSearch" type="search" placeholder="Suche …" aria-label="Alles durchsuchen" autocomplete="off">
+      <div class="search-drop" id="searchDrop" hidden></div>
+    </div>
+    <button class="spoiler-btn" id="spoilerToggle" aria-pressed="false">Spoiler: aus</button>
+  </div>
+</nav>
+
+<!-- ============ START / HUB ============ -->
+<div class="page" id="page-hub">
+  <header class="hub-hero">
+    <div class="hero-rule">Das Archiv aller Marvel-Universen</div>
+    <h1 class="metal">Marvel Hub</h1>
+    <p class="hub-sub">MCU, X-Men, Sony &amp; Spider-Verse — Filme, Serien, Charaktere, Hintergründe. Und wenn ein großes Event ansteht, wird es hier zelebriert.</p>
+  </header>
+  <main class="wrap" style="padding-bottom: 50px">
+
+    <div class="radar">
+      <div class="radar-col">
+        <div class="radar-k">Zuletzt erschienen</div>
+        <div class="radar-films">
+          <div class="radar-film" data-goto="ih"><span data-poster="ih"></span><div class="rf-t">Ironheart</div><div class="rf-d">Juni 2025 · Serie</div></div>
+          <div class="radar-film" data-goto="f4"><span data-poster="f4"></span><div class="rf-t">First Steps</div><div class="rf-d">Juli 2025 · Kino</div></div>
+        </div>
+      </div>
+      <div class="radar-col now">
+        <div class="radar-k">● Jetzt im Kino</div>
+        <div class="radar-films">
+          <div class="radar-film" data-goto="bnd"><span data-poster="bnd"></span><div class="rf-t">Spider-Man: Brand New Day</div><div class="rf-d">seit 31. Juli 2026</div></div>
+        </div>
+      </div>
+      <div class="radar-col next">
+        <div class="radar-k">Als Nächstes</div>
+        <div class="radar-films">
+          <div class="radar-film" data-goto="doomsday">
+            <span data-poster="doomsday"></span>
+            <div class="radar-cd" id="hubCd">···</div>
+            <div class="radar-cd-l">Tage · Doomsday</div>
+          </div>
+          <div class="radar-film" data-goto="secretwars">
+            <span data-poster="secretwars"></span>
+            <div class="radar-cd" id="hubCdSW" style="font-size:28px">···</div>
+            <div class="radar-cd-l">Tage · Secret Wars</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a class="event-banner" href="#/event">
+      <div class="eb-k">· Das Event ·</div>
+      <div class="eb-t">Avengers: Doomsday</div>
+      <div class="eb-s">Every Story leads to Doom — 18. Dezember 2026</div>
+      <span class="eb-cta">Zum Event-Hub&ensp;➤</span>
+    </a>
+
+    <div class="subhead">Neuigkeiten</div>
+    <div class="news">
+      <div class="news-item">
+        <div class="news-date">31. Juli 2026</div>
+        <h4>Brand New Day startet weltweit</h4>
+        <p>Peters Neuanfang nach No Way Home ist im Kino — der letzte Marvel-Film vor Doomsday. Mit Sadie Sink, Jon Bernthals Punisher und einem Hulk-Problem.</p>
+      </div>
+      <div class="news-item">
+        <div class="news-date">Juli 2026 · Comic-Con</div>
+        <h4>Doomsday-Panel eskaliert in Hall H</h4>
+        <p>Exklusiver Trailer: Doom <span class="spoiler">stoppt Stormbreaker und erweckt eine Sentinel-Armee</span>; dazu bestätigt: <span class="spoiler">Ryan Gosling als Ghost Rider, David Jonsson als neuer Black Panther</span>. Alle Details im <a href="#/event">Event-Hub</a>.</p>
+      </div>
+      <div class="news-item">
+        <div class="news-date">20. Juli 2026</div>
+        <h4>Erster Doomsday-Trailer online</h4>
+        <p>Der erste volle Blick auf Robert Downey Jr. als Doctor Doom — in Maske und Umhang.</p>
+      </div>
+      <div class="news-date" style="margin-top:18px"><a href="#/event" style="font-family:var(--mono);font-size:11px">Alle Event-News im Doomsday-Hub →</a></div>
+    </div>
+
+    <div class="subhead">Direkt eintauchen</div>
+    <div class="tl-controls" style="margin-bottom:40px">
+      <a class="backlink" href="#/wiki">Alle Filme &amp; Serien</a>
+      <a class="backlink" href="#/wiki/mcu">Nur MCU</a>
+      <a class="backlink" href="#/wiki/fox">X-Men &amp; Fox</a>
+      <a class="backlink" href="#/wiki/sony">Sony &amp; Spider-Verse</a>
+      <a class="backlink" href="#/charaktere">Charakter-Netzwerk</a>
+    </div>
+  </main>
+</div>
+
+<!-- ============ WIKI-INDEX ============ -->
+<div class="page" id="page-wiki">
+  <main class="wrap" style="padding: 50px 22px 60px">
+    <div class="sec-head">
+      <div class="sec-kicker">Das Archiv</div>
+      <h2 class="metal">Filme &amp; Serien</h2>
+      <p class="sec-sub">Jeder Eintrag ist eine eigene Seite: Story, Cast, Scores, Trivia und Links. Von Iron Man bis Madame Web — <b>alles</b> zählt.</p>
+    </div>
+    <div class="wiki-tools">
+      <input class="wiki-search" id="wikiSearch" type="search" placeholder="Titel suchen … (z. B. Venom)" aria-label="Filme durchsuchen">
+      <div class="seg" id="wikiUni">
+        <button class="sel" data-uni="alle">Alle</button>
+        <button data-uni="mcu">MCU</button>
+        <button data-uni="fox">X-Men &amp; Fox</button>
+        <button data-uni="sony">Sony &amp; Spider-Verse</button>
+        <button data-uni="alt">Klassiker</button>
+        <button data-uni="net">TV-Ära</button>
+        <button data-uni="serie">Nur Serien</button>
+      </div>
+    </div>
+    <div class="wgrid" id="wikiGrid"></div>
+  </main>
+</div>
+
+<!-- ============ FILMSEITE ============ -->
+<div class="page" id="page-film">
+  <main class="wrap fp" id="filmPage" style="padding-bottom: 70px"></main>
+</div>
+
+<!-- ============ CHARAKTERE ============ -->
+<div class="page" id="page-chars">
+  <main class="wrap" style="padding: 50px 22px 60px">
+    <div class="sec-head">
+      <div class="sec-kicker">Helden · Schurken · alles dazwischen</div>
+      <h2 class="metal">Charaktere</h2>
+      <p class="sec-sub">Jede Figur hat ihre eigene Seite — mit Biografie, Kräften und einem <b>Beziehungs-Netz</b>, das zeigt, wer Verbündeter, Feind oder Familie ist.</p>
+    </div>
+    <div class="wiki-tools">
+      <input class="wiki-search" id="charSearch" type="search" placeholder="Charakter suchen …" aria-label="Charaktere durchsuchen">
+      <div class="seg" id="charUni">
+        <button class="sel" data-cu="alle">Alle</button>
+        <button data-cu="mcu">MCU</button>
+        <button data-cu="fox">X-Men &amp; Fox</button>
+        <button data-cu="sony">Sony</button>
+      </div>
+    </div>
+    <div class="wgrid" id="charGrid"></div>
+  </main>
+</div>
+
+<!-- ============ CHARAKTER-SEITE ============ -->
+<div class="page" id="page-char">
+  <main class="wrap fp" id="charPage" style="padding-bottom: 70px"></main>
+</div>
+
+<!-- ============ TEAMS ============ -->
+<div class="page" id="page-teams">
+  <main class="wrap" style="padding: 50px 22px 60px">
+    <div class="sec-head">
+      <div class="sec-kicker">Wer kämpft mit wem</div>
+      <h2 class="metal">Die Teams</h2>
+      <p class="sec-sub">Von den Avengers bis zur Spider-Society — jedes Team mit eigener Seite, Mitgliedern und Geschichte.</p>
+    </div>
+    <div class="char-grid" id="teamsGrid" style="margin-top:10px"></div>
+  </main>
+</div>
+
+<!-- ============ TEAM-SEITE ============ -->
+<div class="page" id="page-team">
+  <main class="wrap fp" id="teamPage" style="padding-bottom: 70px"></main>
+</div>
+
+<!-- ============ MULTIVERSUM ============ -->
+<div class="page" id="page-multi">
+  <main class="wrap" style="padding: 50px 22px 60px">
+    <div class="sec-head">
+      <div class="sec-kicker">Die Landkarte der Realitäten</div>
+      <h2 class="metal">Das Multiversum</h2>
+      <p class="sec-sub">Jede Erde hat eine Nummer, jede Nummer eine Geschichte. Wo welcher Film spielt — und welche Welten schon kollidiert sind.</p>
+    </div>
+    <div class="uni-grid" id="uniGrid"></div>
+  </main>
+</div>
+
+<!-- ============ ARTEFAKTE ============ -->
+<div class="page" id="page-arts">
+  <main class="wrap" style="padding: 50px 22px 60px">
+    <div class="sec-head">
+      <div class="sec-kicker">Waffen, Bücher, Wundermetalle</div>
+      <h2 class="metal">Die Artefakte</h2>
+      <p class="sec-sub">Die Objekte, um die sich alles dreht — mit Stationen, Status und den Filmen, in denen sie Geschichte schrieben.</p>
+    </div>
+    <div class="char-grid" id="artsGrid"></div>
+  </main>
+</div>
+<div class="page" id="page-art">
+  <main class="wrap fp" id="artPage" style="padding-bottom: 70px"></main>
+</div>
+
+<!-- ============ PFADE & VERKETTUNGEN ============ -->
+<div class="page" id="page-paths">
+  <main class="wrap" style="padding: 50px 22px 60px">
+    <div class="sec-head">
+      <div class="sec-kicker">Der rote Faden</div>
+      <h2 class="metal">Pfade &amp; Verkettungen</h2>
+      <p class="sec-sub">Kuratierte Handlungsstränge quer durchs Multiversum — und darunter die komplette <b>Post-Credit-Kette</b> als Karte.</p>
+    </div>
+    <div class="char-grid" id="pathsGrid"></div>
+    <div class="subhead" style="margin-top:64px">Die Post-Credit-Kette</div>
+    <p class="sec-sub" style="text-align:center; margin: -16px auto 26px">Jeder Bogen ist eine Abspann-Szene, die in einen anderen Film führt. <b>Klick pinnt einen Film fest</b> und zeigt seine Verbindungen als Sprungliste — damit hangelst du dich durch die Kette, ohne Pfeilen hinterherscrollen zu müssen. Nochmal klicken löst die Auswahl.</p>
+    <div class="pcmap" id="pcMap"></div>
+  </main>
+</div>
+<div class="page" id="page-path">
+  <main class="wrap fp" id="pathPage" style="padding-bottom: 70px"></main>
+</div>
+
+<!-- ============ IN-UNIVERSE-CHRONIK ============ -->
+<div class="page" id="page-chron">
+  <main class="wrap" style="padding: 50px 22px 60px">
+    <div class="sec-head">
+      <div class="sec-kicker">Die Weltgeschichte des MCU</div>
+      <h2 class="metal">Die Chronik</h2>
+      <p class="sec-sub">Nicht wann die Filme erschienen — sondern wann es <b>passiert</b> ist: von der Urzeit bis Battleworld. Fahre über ein Ereignis (oder tippe es an) für Details und die Filme dazu.</p>
+    </div>
+    <div class="chron" id="chronList"></div>
+  </main>
+</div>
+
+<!-- ============ OFFENE FÄDEN ============ -->
+<div class="page" id="page-threads">
+  <main class="wrap" style="padding: 50px 22px 60px">
+    <div class="sec-head">
+      <div class="sec-kicker">Chekhovs Waffenkammer</div>
+      <h2 class="metal">Die offenen Fäden</h2>
+      <p class="sec-sub">Alles, was das Marvel-Kino angeteasert und nie aufgelöst hat — mit Status-Einschätzung. <span style="color:#3fdc8c">●</span> heiß (Auflösung naht) · <span style="color:var(--gold)">●</span> köchelt · <span style="color:#ff8a8e">●</span> kalt. Hover/Tippen für Details.</p>
+    </div>
+    <div class="threads" id="threadList"></div>
+  </main>
+</div>
+
+<!-- ============ REKORDE ============ -->
+<div class="page" id="page-records">
+  <main class="wrap" style="padding: 50px 22px 60px">
+    <div class="sec-head">
+      <div class="sec-kicker">Hall of Fame &amp; Hall of Shame</div>
+      <h2 class="metal">Die Rekorde</h2>
+      <p class="sec-sub">Bestwerte, Tiefpunkte und Kuriositäten aus allen Marvel-Universen — direkt aus den Wiki-Daten berechnet.</p>
+    </div>
+    <div id="recordsBody"></div>
+  </main>
+</div>
+
+<!-- ============ EVENT: DOOMSDAY ============ -->
+<div class="page" id="page-event">
+  __EVENT_HERO__
+  <main>
+    __EVENT_MAIN__
+  </main>
+</div>
+
+<!--WL-START-->
+  <section class="block" id="watchlist">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-kicker">Dein Weg zum Event</div>
+        <h2 class="metal">Die Doomsday-Watchlist</h2>
+        <p class="sec-sub">Nur was für Doomsday wirklich zählt — kein Komplettprogramm. Sortiere nach <b>Relevanz</b>, <b>Release</b>, <b>Chronologie</b> oder nimm den <b>schnellstmöglichen</b> Pfad.</p>
+      </div>
+      <div class="tl-controls">
+        <div class="seg" id="ewlMode">
+          <button class="sel" data-mode="relevanz">Relevanz</button>
+          <button data-mode="release">Release</button>
+          <button data-mode="chrono">Chronologisch</button>
+          <button data-mode="speed">Schnellstmöglich</button>
+        </div>
+      </div>
+      <div class="tl-progress">
+        <div class="tl-bar"><div class="tl-fill" id="ewlFill"></div></div>
+        <div class="tl-stats" id="ewlStats">…</div>
+      </div>
+      <div class="ewl" id="ewlList"></div>
+    </div>
+  </section>
+<!--WL-END-->
+
+<footer>
+  <p><strong style="color:var(--muted)">Marvel Hub</strong> · Fan-Projekt, kein offizielles Marvel-Angebot · Stand: 1. August 2026.</p>
+  <p>Poster: Wikipedia (Fair Use). Scores: Rotten Tomatoes / IMDb, gerundet, Stand Aug 2026. Theorien im Event-Bereich sind redaktionelle Einschätzung. Fortschritt &amp; Einstellungen werden nur lokal gespeichert.</p>
+  <p class="f-sig">▚ Marvel Hub · Archiv aller Universen ▞</p>
+</footer>
+
+<script>
+var POSTERS = __POSTERS_JSON__;
+var WIDE = __WIDE_JSON__;
+var WIKI_TITLES = __WIKI_JSON__;
+var CIMG = __CIMG_JSON__;
+</script>
+<script>
+__DATA_JS__
+</script>
+<script>
+__APP_JS__
+</script>

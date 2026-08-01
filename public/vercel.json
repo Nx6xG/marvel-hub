@@ -1,0 +1,9 @@
+{
+  "buildCommand": "node site/generate.mjs",
+  "outputDirectory": "public",
+  "trailingSlash": true,
+  "headers": [
+    { "source": "/img/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }] },
+    { "source": "/assets/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }] }
+  ]
+}

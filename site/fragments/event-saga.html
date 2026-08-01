@@ -1,0 +1,37 @@
+<section class="block" id="saga">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-kicker">Jede Geschichte zählt</div>
+        <h2 class="metal">Die Saga-Timeline</h2>
+        <p class="sec-sub">Der komplette Weg von Iron Man bis Doomsday — <b>klick auf ein Poster</b> für Story, Cast, Regie und die Bedeutung für Doomsday. Mit dem <b>✓</b> hakst du ab, was du gesehen hast; dein Fortschritt bleibt gespeichert.</p>
+      </div>
+
+      <div class="tl-controls">
+        <div class="seg" id="segSort" role="group" aria-label="Sortierung">
+          <button class="sel" data-sort="release">Release</button>
+          <button data-sort="chrono">Chronologisch</button>
+        </div>
+        <div class="seg" id="segFilter" role="group" aria-label="Filter">
+          <button class="sel" data-filter="alle">Alles</button>
+          <button data-filter="empfohlen">Der schnelle Weg</button>
+          <button data-filter="pflicht">Nur Pflicht</button>
+        </div>
+      </div>
+
+      <div class="tl-progress">
+        <div class="tl-bar"><div class="tl-fill" id="tlFill"></div></div>
+        <div class="tl-stats" id="tlStats">…</div>
+      </div>
+      <div class="tl-hint" id="tlHint">„Der schnelle Weg" = Pflicht + Empfohlen. Ausgegraute Titel kannst du fürs Doomsday-Verständnis überspringen.</div>
+
+      <div class="road" id="road"></div>
+
+      <div class="legend">
+        <span><i class="prio-dot pd-pflicht" style="display:inline-block;width:7px;height:7px;border-radius:50%"></i> Pflicht</span>
+        <span><i class="prio-dot pd-empfohlen" style="display:inline-block;width:7px;height:7px;border-radius:50%"></i> Empfohlen</span>
+        <span><i class="prio-dot pd-optional" style="display:inline-block;width:7px;height:7px;border-radius:50%"></i> Optional</span>
+        <span><i class="prio-dot pd-komplettist" style="display:inline-block;width:7px;height:7px;border-radius:50%"></i> Komplettist</span>
+        <span><i class="prio-dot pd-future" style="display:inline-block;width:7px;height:7px;border-radius:50%"></i> Kommend</span>
+      </div>
+    </div>
+  </section>
