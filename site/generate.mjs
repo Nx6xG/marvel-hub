@@ -848,7 +848,7 @@ writeFileSync(join(OUT, "assets", "search.json"), JSON.stringify(search));
 /* Assets, Sitemap, Robots, Favicon, vercel */
 cpSync("site/static/style.css", join(OUT, "assets", "style.css"));
 cpSync("site/static/app.js", join(OUT, "assets", "app.js"));
-writeFileSync(join(OUT, "favicon.svg"), `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="18" fill="#0a0f0c"/><text x="50" y="66" font-size="52" text-anchor="middle" font-family="Arial Narrow, sans-serif" font-weight="bold" fill="#3fdc8c">M·H</text></svg>`);
+writeFileSync(join(OUT, "favicon.svg"), `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="20" fill="#07100a"/><circle cx="50" cy="50" r="34" fill="none" stroke="#3fdc8c" stroke-width="5"/><text x="50" y="64" font-size="42" text-anchor="middle" font-family="Arial Narrow, sans-serif" font-weight="bold" fill="#eafff2">K</text></svg>`);
 writeFileSync(join(OUT, "robots.txt"), `User-agent: *\nAllow: /\nSitemap: ${SITE_URL}/sitemap.xml\n`);
 writeFileSync(join(OUT, "sitemap.xml"),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
