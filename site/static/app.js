@@ -301,6 +301,26 @@
     tc.addEventListener("keydown", function (ev) { if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); playTrailer(); } }, { once: true });
   }
 
+  /* ---------- Lightbox: Galerie-Bilder & Videos ---------- */
+  function openLightbox(contentHtml) {
+    var lb = document.createElement("div");
+    lb.className = "lightbox";
+    lb.innerHTML = contentHtml + '<button class="lb-close" aria-label="Schließen">✕</button>';
+    document.body.appendChild(lb);
+    function close() { lb.remove(); document.removeEventListener("keydown", onKey); }
+    function onKey(ev) { if (ev.key === "Escape") close(); }
+    lb.addEventListener("click", function (ev) {
+      if (ev.target === lb || ev.target.closest(".lb-close")) close();
+    });
+    document.addEventListener("keydown", onKey);
+  }
+  document.addEventListener("click", function (ev) {
+    var gl = ev.target.closest(".glight");
+    if (!gl) return;
+    if (gl.getAttribute("data-img")) openLightbox('<img src="' + gl.getAttribute("data-img") + '" alt="">');
+    else if (gl.getAttribute("data-yt")) openLightbox('<div class="lb-frame"><iframe src="https://www.youtube-nocookie.com/embed/' + gl.getAttribute("data-yt") + '?autoplay=1&rel=0" title="Video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>');
+  });
+
   /* ---------- Mini-Beziehungsnetz (Charakterseiten) ---------- */
   var cv = $("#miniNet"), netRaw = $("#netData");
   if (cv && netRaw) {

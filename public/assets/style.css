@@ -1124,3 +1124,68 @@ main.fp { position: relative; }
 }
 .fb-k { font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--faint); }
 .fb-v { font-family: var(--display); font-weight: 700; font-size: 17px; letter-spacing: 0.03em; margin-top: 4px; font-variant-numeric: tabular-nums; }
+
+/* ===== Titel-Logos ===== */
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.fp-logo { max-width: min(420px, 100%); max-height: 130px; object-fit: contain; object-position: left center; display: block; filter: drop-shadow(0 4px 14px rgba(0,0,0,0.6)); }
+@media (max-width: 640px) { .fp-logo { object-position: center; margin: 0 auto; } }
+.s-logo { max-height: 30px; max-width: 92%; object-fit: contain; display: block; margin: 9px auto 0; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.7)); }
+
+/* Streaming-Logos */
+.prov-logo { width: 18px; height: 18px; border-radius: 4px; vertical-align: -4px; margin-right: 5px; }
+
+/* Filmreihe: aktueller Teil markiert */
+.radar-film.current .lbox, .radar-film.current img { outline: 2px solid var(--green); outline-offset: -2px; border-radius: 4px; }
+
+/* ===== Galerie & Videos ===== */
+.gal { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+@media (max-width: 760px) { .gal { grid-template-columns: repeat(2, 1fr); } }
+.gal-item {
+  position: relative; padding: 0; border: 1px solid rgba(170, 175, 182, 0.14); border-radius: 8px;
+  overflow: hidden; cursor: pointer; background: #0a080a; aspect-ratio: 16 / 9;
+}
+.gal-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.2s ease; }
+.gal-item:hover img { transform: scale(1.05); }
+.gv-play {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; padding-left: 3px;
+  background: rgba(0, 0, 0, 0.55); border: 1.5px solid rgba(255, 255, 255, 0.8); color: #fff; font-size: 14px;
+}
+.gv-t {
+  position: absolute; left: 8px; bottom: 8px;
+  font-family: var(--mono); font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase;
+  background: rgba(0, 0, 0, 0.65); color: #ddd; padding: 3px 8px; border-radius: 3px;
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed; inset: 0; z-index: 200; display: flex; align-items: center; justify-content: center;
+  background: rgba(3, 3, 4, 0.92); padding: 4vh 4vw;
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+}
+.lightbox img { max-width: 100%; max-height: 100%; border-radius: 8px; box-shadow: 0 30px 90px rgba(0,0,0,0.8); }
+.lightbox .lb-frame { width: min(1100px, 96vw); aspect-ratio: 16 / 9; }
+.lightbox iframe { width: 100%; height: 100%; border: 0; border-radius: 8px; }
+.lb-close {
+  position: absolute; top: 18px; right: 22px; width: 38px; height: 38px;
+  background: rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 50%;
+  color: #fff; font-size: 16px; cursor: pointer;
+}
+
+/* Episoden-Guide */
+details.season { border: 1px solid rgba(170, 175, 182, 0.12); border-radius: 10px; margin-bottom: 8px; overflow: hidden; }
+details.season summary {
+  cursor: pointer; list-style: none; padding: 13px 18px;
+  font-family: var(--display); font-weight: 600; font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase;
+}
+details.season summary::-webkit-details-marker { display: none; }
+details.season summary::before { content: "▸ "; color: var(--green); }
+details.season[open] summary::before { content: "▾ "; }
+.ep-row { display: flex; gap: 14px; padding: 10px 18px; border-top: 1px solid rgba(170, 175, 182, 0.08); align-items: baseline; }
+.ep-n { font-family: var(--mono); font-size: 11px; color: var(--faint); min-width: 20px; text-align: right; }
+.ep-main { flex: 1; min-width: 0; }
+.ep-t { font-weight: 600; font-size: 14px; }
+.ep-v { font-family: var(--mono); font-size: 10.5px; color: var(--gold); margin-left: 6px; }
+.ep-o { font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+.ep-d { font-family: var(--mono); font-size: 10px; color: var(--faint); white-space: nowrap; }
+@media (max-width: 560px) { .ep-d { display: none; } }

@@ -128,6 +128,23 @@ const tr = (o, f, lang) => (lang === "en" && o[f + "_en"] != null ? o[f + "_en"]
 const TRAILERS = existsSync("site/data/trailers.json") ? JSON.parse(readFileSync("site/data/trailers.json", "utf8")) : {};
 const CREDITS = existsSync("site/data/credits.json") ? JSON.parse(readFileSync("site/data/credits.json", "utf8")) : {};
 const DETAILS = existsSync("site/data/details.json") ? JSON.parse(readFileSync("site/data/details.json", "utf8")) : {};
+const EXTRA = existsSync("site/data/extra.json") ? JSON.parse(readFileSync("site/data/extra.json", "utf8")) : { films: {}, collections: {}, providers: {} };
+const PERSONS = existsSync("site/data/persons.json") ? JSON.parse(readFileSync("site/data/persons.json", "utf8")) : {};
+const PSLUG = {};
+{ const used = new Set();
+  for (const [pid, p] of Object.entries(PERSONS)) {
+    let s = slugify(p.n) || pid;
+    if (used.has(s)) s = s + "-" + pid;
+    used.add(s); PSLUG[pid] = s;
+  } }
+const personUrl = (pid) => `/schauspieler/${PSLUG[pid]}/`;
+const actorCard = (pid, name, sub, prefix) => {
+  const img = pid && existsSync(`public/img/a/${pid}.jpg`)
+    ? `<img class="fc-img" src="/img/a/${pid}.jpg" alt="${esc(name)}" loading="lazy">`
+    : `<div class="fc-img fc-fallback">${esc(name.charAt(0))}</div>`;
+  const inner = img + `<div class="fc-n">${esc(name)}</div>` + (sub ? `<div class="fc-a">${esc(sub)}</div>` : "");
+  return pid && PERSONS[pid] ? `<a class="fp-char" href="${prefix}${personUrl(pid)}">${inner}</a>` : `<div class="fp-char">${inner}</div>`;
+};
 const fmtMoney = (v) => v >= 1e9 ? (v / 1e9).toFixed(2).replace(".", ",") + " Mrd. $" : Math.round(v / 1e6) + " Mio. $";
 const fmtDate = (s) => { const [y, m, dd] = s.split("-"); return `${dd}.${m}.${y}`; };
 const ACTOR_IMG = {};
@@ -221,6 +238,7 @@ function filmBody(f, lang) {
   const prefix = lang === "en" ? "/en" : "";
   const id = f.id, sc = SCORES[id];
   const d = DETAILS[id] || {};
+  const x = EXTRA.films[id] || {};
   const wt = WIKI[id] || WIKI[id === "l2" ? "l1" : ""] || f.t;
   const q = encodeURIComponent(f.t + (f.type === "Film" ? " film" : " series"));
   const inFilm = CHARS.filter((c) => c.films.includes(id));
@@ -230,7 +248,7 @@ function filmBody(f, lang) {
     if (n && n !== "—") figActors.add(n);
   }));
   const restCast = (CREDITS[id] || []).filter((c) => !figActors.has(c.n.trim().toLowerCase()));
-  const restHtml = restCast.map((c) => `<div class="fp-char">${c.p ? `<img class="fc-img" src="/img/a/${c.p}.jpg" alt="${esc(c.n)}" loading="lazy">` : `<div class="fc-img fc-fallback">${esc(c.n.charAt(0))}</div>`}<div class="fc-n">${esc(c.n)}</div><div class="fc-a">${esc(c.r)}</div></div>`).join("");
+  const restHtml = restCast.map((c) => actorCard(c.p, c.n, c.r, prefix)).join("");
   const pc = PC[id];
   const stream = STREAM[id] || (f.uni === "sony" ? "Netflix / wechselnd (DE)" : f.uni === "alt" ? "Wechselnd (Leihe/Disney+)" : "Disney+");
   const trailerQ = encodeURIComponent(`${f.t} ${parseInt(f.y)} trailer${lang === "de" ? " deutsch" : ""}`);
@@ -240,10 +258,12 @@ function filmBody(f, lang) {
   <div class="fp-top">
     <div class="fp-poster">${posterImgW(id, f.t)}</div>
     <div class="fp-head">
-      <h1 class="metal fp-h1">${esc(f.t)}</h1>
+      ${x.logo ? `<h1 class="visually-hidden">${esc(f.t)}</h1><img class="fp-logo" src="/img/l/${id}.png" alt="${esc(f.t)}">` : `<h1 class="metal fp-h1">${esc(f.t)}</h1>`}
       <span class="uni-badge ub-${f.uni}">${UNI_LABEL[f.uni]}</span>
-      <div class="fp-meta"><b>${f.type} · ${f.y}</b>${d.rt ? " · " + fmtMin(d.rt) : (d.seasons ? ` · ${d.seasons} ${d.seasons > 1 ? (lang === "de" ? "Staffeln" : "seasons") : (lang === "de" ? "Staffel" : "season")} · ${d.episodes} Ep.` : (f.min ? " · ≈ " + fmtMin(f.min) : ""))}${f.uni === "mcu" && f.ph ? ` · ${L.phase} ${f.ph}` : ""}<br>${esc(f.dir)}${d.genres && d.genres.length ? `<br><span style="color:var(--faint)">${d.genres.map(esc).join(" · ")}</span>` : ""}</div>
-      <div class="stream-line">📺 ${L.where}: <b>${d.prov && (d.prov.s.length || d.prov.r.length) ? esc([d.prov.s.join(" · "), d.prov.r.length ? (lang === "de" ? "Leihe: " : "Rent: ") + d.prov.r.slice(0, 2).join(", ") : ""].filter(Boolean).join(" · ")) : esc(stream)}</b>${d.prov ? "" : " · " + L.asof}</div>
+      <div class="fp-meta"><b>${f.type} · ${f.y}</b>${d.rt ? " · " + fmtMin(d.rt) : (d.seasons ? ` · ${d.seasons} ${d.seasons > 1 ? (lang === "de" ? "Staffeln" : "seasons") : (lang === "de" ? "Staffel" : "season")} · ${d.episodes} Ep.` : (f.min ? " · ≈ " + fmtMin(f.min) : ""))}${f.uni === "mcu" && f.ph ? ` · ${L.phase} ${f.ph}` : ""}<br>${esc(f.dir)}${d.genres && d.genres.length ? `<br><span style="color:var(--faint)">${d.genres.map(esc).join(" · ")}${x.countries ? " · " + x.countries.join("/") : ""}</span>` : ""}${x.orig ? `<br><span style="color:var(--faint)">Originaltitel: ${esc(x.orig)}</span>` : ""}</div>
+      <div class="stream-line">📺 ${L.where}: ${d.prov && (d.prov.s.length || d.prov.r.length)
+        ? d.prov.s.map((n) => `${EXTRA.providers[n] ? `<img class="prov-logo" src="/img/pr/${EXTRA.providers[n]}.png" alt="">` : ""}<b>${esc(n)}</b>`).join(" · ") + (d.prov.r.length ? ` · ${lang === "de" ? "Leihe" : "Rent"}: ${esc(d.prov.r.slice(0, 2).join(", "))}` : "")
+        : `<b>${esc(stream)}</b> · ${L.asof}`}</div>
       ${(sc || d.vote) ? `<div class="scores">` +
         (sc ? `<div class="score ${scoreCls(sc[0], 60, 40)}"><div class="sv">${sc[0]} %</div><div class="sk">Rotten Tomatoes</div></div><div class="score ${scoreCls(sc[1], 7, 5.5)}"><div class="sv">${sc[1].toFixed(1)}</div><div class="sk">IMDb / 10</div></div>` : "") +
         (d.vote ? `<div class="score ${scoreCls(d.vote[0], 7, 5.5)}"><div class="sv">${d.vote[0].toFixed(1)}</div><div class="sk">TMDB · ${d.vote[1].toLocaleString("de-DE")} Stimmen</div></div>` : "") + `</div>` : ""}
@@ -264,6 +284,12 @@ function filmBody(f, lang) {
     ${existsSync(`public/img/p/${id}.jpg`) ? `<img src="/img/p/${id}.jpg" alt="" aria-hidden="true" loading="lazy">` : ""}
     <div class="tc-overlay"><div class="tc-play">▶</div><div class="tc-t">${L.trailer}</div><div class="tc-s">${L.trailer_s}</div></div>
   </a>`}
+  ${x.coll && EXTRA.collections[x.coll] && EXTRA.collections[x.coll].ids.length > 1 ? (() => {
+    const c = EXTRA.collections[x.coll];
+    const parts = c.ids.slice().sort((a, b) => parseInt(byId[a].y) - parseInt(byId[b].y));
+    return `<div class="fp-section"><div class="fp-label">${lang === "de" ? "Filmreihe" : "Film series"} · ${esc(c.n)} · ${lang === "de" ? "Teil" : "Part"} ${parts.indexOf(id) + 1}/${parts.length}</div><div class="cp-films">` +
+      parts.map((pid2) => `<a class="radar-film${pid2 === id ? " current" : ""}" href="${prefix}${filmUrl(pid2)}" title="${esc(byId[pid2].t)}">${posterImgW(pid2, byId[pid2].t)}<div class="rf-t">${esc(byId[pid2].t)}</div></a>`).join("") + `</div></div>`;
+  })() : ""}
   ${(d.deDate || d.cert || d.budget || d.revenue) ? `<div class="fact-strip">` +
     (d.deDate ? `<div class="fact-box"><div class="fb-k">${lang === "de" ? "Kinostart (DE)" : "DE release"}</div><div class="fb-v">${fmtDate(d.deDate)}</div></div>` : "") +
     (d.cert ? `<div class="fact-box"><div class="fb-k">FSK</div><div class="fb-v">ab ${esc(d.cert)}</div></div>` : "") +
@@ -277,6 +303,14 @@ function filmBody(f, lang) {
     ? `<div class="fp-section"><div class="fp-label">${L.cast}</div><div class="fp-chars">${restHtml}</div></div>`
     : `<div class="fp-section"><div class="fp-label">${L.cast}</div><p>${f.cast.map(esc).join(" · ")}</p></div>`}
   ${TRIVIA[id] ? `<div class="fp-section"><div class="fp-label">${L.trivia}</div><ul>${TRIVIA[id].map((t) => `<li>${esc(t)}</li>`).join("")}</ul></div>` : ""}
+  ${(x.gal || (x.videos && x.videos.length)) ? `<div class="fp-section"><div class="fp-label">${lang === "de" ? "Galerie & Videos" : "Gallery & videos"}</div><div class="gal">` +
+    (x.gal ? Array.from({ length: x.gal }, (_, i) => `<button class="glight gal-item" data-img="/img/g/${id}-${i}.jpg" aria-label="Bild ${i + 1}"><img src="/img/g/${id}-${i}.jpg" alt="" loading="lazy"></button>`).join("") : "") +
+    (x.videos || []).filter((v) => v.k !== TRAILERS[id]).slice(0, 4).map((v) => `<button class="glight gal-item gal-video" data-yt="${v.k}" aria-label="${esc(v.n)}"><img src="https://i.ytimg.com/vi/${v.k}/hqdefault.jpg" alt="" loading="lazy"><span class="gv-play">▶</span><span class="gv-t">${esc(v.t)}</span></button>`).join("") +
+  `</div></div>` : ""}
+  ${x.eps && x.eps.length ? `<div class="fp-section"><div class="fp-label">${lang === "de" ? "Episoden" : "Episodes"}</div>` +
+    x.eps.map((sea) => `<details class="season"${x.eps.length === 1 ? " open" : ""}><summary>${lang === "de" ? "Staffel" : "Season"} ${sea.s} · ${sea.eps.length} ${lang === "de" ? "Folgen" : "episodes"}</summary>` +
+      sea.eps.map((ep, i) => `<div class="ep-row"><div class="ep-n">${i + 1}</div><div class="ep-main"><div class="ep-t">${esc(ep.n)}${ep.v ? ` <span class="ep-v">★ ${ep.v.toFixed(1)}</span>` : ""}</div>${ep.o ? `<div class="ep-o"><span class="spoiler">${esc(ep.o)}</span></div>` : ""}</div><div class="ep-d">${ep.d ? fmtDate(ep.d) : ""}</div></div>`).join("") +
+    `</details>`).join("") + `</div>` : ""}
   ${(pc || f.prio !== "future") ? `<div class="fp-section"><div class="fp-label">${L.pc}${pc && pc.scenes.length ? " · " + pc.scenes.length : ""}</div>` +
     (!pc ? `<p style="color:var(--faint)">${L.pc_none}</p>` :
       (pc.note ? `<p class="pc-note">${esc(pc.note)}</p>` : "") +
@@ -316,10 +350,7 @@ function charBody(c, lang) {
       <div class="fp-meta"><b>${esc(c.a)}</b><br>${esc(c.uni)}<br>${L.first}: ${esc(c.first)}</div>
     </div>
   </div>
-  <div class="fp-section"><div class="fp-label">${L.played_lbl}</div><div class="fp-chars">${actorNames(c.act).map((n) => {
-    const pid = ACTOR_IMG[n.toLowerCase()];
-    return `<div class="fp-char">${pid ? `<img class="fc-img" src="/img/a/${pid}.jpg" alt="${esc(n)}" loading="lazy">` : `<div class="fc-img fc-fallback">${esc(n.charAt(0))}</div>`}<div class="fc-n">${esc(n)}</div></div>`;
-  }).join("")}</div><p style="font-size:12.5px;color:var(--faint);margin-top:10px">${esc(c.act)}</p></div>
+  <div class="fp-section"><div class="fp-label">${L.played_lbl}</div><div class="fp-chars">${actorNames(c.act).map((n) => actorCard(ACTOR_IMG[n.toLowerCase()], n, "", prefix)).join("")}</div><p style="font-size:12.5px;color:var(--faint);margin-top:10px">${esc(c.act)}</p></div>
   <div class="fp-section"><div class="fp-label">${L.powers}</div><p>${esc(c.pow)}</p></div>
   <div class="fp-section"><div class="fp-label">${L.who}</div><p>${esc(c.bio)}</p></div>
   ${ts.length ? `<div class="fp-section"><div class="fp-label">${L.teams_lbl}</div><div class="ext-links">` +
@@ -594,7 +625,7 @@ function roadHtml(lang) {
     html += `<div class="stop${f.prio === "future" ? " future" : ""}" data-id="${f.id}" data-rel="${i}" data-chrono="${f.chrono}" data-prio="${f.prio}" data-min="${f.min || 0}">
       <a class="poster-wrap" href="${prefix}${filmUrl(f.id)}" aria-label="${esc(f.t)}"><div class="chrono-n" hidden>${f.chrono}</div>${posterImgW(f.id, f.t)}<span class="arrow">➤</span></a>
       ${f.prio !== "future" ? `<button class="check" data-watch="${f.id}" aria-label="gesehen">✓</button>` : ""}
-      <div class="s-title">${esc(f.t)}</div><div class="s-year"><span class="prio-dot pd-${f.prio}"></span>${f.y}</div>
+      ${EXTRA.films[f.id] && EXTRA.films[f.id].logo ? `<img class="s-logo" src="/img/l/${f.id}.png" alt="${esc(f.t)}" loading="lazy">` : `<div class="s-title">${esc(f.t)}</div>`}<div class="s-year"><span class="prio-dot pd-${f.prio}"></span>${f.y}</div>
     </div>`;
   });
   html += `<div class="finale"><div class="f-tag">18. Dezember 2026</div><div class="f-title metal">Every Story leads to Doom</div></div>`;
@@ -722,6 +753,37 @@ for (const lang of LANGS) {
   for (const p of PATHS) emit(lang, pathUrl(p.id), page({ lang, path: pathUrl(p.id), title: `${p.n} — Storyline-Pfad · Knowhere`, desc: stripTags(p.intro).slice(0, 158), dataPage: "path", body: pathBody(p, lang) }));
 }
 
+/* Schauspieler-Seiten */
+for (const lang of LANGS) {
+  for (const [pid, p] of Object.entries(PERSONS)) {
+    const prefix = lang === "en" ? "/en" : "";
+    const filmo = FILMS.filter((f) => (CREDITS[f.id] || []).some((c) => String(c.p) === String(pid)))
+      .map((f) => ({ f, role: (CREDITS[f.id] || []).find((c) => String(c.p) === String(pid)).r }));
+    const wikiChars = CHARS.filter((c) => c.act.toLowerCase().includes(p.n.toLowerCase()));
+    const body = `<main class="wrap fp" style="padding-bottom:70px">
+  <a class="backlink" href="${prefix}/filme/">${T[lang].back}</a>
+  <div class="fp-top">
+    <div class="fp-poster">${existsSync(`public/img/a/${pid}.jpg`) ? `<img src="/img/a/${pid}.jpg" alt="${esc(p.n)}">` : `<div class="poster-fallback"><div class="pf-t metal">${esc(p.n)}</div></div>`}</div>
+    <div class="fp-head">
+      <h1 class="metal fp-h1">${esc(p.n)}</h1>
+      <div class="fp-meta">${p.b ? `${lang === "de" ? "Geboren" : "Born"}: <b>${fmtDate(p.b)}</b>` : ""}${p.pb ? `<br>${esc(p.pb)}` : ""}</div>
+      ${p.imdb ? `<div class="ext-links"><a href="https://www.imdb.com/name/${p.imdb}/" target="_blank" rel="noopener">IMDb</a><a href="https://www.themoviedb.org/person/${pid}" target="_blank" rel="noopener">TMDB</a></div>` : ""}
+    </div>
+  </div>
+  ${p.bio ? `<div class="fp-section"><div class="fp-label">${lang === "de" ? "Biografie" : "Biography"}</div><p>${esc(p.bio)}${p.bio.length >= 700 ? " …" : ""}</p></div>` : ""}
+  ${wikiChars.length ? `<div class="fp-section"><div class="fp-label">${lang === "de" ? "Figuren im Wiki" : "Characters in the wiki"}</div><div class="fp-chars">${wikiChars.map((c) => `<a class="fp-char" href="${prefix}${charUrl(c.id)}">${charImg(c.id, c.n, "fc-img")}<div class="fc-n">${esc(c.n)}</div></a>`).join("")}</div></div>` : ""}
+  ${filmo.length ? `<div class="fp-section"><div class="fp-label">${lang === "de" ? "Im Marvel-Kosmos" : "In the Marvel universe"} · ${filmo.length}</div><div class="cp-films">${filmo.map(({ f, role }) => `<a class="radar-film" href="${prefix}${filmUrl(f.id)}" title="${esc(f.t)}">${posterImgW(f.id, f.t)}<div class="rf-t">${esc(f.t)}</div><div class="rf-d">${esc(role)}</div></a>`).join("")}</div></div>` : ""}
+</main>`;
+    emit(lang, personUrl(pid), page({
+      lang, path: personUrl(pid),
+      title: `${p.n} — Marvel-Filmografie · Knowhere`,
+      desc: (p.bio || `${p.n}: alle Marvel-Auftritte im Überblick.`).slice(0, 158),
+      ogImage: existsSync(`public/img/a/${pid}.jpg`) ? `/img/a/${pid}.jpg` : undefined,
+      dataPage: "person", body,
+    }));
+  }
+}
+
 /* 404 */
 writeFileSync(join(OUT, "404.html"), page({ lang: "de", path: "/404", title: "404 · Knowhere", desc: "Seite nicht gefunden.", dataPage: "404", noindex: true, body: `<main class="wrap" style="padding:120px 22px;text-align:center"><h1 class="metal" style="font-size:80px">404</h1><p class="hub-sub">Diese Seite wurde gesnapt. <a href="/">Zurück zum Hub</a> — oder frag die TVA.</p></main>` }));
 
@@ -731,6 +793,7 @@ const search = [
   ...CHARS.map((c) => ({ t: c.n, s: `${c.a} · ${c.act}`, u: charUrl(c.id), i: existsSync(`public/img/c/${c.id}.jpg`) ? `/img/c/${c.id}.jpg` : null, k: "c", q: (c.n + " " + c.a + " " + c.act).toLowerCase() })),
   ...TEAMS.map((t) => ({ t: t.n, s: t.sub, u: teamUrl(t.id), i: null, k: "t", q: (t.n + " " + t.sub).toLowerCase() })),
   ...ARTIFACTS.map((a) => ({ t: a.n, s: a.sub, u: artUrl(a.id), i: null, k: "a", q: (a.n + " " + a.sub).toLowerCase() })),
+  ...Object.entries(PERSONS).map(([pid, p]) => ({ t: p.n, s: "Schauspieler:in", u: personUrl(pid), i: existsSync(`public/img/a/${pid}.jpg`) ? `/img/a/${pid}.jpg` : null, k: "c", q: p.n.toLowerCase() })),
 ];
 mkdirSync(join(OUT, "assets"), { recursive: true });
 writeFileSync(join(OUT, "assets", "search.json"), JSON.stringify(search));
