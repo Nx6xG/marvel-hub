@@ -5,7 +5,7 @@ import { join } from "node:path";
 
 /* ================= Konfiguration ================= */
 const SITE_URL = process.env.SITE_URL || "https://marvel-hub.vercel.app";
-const SITE_NAME = "Erde-616"; // nach Domain-Wechsel anpassen
+const SITE_NAME = "Multiversum"; // nach Domain-Wechsel anpassen
 const OUT = "public";
 const LANGS = ["de", "en"];
 
@@ -158,7 +158,7 @@ function page({ lang, path, title, desc, ogImage, body, dataPage, jsonld, noinde
 <link rel="alternate" hreflang="${altLang}" href="${SITE_URL}${altPrefix}${path}">
 <link rel="alternate" hreflang="x-default" href="${SITE_URL}${path}">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Erde-616">
+<meta property="og:site_name" content="Multiversum">
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:url" content="${canonical}">
@@ -171,7 +171,7 @@ ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld)}</script
 </head>
 <body class="${dataPage === "event" ? "" : "neutral"}" data-page="${dataPage || ""}">
 <nav class="nav"><div class="nav-inner">
-  <a class="nav-brand" href="${prefix}/">Erde<b>·</b>616</a>
+  <a class="nav-brand" href="${prefix}/">Multi<b>·</b>versum</a>
   <div class="nav-links" id="navLinks">${nav}</div>
   <div class="nav-search"><input id="globalSearch" type="search" placeholder="${L.search_ph}" aria-label="${L.search_ph}" autocomplete="off"><div class="search-drop" id="searchDrop" hidden></div></div>
   <a class="spoiler-btn lang-btn" href="${altPrefix}${path}" hreflang="${altLang}">${L.other}</a>
@@ -180,7 +180,7 @@ ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld)}</script
 ${dataPage !== "event" && dataPage !== "home" ? `<a class="promo" href="${prefix}/event/">★ <b>Avengers: Doomsday</b><span class="promo-x">${lang === "de" ? "Erfahre alles zum kommenden Film" : "Everything about the upcoming film"}</span><span class="promo-cd"><span id="promoCd">…</span> ${lang === "de" ? "Tage" : "days"}</span><span class="promo-arr">➤</span></a>` : ""}
 ${body}
 <footer>
-  <p><strong style="color:var(--muted)">Erde-616</strong> · ${L.footer1}</p>
+  <p><strong style="color:var(--muted)">Multiversum</strong> · ${L.footer1}</p>
   <p>${L.footer2}</p>
   <p class="f-sig">▚ Every Story leads to Doom ▞</p>
 </footer>
@@ -595,7 +595,7 @@ function homeBody(lang) {
     <div><div class="sc-k">${esc(label)}</div><div class="sc-t">${esc(byId[id].t)}</div><div class="sc-s">${sub}</div></div></a>`;
   return `<header class="hub-hero">
     <div class="hero-rule">${L.tagline}</div>
-    <h1 class="metal">Erde-616</h1>
+    <h1 class="metal">Multiversum</h1>
     <p class="hub-sub">${L.home_sub}</p>
   </header>
   <main class="wrap" style="padding-bottom:50px">
@@ -643,18 +643,18 @@ function emit(lang, path, html) {
 
 for (const lang of LANGS) {
   const L = T[lang];
-  const site = lang === "de" ? "Erde-616 — Das Marvel-Fanarchiv: Filme, Serien, Charaktere & Lore" : "Earth-616 — the Marvel fan archive: films, shows, characters & lore";
+  const site = lang === "de" ? "Multiversum — Das Marvel-Fanarchiv: Filme, Serien, Charaktere & Lore" : "Multiversum — the Marvel fan archive: films, shows, characters & lore";
   emit(lang, "/", page({ lang, path: "/", title: site, desc: L.home_desc, dataPage: "home", ogImage: "/img/p/doomsday.jpg", body: homeBody(lang) }));
-  emit(lang, "/filme/", page({ lang, path: "/filme/", title: (lang === "de" ? "Alle Marvel-Filme & -Serien" : "All Marvel films & shows") + " · Erde-616", desc: lang === "de" ? "108 Marvel-Filme und -Serien aus MCU, X-Men, Sony, Klassikern und TV-Ära — mit Scores, Trivia und Post-Credit-Szenen." : "108 Marvel films and shows across the MCU, X-Men, Sony, classics and the TV era.", dataPage: "wiki", body: wikiIndexBody(lang) }));
-  emit(lang, "/charaktere/", page({ lang, path: "/charaktere/", title: (lang === "de" ? "Marvel-Charaktere" : "Marvel characters") + " · Erde-616", desc: lang === "de" ? "128 Marvel-Charaktere mit Biografien, Kräften und Beziehungs-Netzen." : "128 Marvel characters with bios, powers and relationship webs.", dataPage: "wiki", body: charIndexBody(lang) }));
-  emit(lang, "/teams/", page({ lang, path: "/teams/", title: "Marvel-Teams · Erde-616", desc: lang === "de" ? "Von den Avengers bis Haus Doom: 21 Marvel-Teams und Schurken-Fraktionen." : "From the Avengers to House Doom: 21 Marvel teams and villain factions.", dataPage: "teams", body: teamsIndexBody(lang) }));
-  emit(lang, "/multiversum/", page({ lang, path: "/multiversum/", title: (lang === "de" ? "Das Marvel-Multiversum: alle Erde-Nummern" : "The Marvel multiverse: every Earth number") + " · Erde-616", desc: lang === "de" ? "Erde-616, 828, 838, 10005 & Co.: Welche Marvel-Filme in welchem Universum spielen." : "Earth-616, 828, 838, 10005 & co: which Marvel films happen in which universe.", dataPage: "multi", body: multiBody(lang) }));
-  emit(lang, "/artefakte/", page({ lang, path: "/artefakte/", title: (lang === "de" ? "Marvel-Artefakte" : "Marvel artifacts") + " · Erde-616", desc: lang === "de" ? "Infinity-Steine, Mjölnir, Darkhold & Co. — 26 legendäre Marvel-Objekte." : "Infinity Stones, Mjölnir, the Darkhold & more — 26 legendary Marvel objects.", dataPage: "arts", body: artsIndexBody(lang) }));
-  emit(lang, "/pfade/", page({ lang, path: "/pfade/", title: (lang === "de" ? "Storyline-Pfade & Post-Credit-Kette" : "Storylines & the post-credit chain") + " · Erde-616", desc: lang === "de" ? "16 kuratierte Handlungsstränge durchs Marvel-Universum plus die komplette Post-Credit-Verkettung." : "16 curated story threads plus the complete post-credit chain.", dataPage: "paths", body: pathsIndexBody(lang) }));
-  emit(lang, "/rekorde/", page({ lang, path: "/rekorde/", title: (lang === "de" ? "Marvel-Rekorde: Top & Flop" : "Marvel records: top & flop") + " · Erde-616", desc: lang === "de" ? "Die besten und schlechtesten Marvel-Filme, Kino-Rekorde und alle Stan-Lee-Cameos." : "The best and worst Marvel films, box-office records and every Stan Lee cameo.", dataPage: "records", body: recordsBody(lang) }));
-  emit(lang, "/chronik/", page({ lang, path: "/chronik/", title: (lang === "de" ? "Die MCU-Chronik: die Geschichte in richtiger Reihenfolge" : "The MCU timeline: the story in order") + " · Erde-616", desc: lang === "de" ? "Die Weltgeschichte des MCU von der Urzeit bis Battleworld — nach Ereignissen statt Kinostarts." : "The in-universe history of the MCU from prehistory to Battleworld.", dataPage: "chron", body: chronBody(lang) }));
-  emit(lang, "/faeden/", page({ lang, path: "/faeden/", title: (lang === "de" ? "Die offenen Fäden des Marvel-Universums" : "Marvel's loose ends") + " · Erde-616", desc: lang === "de" ? "15 Cliffhanger, die Marvel nie aufgelöst hat — vom Zehn-Ringe-Signal bis Knull." : "15 cliffhangers Marvel never resolved — from the Ten Rings signal to Knull.", dataPage: "threads", body: threadsBody(lang) }));
-  emit(lang, "/event/", page({ lang, path: "/event/", title: "Avengers: Doomsday — Event-Hub · Erde-616", desc: lang === "de" ? "Countdown, Saga-Timeline, Watchlist, Lore und Theorien zu Avengers: Doomsday (18. Dezember 2026)." : "Countdown, saga timeline, watchlist, lore and theories for Avengers: Doomsday (December 18, 2026).", dataPage: "event", ogImage: "/img/p/doomsday.jpg", body: eventBody(lang) }));
+  emit(lang, "/filme/", page({ lang, path: "/filme/", title: (lang === "de" ? "Alle Marvel-Filme & -Serien" : "All Marvel films & shows") + " · Multiversum", desc: lang === "de" ? "108 Marvel-Filme und -Serien aus MCU, X-Men, Sony, Klassikern und TV-Ära — mit Scores, Trivia und Post-Credit-Szenen." : "108 Marvel films and shows across the MCU, X-Men, Sony, classics and the TV era.", dataPage: "wiki", body: wikiIndexBody(lang) }));
+  emit(lang, "/charaktere/", page({ lang, path: "/charaktere/", title: (lang === "de" ? "Marvel-Charaktere" : "Marvel characters") + " · Multiversum", desc: lang === "de" ? "128 Marvel-Charaktere mit Biografien, Kräften und Beziehungs-Netzen." : "128 Marvel characters with bios, powers and relationship webs.", dataPage: "wiki", body: charIndexBody(lang) }));
+  emit(lang, "/teams/", page({ lang, path: "/teams/", title: "Marvel-Teams · Multiversum", desc: lang === "de" ? "Von den Avengers bis Haus Doom: 21 Marvel-Teams und Schurken-Fraktionen." : "From the Avengers to House Doom: 21 Marvel teams and villain factions.", dataPage: "teams", body: teamsIndexBody(lang) }));
+  emit(lang, "/multiversum/", page({ lang, path: "/multiversum/", title: (lang === "de" ? "Das Marvel-Multiversum: alle Erde-Nummern" : "The Marvel multiverse: every Earth number") + " · Multiversum", desc: lang === "de" ? "Erde-616, 828, 838, 10005 & Co.: Welche Marvel-Filme in welchem Universum spielen." : "Earth-616, 828, 838, 10005 & co: which Marvel films happen in which universe.", dataPage: "multi", body: multiBody(lang) }));
+  emit(lang, "/artefakte/", page({ lang, path: "/artefakte/", title: (lang === "de" ? "Marvel-Artefakte" : "Marvel artifacts") + " · Multiversum", desc: lang === "de" ? "Infinity-Steine, Mjölnir, Darkhold & Co. — 26 legendäre Marvel-Objekte." : "Infinity Stones, Mjölnir, the Darkhold & more — 26 legendary Marvel objects.", dataPage: "arts", body: artsIndexBody(lang) }));
+  emit(lang, "/pfade/", page({ lang, path: "/pfade/", title: (lang === "de" ? "Storyline-Pfade & Post-Credit-Kette" : "Storylines & the post-credit chain") + " · Multiversum", desc: lang === "de" ? "16 kuratierte Handlungsstränge durchs Marvel-Universum plus die komplette Post-Credit-Verkettung." : "16 curated story threads plus the complete post-credit chain.", dataPage: "paths", body: pathsIndexBody(lang) }));
+  emit(lang, "/rekorde/", page({ lang, path: "/rekorde/", title: (lang === "de" ? "Marvel-Rekorde: Top & Flop" : "Marvel records: top & flop") + " · Multiversum", desc: lang === "de" ? "Die besten und schlechtesten Marvel-Filme, Kino-Rekorde und alle Stan-Lee-Cameos." : "The best and worst Marvel films, box-office records and every Stan Lee cameo.", dataPage: "records", body: recordsBody(lang) }));
+  emit(lang, "/chronik/", page({ lang, path: "/chronik/", title: (lang === "de" ? "Die MCU-Chronik: die Geschichte in richtiger Reihenfolge" : "The MCU timeline: the story in order") + " · Multiversum", desc: lang === "de" ? "Die Weltgeschichte des MCU von der Urzeit bis Battleworld — nach Ereignissen statt Kinostarts." : "The in-universe history of the MCU from prehistory to Battleworld.", dataPage: "chron", body: chronBody(lang) }));
+  emit(lang, "/faeden/", page({ lang, path: "/faeden/", title: (lang === "de" ? "Die offenen Fäden des Marvel-Universums" : "Marvel's loose ends") + " · Multiversum", desc: lang === "de" ? "15 Cliffhanger, die Marvel nie aufgelöst hat — vom Zehn-Ringe-Signal bis Knull." : "15 cliffhangers Marvel never resolved — from the Ten Rings signal to Knull.", dataPage: "threads", body: threadsBody(lang) }));
+  emit(lang, "/event/", page({ lang, path: "/event/", title: "Avengers: Doomsday — Event-Hub · Multiversum", desc: lang === "de" ? "Countdown, Saga-Timeline, Watchlist, Lore und Theorien zu Avengers: Doomsday (18. Dezember 2026)." : "Countdown, saga timeline, watchlist, lore and theories for Avengers: Doomsday (December 18, 2026).", dataPage: "event", ogImage: "/img/p/doomsday.jpg", body: eventBody(lang) }));
 
   for (const f of FILMS) {
     const sc = SCORES[f.id];
@@ -669,20 +669,20 @@ for (const lang of LANGS) {
     };
     emit(lang, filmUrl(f.id), page({
       lang, path: filmUrl(f.id),
-      title: `${f.t} (${parseInt(f.y) || f.y}) — ${f.type}, Cast, Trivia & Post-Credits · Erde-616`,
+      title: `${f.t} (${parseInt(f.y) || f.y}) — ${f.type}, Cast, Trivia & Post-Credits · Multiversum`,
       desc: stripTags(f.plot).slice(0, 158),
       ogImage: `/img/p/${f.id}.jpg`, dataPage: "film", jsonld,
       body: filmBody(f, lang),
     }));
   }
-  for (const c of CHARS) emit(lang, charUrl(c.id), page({ lang, path: charUrl(c.id), title: `${c.n} (${c.a}) — Marvel-Charakter · Erde-616`, desc: stripTags(c.bio).slice(0, 158), ogImage: existsSync(`public/img/c/${c.id}.jpg`) ? `/img/c/${c.id}.jpg` : undefined, dataPage: "char", body: charBody(c, lang) }));
-  for (const t of TEAMS) emit(lang, teamUrl(t.id), page({ lang, path: teamUrl(t.id), title: `${t.n} — Marvel-Team · Erde-616`, desc: stripTags(t.desc).slice(0, 158), dataPage: "team", body: teamBody(t, lang) }));
-  for (const a of ARTIFACTS) emit(lang, artUrl(a.id), page({ lang, path: artUrl(a.id), title: `${a.n} — Marvel-Artefakt · Erde-616`, desc: stripTags(a.d).slice(0, 158), dataPage: "art", body: artBody(a, lang) }));
-  for (const p of PATHS) emit(lang, pathUrl(p.id), page({ lang, path: pathUrl(p.id), title: `${p.n} — Storyline-Pfad · Erde-616`, desc: stripTags(p.intro).slice(0, 158), dataPage: "path", body: pathBody(p, lang) }));
+  for (const c of CHARS) emit(lang, charUrl(c.id), page({ lang, path: charUrl(c.id), title: `${c.n} (${c.a}) — Marvel-Charakter · Multiversum`, desc: stripTags(c.bio).slice(0, 158), ogImage: existsSync(`public/img/c/${c.id}.jpg`) ? `/img/c/${c.id}.jpg` : undefined, dataPage: "char", body: charBody(c, lang) }));
+  for (const t of TEAMS) emit(lang, teamUrl(t.id), page({ lang, path: teamUrl(t.id), title: `${t.n} — Marvel-Team · Multiversum`, desc: stripTags(t.desc).slice(0, 158), dataPage: "team", body: teamBody(t, lang) }));
+  for (const a of ARTIFACTS) emit(lang, artUrl(a.id), page({ lang, path: artUrl(a.id), title: `${a.n} — Marvel-Artefakt · Multiversum`, desc: stripTags(a.d).slice(0, 158), dataPage: "art", body: artBody(a, lang) }));
+  for (const p of PATHS) emit(lang, pathUrl(p.id), page({ lang, path: pathUrl(p.id), title: `${p.n} — Storyline-Pfad · Multiversum`, desc: stripTags(p.intro).slice(0, 158), dataPage: "path", body: pathBody(p, lang) }));
 }
 
 /* 404 */
-writeFileSync(join(OUT, "404.html"), page({ lang: "de", path: "/404", title: "404 · Erde-616", desc: "Seite nicht gefunden.", dataPage: "404", noindex: true, body: `<main class="wrap" style="padding:120px 22px;text-align:center"><h1 class="metal" style="font-size:80px">404</h1><p class="hub-sub">Diese Seite wurde gesnapt. <a href="/">Zurück zum Hub</a> — oder frag die TVA.</p></main>` }));
+writeFileSync(join(OUT, "404.html"), page({ lang: "de", path: "/404", title: "404 · Multiversum", desc: "Seite nicht gefunden.", dataPage: "404", noindex: true, body: `<main class="wrap" style="padding:120px 22px;text-align:center"><h1 class="metal" style="font-size:80px">404</h1><p class="hub-sub">Diese Seite wurde gesnapt. <a href="/">Zurück zum Hub</a> — oder frag die TVA.</p></main>` }));
 
 /* Suche-Index */
 const search = [

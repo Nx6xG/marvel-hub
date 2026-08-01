@@ -1033,3 +1033,10 @@ body:not(.neutral) .fp .fp-section { background: rgba(12, 20, 15, 0.5); border-c
 /* Wichtige Figuren: Schauspieler-Name unter der Figur */
 .fp-char { width: 86px; }
 .fc-a { font-size: 9.5px; color: var(--faint); margin-top: 2px; line-height: 1.2; }
+
+/* ===== Link- & Bild-Grundregeln (Umstellung auf echte <a>/<img>) ===== */
+a { text-decoration: none; }
+.fp-section p a, .news p a, footer p a, .hub-sub a, .chron-more p a, .thread p a { text-decoration: underline; text-underline-offset: 3px; }
+img { height: auto; }  /* height-Attribut nie über CSS-Breite hinaus erzwingen */
+.stop .poster-wrap img, .wcard .pw img, .lbox .lbox-bg, .lbox .lbox-fg, .hd-poster img { height: 100%; }
+.radar-film img, .fp-poster img { aspect-ratio: 2 / 3; object-fit: cover; }
