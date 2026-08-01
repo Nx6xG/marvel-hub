@@ -1241,8 +1241,6 @@ details.season[open] summary::before { content: "▾ "; }
 .rv.in { opacity: 1; transform: none; }
 
 /* ===== Event: mehr Kino ===== */
-.ev-embers { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
-.ev-hero-inner { z-index: 2; }
 .cd-days { animation: cd-glow 3s ease-in-out infinite; }
 @keyframes cd-glow {
   0%, 100% { filter: drop-shadow(0 0 12px rgba(63, 220, 140, 0.15)); }
@@ -1269,14 +1267,24 @@ details.season[open] summary::before { content: "▾ "; }
 
 /* Sticky-Countdown */
 .ev-sticky {
-  position: fixed; right: 18px; bottom: 18px; z-index: 70;
-  font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; font-variant-numeric: tabular-nums;
-  color: #dfeee5; text-decoration: none;
-  background: rgba(9, 20, 14, 0.92); border: 1px solid rgba(63, 220, 140, 0.45); border-radius: 30px;
-  padding: 9px 16px; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(63, 220, 140, 0.12);
+  position: fixed; right: 20px; bottom: 20px; z-index: 70;
+  display: flex; flex-direction: column; align-items: center; gap: 7px;
+  text-decoration: none; padding: 14px 20px 12px; border-radius: 14px;
+  background: linear-gradient(165deg, rgba(12, 32, 21, 0.96), rgba(6, 10, 8, 0.96));
+  border: 1px solid rgba(63, 220, 140, 0.55);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.65), 0 0 34px rgba(63, 220, 140, 0.22), inset 0 0 24px rgba(63, 220, 140, 0.06);
+  animation: evs-in 0.45s cubic-bezier(0.2, 0.9, 0.3, 1.2);
 }
-.ev-sticky:hover { border-color: var(--green); }
+@keyframes evs-in { from { opacity: 0; transform: translateY(24px) scale(0.9); } to { opacity: 1; transform: none; } }
+.ev-sticky:hover { border-color: var(--green); box-shadow: 0 14px 40px rgba(0,0,0,0.65), 0 0 50px rgba(63, 220, 140, 0.38), inset 0 0 24px rgba(63,220,140,0.1); }
+.evs-logo { height: 22px; max-width: 150px; object-fit: contain; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.8)); }
+.evs-time {
+  font-family: var(--display); font-weight: 700; font-size: 19px; letter-spacing: 0.06em;
+  color: #eafff2; font-variant-numeric: tabular-nums;
+  text-shadow: 0 0 18px rgba(63, 220, 140, 0.5);
+}
+@media (max-width: 640px) { .ev-sticky { right: 12px; bottom: 12px; padding: 10px 14px 9px; } .evs-logo { height: 16px; } .evs-time { font-size: 15px; } }
+@media (prefers-reduced-motion: reduce) { .ev-sticky { animation: none; } }
 
 /* Theorien: Balken laufen beim Einblenden */
 body[data-page="event"] .theory .plaus-fill { transform: scaleX(0); transform-origin: left; transition: transform 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) 0.25s; }

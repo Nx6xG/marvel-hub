@@ -653,8 +653,8 @@ function eventBody(lang) {
       <div class="tc-overlay"><div class="tc-play">▶</div><div class="tc-t">${de ? "Der erste Trailer" : "The first trailer"}</div><div class="tc-s">${de ? "veröffentlicht am 20. Juli 2026 · Klick lädt YouTube" : "released July 20, 2026 · click loads YouTube"}</div></div>
     </div>
   </section>`;
-  return `<div class="event-theme">${frag("event-hero").replace('<div class="ev-hero-inner">', '<canvas class="ev-embers" aria-hidden="true"></canvas><div class="ev-hero-inner">')}
-  <a class="ev-sticky" id="evSticky" href="#event-top" hidden>★ <span id="evStickyD">…</span></a>
+  return `<div class="event-theme">${frag("event-hero")}
+  <a class="ev-sticky" id="evSticky" href="#event-top" hidden><img class="evs-logo" src="/img/l/doomsday.png" alt="Avengers: Doomsday"><span class="evs-time" id="evStickyD">…</span></a>
   <main>
     ${trailer}
     ${act("I", de ? "Der Weg" : "The Road", de ? "33 Filme & Serien. Ein Ziel. Deine Watchlist." : "33 films & shows. One destination. Your watchlist.")}
