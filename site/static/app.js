@@ -14,7 +14,8 @@
     document.body.classList.toggle("show-spoilers", showSp);
     if (spBtn) {
       spBtn.classList.toggle("on", showSp);
-      spBtn.textContent = spBtn.textContent.replace(/(aus|an|off|on)$/, showSp ? (spBtn.textContent.indexOf("Spoiler:") === 0 ? "an" : "on") : (spBtn.textContent.indexOf("Spoiler:") === 0 ? "aus" : "off"));
+      spBtn.setAttribute("aria-pressed", String(showSp));
+      spBtn.title = "Spoiler: " + (showSp ? "sichtbar / visible" : "versteckt / hidden");
     }
   }
   if (spBtn) spBtn.addEventListener("click", function () { showSp = !showSp; store("msa-spoilers", showSp ? 1 : 0); applySp(); });
