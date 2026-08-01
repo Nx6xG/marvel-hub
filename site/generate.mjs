@@ -195,7 +195,10 @@ function page({ lang, path, title, desc, ogImage, body, dataPage, jsonld, noinde
 <meta property="og:image" content="${SITE_URL}${ogImage || "/img/og-default.jpg"}">
 <meta name="twitter:card" content="summary${ogImage ? "" : ""}">
 ${noindex ? '<meta name="robots" content="noindex">' : ""}
+<meta name="theme-color" content="#07100a">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="stylesheet" href="/assets/style.css">
 ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld)}</script>` : ""}
 </head>
@@ -214,6 +217,7 @@ ${body}
 <footer>
   <p><strong style="color:var(--muted)">Knowhere</strong> · ${L.footer1}</p>
   <p>${L.footer2}</p>
+  <p><a href="/impressum/">Impressum</a> · <a href="/datenschutz/">Datenschutz</a></p>
   <p class="f-sig">▚ Every Story leads to Doom ▞</p>
 </footer>
 <script src="/assets/app.js" defer></script>
@@ -830,6 +834,37 @@ for (const lang of LANGS) {
     }));
   }
 }
+
+/* Rechtliches */
+for (const lang of LANGS) {
+  const imp = `<main class="wrap fp" style="padding-bottom:70px;max-width:760px">
+  <h1 class="metal fp-h1">Impressum</h1>
+  <div class="fp-section"><div class="fp-label">Angaben gemäß § 5 DDG</div>
+    <p><b>[VORNAME NACHNAME]</b><br>[Straße Hausnummer]<br>[PLZ Ort]<br>Deutschland</p>
+    <p style="margin-top:10px">Kontakt: [E-Mail-Adresse]</p>
+    <p style="margin-top:14px;color:var(--faint);font-size:13px">⚠ Platzhalter vor Veröffentlichung durch echte Daten ersetzen — für öffentliche Websites in Deutschland ist ein Impressum Pflicht.</p></div>
+  <div class="fp-section"><div class="fp-label">Hinweis</div>
+    <p>Knowhere ist ein nicht-kommerzielles Fan-Projekt und steht in keiner Verbindung zu Marvel, The Walt Disney Company, Sony Pictures oder TMDB. Alle Marken, Titel und Filmmaterialien gehören ihren jeweiligen Rechteinhabern. Poster, Szenenbilder und Filmdaten stammen von <a href="https://www.themoviedb.org" target="_blank" rel="noopener">TMDB</a> bzw. Wikipedia (Fair Use).</p></div>
+</main>`;
+  const ds = `<main class="wrap fp" style="padding-bottom:70px;max-width:760px">
+  <h1 class="metal fp-h1">Datenschutz</h1>
+  <div class="fp-section"><div class="fp-label">Kurzfassung</div>
+    <p>Diese Seite verzichtet auf Tracking, Werbung und Cookies. Es werden keine personenbezogenen Daten erhoben, gespeichert oder weitergegeben.</p></div>
+  <div class="fp-section"><div class="fp-label">Lokale Speicherung</div>
+    <p>Watchlist-Fortschritt und Spoiler-Einstellung liegen ausschließlich im localStorage deines Browsers, verlassen dein Gerät nicht und lassen sich dort jederzeit löschen.</p></div>
+  <div class="fp-section"><div class="fp-label">Hosting</div>
+    <p>Gehostet bei Vercel Inc. (USA). Beim Aufruf werden technisch notwendige Verbindungsdaten (z. B. IP-Adresse) zur Auslieferung verarbeitet (Art. 6 Abs. 1 lit. f DSGVO).</p></div>
+  <div class="fp-section"><div class="fp-label">YouTube (Click-to-Play)</div>
+    <p>Videos laden erst nach aktivem Klick über youtube-nocookie.com. Erst dann werden Daten an Google übertragen.</p></div>
+</main>`;
+  emit(lang, "/impressum/", page({ lang, path: "/impressum/", title: "Impressum · Knowhere", desc: "Impressum von Knowhere.", dataPage: "legal", noindex: true, body: imp }));
+  emit(lang, "/datenschutz/", page({ lang, path: "/datenschutz/", title: "Datenschutz · Knowhere", desc: "Datenschutzerklärung von Knowhere.", dataPage: "legal", noindex: true, body: ds }));
+}
+writeFileSync(join(OUT, "site.webmanifest"), JSON.stringify({
+  name: "Knowhere — Das Marvel-Fanarchiv", short_name: "Knowhere",
+  start_url: "/", display: "standalone", background_color: "#07100a", theme_color: "#07100a",
+  icons: [{ src: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+}, null, 1));
 
 /* 404 */
 writeFileSync(join(OUT, "404.html"), page({ lang: "de", path: "/404", title: "404 · Knowhere", desc: "Seite nicht gefunden.", dataPage: "404", noindex: true, body: `<main class="wrap fp" style="position:relative;min-height:70vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center">
