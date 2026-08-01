@@ -43,9 +43,16 @@
       clock = String(Math.floor(s % 86400 / 3600)).padStart(2, "0") + " Std · " + String(Math.floor(s % 3600 / 60)).padStart(2, "0") + " Min · " + String(s % 60).padStart(2, "0") + " Sek";
     }
     put("cdDays", days); put("cdClock", clock); put("hubClock", clock);
+    if (document.getElementById("cdD")) {
+      var ss = Math.max(0, Math.floor(diff / 1000));
+      put("cdD", Math.floor(ss / 86400));
+      put("cdH", String(Math.floor(ss % 86400 / 3600)).padStart(2, "0"));
+      put("cdM", String(Math.floor(ss % 3600 / 60)).padStart(2, "0"));
+      put("cdS", String(ss % 60).padStart(2, "0"));
+    }
     put("promoCd", Math.max(0, Math.floor((tDoom - now) / 864e5)));
   }
-  if ($("#cdDays") || $("#hubCd") || $("#promoCd")) { tick(); setInterval(tick, 1000); }
+  if ($("#cdDays") || $("#cdD") || $("#hubCd") || $("#promoCd")) { tick(); setInterval(tick, 1000); }
 
   /* ---------- Watchlist ---------- */
   function watched() { return store("msa-watched") || {}; }
@@ -302,6 +309,19 @@
   }
 
   /* ---------- Event: Partikel, Sticky-Countdown ---------- */
+  var prog = $("#evProgress");
+  if (prog) {
+    var ticking = false;
+    window.addEventListener("scroll", function () {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(function () {
+        var max = document.documentElement.scrollHeight - innerHeight;
+        prog.style.width = (max > 0 ? (scrollY / max) * 100 : 0) + "%";
+        ticking = false;
+      });
+    }, { passive: true });
+  }
   var sticky = $("#evSticky"), hero = $(".ev-hero");
   if (sticky && hero && "IntersectionObserver" in window) {
     new IntersectionObserver(function (en) {

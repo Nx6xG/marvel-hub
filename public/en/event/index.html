@@ -35,7 +35,7 @@
   </div>
 </div></nav>
 
-<div class="event-theme"><header class="hero ev-hero" id="event-top">
+<div class="event-theme"><div class="ev-progress" id="evProgress"></div><header class="hero ev-hero" id="event-top">
   <div class="ev-bg"><img src="/img/b/doomsday.jpg" alt="" aria-hidden="true" fetchpriority="high"></div>
   <div class="ev-hero-inner">
     <div class="hero-rule">The Multiverse Saga</div>
@@ -43,10 +43,11 @@
     <h1 class="visually-hidden">Avengers: Doomsday</h1>
     <img class="ev-logo" src="/img/l/doomsday.png" alt="Avengers: Doomsday" fetchpriority="high">
     <div class="hero-tag">Every Story leads to Doom</div>
-    <div class="cd">
-      <div class="cd-days metal" id="cdDays">···</div>
-      <div class="cd-days-label">Tage bis zum Kinostart</div>
-      <div class="cd-sub" id="cdClock"></div>
+    <div class="cd cd-seg">
+      <div class="cd-box"><div class="cd-n metal" id="cdD">··</div><div class="cd-l">Tage</div></div>
+      <div class="cd-box"><div class="cd-n metal" id="cdH">··</div><div class="cd-l">Std</div></div>
+      <div class="cd-box"><div class="cd-n metal" id="cdM">··</div><div class="cd-l">Min</div></div>
+      <div class="cd-box cd-sec"><div class="cd-n metal" id="cdS">··</div><div class="cd-l">Sek</div></div>
       <div class="cd-info">
         Deutschland vsl. <b>16. Dezember 2026</b> · USA 18. Dezember 2026<br>
         Danach: <b>Avengers: Secret Wars</b> — 17. Dezember 2027 (<span id="cdSW">…</span> Tage)
@@ -392,64 +393,7 @@
       </div>
 
       <div class="subhead">Der Cast</div>
-      <div class="cast-cols">
-        <div>
-          <div class="cast-g">
-            <h4>Latveria</h4>
-            <div class="cast-row"><span class="cn">Robert Downey Jr.</span><span class="cr">Victor von Doom / Doctor Doom</span></div>
-          </div>
-          <div class="cast-g">
-            <h4>Avengers &amp; Verbündete</h4>
-            <div class="cast-row"><span class="cn">Chris Hemsworth</span><span class="cr">Thor</span></div>
-            <div class="cast-row"><span class="cn">Anthony Mackie</span><span class="cr">Captain America</span></div>
-            <div class="cast-row"><span class="cn">Paul Rudd</span><span class="cr">Ant-Man</span></div>
-            <div class="cast-row"><span class="cn">Tom Hiddleston</span><span class="cr">Loki</span></div>
-            <div class="cast-row"><span class="cn">Letitia Wright</span><span class="cr">Shuri / Black Panther</span></div>
-            <div class="cast-row"><span class="cn">Winston Duke</span><span class="cr">M'Baku</span></div>
-            <div class="cast-row"><span class="cn">Simu Liu</span><span class="cr">Shang-Chi</span></div>
-            <div class="cast-row"><span class="cn">Danny Ramirez</span><span class="cr">Falcon</span></div>
-            <div class="cast-row"><span class="cn">Kathryn Newton</span><span class="cr">Cassie Lang</span></div>
-            <div class="cast-row"><span class="cn">Tenoch Huerta Mejía</span><span class="cr">Namor</span></div>
-            <div class="cast-row"><span class="cn">Mabel Cadena</span><span class="cr">Namora</span></div>
-            <div class="cast-row"><span class="cn">Chris Evans</span><span class="cr">Rolle geheim — Steve? Johnny?</span></div>
-          </div>
-          <div class="cast-g">
-            <h4>New Avengers (Thunderbolts*)</h4>
-            <div class="cast-row"><span class="cn">Florence Pugh</span><span class="cr">Yelena Belova</span></div>
-            <div class="cast-row"><span class="cn">Sebastian Stan</span><span class="cr">Bucky Barnes</span></div>
-            <div class="cast-row"><span class="cn">David Harbour</span><span class="cr">Red Guardian</span></div>
-            <div class="cast-row"><span class="cn">Wyatt Russell</span><span class="cr">U.S. Agent</span></div>
-            <div class="cast-row"><span class="cn">Hannah John-Kamen</span><span class="cr">Ghost</span></div>
-            <div class="cast-row"><span class="cn">Lewis Pullman</span><span class="cr">Sentry / Void</span></div>
-          </div>
-        </div>
-        <div>
-          <div class="cast-g">
-            <h4>Fantastic Four (Erde-828)</h4>
-            <div class="cast-row"><span class="cn">Pedro Pascal</span><span class="cr">Mister Fantastic</span></div>
-            <div class="cast-row"><span class="cn">Vanessa Kirby</span><span class="cr">Invisible Woman</span></div>
-            <div class="cast-row"><span class="cn">Joseph Quinn</span><span class="cr">Human Torch</span></div>
-            <div class="cast-row"><span class="cn">Ebon Moss-Bachrach</span><span class="cr">The Thing</span></div>
-          </div>
-          <div class="cast-g">
-            <h4>X-Men · Das Fox-Erbe</h4>
-            <div class="cast-row"><span class="cn">Patrick Stewart</span><span class="cr">Professor X</span></div>
-            <div class="cast-row"><span class="cn">Ian McKellen</span><span class="cr">Magneto</span></div>
-            <div class="cast-row"><span class="cn">Kelsey Grammer</span><span class="cr">Beast</span></div>
-            <div class="cast-row"><span class="cn">James Marsden</span><span class="cr">Cyclops</span></div>
-            <div class="cast-row"><span class="cn">Rebecca Romijn</span><span class="cr">Mystique</span></div>
-            <div class="cast-row"><span class="cn">Alan Cumming</span><span class="cr">Nightcrawler</span></div>
-            <div class="cast-row"><span class="cn">Channing Tatum</span><span class="cr">Gambit</span></div>
-          </div>
-          <div class="cast-g">
-            <h4>Comic-Con-Enthüllungen 2026</h4>
-            <div class="cast-row"><span class="cn spoiler">Ryan Gosling</span><span class="cr spoiler">Ghost Rider</span></div>
-            <div class="cast-row"><span class="cn spoiler">David Jonsson</span><span class="cr spoiler">der neue Black Panther</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+      <div class="ens"><div class="ens-group"><div class="ens-f">Latveria</div><div class="ens-row"><a class="ens-card" href="/en/schauspieler/robert-downey-jr/"><img class="ens-img" src="/img/a/3223.jpg" alt="Robert Downey Jr." loading="lazy"><div class="ens-n">Robert Downey Jr.</div><div class="ens-r">Victor von Doom / Doctor Doom</div></a></div></div><div class="ens-group"><div class="ens-f">Avengers & allies</div><div class="ens-row"><a class="ens-card" href="/en/schauspieler/chris-hemsworth/"><img class="ens-img" src="/img/a/74568.jpg" alt="Chris Hemsworth" loading="lazy"><div class="ens-n">Chris Hemsworth</div><div class="ens-r">Thor</div></a><a class="ens-card" href="/en/schauspieler/anthony-mackie/"><img class="ens-img" src="/img/a/53650.jpg" alt="Anthony Mackie" loading="lazy"><div class="ens-n">Anthony Mackie</div><div class="ens-r">Captain America</div></a><a class="ens-card" href="/en/schauspieler/tom-hiddleston/"><img class="ens-img" src="/img/a/91606.jpg" alt="Tom Hiddleston" loading="lazy"><div class="ens-n">Tom Hiddleston</div><div class="ens-r">Loki</div></a><a class="ens-card" href="/en/schauspieler/paul-rudd/"><img class="ens-img" src="/img/a/22226.jpg" alt="Paul Rudd" loading="lazy"><div class="ens-n">Paul Rudd</div><div class="ens-r">Ant-Man</div></a><a class="ens-card" href="/en/schauspieler/letitia-wright/"><img class="ens-img" src="/img/a/1083010.jpg" alt="Letitia Wright" loading="lazy"><div class="ens-n">Letitia Wright</div><div class="ens-r">Shuri</div></a><a class="ens-card" href="/en/schauspieler/winston-duke/"><img class="ens-img" src="/img/a/1447932.jpg" alt="Winston Duke" loading="lazy"><div class="ens-n">Winston Duke</div><div class="ens-r">M'Baku</div></a><a class="ens-card" href="/en/schauspieler/simu-liu/"><img class="ens-img" src="/img/a/1489211.jpg" alt="Simu Liu" loading="lazy"><div class="ens-n">Simu Liu</div><div class="ens-r">Shang-Chi</div></a><a class="ens-card" href="/en/schauspieler/danny-ramirez/"><img class="ens-img" src="/img/a/1773397.jpg" alt="Danny Ramirez" loading="lazy"><div class="ens-n">Danny Ramirez</div><div class="ens-r">Falcon</div></a><a class="ens-card" href="/en/schauspieler/kathryn-newton/"><img class="ens-img" src="/img/a/221192.jpg" alt="Kathryn Newton" loading="lazy"><div class="ens-n">Kathryn Newton</div><div class="ens-r">Cassie Lang</div></a><a class="ens-card" href="/en/schauspieler/tenoch-huerta-mej-a/"><img class="ens-img" src="/img/a/87265.jpg" alt="Tenoch Huerta Mejía" loading="lazy"><div class="ens-n">Tenoch Huerta Mejía</div><div class="ens-r">Namor</div></a><a class="ens-card" href="/en/schauspieler/chris-evans/"><img class="ens-img" src="/img/a/16828.jpg" alt="Chris Evans" loading="lazy"><div class="ens-n">Chris Evans</div><div class="ens-r">role secret</div></a></div></div><div class="ens-group"><div class="ens-f">New Avengers</div><div class="ens-row"><a class="ens-card" href="/en/schauspieler/florence-pugh/"><img class="ens-img" src="/img/a/1373737.jpg" alt="Florence Pugh" loading="lazy"><div class="ens-n">Florence Pugh</div><div class="ens-r">Yelena Belova</div></a><a class="ens-card" href="/en/schauspieler/sebastian-stan/"><img class="ens-img" src="/img/a/60898.jpg" alt="Sebastian Stan" loading="lazy"><div class="ens-n">Sebastian Stan</div><div class="ens-r">Bucky Barnes</div></a><a class="ens-card" href="/en/schauspieler/david-harbour/"><img class="ens-img" src="/img/a/35029.jpg" alt="David Harbour" loading="lazy"><div class="ens-n">David Harbour</div><div class="ens-r">Red Guardian</div></a><a class="ens-card" href="/en/schauspieler/wyatt-russell/"><img class="ens-img" src="/img/a/986808.jpg" alt="Wyatt Russell" loading="lazy"><div class="ens-n">Wyatt Russell</div><div class="ens-r">U.S. Agent</div></a><a class="ens-card" href="/en/schauspieler/hannah-john-kamen/"><img class="ens-img" src="/img/a/1408809.jpg" alt="Hannah John-Kamen" loading="lazy"><div class="ens-n">Hannah John-Kamen</div><div class="ens-r">Ghost</div></a><a class="ens-card" href="/en/schauspieler/lewis-pullman/"><img class="ens-img" src="/img/a/1700685.jpg" alt="Lewis Pullman" loading="lazy"><div class="ens-n">Lewis Pullman</div><div class="ens-r">Sentry</div></a></div></div><div class="ens-group"><div class="ens-f">Fantastic Four</div><div class="ens-row"><a class="ens-card" href="/en/schauspieler/pedro-pascal/"><img class="ens-img" src="/img/a/1253360.jpg" alt="Pedro Pascal" loading="lazy"><div class="ens-n">Pedro Pascal</div><div class="ens-r">Mister Fantastic</div></a><a class="ens-card" href="/en/schauspieler/vanessa-kirby/"><img class="ens-img" src="/img/a/556356.jpg" alt="Vanessa Kirby" loading="lazy"><div class="ens-n">Vanessa Kirby</div><div class="ens-r">Invisible Woman</div></a><a class="ens-card" href="/en/schauspieler/joseph-quinn/"><img class="ens-img" src="/img/a/1597365.jpg" alt="Joseph Quinn" loading="lazy"><div class="ens-n">Joseph Quinn</div><div class="ens-r">Human Torch</div></a><a class="ens-card" href="/en/schauspieler/ebon-moss-bachrach/"><img class="ens-img" src="/img/a/21042.jpg" alt="Ebon Moss-Bachrach" loading="lazy"><div class="ens-n">Ebon Moss-Bachrach</div><div class="ens-r">The Thing</div></a></div></div><div class="ens-group"><div class="ens-f">X-Men</div><div class="ens-row"><a class="ens-card" href="/en/schauspieler/patrick-stewart/"><img class="ens-img" src="/img/a/2387.jpg" alt="Patrick Stewart" loading="lazy"><div class="ens-n">Patrick Stewart</div><div class="ens-r">Professor X</div></a><a class="ens-card" href="/en/schauspieler/ian-mckellen/"><img class="ens-img" src="/img/a/1327.jpg" alt="Ian McKellen" loading="lazy"><div class="ens-n">Ian McKellen</div><div class="ens-r">Magneto</div></a><a class="ens-card" href="/en/schauspieler/kelsey-grammer/"><img class="ens-img" src="/img/a/7090.jpg" alt="Kelsey Grammer" loading="lazy"><div class="ens-n">Kelsey Grammer</div><div class="ens-r">Beast</div></a><a class="ens-card" href="/en/schauspieler/james-marsden/"><img class="ens-img" src="/img/a/11006.jpg" alt="James Marsden" loading="lazy"><div class="ens-n">James Marsden</div><div class="ens-r">Cyclops</div></a><a class="ens-card" href="/en/schauspieler/rebecca-romijn/"><img class="ens-img" src="/img/a/11008.jpg" alt="Rebecca Romijn" loading="lazy"><div class="ens-n">Rebecca Romijn</div><div class="ens-r">Mystique</div></a><a class="ens-card" href="/en/schauspieler/alan-cumming/"><img class="ens-img" src="/img/a/10697.jpg" alt="Alan Cumming" loading="lazy"><div class="ens-n">Alan Cumming</div><div class="ens-r">Nightcrawler</div></a><div class="ens-card"><div class="ens-img fc-fallback">C</div><div class="ens-n">Channing Tatum</div><div class="ens-r">Gambit</div></div></div></div><div class="ens-group"><div class="ens-f">Comic-Con reveals</div><div class="ens-row"><div class="ens-card"><span class="spoiler"><div class="ens-img fc-fallback">R</div><div class="ens-n">Ryan Gosling</div><div class="ens-r">Ghost Rider</div></span></div><div class="ens-card"><span class="spoiler"><div class="ens-img fc-fallback">D</div><div class="ens-n">David Jonsson</div><div class="ens-r">Black Panther</div></span></div></div></div></div></div></section>
     <div class="act"><div class="act-num metal">III</div><div class="act-t">The Knowledge</div><div class="act-s">The complete lore behind Doom</div></div>
     <section class="block" id="lore">
     <div class="wrap">

@@ -653,14 +653,34 @@ function eventBody(lang) {
       <div class="tc-overlay"><div class="tc-play">▶</div><div class="tc-t">${de ? "Der erste Trailer" : "The first trailer"}</div><div class="tc-s">${de ? "veröffentlicht am 20. Juli 2026 · Klick lädt YouTube" : "released July 20, 2026 · click loads YouTube"}</div></div>
     </div>
   </section>`;
-  return `<div class="event-theme">${frag("event-hero")}
+  const ENSEMBLE = [
+    [de ? "Latveria" : "Latveria", [["Robert Downey Jr.", "Victor von Doom / Doctor Doom"]]],
+    [de ? "Avengers & Verbündete" : "Avengers & allies", [["Chris Hemsworth", "Thor"], ["Anthony Mackie", "Captain America"], ["Tom Hiddleston", "Loki"], ["Paul Rudd", "Ant-Man"], ["Letitia Wright", "Shuri"], ["Winston Duke", "M'Baku"], ["Simu Liu", "Shang-Chi"], ["Danny Ramirez", "Falcon"], ["Kathryn Newton", "Cassie Lang"], ["Tenoch Huerta Mejía", "Namor"], ["Chris Evans", de ? "Rolle geheim" : "role secret"]]],
+    ["New Avengers", [["Florence Pugh", "Yelena Belova"], ["Sebastian Stan", "Bucky Barnes"], ["David Harbour", "Red Guardian"], ["Wyatt Russell", "U.S. Agent"], ["Hannah John-Kamen", "Ghost"], ["Lewis Pullman", "Sentry"]]],
+    ["Fantastic Four", [["Pedro Pascal", "Mister Fantastic"], ["Vanessa Kirby", "Invisible Woman"], ["Joseph Quinn", "Human Torch"], ["Ebon Moss-Bachrach", "The Thing"]]],
+    ["X-Men", [["Patrick Stewart", "Professor X"], ["Ian McKellen", "Magneto"], ["Kelsey Grammer", "Beast"], ["James Marsden", "Cyclops"], ["Rebecca Romijn", "Mystique"], ["Alan Cumming", "Nightcrawler"], ["Channing Tatum", "Gambit"]]],
+    [de ? "Comic-Con-Enthüllungen" : "Comic-Con reveals", [["Ryan Gosling", "Ghost Rider", 1], ["David Jonsson", "Black Panther", 1]]],
+  ];
+  const ensWall = `<div class="ens">` + ENSEMBLE.map(([fac, list]) =>
+    `<div class="ens-group"><div class="ens-f">${fac}</div><div class="ens-row">` +
+    list.map(([n, r, sp]) => {
+      const pid = ACTOR_IMG[n.toLowerCase()];
+      const img = pid ? `<img class="ens-img" src="/img/a/${pid}.jpg" alt="${esc(n)}" loading="lazy">` : `<div class="ens-img fc-fallback">${esc(n.charAt(0))}</div>`;
+      const inner = `${img}<div class="ens-n">${esc(n)}</div><div class="ens-r">${esc(r)}</div>`;
+      const card = pid && PERSONS[pid] ? `<a class="ens-card" href="${lang === "en" ? "/en" : ""}${personUrl(pid)}">${sp ? `<span class="spoiler">${inner}</span>` : inner}</a>` : `<div class="ens-card">${sp ? `<span class="spoiler">${inner}</span>` : inner}</div>`;
+      return card;
+    }).join("") + `</div></div>`).join("") + `</div>`;
+  let doomFrag = frag("event-doom");
+  const ci = doomFrag.indexOf('<div class="cast-cols">');
+  if (ci !== -1) doomFrag = doomFrag.slice(0, ci) + ensWall + "</div></section>";
+  return `<div class="event-theme"><div class="ev-progress" id="evProgress"></div>${frag("event-hero")}
   <a class="ev-sticky" id="evSticky" href="#event-top" hidden><img class="evs-logo" src="/img/l/doomsday.png" alt="Avengers: Doomsday"><span class="evs-time" id="evStickyD">…</span></a>
   <main>
     ${trailer}
     ${act("I", de ? "Der Weg" : "The Road", de ? "33 Filme & Serien. Ein Ziel. Deine Watchlist." : "33 films & shows. One destination. Your watchlist.")}
     ${saga}
     ${act("II", de ? "Die Lage" : "The Situation", de ? "Fakten, News und das größte Ensemble aller Zeiten" : "Facts, news and the biggest ensemble ever")}
-    ${frag("event-doom")}
+    ${doomFrag}
     ${act("III", de ? "Das Wissen" : "The Knowledge", de ? "Die komplette Lore hinter Doom" : "The complete lore behind Doom")}
     ${frag("event-lore")}
     <div class="ev-card rv-always"><div class="ev-card-bg"><img src="/img/g/doomsday-0.jpg" alt="" loading="lazy"></div><div class="ev-card-q metal">„New mask, same task."</div><div class="ev-card-s">— Robert Downey Jr., San Diego Comic-Con, Juli 2024</div></div>
