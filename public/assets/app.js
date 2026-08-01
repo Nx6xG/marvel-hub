@@ -276,6 +276,17 @@
     map.addEventListener("mouseleave", function () { if (!pcSel) applyHl(null); });
   }
 
+  /* ---------- Zurück-Button: echte Historie statt fester Link ---------- */
+  var back = $(".backlink[href]");
+  if (back) back.addEventListener("click", function (ev) {
+    try {
+      if (history.length > 1 && document.referrer && new URL(document.referrer).origin === location.origin) {
+        ev.preventDefault();
+        history.back();
+      }
+    } catch (e) {}
+  });
+
   /* ---------- Trailer: Click-to-Play (YouTube lädt erst beim Klick) ---------- */
   var tc = $(".trailer-card[data-yt]");
   if (tc) {

@@ -1085,3 +1085,6 @@ body.neutral .tool-btn.on { background: rgba(232, 53, 59, 0.1); }
 
 /* TMDB-Porträts: Gesicht mittig statt oben angeschnitten */
 .fc-img, img.cface, .tstack img, .sd-row img.sd-round { object-position: 50% 22%; }
+
+/* Als <a> umgebaute Karten brauchen Block-Layout */
+.stop .poster-wrap { display: block; }
