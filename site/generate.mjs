@@ -35,7 +35,7 @@ const T = {
     days: "Tage", radar_last: "Zuletzt erschienen", radar_now: "● Jetzt im Kino", radar_next: "Als Nächstes",
     event_k: "· Das Event ·", event_cta: "Zum Event-Hub ➤", news: "Neuigkeiten", dive: "Direkt eintauchen",
     watch: "Als gesehen markieren", watched: "✓ Gesehen", trailer: "Trailer ansehen", trailer_s: "öffnet YouTube in neuem Tab",
-    plot: "Worum es geht", cast: "Besetzung (Auswahl)", figures: "Wichtige Figuren", trivia: "Trivia & Hintergrund",
+    plot: "Worum es geht", cast: "Besetzung", cast_more: "Weitere Besetzung", figures: "Wichtige Figuren", trivia: "Trivia & Hintergrund",
     pc: "Post-Credit-Szenen", pc_none: "Keine (nennenswerte) Post-Credit-Szene verzeichnet.", pc_to: "Führt zu:",
     cameo: "🥸 Stan-Lee-Cameo", doom_note: "Bedeutung für Doomsday", to_event: "Zum Doomsday-Event-Hub →",
     where: "Wo schauen", asof: "Stand 08/2026", back: "← Zurück", phase: "Phase",
@@ -58,7 +58,7 @@ const T = {
     days: "Days", radar_last: "Recently released", radar_now: "● In theaters now", radar_next: "Up next",
     event_k: "· The Event ·", event_cta: "Enter the Event Hub ➤", news: "News", dive: "Dive in",
     watch: "Mark as watched", watched: "✓ Watched", trailer: "Watch the trailer", trailer_s: "opens YouTube in a new tab",
-    plot: "The story", cast: "Cast (selection)", figures: "Key characters", trivia: "Trivia & background",
+    plot: "The story", cast: "Cast", cast_more: "More cast", figures: "Key characters", trivia: "Trivia & background",
     pc: "Post-credit scenes", pc_none: "No (notable) post-credit scene on record.", pc_to: "Leads to:",
     cameo: "🥸 Stan Lee cameo", doom_note: "Why it matters for Doomsday", to_event: "To the Doomsday event hub →",
     where: "Where to watch", asof: "as of 08/2026", back: "← Back", phase: "Phase",
@@ -217,6 +217,12 @@ function filmBody(f, lang) {
   const wt = WIKI[id] || WIKI[id === "l2" ? "l1" : ""] || f.t;
   const q = encodeURIComponent(f.t + (f.type === "Film" ? " film" : " series"));
   const inFilm = CHARS.filter((c) => c.films.includes(id));
+  const figActors = new Set();
+  inFilm.forEach((c) => c.act.split("·").forEach((p) => {
+    const n = p.replace(/\(.*?\)/g, "").replace(/zuvor.*$/i, "").trim().toLowerCase();
+    if (n && n !== "—") figActors.add(n);
+  }));
+  const restCast = (CREDITS[id] || []).filter((c) => !figActors.has(c.n.trim().toLowerCase()));
   const pc = PC[id];
   const stream = STREAM[id] || (f.uni === "sony" ? "Netflix / wechselnd (DE)" : f.uni === "alt" ? "Wechselnd (Leihe/Disney+)" : "Disney+");
   const trailerQ = encodeURIComponent(`${f.t} ${parseInt(f.y)} trailer${lang === "de" ? " deutsch" : ""}`);
@@ -251,11 +257,11 @@ function filmBody(f, lang) {
     <div class="tc-overlay"><div class="tc-play">▶</div><div class="tc-t">${L.trailer}</div><div class="tc-s">${L.trailer_s}</div></div>
   </a>`}
   <div class="fp-section"><div class="fp-label">${L.plot}</div><p>${esc(f.plot)}</p></div>
-  <div class="fp-section"><div class="fp-label">${L.cast}</div>${CREDITS[id] && CREDITS[id].length
-    ? `<div class="fp-chars">` + CREDITS[id].map((c) => `<div class="fp-char">${c.p ? `<img class="fc-img" src="/img/a/${c.p}.jpg" alt="${esc(c.n)}" loading="lazy">` : `<div class="fc-img fc-fallback">${esc(c.n.charAt(0))}</div>`}<div class="fc-n">${esc(c.n)}</div><div class="fc-a">${esc(c.r)}</div></div>`).join("") + `</div>`
-    : `<p>${f.cast.map(esc).join(" · ")}</p>`}</div>
   ${inFilm.length ? `<div class="fp-section"><div class="fp-label">${L.figures}</div><div class="fp-chars">` +
     inFilm.map((c) => `<a class="fp-char" href="${prefix}${charUrl(c.id)}">${charImg(c.id, c.n, "fc-img")}<div class="fc-n">${esc(c.n)}</div><div class="fc-a">${esc(c.act.split("·")[0].split("(")[0].trim())}</div></a>`).join("") + `</div></div>` : ""}
+  ${restCast.length
+    ? `<div class="fp-section"><div class="fp-label">${inFilm.length ? L.cast_more : L.cast}</div><div class="fp-chars">` + restCast.map((c) => `<div class="fp-char">${c.p ? `<img class="fc-img" src="/img/a/${c.p}.jpg" alt="${esc(c.n)}" loading="lazy">` : `<div class="fc-img fc-fallback">${esc(c.n.charAt(0))}</div>`}<div class="fc-n">${esc(c.n)}</div><div class="fc-a">${esc(c.r)}</div></div>`).join("") + `</div></div>`
+    : (!inFilm.length ? `<div class="fp-section"><div class="fp-label">${L.cast}</div><p>${f.cast.map(esc).join(" · ")}</p></div>` : "")}
   ${TRIVIA[id] ? `<div class="fp-section"><div class="fp-label">${L.trivia}</div><ul>${TRIVIA[id].map((t) => `<li>${esc(t)}</li>`).join("")}</ul></div>` : ""}
   ${(pc || f.prio !== "future") ? `<div class="fp-section"><div class="fp-label">${L.pc}${pc && pc.scenes.length ? " · " + pc.scenes.length : ""}</div>` +
     (!pc ? `<p style="color:var(--faint)">${L.pc_none}</p>` :
