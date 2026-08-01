@@ -295,7 +295,7 @@ function filmBody(f, lang) {
     (d.cert ? `<div class="fact-box"><div class="fb-k">FSK</div><div class="fb-v">ab ${esc(d.cert)}</div></div>` : "") +
     (d.budget ? `<div class="fact-box"><div class="fb-k">Budget</div><div class="fb-v">${fmtMoney(d.budget)}</div></div>` : "") +
     (d.revenue ? `<div class="fact-box"><div class="fb-k">${lang === "de" ? "Einspielergebnis" : "Box office"}</div><div class="fb-v">${fmtMoney(d.revenue)}</div></div>` : "") + `</div>` : ""}
-  <div class="fp-section"><div class="fp-label">${L.plot}</div><p>${esc(f.plot)}</p></div>
+  <div class="fp-section"><div class="fp-label">${L.plot}</div><p>${esc(tr(f, "plot", lang))}</p></div>
   ${inFilm.length ? `<div class="fp-section"><div class="fp-label">${L.figures}</div><div class="fp-chars">` +
     inFilm.map((c) => `<a class="fp-char" href="${prefix}${charUrl(c.id)}">${charImg(c.id, c.n, "fc-img")}<div class="fc-n">${esc(c.n)}</div><div class="fc-a">${esc(c.act.split("·")[0].split("(")[0].trim())}</div></a>`).join("") + `</div>` +
     (restCast.length ? `<details class="more-cast"><summary>${L.cast_more} · ${restCast.length}</summary><div class="fp-chars">${restHtml}</div></details>` : "") + `</div>`
@@ -780,7 +780,7 @@ for (const lang of LANGS) {
     const jsonld = {
       "@context": "https://schema.org",
       "@type": f.type === "Film" ? "Movie" : "TVSeries",
-      name: f.t, description: stripTags(f.plot).slice(0, 300),
+      name: f.t, description: stripTags(tr(f, "plot", lang)).slice(0, 300),
       datePublished: String(parseInt(f.y) || ""),
       director: { "@type": "Person", name: f.dir.split("·")[0].replace(/Regie:|Showrunner(in)?:|Creator:/g, "").trim() },
       actor: f.cast.slice(0, 4).map((n) => ({ "@type": "Person", name: n.replace(/\(.*?\)/g, "").trim() })),
@@ -789,7 +789,7 @@ for (const lang of LANGS) {
     emit(lang, filmUrl(f.id), page({
       lang, path: filmUrl(f.id),
       title: `${f.t} (${parseInt(f.y) || f.y}) — ${f.type}, Cast, Trivia & Post-Credits · Knowhere`,
-      desc: stripTags(f.plot).slice(0, 158),
+      desc: stripTags(tr(f, "plot", lang)).slice(0, 158),
       ogImage: `/img/p/${f.id}.jpg`, dataPage: "film", jsonld,
       body: filmBody(f, lang),
     }));
@@ -832,7 +832,13 @@ for (const lang of LANGS) {
 }
 
 /* 404 */
-writeFileSync(join(OUT, "404.html"), page({ lang: "de", path: "/404", title: "404 · Knowhere", desc: "Seite nicht gefunden.", dataPage: "404", noindex: true, body: `<main class="wrap" style="padding:120px 22px;text-align:center"><h1 class="metal" style="font-size:80px">404</h1><p class="hub-sub">Diese Seite wurde gesnapt. <a href="/">Zurück zum Hub</a> — oder frag die TVA.</p></main>` }));
+writeFileSync(join(OUT, "404.html"), page({ lang: "de", path: "/404", title: "404 · Knowhere", desc: "Seite nicht gefunden.", dataPage: "404", noindex: true, body: `<main class="wrap fp" style="position:relative;min-height:70vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center">
+  <div class="fp-backdrop" style="height:100%"><img src="/img/b/doomsday.jpg" alt="" aria-hidden="true"></div>
+  <h1 class="metal" style="font-family:var(--display);font-weight:700;font-size:clamp(90px,18vw,180px);line-height:1">404</h1>
+  <p style="font-family:var(--display);font-weight:600;font-size:22px;text-transform:uppercase;letter-spacing:0.2em;color:#cfe0d4">Diese Seite wurde gesnapt.</p>
+  <p style="color:var(--muted);max-width:46ch;margin-top:10px">Die Hälfte aller URLs hat es nicht geschafft. Vielleicht bringt der Blip sie zurück — bis dahin:</p>
+  <div class="tl-controls" style="margin-top:26px"><a class="backlink" href="/">Zum Start</a><a class="backlink" href="/filme/">Alle Filme &amp; Serien</a><a class="backlink" href="/event/">★ Doomsday</a></div>
+</main>` }));
 
 /* Suche-Index */
 const search = [

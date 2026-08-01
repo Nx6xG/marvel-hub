@@ -184,8 +184,17 @@
     });
     gsInput.addEventListener("input", gsRun);
     gsInput.addEventListener("keydown", function (ev) {
-      if (ev.key === "Escape") { gsClose(); gsInput.blur(); }
-      if (ev.key === "Enter") { var first = $(".sd-row", gsDrop); if (first) first.click(); }
+      if (ev.key === "Escape") { gsClose(); gsInput.blur(); return; }
+      var rows = $$(".sd-row", gsDrop);
+      if (!rows.length) return;
+      var idx = rows.findIndex(function (r) { return r.classList.contains("hot"); });
+      if (ev.key === "ArrowDown" || ev.key === "ArrowUp") {
+        ev.preventDefault();
+        idx = ev.key === "ArrowDown" ? Math.min(idx + 1, rows.length - 1) : Math.max(idx - 1, 0);
+        rows.forEach(function (r, i) { r.classList.toggle("hot", i === idx); });
+        rows[idx].scrollIntoView({ block: "nearest" });
+      }
+      if (ev.key === "Enter") (rows[idx > -1 ? idx : 0]).click();
     });
     document.addEventListener("click", function (ev) { if (!ev.target.closest(".nav-search")) gsClose(); });
   }
@@ -309,6 +318,33 @@
   }
 
   /* ---------- Event: Partikel, Sticky-Countdown ---------- */
+  /* ---------- Doom-Modus (Easter Egg) ---------- */
+  var evLogo = $(".ev-logo");
+  if (document.body.getAttribute("data-page") === "event") {
+    var QUOTES = ["KNIET.", "DOOM BITTET NICHT. DOOM BEFIEHLT.", "EVERY STORY LEADS TO DOOM.", "IHR NENNT ES EROBERUNG. DOOM NENNT ES ORDNUNG.", "NEW MASK. SAME TASK."];
+    var buf = "", clicks = 0, lastClick = 0;
+    function doomMode() {
+      if ($(".doom-flash")) return;
+      var d = document.createElement("div");
+      d.className = "doom-flash";
+      d.innerHTML = '<div class="doom-q metal">' + QUOTES[Math.floor(Math.random() * QUOTES.length)] + "</div>";
+      document.body.appendChild(d);
+      setTimeout(function () { d.remove(); }, 2600);
+    }
+    document.addEventListener("keydown", function (ev) {
+      if (/^[a-z]$/i.test(ev.key) && !ev.target.closest("input")) {
+        buf = (buf + ev.key.toLowerCase()).slice(-4);
+        if (buf === "doom") { buf = ""; doomMode(); }
+      }
+    });
+    if (evLogo) evLogo.addEventListener("click", function () {
+      var now = Date.now();
+      clicks = now - lastClick < 900 ? clicks + 1 : 1;
+      lastClick = now;
+      if (clicks >= 5) { clicks = 0; doomMode(); }
+    });
+  }
+
   var prog = $("#evProgress");
   if (prog) {
     var ticking = false;
