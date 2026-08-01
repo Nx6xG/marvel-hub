@@ -39,7 +39,7 @@ const T = {
     pc: "Post-Credit-Szenen", pc_none: "Keine (nennenswerte) Post-Credit-Szene verzeichnet.", pc_to: "Führt zu:",
     cameo: "🥸 Stan-Lee-Cameo", doom_note: "Bedeutung für Doomsday", to_event: "Zum Doomsday-Event-Hub →",
     where: "Wo schauen", asof: "Stand 08/2026", back: "← Zurück", phase: "Phase",
-    powers: "Kräfte", who: "Wer ist das?", teams_lbl: "Teams", net: "Das Beziehungs-Netz", net_detail: "Im Detail",
+    powers: "Kräfte", played_lbl: "Gespielt von", who: "Wer ist das?", teams_lbl: "Teams", net: "Das Beziehungs-Netz", net_detail: "Im Detail",
     net_none: "Einzelgänger — (noch) keine kartierten Verbindungen.", seen_in: "Zu sehen in", first: "Erster Auftritt",
     played: "gespielt von", variants: "Varianten & Doppelgänger",
     legend: ["Verbündete", "Feinde", "Familie & Liebe", "Es ist kompliziert"],
@@ -62,7 +62,7 @@ const T = {
     pc: "Post-credit scenes", pc_none: "No (notable) post-credit scene on record.", pc_to: "Leads to:",
     cameo: "🥸 Stan Lee cameo", doom_note: "Why it matters for Doomsday", to_event: "To the Doomsday event hub →",
     where: "Where to watch", asof: "as of 08/2026", back: "← Back", phase: "Phase",
-    powers: "Powers", who: "Who is this?", teams_lbl: "Teams", net: "The relationship web", net_detail: "In detail",
+    powers: "Powers", played_lbl: "Played by", who: "Who is this?", teams_lbl: "Teams", net: "The relationship web", net_detail: "In detail",
     net_none: "A loner — no mapped connections (yet).", seen_in: "Appears in", first: "First appearance",
     played: "played by", variants: "Variants & doppelgangers",
     legend: ["Allies", "Enemies", "Family & love", "It's complicated"],
@@ -127,6 +127,9 @@ const tr = (o, f, lang) => (lang === "en" && o[f + "_en"] != null ? o[f + "_en"]
 // YouTube-Trailer-IDs (von fetch-tmdb.mjs erzeugt; ohne Key: leere Map → externer Link als Fallback)
 const TRAILERS = existsSync("site/data/trailers.json") ? JSON.parse(readFileSync("site/data/trailers.json", "utf8")) : {};
 const CREDITS = existsSync("site/data/credits.json") ? JSON.parse(readFileSync("site/data/credits.json", "utf8")) : {};
+const ACTOR_IMG = {};
+Object.values(CREDITS).forEach((list) => list.forEach((c) => { if (c.p) ACTOR_IMG[c.n.trim().toLowerCase()] = c.p; }));
+const actorNames = (act) => act.split("·").map((p) => p.replace(/\(.*?\)/g, "").replace(/zuvor.*$/i, "").trim()).filter((n) => n && n !== "—" && !/^und /.test(n));
 
 const adSlot = (L) => `<div class="ad-slot" data-ad><span>${L.ad}</span></div>`;
 
@@ -299,9 +302,13 @@ function charBody(c, lang) {
     <div class="fp-head">
       <h1 class="metal fp-h1">${esc(c.n)}</h1>
       <span class="uni-badge ub-${c.u}">${UNI_LABEL[c.u]}</span>
-      <div class="fp-meta"><b>${esc(c.a)}</b> · ${L.played} ${esc(c.act)}<br>${esc(c.uni)}<br>${L.first}: ${esc(c.first)}</div>
+      <div class="fp-meta"><b>${esc(c.a)}</b><br>${esc(c.uni)}<br>${L.first}: ${esc(c.first)}</div>
     </div>
   </div>
+  <div class="fp-section"><div class="fp-label">${L.played_lbl}</div><div class="fp-chars">${actorNames(c.act).map((n) => {
+    const pid = ACTOR_IMG[n.toLowerCase()];
+    return `<div class="fp-char">${pid ? `<img class="fc-img" src="/img/a/${pid}.jpg" alt="${esc(n)}" loading="lazy">` : `<div class="fc-img fc-fallback">${esc(n.charAt(0))}</div>`}<div class="fc-n">${esc(n)}</div></div>`;
+  }).join("")}</div><p style="font-size:12.5px;color:var(--faint);margin-top:10px">${esc(c.act)}</p></div>
   <div class="fp-section"><div class="fp-label">${L.powers}</div><p>${esc(c.pow)}</p></div>
   <div class="fp-section"><div class="fp-label">${L.who}</div><p>${esc(c.bio)}</p></div>
   ${ts.length ? `<div class="fp-section"><div class="fp-label">${L.teams_lbl}</div><div class="ext-links">` +
