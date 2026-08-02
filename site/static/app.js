@@ -199,6 +199,24 @@
     document.addEventListener("click", function (ev) { if (!ev.target.closest(".nav-search")) gsClose(); });
   }
 
+  /* ---------- Burger-Menü (mobil) ---------- */
+  var burger = $("#navBurger"), navLinks = $("#navLinks");
+  if (burger && navLinks) {
+    burger.addEventListener("click", function (ev) {
+      ev.stopPropagation();
+      var open = navLinks.classList.toggle("open");
+      burger.setAttribute("aria-expanded", String(open));
+      burger.textContent = open ? "✕" : "☰";
+    });
+    document.addEventListener("click", function (ev) {
+      if (navLinks.classList.contains("open") && !ev.target.closest(".nav-inner")) {
+        navLinks.classList.remove("open");
+        burger.setAttribute("aria-expanded", "false");
+        burger.textContent = "☰";
+      }
+    });
+  }
+
   /* ---------- Nav-Untermenü: Klick-Toggle für Touch ---------- */
   var drop = $(".nav-drop"), dropBtn = $(".nav-drop-btn");
   if (dropBtn) {
@@ -215,17 +233,51 @@
   /* ---------- Wiki-/Charakter-Index: Filter ---------- */
   var wikiGrid = $("#wikiGrid");
   if (wikiGrid) {
-    var uniMode = "alle", query = "";
+    var params = new URLSearchParams(location.search);
+    var uniMode = params.get("u") || "alle", query = (params.get("q") || "").toLowerCase(), sortMode2 = params.get("s") || "y";
+    function syncUrl() {
+      var p = new URLSearchParams();
+      if (uniMode !== "alle") p.set("u", uniMode);
+      if (query) p.set("q", query);
+      if (sortMode2 !== "y") p.set("s", sortMode2);
+      history.replaceState(null, "", location.pathname + (p.toString() ? "?" + p : ""));
+    }
     function applyWiki() {
       $$(".wcard", wikiGrid).forEach(function (c) {
         var okUni = uniMode === "alle" || (uniMode === "serie" ? c.getAttribute("data-type") !== "Film" : c.getAttribute("data-uni") === uniMode);
         var okQ = !query || c.getAttribute("data-t").indexOf(query) !== -1;
         c.style.display = okUni && okQ ? "" : "none";
       });
+      var cards = $$(".wcard", wikiGrid);
+      cards.sort(function (x, y) {
+        if (sortMode2 === "t") return x.getAttribute("data-t") < y.getAttribute("data-t") ? -1 : 1;
+        if (sortMode2 === "r") return (+y.getAttribute("data-r") || 0) - (+x.getAttribute("data-r") || 0);
+        return (+x.getAttribute("data-y") || 0) - (+y.getAttribute("data-y") || 0);
+      });
+      cards.forEach(function (c) { wikiGrid.appendChild(c); });
+      syncUrl();
     }
     wireSeg("wikiUni", function (d) { uniMode = d.uni; applyWiki(); });
+    wireSeg("wikiSort", function (d) { sortMode2 = d.sort; applyWiki(); });
     var ws = $("#wikiSearch");
-    if (ws) ws.addEventListener("input", function () { query = ws.value.trim().toLowerCase(); applyWiki(); });
+    if (ws) {
+      ws.value = query;
+      var deb;
+      ws.addEventListener("input", function () {
+        clearTimeout(deb);
+        deb = setTimeout(function () { query = ws.value.trim().toLowerCase(); applyWiki(); }, 120);
+      });
+    }
+    // Chips aus URL-Zustand markieren
+    ["wikiUni", "wikiSort"].forEach(function (id) {
+      var box = document.getElementById(id);
+      if (!box) return;
+      var key = id === "wikiUni" ? uniMode : sortMode2;
+      var attr = id === "wikiUni" ? "uni" : "sort";
+      var hit = box.querySelector('[data-' + attr + '="' + key + '"]');
+      if (hit) { $$("button", box).forEach(function (b) { b.classList.remove("sel"); }); hit.classList.add("sel"); }
+    });
+    if (uniMode !== "alle" || query || sortMode2 !== "y") applyWiki();
   }
 
   /* ---------- Glossar-Suche (Event) ---------- */

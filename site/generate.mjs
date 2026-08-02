@@ -154,7 +154,7 @@ const actorNames = (act) => act.split("·").map((p) => p.replace(/\(.*?\)/g, "")
 const adSlot = (L) => `<div class="ad-slot" data-ad><span>${L.ad}</span></div>`;
 
 /* ================= Layout ================= */
-function page({ lang, path, title, desc, ogImage, body, dataPage, jsonld, noindex }) {
+function page({ lang, path, title, desc, ogImage, body, dataPage, jsonld, noindex, crumbs }) {
   const L = T[lang];
   const prefix = lang === "en" ? "/en" : "";
   const altLang = lang === "en" ? "de" : "en";
@@ -200,7 +200,13 @@ ${noindex ? '<meta name="robots" content="noindex">' : ""}
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="stylesheet" href="/assets/style.css">
-${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld)}</script>` : ""}
+${(() => {
+  const ld = [];
+  if (jsonld) ld.push(jsonld);
+  if (crumbs && crumbs.length) ld.push({ "@context": "https://schema.org", "@type": "BreadcrumbList",
+    itemListElement: [[L.nav.home, "/"], ...crumbs].map(([n, u], i) => ({ "@type": "ListItem", position: i + 1, name: stripTags(n), ...(u ? { item: SITE_URL + prefix + u } : {}) })) });
+  return ld.length ? `<script type="application/ld+json">${JSON.stringify(ld.length === 1 ? ld[0] : ld)}</script>` : "";
+})()}
 </head>
 <body class="${dataPage === "event" ? "" : "neutral"}" data-page="${dataPage || ""}">
 <nav class="nav"><div class="nav-inner">
@@ -211,7 +217,9 @@ ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld)}</script
     <a class="tool-btn lang-btn" href="${altPrefix}${path}" hreflang="${altLang}" title="${L.other}">${lang === "de" ? "EN" : "DE"}</a>
     <button class="tool-btn" id="spoilerToggle" aria-pressed="false" title="${L.spoiler_off}">◉ Spoiler</button>
   </div>
+  <button class="nav-burger" id="navBurger" aria-expanded="false" aria-label="Menü">☰</button>
 </div></nav>
+${crumbs && crumbs.length ? `<div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="${prefix}/">${L.nav.home}</a>${crumbs.map(([n, u]) => u ? ` › <a href="${prefix}${u}">${n}</a>` : ` › <span>${n}</span>`).join("")}</nav></div>` : ""}
 ${dataPage !== "event" && dataPage !== "home" ? `<a class="promo" href="${prefix}/event/">★ <b>Avengers: Doomsday</b><span class="promo-x">${lang === "de" ? "Erfahre alles zum kommenden Film" : "Everything about the upcoming film"}</span><span class="promo-cd"><span id="promoCd">…</span> ${lang === "de" ? "Tage" : "days"}</span><span class="promo-arr">➤</span></a>` : ""}
 ${body}
 <footer>
@@ -322,6 +330,12 @@ function filmBody(f, lang) {
         (s.to && byId[s.to] ? `<a class="pc-to" href="${prefix}${filmUrl(s.to)}">→ ${L.pc_to} ${esc(byId[s.to].t)}</a>` : "") + `</div></div>`).join("")) + `</div>` : ""}
   ${CAMEO[id] ? `<div class="fp-section"><div class="fp-label">${L.cameo}</div><p>${esc(CAMEO[id])}</p></div>` : ""}
   ${f.uni === "mcu" && f.note ? `<div class="fp-doom"><div class="fp-label">${L.doom_note}${f.prio && f.prio !== "future" ? " · " + PRIO_LABEL[f.prio] : ""}</div><p>${esc(f.note)}</p><a href="${prefix}/event/">${L.to_event}</a></div>` : ""}
+  ${(() => {
+    const pool = FILMS.filter((x) => x.uni === f.uni && x.id !== id).sort((a, b) => Math.abs(parseInt(a.y) - parseInt(f.y)) - Math.abs(parseInt(b.y) - parseInt(f.y)));
+    const rel = pool.slice(0, 6);
+    return rel.length ? `<div class="fp-section"><div class="fp-label">${lang === "de" ? "Weiter stöbern" : "Keep browsing"} · ${UNI_LABEL[f.uni]}</div><div class="cp-films">` +
+      rel.map((x) => `<a class="radar-film" href="${prefix}${filmUrl(x.id)}" title="${esc(x.t)}">${posterImgW(x.id, x.t)}<div class="rf-t">${esc(x.t)}</div><div class="rf-d">${x.y}</div></a>`).join("") + `</div></div>` : "";
+  })()}
   ${f.prio !== "future" ? `<button class="fp-watch" data-watch="${id}" data-t-on="${L.watched}" data-t-off="${L.watch}">${L.watch}</button>` : ""}
   ${adSlot(L)}
 </main>`;
@@ -368,6 +382,14 @@ function charBody(c, lang) {
     relsCapped.map((r) => `<a href="${prefix}${charUrl(r.id)}"><span><b>${esc(charById[r.id].n)}</b> — ${REL_NAME[r.t]}</span><span class="rl">${esc(r.l)}</span></a>`).join("") + `</div></div>`
     : `<div class="fp-section"><div class="fp-label">${L.net}</div><p>${L.net_none}</p></div>`}
   <div class="fp-section"><div class="fp-label">${L.seen_in}</div>${miniFilmChips(c.films, lang)}</div>
+  ${(() => {
+    const team = TEAMS.find((t) => t.members.includes(c.id));
+    const mates = team ? team.members.filter((m) => m !== c.id) : [];
+    const fill = CHARS.filter((o) => o.u === c.u && o.id !== c.id && !mates.includes(o.id)).map((o) => o.id);
+    const rel = [...mates, ...fill].slice(0, 6);
+    return rel.length ? `<div class="fp-section"><div class="fp-label">${lang === "de" ? "Ähnliche Figuren" : "Related characters"}</div><div class="fp-chars">` +
+      rel.map((oid) => `<a class="fp-char" href="${prefix}${charUrl(oid)}">${charImg(oid, charById[oid].n, "fc-img")}<div class="fc-n">${esc(charById[oid].n)}</div></a>`).join("") + `</div></div>` : "";
+  })()}
   ${adSlot(L)}
 </main>`;
 }
@@ -438,9 +460,12 @@ function wikiIndexBody(lang) {
     <div class="seg" id="wikiUni">
       <button class="sel" data-uni="alle">${L.all}</button><button data-uni="mcu">MCU</button><button data-uni="fox">X-Men &amp; Fox</button><button data-uni="sony">Sony</button><button data-uni="alt">${L.classics}</button><button data-uni="net">${L.tv_era}</button><button data-uni="serie">${L.only_series}</button>
     </div>
+    <div class="seg" id="wikiSort">
+      <button class="sel" data-sort="y">${lang === "de" ? "Jahr" : "Year"}</button><button data-sort="r">${lang === "de" ? "Bewertung" : "Rating"}</button><button data-sort="t">${lang === "de" ? "Titel" : "Title"}</button>
+    </div>
   </div>
   <div class="wgrid" id="wikiGrid">` +
-    list.map((f) => `<a class="wcard" href="${prefix}${filmUrl(f.id)}" data-uni="${f.uni}" data-type="${f.type}" data-t="${esc(f.t.toLowerCase())}">
+    list.map((f) => `<a class="wcard" href="${prefix}${filmUrl(f.id)}" data-uni="${f.uni}" data-type="${f.type}" data-t="${esc(f.t.toLowerCase())}" data-y="${parseInt(f.y) || 0}" data-r="${SCORES[f.id] ? SCORES[f.id][0] : -1}">
       <div class="pw">${posterImgW(f.id, f.t)}</div>
       <div class="wt">${esc(f.t)}</div><div class="wy">${f.y} · ${f.type}</div>
       <span class="uni-badge ub-${f.uni}">${UNI_LABEL[f.uni]}</span></a>`).join("") +
@@ -794,14 +819,14 @@ for (const lang of LANGS) {
       lang, path: filmUrl(f.id),
       title: `${f.t} (${parseInt(f.y) || f.y}) — ${f.type}, Cast, Trivia & Post-Credits · Knowhere`,
       desc: stripTags(tr(f, "plot", lang)).slice(0, 158),
-      ogImage: `/img/p/${f.id}.jpg`, dataPage: "film", jsonld,
+      ogImage: `/img/p/${f.id}.jpg`, dataPage: "film", jsonld, crumbs: [[T[lang].nav.films, "/filme/"], [esc(f.t)]],
       body: filmBody(f, lang),
     }));
   }
-  for (const c of CHARS) emit(lang, charUrl(c.id), page({ lang, path: charUrl(c.id), title: `${c.n} (${c.a}) — Marvel-Charakter · Knowhere`, desc: stripTags(c.bio).slice(0, 158), ogImage: existsSync(`public/img/c/${c.id}.jpg`) ? `/img/c/${c.id}.jpg` : undefined, dataPage: "char", body: charBody(c, lang) }));
-  for (const t of TEAMS) emit(lang, teamUrl(t.id), page({ lang, path: teamUrl(t.id), title: `${t.n} — Marvel-Team · Knowhere`, desc: stripTags(t.desc).slice(0, 158), dataPage: "team", body: teamBody(t, lang) }));
-  for (const a of ARTIFACTS) emit(lang, artUrl(a.id), page({ lang, path: artUrl(a.id), title: `${a.n} — Marvel-Artefakt · Knowhere`, desc: stripTags(a.d).slice(0, 158), dataPage: "art", body: artBody(a, lang) }));
-  for (const p of PATHS) emit(lang, pathUrl(p.id), page({ lang, path: pathUrl(p.id), title: `${p.n} — Storyline-Pfad · Knowhere`, desc: stripTags(p.intro).slice(0, 158), dataPage: "path", body: pathBody(p, lang) }));
+  for (const c of CHARS) emit(lang, charUrl(c.id), page({ lang, path: charUrl(c.id), title: `${c.n} (${c.a}) — Marvel-Charakter · Knowhere`, desc: stripTags(c.bio).slice(0, 158), ogImage: existsSync(`public/img/c/${c.id}.jpg`) ? `/img/c/${c.id}.jpg` : undefined, dataPage: "char", crumbs: [[T[lang].nav.chars, "/charaktere/"], [esc(c.n)]], body: charBody(c, lang) }));
+  for (const t of TEAMS) emit(lang, teamUrl(t.id), page({ lang, path: teamUrl(t.id), title: `${t.n} — Marvel-Team · Knowhere`, desc: stripTags(t.desc).slice(0, 158), dataPage: "team", crumbs: [["Teams", "/teams/"], [esc(t.n)]], body: teamBody(t, lang) }));
+  for (const a of ARTIFACTS) emit(lang, artUrl(a.id), page({ lang, path: artUrl(a.id), title: `${a.n} — Marvel-Artefakt · Knowhere`, desc: stripTags(a.d).slice(0, 158), dataPage: "art", crumbs: [[T[lang].nav.arts, "/artefakte/"], [esc(a.n)]], body: artBody(a, lang) }));
+  for (const p of PATHS) emit(lang, pathUrl(p.id), page({ lang, path: pathUrl(p.id), title: `${p.n} — Storyline-Pfad · Knowhere`, desc: stripTags(p.intro).slice(0, 158), dataPage: "path", crumbs: [[T[lang].nav.paths, "/pfade/"], [esc(p.n)]], body: pathBody(p, lang) }));
 }
 
 /* Schauspieler-Seiten */
@@ -830,7 +855,7 @@ for (const lang of LANGS) {
       title: `${p.n} — Marvel-Filmografie · Knowhere`,
       desc: (p.bio || `${p.n}: alle Marvel-Auftritte im Überblick.`).slice(0, 158),
       ogImage: existsSync(`public/img/a/${pid}.jpg`) ? `/img/a/${pid}.jpg` : undefined,
-      dataPage: "person", body,
+      dataPage: "person", crumbs: [[T[lang].nav.films, "/filme/"], [esc(p.n)]], body,
     }));
   }
 }
