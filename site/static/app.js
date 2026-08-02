@@ -725,6 +725,23 @@
       }
     });
 
+    /* Tastatur-Schnellmodus: über Poster hovern + S/A/B/C/D drücken, P = Pool */
+    var hoverId = null;
+    document.addEventListener("mouseover", function (ev) {
+      var it = ev.target.closest(".tier-item[data-id]");
+      hoverId = it && !it.classList.contains("rt") ? it.getAttribute("data-id") : null;
+    });
+    document.addEventListener("keydown", function (ev) {
+      if (readOnly || ev.metaKey || ev.ctrlKey || ev.altKey) return;
+      var tag = (ev.target.tagName || "").toLowerCase();
+      if (tag === "input" || tag === "textarea" || ev.target.isContentEditable) return;
+      var id = hoverId || selId;
+      if (!id) return;
+      var k = ev.key.toLowerCase();
+      if (TIERS.indexOf(k) !== -1) { ev.preventDefault(); place(id, k); }
+      else if (k === "p" || k === "backspace" || k === "0") { ev.preventDefault(); place(id, "pool"); }
+    });
+
     /* Drag & Drop */
     var dragging = false;
     document.addEventListener("dragstart", function (ev) {
