@@ -1425,3 +1425,18 @@ a.ens-card:hover .ens-img { transform: scale(1.08); border-color: #3fdc8c; box-s
   .ev-trailer-card { aspect-ratio: 16 / 9; }
   .hd-cd-n { font-size: 40px; }
 }
+
+/* Suche: expandiert als Overlay nach links, ohne die Zeile zu verschieben */
+.nav-search { width: 110px; height: 30px; flex-shrink: 0; }
+.nav-search input {
+  position: absolute; right: 0; top: 0; height: 30px; width: 110px;
+}
+.nav-search input:focus { width: 280px; z-index: 6; }
+@media (max-width: 920px) {
+  .nav-search { width: 84px; }
+  .nav-search input { width: 84px; }
+  .nav-search input:focus { width: 200px; }
+}
+@media (max-width: 480px) {
+  .nav-search input:focus { width: calc(100vw - 150px); }
+}
