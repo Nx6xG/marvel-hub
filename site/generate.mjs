@@ -537,9 +537,9 @@ function artsIndexBody(lang) {
   return `<main class="wrap" style="padding:50px 22px 60px">
   ${secHead(lang === "de" ? "Waffen, Bücher, Wundermetalle" : "Weapons, books, wonder metals", lang === "de" ? "Die Artefakte" : "The Artifacts", "")}
   <div class="char-grid">` + ARTIFACTS.map((a) =>
-    `<a class="place-card${a.ev ? " ev-place" : ""}" href="${prefix}${artUrl(a.id)}">
-      ${a.img && existsSync(`public/img/${a.img}.jpg`) ? `<img src="/img/${a.img}.jpg" alt="" loading="lazy">` : `<div class="pc-fb"></div>`}
-      <div class="place-ov"><div class="place-n"><span class="place-sym metal">${a.sym}</span> ${esc(a.n)}</div><div class="place-s">${esc(tr(a, "sub", lang))}</div></div></a>`).join("") +
+    `<a class="char-card${a.ev ? " ev-team" : ""}" href="${prefix}${artUrl(a.id)}" style="text-decoration:none;color:inherit">
+      <div class="art-sym metal">${a.sym}</div>
+      <div class="cc-n">${esc(a.n)}</div><div class="cc-a">${esc(tr(a, "sub", lang))}</div><div class="cc-p">${esc(tr(a, "status", lang))}</div></a>`).join("") +
   `</div></main>`;
 }
 
