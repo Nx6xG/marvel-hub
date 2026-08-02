@@ -620,4 +620,131 @@
     render();
     window.addEventListener("resize", render);
   }
+
+  /* ---------- Tier-List-Builder ---------- */
+  if (document.body.getAttribute("data-page") === "tierlist") {
+    var TD = JSON.parse($("#tierData").textContent);
+    var TSTR = TD.str;
+    var TIERS = ["s", "a", "b", "c", "d"];
+    var board = $("#tierBoard"), poolEl = $("#tierPool");
+    var state = {};
+    try { state = JSON.parse(localStorage.getItem("msa-tierlist") || "{}"); } catch (e) {}
+    var sharedStr = new URLSearchParams(location.search).get("t");
+    var shared = null;
+    if (sharedStr) {
+      shared = {};
+      for (var si = 0; si < sharedStr.length && si < TD.order.length; si++) {
+        if (TIERS.indexOf(sharedStr[si]) !== -1) shared[TD.order[si]] = sharedStr[si];
+      }
+    }
+    var readOnly = !!shared;
+    var active = shared || state;
+
+    $("#tierHint").textContent = TSTR.hint;
+    $("#tierShare").textContent = TSTR.share;
+    $("#tierReset").textContent = TSTR.reset;
+    if (readOnly) {
+      $("#tierShared").hidden = false;
+      $("#tierSharedT").textContent = TSTR.sharedTitle;
+      $("#tierAdopt").textContent = TSTR.adopt;
+      $("#tierOwn").textContent = TSTR.own;
+      $("#tierShare").hidden = true;
+      $("#tierReset").hidden = true;
+    }
+
+    function drops() {
+      var m = { pool: poolEl };
+      $$(".tier-drop", board).forEach(function (d) { m[d.getAttribute("data-tier")] = d; });
+      return m;
+    }
+    var D = drops();
+    function apply() {
+      $$(".tier-item[data-id]").forEach(function (it) {
+        var t = active[it.getAttribute("data-id")];
+        (D[t && D[t] ? t : "pool"]).appendChild(it);
+      });
+      stats();
+    }
+    function stats() {
+      var n = 0;
+      for (var k in active) if (D[active[k]]) n++;
+      $("#tierStats").textContent = n + " / " + TD.order.length + " " + TSTR.sorted;
+    }
+    function save() { if (!readOnly) try { localStorage.setItem("msa-tierlist", JSON.stringify(active)); } catch (e) {} }
+    function place(id, tier) {
+      if (readOnly) return;
+      if (tier === "pool") delete active[id]; else active[id] = tier;
+      var it = $(".tier-item[data-id=\"" + id + "\"]");
+      if (it) { D[tier].appendChild(it); it.classList.remove("sel"); }
+      selId = null;
+      save(); stats();
+    }
+
+    /* Klick-Flow (Touch & Maus) */
+    var selId = null;
+    document.addEventListener("click", function (ev) {
+      if (readOnly) return;
+      var it = ev.target.closest(".tier-item[data-id]");
+      if (it && !it.classList.contains("rt")) {
+        var id = it.getAttribute("data-id");
+        if (selId === id) { it.classList.remove("sel"); selId = null; }
+        else {
+          $$(".tier-item.sel").forEach(function (x) { x.classList.remove("sel"); });
+          it.classList.add("sel"); selId = id;
+        }
+        return;
+      }
+      if (selId) {
+        var row = ev.target.closest(".tier-row:not(.rt), #tierPool");
+        if (row) place(selId, row.id === "tierPool" ? "pool" : row.getAttribute("data-tier"));
+      }
+    });
+
+    /* Drag & Drop */
+    document.addEventListener("dragstart", function (ev) {
+      var it = ev.target.closest(".tier-item[data-id]");
+      if (!it || readOnly) return;
+      ev.dataTransfer.setData("text/plain", it.getAttribute("data-id"));
+      ev.dataTransfer.effectAllowed = "move";
+    });
+    $$(".tier-row:not(.rt) .tier-drop, #tierPool").forEach(function (d) {
+      d.addEventListener("dragover", function (ev) { if (!readOnly) { ev.preventDefault(); d.classList.add("over"); } });
+      d.addEventListener("dragleave", function () { d.classList.remove("over"); });
+      d.addEventListener("drop", function (ev) {
+        ev.preventDefault(); d.classList.remove("over");
+        var id = ev.dataTransfer.getData("text/plain");
+        if (id) place(id, d.getAttribute("data-tier") === "pool" ? "pool" : d.getAttribute("data-tier"));
+      });
+    });
+
+    /* Teilen */
+    $("#tierShare").addEventListener("click", function () {
+      var s = TD.order.map(function (id) { return D[active[id]] && active[id] !== undefined && TIERS.indexOf(active[id]) !== -1 ? active[id] : "-"; }).join("").replace(/-+$/, "");
+      var url = location.origin + location.pathname + (s ? "?t=" + s : "");
+      var done = function () {
+        var b = $("#tierShare"), old = b.textContent;
+        b.textContent = TSTR.copied;
+        setTimeout(function () { b.textContent = old; }, 2600);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(done, function () { prompt(TSTR.copyFail, url); });
+      else prompt(TSTR.copyFail, url);
+    });
+
+    /* Zurücksetzen (zweistufig) */
+    var armed = false;
+    $("#tierReset").addEventListener("click", function () {
+      var b = $("#tierReset");
+      if (!armed) { armed = true; b.textContent = TSTR.sure; setTimeout(function () { armed = false; b.textContent = TSTR.reset; }, 3000); return; }
+      armed = false; b.textContent = TSTR.reset;
+      active = {}; save(); apply();
+    });
+
+    /* Geteilte Liste übernehmen */
+    if (readOnly) $("#tierAdopt").addEventListener("click", function () {
+      try { localStorage.setItem("msa-tierlist", JSON.stringify(shared)); } catch (e) {}
+      location.href = location.pathname;
+    });
+
+    apply();
+  }
 })();

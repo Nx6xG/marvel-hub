@@ -39,7 +39,7 @@ const relN = (t, lang) => (lang === "en" ? REL_NAME_EN[t] : REL_NAME[t]);
 const T = {
   de: {
     langName: "Deutsch", other: "English", tagline: "Das Marvel-Fanarchiv aller Universen",
-    nav: { home: "Start", films: "Filme & Serien", chars: "Charaktere", teams: "Teams & Organisationen", multi: "Multiversum", arts: "Artefakte", paths: "Pfade", records: "Rekorde", chron: "Chronik", threads: "Offene Fäden", lex: "Lexikon", faq: "FAQ", db: "Datenbank", know: "Wissen", games: "Spiele", actors: "Schauspieler", places: "Orte & Welten", peoples: "Völker & Spezies", event: "★ Doomsday" },
+    nav: { home: "Start", films: "Filme & Serien", chars: "Charaktere", teams: "Teams & Organisationen", multi: "Multiversum", arts: "Artefakte", paths: "Pfade", records: "Rekorde", chron: "Chronik", threads: "Offene Fäden", lex: "Lexikon", faq: "FAQ", db: "Datenbank", know: "Wissen", games: "Spiele", tier: "Tier-List", actors: "Schauspieler", places: "Orte & Welten", peoples: "Völker & Spezies", event: "★ Doomsday" },
     spoiler_off: "Spoiler: aus", search_ph: "Suche …",
     home_sub: "Von Iron Man bis Doomsday: Filme, Serien, Charaktere und die ganze Lore — quer durch alle Marvel-Universen.",
     home_desc: "Marvel Hub: das Fan-Wiki über alle Marvel-Film-Universen — MCU, X-Men, Sony, Klassiker und TV-Ära. Mit Doomsday-Countdown, Watchlist, Charakteren, Teams und Lore.",
@@ -62,7 +62,7 @@ const T = {
   },
   en: {
     langName: "English", other: "Deutsch", tagline: "The Marvel fan archive of every universe",
-    nav: { home: "Home", films: "Films & Shows", chars: "Characters", teams: "Teams & orgs", multi: "Multiverse", arts: "Artifacts", paths: "Storylines", records: "Records", chron: "Timeline", threads: "Loose Ends", lex: "Lexicon", faq: "FAQ", db: "Database", know: "Knowledge", games: "Games", actors: "Actors", places: "Places & worlds", peoples: "Peoples & species", event: "★ Doomsday" },
+    nav: { home: "Home", films: "Films & Shows", chars: "Characters", teams: "Teams & orgs", multi: "Multiverse", arts: "Artifacts", paths: "Storylines", records: "Records", chron: "Timeline", threads: "Loose Ends", lex: "Lexicon", faq: "FAQ", db: "Database", know: "Knowledge", games: "Games", tier: "Tier list", actors: "Actors", places: "Places & worlds", peoples: "Peoples & species", event: "★ Doomsday" },
     spoiler_off: "Spoilers: off", search_ph: "Search …",
     home_sub: "From Iron Man to Doomsday: films, shows, characters and all the lore — across every Marvel universe. (Article texts are German-first for now.)",
     home_desc: "Marvel Hub: the fan wiki covering every Marvel movie universe — MCU, X-Men, Sony, classics and the TV era. With Doomsday countdown, watchlist, characters, teams and lore.",
@@ -227,7 +227,7 @@ function page({ lang, path, title, desc, ogImage, body, dataPage, jsonld, noinde
     return `<a href="${prefix}${p}"${cls.length ? ` class="${cls.join(" ")}"` : ""}>${L.nav[k]}</a>`;
   };
   const dbItems = [["films", "/filme/"], ["chars", "/charaktere/"], ["actors", "/schauspieler/"], ["teams", "/teams/"], ["arts", "/artefakte/"], ["places", "/orte/"], ["peoples", "/voelker/"]];
-  const knowItems = [["chron", "/chronik/"], ["paths", "/pfade/"], ["threads", "/faeden/"], ["lex", "/lexikon/"], ["games", "/spiele/"], ["records", "/rekorde/"], ["faq", "/faq/"]];
+  const knowItems = [["chron", "/chronik/"], ["paths", "/pfade/"], ["threads", "/faeden/"], ["lex", "/lexikon/"], ["games", "/spiele/"], ["tier", "/tierlist/"], ["records", "/rekorde/"], ["faq", "/faq/"]];
   const drop = (label, items) => {
     const act = items.some(([, p]) => isActive(p));
     return `<div class="nav-drop${act ? " child-active" : ""}"><button class="nav-drop-btn${act ? " active" : ""}" aria-haspopup="true" aria-expanded="false">${label} <span class="nd-arr">▾</span></button><div class="nav-drop-menu">${items.map(([k, p]) => navLink(k, p)).join("")}</div></div>`;
@@ -1049,6 +1049,47 @@ for (const lang of LANGS) {
       <p>${esc(tr(gm, "d", lang))}</p>
       ${gm.rel && gm.rel.length ? `<div class="lex-films">${gm.rel.map((fid) => byId[fid] ? `<a href="${prefix}${filmUrl(fid)}">${esc(byId[fid].t)}</a>` : "").join("")}</div>` : ""}
     </div>`).join("")}</div>
+  </main>` }));
+}
+
+/* Tier-List-Builder */
+for (const lang of LANGS) {
+  const de = lang === "de";
+  const prefix = lang === "en" ? "/en" : "";
+  const pool = FILMS.filter((f) => f.prio !== "future");
+  const tile = (f) => `<button class="tier-item" data-id="${f.id}" draggable="true" title="${esc(f.t)} (${f.y})">${posterImgW(f.id, f.t)}<span class="ti-n">${esc(f.t)}</span></button>`;
+  const rows = [["s", "S"], ["a", "A"], ["b", "B"], ["c", "C"], ["d", "D"]].map(([k, l]) =>
+    `<div class="tier-row" data-tier="${k}"><div class="tier-label tl-${k}">${l}</div><div class="tier-drop" data-tier="${k}"></div></div>`).join("");
+  const rtTier = (f) => { const s = SCORES[f.id][0]; return s >= 90 ? "s" : s >= 75 ? "a" : s >= 60 ? "b" : s >= 40 ? "c" : "d"; };
+  const scored = pool.filter((f) => SCORES[f.id]);
+  const rtRows = [["s", "S"], ["a", "A"], ["b", "B"], ["c", "C"], ["d", "D"]].map(([k, l]) =>
+    `<div class="tier-row rt"><div class="tier-label tl-${k}">${l}</div><div class="tier-drop">${scored.filter((f) => rtTier(f) === k).map((f) =>
+      `<a class="tier-item rt" href="${prefix}${filmUrl(f.id)}" title="${esc(f.t)} · ${SCORES[f.id][0]} %">${posterImgW(f.id, f.t)}<span class="ti-n">${esc(f.t)} · ${SCORES[f.id][0]} %</span></a>`).join("")}</div></div>`).join("");
+  const data = {
+    order: pool.map((f) => f.id),
+    str: de
+      ? { copied: "Link kopiert! Schick ihn wem, der falsch liegt.", copyFail: "Konnte nicht kopieren — URL aus der Adressleiste teilen.", really: "Wirklich alles zurücksetzen?", hint: "Poster antippen, dann eine Reihe antippen — oder einfach ziehen.", sharedTitle: "Du siehst eine geteilte Tier-List.", adopt: "Übernehmen & bearbeiten", own: "Eigene Liste erstellen", sorted: "einsortiert", share: "Teilen-Link kopieren", reset: "Zurücksetzen", sure: "Sicher? Nochmal klicken." }
+      : { copied: "Link copied! Send it to someone who is wrong.", copyFail: "Could not copy — share the URL from the address bar.", really: "Really reset everything?", hint: "Tap a poster, then tap a row — or just drag it.", sharedTitle: "You are viewing a shared tier list.", adopt: "Adopt & edit", own: "Build your own list", sorted: "sorted", share: "Copy share link", reset: "Reset", sure: "Sure? Click again." },
+  };
+  emit(lang, "/tierlist/", page({ lang, path: "/tierlist/", title: (de ? "Marvel-Tier-List: erstelle dein eigenes Ranking" : "Marvel tier list: build your own ranking") + " · Knowhere", desc: de ? `Alle ${pool.length} Marvel-Filme & -Serien per Drag & Drop in S bis D einsortieren, speichern und als Link teilen — plus die Daten-Tier-List nach Rotten Tomatoes.` : `Sort all ${pool.length} Marvel films & shows into S to D tiers, save your list and share it as a link — plus the data tier list based on Rotten Tomatoes.`, dataPage: "tierlist", body:
+    `<main class="wrap" style="padding:50px 22px 60px">
+    ${secHead(de ? "S-Tier oder Skip?" : "S tier or skip?", de ? "Die Tier-List" : "The Tier List", de ? "Alle Filme & Serien, dein Urteil: Poster in die Reihen ziehen (oder antippen). Deine Liste bleibt gespeichert — und lässt sich als Link teilen." : "Every film & show, your verdict: drag posters into the rows (or tap). Your list is saved — and shareable as a link.")}
+    <div class="tier-shared" id="tierShared" hidden><span id="tierSharedT"></span> <button class="backlink" id="tierAdopt"></button> <a class="backlink" href="${prefix}/tierlist/" id="tierOwn"></a></div>
+    <div class="tier-tools">
+      <button class="backlink" id="tierShare"></button>
+      <button class="backlink" id="tierReset"></button>
+      <span class="tier-stats" id="tierStats"></span>
+    </div>
+    <div class="tier-board" id="tierBoard">${rows}</div>
+    <div class="subhead" style="margin-top:34px">${de ? "Noch nicht einsortiert" : "Not sorted yet"}</div>
+    <p class="tier-hint" id="tierHint"></p>
+    <div class="tier-pool tier-drop" id="tierPool" data-tier="pool">${pool.map(tile).join("")}</div>
+    <details class="season" style="margin-top:44px"><summary>${de ? "Zum Vergleich: die Daten-Tier-List (Rotten Tomatoes)" : "For comparison: the data tier list (Rotten Tomatoes)"}</summary>
+      <p class="tier-hint" style="margin:10px 0 14px">${de ? "S ≥ 90 % · A ≥ 75 % · B ≥ 60 % · C ≥ 40 % · D darunter — rein rechnerisch, ohne Meinung." : "S ≥ 90% · A ≥ 75% · B ≥ 60% · C ≥ 40% · D below — pure math, no opinion."}</p>
+      <div class="tier-board">${rtRows}</div>
+    </details>
+    <script type="application/json" id="tierData">${JSON.stringify(data)}</script>
+    ${adSlot(T[lang])}
   </main>` }));
 }
 
