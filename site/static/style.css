@@ -1597,3 +1597,9 @@ body.neutral .live-dot { background: var(--green); }
 .tier-pool{background:rgba(255,255,255,.02);border:1px dashed var(--line);border-radius:10px;min-height:110px}
 body.tier-sel-mode .tier-row:not(.rt){cursor:pointer}
 @media (max-width:600px){.tier-label{flex-basis:44px;font-size:22px}.tier-item{width:44px;flex-basis:44px}.tier-drop{min-height:76px}}
+.tier-tabs{display:inline-flex;gap:0;margin:0 0 18px}
+.tier-tabs a{padding:8px 16px;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);text-decoration:none}
+.tier-tabs a:first-child{border-radius:8px 0 0 8px}
+.tier-tabs a:last-child{border-radius:0 8px 8px 0;border-left:0}
+.tier-tabs a.sel{color:#eafff2;background:rgba(255,255,255,.07)}
+.tier-chars .tier-item img{aspect-ratio:2/3;object-fit:cover;object-position:50% 18%}

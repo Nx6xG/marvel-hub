@@ -625,11 +625,12 @@
   if (document.body.getAttribute("data-page") === "tierlist") {
     var TD = JSON.parse($("#tierData").textContent);
     var TSTR = TD.str;
+    var LSKEY = TD.key || "msa-tierlist";
     var TIERS = ["s", "a", "b", "c", "d"];
     var board = $("#tierBoard"), poolEl = $("#tierPool");
     var state = {}, seq = null;
     try {
-      var raw = JSON.parse(localStorage.getItem("msa-tierlist") || "{}");
+      var raw = JSON.parse(localStorage.getItem(LSKEY) || "{}");
       if (raw && raw.t) { state = raw.t; seq = raw.seq || null; } else state = raw;
     } catch (e) {}
     var sharedStr = new URLSearchParams(location.search).get("t");
@@ -684,7 +685,7 @@
       if (readOnly) return;
       seq = {};
       for (var key in D) seq[key] = $$(".tier-item[data-id]", D[key]).map(function (x) { return x.getAttribute("data-id"); });
-      try { localStorage.setItem("msa-tierlist", JSON.stringify({ t: active, seq: seq })); } catch (e) {}
+      try { localStorage.setItem(LSKEY, JSON.stringify({ t: active, seq: seq })); } catch (e) {}
     }
     function place(id, tier, before) {
       if (readOnly) return;
@@ -782,6 +783,84 @@
       else prompt(TSTR.copyFail, url);
     });
 
+    /* Als Bild exportieren (Canvas → PNG-Download) */
+    $("#tierImg").textContent = TSTR.img;
+    if (readOnly) $("#tierImg").hidden = true;
+    $("#tierImg").addEventListener("click", function () {
+      var btn = $("#tierImg"), oldTxt = btn.textContent;
+      var rows = TIERS.map(function (t) {
+        return { t: t, items: $$(".tier-item[data-id]", D[t]).map(function (el) {
+          var img = el.querySelector(".lbox-fg") || el.querySelector("img");
+          return { src: img ? img.currentSrc || img.src : null, n: el.getAttribute("title") || "" };
+        }) };
+      });
+      var total = rows.reduce(function (s, r) { return s + r.items.length; }, 0);
+      if (!total) { btn.textContent = TSTR.imgEmpty; setTimeout(function () { btn.textContent = oldTxt; }, 2200); return; }
+      btn.textContent = "…";
+      var W = 1240, pad = 18, label = 86, tw = 68, th = 102, gap = 6;
+      var perRow = Math.floor((W - pad * 2 - label - 12) / (tw + gap));
+      var COLORS = { s: "#7c1f2b", a: "#8a5218", b: "#7d6a1e", c: "#2b6a38", d: "#24507f" };
+      var loads = [];
+      rows.forEach(function (r) { r.items.forEach(function (it) {
+        if (!it.src) return;
+        loads.push(new Promise(function (res) {
+          var im = new Image();
+          im.onload = function () { it.im = im; res(); };
+          im.onerror = function () { res(); };
+          im.src = it.src;
+        }));
+      }); });
+      Promise.all(loads).then(function () {
+        var headH = 78, footH = 52;
+        var rowHs = rows.map(function (r) { return Math.max(1, Math.ceil(r.items.length / perRow)) * (th + gap) + 14; });
+        var H = headH + rowHs.reduce(function (a, b) { return a + b + 8; }, 0) + footH;
+        var cv = document.createElement("canvas");
+        cv.width = W; cv.height = H;
+        var cx = cv.getContext("2d");
+        cx.fillStyle = "#0a0f0c"; cx.fillRect(0, 0, W, H);
+        cx.fillStyle = "#eafff2"; cx.font = "700 30px 'Arial Narrow', Arial, sans-serif";
+        cx.fillText(TD.heading, pad, 46);
+        var y = headH;
+        rows.forEach(function (r, ri) {
+          var rh = rowHs[ri];
+          cx.fillStyle = "rgba(255,255,255,0.04)";
+          cx.fillRect(pad, y, W - pad * 2, rh);
+          cx.fillStyle = COLORS[r.t];
+          cx.fillRect(pad, y, label, rh);
+          cx.fillStyle = "#f2ede6"; cx.font = "700 40px 'Arial Narrow', Arial, sans-serif";
+          cx.textAlign = "center";
+          cx.fillText(r.t.toUpperCase(), pad + label / 2, y + rh / 2 + 14);
+          cx.textAlign = "left";
+          r.items.forEach(function (it, i) {
+            var tx = pad + label + 8 + (i % perRow) * (tw + gap);
+            var ty = y + 7 + Math.floor(i / perRow) * (th + gap);
+            if (it.im) {
+              var iw = it.im.naturalWidth, ih = it.im.naturalHeight;
+              var sc = Math.max(tw / iw, th / ih);
+              var sw = tw / sc, sh = th / sc;
+              cx.drawImage(it.im, (iw - sw) / 2, (ih - sh) * 0.15, sw, sh, tx, ty, tw, th);
+            } else {
+              cx.fillStyle = "#161d18"; cx.fillRect(tx, ty, tw, th);
+              cx.fillStyle = "#9ab5a3"; cx.font = "700 26px Arial";
+              cx.fillText((it.n || "?").charAt(0), tx + tw / 2 - 8, ty + th / 2 + 9);
+            }
+          });
+          y += rh + 8;
+        });
+        cx.fillStyle = "#5f6f64"; cx.font = "14px Arial";
+        cx.fillText("KNOW\u00b7HERE \u2014 " + location.host + location.pathname, pad, H - 20);
+        cv.toBlob(function (blob) {
+          var a = document.createElement("a");
+          a.href = URL.createObjectURL(blob);
+          a.download = (TD.file || "tierlist") + ".png";
+          document.body.appendChild(a); a.click(); a.remove();
+          setTimeout(function () { URL.revokeObjectURL(a.href); }, 5000);
+          btn.textContent = "\u2713";
+          setTimeout(function () { btn.textContent = oldTxt; }, 2000);
+        });
+      });
+    });
+
     /* Zurücksetzen (zweistufig) */
     var armed = false;
     $("#tierReset").addEventListener("click", function () {
@@ -789,14 +868,14 @@
       if (!armed) { armed = true; b.textContent = TSTR.sure; setTimeout(function () { armed = false; b.textContent = TSTR.reset; }, 3000); return; }
       armed = false; b.textContent = TSTR.reset;
       active = {}; seq = null;
-      try { localStorage.removeItem("msa-tierlist"); } catch (e) {}
+      try { localStorage.removeItem(LSKEY); } catch (e) {}
       TD.order.forEach(function (id) { var it = $(".tier-item[data-id=\"" + id + "\"]"); if (it) D.pool.appendChild(it); });
       stats();
     });
 
     /* Geteilte Liste übernehmen */
     if (readOnly) $("#tierAdopt").addEventListener("click", function () {
-      try { localStorage.setItem("msa-tierlist", JSON.stringify({ t: shared, seq: null })); } catch (e) {}
+      try { localStorage.setItem(LSKEY, JSON.stringify({ t: shared, seq: null })); } catch (e) {}
       location.href = location.pathname;
     });
 
