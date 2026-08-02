@@ -2,6 +2,7 @@
 (function () {
   "use strict";
   var PREFIX = document.documentElement.getAttribute("data-prefix") || "";
+  var EN = document.documentElement.lang === "en";
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
   function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;"); }
@@ -81,7 +82,7 @@
         if (s.getAttribute("data-prio") === "pflicht") { pT++; if (isW) pD++; }
       });
       $("#tlFill").style.width = Math.round(done / total * 100) + "%";
-      $("#tlStats").innerHTML = "<b>" + done + " / " + total + "</b> gesehen · Pflicht <b>" + pD + " / " + pT + "</b> · Rest: <b>≈ " + fmtMin(minLeft) + "</b>";
+      $("#tlStats").innerHTML = EN ? "<b>" + done + " / " + total + "</b> watched · essential <b>" + pD + " / " + pT + "</b> · left: <b>≈ " + fmtMin(minLeft) + "</b>" : "<b>" + done + " / " + total + "</b> gesehen · Pflicht <b>" + pD + " / " + pT + "</b> · Rest: <b>≈ " + fmtMin(minLeft) + "</b>";
     }
     var rows = $$(".ewl-row[data-min]");
     if (rows.length && $("#ewlFill")) {
@@ -92,7 +93,7 @@
         if (w[r.getAttribute("data-id")]) d2++; else left += +r.getAttribute("data-min");
       });
       $("#ewlFill").style.width = (t2 ? Math.round(d2 / t2 * 100) : 0) + "%";
-      $("#ewlStats").innerHTML = "<b>" + d2 + " / " + t2 + "</b> gesehen · Rest: <b>≈ " + fmtMin(left) + "</b>";
+      $("#ewlStats").innerHTML = EN ? "<b>" + d2 + " / " + t2 + "</b> watched · left: <b>≈ " + fmtMin(left) + "</b>" : "<b>" + d2 + " / " + t2 + "</b> gesehen · Rest: <b>≈ " + fmtMin(left) + "</b>";
     }
   }
   function fmtMin(m) { var h = Math.floor(m / 60); return h + " h" + (m % 60 ? " " + (m % 60) + " min" : ""); }
@@ -175,12 +176,12 @@
     gsDrop.innerHTML = hits.map(function (e) {
       var th = e.i ? '<img src="' + e.i + '"' + (e.k === "c" ? ' class="sd-round"' : "") + ' alt="">' : '<div class="sd-fb">' + esc(e.t.charAt(0)) + "</div>";
       return '<a class="sd-row" href="' + PREFIX + e.u + '" style="text-decoration:none;color:inherit">' + th + "<div><div class=\"sd-t\">" + esc(e.t) + '</div><div class="sd-s">' + esc(e.s) + "</div></div></a>";
-    }).join("") || '<div class="sd-empty">Nichts gefunden — nicht mal im Void.</div>';
+    }).join("") || (EN ? '<div class="sd-empty">Nothing found — not even in the Void.</div>' : '<div class="sd-empty">Nichts gefunden — nicht mal im Void.</div>');
     gsDrop.hidden = false;
   }
   if (gsInput) {
     gsInput.addEventListener("focus", function () {
-      if (!INDEX) fetch("/assets/search.json").then(function (r) { return r.json(); }).then(function (d) { INDEX = d; gsRun(); });
+      if (!INDEX) fetch(EN ? "/assets/search-en.json" : "/assets/search.json").then(function (r) { return r.json(); }).then(function (d) { INDEX = d; gsRun(); });
     });
     gsInput.addEventListener("input", gsRun);
     gsInput.addEventListener("keydown", function (ev) {
@@ -315,10 +316,10 @@
       }
       ann.innerHTML = found.length
         ? found.slice(0, 3).map(function (h) {
-            var when = h.off === 0 ? "Heute" : h.off > 0 ? "In " + h.off + " Tag" + (h.off > 1 ? "en" : "") : "Vor " + (-h.off) + " Tag" + (h.off < -1 ? "en" : "");
-            return '<a class="anniv-row" href="' + h.a.u + '"><img src="' + h.a.i + '" alt="" loading="lazy"><div><b>' + when + " vor " + h.years + " Jahren:</b> " + h.a.t + " <span>(Kinostart " + h.a.d.split("-").reverse().join(".") + ")</span></div></a>";
+            var when = EN ? (h.off === 0 ? "Today" : h.off > 0 ? "In " + h.off + " day" + (h.off > 1 ? "s" : "") : (-h.off) + " day" + (h.off < -1 ? "s" : "") + " ago") : (h.off === 0 ? "Heute" : h.off > 0 ? "In " + h.off + " Tag" + (h.off > 1 ? "en" : "") : "Vor " + (-h.off) + " Tag" + (h.off < -1 ? "en" : ""));
+            return '<a class="anniv-row" href="' + h.a.u + '"><img src="' + h.a.i + '" alt="" loading="lazy"><div><b>' + when + (EN ? ", " + h.years + " years ago:</b> " : " vor " + h.years + " Jahren:</b> ") + h.a.t + " <span>(" + (EN ? "released " : "Kinostart ") + h.a.d.split("-").reverse().join(".") + ")</span></div></a>";
           }).join("")
-        : '<p class="anniv-empty">Diese Woche jährt sich kein Kinostart — das Multiversum macht Pause.</p>';
+        : (EN ? '<p class="anniv-empty">No release anniversary this week — the multiverse is taking a break.</p>' : '<p class="anniv-empty">Diese Woche jährt sich kein Kinostart — das Multiversum macht Pause.</p>');
     }
   }
 
@@ -379,9 +380,9 @@
       var panel = document.createElement("div");
       panel.className = "pcm-detail";
       panel.innerHTML = '<div class="pcm-d-title">' + esc(titleOf(id)) + "</div>" +
-        (inn.length ? '<div class="pcm-d-label">Kommt aus</div>' + inn.map(function (l) { return '<button class="pcm-jump" data-jump="' + l.from + '">↑ ' + esc(titleOf(l.from)) + "</button>"; }).join("") : "") +
-        (out.length ? '<div class="pcm-d-label">Abspann führt zu</div>' + out.map(function (l) { return '<button class="pcm-jump" data-jump="' + l.to + '">↓ ' + esc(titleOf(l.to)) + "</button>"; }).join("") : "") +
-        '<a class="pcm-open" href="' + row.dataset.url + '">Film-Dossier öffnen →</a>';
+        (inn.length ? '<div class="pcm-d-label">' + (EN ? 'Comes from' : 'Kommt aus') + '</div>' + inn.map(function (l) { return '<button class="pcm-jump" data-jump="' + l.from + '">↑ ' + esc(titleOf(l.from)) + "</button>"; }).join("") : "") +
+        (out.length ? '<div class="pcm-d-label">' + (EN ? 'Credits lead to' : 'Abspann führt zu') + '</div>' + out.map(function (l) { return '<button class="pcm-jump" data-jump="' + l.to + '">↓ ' + esc(titleOf(l.to)) + "</button>"; }).join("") : "") +
+        '<a class="pcm-open" href="' + row.dataset.url + '">' + (EN ? 'Open film dossier →' : 'Film-Dossier öffnen →') + '</a>';
       row.insertAdjacentElement("afterend", panel);
       if (scroll) row.scrollIntoView({ block: "center", behavior: "smooth" });
     }
@@ -429,7 +430,28 @@
   /* ---------- Doom-Modus (Easter Egg) ---------- */
   var evLogo = $(".ev-logo");
   if (document.body.getAttribute("data-page") === "event") {
-    var QUOTES = [
+    var QUOTES = EN ? [
+      "KNEEL.",
+      "DOOM DOES NOT ASK. DOOM COMMANDS.",
+      "EVERY STORY LEADS TO DOOM.",
+      "YOU CALL IT CONQUEST. DOOM CALLS IT ORDER.",
+      "NEW MASK. SAME TASK.",
+      "GODS? THERE ARE NO GODS. ONLY DOOM.",
+      "RICHARDS!",
+      "DOOM DOES NOT REPEAT HIMSELF.",
+      "THERE IS NO ONE LIKE DOOM.",
+      "DOOM DOES NOT FORGIVE. DOOM DOES NOT FORGET.",
+      "ONE COUNTRY. ONE KING. NO QUESTIONS.",
+      "YOU HAVE YOUR HEROES. LATVERIA HAS DOOM.",
+      "PERFECTION IS NOT AN ART. IT IS A DUTY.",
+      "EVEN THE MULTIVERSE KNEELS.",
+      "EVERYTHING YOU FEAR BEARS MY NAME.",
+      "MASKS DO NOT LIE. FACES DO.",
+      "TIME IS A TOOL. DOOM WIELDS IT.",
+      "COPY DOOM AND DIE A COPY.",
+      "DECEMBER 18. NO DELAYS.",
+      "BATTLEWORLD AWAITS."
+    ] : [
       "KNIET.",
       "DOOM BITTET NICHT. DOOM BEFIEHLT.",
       "EVERY STORY LEADS TO DOOM.",

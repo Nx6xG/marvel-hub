@@ -1,0 +1,358 @@
+{
+"teams": {
+"avengers": {
+"sub": "Earth's Mightiest Heroes",
+"status": "Disbanded — no official roster since Endgame",
+"desc": "Nick Fury's answer to a world full of threats: six egos, one team. They won New York, lost to Thanos, brought the universe back — and fell apart afterwards. That there has been no standing Avengers team for years is exactly the gap Doom is stepping into: Doomsday has to answer who inherits the name.",
+"n": "The Avengers"
+},
+"newavengers": {
+"sub": "the asterisk from Thunderbolts*",
+"status": "Active — naming rights disputed",
+"desc": "Valentina's suicide squad of antiheroes that accidentally became a family — and is being marketed by her as the 'New Avengers', much to Sam Wilson's annoyance. With Sentry they have the planet's strongest (and most unstable) weapon in their ranks. In Doomsday they stand on the front line."
+},
+"fantasticfour": {
+"sub": "Marvel's first family",
+"status": "Active — on Earth-828",
+"desc": "Four astronauts, a storm of cosmic radiation, one family. On their retro-future world of Earth-828 they are world-savers and pop stars at once. Their greatest miracle is also their greatest vulnerability: Franklin — the child Doom has taken."
+},
+"xmen": {
+"sub": "Xavier's dream",
+"status": "Fox era over — Doomsday comeback",
+"desc": "Mutants protecting a world that fears and hates them. The Fox series launched modern superhero cinema and ended quietly with Dark Phoenix — until Doomsday brought the original cast back. Xavier's dream gets one last great chapter."
+},
+"bruderschaft": {
+"sub": "Magneto's way",
+"status": "Disbanded or on the move, depending on the timeline",
+"desc": "Magneto's answer to Xavier's dream: if humanity hunts mutants, mutants strike first. Not villains in their own eyes — survivors. The eternal antithesis, which in Doomsday might become an ally.",
+"n": "Brotherhood of Mutants"
+},
+"guardians": {
+"sub": "a-holes, but ours",
+"status": "Re-formed under Rocket",
+"desc": "A thief, two killers, a destroyer, a tree and a genius non-raccoon: the most dysfunctional family in the galaxy. After Vol. 3 almost everyone went their own way — Captain Rocket leads the next generation from Knowhere."
+},
+"youngavengers": {
+"sub": "the next generation",
+"status": "Unofficial — Kamala is already recruiting",
+"desc": "Not an official team yet, but the bench is fully stocked: Kamala has already signed Kate, Cassie has fought since Quantumania, America travels between worlds, Wiccan rewrites reality. Marvel's most obvious plan for the time after Secret Wars."
+},
+"tva": {
+"sub": "for all time. Always.",
+"status": "Active — now multiverse protection instead of timeline police",
+"desc": "The agency at the end of time: once enforcer of the Sacred Timeline, today disaster control for a sprawling multiverse. Recently recruited Deadpool. If Doom attacks the timelines, the TVA is the first line of defense — or the first casualty."
+},
+"illuminati": {
+"sub": "Earth-838",
+"status": "Wiped out — by Wanda",
+"desc": "The secret council of Earth-838: Professor X, Captain Carter, Captain Marvel (Maria Rambeau), Black Bolt, Mister Fantastic (John Krasinski) and Karl Mordo — they executed their own Strange and thought themselves untouchable. Wanda needed about four minutes. A power demonstration showing what variants are worth when a madwoman walks the multiverse.",
+"n": "The Illuminati"
+},
+"wakanda": {
+"sub": "Wakanda forever",
+"status": "Sovereign — between all fronts",
+"desc": "The most advanced nation on Earth, home of vibranium and the Black Panther line. After T'Challa's death Shuri wears the mantle, M'Baku reaches for the throne — and with Namor's Talokan an equal power exists for the first time. In Doomsday, Wakanda's vibranium is a prize being fought over."
+},
+"spidersociety": {
+"sub": "everyone wears the mask — by the book",
+"status": "Active — and after Miles",
+"desc": "Hundreds of spider-people from every dimension, united under Miguel O'Hara's iron dogma of 'canon events': certain tragedies must happen or the universe dies. Miles Morales is the living contradiction — and therefore their most wanted man."
+},
+"sinistersix": {
+"sub": "five villains, one spell",
+"status": "Never officially assembled",
+"desc": "The team that never quite existed: Sony planned the Sinister Six since the Amazing era; No Way Home at least gathered five multiverse villains (with Sandman and Lizard) against three Spider-Men. Mysterio and Vulture remain eternal candidates. Green Goblin meanwhile proved one man with bombs is enough to destroy everything.",
+"n": "Sinister Six (unfinished)"
+},
+"kamartaj": {
+"sub": "Kamar-Taj",
+"status": "Active — Wong is the boss",
+"desc": "The ancient order protecting Earth from magical threats — from the Dark Dimension to multiversal rifts. The Sorcerer Supreme, by the way, is Wong, not Strange, and he lets no one forget it. Against a sorcerer like Doom, they are needed like never before.",
+"n": "The Masters of the Mystic Arts"
+},
+"hausdoom": {
+"sub": "Every Story leads to Doom",
+"status": "Forming — details classified",
+"mlabel": "Confirmed & suspected",
+"desc": "The faction Marvel stays silent about: what we know comes from trailers and Hall H — Doom commands a Sentinel army, keeps Franklin Richards at his side and stops Stormbreaker bare-handed. Who else fights for Latveria (bought variants? broken heroes? Mephisto contracts?) is the biggest open question before December 18. The slots in this dossier stay empty — for now.",
+"n": "House of Doom"
+},
+"blackorder": {
+"sub": "children of Thanos",
+"status": "Wiped out — twice",
+"mlabel": "The father & the escaped",
+"desc": "Thanos' fanatical adopted children, who depopulated worlds for 'father': Ebony Maw, the whispering mouthpiece, plus Proxima Midnight, Corvus Glaive and Cull Obsidian. Gamora and Nebula were the only 'children' who escaped. The Order died in 2018 — and their 2014 versions died again in Endgame.",
+"n": "The Black Order"
+},
+"hydra": {
+"sub": "Cut off one head …",
+"status": "Crushed — officially",
+"mlabel": "Weapon against his will & profiteer",
+"desc": "Red Skull's Nazi science cult that secretly lived on inside S.H.I.E.L.D. after the war — 'Hail Hydra' became the MCU's biggest twist in 2014. Their cruelest creation: the Winter Soldier, Bucky's stolen 70 years. Officially crushed, but with Hydra 'officially' means little."
+},
+"eternals": {
+"sub": "10 immortals, 7,000 years of secrets",
+"status": "Scattered — Arishem's verdict pending",
+"desc": "Sent by the Celestials to protect humanity — in truth, to let it ripen as a Celestial incubator. They prevented the birth of Tiamut and were called to account: Arishem took Sersi, Phastos and Kingo. The MCU has been waiting for the resolution since 2021.",
+"n": "The Eternals"
+},
+"ravagers": {
+"sub": "pirates with a code of honor",
+"status": "Active — 100 factions, zero manners",
+"desc": "Space privateers with their own code ('Ravagers don't deal in kids' — Yondu's broken rule saved Quill). At Yondu's funeral the entire fleet paid its respects — the emotional peak of Vol. 2. Kraglin carries on Yondu's legacy with the Yaka arrow.",
+"n": "The Ravagers"
+},
+"talokan": {
+"sub": "the realm beneath the sea",
+"status": "Sovereign — in a cold peace with Wakanda",
+"desc": "When the conquistadors came, a Maya people fled into the sea with vibranium-infused plant power. Their god-king K'uk'ulkan — 'Namor', the child without love — waged war on Wakanda and settled into cold peace. The world's second vibranium power, and Doom wants vibranium."
+},
+"xforce": {
+"sub": "Deadpool's elite squad™",
+"status": "87.5% dead on the jump",
+"mlabel": "Survivors & stragglers",
+"desc": "Wade's handpicked team for exactly one mission: a parachute jump in a wind advisory. Zeitgeist into the wood chipper, Vanisher into the power line, Peter — sweet, innocent Peter. Only Domino survived, because 'luck' really is a superpower. The meanest team parody of the genre."
+},
+"doramilaje": {
+"sub": "Wakanda's royal guard",
+"status": "Active — General Okoye as Midnight Angel",
+"mlabel": "General & protégée",
+"desc": "Wakanda's elite women warriors, sworn to the throne, not to the person on it — as Okoye painfully proved against Killmonger. Fought in every major battle since 2016; Ayo and Aneka now wear the Midnight Angel armors.",
+"n": "The Dora Milaje"
+}
+},
+"universes": {
+"616": {
+"n": "The main MCU",
+"status": "Active — setting of nearly every MCU story",
+"d": "Home of the Avengers, from Iron Man 2008 to Thunderbolts*. Fun fact for purists: officially this world was long called Earth-199999 — only Multiverse of Madness christened it 616, the number of the main comics world. That nerd fight is still running."
+},
+"828": {
+"n": "World of the Fantastic Four",
+"status": "Active — until Doom came",
+"d": "The retro-future of the First Family: flying cars, sixties optimism, a defeated Galactus. The number honors Jack Kirby's birthday (August 28). How the F4 get from here into the main MCU is one of Doomsday's core questions."
+},
+"838": {
+"n": "The Illuminati world",
+"status": "Bruised — Illuminati dead",
+"d": "Here a secret council of Professor X, Captain Carter, Mister Fantastic and co. ruled — until the Scarlet Witch dropped by. Proved: there are worlds where X-Men and F4 have long existed."
+},
+"10005": {
+"n": "The Fox universe",
+"status": "Dying — anchor being deceased",
+"d": "Twenty years of X-Men films happen here. The anchor being was Logan; since his death (2029) the world has been slowly dying — Deadpool prevented the TVA's pruning and hooked the world up to the MCU multiverse."
+},
+"96283": {
+"n": "The Raimi world",
+"status": "Dormant — Peter still swings",
+"d": "Tobey Maguire's New York: organic webbing, Doc Ock, the emo dance. Its Peter helped out in the MCU in 2021 and went home with a healed back."
+},
+"120703": {
+"n": "The Amazing world",
+"status": "Dormant — he caught her",
+"d": "Andrew Garfield's world, marked by Gwen's death. His NWH appearance gave the character the closure two of his own films never managed."
+},
+"ssu": {
+"n": "Sony's Venom world",
+"status": "Discontinued — never officially numbered",
+"d": "Venom, Morbius, Madame Web, Kraven: a universe without Spider-Man, shut down after five years. One drop of symbiote, however, still sits on a bar counter in the MCU …"
+},
+"1610": {
+"n": "Miles' world",
+"status": "Active — animation",
+"d": "Home of Miles Morales in the Spider-Verse (numbered after the Ultimate comics). Currently in acute canon crisis — the sequel is pending."
+},
+"65": {
+"n": "Gwen's world",
+"status": "Active — animation",
+"d": "Earth-65: here Gwen Stacy got bitten and Peter died. Watercolor visuals, band drama, her own spider crew."
+},
+"whatif": {
+"n": "The What If worlds",
+"status": "Infinite — catalogued by the Watcher",
+"d": "Every decision births a universe: zombie apocalypses, Captain Carter, an Ultron with all six stones, Party Thor. The Watcher observes them all — and the Guardians of the Multiverse proved variants make world-class teams too."
+},
+"tva": {
+"n": "TVA, Void & the end of time",
+"status": "Outside any numbering",
+"d": "Not a universe but the space between: the TVA headquarters, the Void with Alioth as garbage disposal — and at the end of time Loki's throne, where all timelines converge."
+},
+"battleworld": {
+"n": "Battleworld",
+"status": "Forecast — per the comics",
+"d": "It does not exist yet: the patchwork planet Doom forges from the wreckage of dead universes in the comics. If Doomsday ends the way we suspect, THIS is the stage of Secret Wars."
+},
+"vormcu": {
+"n": "The pre-MCU era",
+"status": "Scattered island worlds — 1986 to 2012",
+"d": "Before there was a 'universe' there were islands: Blade's nights, Ang Lee's Hulk, Cage's burning skull, Affleck's Daredevil — and in 1986 the duck that started it all (badly). None of these worlds was ever numbered; the multiverse has room for them anyway."
+}
+},
+"threads": [
+{
+"n": "The Ten Rings signal",
+"status": "likely Doomsday",
+"d": "Wong, Carol and Bruce established: the rings are older than anything known and are broadcasting a beacon — to whom? Simu Liu is in the Doomsday cast; five years of waiting might pay off in December."
+},
+{
+"n": "The symbiote on the counter",
+"status": "orphaned since Sony's shutdown",
+"d": "When Eddie got pulled back to his universe, a drop of Venom stayed behind in Earth-616. The plan was presumably an MCU Venom for Holland's Peter — then Sony's universe was discontinued. The drop is still sitting there."
+},
+{
+"n": "Clea's incursion mission",
+"status": "likely Doomsday/Secret Wars",
+"d": "Charlize Theron recruited Strange to repair an incursion 'that you caused' — then four years of silence. Since incursions are THE Doomsday mechanism, there is really no way around this payoff."
+},
+{
+"n": "Arishem's verdict on Earth",
+"status": "frozen",
+"d": "The Celestial dragged Sersi, Phastos and Kingo into space: he would judge humanity. A planet-sized sword of Damocles has hung over Earth ever since, and no film has mentioned it again."
+},
+{
+"n": "Eros, brother of Thanos",
+"status": "frozen",
+"d": "Harry Styles as Starfox, with troll sidekick Pip — a casting coup that never resurfaced. Rumor says he fell victim to the saga reshuffles. The multiverse forgets nothing; Marvel sometimes does."
+},
+{
+"n": "Blade & the Ebony Blade",
+"status": "ghost project",
+"d": "'Sure you're ready for that, Mr. Whitman?' — Mahershala Ali's voice, a cursed sword, and since then: five screenwriters, two directors, zero release. Marvel's most famous non-project."
+},
+{
+"n": "The Council of Kangs",
+"status": "likely cleaned up by Doomsday",
+"d": "Thousands of Kang variants convened an assembly — then their actor was dismissed and the plan buried. In the comics it is Doom who ends Kang's chaos. The elegant solution is on the table."
+},
+{
+"n": "Prince Toussaint",
+"status": "long-game seed",
+"d": "T'Challa's secret son grows up in Haiti, far from the throne. A time bomb: someday Wakanda will need a king — and the MCU a new T'Challa."
+},
+{
+"n": "Hercules hunts Thor",
+"status": "forgotten?",
+"d": "Zeus sent his son (Brett Goldstein!) on a revenge mission against Thor. Four years later: not a word. Hemsworth is in the Doomsday cast — maybe the bill travels with him."
+},
+{
+"n": "Knull, the symbiote god",
+"status": "orphaned since Sony's shutdown",
+"d": "'My deathbringer will come' — a god wakes in the dark, and the studio shuts down the series. The biggest teased villain who never got a film. Unless the MCU adopts him."
+},
+{
+"n": "The whereabouts of E.D.I.T.H.",
+"status": "open",
+"d": "After the forgetting spell nobody knows Peter Parker — but who owns the glasses with access to Stark's weapons network now? Brand New Day would be the place for the answer."
+},
+{
+"n": "'The others are coming'",
+"status": "→ Doomsday, almost certainly",
+"d": "The Leader sees every probability — and warned Sam from his cell about 'the others': other worlds. The most direct Doomsday premonition in MCU canon."
+},
+{
+"n": "Beyond the Spider-Verse",
+"status": "in the works — someday",
+"d": "Miles trapped in the wrong dimension, his counterpart is the Prowler, Gwen's crew on the way — the genre's meanest cliffhanger has been waiting for part three for years. Sony promises: soon. Sony promises a lot."
+},
+{
+"n": "Tommy Maximoff",
+"status": "Young Avengers seed",
+"d": "Billy lives as Wiccan — but his twin Tommy (Speed) is still out there, 'in another body'. The twins' search is the most obvious next step toward the Young Avengers."
+},
+{
+"n": "Sharon Carter, Power Broker",
+"status": "open",
+"d": "The pardoned agent with government clearance sells secrets to the highest bidder — staged as a post-credit bombshell and never touched again."
+}
+],
+"chronik": [
+{
+"n": "The foundations",
+"d": "Celestials seed planets, a vibranium meteorite hits the future Wakanda, Ego grows himself into a planet — and the Eternals take up their posts on Earth."
+},
+{
+"n": "Odin's realm & the rings",
+"d": "Odin and Hela conquer the Nine Realms (Hela is then locked away and erased from the history books); on Earth, Wenwu finds the Ten Rings and founds his shadow empire."
+},
+{
+"n": "The first Avenger",
+"d": "Steve Rogers becomes a super soldier, fights Hydra and the Tesseract — and buries himself in the ice in 1945. Peggy founds S.H.I.E.L.D. afterwards; Hydra secretly moves in too."
+},
+{
+"n": "A duck strands",
+"d": "Not canon, but historic: Howard the Duck lands in Cleveland — Marvel's first theatrical film. The real Howard, by the way, sits with the Collector today."
+},
+{
+"n": "A boy is abducted",
+"d": "Yondu's Ravagers take little Peter Quill from Earth — and never deliver him to Ego. The galaxy's finest broken rule."
+},
+{
+"n": "Carol's war",
+"d": "Carol Danvers dismantles a Kree invasion, Fury loses his eye to a Flerken and starts keeping a list of remarkable people. The pager changes hands."
+},
+{
+"n": "'I am Iron Man'",
+"d": "Tony Stark outs himself live — the era of public superheroes begins. Shortly after, the Hulk wrecks Harlem and Samuel Sterns gets Banner blood in his wound."
+},
+{
+"n": "Gods & legends",
+"d": "Thor crashes into New Mexico, Loki reaches for the throne, S.H.I.E.L.D. finds a man in the ice. The world grows much bigger within weeks."
+},
+{
+"n": "The Battle of New York",
+"d": "Loki opens a portal over Manhattan; six heroes become a team. On the side (via the 2023 time-travel chaos) the Loki variant is born who will later carry all timelines."
+},
+{
+"n": "The year of ruptures",
+"d": "Hydra blows up S.H.I.E.L.D. from inside, the Guardians save Xandar, and on Morag an orb is stolen that shifts the universe's balance of power."
+},
+{
+"n": "Sokovia falls",
+"d": "Ultron lives three days and lifts a city into the sky. Vision is born, Wanda becomes an Avenger — and the world starts fearing heroes."
+},
+{
+"n": "The civil war",
+"d": "The Sokovia Accords split the Avengers; Zemo's tape does the rest. When the heroes' war ends there is no team anymore — only factions."
+},
+{
+"n": "Ragnarök & other disasters",
+"d": "Asgard goes down (planned), Hela goes with it (unplanned), Strange learns magic, Peter Parker catches ferries. The densest hero year in history."
+},
+{
+"n": "The Snap",
+"d": "Thanos collects six stones in two days. Half of all life crumbles to dust — Wakanda loses its king, a New York bus its passenger."
+},
+{
+"n": "The five dark years",
+"d": "A halved world learns to keep living: grief groups, rat coincidences, a Thor with a beer belly, a Natasha holding the shop together."
+},
+{
+"n": "Blip & Endgame",
+"d": "The Time Heist succeeds, everyone returns, the battle for Earth rages. Tony snaps and dies, Steve stays in the past, Sam receives the shield."
+},
+{
+"n": "The year of cracks",
+"d": "Wanda creates Westview, Peter is unmasked — and makes the world forget itself. Three Spider-Men, five villains, one spell: the multiverse is no longer a theory."
+},
+{
+"n": "Incursions & wars",
+"d": "Strange learns the word 'incursion' the hard way, Wanda falls with the Darkhold, Talokan declares war on Wakanda, and in the Quantum Realm a conqueror waits."
+},
+{
+"n": "The vulnerable world",
+"d": "The President turns into the Red Hulk on live TV, adamantium sparks a race, the Void swallows half of New York — after which a mercenary crew calls itself 'New Avengers'. The Leader warns: the others are coming."
+},
+{
+"n": "On the eve",
+"d": "Peter Parker starts over (Brand New Day, in theaters since July 31), White Vision searches for himself — and somewhere on Earth-828 a figure in a metal mask kneels before a child."
+},
+{
+"n": "Doomsday",
+"d": "Every Story leads to Doom. Avengers, New Avengers, Fantastic Four and the original X-Men against the man who believes he is salvation."
+},
+{
+"n": "Secret Wars",
+"d": "The finale of the Multiverse Saga. If the comics are right: Battleworld, God Emperor Doom — and a newly ordered Marvel universe afterwards."
+}
+]
+}

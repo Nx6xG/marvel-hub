@@ -1007,6 +1007,49 @@
       }
      ]
     }
+   ],
+   "eps_en": [
+    {
+     "s": 1,
+     "eps": [
+      {
+       "n": "Filmed Before a Live Studio Audience",
+       "o": "Wanda and Vision struggle to conceal their powers during dinner with Vision’s boss and his wife."
+      },
+      {
+       "n": "Don't Touch That Dial",
+       "o": "In an effort to fit in, Wanda and Vision perform a magic act in their community talent show."
+      },
+      {
+       "n": "Now in Color",
+       "o": "Wanda's pregnancy fritzes her powers as she and Vision prepare for an accelerated delivery."
+      },
+      {
+       "n": "We Interrupt This Program",
+       "o": "Monica Rambeau, tasked with a special assignment regarding sentient weapons, goes missing."
+      },
+      {
+       "n": "On a Very Special Episode...",
+       "o": "Wanda addresses Vision's worries when he grows suspicious of the neighbors' strange behavior."
+      },
+      {
+       "n": "All-New Halloween Spooktacular!",
+       "o": "Disturbances on Halloween separate Wanda from Vision, who looks into anomalous activity in Westview."
+      },
+      {
+       "n": "Breaking the Fourth Wall",
+       "o": "Monica plots her return to the anomaly while Wanda navigates a slew of unsettling complications, and Vision forms a new alliance to help."
+      },
+      {
+       "n": "Previously On",
+       "o": "Wanda embarks on a troubling journey revisiting her past for insight into her present and future."
+      },
+      {
+       "n": "The Series Finale",
+       "o": "The events of WandaVision come to a head, and the destinies of all who took part are determined."
+      }
+     ]
+    }
    ]
   },
   "fws": {
@@ -1086,6 +1129,37 @@
        "d": "2021-04-23",
        "o": "Sam und Bucky verschlägt es nach New York City zur Abstimmung des Global Repatriation Council. Joaquin Torres hat die Flag-Smasher-Aktivitäten per App aufgespürt. Dabei brauchen si",
        "v": 7
+      }
+     ]
+    }
+   ],
+   "eps_en": [
+    {
+     "s": 1,
+     "eps": [
+      {
+       "n": "New World Order",
+       "o": "Sam Wilson and Bucky Barnes realize that their futures are anything but normal."
+      },
+      {
+       "n": "The Star-Spangled Man",
+       "o": "John Walker is named Captain America, and Sam and Bucky team up against a rebel group."
+      },
+      {
+       "n": "Power Broker",
+       "o": "Sam and Bucky go to a criminal safe haven to find information about the Super Soldier serum."
+      },
+      {
+       "n": "The Whole World Is Watching",
+       "o": "John Walker loses patience with Sam and Bucky as they learn more about Karli Morgenthau."
+      },
+      {
+       "n": "Truth",
+       "o": "John Walker faces consequences for his actions, and Sam and Bucky return to the U.S."
+      },
+      {
+       "n": "One World, One People",
+       "o": "As The Flag Smashers escalate their efforts, Sam and Bucky take action."
       }
      ]
     }
@@ -1209,6 +1283,66 @@
        "d": "2023-11-09",
        "o": "Loki erkennt die wahre Natur seines \"glorreichen Ansinnens\" und ändert die Vergangenheit.",
        "v": 8.4
+      }
+     ]
+    }
+   ],
+   "eps_en": [
+    {
+     "s": 1,
+     "eps": [
+      {
+       "n": "Glorious Purpose",
+       "o": "After stealing the Tesseract in \"Avengers: Endgame,\" Loki lands before the Time Variance Authority."
+      },
+      {
+       "n": "The Variant",
+       "o": "Mobius puts Loki to work, but not everyone at TVA is thrilled about the God of Mischief's presence."
+      },
+      {
+       "n": "Lamentis",
+       "o": "Loki finds out The Variant's plans, but he has his own that will forever alter both their destinies."
+      },
+      {
+       "n": "The Nexus Event",
+       "o": "Frayed nerves and paranoia infiltrate the TVA as Mobius and Hunter B-15 search for Loki and Sylvie."
+      },
+      {
+       "n": "Journey into Mystery",
+       "o": "Loki tries to escape The Void, a desolate purgatory where he meets variant versions of himself."
+      },
+      {
+       "n": "For All Time. Always.",
+       "o": "The clock is ticking in the season finale which finds Loki and Sylvie on a date with destiny."
+      }
+     ]
+    },
+    {
+     "s": 2,
+     "eps": [
+      {
+       "n": "Ouroboros",
+       "o": "Loki finds himself lost to time and torn, quite literally, between past, present and future."
+      },
+      {
+       "n": "Breaking Brad",
+       "o": "With the TVA on the verge of a temporal meltdown, Loki & Mobius will stop at nothing to find Sylvie."
+      },
+      {
+       "n": "1893",
+       "o": "Loki & Mobius go on the hunt to find everyone’s favorite cartoon clock as they try to save the TVA."
+      },
+      {
+       "n": "Heart of the TVA",
+       "o": "The TVA's Loom nears catastrophic failure but Loki, Mobius and Sylvie have a He Who Remains variant."
+      },
+      {
+       "n": "Science/Fiction",
+       "o": "Loki traverses dying timelines in an attempt to find his friends, but Reality is not what it seems."
+      },
+      {
+       "n": "Glorious Purpose",
+       "o": "Loki learns the true nature of 'glorious purpose' as he rectifies the past."
       }
      ]
     }
@@ -1463,6 +1597,127 @@
       }
      ]
     }
+   ],
+   "eps_en": [
+    {
+     "s": 1,
+     "eps": [
+      {
+       "n": "What If... Captain Carter Were the First Avenger?",
+       "o": "When Steve Rogers is seriously injured, Peggy Carter becomes the world’s first Super Soldier."
+      },
+      {
+       "n": "What If... T'Challa Became a Star-Lord?",
+       "o": "The rough-and-tumble space pirates known as the Ravagers abduct T’Challa instead of Peter Quill."
+      },
+      {
+       "n": "What If... The World Lost Its Mightiest Heroes?",
+       "o": "Nick Fury struggles to launch The Avengers when candidates are targeted by a serial killer."
+      },
+      {
+       "n": "What If... Doctor Strange Lost His Heart Instead of His Hands?",
+       "o": "A grief-stricken Doctor Strange uses the Eye of Agamotto in a dangerous effort to change the past."
+      },
+      {
+       "n": "What If... Zombies!?",
+       "o": "When The Avengers are infected by a zombie plague, surviving heroes search for a cure."
+      },
+      {
+       "n": "What If... Killmonger Rescued Tony Stark?",
+       "o": "An American soldier called Killmonger rescues Tony Stark when his Humvee is attacked in Afghanistan."
+      },
+      {
+       "n": "What If... Thor Were an Only Child?",
+       "o": "Thor, who never learned to be a good hero, throws an out-of-control intergalactic party on Earth."
+      },
+      {
+       "n": "What If... Ultron Won?",
+       "o": "Natasha Romanoff and Clint Barton seek to destroy killer-robot Ultron following a cataclysmic event."
+      },
+      {
+       "n": "What If... The Watcher Broke His Oath?",
+       "o": "The Watcher breaks his oath and recruits heroes from across the multiverse to battle against Ultron."
+      }
+     ]
+    },
+    {
+     "s": 2,
+     "eps": [
+      {
+       "n": "What If... Nebula Joined the Nova Corps?",
+       "o": "When Nebula is recruited to join the Nova Corps, she sets out to prove her detective skills."
+      },
+      {
+       "n": "What If... Peter Quill Attacked Earth's Mightiest Heroes?",
+       "o": "When Ego and a young Peter Quill threaten Earth in 1988, Howard Stark and Peggy Carter form a team."
+      },
+      {
+       "n": "What If... Happy Hogan Saved Christmas?",
+       "o": "When Avengers Tower is attacked during the holiday party, Happy Hogan must prove his hero chops."
+      },
+      {
+       "n": "What If... Iron Man Crashed Into the Grandmaster?",
+       "o": "Tony Stark challenges The Grandmaster, leading to a grand prix-turned-demolition-derby death match."
+      },
+      {
+       "n": "What If... Captain Carter Fought the Hydra Stomper?",
+       "o": "Captain Carter's mission to save Steve Rogers sets her on a collision course with new enemies."
+      },
+      {
+       "n": "What If... Kahhori Reshaped the World?",
+       "o": "A Mohawk woman ventures into the waters of the Forbidden Lake to help save her people."
+      },
+      {
+       "n": "What If... Hela Found the Ten Rings?",
+       "o": "Hela—stripped of her powers and banished to Earth—comes across a new source of power: the Ten Rings."
+      },
+      {
+       "n": "What If... The Avengers Assembled in 1602?",
+       "o": "Captain Carter tries to undo the anomaly that strands familiar heroes and villains in the year 1602."
+      },
+      {
+       "n": "What If... Strange Supreme Intervened?",
+       "o": "Captain Carter discovers the greatest threat to all existence may be closer than she realizes."
+      }
+     ]
+    },
+    {
+     "s": 3,
+     "eps": [
+      {
+       "n": "What If... The Hulk Fought the Mech Avengers?",
+       "o": "Captain America/Sam Wilson must suit up in a colossal mech suit to battle Bruce Banner after an attempt to cure himself of the Hulk goes horribly wrong. Bucky Barnes, Monica Rambeau, Moon Knight, and others must join Sam as his new team of Mech Avengers."
+      },
+      {
+       "n": "What If... Agatha Went to Hollywood?",
+       "o": "On the set of Stark Pictures' first production, the playboy auteur quickly finds himself enchanted by his bewitching lead actress, Agatha Harkness. Little does she know there will be another superpower co-star on the call sheet… Kingo."
+      },
+      {
+       "n": "What If... The Red Guardian Stopped the Winter Soldier?",
+       "o": "It is 1991, and the Red Guardian takes it upon himself to join a high-profile mission and prove himself to his Red Room superiors. When his antics interfere with the Winter Soldier's own mission to kill Howard Stark, the two Soviet supersoldiers must form an alliance to escape the United States."
+      },
+      {
+       "n": "What If... Howard the Duck Got Hitched?",
+       "o": "Howard the Duck and Darcy Lewis find themselves on an intergalactic pleasure cruise. When dangerous factions from across the galaxy descend to threaten their trip, they must discover their own cosmic powers to withstand the onslaught."
+      },
+      {
+       "n": "What If... The Emergence Destroyed the Earth?",
+       "o": "In a Universe where The Eternals never stopped The Emergence, the birth of an incubating Celestial shatters the Earth. Civilization endures on the rocky remnants of our planet, where Quentin Beck leads an authoritarian regime until freedom fighters recruit Riri Williams on a deadly mission to take h"
+      },
+      {
+       "n": "What If... 1872?",
+       "o": "In a universe where the heroes of the MCU live in the Old West, Shang-Chi and his pistol-packing partner, Kate Bishop, traverse the frontier, saving the innocent from the evils of The Hood."
+      },
+      {
+       "n": "What If... The Watcher Disappeared? (1)",
+       "o": "The Watcher must stand trial for his many interventions."
+      },
+      {
+       "n": "What If... What If? (2)",
+       "o": "The end of the beginning..."
+      }
+     ]
+    }
    ]
   },
   "sc": {
@@ -1623,6 +1878,37 @@
       }
      ]
     }
+   ],
+   "eps_en": [
+    {
+     "s": 1,
+     "eps": [
+      {
+       "n": "Never Meet Your Heroes",
+       "o": "Archer Kate Bishop lands in the middle of a criminal conspiracy, forcing Hawkeye out of retirement."
+      },
+      {
+       "n": "Hide and Seek",
+       "o": "Clint has to help Kate disentangle herself from the Tracksuit mafia and a real-life murder mystery."
+      },
+      {
+       "n": "Echoes",
+       "o": "After narrowly escaping the Tracksuits and their daunting leader Maya Lopez, Clint and Kate work together to find answers. With each step they take, however, they find themselves sliding deeper into a rapidly growing criminal conspiracy."
+      },
+      {
+       "n": "Partners, Am I Right?",
+       "o": "Secrets are revealed and hard truths emerge, culminating in a battle against two opposing forces."
+      },
+      {
+       "n": "Ronin",
+       "o": "After a fallout between Clint and Kate, the younger archer is ready to abandon her dream of becoming a hero. Meanwhile, a guilt-ridden Clint prepares to go face-to-face with the Tracksuit mafia, owning up to past actions. Everything changes, however, when Kate makes a surprising discovery."
+      },
+      {
+       "n": "So This Is Christmas?",
+       "o": "Clint and Kate’s partnership is tested as they face the consequences of exposing the conspiracy."
+      }
+     ]
+    }
    ]
   },
   "nwh": {
@@ -1745,6 +2031,37 @@
       }
      ]
     }
+   ],
+   "eps_en": [
+    {
+     "s": 1,
+     "eps": [
+      {
+       "n": "The Goldfish Problem",
+       "o": "Steven Grant, a mild-mannered man who works a mundane job, begins to suspect that his life may not be his own when an alter living inside him begins to emerge."
+      },
+      {
+       "n": "Summon the Suit",
+       "o": "As Steven reels from the fact that his life may not be his own, a mysterious partner emerges from the past as a war of the gods looms on the horizon."
+      },
+      {
+       "n": "The Friendly Type",
+       "o": "With Marc in the forefront and Harrow near Ammit’s tomb, Marc needs to navigate Cairo while putting his differences aside with Layla and Steven without jeopardizing their mission."
+      },
+      {
+       "n": "The Tomb",
+       "o": "Marc & Steven trek the Siwa Desert with Layla to find Ammit’s tomb, but the threats ahead look to protect the goddess’ resting place."
+      },
+      {
+       "n": "Asylum",
+       "o": "Marc & Steven search through their memories to find their truth or become left behind."
+      },
+      {
+       "n": "Gods and Monsters",
+       "o": "With Layla tracking down Harrow, Marc, Steven, and Khonshu must return to Cairo to stop Ammit as she looks to threaten humanity once more."
+      }
+     ]
+    }
    ]
   },
   "mom": {
@@ -1864,6 +2181,37 @@
        "d": "2022-07-13",
        "o": "Kamala ist wieder in New Jersey, wo sie Kamran findet und ihn vor Damage Control beschützen muss, die vor nichts Halt machen würden, um ihn festzunehmen.",
        "v": 5.8
+      }
+     ]
+    }
+   ],
+   "eps_en": [
+    {
+     "s": 1,
+     "eps": [
+      {
+       "n": "Generation Why",
+       "o": "Kamala Khan attends Avengercon only to discover that she herself might have superpowers."
+      },
+      {
+       "n": "Crushed",
+       "o": "Kamala and Bruno explore the source of her newfound powers just in time for a perilous adventure."
+      },
+      {
+       "n": "Destined",
+       "o": "Ahead of Aamir’s wedding, Kamala may face grave consequences due to a crucial decision she makes."
+      },
+      {
+       "n": "Seeing Red",
+       "o": "Kamala travels around the world to solve the mystery of the bangle and her family’s history."
+      },
+      {
+       "n": "Time and Again",
+       "o": "The bangle reveals to Kamala secrets about her family lineage, as well as the truth behind the Veil."
+      },
+      {
+       "n": "No Normal",
+       "o": "Back in Jersey, Kamala finds Kamran and protects him from Damage Control who will stop at nothing to take him in."
       }
      ]
     }
@@ -2004,6 +2352,49 @@
        "d": "2022-10-13",
        "o": "Jen gerät mit dem Gesetz in Konflikt und versucht ihr Leben wieder in die richtige Bahn zu lenken.",
        "v": 5.9
+      }
+     ]
+    }
+   ],
+   "eps_en": [
+    {
+     "s": 1,
+     "eps": [
+      {
+       "n": "A Normal Amount of Rage",
+       "o": "Jen Walters’s world is turned upside down after a freak accident leaves her with superpowers."
+      },
+      {
+       "n": "Superhuman Law",
+       "o": "Jen is hired at a prestigious law firm but must practice as She-Hulk and rep a complicated client."
+      },
+      {
+       "n": "The People vs. Emil Blonsky",
+       "o": "She-Hulk represents Emil Blonsky aka The Abomination, but his parole hearing doesn’t go as planned."
+      },
+      {
+       "n": "Is This Not Real Magic?",
+       "o": "She-Hulk’s new client Wong is suing a magician for unauthorized use of the Mystic Arts."
+      },
+      {
+       "n": "Mean, Green, and Straight Poured into These Jeans",
+       "o": "She-Hulk discovers Titania owns the name “She-Hulk” and is suing her for trademark infringement."
+      },
+      {
+       "n": "Just Jen",
+       "o": "Jen is a bridesmaid in a friend’s wedding, a stressful event compounded by uniquely She-Hulk issues."
+      },
+      {
+       "n": "The Retreat",
+       "o": "Jen visits Blonsky’s wellness retreat, meets new friends and gets in touch with her inner She-Hulk."
+      },
+      {
+       "n": "Ribbit and Rip It",
+       "o": "She-Hulk represents Leap-Frog who was injured due to a malfunction in his custom-made super suit."
+      },
+      {
+       "n": "Whose Show Is This?",
+       "o": "Jen finds herself in trouble with the law and struggles to pick up the pieces of her life."
       }
      ]
     }
@@ -2209,6 +2600,37 @@
       }
      ]
     }
+   ],
+   "eps_en": [
+    {
+     "s": 1,
+     "eps": [
+      {
+       "n": "Resurrection",
+       "o": "Nick Fury learns of a clandestine invasion of Earth by Skrulls."
+      },
+      {
+       "n": "Promises",
+       "o": "Fury grapples with past and present."
+      },
+      {
+       "n": "Betrayed",
+       "o": "Fury uncovers a rebel Skrull plot."
+      },
+      {
+       "n": "Beloved",
+       "o": "Fury must make some hard sacrifices."
+      },
+      {
+       "n": "Harvest",
+       "o": "Fury gathers his allies. Gravik deals with unrest."
+      },
+      {
+       "n": "Home",
+       "o": "All hope for humanity rests on Fury's shoulders."
+      }
+     ]
+    }
    ]
   },
   "l2": {
@@ -2332,6 +2754,66 @@
       }
      ]
     }
+   ],
+   "eps_en": [
+    {
+     "s": 1,
+     "eps": [
+      {
+       "n": "Glorious Purpose",
+       "o": "After stealing the Tesseract in \"Avengers: Endgame,\" Loki lands before the Time Variance Authority."
+      },
+      {
+       "n": "The Variant",
+       "o": "Mobius puts Loki to work, but not everyone at TVA is thrilled about the God of Mischief's presence."
+      },
+      {
+       "n": "Lamentis",
+       "o": "Loki finds out The Variant's plans, but he has his own that will forever alter both their destinies."
+      },
+      {
+       "n": "The Nexus Event",
+       "o": "Frayed nerves and paranoia infiltrate the TVA as Mobius and Hunter B-15 search for Loki and Sylvie."
+      },
+      {
+       "n": "Journey into Mystery",
+       "o": "Loki tries to escape The Void, a desolate purgatory where he meets variant versions of himself."
+      },
+      {
+       "n": "For All Time. Always.",
+       "o": "The clock is ticking in the season finale which finds Loki and Sylvie on a date with destiny."
+      }
+     ]
+    },
+    {
+     "s": 2,
+     "eps": [
+      {
+       "n": "Ouroboros",
+       "o": "Loki finds himself lost to time and torn, quite literally, between past, present and future."
+      },
+      {
+       "n": "Breaking Brad",
+       "o": "With the TVA on the verge of a temporal meltdown, Loki & Mobius will stop at nothing to find Sylvie."
+      },
+      {
+       "n": "1893",
+       "o": "Loki & Mobius go on the hunt to find everyone’s favorite cartoon clock as they try to save the TVA."
+      },
+      {
+       "n": "Heart of the TVA",
+       "o": "The TVA's Loom nears catastrophic failure but Loki, Mobius and Sylvie have a He Who Remains variant."
+      },
+      {
+       "n": "Science/Fiction",
+       "o": "Loki traverses dying timelines in an attempt to find his friends, but Reality is not what it seems."
+      },
+      {
+       "n": "Glorious Purpose",
+       "o": "Loki learns the true nature of 'glorious purpose' as he rectifies the past."
+      }
+     ]
+    }
    ]
   },
   "mv": {
@@ -2445,6 +2927,33 @@
        "d": "2024-01-09",
        "o": "Das Leben von Mayas Familie steht auf dem Spiel, als Fisks Armee beim Powwow der Choctaw Nation einfällt.",
        "v": 6
+      }
+     ]
+    }
+   ],
+   "eps_en": [
+    {
+     "s": 1,
+     "eps": [
+      {
+       "n": "Chafa",
+       "o": "After her mother's tragic death, young Maya is forced to leave her hometown of Tamaha, Oklahoma, and move to New York City where she meets Wilson Fisk, aka Kingpin, who raises her to be a ruthless assassin. After learning that Fisk had her father killed, Maya kills Kingpin and flees NYC."
+      },
+      {
+       "n": "Lowak",
+       "o": "Maya enlists the help of her disapproving family to take down Fisk's army. Meanwhile, she begins experiencing strange visions."
+      },
+      {
+       "n": "Tuklo",
+       "o": "Maya learns the meaning of collateral damage as Fisk's ruthless army arrives in Tamaha, Oklahoma."
+      },
+      {
+       "n": "Taloa",
+       "o": "Maya finds herself at a crossroads, facing the shadows of her past and contemplating her future."
+      },
+      {
+       "n": "Maya",
+       "o": "The lives of Maya's family hang in the balance as Fisk's army invades the Choctaw Nation powwow."
       }
      ]
     }
@@ -2613,6 +3122,94 @@
       }
      ]
     }
+   ],
+   "eps_en": [
+    {
+     "s": 1,
+     "eps": [
+      {
+       "n": "To Me, My X-Men",
+       "o": "Cyclops races to find the source of new anti-mutant technology."
+      },
+      {
+       "n": "Mutant Liberation Begins",
+       "o": "When Magneto is forced by the UN to stand trial, a group of anti-mutant rioters test his resolve."
+      },
+      {
+       "n": "Fire Made Flesh",
+       "o": "The team is propelled into a tragic confrontation with an immortal mad scientist."
+      },
+      {
+       "n": "Motendo / Lifedeath (1)",
+       "o": "Jubilee must relive the X-Men's greatest adventures when she's transported into a 16-bit video game."
+      },
+      {
+       "n": "Remember It",
+       "o": "Team members hit Genosha as UN honorees while a press event risks exposing the team's dirty laundry."
+      },
+      {
+       "n": "Lifedeath (2)",
+       "o": "Storm is forced to face her worst fears in order to free herself."
+      },
+      {
+       "n": "Bright Eyes",
+       "o": "The X-Men finds Sentinel inventor Bolivar Trask, realizing they've been played by a mastermind."
+      },
+      {
+       "n": "Tolerance Is Extinction (1)",
+       "o": "The X-Men must unite to face a new threat."
+      },
+      {
+       "n": "Tolerance Is Extinction (2)",
+       "o": "The X-Men work to settle the score before it is too late."
+      },
+      {
+       "n": "Tolerance Is Extinction (3)",
+       "o": "The X-Men's dream is put to the test as mutant-human relations reach a tipping point."
+      }
+     ]
+    },
+    {
+     "s": 2,
+     "eps": [
+      {
+       "n": "Days of Past Future",
+       "o": "Forge and Bishop launch an ambitious plan to rescue the X-Men who have been scattered through time."
+      },
+      {
+       "n": "A Force to Be Reckoned With",
+       "o": "After E-Day, a covert paramilitary force rises to try to fill the void left by the X-Men."
+      },
+      {
+       "n": "Rise of Apocalypse (1)",
+       "o": "The plan to rescue the team from Ancient Egypt is turned upside-down by an unexpected visitor."
+      },
+      {
+       "n": "Rise of Apocalypse (2)",
+       "o": "An alliance between the X-Men and En Sabah Nur starts to crack when Rama-Tut seeks ultimate power."
+      },
+      {
+       "n": "Weapon X, Lies, and DVDs",
+       "o": "Wolverine, Morph, and a motley crew of old rivals face off against Weapon X's latest experiment."
+      },
+      {
+       "n": "Danger.Exe",
+       "o": "Former X-Man Polaris returns to Xavier's mansion just as a new threat emerges on campus."
+      },
+      {
+       "n": "Strange Land, Savage Heart",
+       "o": "The X-Men travel to the Savage Land and are surprised to find a familiar face."
+      },
+      {
+       "n": "The Dead Man's Hand",
+       "o": "The X-Men confront a ghost from their past."
+      },
+      {
+       "n": "Survival of the Fittest",
+       "o": "The X-Men are pushed to their limits as their past comes back to haunt them."
+      }
+     ]
+    }
    ]
   },
   "dw": {
@@ -2750,6 +3347,49 @@
        "d": "2024-10-30",
        "o": "Die Wahrheit über Agatha Harkness und den Hexenweg.",
        "v": 6.6
+      }
+     ]
+    }
+   ],
+   "eps_en": [
+    {
+     "s": 1,
+     "eps": [
+      {
+       "n": "Seekest Thou the Road",
+       "o": "In small town Westview, Detective Agnes' murder case sends her down a road that changes everything."
+      },
+      {
+       "n": "Circle Sewn with Fate / Unlock Thy Hidden Gate",
+       "o": "With old foes in hot pursuit, Agatha and Teen gather a desperate coven to walk The Witches' Road."
+      },
+      {
+       "n": "Through Many Miles / Of Tricks and Trials",
+       "o": "The coven faces their first perilous trial on The Witches' Road."
+      },
+      {
+       "n": "If I Can't Reach You / Let My Song Teach You",
+       "o": "The coven faces their second trial on The Witches' Road."
+      },
+      {
+       "n": "Darkest Hour / Wake Thy Power",
+       "o": "With enemies closing in, the coven flees under the light of a blood moon to the next ghastly trial."
+      },
+      {
+       "n": "Familiar by Thy Side",
+       "o": "Familiar Teen is much more than he seems, and his connections to the rest of the coven are revealed."
+      },
+      {
+       "n": "Death's Hand in Mine",
+       "o": "Those remaining suffer the hand they are dealt in the next trial."
+      },
+      {
+       "n": "Follow Me My Friend / To Glory at the End",
+       "o": "The end of The Road."
+      },
+      {
+       "n": "Maiden Mother Crone",
+       "o": "The truth of Agatha Harkness and The Witches' Road."
       }
      ]
     }
@@ -2903,6 +3543,86 @@
        "d": "2026-05-05",
        "o": "Die Stadt und ihre Helden treten gemeinsam in eine neue Ära ein.",
        "v": 8.1
+      }
+     ]
+    }
+   ],
+   "eps_en": [
+    {
+     "s": 1,
+     "eps": [
+      {
+       "n": "Heaven's Half Hour",
+       "o": "Matt Murdock gives up the mask. Wilson Fisk has his sights set to new heights."
+      },
+      {
+       "n": "Optics",
+       "o": "Matt Murdock gets a new client who's more than he claims to be. Fisk learns the power of optics."
+      },
+      {
+       "n": "The Hollow of His Hand",
+       "o": "The trial of Hector Ayala begins. Fisk's old business associates seek to claim his vacant mantle."
+      },
+      {
+       "n": "Sic Semper Systema",
+       "o": "Matt Murdock and Wilson Fisk's darker halves fight to be unleashed."
+      },
+      {
+       "n": "With Interest",
+       "o": "A day in the life of Matt Murdock gets intense, forcing him to team up with a familiar face."
+      },
+      {
+       "n": "Excessive Force",
+       "o": "When a serial killer terrorizes the streets of New York, the city needs a savior."
+      },
+      {
+       "n": "Art for Art's Sake",
+       "o": "Daredevil is back and races Fisk to stop Muse from killing again."
+      },
+      {
+       "n": "Isle of Joy",
+       "o": "At his inaugural Black and White Ball, Mayor Fisk tightens his grip on New York City."
+      },
+      {
+       "n": "Straight to Hell",
+       "o": "Mayor Fisk becomes Mayor Kingpin, and Daredevil is unleashed as chaos takes over the city."
+      }
+     ]
+    },
+    {
+     "s": 2,
+     "eps": [
+      {
+       "n": "The Northern Star",
+       "o": "Daredevil is in hiding, but he isn't laying low. A shadowy player from Washington, D.C. emerges."
+      },
+      {
+       "n": "Shoot the Moon",
+       "o": "Fisk tries a new tactic to lure Daredevil out of hiding."
+      },
+      {
+       "n": "The Scales & the Sword",
+       "o": "Matt Murdock and Karen Page find new allies."
+      },
+      {
+       "n": "Gloves Off",
+       "o": "Bullseye adopts a new morning routine. Fisk takes the ring."
+      },
+      {
+       "n": "The Grand Design",
+       "o": "The Anti-Vigilante Task Force intensifies its search for Daredevil and Bullseye."
+      },
+      {
+       "n": "Requiem",
+       "o": "Fisk's operation is dealt an irrevocable blow. The resistance spills over into the streets."
+      },
+      {
+       "n": "The Hateful Darkness",
+       "o": "A trial close to Matt Murdock's heart grabs the city's attention."
+      },
+      {
+       "n": "The Southern Cross",
+       "o": "The city and its heroes enter an unprecedented era."
       }
      ]
     }
@@ -3067,6 +3787,37 @@
       }
      ]
     }
+   ],
+   "eps_en": [
+    {
+     "s": 1,
+     "eps": [
+      {
+       "n": "Take Me Home",
+       "o": "Determined to complete her newest armored suit, Riri Williams teams up with Parker Robbins."
+      },
+      {
+       "n": "Will the Real Natalie Please Stand Up?",
+       "o": "Riri's new A.I. dredges up painful memories ahead of her first heist with Parker and his crew."
+      },
+      {
+       "n": "We in Danger, Girl",
+       "o": "Riri is uncomfortable being part of Parker's crew—two more heists, max, and she's out, she promises."
+      },
+      {
+       "n": "Bad Magic",
+       "o": "When Parker suspects Riri of wrongdoing, she knows she has to figure out the source of his powers."
+      },
+      {
+       "n": "Karma's a Glitch",
+       "o": "Riri sets out to create a suit unlike anything she has ever attempted—but at what cost?"
+      },
+      {
+       "n": "The Past Is the Past",
+       "o": "Riri builds her most powerful suit yet, but she's unsure if it's enough to beat Parker and The Hood."
+      }
+     ]
+    }
    ]
   },
   "f4": {
@@ -3173,6 +3924,29 @@
       }
      ]
     }
+   ],
+   "eps_en": [
+    {
+     "s": 1,
+     "eps": [
+      {
+       "n": "Into the Lion's Den",
+       "o": "A former member of the Dora Milaje is sent to take down a rogue Wakandan known as The Lion."
+      },
+      {
+       "n": "Legends and Lies",
+       "o": "Amidst the Trojan War, a soldier attempts to breach the city's defenses to retrieve an artifact."
+      },
+      {
+       "n": "Lost and Found",
+       "o": "A powerful stowaway infiltrates the Golden City and threatens the secrets kept within."
+      },
+      {
+       "n": "The Last Panther",
+       "o": "Two Wakandans must choose to complete their mission or defy their homeland and save their world."
+      }
+     ]
+    }
    ]
   },
   "wm": {
@@ -3264,6 +4038,45 @@
        "d": "2026-01-27",
        "o": "Lass deine Babys nicht zu Cowboys werden.",
        "v": 6.3
+      }
+     ]
+    }
+   ],
+   "eps_en": [
+    {
+     "s": 1,
+     "eps": [
+      {
+       "n": "Matinee",
+       "o": "Somebody's actually remaking \"Wonder Man?\""
+      },
+      {
+       "n": "Self-Tape",
+       "o": "It's never been this hard to do a self-tape before."
+      },
+      {
+       "n": "Pacoima",
+       "o": "Birthday parties are kind of stressful."
+      },
+      {
+       "n": "Doorman",
+       "o": "Ding dong."
+      },
+      {
+       "n": "Found Footage",
+       "o": "Try a peach ring. You'll understand."
+      },
+      {
+       "n": "Callback",
+       "o": "It is tight, Jake."
+      },
+      {
+       "n": "Kathy Friedman",
+       "o": "The New York Times finds us fascinating."
+      },
+      {
+       "n": "Yucca Valley",
+       "o": "Don't let your babies grow up to be cowboys."
       }
      ]
     }
@@ -3373,6 +4186,45 @@
        "d": null,
        "o": "",
        "v": null
+      }
+     ]
+    }
+   ],
+   "eps_en": [
+    {
+     "s": 1,
+     "eps": [
+      {
+       "n": "Episode 1",
+       "o": ""
+      },
+      {
+       "n": "Episode 2",
+       "o": ""
+      },
+      {
+       "n": "Episode 3",
+       "o": ""
+      },
+      {
+       "n": "Episode 4",
+       "o": ""
+      },
+      {
+       "n": "Episode 5",
+       "o": ""
+      },
+      {
+       "n": "Episode 6",
+       "o": ""
+      },
+      {
+       "n": "Episode 7",
+       "o": ""
+      },
+      {
+       "n": "Episode 8",
+       "o": ""
       }
      ]
     }
@@ -5139,6 +5991,179 @@
       }
      ]
     }
+   ],
+   "eps_en": [
+    {
+     "s": 1,
+     "eps": [
+      {
+       "n": "Into the Ring",
+       "o": "Murdock's vigilante crime fighting and his new law practice find equally dangerous challenges in a murder case tied to a corporate crime syndicate."
+      },
+      {
+       "n": "Cut Man",
+       "o": "Murdock makes a near fatal error while trying to save a kidnapped boy, and finds an unlikely ally when he needs saving himself."
+      },
+      {
+       "n": "Rabbit in a Snowstorm",
+       "o": "Murdock and Foggy take on a mysterious wealthy client, but Murdock is convinced that there's more to the case than just the facts."
+      },
+      {
+       "n": "In the Blood",
+       "o": "Two vicious Russian brothers working for Fisk strike back against Daredevil. Fisk moves to further consolidate his power in the criminal underworld."
+      },
+      {
+       "n": "World on Fire",
+       "o": "Fisk moves forward with plans that threaten to rip Hell's Kitchen apart. Murdock and Foggy take on a case helping tenants victimized by a slumlord."
+      },
+      {
+       "n": "Condemned",
+       "o": "Daredevil finds himself trapped in the fallout of Fisk's plan to take control of Hell's Kitchen. Ben Urich digs closer to the truth."
+      },
+      {
+       "n": "Stick",
+       "o": "An important figure from Murdock's past reemerges seeking his help to battle a new enemy threatening Hell's Kitchen."
+      },
+      {
+       "n": "Shadows in the Glass",
+       "o": "While Murdock, Foggy and Karen's mission becomes clearer, Fisk's world spins further out of control in his battle for Hell's Kitchen."
+      },
+      {
+       "n": "Speak of the Devil",
+       "o": "When Fisk gains the upper hand, the goal to destroy him becomes even more difficult, while Daredevil faces his own demons."
+      },
+      {
+       "n": "Nelson v. Murdock",
+       "o": "Murdock and Foggy's relationship is put to the ultimate test while a new enemy against Fisk emerges."
+      },
+      {
+       "n": "The Path of the Righteous",
+       "o": "Fisk and Murdock wrestle with the consequences of their chosen paths, while Ben and Karen get closer to Fisk's true past."
+      },
+      {
+       "n": "The Ones We Leave Behind",
+       "o": "Fisk seeks revenge while Karen is haunted by recent events. Daredevil makes a startling discovery about Fisk's financing."
+      },
+      {
+       "n": "Daredevil",
+       "o": "In the season finale, a boxed-in Fisk and a desperate Murdock, Foggy and Karen are forced to play their end games."
+      }
+     ]
+    },
+    {
+     "s": 2,
+     "eps": [
+      {
+       "n": "Bang",
+       "o": "Hell's Kitchen has calmed, but it's not out of the fire yet. When an unknown vigilante begins to take the fight to the streets in a big and bloody way, Matt Murdock must don the mask of Daredevil to stop him before innocent people end up in the crossfire."
+      },
+      {
+       "n": "Dogs to a Gunfight",
+       "o": "As Murdock recovers from an attack, Foggy and Karen fight to protect their new client from both the law and the Kitchen's newest vigilante."
+      },
+      {
+       "n": "New York's Finest",
+       "o": "Trapped face-to-face with the Punisher, Daredevil wrestles with the morality of vigilante justice. Meanwhile, Foggy and Karen work to save the firm."
+      },
+      {
+       "n": "Penny and Dime",
+       "o": "Karen uncovers shocking facts about the Punisher, who finds himself hunted by a powerful force in Hell's Kitchen. Daredevil ponders his next moves."
+      },
+      {
+       "n": "Kinbaku",
+       "o": "A former lover arrives in Hell's Kitchen and turns Murdock's world upside down. Karen digs for the truth about the Punisher."
+      },
+      {
+       "n": "Regrets Only",
+       "o": "A lethal foe returns with a vengeance, Foggy and Murdock risk the firm to ensure justice, and Karen sees a different side of the Punisher."
+      },
+      {
+       "n": "Semper Fidelis",
+       "o": "Murdock and Foggy take on the DA in the trial of the century, but their client refuses to play along. Murdock struggles to balance his dual identities."
+      },
+      {
+       "n": "Guilty as Sin",
+       "o": "As the firm's trial spins out of control, a figure from Murdock's past returns to deliver shocking revelations about the future of Hell's Kitchen."
+      },
+      {
+       "n": "Seven Minutes in Heaven",
+       "o": "Castle gets an offer he can't refuse. Foggy and Murdock question the future of their firm, but Karen won't give up so easily."
+      },
+      {
+       "n": "The Man in the Box",
+       "o": "Murdock and Foggy get caught in the crossfire of the Punisher's revenge. Karen and Murdock dig for the truth in very different ways."
+      },
+      {
+       "n": ".380",
+       "o": "The Punisher's war continues, and so does the body count in Hell's Kitchen. Murdock tries to finish what the DA started."
+      },
+      {
+       "n": "The Dark at the End of the Tunnel",
+       "o": "Daredevil goes underground to save an old friend. Karen follows a dangerous lead. The law firm of Nelson and Murdock may have reached its final chapter."
+      },
+      {
+       "n": "A Cold Day in Hell's Kitchen",
+       "o": "In the season finale, Daredevil is backed into the ultimate showdown for his own life - and the future of Hell's Kitchen."
+      }
+     ]
+    },
+    {
+     "s": 3,
+     "eps": [
+      {
+       "n": "Resurrection",
+       "o": "Shattered physically and spiritually, Matt rethinks his purpose and place in Hell's Kitchen. Meanwhile, Fisk puts a plan in motion from behind bars."
+      },
+      {
+       "n": "Please",
+       "o": "Grieving for the life he's abandoned, Matt suffers a crisis of faith. Fisk makes a deal with the FBI that turns him into a target."
+      },
+      {
+       "n": "No Good Deed",
+       "o": "As Fisk moves into swanky new digs amid a public outcry, Matt wrestles with how far he's ready to go to right this wrong. Dex's aim comes into focus."
+      },
+      {
+       "n": "Blindsided",
+       "o": "While Matt infiltrates a prison to find information on the Albanians, Fisk puts Dex in his crosshairs and a fed-up Foggy goes on the offensive."
+      },
+      {
+       "n": "The Perfect Game",
+       "o": "To quell the rising backlash over his release, Fisk serves up a scapegoat to the FBI. Dex misses the mark when he runs into a woman from his past."
+      },
+      {
+       "n": "The Devil You Know",
+       "o": "Driven to the edge, Dex loses his way until he's offered a lifeline by Fisk. Matt comes to Karen for help, which she agrees to give -- on one condition."
+      },
+      {
+       "n": "Aftermath",
+       "o": "The press crucifies Daredevil after the attack on the Bulletin, and Agent Nadeem suspects the FBI paid too high a price for Fisk's cooperation."
+      },
+      {
+       "n": "Upstairs/Downstairs",
+       "o": "A desperate Dex reaches out for help, Matt forms an uneasy alliance with Agent Nadeem, and Karen concocts a dangerous plan to provoke Fisk."
+      },
+      {
+       "n": "Revelations",
+       "o": "Matt's already shaky world tilts when he learns a shocking truth. Karen runs for her life. Nadeem discovers how deep Fisk's influence runs."
+      },
+      {
+       "n": "Karen",
+       "o": "Hunted by Fisk and haunted by mistakes from her past, Karen seeks refuge at the church. Matt finally gets his shot, and Dex goes in for the kill."
+      },
+      {
+       "n": "Reunion",
+       "o": "Dex tries to run his prey to ground, Nadeem's conscience kicks in, and Fisk looks to recover a gift from Vanessa seized during his incarceration."
+      },
+      {
+       "n": "One Last Shot",
+       "o": "Fisk’s long-awaited reunion doesn't go as planned. Nelson & Murdock take on a new client who holds key information on Kingpin."
+      },
+      {
+       "n": "A New Napkin",
+       "o": "In the season finale, Matt prepares to cross the line, as Dex becomes more dangerous than ever and Fisk enacts his endgame."
+      }
+     ]
+    }
    ]
   },
   "jj": {
@@ -5430,6 +6455,179 @@
       }
      ]
     }
+   ],
+   "eps_en": [
+    {
+     "s": 1,
+     "eps": [
+      {
+       "n": "AKA Ladies Night",
+       "o": "Jessica Jones is hired to find a pretty NYU student who's vanished, but it turns out to be more than a simple missing persons case."
+      },
+      {
+       "n": "AKA Crush Syndrome",
+       "o": "Jessica vows to prove Hope's innocence, even though it means tracking down a terrifying figure from her own past."
+      },
+      {
+       "n": "AKA It's Called Whiskey",
+       "o": "It won't be easy to acquire or deploy, but Jessica thinks she's found a weapon to use against Kilgrave. Luke and Jessica bond over their similarities."
+      },
+      {
+       "n": "AKA 99 Friends",
+       "o": "A new case demands attention as Jessica tries to find out who's spying on her for Kilgrave. Trish's radio show yields unexpected consequences."
+      },
+      {
+       "n": "AKA The Sandwich Saved Me",
+       "o": "Despite Jessica's objections, Trish's new friend Simpson gets involved in the hunt for Kilgrave. Jessica recalls a pivotal moment in her life."
+      },
+      {
+       "n": "AKA You're a Winner!",
+       "o": "Luke hires Jessica to help him find someone who may have skipped town, but she fears he'll learn too much about her history in the process."
+      },
+      {
+       "n": "AKA Top Shelf Perverts",
+       "o": "Malcolm, Simpson and Trish go rogue to prevent Jessica from carrying out an extreme plan to outwit Kilgrave."
+      },
+      {
+       "n": "AKA WWJD?",
+       "o": "Jessica experiences a strange homecoming courtesy of Kilgrave. Hograth's conflict with her estranged wife reaches a tipping point."
+      },
+      {
+       "n": "AKA Sin Bin",
+       "o": "Just when Jessica has Kilgrave right where she want's him, Hogarth's involvement complicates the situation. Details of Kilgrave's past emerge."
+      },
+      {
+       "n": "AKA 1,000 Cuts",
+       "o": "A discovery has the potential to change the entire game - if Jessica can refuse Kilgrave's offer."
+      },
+      {
+       "n": "AKA I've Got the Blues",
+       "o": "Jessica searches morgues for clues. Trish goes all out to keep Simpson from getting in Jessica's way. Malcolm has an epiphany."
+      },
+      {
+       "n": "AKA Take a Bloody Number",
+       "o": "The hunt for Kilgrave reunites Jessica with Luke. Trish receives some unexpected information about Simpson and Jessica."
+      },
+      {
+       "n": "AKA Smile",
+       "o": "Jessica and Luke get help from someone else in the neighborhood. Kilgrave gears up for a major test of powers against Jessica."
+      }
+     ]
+    },
+    {
+     "s": 2,
+     "eps": [
+      {
+       "n": "AKA Start at the Beginning",
+       "o": "While Jessica deals with a rival PI and a paranoid would-be client, Trish digs up a medical file that could unlock the mystery of Jessica's powers."
+      },
+      {
+       "n": "AKA Freak Accident",
+       "o": "Jessica sets out to find Dr. Kozlov and makes a startling discovery. Trish recruits Malcolm for backup as she visits a figure from her past."
+      },
+      {
+       "n": "AKA Sole Survivor",
+       "o": "As her visions intensify, Jessica visits an abandoned clinic, where she stumbles on a new lead. Jeri faces an ultimatum after her secret gets out."
+      },
+      {
+       "n": "AKA God Help the Hobo",
+       "o": "Between anger management classes and tabloid scandals, Jessica and Trish track down a third patient linked to IGH. Oscar extends an olive branch."
+      },
+      {
+       "n": "AKA The Octopus",
+       "o": "Backed into a corner, Jessica's forced to share her intel on the killer. A groggy Trish tries to pull herself together before an important meeting."
+      },
+      {
+       "n": "AKA Facetime",
+       "o": "Jessica gate-crashes an exclusive country club on the hunt for the killer, and Trish's new addiction begins to spiral out of control."
+      },
+      {
+       "n": "AKA I Want Your Cray Cray",
+       "o": "Flashbacks shed new light on the aftermath of the family's car accident and reveal a painful turning point in Jessica's adult life."
+      },
+      {
+       "n": "AKA Ain't We Got Fun",
+       "o": "While Jessica debates her next move, Malcolm confronts Trish about her erratic behavior, and Jeri makes contact with a healer."
+      },
+      {
+       "n": "AKA Shark in the Bathtub, Monster in the Bed",
+       "o": "The shooting forces Jessica to rethink her plans. Meanwhile, Oscar asks for help with a family crisis, and Trish's frustrations finally boil over."
+      },
+      {
+       "n": "AKA Pork Chop",
+       "o": "Jeri finagles a deal for her new client in exchange for Karl's location. Trish forges ahead with her own investigation. A prison guard crosses a line."
+      },
+      {
+       "n": "AKA Three Lives and Counting",
+       "o": "Shocked by her own actions and haunted by visions of Kilgrave, Jessica worries she's turning into a monster. Trish's plans for Karl become clear."
+      },
+      {
+       "n": "AKA Pray for My Patsy",
+       "o": "As Jessica and Dorothy wait anxiously for updates on Trish, a call from Costa brings alarming news. Jeri hatches a plan to get her revenge."
+      },
+      {
+       "n": "AKA Playland",
+       "o": "Waking up in unfamiliar surroundings, Jessica once again finds herself torn between two worlds and facing an impossible choice."
+      }
+     ]
+    },
+    {
+     "s": 3,
+     "eps": [
+      {
+       "n": "AKA The Perfect Burger",
+       "o": "As Jessica focuses on helping the helpless, Dorothy Walker shows up at Alias to beg for help finding a missing Trish."
+      },
+      {
+       "n": "AKA You're Welcome",
+       "o": "Tensions run high between Jessica and Trish as Trish hones her new catlike skills and scours the city for a chance to be a hero."
+      },
+      {
+       "n": "AKA I Have No Spleen",
+       "o": "Itching to get back out on the streets and find her attacker, Jessica defies her doctor's advice. Jeri reconnects with her college flame Kith."
+      },
+      {
+       "n": "AKA Customer Service is Standing By",
+       "o": "Jessica learns there's more to Erik than meets the eye as they track down three potential attackers. Malcolm digs up dirt on Kith's husband."
+      },
+      {
+       "n": "AKA I Wish",
+       "o": "Teaming up with Trish to stake out Sallinger, Jessica makes a startling discovery. Jeri's plot to expose Peter yields unexpected consequences."
+      },
+      {
+       "n": "AKA Sorry Face",
+       "o": "As the police sift through the gruesome crime scene, Jessica and Trish race to find Sallinger's latest captive."
+      },
+      {
+       "n": "AKA The Double Half-Wappinger",
+       "o": "Jessica and Trish go on a road trip to dig into Sallinger's past and unearth a horrifying discovery."
+      },
+      {
+       "n": "AKA Camera Friendly",
+       "o": "When Sallinger posts a video teasing his next crime, Jessica responds with her own media play. Jeri demands that Malcolm identify the masked woman."
+      },
+      {
+       "n": "AKA I Did Something Today",
+       "o": "After a shocking blow, Jessica's forced to choose between protecting Trish and destroying Sallinger. Jeri seizes a chance to get back in Kith's life."
+      },
+      {
+       "n": "AKA Hero Pants",
+       "o": "Jessica wrestles with her emotions as she tries to untangle herself from a murder investigation."
+      },
+      {
+       "n": "AKA Hellcat",
+       "o": "Trish revisits her troubled childhood with Dorothy while plotting to stop Sallinger and stamp out evil across the city."
+      },
+      {
+       "n": "AKA A Lotta Worms",
+       "o": "As Trish makes a move on Sallinger, Jessica intervenes -- and ends up caught in a harrowing dance with the killer."
+      },
+      {
+       "n": "AKA Everything",
+       "o": "An old friend visits Jessica as she sets out on an agonizing mission and learns the true cost of being a hero."
+      }
+     ]
+    }
    ]
   },
   "lc": {
@@ -5633,6 +6831,122 @@
       }
      ]
     }
+   ],
+   "eps_en": [
+    {
+     "s": 1,
+     "eps": [
+      {
+       "n": "Moment of Truth",
+       "o": "With tension building in the streets of Harlem thanks to ruthless club owner Cottonmouth, Luke finds it increasingly difficult to live a quiet life."
+      },
+      {
+       "n": "Code of the Streets",
+       "o": "Luke is pulled deeper into the fight for his neighborhood when, as a favor to an old friend, he tries to help a kid who's in trouble with Cottonmouth."
+      },
+      {
+       "n": "Who's Gonna Take the Weight?",
+       "o": "In the aftermath of a chaotic event at a favorite Harlem hangout, Luke heeds the call to action -- and hits Cottonmouth where he'll feel it most."
+      },
+      {
+       "n": "Step in the Arena",
+       "o": "As he rescues a victim of Cottonmouth's vengeance, Luke remembers his earlier life and the conspiracy that led to his superhuman strength."
+      },
+      {
+       "n": "Just to Get a Rep",
+       "o": "Cottonmouth strikes back at Luke by taking his vengeance out on the people of Harlem, while detectives Knight and Scarfe face an unexpected threat."
+      },
+      {
+       "n": "Suckas Need Bodyguards",
+       "o": "After Cottonmouth and Scarfe's bloody clash, Luke realizes that saving the community may turn former allies into enemies, and enemies into allies."
+      },
+      {
+       "n": "Manifest",
+       "o": "Mariah's political career comes under fire, and Cottonmouth picks up information that could put Luke on the run."
+      },
+      {
+       "n": "Blowin' Up the Spot",
+       "o": "Mariah campaigns to turn the city and the police against Luke, and not even Misty or Claire may be able to save him."
+      },
+      {
+       "n": "DWYCK",
+       "o": "With Luke wounded and on the run, Misty faces a soul-searching interrogation. Mariah's rise to power takes a dark turn."
+      },
+      {
+       "n": "Take It Personal",
+       "o": "Luke gets closer to the truth about Reva and her part in his fate, while Mariah wrestles with the morality of her new role. Misty hunts for Luke."
+      },
+      {
+       "n": "Now You're Mine",
+       "o": "In one bold move, a friend from his past puts Luke on the defensive, Misty in dire straits, and Harlem's safety in jeopardy."
+      },
+      {
+       "n": "Soliloquy of Chaos",
+       "o": "Misty digs deeper for the truth as the neighborhood's power players throw the city into confusion."
+      },
+      {
+       "n": "You Know My Steez",
+       "o": "With all of Harlem bearing witness, Luke takes on the fight of his life in hopes of emerging as the defender his city needs."
+      }
+     ]
+    },
+    {
+     "s": 2,
+     "eps": [
+      {
+       "n": "Soul Brother #1",
+       "o": "As Luke adjusts to his growing fame and tries to shut down the flow of heroin branded with his name, someone from his past reaches out."
+      },
+      {
+       "n": "Straighten It Out",
+       "o": "Luke tests out his abilities on the ballfield, Misty ruffles feathers at the precinct, and Mariah plans a reunion to boost her image."
+      },
+      {
+       "n": "Wig Out",
+       "o": "Worried Luke is headed down a dark path, Claire pays a visit to his father. Bushmaster makes a bid for Mariah's guns."
+      },
+      {
+       "n": "I Get Physical",
+       "o": "As footage of his fight with Bushmaster goes viral, Luke struggles with the aftereffects and follows a trail of clues to Tilda's shop."
+      },
+      {
+       "n": "All Souled Out",
+       "o": "Desperate to drum up quick cash for a lawsuit, Luke weighs an offer from a superfan. Mariah invites Tilda to join the new family business."
+      },
+      {
+       "n": "The Basement",
+       "o": "As a wave of violence rocks Harlem, everyone races to connect the dots between Piranha, Mariah, Bushmaster and the grisly find at the clinic."
+      },
+      {
+       "n": "On and On",
+       "o": "Reeling from the showdown on the bridge, Luke teams up with Misty to find Piranha. The hunt for the snitch heats up. Bushmaster reveals his endgame."
+      },
+      {
+       "n": "If It Ain't Rough, It Ain't Right",
+       "o": "While Shades, Mariah and Misty come to terms with the previous night's events, Bushmaster searches for a way to boost his strength."
+      },
+      {
+       "n": "For Pete's Sake",
+       "o": "Hunkered down in a makeshift safe house, Luke and Misty butt heads over how to handle Mariah. Meanwhile, long-buried family secrets come to light."
+      },
+      {
+       "n": "The Main Ingredient",
+       "o": "Danny Rand insists on helping Luke hunt for Bushmaster -- the Iron Fist way. Mariah sets out to reclaim her empire. Misty pursues a traitor."
+      },
+      {
+       "n": "The Creator",
+       "o": "Shaken by Mariah's latest act, Luke combs the city for a witness. Flashbacks reveal a fateful encounter between the Stokes and McIver families."
+      },
+      {
+       "n": "Can't Front on Me",
+       "o": "Luke teams up with an unlikely ally to combat a new strain of heroin. As Shades plows ahead with his plan, a massive party draws everyone to the club."
+      },
+      {
+       "n": "They Reminisce Over You",
+       "o": "Mariah adapts to her new circumstances and goes to extremes to cover her tracks. Luke takes a new approach to protecting Harlem."
+      }
+     ]
+    }
    ]
   },
   "if1": {
@@ -5820,6 +7134,110 @@
        "d": "2018-09-07",
        "o": "Als im Staffelfinale verschiedene Iron Fists aneinander geraten, hängt das Schicksal New York Citys in der Schwebe.",
        "v": 6.6
+      }
+     ]
+    }
+   ],
+   "eps_en": [
+    {
+     "s": 1,
+     "eps": [
+      {
+       "n": "Snow Gives Way",
+       "o": "After being declared dead 15 years earlier, Danny Rand returns to New York. But his welcome is a far cry from what he'd hoped."
+      },
+      {
+       "n": "Shadow Hawk Takes Flight",
+       "o": "Danny struggles with his new surroundings, Colleen dishes out a harsh lesson, and Joy sends an unconventional message."
+      },
+      {
+       "n": "Rolling Thunder Cannon Punch",
+       "o": "Joy proves herself a shrewd businessperson, Danny recalls a painful memory, and Colleen puts her talents to good use."
+      },
+      {
+       "n": "Eight Diagram Dragon Palm",
+       "o": "Danny makes a shocking discovery and a radical pricing proposal. Colleen's extracurricular activities goes viral, and Ward issues a stern warning."
+      },
+      {
+       "n": "Under Leaf Pluck Lotus",
+       "o": "An insidious new drug hits New York. Danny recruits Colleen for the fight, and Claire discovers that credit cards can have many uses."
+      },
+      {
+       "n": "Immortal Emerges from Cave",
+       "o": "Danny receives an invitation like no other. Colleen and Claire face a difficult choice. A worried Joy confronts her brother."
+      },
+      {
+       "n": "Felling Tree with Roots",
+       "o": "Ward's loyalty is tested. Danny discovers a rogue division, and the mysterious Bakuto visits Colleen's dojo unannounced."
+      },
+      {
+       "n": "The Blessing of Many Fractures",
+       "o": "Danny faces his fear, and Colleen meets her match. Joy makes a hasty decision while Ward struggles to accept his sister's admiration."
+      },
+      {
+       "n": "The Mistress of All Agonies",
+       "o": "Madame Gao plays mind games. Ward's old habits catch up with him, and Danny discovers that he still has much to learn about being the Iron Fist."
+      },
+      {
+       "n": "Black Tiger Steals Heart",
+       "o": "Exhausted from fighting, Danny tries to recharge with Bakuto's help. Meanwhile, Rand's management gets another shakeup."
+      },
+      {
+       "n": "Lead Horse Back to Stable",
+       "o": "Claire uses her improvisational skills, and Colleen gets conflicting information. Danny yearns to be more than just a destroyer."
+      },
+      {
+       "n": "Bar the Big Boss",
+       "o": "Ward receives an offer with strings attached. Davos advocates for an extreme solution, and a deadly duel gets personal."
+      },
+      {
+       "n": "Dragon Plays with Fire",
+       "o": "In a desperate search to clear his name, Danny learns a terrible truth that places him on a new path."
+      }
+     ]
+    },
+    {
+     "s": 2,
+     "eps": [
+      {
+       "n": "The Fury of Iron Fist",
+       "o": "While rival gangs battle for the soul of New York, Danny and Colleen cross paths with an old acquaintance. Joy embarks on a new adventure."
+      },
+      {
+       "n": "The City's Not for Burning",
+       "o": "Danny and Colleen strive to broker a badly needed peace. Ward crashes his sister's auction, and Joy plays matchmaker -- with a twist."
+      },
+      {
+       "n": "This Deadly Secret...",
+       "o": "In an effort to ease the tension between Ward and Joy, Danny and Colleen switch gears and host a dinner party. Mary delivers a warning."
+      },
+      {
+       "n": "Target: Iron Fist",
+       "o": "Joy's interrogation of Mary takes a turn. Misty gives Danny an earful. Ward extends an olive branch. Davos makes a crucial discovery."
+      },
+      {
+       "n": "Heart of the Dragon",
+       "o": "There's a new Iron Fist in town, and he's itching to make his presence felt. Meanwhile, Ward calls in a favor, and Joy considers her options."
+      },
+      {
+       "n": "The Dragon Dies at Dawn",
+       "o": "Misty and Colleen's trip to the tattoo parlor turns painful -- but not for them. As Davos crosses names off his list, Mary makes Danny an offer."
+      },
+      {
+       "n": "Morning of the Mindstorm",
+       "o": "As Danny steps up his training, Davos ramps up recruitment. Ward falls prey to old demons, and Misty butts heads with a captain."
+      },
+      {
+       "n": "Citadel on the Edge of Vengeance",
+       "o": "Joy offers Davos tips on appealing to the masses, Danny begins to understand his limits, and Mary seeks the truth about her past."
+      },
+      {
+       "n": "War Without End",
+       "o": "Facing a life-changing decision, Danny and Colleen debate their next move. Meanwhile, Davos's contempt for mercy grows stronger."
+      },
+      {
+       "n": "A Duel of Iron",
+       "o": "In the season finale, Iron Fists collide as the fate of New York City hangs in the balance."
       }
      ]
     }
@@ -6021,6 +7439,122 @@
       }
      ]
     }
+   ],
+   "eps_en": [
+    {
+     "s": 1,
+     "eps": [
+      {
+       "n": "3AM",
+       "o": "Former Marine Frank Castle takes the law into his own hands while struggling to come to terms with his traumatic past."
+      },
+      {
+       "n": "Two Dead Men",
+       "o": "A mysterious phone call forces Frank's hand. Meanwhile, Madani goes digging for suspects and Curtis delivers a message."
+      },
+      {
+       "n": "Kandahar",
+       "o": "Frank skips the subtlety while interrogating Micro. Brutal memories of top-secret missions shed light on Frank's past."
+      },
+      {
+       "n": "Resupply",
+       "o": "Madani and Sam plan a delicate operation, Curtis tries to connect with Lewis, and Frank encourages Micro to get his hands dirty."
+      },
+      {
+       "n": "Gunner",
+       "o": "Frank and Micro go looking for answers from a reluctant witness. Madani and Sam learn of a looming investigation. Rawlins sees a ghost."
+      },
+      {
+       "n": "The Judas Goat",
+       "o": "With Frank in bad shape, Micro calls on Curtis for help. Madani and Russo continue to mix business with pleasure. Lewis stands up for his rights."
+      },
+      {
+       "n": "Crosshairs",
+       "o": "Lewis struggles with the ramifications of his actions. Frank and Micro pursue another face from the past. Madani and Sam go bug hunting."
+      },
+      {
+       "n": "Cold Steel",
+       "o": "Russo opens up to Madani about his past, Sarah shares her concerns about her son with Frank, and a decoy operation takes a turn."
+      },
+      {
+       "n": "Front Toward Enemy",
+       "o": "Following a deadly explosion, Karen lands in a bomber's crosshairs -- and Frank isn't happy about it. Meanwhile, Curtis makes a grisly discovery."
+      },
+      {
+       "n": "Virtue of the Vicious",
+       "o": "An attack on a high-profile politician is examined (and reexamined) through different perspectives. Madani faces a painful truth."
+      },
+      {
+       "n": "Danger Close",
+       "o": "As danger knocks on Sarah's door, Frank takes his quest for vengeance to the next level with some help from an unexpected ally."
+      },
+      {
+       "n": "Home",
+       "o": "Frank makes a damning confession. A shootout leaves Sarah wondering what to believe. Rawlins goes in for the kill, once and for all."
+      },
+      {
+       "n": "Memento Mori",
+       "o": "As the authorities close in, an exhausted but unbroken Frank vows to put an end to the war that has consumed his life."
+      }
+     ]
+    },
+    {
+     "s": 2,
+     "eps": [
+      {
+       "n": "Roadhouse Blues",
+       "o": "While driving through Michigan, Frank stops for a beer at a roadside bar. But staying out of trouble has never been his strong suit."
+      },
+      {
+       "n": "Fight or Flight",
+       "o": "Frank and a reluctant Rachel go on the run as a menacing adversary gives chase. Meanwhile, Madani pays Russo an unwelcome visit."
+      },
+      {
+       "n": "Trouble the Water",
+       "o": "As Pilgrim's past comes into focus, Frank and Rachel find themselves in police custody, where they're anything but safe."
+      },
+      {
+       "n": "Scar Tissue",
+       "o": "Rachel recalls the night everything changed and lets Frank in on the truth about her name. Russo sits down with a face from his childhood."
+      },
+      {
+       "n": "One-Eyed Jacks",
+       "o": "It's not a trap if you know it's coming: That's Frank's philosophy. Madani opens up and Pilgrim plans a visit to an unholy land."
+      },
+      {
+       "n": "Nakazat",
+       "o": "Amy (formerly Rachel) develops photographs that point to a conspiracy. Russo reads his own report. Madani's story about Russo comes under fire."
+      },
+      {
+       "n": "One Bad Day",
+       "o": "Madani's quest to ID Pilgrim hits a wall. Russo and his crew put their plan into action. Frank encounters someone from the past."
+      },
+      {
+       "n": "My Brother's Keeper",
+       "o": "Painful memories take ahold of Russo. Frank's frustration frightens those closest to him. Madani receives a visitor bearing a warning."
+      },
+      {
+       "n": "Flustercluck",
+       "o": "A big bounty inspires New York's worst to pursue the Punisher. A restless Amy seeks help from a fellow grifter. Russo and Krista consider the future."
+      },
+      {
+       "n": "The Dark Hearts of Men",
+       "o": "As Madani and Krista debate who's worth saving, Frank prepares to storm Russo's territory. A brutal encounter pushes Pilgrim back into old habits."
+      },
+      {
+       "n": "The Abyss",
+       "o": "Amy rushes to protect Frank, who lies defenseless in a hospital. Pilgrim gets some crushing news, and Karen Page calls in a favor."
+      },
+      {
+       "n": "Collision Course",
+       "o": "Buckle up -- Mahoney and Frank are about to take a ride to remember. Amy makes an entrance, Russo cashes out, and Madani comes clean to Krista."
+      },
+      {
+       "n": "The Whirlwind",
+       "o": "Frank, Pilgrim, Madani, Russo, Amy, Curt and the Schultz family. No bullet is left unspent as season two comes to an explosive conclusion."
+      }
+     ]
+    }
    ]
   },
   "def": {
@@ -6113,6 +7647,45 @@
        "d": "2017-08-18",
        "o": "New York steuert immer näher auf den Abgrund zu, Elektra blickt hinter die Fassade und die Defenders starten einen letzten Versuch, die Stadt zu retten.",
        "v": 7.7
+      }
+     ]
+    }
+   ],
+   "eps_en": [
+    {
+     "s": 1,
+     "eps": [
+      {
+       "n": "The H Word",
+       "o": "Matt Murdock, Jessica Jones, Luke Cage and Danny Rand investigate criminals and fight injustice, unaware their paths are about to cross."
+      },
+      {
+       "n": "Mean Right Hook",
+       "o": "As a new conspiracy takes shape, Matt finds old habits are hard to break, Jessica gets in over her head, Luke tracks a lead, and Danny meets his match."
+      },
+      {
+       "n": "Worst Behavior",
+       "o": "Elektra's secrets are revealed. Danny changes his tactics. Matt gives Jessica some legal advice. Luke searches for the White Hat."
+      },
+      {
+       "n": "Royal Dragon",
+       "o": "As the Defenders get to know each other over dinner, they're greeted by a series of party crashers -- none of them friendly."
+      },
+      {
+       "n": "Take Shelter",
+       "o": "Elektra's loyalties are questioned, Colleen clashes with an old acquaintance, and Luke proves he knows how to take a hit."
+      },
+      {
+       "n": "Ashes, Ashes",
+       "o": "Stick offers up a theory, Danny finds himself sidelined, and Alexandra learns that it's not easy being the leader."
+      },
+      {
+       "n": "Fish in the Jailhouse",
+       "o": "Matt, Jessica and Luke embark on a desperate search. Colleen and Claire debate heroism. Elektra tries to recruit an all-important ally."
+      },
+      {
+       "n": "The Defenders",
+       "o": "As New York edges closer to disaster, Elektra sees what's beyond the wall, and the Defenders make a last-ditch effort to save the city."
       }
      ]
     }
@@ -6253,6 +7826,90 @@
        "d": "2016-03-01",
        "o": "Um Zero Matter ein für alle Mal auszuschalten, braucht Agent Peggy Carter unbedingt Howard Stark als Verbündeten. Auf die beiden wartet eine Mission, die so gefährlich ist, dass es",
        "v": 7
+      }
+     ]
+    }
+   ],
+   "eps_en": [
+    {
+     "s": 1,
+     "eps": [
+      {
+       "n": "Now Is Not the End",
+       "o": "In 1946, Peggy Carter is now a secretary for the Strategic Scientific Reserve. Howard Stark asks her for help when the country believes that he is selling deadly weapons to their enemies."
+      },
+      {
+       "n": "Bridge and Tunnel",
+       "o": "Howard Stark's deadliest weapon has fallen into enemy hands, and only Agent Carter can recover it. But can she do so before her undercover mission is discovered by SSR Chief Dooley and Agent Thompson?"
+      },
+      {
+       "n": "Time and Tide",
+       "o": "As Agent Carter closes in on Howard Stark's stolen technology, Peggy's secret mission could unravel when the SSR arrests Jarvis and a secret is revealed."
+      },
+      {
+       "n": "The Blitzkrieg Button",
+       "o": "Peggy may be in more trouble than usual when fugitive Howard Stark suddenly returns for mysterious reasons. And Chief Dooley chases a new clue all the way to Europe that threatens to destroy Peggy's future at the SSR."
+      },
+      {
+       "n": "The Iron Ceiling",
+       "o": "Peggy is finally trusted with a mission and calls upon her trusted Howling Commandos squad for backup. But her cover could be at risk when SSR Chief Dooley also sends Agent Thompson with her."
+      },
+      {
+       "n": "A Sin to Err",
+       "o": "Peggy discovers the shocking truth about Leviathan but doesn't realize that her true enemies are even closer than she imagined. Meanwhile, Souza is close to confirming the truth about Peggy and may just put her in the crosshairs of the SSR."
+      },
+      {
+       "n": "SNAFU",
+       "o": "Peggy is cornered and more vulnerable than ever as Leviathan makes their move against her. As the SSR zeroes in on Howard Stark, they may pay the ultimate price as they find their true enemy is closer than they realized."
+      },
+      {
+       "n": "Valediction",
+       "o": "Peggy faces the full fury of Leviathan, as Howard Stark makes his return."
+      }
+     ]
+    },
+    {
+     "s": 2,
+     "eps": [
+      {
+       "n": "The Lady in the Lake",
+       "o": "Peggy moves to the City of Angels to help Chief Daniel Sousa at the West Coast Strategic Scientific Reserve (SSR) investigate a bizarre homicide involving an alleged killer and Isodyne Energy, and reunites with some familiar faces."
+      },
+      {
+       "n": "A View in the Dark",
+       "o": "Peggy discovers her murder investigation has huge ramifications that can destroy her career, as well as everyone near and dear to her."
+      },
+      {
+       "n": "Better Angels",
+       "o": "Peggy’s search for the truth about Zero Matter puts her on a collision course with her superiors as Howard Stark barnstorms in."
+      },
+      {
+       "n": "Smoke and Mirrors",
+       "o": "Agent Carter and the SSR learn there’s more than just a pretty face behind Hollywood star Whitney Frost, Peggy’s most dangerous foe yet."
+      },
+      {
+       "n": "The Atomic Job",
+       "o": "As Jarvis' precision and quick-thinking skills are put to the ultimate test, Peggy must find a way to stop an atomic explosion that threatens to destroy all of California."
+      },
+      {
+       "n": "Life of the Party",
+       "o": "When Agent Peggy Carter realizes she cannot save Wilkes on her own, she turns to her most unexpected adversary for help, while Whitney makes a move to control the deadly Zero Matter."
+      },
+      {
+       "n": "Monsters",
+       "o": "As Agent Carter plots a rescue mission, Whitney Frost hunts for even more dark power, and Jarvis learns not to make promises he cannot keep."
+      },
+      {
+       "n": "The Edge of Mystery",
+       "o": "Peggy and Sousa propose a trade with Whitney Frost, while the SSR gets help from Howard Stark that may be the key to eliminating Zero Matter."
+      },
+      {
+       "n": "A Little Song and Dance",
+       "o": "Peggy desperately tries to save Dr. Wilkes with a dangerous plan to stop Whitney Frost. But Thompson makes a surprising move that could destroy them all."
+      },
+      {
+       "n": "Hollywood Ending",
+       "o": "Peggy needs Howard Stark to eliminate Zero Matter as they are faced with a mission none of them could come back from."
       }
      ]
     }
@@ -7134,6 +8791,587 @@
       }
      ]
     }
+   ],
+   "eps_en": [
+    {
+     "s": 1,
+     "eps": [
+      {
+       "n": "Pilot",
+       "o": "After the events of The Avengers, S.H.I.E.L.D. Agent Phil Coulson assembles a small team of agents to investigate a mysterious group called the Rising Tide. In doing so, they encounter Mike Peterson, a man who has acquired superhuman powers."
+      },
+      {
+       "n": "0-8-4",
+       "o": "Coulson and his S.H.I.E.L.D. agents travel to Peru to investigate an object of unknown origin, codenamed 0-8-4. But when he runs into Comandante Camilla Reyes, more than just sparks fly at 30,000 feet."
+      },
+      {
+       "n": "The Asset",
+       "o": "When the brilliant scientist, Dr. Franklin Hall, is kidnapped, Agent Coulson and his S.H.I.E.L.D. agents must race against the clock to locate him. Skye is their only way in–pushing the team to their limits when the entire plan turns upside-down."
+      },
+      {
+       "n": "Eye Spy",
+       "o": "Agent Coulson and the S.H.I.E.L.D. team try to track down a mysterious woman who has single-handedly committed numerous high-stakes heists. But when the woman’s identity is revealed, a troubling secret stands to ruin Coulson."
+      },
+      {
+       "n": "Girl in the Flower Dress",
+       "o": "An elusive girl in a flower dress may hold the key to the mystery that brings Coulson and team to Asia to rescue a young man with an unusual and dangerous power; and Skye has a secret that jeopardizes her relationship with the team right when they need her most."
+      },
+      {
+       "n": "FZZT",
+       "o": "When floating bodies turn up, Coulson and the agents of S.H.I.E.L.D. must hunt down an elusive killer. No one is safe - not even the team."
+      },
+      {
+       "n": "The Hub",
+       "o": "Dangerous secrets are being kept from Coulson's Team, and he works the system to save Ward and Fitz when they are sent on a Level 8 classified mission that may end in tragedy."
+      },
+      {
+       "n": "The Well",
+       "o": "In the aftermath of the events chronicled in the feature film Marvel's Thor: The Dark World, Coulson and the agents of S.H.I.E.L.D. pick up the pieces–one of which threatens to destroy a member of the team."
+      },
+      {
+       "n": "Repairs",
+       "o": "Coulson and his team are haunted by a ghost that threatens to destroy them all, and only a secret from May's past can save them."
+      },
+      {
+       "n": "The Bridge",
+       "o": "In a shocking cliffhanger episode, Coulson takes the war back to Centipede, and this time he brings in Michael Peterson for some super-soldier support. As they get closer to the truth, startling secrets are revealed and an unexpected twist threatens the team."
+      },
+      {
+       "n": "The Magical Place",
+       "o": "S.H.I.E.L.D. organizes a full scale hunt for Coulson. Meanwhile, Coulson uncovers vital information about the mystery of his death, but, with Centipede out for blood, this knowledge may come at the cost of one of the team!"
+      },
+      {
+       "n": "Seeds",
+       "o": "Coulson and May uncover startling information about Skye's past, while the team is swept into a storm at a S.H.I.E.L.D. Academy of Science and Technology."
+      },
+      {
+       "n": "T.R.A.C.K.S.",
+       "o": "Hot on the trail of The Clairvoyant, Coulson and his team board a mystery train that seems to be headed for certain death."
+      },
+      {
+       "n": "T.A.H.I.T.I.",
+       "o": "Coulson goes on the attack to save Skye by enlisting the aid of Ward's former S.O. John Garrett and uncovers shocking truths about his own life and S.H.I.E.L.D."
+      },
+      {
+       "n": "Yes Men",
+       "o": "When Coulson and his team are attacked by Lorelei - a deadly seductress who escaped from Asgard - Thor’s Lady Sif, her longtime nemesis, steps in to try to save them."
+      },
+      {
+       "n": "End of the Beginning",
+       "o": "Agents Garrett and Triplett are back to help Coulson's Team track down S.H.I.E.L.D.'s nefarious enemy--The Clairvoyant. But will Deathlok destroy them all to protect his master's identity?"
+      },
+      {
+       "n": "Turn, Turn, Turn",
+       "o": "Coulson and his team find themselves without anyone they can trust, only to discover that they are trapped with a traitor in their midst."
+      },
+      {
+       "n": "Providence",
+       "o": "With Colonel Glenn Talbot now on their trail, Coulson and his team seek refuge in the last place anyone would look, where they begin to uncover S.H.I.E.L.D.'s most dangerous secrets. Secrets that could destroy them all."
+      },
+      {
+       "n": "The Only Light in the Darkness",
+       "o": "With their world turned upside down, Coulson races to save the life of his one true love as the mystery of \"The Cellist,\" which began in Marvel's The Avengers, is finally revealed."
+      },
+      {
+       "n": "Nothing Personal",
+       "o": "Just when there's no one left to trust, Agent Maria Hill returns to team up with Coulson as S.H.I.E.L.D. is being destroyed around them."
+      },
+      {
+       "n": "Ragtag",
+       "o": "Ward's betrayal and HYDRA's shocking secrets are revealed as Coulson's team goes undercover on a mission that leaves no one unscathed."
+      },
+      {
+       "n": "Beginning of the End",
+       "o": "Dark secrets are revealed as Coulson and his team put everything on the line to stop Garrett and the forces of HYDRA."
+      }
+     ]
+    },
+    {
+     "s": 2,
+     "eps": [
+      {
+       "n": "Shadows",
+       "o": "Coulson and his team are now wanted fugitives with limited resources, but that's not stopping them from keeping the world safe from powerful and unseen threats everywhere. However, with new members they hardly know, will S.H.I.E.L.D. ever be trusted again?"
+      },
+      {
+       "n": "Heavy Is the Head",
+       "o": "Hunted and running out of solutions, Phil Coulson puts his team right in the line of fire in the hopes of saving them all. But with General Glenn Talbot, HYDRA, and Carl Creel all on the attack, can they possibly survive? Meanwhile, a mysterious Doctor harbors some dangerous secrets that could destr"
+      },
+      {
+       "n": "Making Friends and Influencing People",
+       "o": "Coulson and his team race against HYDRA to get to Donnie Gill--a dangerous gifted with the ability to freeze objects--while Simmons is caught in the crossfire."
+      },
+      {
+       "n": "Face My Enemy",
+       "o": "While on a mission to learn more about the secrets of the mysterious writing, Coulson finds himself attacked by the only person he can trust: Agent Melinda May. Meanwhile, the rest of the team is trapped in an explosive situation, and it's up to Fitz to save them--but is he up to it?"
+      },
+      {
+       "n": "A Hen in the Wolf House",
+       "o": "Coulson's team is up against the beautiful and deadly Bobbi Morse--Security Chief for HYDRA. Meanwhile, Skye's father forces Raina to reunite him with his daughter at any cost."
+      },
+      {
+       "n": "A Fractured House",
+       "o": "The world turns against S.H.I.E.L.D. when HYDRA impersonates them to attack The United Nations, and an unexpected enemy leads the charge to bring about their downfall."
+      },
+      {
+       "n": "The Writing on the Wall",
+       "o": "The team discovers murder victims with the alien glyphs on them that Coulson's been etching. All of Coulson's secrets and lies come to a head."
+      },
+      {
+       "n": "The Things We Bury",
+       "o": "Coulson and team find themselves in an epic face-off against HYDRA to uncover an ancient secret, while Ward kidnaps his brother, Senator Christian Ward, for a violent trip down memory lane."
+      },
+      {
+       "n": "...Ye Who Enter Here",
+       "o": "S.H.I.E.L.D. discovers the ancient city before HYDRA, but uncovering the secrets may require one of Coulson's team to make the ultimate sacrifice. Meanwhile, Melinda May and Skye race to get to Raina before Daniel Whitehall takes her."
+      },
+      {
+       "n": "What They Become",
+       "o": "Coulson and Whitehall's forces meet in an explosive confrontation that dramatically alters everyone's fates. Meanwhile, Skye discovers shocking secrets about her past."
+      },
+      {
+       "n": "Aftershocks",
+       "o": "Coulson's team must deal with the consequences of their war with HYDRA as shocking revelations threaten to tear them apart, and HYDRA makes a dangerous move that may involve a traitor in S.H.I.E.L.D.'s midst."
+      },
+      {
+       "n": "Who You Really Are",
+       "o": "Coulson and his team come to the aid of a confused Lady Sif, who has lost her memory after fighting with a mysterious warrior whose mission will send shockwaves through S.H.I.E.L.D. Meanwhile, Bobbi and Mack continue to hide their true mission from everyone close to them."
+      },
+      {
+       "n": "One of Us",
+       "o": "Cal seeks revenge on Coulson by assembling a team of Super Villains to destroy S.H.I.E.L.D. Meanwhile, May calls on renowned Dr. Andrew Garner, her charismatic ex-husband, with a crisis that threatens to tear the team apart."
+      },
+      {
+       "n": "Love in the Time of Hydra",
+       "o": "Coulson and his team are still reeling from a shocking revelation that leaves the team fractured as they must decide what to do with one of their own. Meanwhile, Bobbi and Mack reveal their true allegiance to Hunter, while elsewhere, Ward and Agent 33 embark on a personal mission."
+      },
+      {
+       "n": "One Door Closes",
+       "o": "War comes to Coulson's doorstep in a way he never anticipated as shocking revelations are brought to light, and Skye struggles to control her new abilities but will soon make a decision that irrevocably changes her life."
+      },
+      {
+       "n": "Afterlife",
+       "o": "As Robert Gonzales makes his move, Coulson must do whatever it takes to protect the future of S.H.I.E.L.D. Meanwhile Skye’s journey to control her powers takes a surprising turn when she meets the enigmatic Inhuman named Lincoln."
+      },
+      {
+       "n": "Melinda",
+       "o": "The story of Melinda May’s transformation into “The Cavalry” is revealed as she finds herself at a crossroads in the war between Coulson and Gonzales. As Skye learns more about her true heritage from Lincoln, the truth about the Inhumans will send her in a new direction."
+      },
+      {
+       "n": "The Frenemy of My Enemy",
+       "o": "A dangerous new alliance is formed as Coulson and Hunter turn to the last person anyone would expect – Grant Ward! As the war between S.H.I.E.L.D. factions continues, Skye and Lincoln will find themselves drawn into this conflict."
+      },
+      {
+       "n": "The Dirty Half Dozen",
+       "o": "Gonzales and Coulson must find a way to put their differences aside and work together against HYDRA, even if it means teaming up with someone they don't trust."
+      },
+      {
+       "n": "Scars",
+       "o": "Skye is torn between her loyalty to S.H.I.E.L.D. and her connection to the Inhumans as tensions rise between the groups -- and Coulson reveals a secret he's been hiding from even those closest to him."
+      },
+      {
+       "n": "S.O.S. (1)",
+       "o": "S.H.I.E.L.D. puts everything on the line to survive a war that blurs the line between friend and foe. Coulson and his team will be forced to make shocking sacrifices that will leave their relationships and their world changed forever."
+      },
+      {
+       "n": "S.O.S. (2)",
+       "o": "S.H.I.E.L.D. puts everything on the line to survive a war that blurs the line between friend and foe. Coulson and his team will be forced to make shocking sacrifices that will leave their relationships and their world changed forever."
+      }
+     ]
+    },
+    {
+     "s": 3,
+     "eps": [
+      {
+       "n": "Laws of Nature",
+       "o": "When a new Inhuman is discovered, Coulson and the team have an encounter with another organization seeking powered people; Fitz goes to extreme measures to determine how to get Simmons back."
+      },
+      {
+       "n": "Purpose in the Machine",
+       "o": "Fitz and the team enlist the aid of an Asgardian to unlock the secrets of the ancient Monolith that swallowed Simmons, and Agent May is at a crossroads in her personal and professional life."
+      },
+      {
+       "n": "A Wanted (Inhu)man",
+       "o": "Daisy, Mack and Coulson race to protect Lincoln as Rosalind’s team hunts down the Inhuman in their quest for powered people. Meanwhile, Hunter proves that there is no line that he will not cross to exact his revenge against Ward and HYDRA."
+      },
+      {
+       "n": "Devils You Know",
+       "o": "Coulson and the team search for the Inhuman who is killing other Inhumans. Meanwhile, May feels that Hunter's mission to take down Ward is getting too personal."
+      },
+      {
+       "n": "4,722 Hours",
+       "o": "After her dramatic rescue from another planet, Simmons is still reeling from her ordeal and reveals how she had to fight for her life in a harsh new world."
+      },
+      {
+       "n": "Among Us Hide...",
+       "o": "The stakes get even higher as Hunter and May continue to go after Ward and HYDRA, and Daisy and Coulson begin to suspect that the ATCU may be keeping a big secret from S.H.I.E.L.D."
+      },
+      {
+       "n": "Chaos Theory",
+       "o": "As Daisy and the team fight to protect Inhumans, S.H.I.E.L.D. discovers the shocking truth about one of their foes; Fitz helps Simmons recover information that could lead them back through the portal."
+      },
+      {
+       "n": "Many Heads, One Tale",
+       "o": "The S.H.I.E.L.D. team discovers dangerous truths about the ATCU, and Ward's plans to destroy S.H.I.E.L.D. take a surprising twist."
+      },
+      {
+       "n": "Closure",
+       "o": "Ward's campaign for revenge brings the S.H.I.E.L.D. team to their knees, and Coulson proves he will do anything to settle the score."
+      },
+      {
+       "n": "Maveth",
+       "o": "S.H.I.E.L.D battles HYDRA head-to-head, which sees Coulson and Fitz take the ultimate risk while Daisy and the Inhumans try to keep HYDRA at bay."
+      },
+      {
+       "n": "Bouncing Back",
+       "o": "In the aftermath of his trip to Maveth, Coulson is more determined than ever to get to Gideon Malick and put an end to HYDRA once and for all. Daisy and the team encounter more Inhumans who have powers like they've never seen before, but will they be friends or enemies of S.H.I.E.L.D.?"
+      },
+      {
+       "n": "The Inside Man",
+       "o": "Coulson and General Talbot are forced to team up and attend a worldwide symposium on Inhumans, where they suspect Malick has an inside man. As the S.H.I.E.L.D. team gets closer to the truth, an unexpected traitor is revealed."
+      },
+      {
+       "n": "Parting Shot",
+       "o": "Bobbi and Hunter become ensnared in an assassination plot after tracking Malick to Russia. As S.H.I.E.L.D. races to save the lives on the line, the team is changed forever."
+      },
+      {
+       "n": "Watchdogs",
+       "o": "When a radical group called The Watchdogs emerges with plans to eliminate the Inhumans, Agent Mack and his brother become caught in the crossfire. Meanwhile, Simmons discovers a powerful chemical compound that could alter the future for Inhumans."
+      },
+      {
+       "n": "Spacetime",
+       "o": "When Daisy gets a horrifying glimpse of the future, S.H.I.E.L.D. races to prove that fate is not fixed."
+      },
+      {
+       "n": "Paradise Lost",
+       "o": "S.H.I.E.L.D. hunts for information on their dangerous new enemy, and a shameful secret from Malick's past is exposed, threatening to destroy his HYDRA legacy."
+      },
+      {
+       "n": "The Team",
+       "o": "Agent Daisy Johnson must call upon the Secret Warriors for an inaugural mission that will leave no member unscathed, and S.H.I.E.L.D. learns more about Hive's powers, forcing them to question everyone they trust."
+      },
+      {
+       "n": "The Singularity",
+       "o": "The S.H.I.E.L.D. team is left reeling and decimated as Hive continues to sway Inhumans to his side. But there is a sliver of hope as Agents Fitz and Simmons follow a lead that may be able to stop the maniacal Inhuman once and for all."
+      },
+      {
+       "n": "Failed Experiments",
+       "o": "Coulson and his team race to combat Hive's control over the Inhumans, as their enemy's deadly plan for the human race is revealed."
+      },
+      {
+       "n": "Emancipation",
+       "o": "In the aftermath of the events of Captain America: Civil War, S.H.I.E.L.D. feels pressure to reveal their involvement with Inhumans. But with the stakes higher than ever and Hive growing stronger, the team is tested in ways they could never anticipate."
+      },
+      {
+       "n": "Absolution (1)",
+       "o": "S.H.I.E.L.D. takes on Hive, and when his master plan is finally revealed, the team must spring into action."
+      },
+      {
+       "n": "Ascension (2)",
+       "o": "As Hive prepares to convert the world into his personal army, S.H.I.E.L.D. scrambles to mount a counteroffensive. Who's going to pay the ultimate price to ensure that the mission is a success?"
+      }
+     ]
+    },
+    {
+     "s": 4,
+     "eps": [
+      {
+       "n": "The Ghost",
+       "o": "Daisy has left S.H.I.E.L.D. and is trying to solve the mystery of a bunch of serial killings in the Los Angeles area. At the same time her old friends suspect her for the killings and are following her trail in an attempt to find her."
+      },
+      {
+       "n": "Meet the New Boss",
+       "o": "Daisy goes to battle Ghost Rider at a terrible cost, and Coulson faces the new Director, and his bold agenda surprises them all."
+      },
+      {
+       "n": "Uprising",
+       "o": "As Coulson, Mack and Fitz attempt to track down and neutralize a rogue group looking to end Inhuman Registration worldwide, Simmons and Dr. Radcliffe only have hours to save May before she succumbs forever to her mysterious illness."
+      },
+      {
+       "n": "Let Me Stand Next to Your Fire",
+       "o": "As Ghost Rider's quest for vengeance brings him into an explosive confrontation with S.H.I.E.L.D., Coulson and Mack must rely on an unlikely ally in their time of desperate need; and Daisy reunites with a familiar face to stop the Watchdogs."
+      },
+      {
+       "n": "Lockup",
+       "o": "As Robbie Reyes struggles to control the Ghost Rider, S.H.I.E.L.D. infiltrates a high-security prison to unravel the secrets that haunt them all."
+      },
+      {
+       "n": "The Good Samaritan",
+       "o": "Robbie's shocking story on how he became Ghost Rider is finally discovered as Coulson and his team's lives hang in the balance."
+      },
+      {
+       "n": "Deals with Our Devils",
+       "o": "With the loss of half the team, the remaining members search for answers as the clock counts down for Ghost Rider."
+      },
+      {
+       "n": "The Laws of Inferno Dynamics",
+       "o": "S.H.I.E.L.D. and Ghost Rider find themselves unlikely allies when the lives of all of Los Angeles hang in the balance."
+      },
+      {
+       "n": "Broken Promises",
+       "o": "Coulson is unaware of a dark secret May is hiding, even as the two grow closer; Aida is determined to find the Darkhold."
+      },
+      {
+       "n": "The Patriot",
+       "o": "Separated from their team, Coulson and Mack discover a shocking secret about Mace, leaving all of S.H.I.E.L.D. in a precarious position."
+      },
+      {
+       "n": "Wake Up",
+       "o": "May works to uncover the truth about what happened to her; Aida's next move puts everyone's life at risk."
+      },
+      {
+       "n": "Hot Potato Soup",
+       "o": "Agents Sam and Billy Koenig are hunted down to get at the Darkhold book, and only Phil Coulson and the team can save them before the clock ticks out."
+      },
+      {
+       "n": "BOOM",
+       "o": "Daisy, Director Mace and the S.H.I.E.L.D. team must find a way to contain an explosive Inhuman. Meanwhile, Coulson and Mack come face-to-face with Radcliffe’s inspiration for Aida."
+      },
+      {
+       "n": "The Man Behind the Shield",
+       "o": "Mace fights for his life while Coulson and team find themselves in a deadly cat-and-mouse game as they attempt his rescue."
+      },
+      {
+       "n": "Self Control",
+       "o": "Suspicion turns to paranoia when the team doesn't know who can be trusted as more LMDs infiltrate S.H.I.E.L.D."
+      },
+      {
+       "n": "What If...",
+       "o": "Daisy and Simmons uncover secrets and lies in a world gone mad. With HYDRA in control, they are our only hope to save everyone."
+      },
+      {
+       "n": "Identity and Change",
+       "o": "As Daisy and Simmons struggle to discover an escape route to the real world, the identity of the Inhuman leader of the Resistance is revealed."
+      },
+      {
+       "n": "No Regrets",
+       "o": "The truth behind Fitz's turn could bring down all of S.H.I.E.L.D.."
+      },
+      {
+       "n": "All the Madame's Men",
+       "o": "Daisy finds herself teamed up with an unlikely partner. Meanwhile, Aida prepares to put her ultimate end game into effect."
+      },
+      {
+       "n": "Farewell, Cruel World!",
+       "o": "The clock is ticking for Daisy and Simmons to get the team out of the Framework, but not everyone is ready and willing to leave."
+      },
+      {
+       "n": "The Return",
+       "o": "Coulson and the team's victory in the Framework is short-lived, as an even deadlier enemy looms against them all."
+      },
+      {
+       "n": "World's End",
+       "o": "With the surprising emergence of Ghost Rider, Coulson and the team attempt to stop Aida from ending the world."
+      }
+     ]
+    },
+    {
+     "s": 5,
+     "eps": [
+      {
+       "n": "Orientation (1)",
+       "o": "Coulson and the team find themselves stranded on a mysterious ship in outer space, and that's just the beginning of the nightmare to come."
+      },
+      {
+       "n": "Orientation (2)",
+       "o": "Coulson and the team find themselves stranded on a mysterious ship in outer space, and that's just the beginning of the nightmare to come."
+      },
+      {
+       "n": "A Life Spent",
+       "o": "Daisy decides she will rescue Simmons, even if it means risking everything to do it."
+      },
+      {
+       "n": "A Life Earned",
+       "o": "Coulson and the team discover what their captors' true intentions are, and in space, escape is not an option."
+      },
+      {
+       "n": "Rewind",
+       "o": "With the surprising help of Lance Hunter, nothing will stop Fitz from finding the lost team as his incredible journey is revealed."
+      },
+      {
+       "n": "Fun & Games",
+       "o": "With Daisy's life on the line, an unexpected friend attempts to rescue her."
+      },
+      {
+       "n": "Together or Not at All",
+       "o": "Just as the team reunites, they become prey to an undefeated Kree warrior bent on killing them all."
+      },
+      {
+       "n": "The Last Day",
+       "o": "Coulson and the team discover that the most unexpected person from S.H.I.E.L.D.’s past may hold the key to stopping Earth’s destruction."
+      },
+      {
+       "n": "Best Laid Plans",
+       "o": "Mack, Yo-Yo, and Flint fight to keep everyone alive by starting a revolution against the Kree."
+      },
+      {
+       "n": "Past Life",
+       "o": "The team has one final chance to return to the timeline, but their actions may have deadly consequences."
+      },
+      {
+       "n": "All the Comforts of Home",
+       "o": "Coulson and the team set out to rewrite the course of humanity's fate; they're unaware that their efforts will dramatically change one S.H.I.E.L.D. agent's life."
+      },
+      {
+       "n": "The Real Deal",
+       "o": "In the milestone 100th episode, Coulson finally reveals the mysterious deal he made with Ghost Rider, which will impact everyone on the team."
+      },
+      {
+       "n": "Principia",
+       "o": "The team goes in search of Gravitonium in order to save the world."
+      },
+      {
+       "n": "The Devil Complex",
+       "o": "As Fitz and Simmons race to find a way to seal the Rift, they are faced with one of their greatest fears manifested."
+      },
+      {
+       "n": "Rise and Shine",
+       "o": "Coulson uncovers General Hale's true agenda, and it could be the end of the world if S.H.I.E.L.D. doesn't help her."
+      },
+      {
+       "n": "Inside Voices",
+       "o": "Coulson is forced to team up with surprising allies to save the world, while the S.H.I.E.L.D. team attempts to track down and rescue him."
+      },
+      {
+       "n": "The Honeymoon",
+       "o": "While an agent's life hangs in the balance, Fitz, Simmons, and Yo-Yo attempt to neutralize a weapon that could play a role in Earth’s destruction."
+      },
+      {
+       "n": "All Roads Lead…",
+       "o": "The team must find a way to stop Ruby before the prophesied chain reaction that can destroy the Earth is put into motion."
+      },
+      {
+       "n": "Option Two",
+       "o": "Coulson and the team find themselves under siege at the Lighthouse."
+      },
+      {
+       "n": "The One Who Will Save Us All",
+       "o": "A newly determined Talbot takes Coulson to meet the enemy and attempts to avert Earth's destruction."
+      },
+      {
+       "n": "The Force of Gravity",
+       "o": "Daisy's future as the Destroyer of Worlds could take a critical change."
+      },
+      {
+       "n": "The End",
+       "o": "Coulson's life or death is the challenge the team finds themselves in, as the wrong decision will cause the Destruction of Earth."
+      }
+     ]
+    },
+    {
+     "s": 6,
+     "eps": [
+      {
+       "n": "Missing Pieces",
+       "o": "Scattered across the galaxy, the team works to find their footing in the wake of losing Coulson."
+      },
+      {
+       "n": "Window of Opportunity",
+       "o": "While Fitz and Enoch struggle in space, Sarge and his team move forward with their mysterious mission on Earth."
+      },
+      {
+       "n": "Fear and Loathing on the Planet of Kitson",
+       "o": "It’s a wild night out on the planet of Kitson for the agents. While Leo and Enoch try their luck at the casino, nearby, Daisy and Simmons find themselves in a much... groovier situation."
+      },
+      {
+       "n": "Code Yellow",
+       "o": "Yo-Yo and Keller take things public; parasitic aliens threaten the human race; and someone really needs boba."
+      },
+      {
+       "n": "The Other Thing",
+       "o": "Sarge has May; Atarah has Daisy, Enoch and Simmons; and now, there are two planets that need saving."
+      },
+      {
+       "n": "Inescapable",
+       "o": "They've fought through space, time and alternate realities to find each other, and now, closer than ever, only their own demons can stop FitzSimmons' reunion."
+      },
+      {
+       "n": "Toldja",
+       "o": "After finding themselves in yet another gambling dilemma, a mysterious stranger offers Enoch and FitzSimmons a ride home where, it turns out, two shrikes aren’t better than one."
+      },
+      {
+       "n": "Collision Course (1)",
+       "o": "To face The Galaxy-Hopping Hate-Beast That Eats Planets, the team on Earth asks for help in all the wrong places. While back on the Lazy Comet, something weird is going on with Izel’s crew, and it’s not just the puffies."
+      },
+      {
+       "n": "Collision Course (2)",
+       "o": "No time for the team to play catch-up, there's a planet to save."
+      },
+      {
+       "n": "Leap",
+       "o": "The party’s over, and now the team must trust each other in order to face impending doom and an enemy that’s closer than they think."
+      },
+      {
+       "n": "From the Ashes",
+       "o": "Out of answers and running out of time, the agents must face the ghosts of their past in order to move forward."
+      },
+      {
+       "n": "The Sign",
+       "o": "With time running short, the team will have to go to hell and back to stop the end of everything."
+      },
+      {
+       "n": "New Life",
+       "o": "Who will survive? It all comes down to this."
+      }
+     ]
+    },
+    {
+     "s": 7,
+     "eps": [
+      {
+       "n": "The New Deal",
+       "o": "Coulson and the Agents of S.H.I.E.L.D. are thrust backward in time and stranded in 1931 New York City. With the all-new Zephyr set to time-jump at any moment, the team must hurry to find out exactly what happened. If they fail, it would mean disaster for the past, present and future of the world."
+      },
+      {
+       "n": "Know Your Onions",
+       "o": "With the identity of the timeline-unraveling \"thread\" revealed, the team's mission to protect him at all costs leads each agent to question their own values. Is preserving the future of the world as they know it worth the destruction they could prevent?"
+      },
+      {
+       "n": "Alien Commies from the Future!",
+       "o": "A surprise leap forward in time has stranded Enoch in 1931 and landed the team in yet another unfamiliar decade. Now, in order to stop the Chronicoms from launching their newest future-dismantling plan, the agents will have to infiltrate one of S.H.I.E.L.D.’s most secure bases. They won’t be able to"
+      },
+      {
+       "n": "Out of the Past",
+       "o": "It was just another average morning on July 22, 1955, when Agent Phil Coulson realized the importance of that day in the S.H.I.E.L.D. history books. With a chip on his shoulder and a genre-bending glitch in his system, he’d set into motion a chain of events that would hopefully preserve the timeline"
+      },
+      {
+       "n": "A Trout in the Milk",
+       "o": "After a bumpy landing in the disco decade, the team – Daniel Sousa in tow – reunites with more than one familiar face at the S.H.I.E.L.D. hangout and discovers exactly how to dismantle the Chronicoms’ latest plan. But when they get too close for comfort, the Zephyr unexpectedly leaps forward again, "
+      },
+      {
+       "n": "Adapt or Die",
+       "o": "The stakes are higher than ever when, after blowing their cover and damaging the Zephyr in the process, the team must scramble to rescue Mack’s parents, save S.H.I.E.L.D. from a Chronicom infestation, and fix the ship … all before the next time-jump. Meanwhile, Daisy and Sousa find themselves at a d"
+      },
+      {
+       "n": "The Totally Excellent Adventures of Mack and The D",
+       "o": "After being unexpectedly stranded in 1982, Mack retreats to his childhood home to process the death of his parents, while Deke gets to work scouting a chart-topping group of new agents. With no idea if or when the team is coming back for them, time seems to finally be on their side … at least until "
+      },
+      {
+       "n": "After, Before",
+       "o": "With the Zephyr’s time drive malfunctioning, the team is quite literally hurling toward disaster and Yo-Yo may be their only hope. The only problem? To get her powers back, she’ll need to enlist the help of an old adversary and revisit part of her past long hidden away."
+      },
+      {
+       "n": "As I Have Always Been",
+       "o": "A time storm ravages the Zephyr, propelling it toward destruction while simultaneously forcing Daisy and Coulson to relive their failed attempts to save the team over and over, until they find a solution or are swallowed by the storm. Making it to their next destination will take trust, courage and "
+      },
+      {
+       "n": "Stolen",
+       "o": "After Enoch’s sacrifice propelled them out of the time storm, the team arrives back in 1983 where Nathaniel and Kora are hard at work building an army of hand-selected anarchist Inhumans at Afterlife. When the agents split up to cover more ground, Daisy is tasked with protecting Jiaying and is compe"
+      },
+      {
+       "n": "Brand New Day",
+       "o": "With the help of Kora on the inside, Sibyl and Nathaniel continue their fight to shape a dark new future for S.H.I.E.L.D., managing to stay one step ahead of the agents along the way. If the team is going to turn this one around, they’ll have to get creative, and maybe even a little out of this worl"
+      },
+      {
+       "n": "The End Is at Hand",
+       "o": "With their backs against the wall and Nathaniel and Sibyl edging ever closer to eliminating S.H.I.E.L.D. from the history books, the agents must rely on their strengths to outsmart and outlast the Chronicoms. This is their most important fight, and it will take the help of friends and teammates, pas"
+      },
+      {
+       "n": "What We're Fighting For",
+       "o": "With their backs against the wall and Nathaniel and Sibyl edging ever closer to eliminating S.H.I.E.L.D. from the history books, the agents must rely on their strengths to outsmart and outlast the Chronicoms. This is their most important fight, and it will take the help of friends and teammates, pas"
+      }
+     ]
+    }
    ]
   },
   "inhumans": {
@@ -7211,6 +9449,45 @@
        "d": "2017-11-10",
        "o": "Es heißt Bruder gegen Bruder in der finalen Konfrontation zwischen Black Bolt und Maximus, in der es zu einer unerwarteten Wendung mit folgenreichen Konsequenzen für alle Inhumans ",
        "v": 6.1
+      }
+     ]
+    }
+   ],
+   "eps_en": [
+    {
+     "s": 1,
+     "eps": [
+      {
+       "n": "Behold...The Inhumans",
+       "o": "After a military coup leaves the Royal Family stranded in Hawaii, they must find a way to reunite with each other and return home before their way of life is destroyed forever."
+      },
+      {
+       "n": "Those Who Would Destroy Us",
+       "o": "After a military coup leaves the Royal Family stranded in Hawaii, they must find a way to reunite with each other and return home before their way of life is destroyed forever."
+      },
+      {
+       "n": "Divide and Conquer",
+       "o": "After fleeing their home, The Inhumans desperately search for each other in the wake of Maximus’ coup. Now they must learn who they can trust on Earth."
+      },
+      {
+       "n": "Make Way For... Medusa",
+       "o": "The search for Black Bolt continues on Earth; meanwhile, Maximus makes bold moves to cement his status as the new ruler of Attilan."
+      },
+      {
+       "n": "Something Inhuman This Way Comes...",
+       "o": "On the run from Auran’s forces, Black Bolt and Medusa reluctantly work with Louise to help locate the rest of their family. Back on Attilan, Maximus’ actions change the game completely."
+      },
+      {
+       "n": "The Gentleman's Name Is Gorgon",
+       "o": "Gorgon and Karnak take on Auran and her Inhuman army with disastrous results."
+      },
+      {
+       "n": "Havoc in the Hidden Land",
+       "o": "The Royal Family returns to Attilan and comes face to face with Maximus."
+      },
+      {
+       "n": "...And Finally: Black Bolt",
+       "o": "It’s brother versus brother as the final showdown between Black Bolt and Maximus takes an unexpected turn – one with lasting consequences for all of Inhumanity."
       }
      ]
     }

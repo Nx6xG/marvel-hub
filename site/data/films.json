@@ -801,7 +801,8 @@
   ],
   "plot": "Monsterjäger konkurrieren in Schwarz-Weiß um den Bloodstone — Marvels Horror-Ecke in 53 Minuten.",
   "note": "Stimmungsvoller Einzelgänger ohne Saga-Fäden.",
-  "uni": "mcu"
+  "uni": "mcu",
+  "plot_en": "Monster hunters compete in black and white for the Bloodstone — Marvel's horror corner as an homage to Universal classics. Composer Michael Giacchino's directing debut."
  },
  {
   "id": "bpwf",
@@ -841,7 +842,8 @@
   ],
   "plot": "Mantis und Drax entführen Kevin Bacon als Weihnachtsgeschenk für Quill. Genau so albern, wie es klingt.",
   "note": "44 Minuten Weihnachten. Phase-4-Abschluss.",
-  "uni": "mcu"
+  "uni": "mcu",
+  "plot_en": "Mantis and Drax kidnap Kevin Bacon as a Christmas present for Quill. Exactly as silly as it sounds."
  },
  {
   "id": "qm",

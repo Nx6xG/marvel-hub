@@ -26,7 +26,14 @@ const teamById = {}; TEAMS.forEach((t) => (teamById[t.id] = t));
 
 const UNI_LABEL = { mcu: "MCU", fox: "X-Men / Fox", sony: "Sony / Spider-Verse", alt: "Frühe Marvel-Ära", net: "TV-Ära" };
 const PRIO_LABEL = { pflicht: "Pflicht", empfohlen: "Empfohlen", optional: "Optional", komplettist: "Komplettist", future: "Kommend" };
+const UNI_LABEL_EN = { mcu: "MCU", fox: "X-Men / Fox", sony: "Sony / Spider-Verse", alt: "Early Marvel era", net: "TV era" };
+const PRIO_LABEL_EN = { pflicht: "Essential", empfohlen: "Recommended", optional: "Optional", komplettist: "Completionist", future: "Upcoming" };
+const uniL = (u, lang) => (lang === "en" ? UNI_LABEL_EN[u] : UNI_LABEL[u]);
+const prioL = (pr, lang) => (lang === "en" ? PRIO_LABEL_EN[pr] : PRIO_LABEL[pr]);
+const typeL = (t, lang) => (lang === "en" && t === "Serie" ? "Series" : t);
 const REL_NAME = { verbuendet: "Verbündete", feind: "Feinde", familie: "Familie", liebe: "Liebe", komplex: "Es ist kompliziert" };
+const REL_NAME_EN = { verbuendet: "Allies", feind: "Enemies", familie: "Family", liebe: "Love", komplex: "It's complicated" };
+const relN = (t, lang) => (lang === "en" ? REL_NAME_EN[t] : REL_NAME[t]);
 
 /* ================= i18n ================= */
 const T = {
@@ -140,6 +147,38 @@ const COMICS = existsSync("site/data/comics.json") ? JSON.parse(readFileSync("si
 const SONGS = existsSync("site/data/songs.json") ? JSON.parse(readFileSync("site/data/songs.json", "utf8")) : {};
 const COMPOSERS = existsSync("site/data/composers.json") ? JSON.parse(readFileSync("site/data/composers.json", "utf8")) : {};
 const GAMES = existsSync("site/data/games.json") ? JSON.parse(readFileSync("site/data/games.json", "utf8")) : [];
+
+/* Englische Übersetzungen (site/i18n/*.json) in die Datenobjekte mischen — tr() greift auf die _en-Felder zu */
+const I18N = (n) => (existsSync(`site/i18n/${n}.json`) ? JSON.parse(readFileSync(`site/i18n/${n}.json`, "utf8")) : {});
+{
+  const chEn = { ...I18N("chars_en_1"), ...I18N("chars_en_2") };
+  for (const c of CHARS) { const e = chEn[c.id]; if (e) for (const k of ["bio", "pow", "uni", "first"]) if (e[k]) c[k + "_en"] = e[k]; }
+  const relEn = I18N("chars_rel_en");
+  for (const c of CHARS) { const e = relEn[c.id]; if (e) { if (e.a) c.a_en = e.a; (c.rel || []).forEach((r, i) => { if (e.rel && e.rel[i]) r[3] = e.rel[i]; }); } }
+  const misc = I18N("misc_en");
+  for (const t of TEAMS) { const e = (misc.teams || {})[t.id]; if (e) for (const k of ["n", "sub", "status", "desc", "mlabel"]) if (e[k]) t[k + "_en"] = e[k]; }
+  const uniKeys = ["616", "828", "838", "10005", "96283", "120703", "ssu", "1610", "65", "whatif", "tva", "battleworld", "vormcu"];
+  UNIVERSES.forEach((u, i) => { const e = (misc.universes || {})[uniKeys[i]]; if (e) for (const k of ["n", "status", "d"]) if (e[k]) u[k + "_en"] = e[k]; });
+  (misc.threads || []).forEach((e, i) => { if (THREADS[i]) for (const k of ["n", "status", "d"]) if (e[k]) THREADS[i][k + "_en"] = e[k]; });
+  (misc.chronik || []).forEach((e, i) => { if (CHRONIK[i]) for (const k of ["n", "d"]) if (e[k]) CHRONIK[i][k + "_en"] = e[k]; });
+  const lex = I18N("lexikon_en");
+  for (const e of LEXIKON) { const x = lex[e.id]; if (x) for (const k of ["n", "sub", "d"]) if (x[k]) e[k + "_en"] = x[k]; }
+  const pg = I18N("paths_games_en");
+  for (const pth of PATHS) { const e = (pg.paths || {})[pth.id]; if (e) { for (const k of ["n", "tag", "intro"]) if (e[k]) pth[k + "_en"] = e[k]; (e.notes || []).forEach((nt, i) => { if (pth.steps[i]) pth.steps[i].note_en = nt; }); } }
+  for (const gm of GAMES) { if ((pg.games || {})[gm.id]) gm.d_en = pg.games[gm.id]; if ((pg.games_y || {})[gm.id]) gm.y_en = pg.games_y[gm.id]; if ((pg.games_plat || {})[gm.id]) gm.plat_en = pg.games_plat[gm.id]; }
+  const nc = I18N("notes_comics_en");
+  for (const f of FILMS) if ((nc.notes || {})[f.id]) f.note_en = nc.notes[f.id];
+  for (const [id, arr] of Object.entries(nc.comics || {})) (COMICS[id] || []).forEach((c, i) => { if (arr[i]) c.n_en = arr[i]; });
+  const fx = I18N("films_extras_en");
+  (fx.variants || []).forEach((e, i) => { if (VARIANTS[i]) { VARIANTS[i].n_en = e.n; VARIANTS[i].note_en = e.note; } });
+  var TRIVIA_EN = fx.trivia || {}, PC_EN = fx.pc || {}, PCNOTE_EN = fx.pcNotes || {}, CAMEO_EN = fx.cameo || {}, SONGS_EN = fx.songs || {};
+}
+const trivL = (id, lang) => (lang === "en" && TRIVIA_EN[id] ? TRIVIA_EN[id] : TRIVIA[id]);
+const songsL = (id, lang) => (lang === "en" && SONGS_EN[id] ? SONGS_EN[id] : SONGS[id]);
+const cameoL = (id, lang) => (lang === "en" && CAMEO_EN[id] ? CAMEO_EN[id] : CAMEO[id]);
+const pcSceneD = (id, i, s, lang) => (lang === "en" && PC_EN[id] && PC_EN[id][i] ? PC_EN[id][i] : s.d);
+const pcNoteL = (id, pc, lang) => (lang === "en" && PCNOTE_EN[id] ? PCNOTE_EN[id] : pc.note);
+const fragL = (n, lang) => (lang === "en" && existsSync(`site/fragments/${n}-en.html`) ? readFileSync(`site/fragments/${n}-en.html`, "utf8") : frag(n));
 const LEX_BY_CAT = (c) => LEXIKON.filter((e) => e.cat === c);
 const LSLUG = {};
 { const used = new Set();
@@ -284,7 +323,7 @@ function filmBody(f, lang) {
   const restCast = (CREDITS[id] || []).filter((c) => !figActors.has(c.n.trim().toLowerCase()));
   const restHtml = restCast.map((c) => actorCard(c.p, c.n, c.r, prefix)).join("");
   const pc = PC[id];
-  const stream = STREAM[id] || (f.uni === "sony" ? "Netflix / wechselnd (DE)" : f.uni === "alt" ? "Wechselnd (Leihe/Disney+)" : "Disney+");
+  const stream = STREAM[id] || (f.uni === "sony" ? (lang === "de" ? "Netflix / wechselnd (DE)" : "Netflix / varies") : f.uni === "alt" ? (lang === "de" ? "Wechselnd (Leihe/Disney+)" : "Varies (rent/Disney+)") : "Disney+");
   const trailerQ = encodeURIComponent(`${f.t} ${parseInt(f.y)} trailer${lang === "de" ? " deutsch" : ""}`);
   return `<main class="wrap fp" style="padding-bottom:70px">
   ${d.bd ? `<div class="fp-backdrop"><img src="/img/b/${id}.jpg" alt="" aria-hidden="true" fetchpriority="high"></div>` : ""}
@@ -293,14 +332,14 @@ function filmBody(f, lang) {
     <div class="fp-poster">${posterImgW(id, f.t)}</div>
     <div class="fp-head">
       ${x.logo ? `<h1 class="visually-hidden">${esc(f.t)}</h1><img class="fp-logo" src="/img/l/${id}.png" alt="${esc(f.t)}">` : `<h1 class="metal fp-h1">${esc(f.t)}</h1>`}
-      <span class="uni-badge ub-${f.uni}">${UNI_LABEL[f.uni]}</span>
-      <div class="fp-meta"><b>${f.type} · ${f.y}</b>${d.rt ? " · " + fmtMin(d.rt) : (d.seasons ? ` · ${d.seasons} ${d.seasons > 1 ? (lang === "de" ? "Staffeln" : "seasons") : (lang === "de" ? "Staffel" : "season")} · ${d.episodes} Ep.` : (f.min ? " · ≈ " + fmtMin(f.min) : ""))}${f.uni === "mcu" && f.ph ? ` · ${L.phase} ${f.ph}` : ""}<br>${esc(f.dir)}${d.genres && d.genres.length ? `<br><span style="color:var(--faint)">${d.genres.map(esc).join(" · ")}${x.countries ? " · " + x.countries.join("/") : ""}</span>` : ""}${x.orig ? `<br><span style="color:var(--faint)">Originaltitel: ${esc(x.orig)}</span>` : ""}</div>
+      <span class="uni-badge ub-${f.uni}">${uniL(f.uni, lang)}</span>
+      <div class="fp-meta"><b>${typeL(f.type, lang)} · ${f.y}</b>${d.rt ? " · " + fmtMin(d.rt) : (d.seasons ? ` · ${d.seasons} ${d.seasons > 1 ? (lang === "de" ? "Staffeln" : "seasons") : (lang === "de" ? "Staffel" : "season")} · ${d.episodes} Ep.` : (f.min ? " · ≈ " + fmtMin(f.min) : ""))}${f.uni === "mcu" && f.ph ? ` · ${L.phase} ${f.ph}` : ""}<br>${esc(lang === "en" ? f.dir.replace("Regie:", "Director:").replace("Drehbuch:", "Writer:") : f.dir)}${d.genres && d.genres.length ? `<br><span style="color:var(--faint)">${d.genres.map(esc).join(" · ")}${x.countries ? " · " + x.countries.join("/") : ""}</span>` : ""}${x.orig ? `<br><span style="color:var(--faint)">${lang === "de" ? "Originaltitel" : "Original title"}: ${esc(x.orig)}</span>` : ""}</div>
       <div class="stream-line">📺 ${L.where}: ${d.prov && (d.prov.s.length || d.prov.r.length)
         ? d.prov.s.map((n) => `${EXTRA.providers[n] ? `<img class="prov-logo" src="/img/pr/${EXTRA.providers[n]}.png" alt="">` : ""}<b>${esc(n)}</b>`).join(" · ") + (d.prov.r.length ? ` · ${lang === "de" ? "Leihe" : "Rent"}: ${esc(d.prov.r.slice(0, 2).join(", "))}` : "")
         : `<b>${esc(stream)}</b> · ${L.asof}`}</div>
       ${(sc || d.vote) ? `<div class="scores">` +
         (sc ? `<div class="score ${scoreCls(sc[0], 60, 40)}"><div class="sv">${sc[0]} %</div><div class="sk">Rotten Tomatoes</div></div><div class="score ${scoreCls(sc[1], 7, 5.5)}"><div class="sv">${sc[1].toFixed(1)}</div><div class="sk">IMDb / 10</div></div>` : "") +
-        (d.vote ? `<div class="score ${scoreCls(d.vote[0], 7, 5.5)}"><div class="sv">${d.vote[0].toFixed(1)}</div><div class="sk">TMDB · ${d.vote[1].toLocaleString("de-DE")} Stimmen</div></div>` : "") + `</div>` : ""}
+        (d.vote ? `<div class="score ${scoreCls(d.vote[0], 7, 5.5)}"><div class="sv">${d.vote[0].toFixed(1)}</div><div class="sk">TMDB · ${d.vote[1].toLocaleString(lang === "de" ? "de-DE" : "en-US")} ${lang === "de" ? "Stimmen" : "votes"}</div></div>` : "") + `</div>` : ""}
       <div class="ext-links">
         <a href="https://en.wikipedia.org/wiki/${encodeURIComponent(wt.replace(/ /g, "_"))}" target="_blank" rel="noopener">Wikipedia</a>
         <a href="https://de.wikipedia.org/w/index.php?search=${q}" target="_blank" rel="noopener">Wikipedia (DE)</a>
@@ -326,7 +365,7 @@ function filmBody(f, lang) {
   })() : ""}
   ${(d.deDate || d.cert || d.budget || d.revenue) ? `<div class="fact-strip">` +
     (d.deDate ? `<div class="fact-box"><div class="fb-k">${lang === "de" ? "Kinostart (DE)" : "DE release"}</div><div class="fb-v">${fmtDate(d.deDate)}</div></div>` : "") +
-    (d.cert ? `<div class="fact-box"><div class="fb-k">FSK</div><div class="fb-v">ab ${esc(d.cert)}</div></div>` : "") +
+    (d.cert ? `<div class="fact-box"><div class="fb-k">FSK</div><div class="fb-v">${lang === "de" ? "ab " + esc(d.cert) : esc(d.cert) + "+"}</div></div>` : "") +
     (d.budget ? `<div class="fact-box"><div class="fb-k">Budget</div><div class="fb-v">${fmtMoney(d.budget)}</div></div>` : "") +
     (d.revenue ? `<div class="fact-box"><div class="fb-k">${lang === "de" ? "Einspielergebnis" : "Box office"}</div><div class="fb-v">${fmtMoney(d.revenue)}</div></div>` : "") + `</div>` : ""}
   <div class="fp-section"><div class="fp-label">${L.plot}</div><p>${esc((lang === "en" ? f.plot_en : f.plot_db) || tr(f, "plot", lang))}</p></div>
@@ -336,31 +375,31 @@ function filmBody(f, lang) {
   : restCast.length
     ? `<div class="fp-section"><div class="fp-label">${L.cast}</div><div class="fp-chars">${restHtml}</div></div>`
     : `<div class="fp-section"><div class="fp-label">${L.cast}</div><p>${f.cast.map(esc).join(" · ")}</p></div>`}
-  ${TRIVIA[id] ? `<div class="fp-section"><div class="fp-label">${L.trivia}</div><ul>${TRIVIA[id].map((t) => `<li>${esc(t)}</li>`).join("")}</ul></div>` : ""}
+  ${TRIVIA[id] ? `<div class="fp-section"><div class="fp-label">${L.trivia}</div><ul>${trivL(id, lang).map((t) => `<li>${esc(t)}</li>`).join("")}</ul></div>` : ""}
   ${(x.gal || (x.videos && x.videos.length)) ? `<div class="fp-section"><div class="fp-label">${lang === "de" ? "Galerie & Videos" : "Gallery & videos"}</div><div class="gal">` +
     (x.gal ? Array.from({ length: x.gal }, (_, i) => `<button class="glight gal-item" data-img="/img/g/${id}-${i}.jpg" aria-label="Bild ${i + 1}"><img src="/img/g/${id}-${i}.jpg" alt="" loading="lazy"></button>`).join("") : "") +
     (x.videos || []).filter((v) => v.k !== TRAILERS[id]).slice(0, 4).map((v) => `<button class="glight gal-item gal-video" data-yt="${v.k}" aria-label="${esc(v.n)}"><img src="https://i.ytimg.com/vi/${v.k}/hqdefault.jpg" alt="" loading="lazy"><span class="gv-play">▶</span><span class="gv-t">${esc(v.t)}</span></button>`).join("") +
   `</div></div>` : ""}
   ${x.eps && x.eps.length ? `<div class="fp-section"><div class="fp-label">${lang === "de" ? "Episoden" : "Episodes"}</div>` +
-    x.eps.map((sea) => `<details class="season"${x.eps.length === 1 ? " open" : ""}><summary>${lang === "de" ? "Staffel" : "Season"} ${sea.s} · ${sea.eps.length} ${lang === "de" ? "Folgen" : "episodes"}</summary>` +
-      sea.eps.map((ep, i) => `<div class="ep-row"><div class="ep-n">${i + 1}</div><div class="ep-main"><div class="ep-t">${esc(ep.n)}${ep.v ? ` <span class="ep-v">★ ${ep.v.toFixed(1)}</span>` : ""}</div>${ep.o ? `<div class="ep-o"><span class="spoiler">${esc(ep.o)}</span></div>` : ""}</div><div class="ep-d">${ep.d ? fmtDate(ep.d) : ""}</div></div>`).join("") +
-    `</details>`).join("") + `</div>` : ""}
+    x.eps.map((sea) => { const seaEn = lang === "en" && x.eps_en ? (x.eps_en.find((s2) => s2.s === sea.s) || {}).eps : null; return `<details class="season"${x.eps.length === 1 ? " open" : ""}><summary>${lang === "de" ? "Staffel" : "Season"} ${sea.s} · ${sea.eps.length} ${lang === "de" ? "Folgen" : "episodes"}</summary>` +
+      sea.eps.map((ep, i) => { const en = seaEn && seaEn[i]; const epN = en && en.n ? en.n : ep.n; const epO = en && en.o ? en.o : ep.o; return `<div class="ep-row"><div class="ep-n">${i + 1}</div><div class="ep-main"><div class="ep-t">${esc(epN)}${ep.v ? ` <span class="ep-v">★ ${ep.v.toFixed(1)}</span>` : ""}</div>${epO ? `<div class="ep-o"><span class="spoiler">${esc(epO)}</span></div>` : ""}</div><div class="ep-d">${ep.d ? fmtDate(ep.d) : ""}</div></div>`; }).join("") +
+    `</details>`; }).join("") + `</div>` : ""}
   ${(COMPOSERS[id] || SONGS[id]) ? `<div class="fp-section"><div class="fp-label">${lang === "de" ? "🎵 Musik" : "🎵 Music"}</div>` +
     (COMPOSERS[id] ? `<p><b>${lang === "de" ? "Filmmusik" : "Score"}:</b> ${COMPOSERS[id].map(esc).join(" & ")}</p>` : "") +
-    (SONGS[id] ? `<ul style="margin-top:${COMPOSERS[id] ? "10px" : "0"}">${SONGS[id].map((s) => `<li>${esc(s)}</li>`).join("")}</ul>` : "") + `</div>` : ""}
+    (SONGS[id] ? `<ul style="margin-top:${COMPOSERS[id] ? "10px" : "0"}">${songsL(id, lang).map((s) => `<li>${esc(s)}</li>`).join("")}</ul>` : "") + `</div>` : ""}
   ${COMICS[id] ? `<div class="fp-section"><div class="fp-label">${lang === "de" ? "📖 Comic-Vorlagen" : "📖 Comic sources"}</div>` +
-    COMICS[id].map((c) => `<div class="comic-row"><b>${esc(c.t)}</b> <span class="comic-y">(${c.y})</span><p>${esc(c.n)}</p></div>`).join("") + `</div>` : ""}
+    COMICS[id].map((c) => `<div class="comic-row"><b>${esc(c.t)}</b> <span class="comic-y">(${c.y})</span><p>${esc(tr(c, "n", lang))}</p></div>`).join("") + `</div>` : ""}
   ${(pc || f.prio !== "future") ? `<div class="fp-section"><div class="fp-label">${L.pc}${pc && pc.scenes.length ? " · " + pc.scenes.length : ""}</div>` +
     (!pc ? `<p style="color:var(--faint)">${L.pc_none}</p>` :
-      (pc.note ? `<p class="pc-note">${esc(pc.note)}</p>` : "") +
-      pc.scenes.map((s, i) => `<div class="pc-scene"><div class="pc-num">${i + 1}</div><div><p><span class="spoiler">${esc(s.d)}</span></p>` +
+      (pc.note ? `<p class="pc-note">${esc(pcNoteL(id, pc, lang))}</p>` : "") +
+      pc.scenes.map((s, i) => `<div class="pc-scene"><div class="pc-num">${i + 1}</div><div><p><span class="spoiler">${esc(pcSceneD(id, i, s, lang))}</span></p>` +
         (s.to && byId[s.to] ? `<a class="pc-to" href="${prefix}${filmUrl(s.to)}">→ ${L.pc_to} ${esc(byId[s.to].t)}</a>` : "") + `</div></div>`).join("")) + `</div>` : ""}
-  ${CAMEO[id] ? `<div class="fp-section"><div class="fp-label">${L.cameo}</div><p>${esc(CAMEO[id])}</p></div>` : ""}
-  ${f.uni === "mcu" && f.note ? `<div class="fp-doom"><div class="fp-label">${L.doom_note}${f.prio && f.prio !== "future" ? " · " + PRIO_LABEL[f.prio] : ""}</div><p>${esc(f.note)}</p><a href="${prefix}/event/">${L.to_event}</a></div>` : ""}
+  ${CAMEO[id] ? `<div class="fp-section"><div class="fp-label">${L.cameo}</div><p>${esc(cameoL(id, lang))}</p></div>` : ""}
+  ${f.uni === "mcu" && f.note ? `<div class="fp-doom"><div class="fp-label">${L.doom_note}${f.prio && f.prio !== "future" ? " · " + prioL(f.prio, lang) : ""}</div><p>${esc(tr(f, "note", lang))}</p><a href="${prefix}/event/">${L.to_event}</a></div>` : ""}
   ${(() => {
     const pool = FILMS.filter((x) => x.uni === f.uni && x.id !== id).sort((a, b) => Math.abs(parseInt(a.y) - parseInt(f.y)) - Math.abs(parseInt(b.y) - parseInt(f.y)));
     const rel = pool.slice(0, 6);
-    return rel.length ? `<div class="fp-section"><div class="fp-label">${lang === "de" ? "Weiter stöbern" : "Keep browsing"} · ${UNI_LABEL[f.uni]}</div><div class="cp-films">` +
+    return rel.length ? `<div class="fp-section"><div class="fp-label">${lang === "de" ? "Weiter stöbern" : "Keep browsing"} · ${uniL(f.uni, lang)}</div><div class="cp-films">` +
       rel.map((x) => `<a class="radar-film" href="${prefix}${filmUrl(x.id)}" title="${esc(x.t)}">${posterImgW(x.id, x.t)}<div class="rf-t">${esc(x.t)}</div><div class="rf-d">${x.y}</div></a>`).join("") + `</div></div>` : "";
   })()}
   ${f.prio !== "future" ? `<button class="fp-watch" data-watch="${id}" data-t-on="${L.watched}" data-t-off="${L.watch}">${L.watch}</button>` : ""}
@@ -373,10 +412,10 @@ function charBody(c, lang) {
   const prefix = lang === "en" ? "/en" : "";
   // Beziehungen inkl. Rückrichtung
   const seen = new Set(), rels = [];
-  c.rel.forEach((r) => { if (charById[r[0]] && !seen.has(r[0])) { seen.add(r[0]); rels.push({ id: r[0], t: r[1], l: r[2] }); } });
+  c.rel.forEach((r) => { if (charById[r[0]] && !seen.has(r[0])) { seen.add(r[0]); rels.push({ id: r[0], t: r[1], l: lang === "en" && r[3] ? r[3] : r[2] }); } });
   CHARS.forEach((o) => {
     if (o.id === c.id || seen.has(o.id)) return;
-    o.rel.forEach((r) => { if (r[0] === c.id && !seen.has(o.id)) { seen.add(o.id); rels.push({ id: o.id, t: r[1], l: r[2] }); } });
+    o.rel.forEach((r) => { if (r[0] === c.id && !seen.has(o.id)) { seen.add(o.id); rels.push({ id: o.id, t: r[1], l: lang === "en" && r[3] ? r[3] : r[2] }); } });
   });
   const relsCapped = rels.slice(0, 10);
   const ts = TEAMS.filter((t) => t.members.includes(c.id));
@@ -391,22 +430,22 @@ function charBody(c, lang) {
     <div class="fp-poster">${charImg(c.id, c.n)}</div>
     <div class="fp-head">
       <h1 class="metal fp-h1">${esc(c.n)}</h1>
-      <span class="uni-badge ub-${c.u}">${UNI_LABEL[c.u]}</span>
-      <div class="fp-meta"><b>${esc(c.a)}</b><br>${esc(c.uni)}<br>${L.first}: ${esc(c.first)}</div>
+      <span class="uni-badge ub-${c.u}">${uniL(c.u, lang)}</span>
+      <div class="fp-meta"><b>${esc(tr(c, "a", lang))}</b><br>${esc(tr(c, "uni", lang))}<br>${L.first}: ${esc(tr(c, "first", lang))}</div>
     </div>
   </div>
   <div class="fp-section"><div class="fp-label">${L.played_lbl}</div><div class="fp-chars">${actorNames(c.act).map((n) => actorCard(ACTOR_IMG[n.toLowerCase()], n, "", prefix)).join("")}</div><p style="font-size:12.5px;color:var(--faint);margin-top:10px">${esc(c.act)}</p></div>
-  <div class="fp-section"><div class="fp-label">${L.powers}</div><p>${esc(c.pow)}</p></div>
-  <div class="fp-section"><div class="fp-label">${L.who}</div><p>${esc(c.bio)}</p></div>
+  <div class="fp-section"><div class="fp-label">${L.powers}</div><p>${esc(tr(c, "pow", lang))}</p></div>
+  <div class="fp-section"><div class="fp-label">${L.who}</div><p>${esc(tr(c, "bio", lang))}</p></div>
   ${ts.length ? `<div class="fp-section"><div class="fp-label">${L.teams_lbl}</div><div class="ext-links">` +
-    ts.map((t) => `<a href="${prefix}${teamUrl(t.id)}">${esc(t.n)}${t.lead === c.id ? " ★" : ""}</a>`).join("") + `</div></div>` : ""}
-  ${vGroup ? `<div class="fp-section"><div class="fp-label">${L.variants} · ${esc(vGroup.n)}</div><p style="font-size:13.5px;color:var(--muted);margin-bottom:12px">${esc(vGroup.note)}</p><div class="fp-chars">` +
+    ts.map((t) => `<a href="${prefix}${teamUrl(t.id)}">${esc(tr(t, "n", lang))}${t.lead === c.id ? " ★" : ""}</a>`).join("") + `</div></div>` : ""}
+  ${vGroup ? `<div class="fp-section"><div class="fp-label">${L.variants} · ${esc(tr(vGroup, "n", lang))}</div><p style="font-size:13.5px;color:var(--muted);margin-bottom:12px">${esc(tr(vGroup, "note", lang))}</p><div class="fp-chars">` +
     vGroup.ids.filter((x) => x !== c.id).map((oid) => `<a class="fp-char" href="${prefix}${charUrl(oid)}">${charImg(oid, charById[oid].n, "fc-img")}<div class="fc-n">${esc(charById[oid].n)}</div></a>`).join("") + `</div></div>` : ""}
   ${netData ? `<div class="fp-section"><div class="fp-label">${L.net}</div><canvas id="miniNet"></canvas>
     <div class="mm-legend"><span><i style="background:#5aa9e6"></i>${L.legend[0]}</span><span><i style="background:#e8353b"></i>${L.legend[1]}</span><span><i style="background:#d9a441"></i>${L.legend[2]}</span><span><i style="background:#a06be6"></i>${L.legend[3]}</span></div>
     <script type="application/json" id="netData">${JSON.stringify(netData)}</script></div>
   <div class="fp-section"><div class="fp-label">${L.net_detail}</div><div class="cp-rel">` +
-    relsCapped.map((r) => `<a href="${prefix}${charUrl(r.id)}"><span><b>${esc(charById[r.id].n)}</b> — ${REL_NAME[r.t]}</span><span class="rl">${esc(r.l)}</span></a>`).join("") + `</div></div>`
+    relsCapped.map((r) => `<a href="${prefix}${charUrl(r.id)}"><span><b>${esc(charById[r.id].n)}</b> — ${relN(r.t, lang)}</span><span class="rl">${esc(r.l)}</span></a>`).join("") + `</div></div>`
     : `<div class="fp-section"><div class="fp-label">${L.net}</div><p>${L.net_none}</p></div>`}
   <div class="fp-section"><div class="fp-label">${L.seen_in}</div>${miniFilmChips(c.films, lang)}</div>
   ${(() => {
@@ -426,11 +465,11 @@ function teamBody(t, lang) {
   const prefix = lang === "en" ? "/en" : "";
   return `<main class="wrap fp" style="padding-bottom:70px">
   <a class="backlink" href="${prefix}/teams/">${L.back}</a>
-  <h1 class="metal fp-h1">${esc(t.n)}</h1>
+  <h1 class="metal fp-h1">${esc(tr(t, "n", lang))}</h1>
   ${t.ev ? `<span class="uni-badge ub-ev">★ Doomsday</span>` : `<span class="uni-badge ub-${t.u}">${UNI_LABEL[t.u]}</span>`}
-  <div class="fp-meta"><b>${esc(t.sub)}</b><br>${L.first}: ${esc(t.first)}<br>${L.status}: ${esc(t.status)}</div>
-  <div class="fp-section"><div class="fp-label">${L.story}</div><p>${esc(t.desc)}</p></div>
-  <div class="fp-section"><div class="fp-label">${esc(t.mlabel || L.members)}</div><div class="fp-chars">` +
+  <div class="fp-meta"><b>${esc(tr(t, "sub", lang))}</b><br>${L.first}: ${esc(t.first)}<br>${L.status}: ${esc(tr(t, "status", lang))}</div>
+  <div class="fp-section"><div class="fp-label">${L.story}</div><p>${esc(tr(t, "desc", lang))}</p></div>
+  <div class="fp-section"><div class="fp-label">${esc(tr(t, "mlabel", lang) || L.members)}</div><div class="fp-chars">` +
     t.members.map((m) => `<a class="fp-char" href="${prefix}${charUrl(m)}">${charImg(m, charById[m].n, "fc-img")}<div class="fc-n">${esc(charById[m].n)}${t.lead === m ? " ★" : ""}</div></a>`).join("") +
     (t.extras || []).map((name) => `<div class="fp-char"><div class="fc-img fc-fallback">${esc(name.charAt(0))}</div><div class="fc-n">${esc(name)}</div></div>`).join("") +
     (t.mystery ? Array.from({ length: t.mystery }, () => `<div class="fp-char"><div class="fc-img fc-fallback fc-mystery">?</div><div class="fc-n">${L.unknown}</div></div>`).join("") : "") +
@@ -462,16 +501,16 @@ function pathBody(p, lang) {
   const prefix = lang === "en" ? "/en" : "";
   return `<main class="wrap fp" style="padding-bottom:70px">
   <a class="backlink" href="${prefix}/pfade/">${L.back}</a>
-  <h1 class="metal fp-h1">${esc(p.n)}</h1>
-  <div class="fp-meta"><b>${esc(p.tag)}</b></div>
-  <div class="fp-section"><p>${esc(p.intro)}</p></div>
+  <h1 class="metal fp-h1">${esc(tr(p, "n", lang))}</h1>
+  <div class="fp-meta"><b>${esc(tr(p, "tag", lang))}</b></div>
+  <div class="fp-section"><p>${esc(tr(p, "intro", lang))}</p></div>
   <div class="fp-section"><div class="fp-label">${L.path_lbl} · ${p.steps.length} ${L.steps}</div>` +
     p.steps.map((s, i) => {
       const f = byId[s.f];
       return `<a class="ewl-row" href="${prefix}${filmUrl(s.f)}" style="text-decoration:none;color:inherit">
         <div class="ewl-num">${i + 1}</div>
         <div class="ewl-poster">${posterImgW(s.f, f.t)}</div>
-        <div class="ewl-main"><div class="ewl-t">${esc(f.t)}</div><div class="ewl-sub">${esc(s.note)}</div></div></a>`;
+        <div class="ewl-main"><div class="ewl-t">${esc(f.t)}</div><div class="ewl-sub">${esc(tr(s, "note", lang))}</div></div></a>`;
     }).join("") + `</div>
 </main>`;
 }
@@ -510,10 +549,10 @@ function charIndexBody(lang) {
     <div class="seg" id="wikiUni"><button class="sel" data-uni="alle">${L.all}</button><button data-uni="mcu">MCU</button><button data-uni="fox">X-Men &amp; Fox</button><button data-uni="sony">Sony</button></div>
   </div>
   <div class="wgrid" id="wikiGrid">` +
-    CHARS.map((c) => `<a class="wcard" href="${prefix}${charUrl(c.id)}" data-uni="${c.u}" data-type="Char" data-t="${esc((c.n + " " + c.a + " " + c.act).toLowerCase())}">
+    CHARS.map((c) => `<a class="wcard" href="${prefix}${charUrl(c.id)}" data-uni="${c.u}" data-type="Char" data-t="${esc((c.n + " " + tr(c, "a", lang) + " " + c.act).toLowerCase())}">
       <div class="pw">${charImg(c.id, c.n)}</div>
       <div class="wt">${esc(c.n)}</div><div class="wy">${esc(c.act)}</div>
-      <span class="uni-badge ub-${c.u}">${UNI_LABEL[c.u]}</span></a>`).join("") +
+      <span class="uni-badge ub-${c.u}">${uniL(c.u, lang)}</span></a>`).join("") +
   `</div>${adSlot(L)}</main>`;
 }
 
@@ -527,9 +566,9 @@ function teamsIndexBody(lang) {
     const total = t.members.length + (t.extras ? t.extras.length : 0);
     return `<a class="char-card${t.ev ? " ev-team" : ""}" href="${prefix}${teamUrl(t.id)}" style="text-decoration:none;color:inherit">
       <div class="tstack">${stack}</div>
-      <div class="cc-n">${esc(t.n)}</div><div class="cc-a">${esc(t.sub)}</div>
+      <div class="cc-n">${esc(tr(t, "n", lang))}</div><div class="cc-a">${esc(tr(t, "sub", lang))}</div>
       <div class="cc-p">${t.mystery ? `${t.members.length} + ${t.mystery} ?` : total + " " + L.members} · ${esc(t.first)}</div>
-      ${t.ev ? `<span class="uni-badge ub-ev">★ Doomsday</span>` : `<span class="uni-badge ub-${t.u}">${UNI_LABEL[t.u]}</span>`}</a>`;
+      ${t.ev ? `<span class="uni-badge ub-ev">★ Doomsday</span>` : `<span class="uni-badge ub-${t.u}">${uniL(t.u, lang)}</span>`}</a>`;
   };
   const heroes = TEAMS.filter((t) => t.side !== "villain"), villains = TEAMS.filter((t) => t.side === "villain");
   return `<main class="wrap" style="padding:50px 22px 60px">
@@ -582,7 +621,7 @@ function pathsIndexBody(lang) {
   <div class="char-grid">` + PATHS.map((p) => {
     const stack = p.steps.slice(0, 5).map((s) => existsSync(`public/img/p/${s.f}.jpg`) ? `<img src="/img/p/${s.f}.jpg" alt="" loading="lazy">` : "").join("");
     return `<a class="char-card" href="${prefix}${pathUrl(p.id)}" style="text-decoration:none;color:inherit">
-      <div class="pstack">${stack}</div><div class="cc-n">${esc(p.n)}</div><div class="cc-a">${esc(p.tag)}</div><div class="cc-p">${p.steps.length} ${L.steps}</div></a>`;
+      <div class="pstack">${stack}</div><div class="cc-n">${esc(tr(p, "n", lang))}</div><div class="cc-a">${esc(tr(p, "tag", lang))}</div><div class="cc-p">${p.steps.length} ${L.steps}</div></a>`;
   }).join("") + `</div>
   <div class="subhead" style="margin-top:64px">${lang === "de" ? "Die Post-Credit-Kette" : "The post-credit chain"}</div>
   ${pcMapHtml(lang)}
@@ -594,8 +633,8 @@ function multiBody(lang) {
   return `<main class="wrap" style="padding:50px 22px 60px">
   ${secHead(lang === "de" ? "Die Landkarte der Realitäten" : "The map of realities", lang === "de" ? "Das Multiversum" : "The Multiverse", lang === "de" ? "Jede Erde hat eine Nummer, jede Nummer eine Geschichte." : "Every Earth has a number, every number a story.")}
   <div class="uni-grid">` + UNIVERSES.map((u) => `<div class="uni-card${u.ev ? " ev" : ""}">
-    <div class="uni-head"><div class="uni-num metal">${esc(u.num)}</div><div><div class="uni-name">${esc(u.n)}</div><div class="uni-status">${esc(u.status)}</div></div></div>
-    <p>${esc(u.d)}</p>
+    <div class="uni-head"><div class="uni-num metal">${esc(u.num)}</div><div><div class="uni-name">${esc(tr(u, "n", lang))}</div><div class="uni-status">${esc(tr(u, "status", lang))}</div></div></div>
+    <p>${esc(tr(u, "d", lang))}</p>
     <div class="cp-films">${u.sample.map((fid) => byId[fid] ? `<a class="radar-film" href="${prefix}${filmUrl(fid)}" title="${esc(byId[fid].t)}">${posterImgW(fid, byId[fid].t)}</a>` : "").join("")}</div>
   </div>`).join("") + `</div></main>`;
 }
@@ -605,16 +644,16 @@ function chronBody(lang) {
   ${secHead(lang === "de" ? "Die Weltgeschichte des MCU" : "The in-universe history", lang === "de" ? "Die Chronik" : "The Timeline", lang === "de" ? "Nicht wann die Filme erschienen — sondern wann es passiert ist. Hover/Tippen für Details und die Filme dazu." : "Not release order — story order. Hover/tap for details and the films involved.")}
   <div class="chron">` + CHRONIK.map((e) => `<div class="chron-item">
     <div class="chron-y metal">${esc(e.y)}</div>
-    <div class="chron-body"><div class="chron-n">${esc(e.n)}</div>
-    <div class="chron-more"><p>${esc(e.d)}</p>${miniFilmChips(e.films, lang)}</div></div></div>`).join("") + `</div></main>`;
+    <div class="chron-body"><div class="chron-n">${esc(tr(e, "n", lang))}</div>
+    <div class="chron-more"><p>${esc(tr(e, "d", lang))}</p>${miniFilmChips(e.films, lang)}</div></div></div>`).join("") + `</div></main>`;
 }
 
 function threadsBody(lang) {
   return `<main class="wrap" style="padding:50px 22px 60px">
-  ${secHead("Chekhovs Waffenkammer", lang === "de" ? "Die offenen Fäden" : "The Loose Ends", lang === "de" ? "Alles, was das Marvel-Kino angeteasert und nie aufgelöst hat. <span style='color:#3fdc8c'>●</span> heiß · <span style='color:var(--gold)'>●</span> köchelt · <span style='color:#ff8a8e'>●</span> kalt." : "Everything Marvel teased and never resolved. <span style='color:#3fdc8c'>●</span> hot · <span style='color:var(--gold)'>●</span> simmering · <span style='color:#ff8a8e'>●</span> cold.")}
+  ${secHead(lang === "de" ? "Chekhovs Waffenkammer" : "Chekhov's armory", lang === "de" ? "Die offenen Fäden" : "The Loose Ends", lang === "de" ? "Alles, was das Marvel-Kino angeteasert und nie aufgelöst hat. <span style='color:#3fdc8c'>●</span> heiß · <span style='color:var(--gold)'>●</span> köchelt · <span style='color:#ff8a8e'>●</span> kalt." : "Everything Marvel teased and never resolved. <span style='color:#3fdc8c'>●</span> hot · <span style='color:var(--gold)'>●</span> simmering · <span style='color:#ff8a8e'>●</span> cold.")}
   <div class="threads">` + THREADS.map((t) => `<div class="thread g-${t.grade}">
-    <div class="thread-head"><span class="thread-dot"></span><div><div class="thread-n">${esc(t.n)}</div><div class="thread-s">${esc(t.seit)} · Status: ${esc(t.status)}</div></div></div>
-    <div class="chron-more"><p>${esc(t.d)}</p>${miniFilmChips(t.films, lang)}</div></div>`).join("") + `</div></main>`;
+    <div class="thread-head"><span class="thread-dot"></span><div><div class="thread-n">${esc(tr(t, "n", lang))}</div><div class="thread-s">${esc(t.seit)} · Status: ${esc(tr(t, "status", lang))}</div></div></div>
+    <div class="chron-more"><p>${esc(tr(t, "d", lang))}</p>${miniFilmChips(t.films, lang)}</div></div>`).join("") + `</div></main>`;
 }
 
 function recordsBody(lang) {
@@ -624,13 +663,13 @@ function recordsBody(lang) {
   const byRt = scored.slice().sort((a, b) => SCORES[b.id][0] - SCORES[a.id][0]);
   const recRow = (f, i, val) => `<a class="rec-row" href="${prefix}${filmUrl(f.id)}" style="text-decoration:none;color:inherit">
     <div class="rec-rank">${i + 1}</div>${existsSync(`public/img/p/${f.id}.jpg`) ? `<img src="/img/p/${f.id}.jpg" alt="" loading="lazy">` : "<span></span>"}
-    <div class="rec-main"><div class="rec-t">${esc(f.t)}</div><div class="rec-s">${f.y} · ${UNI_LABEL[f.uni]}</div></div>
+    <div class="rec-main"><div class="rec-t">${esc(f.t)}</div><div class="rec-s">${f.y} · ${uniL(f.uni, lang)}</div></div>
     <div class="rec-bar"><div style="width:${SCORES[f.id][0]}%"></div></div><div class="rec-val">${val}</div></a>`;
   const gap = scored.slice().sort((a, b) => Math.abs(SCORES[b.id][1] * 10 - SCORES[b.id][0]) - Math.abs(SCORES[a.id][1] * 10 - SCORES[a.id][0])).slice(0, 6);
   const filmsOnly = FILMS.filter((f) => f.type === "Film" && f.min);
   const longest = filmsOnly.slice().sort((a, b) => b.min - a.min)[0];
   const shortest = filmsOnly.slice().sort((a, b) => a.min - b.min)[0];
-  const curios = [
+  const curios = lang === "de" ? [
     `Längster Film: <b>${esc(longest.t)}</b> (${fmtMin(longest.min)}) — kürzester: <b>${esc(shortest.t)}</b> (${fmtMin(shortest.min)}).`,
     "<b>Avengers: Endgame</b> spielte 2,799 Mrd. Dollar ein und war zeitweise der erfolgreichste Film aller Zeiten.",
     "<b>Deadpool & Wolverine</b> ist mit 1,34 Mrd. der erfolgreichste R-Rated-Film der Geschichte.",
@@ -642,6 +681,18 @@ function recordsBody(lang) {
     "<b>Secret Invasion</b> kostete ~212 Mio. Dollar für 6 Episoden — bei 53 % RT.",
     "<b>Loki</b> ist die einzige MCU-Serie, die je eine zweite Staffel bekam.",
     "<b>Howard the Duck</b> (1986) war der allererste Marvel-Kinofilm. Produziert von George Lucas. 13 %.",
+  ] : [
+    `Longest film: <b>${esc(longest.t)}</b> (${fmtMin(longest.min)}) — shortest: <b>${esc(shortest.t)}</b> (${fmtMin(shortest.min)}).`,
+    "<b>Avengers: Endgame</b> grossed $2.799 billion and was, for a time, the most successful film of all time.",
+    "<b>Deadpool & Wolverine</b> is the most successful R-rated film in history at $1.34 billion.",
+    "<b>No Way Home</b> ($1.9 billion) is the most successful Spider-Man film — and the biggest pandemic-era opening.",
+    "<b>Morbius</b> is the only film that flopped twice: Sony re-released it because of the memes.",
+    "<b>Iron Man</b> was financed with mortgaged character rights — had it flopped, this wiki would not exist.",
+    "<b>Guardians Vol. 2</b> holds the credits record with <b>5 post-credit scenes</b>.",
+    "<b>X-Men '97</b> and <b>Ms. Marvel</b> (98% each) beat every theatrical film.",
+    "<b>Secret Invasion</b> cost ~$212 million for 6 episodes — at 53% RT.",
+    "<b>Loki</b> is the only MCU series that ever got a second season.",
+    "<b>Howard the Duck</b> (1986) was the very first Marvel theatrical film. Produced by George Lucas. 13%.",
   ];
   return `<main class="wrap" style="padding:50px 22px 60px">
   ${secHead("Hall of Fame & Hall of Shame", lang === "de" ? "Die Rekorde" : "The Records", lang === "de" ? "Bestwerte, Tiefpunkte und Kuriositäten — direkt aus den Wiki-Daten berechnet." : "Highs, lows and oddities — computed straight from the wiki data.")}
@@ -652,21 +703,21 @@ function recordsBody(lang) {
   ${(() => {
     const byRev = FILMS.filter((x) => DETAILS[x.id] && DETAILS[x.id].revenue).sort((a, b) => DETAILS[b.id].revenue - DETAILS[a.id].revenue).slice(0, 10);
     const max = DETAILS[byRev[0].id].revenue;
-    return byRev.map((x, i) => `<a class="rec-row" href="${prefix}${filmUrl(x.id)}"><div class="rec-rank">${i + 1}</div><img src="/img/p/${x.id}.jpg" alt="" loading="lazy"><div class="rec-main"><div class="rec-t">${esc(x.t)}</div><div class="rec-s">${x.y} · ${UNI_LABEL[x.uni]}</div></div><div class="rec-bar"><div style="width:${Math.round(DETAILS[x.id].revenue / max * 100)}%"></div></div><div class="rec-val">${fmtMoney(DETAILS[x.id].revenue)}</div></a>`).join("");
+    return byRev.map((x, i) => `<a class="rec-row" href="${prefix}${filmUrl(x.id)}"><div class="rec-rank">${i + 1}</div><img src="/img/p/${x.id}.jpg" alt="" loading="lazy"><div class="rec-main"><div class="rec-t">${esc(x.t)}</div><div class="rec-s">${x.y} · ${uniL(x.uni, lang)}</div></div><div class="rec-bar"><div style="width:${Math.round(DETAILS[x.id].revenue / max * 100)}%"></div></div><div class="rec-val">${fmtMoney(DETAILS[x.id].revenue)}</div></a>`).join("");
   })()}
   <div class="subhead">${lang === "de" ? "Die Universen im Vergleich" : "Universes compared"}</div>
   ${["mcu", "fox", "sony", "net", "alt"].map((u) => {
     const us = scored.filter((f) => f.uni === u);
     if (!us.length) return "";
     const avg = Math.round(us.reduce((s, f) => s + SCORES[f.id][0], 0) / us.length);
-    return `<div class="rec-row" style="cursor:default"><div class="rec-rank">Ø</div><div class="rec-main"><div class="rec-t">${UNI_LABEL[u]}</div><div class="rec-s">${us.length} Titel</div></div><div class="rec-bar"><div style="width:${avg}%"></div></div><div class="rec-val">${avg} %</div></div>`;
+    return `<div class="rec-row" style="cursor:default"><div class="rec-rank">Ø</div><div class="rec-main"><div class="rec-t">${uniL(u, lang)}</div><div class="rec-s">${us.length} ${lang === "de" ? "Titel" : "titles"}</div></div><div class="rec-bar"><div style="width:${avg}%"></div></div><div class="rec-val">${avg} %</div></div>`;
   }).join("")}
   <div class="subhead">${lang === "de" ? "Kritiker vs. Publikum" : "Critics vs. audience"}</div>
   ${gap.map((f, i) => { const sc = SCORES[f.id]; const d = Math.round(sc[1] * 10 - sc[0]); return recRow(f, i, (d > 0 ? "+" : "") + d); }).join("")}
   <div class="subhead">${lang === "de" ? "Kurioses & Kino-Rekorde" : "Oddities & box-office records"}</div>
   <div class="lore-wrap"><ul style="padding-left:20px">${curios.map((x) => `<li style="color:#bcb8ba;font-size:14.5px;margin-bottom:8px">${x}</li>`).join("")}</ul></div>
   <div class="subhead">🥸 Excelsior — Stan Lee</div>
-  <div class="cameo-list">${Object.keys(CAMEO).map((cid) => byId[cid] ? `<a class="cameo-row" href="${prefix}${filmUrl(cid)}" style="text-decoration:none"><b>${esc(byId[cid].t)}</b><span>${esc(CAMEO[cid])}</span></a>` : "").join("")}</div>
+  <div class="cameo-list">${Object.keys(CAMEO).map((cid) => byId[cid] ? `<a class="cameo-row" href="${prefix}${filmUrl(cid)}" style="text-decoration:none"><b>${esc(byId[cid].t)}</b><span>${esc(cameoL(cid, lang))}</span></a>` : "").join("")}</div>
   ${adSlot(L)}
 </main>`;
 }
@@ -678,7 +729,7 @@ function roadHtml(lang) {
   FILMS.filter((f) => f.uni === "mcu").forEach((f, i) => {
     if (BREAKS[f.id]) {
       const b = BREAKS[f.id];
-      html += `<div class="sep">${b.saga ? `<div class="sep-saga metal">${b.saga}</div>` : ""}<div class="sep-phase">${b.phase}</div></div>`;
+      html += `<div class="sep">${b.saga ? `<div class="sep-saga metal">${lang === "en" ? b.saga.replace("Die ", "The ") : b.saga}</div>` : ""}<div class="sep-phase">${b.phase}</div></div>`;
     }
     html += `<div class="stop${f.prio === "future" ? " future" : ""}" data-id="${f.id}" data-rel="${i}" data-chrono="${f.chrono}" data-prio="${f.prio}" data-min="${f.min || 0}">
       <a class="poster-wrap" href="${prefix}${filmUrl(f.id)}" aria-label="${esc(f.t)}"><div class="chrono-n" hidden>${f.chrono}</div>${posterImgW(f.id, f.t)}<span class="arrow">➤</span></a>
@@ -697,13 +748,13 @@ function ewlHtml(lang) {
   return list.map((f) => `<div class="ewl-row" data-id="${f.id}" data-rel="${FILMS.indexOf(f)}" data-chrono="${f.chrono}" data-prio="${f.prio}" data-min="${f.min}">
     <div class="ewl-num"></div>
     <a class="ewl-poster" href="${prefix}${filmUrl(f.id)}">${posterImgW(f.id, f.t)}</a>
-    <a class="ewl-main" href="${prefix}${filmUrl(f.id)}" style="text-decoration:none;color:inherit"><div class="ewl-t">${esc(f.t)}</div><div class="ewl-sub">${f.y} · ${f.type} · ${PRIO_LABEL[f.prio]}</div></a>
+    <a class="ewl-main" href="${prefix}${filmUrl(f.id)}" style="text-decoration:none;color:inherit"><div class="ewl-t">${esc(f.t)}</div><div class="ewl-sub">${f.y} · ${typeL(f.type, lang)} · ${prioL(f.prio, lang)}</div></a>
     <div class="ewl-side"><span class="ewl-time">≈ ${fmtMin(f.min)}</span><button class="ewl-check" data-watch="${f.id}" aria-label="gesehen">✓</button></div>
   </div>`).join("");
 }
 function eventBody(lang) {
   const de = lang === "de";
-  const saga = frag("event-saga").replace('<div class="road" id="road"></div>', `<div class="road" id="road">${roadHtml(lang)}</div>`);
+  const saga = fragL("event-saga", lang).replace('<div class="road" id="road"></div>', `<div class="road" id="road">${roadHtml(lang)}</div>`);
   const act = (num, t, s) => `<div class="act"><div class="act-num metal">${num}</div><div class="act-t">${t}</div><div class="act-s">${s}</div></div>`;
   const trailer = `<section class="wrap" id="ev-trailer" style="padding-top:40px">
     <div class="trailer-card ev-trailer-card" data-yt="${TRAILERS.doomsday || ""}" role="button" tabindex="0" aria-label="Trailer">
@@ -728,10 +779,10 @@ function eventBody(lang) {
       const card = pid && PERSONS[pid] ? `<a class="ens-card" href="${lang === "en" ? "/en" : ""}${personUrl(pid)}">${sp ? `<span class="spoiler">${inner}</span>` : inner}</a>` : `<div class="ens-card">${sp ? `<span class="spoiler">${inner}</span>` : inner}</div>`;
       return card;
     }).join("") + `</div></div>`).join("") + `</div>`;
-  let doomFrag = frag("event-doom");
+  let doomFrag = fragL("event-doom", lang);
   const ci = doomFrag.indexOf('<div class="cast-cols">');
   if (ci !== -1) doomFrag = doomFrag.slice(0, ci) + ensWall + "</div></section>";
-  return `<div class="event-theme"><div class="ev-progress" id="evProgress"></div>${frag("event-hero")}
+  return `<div class="event-theme"><div class="ev-progress" id="evProgress"></div>${fragL("event-hero", lang)}
   <a class="ev-sticky" id="evSticky" href="#event-top" hidden><img class="evs-logo" src="/img/l/doomsday.png" alt="Avengers: Doomsday"><span class="evs-time" id="evStickyD">…</span></a>
   <main>
     ${trailer}
@@ -740,12 +791,12 @@ function eventBody(lang) {
     ${act("II", de ? "Die Lage" : "The Situation", de ? "Fakten, News und das größte Ensemble aller Zeiten" : "Facts, news and the biggest ensemble ever")}
     ${doomFrag}
     ${act("III", de ? "Das Wissen" : "The Knowledge", de ? "Die komplette Lore hinter Doom" : "The complete lore behind Doom")}
-    ${frag("event-lore")}
+    ${fragL("event-lore", lang)}
     <div class="ev-card rv-always"><div class="ev-card-bg"><img src="/img/g/doomsday-0.jpg" alt="" loading="lazy"></div><div class="ev-card-q metal">„New mask, same task."</div><div class="ev-card-s">— Robert Downey Jr., San Diego Comic-Con, Juli 2024</div></div>
     ${act("IV", de ? "Die Theorien" : "The Theories", de ? "Was passieren könnte — und wie wahrscheinlich es ist" : "What might happen — and how likely it is")}
-    ${frag("event-theo")}
+    ${fragL("event-theo", lang)}
     ${act("V", de ? "Das Archiv" : "The Archive", de ? "Jeder Begriff für den Kinosaal" : "Every term you need for the theater")}
-    ${frag("event-glos")}
+    ${fragL("event-glos", lang)}
     <div class="ev-card ev-end"><div class="ev-card-bg"><img src="/img/g/doomsday-1.jpg" alt="" loading="lazy"></div>
       <div class="ev-card-q metal">18. Dezember 2026</div>
       <div class="ev-card-s">${de ? "Every Story leads to Doom — sei bereit." : "Every story leads to Doom — be ready."}</div>
@@ -781,9 +832,9 @@ function homeBody(lang) {
     <span class="trend-rank metal">${i + 1}</span>${posterImgW(id, byId[id].t)}<div class="rf-t">${esc(byId[id].t)}</div></a>`).join("");
   // Tages-Daten (Client wählt per Datum)
   const daily = {
-    film: FILMS.filter((f) => f.prio !== "future").map((f) => ({ t: f.t, u: prefix + filmUrl(f.id), i: `/img/p/${f.id}.jpg`, s: `${f.y} · ${UNI_LABEL[f.uni]}` })),
+    film: FILMS.filter((f) => f.prio !== "future").map((f) => ({ t: f.t, u: prefix + filmUrl(f.id), i: `/img/p/${f.id}.jpg`, s: `${f.y} · ${uniL(f.uni, lang)}` })),
     char: CHARS.map((c) => ({ t: c.n, u: prefix + charUrl(c.id), i: existsSync(`public/img/c/${c.id}.jpg`) ? `/img/c/${c.id}.jpg` : null, s: c.act.split("·")[0].trim() })),
-    lex: LEXIKON.map((e) => ({ t: e.n, u: prefix + lexUrl(e), i: null, s: e.sub || (de ? "Lexikon" : "Lexicon") })),
+    lex: LEXIKON.map((e) => ({ t: tr(e, "n", lang), u: prefix + lexUrl(e), i: null, s: tr(e, "sub", lang) || (de ? "Lexikon" : "Lexicon") })),
     anniversaries: FILMS.filter((f) => DETAILS[f.id] && DETAILS[f.id].deDate).map((f) => ({ d: DETAILS[f.id].deDate, t: f.t, u: prefix + filmUrl(f.id), i: `/img/p/${f.id}.jpg` })),
   };
   return `<header class="hub-hero">
@@ -803,7 +854,7 @@ function homeBody(lang) {
       </div>
     </a>
 
-    <div class="subhead">${de ? "Demnächst im Marvel-Kosmos" : "Coming up"} <span class="live-dot" title="live aus der Datenbank"></span></div>
+    <div class="subhead">${de ? "Demnächst im Marvel-Kosmos" : "Coming up"} <span class="live-dot" title="${de ? "live aus der Datenbank" : "live from the database"}"></span></div>
     <div class="cp-films up-row">${upcomingRow}</div>
 
     <div class="home-cols">
@@ -874,16 +925,16 @@ for (const lang of LANGS) {
     };
     emit(lang, filmUrl(f.id), page({
       lang, path: filmUrl(f.id),
-      title: `${f.t} (${parseInt(f.y) || f.y}) — ${f.type}, Cast, Trivia & Post-Credits · Knowhere`,
+      title: `${f.t} (${parseInt(f.y) || f.y}) — ${typeL(f.type, lang)}, ${lang === "de" ? "Cast, Trivia & Post-Credits" : "cast, trivia & post-credits"} · Knowhere`,
       desc: stripTags(tr(f, "plot", lang)).slice(0, 158),
       ogImage: `/img/p/${f.id}.jpg`, dataPage: "film", jsonld, crumbs: [[T[lang].nav.films, "/filme/"], [esc(f.t)]],
       body: filmBody(f, lang),
     }));
   }
-  for (const c of CHARS) emit(lang, charUrl(c.id), page({ lang, path: charUrl(c.id), title: `${c.n} (${c.a}) — Marvel-Charakter · Knowhere`, desc: stripTags(c.bio).slice(0, 158), ogImage: existsSync(`public/img/c/${c.id}.jpg`) ? `/img/c/${c.id}.jpg` : undefined, dataPage: "char", crumbs: [[T[lang].nav.chars, "/charaktere/"], [esc(c.n)]], body: charBody(c, lang) }));
-  for (const t of TEAMS) emit(lang, teamUrl(t.id), page({ lang, path: teamUrl(t.id), title: `${t.n} — Marvel-Team · Knowhere`, desc: stripTags(t.desc).slice(0, 158), dataPage: "team", crumbs: [["Teams", "/teams/"], [esc(t.n)]], body: teamBody(t, lang) }));
-  for (const a of ARTIFACTS) emit(lang, artUrl(a.id), page({ lang, path: artUrl(a.id), title: `${a.n} — Marvel-Artefakt · Knowhere`, desc: stripTags(a.d).slice(0, 158), dataPage: "art", crumbs: [[T[lang].nav.arts, "/artefakte/"], [esc(a.n)]], body: artBody(a, lang) }));
-  for (const p of PATHS) emit(lang, pathUrl(p.id), page({ lang, path: pathUrl(p.id), title: `${p.n} — Storyline-Pfad · Knowhere`, desc: stripTags(p.intro).slice(0, 158), dataPage: "path", crumbs: [[T[lang].nav.paths, "/pfade/"], [esc(p.n)]], body: pathBody(p, lang) }));
+  for (const c of CHARS) emit(lang, charUrl(c.id), page({ lang, path: charUrl(c.id), title: `${c.n} (${tr(c, "a", lang)}) — ${lang === "de" ? "Marvel-Charakter" : "Marvel character"} · Knowhere`, desc: stripTags(tr(c, "bio", lang)).slice(0, 158), ogImage: existsSync(`public/img/c/${c.id}.jpg`) ? `/img/c/${c.id}.jpg` : undefined, dataPage: "char", crumbs: [[T[lang].nav.chars, "/charaktere/"], [esc(c.n)]], body: charBody(c, lang) }));
+  for (const t of TEAMS) emit(lang, teamUrl(t.id), page({ lang, path: teamUrl(t.id), title: `${tr(t, "n", lang)} — ${lang === "de" ? "Marvel-Team" : "Marvel team"} · Knowhere`, desc: stripTags(tr(t, "desc", lang)).slice(0, 158), dataPage: "team", crumbs: [["Teams", "/teams/"], [esc(tr(t, "n", lang))]], body: teamBody(t, lang) }));
+  for (const a of ARTIFACTS) emit(lang, artUrl(a.id), page({ lang, path: artUrl(a.id), title: `${a.n} — ${lang === "de" ? "Marvel-Artefakt" : "Marvel artifact"} · Knowhere`, desc: stripTags(tr(a, "d", lang)).slice(0, 158), dataPage: "art", crumbs: [[T[lang].nav.arts, "/artefakte/"], [esc(a.n)]], body: artBody(a, lang) }));
+  for (const p of PATHS) emit(lang, pathUrl(p.id), page({ lang, path: pathUrl(p.id), title: `${tr(p, "n", lang)} — ${lang === "de" ? "Storyline-Pfad" : "Storyline path"} · Knowhere`, desc: stripTags(tr(p, "intro", lang)).slice(0, 158), dataPage: "path", crumbs: [[T[lang].nav.paths, "/pfade/"], [esc(tr(p, "n", lang))]], body: pathBody(p, lang) }));
 }
 
 /* Schauspieler-Seiten */
@@ -903,14 +954,14 @@ for (const lang of LANGS) {
       ${p.imdb ? `<div class="ext-links"><a href="https://www.imdb.com/name/${p.imdb}/" target="_blank" rel="noopener">IMDb</a><a href="https://www.themoviedb.org/person/${pid}" target="_blank" rel="noopener">TMDB</a></div>` : ""}
     </div>
   </div>
-  ${p.bio ? `<div class="fp-section"><div class="fp-label">${lang === "de" ? "Biografie" : "Biography"}</div><p>${esc(p.bio)}${p.bio.length >= 700 ? " …" : ""}</p></div>` : ""}
+  ${p.bio ? `<div class="fp-section"><div class="fp-label">${lang === "de" ? "Biografie" : "Biography"}</div><p>${esc(tr(p, "bio", lang))}${tr(p, "bio", lang).length >= 700 ? " …" : ""}</p></div>` : ""}
   ${wikiChars.length ? `<div class="fp-section"><div class="fp-label">${lang === "de" ? "Figuren im Wiki" : "Characters in the wiki"}</div><div class="fp-chars">${wikiChars.map((c) => `<a class="fp-char" href="${prefix}${charUrl(c.id)}">${charImg(c.id, c.n, "fc-img")}<div class="fc-n">${esc(c.n)}</div></a>`).join("")}</div></div>` : ""}
   ${filmo.length ? `<div class="fp-section"><div class="fp-label">${lang === "de" ? "Im Marvel-Kosmos" : "In the Marvel universe"} · ${filmo.length}</div><div class="cp-films">${filmo.map(({ f, role }) => `<a class="radar-film" href="${prefix}${filmUrl(f.id)}" title="${esc(f.t)}">${posterImgW(f.id, f.t)}<div class="rf-t">${esc(f.t)}</div><div class="rf-d">${esc(role)}</div></a>`).join("")}</div></div>` : ""}
 </main>`;
     emit(lang, personUrl(pid), page({
       lang, path: personUrl(pid),
-      title: `${p.n} — Marvel-Filmografie · Knowhere`,
-      desc: (p.bio || `${p.n}: alle Marvel-Auftritte im Überblick.`).slice(0, 158),
+      title: `${p.n} — ${lang === "de" ? "Marvel-Filmografie" : "Marvel filmography"} · Knowhere`,
+      desc: (tr(p, "bio", lang) || (lang === "de" ? `${p.n}: alle Marvel-Auftritte im Überblick.` : `${p.n}: every Marvel appearance at a glance.`)).slice(0, 158),
       ogImage: existsSync(`public/img/a/${pid}.jpg`) ? `/img/a/${pid}.jpg` : undefined,
       dataPage: "person", crumbs: [[T[lang].nav.films, "/filme/"], [esc(p.n)]], body,
     }));
@@ -930,9 +981,9 @@ function lexDetailBody(e, lang, backPath, backLabel) {
   ${e.img && existsSync(`public/img/${e.img}.jpg`) ? `<div class="fp-backdrop"><img src="/img/${e.img}.jpg" alt="" aria-hidden="true" fetchpriority="high"></div>` : ""}
   <a class="backlink" href="${prefix}${backPath}">${T[lang].back}</a>
   <span class="lex-cat ${m.badge}">${lang === "de" ? m.de : m.en}</span>
-  <h1 class="metal fp-h1">${esc(e.n)}</h1>
-  ${e.sub ? `<div class="fp-meta"><b>${esc(e.sub)}</b></div>` : ""}
-  <div class="fp-section"><div class="fp-label">${T[lang].story}</div><p>${esc(e.d)}</p></div>
+  <h1 class="metal fp-h1">${esc(tr(e, "n", lang))}</h1>
+  ${e.sub ? `<div class="fp-meta"><b>${esc(tr(e, "sub", lang))}</b></div>` : ""}
+  <div class="fp-section"><div class="fp-label">${T[lang].story}</div><p>${esc(tr(e, "d", lang))}</p></div>
   ${e.films && e.films.length ? `<div class="fp-section"><div class="fp-label">${T[lang].seen_in}</div>${miniFilmChips(e.films, lang)}</div>` : ""}
 </main>`;
 }
@@ -940,13 +991,13 @@ function catIndexCards(cat, lang) {
   const prefix = lang === "en" ? "/en" : "";
   return LEX_BY_CAT(cat).map((e) => `<a class="place-card" href="${prefix}${lexUrl(e)}">
     ${e.img && existsSync(`public/img/${e.img}.jpg`) ? `<img src="/img/${e.img}.jpg" alt="" loading="lazy">` : `<div class="pc-fb"></div>`}
-    <div class="place-ov"><div class="place-n">${esc(e.n)}</div><div class="place-s">${esc(e.sub || "")}</div></div></a>`).join("");
+    <div class="place-ov"><div class="place-n">${esc(tr(e, "n", lang))}</div><div class="place-s">${esc(tr(e, "sub", lang) || "")}</div></div></a>`).join("");
 }
 function universesGrid(lang) {
   const prefix = lang === "en" ? "/en" : "";
   return `<div class="uni-grid">` + UNIVERSES.map((u) => `<div class="uni-card${u.ev ? " ev" : ""}">
-    <div class="uni-head"><div class="uni-num metal">${esc(u.num)}</div><div><div class="uni-name">${esc(u.n)}</div><div class="uni-status">${esc(u.status)}</div></div></div>
-    <p>${esc(u.d)}</p>
+    <div class="uni-head"><div class="uni-num metal">${esc(u.num)}</div><div><div class="uni-name">${esc(tr(u, "n", lang))}</div><div class="uni-status">${esc(tr(u, "status", lang))}</div></div></div>
+    <p>${esc(tr(u, "d", lang))}</p>
     <div class="cp-films">${u.sample.map((fid) => byId[fid] ? `<a class="radar-film" href="${prefix}${filmUrl(fid)}" title="${esc(byId[fid].t)}">${posterImgW(fid, byId[fid].t)}</a>` : "").join("")}</div>
   </div>`).join("") + `</div>`;
 }
@@ -968,8 +1019,8 @@ for (const lang of LANGS) {
   for (const cat of ["ort", "volk", "org"]) {
     const backPath = cat === "ort" ? "/orte/" : cat === "volk" ? "/voelker/" : "/teams/";
     for (const e of LEX_BY_CAT(cat)) {
-      emit(lang, lexUrl(e), page({ lang, path: lexUrl(e), title: `${e.n} — ${CAT_META[cat][lang === "de" ? "de" : "en"]} · Knowhere`, desc: e.d.slice(0, 158), dataPage: "lexdetail",
-        crumbs: [[cat === "ort" ? T[lang].nav.places : cat === "volk" ? T[lang].nav.peoples : T[lang].nav.teams, backPath], [esc(e.n)]],
+      emit(lang, lexUrl(e), page({ lang, path: lexUrl(e), title: `${tr(e, "n", lang)} — ${CAT_META[cat][lang === "de" ? "de" : "en"]} · Knowhere`, desc: tr(e, "d", lang).slice(0, 158), dataPage: "lexdetail",
+        crumbs: [[cat === "ort" ? T[lang].nav.places : cat === "volk" ? T[lang].nav.peoples : T[lang].nav.teams, backPath], [esc(tr(e, "n", lang))]],
         body: lexDetailBody(e, lang, backPath, "") }));
     }
   }
@@ -993,9 +1044,9 @@ for (const lang of LANGS) {
     `<main class="wrap" style="padding:50px 22px 60px">
     ${secHead(de ? "Jenseits des Kinos" : "Beyond the movies", de ? "Die Spiele" : "The Games", de ? "Was sich zu spielen lohnt — und welche Filme dazu passen. Von AAA-Meisterwerken bis Kult-Tie-ins." : "What is worth playing — and which films go with it.")}
     <div class="games-grid">${GAMES.map((gm) => `<div class="game-card" id="${gm.id}">
-      <div class="game-head"><div class="game-t">${esc(gm.t)}</div><div class="game-y">${esc(gm.y)}</div></div>
-      <div class="game-plat">${esc(gm.plat)}</div>
-      <p>${esc(gm.d)}</p>
+      <div class="game-head"><div class="game-t">${esc(gm.t)}</div><div class="game-y">${esc(tr(gm, "y", lang))}</div></div>
+      <div class="game-plat">${esc(tr(gm, "plat", lang))}</div>
+      <p>${esc(tr(gm, "d", lang))}</p>
       ${gm.rel && gm.rel.length ? `<div class="lex-films">${gm.rel.map((fid) => byId[fid] ? `<a href="${prefix}${filmUrl(fid)}">${esc(byId[fid].t)}</a>` : "").join("")}</div>` : ""}
     </div>`).join("")}</div>
   </main>` }));
@@ -1012,15 +1063,15 @@ function lexikonBody(lang) {
     <input class="wiki-search" id="lexSearch" type="search" placeholder="${de ? "Begriff suchen …" : "Search terms …"}">
     <div class="seg" id="lexCat"><button class="sel" data-cat="alle">${T[lang].all}</button>${Object.entries(LEX_CATS).map(([k, v]) => `<button data-cat="${k}">${de ? v[0] : v[1]}</button>`).join("")}</div>
   </div>
-  <div class="lex-grid">${LEXIKON.filter((e) => LEX_CATS[e.cat]).map((e) => `<div class="lex-card" id="${e.id}" data-cat="${e.cat}" data-t="${esc(e.n.toLowerCase() + " " + e.d.toLowerCase())}">
+  <div class="lex-grid">${LEXIKON.filter((e) => LEX_CATS[e.cat]).map((e) => `<div class="lex-card" id="${e.id}" data-cat="${e.cat}" data-t="${esc((e.n + " " + tr(e, "n", lang) + " " + tr(e, "d", lang)).toLowerCase())}">
     <span class="lex-cat lc-${e.cat}">${de ? LEX_CATS[e.cat][0] : LEX_CATS[e.cat][1]}</span>
-    <div class="lex-n">${esc(e.n)}</div>
-    <p>${esc(e.d)}</p>
+    <div class="lex-n">${esc(tr(e, "n", lang))}</div>
+    <p>${esc(tr(e, "d", lang))}</p>
     ${e.films && e.films.length ? `<div class="lex-films">${e.films.map((fid) => byId[fid] ? `<a href="${prefix}${filmUrl(fid)}">${esc(byId[fid].t)}</a>` : "").join("")}</div>` : ""}
   </div>`).join("")}</div>
 </main>`;
 }
-const FAQ = [
+const FAQ_DE = [
   ["In welcher Reihenfolge soll ich die Marvel-Filme schauen?", `Für Einsteiger: Release-Reihenfolge — so wurden die Geschichten erzählt und Überraschungen funktionieren. Wer die Geschichte in-universe erleben will, findet in der <a href="/chronik/">Chronik</a> die Ereignis-Reihenfolge und auf der <a href="/event/">Doomsday-Seite</a> die komplette Saga-Timeline zum Abhaken.`],
   ["Was muss ich vor Avengers: Doomsday gesehen haben?", `Die kurze Antwort: Loki (beide Staffeln), No Way Home, Multiverse of Madness, Deadpool & Wolverine, Thunderbolts* und First Steps. Die komplette gewichtete Liste mit Pflicht/Empfohlen-Filter steht im <a href="/event/">Event-Hub</a> — Häkchen setzen, Restzeit ablesen.`],
   ["Was ist der Unterschied zwischen MCU, X-Men-Filmen und den Sony-Filmen?", `Drei getrennt gestartete Film-Universen: das MCU (Disney/Marvel Studios, seit 2008), die Fox-X-Men-Welt (2000–2020) und Sonys Spider-Man-Kosmos. Seit dem Multiversum sind sie offiziell Parallelwelten derselben Realität — die Details erklärt die <a href="/multiversum/">Multiversum-Karte</a>.`],
@@ -1034,17 +1085,32 @@ const FAQ = [
   ["Ist Deadpool jetzt im MCU?", `Ja — über die TVA: Deadpool & Wolverine verdrahtete das alte Fox-Universum (Erde-10005) offiziell mit dem MCU-Multiversum. Wade nennt sich seitdem „Marvel Jesus" und niemand kann es ihm verbieten.`],
   ["Wer ist der stärkste Charakter im Marvel-Kino?", `Ehrliche Antwort: Es gibt kein offizielles Ranking, und Drehbücher schlagen Kräftetabellen. Die üblichen Verdächtigen: Wanda (Chaosmagie), Sentry (tausend explodierende Sonnen), Captain Marvel, der Phoenix — und ab Dezember vermutlich Doom. Messbares gibt es bei den <a href="/rekorde/">Rekorden</a>.`],
 ];
+const FAQ_EN = [
+  ["In what order should I watch the Marvel films?", `For newcomers: release order — that is how the stories were told and how the surprises work. If you want to experience the story in-universe, the <a href="/en/chronik/">timeline</a> has the event order and the <a href="/en/event/">Doomsday page</a> the complete saga timeline with checkboxes.`],
+  ["What do I need to have seen before Avengers: Doomsday?", `The short answer: Loki (both seasons), No Way Home, Multiverse of Madness, Deadpool & Wolverine, Thunderbolts* and First Steps. The complete weighted list with an essential/recommended filter is in the <a href="/en/event/">event hub</a> — tick things off and see your remaining runtime.`],
+  ["What is the difference between the MCU, the X-Men films and the Sony films?", `Three separately launched film universes: the MCU (Disney/Marvel Studios, since 2008), the Fox X-Men world (2000–2020) and Sony's Spider-Man cosmos. Since the multiverse they are officially parallel worlds of the same reality — the details are on the <a href="/en/multiversum/">multiverse map</a>.`],
+  ["Are the Netflix series (Daredevil & co.) canon?", `A gray zone with a clear trend: Charlie Cox's Daredevil, D'Onofrio's Kingpin and Bernthal's Punisher were carried over into the MCU and are de facto canon. The rest (Jessica Jones, Luke Cage, Iron Fist) floats — nothing contradicts them, nothing confirms them.`],
+  ["What are the Snap and the Blip?", `The Snap (2018): Thanos erases half of all life with the Infinity Stones. The Blip (2023): the Avengers bring everyone back — five years later, not a day older. The trauma in between shapes almost every story since. More in the <a href="/en/lexikon/#snap-lex">lexicon</a>.`],
+  ["Is it worth staying in the theater until after the credits?", `With Marvel: practically always. Every film page here lists the scenes (spoiler-protected) including the "leads to" chain — and the <a href="/en/pfade/">post-credit map</a> shows how everything has connected since 2008.`],
+  ["What does Earth-616 mean?", `The official number of the main MCU universe (assigned in Multiverse of Madness). Comic purists, however, mean the main comics world by 616 — the nerd dispute about it is folklore in its own right. All Earth numbers: <a href="/en/multiversum/">multiverse</a>.`],
+  ["Where can I stream the films?", `Every film page shows current availability for Germany (subscription and rental), fed live from TMDB/JustWatch data. Short version: MCU and X-Men almost completely on Disney+, the Sony Spider-Man corner rotating on Netflix & co.`],
+  ["Why is Robert Downey Jr. playing Doctor Doom now?", `After parting ways with Jonathan Majors, the saga needed a new final boss in 2023 — Marvel replaced Kang with the greatest Marvel villain of all and cast him with the face of the MCU: "New mask, same task." Whether Doom is a Stark variant is THE theory question — more in the <a href="/en/event/">event hub</a>.`],
+  ["When are Avengers: Secret Wars and the new X-Men coming?", `Secret Wars ends the Multiverse Saga on December 17, 2027. After that, an X-Men reboot with a fresh cast is considered Hollywood's safest open plan — presumably in a timeline reordered by Secret Wars.`],
+  ["Is Deadpool in the MCU now?", `Yes — via the TVA: Deadpool & Wolverine officially wired the old Fox universe (Earth-10005) into the MCU multiverse. Wade has called himself "Marvel Jesus" ever since, and nobody can stop him.`],
+  ["Who is the strongest character in Marvel cinema?", `Honest answer: there is no official ranking, and scripts beat power charts. The usual suspects: Wanda (chaos magic), Sentry (a thousand exploding suns), Captain Marvel, the Phoenix — and from December on, presumably Doom. For measurable things, see the <a href="/en/rekorde/">records</a>.`],
+];
+const FAQI = (lang) => (lang === "de" ? FAQ_DE : FAQ_EN);
 function faqBody(lang) {
   const de = lang === "de";
   return `<main class="wrap" style="padding:50px 22px 60px;max-width:800px">
-  ${secHead("FAQ", de ? "Häufige Fragen" : "Frequently asked questions", de ? "Die Fragen, die jeder googelt — beantwortet und verlinkt. (Antworten derzeit auf Deutsch.)" : "The questions everyone googles — answered and linked (answers currently in German).")}
-  ${FAQ.map(([q, a]) => `<details class="season faq-item"><summary>${q}</summary><div class="faq-a"><p>${a}</p></div></details>`).join("")}
+  ${secHead("FAQ", de ? "Häufige Fragen" : "Frequently asked questions", de ? "Die Fragen, die jeder googelt — beantwortet und verlinkt." : "The questions everyone googles — answered and linked.")}
+  ${FAQI(lang).map(([q, a]) => `<details class="season faq-item"><summary>${q}</summary><div class="faq-a"><p>${a}</p></div></details>`).join("")}
 </main>`;
 }
-const faqLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: FAQ.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: stripTags(a) } })) };
+const faqLd = (lang) => ({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: FAQI(lang).map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: stripTags(a) } })) });
 for (const lang of LANGS) {
   emit(lang, "/lexikon/", page({ lang, path: "/lexikon/", title: (lang === "de" ? "Das Marvel-Lexikon: alle Begriffe erklärt" : "The Marvel lexicon") + " · Knowhere", desc: lang === "de" ? "Orte, Völker, Organisationen, Ereignisse und Konzepte des Marvel-Kinos — über 70 Begriffe erklärt, von Asgard bis Vibranium." : "Places, peoples, organizations, events and concepts of Marvel cinema — 70+ terms explained.", dataPage: "lex", body: lexikonBody(lang) }));
-  emit(lang, "/faq/", page({ lang, path: "/faq/", title: (lang === "de" ? "Marvel-FAQ: die häufigsten Fragen" : "Marvel FAQ") + " · Knowhere", desc: lang === "de" ? "Reihenfolge, Kanon, Snap & Blip, Streaming, Doomsday-Vorbereitung: die häufigsten Marvel-Fragen beantwortet." : "Watch order, canon, Snap & Blip, streaming — the most common Marvel questions answered.", dataPage: "faq", jsonld: faqLd, body: faqBody(lang) }));
+  emit(lang, "/faq/", page({ lang, path: "/faq/", title: (lang === "de" ? "Marvel-FAQ: die häufigsten Fragen" : "Marvel FAQ") + " · Knowhere", desc: lang === "de" ? "Reihenfolge, Kanon, Snap & Blip, Streaming, Doomsday-Vorbereitung: die häufigsten Marvel-Fragen beantwortet." : "Watch order, canon, Snap & Blip, streaming — the most common Marvel questions answered.", dataPage: "faq", jsonld: faqLd(lang), body: faqBody(lang) }));
 }
 
 /* Rechtliches */
@@ -1087,18 +1153,23 @@ writeFileSync(join(OUT, "404.html"), page({ lang: "de", path: "/404", title: "40
   <div class="tl-controls" style="margin-top:26px"><a class="backlink" href="/">Zum Start</a><a class="backlink" href="/filme/">Alle Filme &amp; Serien</a><a class="backlink" href="/event/">★ Doomsday</a></div>
 </main>` }));
 
-/* Suche-Index */
-const search = [
-  ...FILMS.map((f) => ({ t: f.t, s: `${f.y} · ${f.type} · ${UNI_LABEL[f.uni]}`, u: filmUrl(f.id), i: existsSync(`public/img/p/${f.id}.jpg`) ? `/img/p/${f.id}.jpg` : null, k: "f", q: f.t.toLowerCase() })),
-  ...CHARS.map((c) => ({ t: c.n, s: `${c.a} · ${c.act}`, u: charUrl(c.id), i: existsSync(`public/img/c/${c.id}.jpg`) ? `/img/c/${c.id}.jpg` : null, k: "c", q: (c.n + " " + c.a + " " + c.act).toLowerCase() })),
-  ...TEAMS.map((t) => ({ t: t.n, s: t.sub, u: teamUrl(t.id), i: null, k: "t", q: (t.n + " " + t.sub).toLowerCase() })),
-  ...ARTIFACTS.map((a) => ({ t: a.n, s: a.sub, u: artUrl(a.id), i: null, k: "a", q: (a.n + " " + a.sub).toLowerCase() })),
-  ...Object.entries(PERSONS).map(([pid, p]) => ({ t: p.n, s: "Schauspieler:in", u: personUrl(pid), i: existsSync(`public/img/a/${pid}.jpg`) ? `/img/a/${pid}.jpg` : null, k: "c", q: p.n.toLowerCase() })),
-  ...LEXIKON.map((e) => ({ t: e.n, s: e.sub || "Lexikon", u: lexUrl(e), i: null, k: "l", q: (e.n + " " + e.d.slice(0, 80)).toLowerCase() })),
-  ...GAMES.map((gm) => ({ t: gm.t, s: `${gm.y} · Spiel`, u: `/spiele/#${gm.id}`, i: null, k: "g", q: (gm.t + " spiel game " + gm.plat).toLowerCase() })),
-];
+/* Suche-Index — pro Sprache (search.json / search-en.json), Links jeweils mit Prefix */
 mkdirSync(join(OUT, "assets"), { recursive: true });
-writeFileSync(join(OUT, "assets", "search.json"), JSON.stringify(search));
+let searchCount = 0;
+for (const lang of LANGS) {
+  const en = lang === "en";
+  const search = [
+    ...FILMS.map((f) => ({ t: f.t, s: `${f.y} · ${typeL(f.type, lang)} · ${uniL(f.uni, lang)}`, u: filmUrl(f.id), i: existsSync(`public/img/p/${f.id}.jpg`) ? `/img/p/${f.id}.jpg` : null, k: "f", q: f.t.toLowerCase() })),
+    ...CHARS.map((c) => ({ t: c.n, s: `${tr(c, "a", lang)} · ${c.act}`, u: charUrl(c.id), i: existsSync(`public/img/c/${c.id}.jpg`) ? `/img/c/${c.id}.jpg` : null, k: "c", q: (c.n + " " + c.a + " " + c.act).toLowerCase() })),
+    ...TEAMS.map((t) => ({ t: tr(t, "n", lang), s: tr(t, "sub", lang), u: teamUrl(t.id), i: null, k: "t", q: (t.n + " " + t.sub + " " + (t.sub_en || "")).toLowerCase() })),
+    ...ARTIFACTS.map((a) => ({ t: a.n, s: tr(a, "sub", lang), u: artUrl(a.id), i: null, k: "a", q: (a.n + " " + a.sub + " " + (a.sub_en || "")).toLowerCase() })),
+    ...Object.entries(PERSONS).map(([pid, p]) => ({ t: p.n, s: en ? "Actor" : "Schauspieler:in", u: personUrl(pid), i: existsSync(`public/img/a/${pid}.jpg`) ? `/img/a/${pid}.jpg` : null, k: "c", q: p.n.toLowerCase() })),
+    ...LEXIKON.map((e) => ({ t: tr(e, "n", lang), s: tr(e, "sub", lang) || (en ? "Lexicon" : "Lexikon"), u: lexUrl(e), i: null, k: "l", q: (e.n + " " + tr(e, "n", lang) + " " + tr(e, "d", lang).slice(0, 80)).toLowerCase() })),
+    ...GAMES.map((gm) => ({ t: gm.t, s: `${tr(gm, "y", lang)} · ${en ? "Game" : "Spiel"}`, u: `/spiele/#${gm.id}`, i: null, k: "g", q: (gm.t + " spiel game " + gm.plat).toLowerCase() })),
+  ];
+  searchCount = search.length;
+  writeFileSync(join(OUT, "assets", en ? "search-en.json" : "search.json"), JSON.stringify(search));
+}
 
 /* Assets, Sitemap, Robots, Favicon, vercel */
 cpSync("site/static/style.css", join(OUT, "assets", "style.css"));
@@ -1109,4 +1180,4 @@ writeFileSync(join(OUT, "sitemap.xml"),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
   written.map((w) => `<url><loc>${SITE_URL}${w.path}</loc></url>`).join("\n") + `\n</urlset>`);
 
-console.log(`Seiten: ${written.length} | Such-Index: ${search.length} Einträge | Output: ${OUT}/`);
+console.log(`Seiten: ${written.length} | Such-Index: ${searchCount} Einträge x ${LANGS.length} Sprachen | Output: ${OUT}/`);

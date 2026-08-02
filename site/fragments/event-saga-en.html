@@ -1,0 +1,37 @@
+<section class="block" id="saga">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-kicker">Every story counts</div>
+        <h2 class="metal">The Saga Timeline</h2>
+        <p class="sec-sub">The complete road from Iron Man to Doomsday — <b>click a poster</b> for story, cast, direction and why it matters for Doomsday. Use the <b>✓</b> to tick off what you have seen; your progress is saved.</p>
+      </div>
+
+      <div class="tl-controls">
+        <div class="seg" id="segSort" role="group" aria-label="Sorting">
+          <button class="sel" data-sort="release">Release</button>
+          <button data-sort="chrono">Chronological</button>
+        </div>
+        <div class="seg" id="segFilter" role="group" aria-label="Filter">
+          <button class="sel" data-filter="alle">Everything</button>
+          <button data-filter="empfohlen">The fast track</button>
+          <button data-filter="pflicht">Essentials only</button>
+        </div>
+      </div>
+
+      <div class="tl-progress">
+        <div class="tl-bar"><div class="tl-fill" id="tlFill"></div></div>
+        <div class="tl-stats" id="tlStats">…</div>
+      </div>
+      <div class="tl-hint" id="tlHint">“The fast track” = essential + recommended. Grayed-out titles can be skipped for understanding Doomsday.</div>
+
+      <div class="road" id="road"></div>
+
+      <div class="legend">
+        <span><i class="prio-dot pd-pflicht" style="display:inline-block;width:7px;height:7px;border-radius:50%"></i> Essential</span>
+        <span><i class="prio-dot pd-empfohlen" style="display:inline-block;width:7px;height:7px;border-radius:50%"></i> Recommended</span>
+        <span><i class="prio-dot pd-optional" style="display:inline-block;width:7px;height:7px;border-radius:50%"></i> Optional</span>
+        <span><i class="prio-dot pd-komplettist" style="display:inline-block;width:7px;height:7px;border-radius:50%"></i> Completionist</span>
+        <span><i class="prio-dot pd-future" style="display:inline-block;width:7px;height:7px;border-radius:50%"></i> Upcoming</span>
+      </div>
+    </div>
+  </section>
