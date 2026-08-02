@@ -32,7 +32,7 @@ const REL_NAME = { verbuendet: "Verbündete", feind: "Feinde", familie: "Familie
 const T = {
   de: {
     langName: "Deutsch", other: "English", tagline: "Das Marvel-Fanarchiv aller Universen",
-    nav: { home: "Start", films: "Filme & Serien", chars: "Charaktere", teams: "Teams & Organisationen", multi: "Multiversum", arts: "Artefakte", paths: "Pfade", records: "Rekorde", chron: "Chronik", threads: "Offene Fäden", lex: "Lexikon", faq: "FAQ", db: "Datenbank", know: "Wissen", actors: "Schauspieler", places: "Orte & Welten", peoples: "Völker & Spezies", event: "★ Doomsday" },
+    nav: { home: "Start", films: "Filme & Serien", chars: "Charaktere", teams: "Teams & Organisationen", multi: "Multiversum", arts: "Artefakte", paths: "Pfade", records: "Rekorde", chron: "Chronik", threads: "Offene Fäden", lex: "Lexikon", faq: "FAQ", db: "Datenbank", know: "Wissen", games: "Spiele", actors: "Schauspieler", places: "Orte & Welten", peoples: "Völker & Spezies", event: "★ Doomsday" },
     spoiler_off: "Spoiler: aus", search_ph: "Suche …",
     home_sub: "Von Iron Man bis Doomsday: Filme, Serien, Charaktere und die ganze Lore — quer durch alle Marvel-Universen.",
     home_desc: "Marvel Hub: das Fan-Wiki über alle Marvel-Film-Universen — MCU, X-Men, Sony, Klassiker und TV-Ära. Mit Doomsday-Countdown, Watchlist, Charakteren, Teams und Lore.",
@@ -55,7 +55,7 @@ const T = {
   },
   en: {
     langName: "English", other: "Deutsch", tagline: "The Marvel fan archive of every universe",
-    nav: { home: "Home", films: "Films & Shows", chars: "Characters", teams: "Teams & orgs", multi: "Multiverse", arts: "Artifacts", paths: "Storylines", records: "Records", chron: "Timeline", threads: "Loose Ends", lex: "Lexicon", faq: "FAQ", db: "Database", know: "Knowledge", actors: "Actors", places: "Places & worlds", peoples: "Peoples & species", event: "★ Doomsday" },
+    nav: { home: "Home", films: "Films & Shows", chars: "Characters", teams: "Teams & orgs", multi: "Multiverse", arts: "Artifacts", paths: "Storylines", records: "Records", chron: "Timeline", threads: "Loose Ends", lex: "Lexicon", faq: "FAQ", db: "Database", know: "Knowledge", games: "Games", actors: "Actors", places: "Places & worlds", peoples: "Peoples & species", event: "★ Doomsday" },
     spoiler_off: "Spoilers: off", search_ph: "Search …",
     home_sub: "From Iron Man to Doomsday: films, shows, characters and all the lore — across every Marvel universe. (Article texts are German-first for now.)",
     home_desc: "Marvel Hub: the fan wiki covering every Marvel movie universe — MCU, X-Men, Sony, classics and the TV era. With Doomsday countdown, watchlist, characters, teams and lore.",
@@ -136,6 +136,10 @@ const EXTRA = existsSync("site/data/extra.json") ? JSON.parse(readFileSync("site
 const PERSONS = existsSync("site/data/persons.json") ? JSON.parse(readFileSync("site/data/persons.json", "utf8")) : {};
 const LEXIKON = existsSync("site/data/lexikon.json") ? JSON.parse(readFileSync("site/data/lexikon.json", "utf8")) : [];
 const HOME = existsSync("site/data/home.json") ? JSON.parse(readFileSync("site/data/home.json", "utf8")) : { trending: [], upcoming: [] };
+const COMICS = existsSync("site/data/comics.json") ? JSON.parse(readFileSync("site/data/comics.json", "utf8")) : {};
+const SONGS = existsSync("site/data/songs.json") ? JSON.parse(readFileSync("site/data/songs.json", "utf8")) : {};
+const COMPOSERS = existsSync("site/data/composers.json") ? JSON.parse(readFileSync("site/data/composers.json", "utf8")) : {};
+const GAMES = existsSync("site/data/games.json") ? JSON.parse(readFileSync("site/data/games.json", "utf8")) : [];
 const LEX_BY_CAT = (c) => LEXIKON.filter((e) => e.cat === c);
 const LSLUG = {};
 { const used = new Set();
@@ -184,7 +188,7 @@ function page({ lang, path, title, desc, ogImage, body, dataPage, jsonld, noinde
     return `<a href="${prefix}${p}"${cls.length ? ` class="${cls.join(" ")}"` : ""}>${L.nav[k]}</a>`;
   };
   const dbItems = [["films", "/filme/"], ["chars", "/charaktere/"], ["actors", "/schauspieler/"], ["teams", "/teams/"], ["arts", "/artefakte/"], ["places", "/orte/"], ["peoples", "/voelker/"]];
-  const knowItems = [["chron", "/chronik/"], ["paths", "/pfade/"], ["threads", "/faeden/"], ["lex", "/lexikon/"], ["records", "/rekorde/"], ["faq", "/faq/"]];
+  const knowItems = [["chron", "/chronik/"], ["paths", "/pfade/"], ["threads", "/faeden/"], ["lex", "/lexikon/"], ["games", "/spiele/"], ["records", "/rekorde/"], ["faq", "/faq/"]];
   const drop = (label, items) => {
     const act = items.some(([, p]) => isActive(p));
     return `<div class="nav-drop${act ? " child-active" : ""}"><button class="nav-drop-btn${act ? " active" : ""}" aria-haspopup="true" aria-expanded="false">${label} <span class="nd-arr">▾</span></button><div class="nav-drop-menu">${items.map(([k, p]) => navLink(k, p)).join("")}</div></div>`;
@@ -341,6 +345,11 @@ function filmBody(f, lang) {
     x.eps.map((sea) => `<details class="season"${x.eps.length === 1 ? " open" : ""}><summary>${lang === "de" ? "Staffel" : "Season"} ${sea.s} · ${sea.eps.length} ${lang === "de" ? "Folgen" : "episodes"}</summary>` +
       sea.eps.map((ep, i) => `<div class="ep-row"><div class="ep-n">${i + 1}</div><div class="ep-main"><div class="ep-t">${esc(ep.n)}${ep.v ? ` <span class="ep-v">★ ${ep.v.toFixed(1)}</span>` : ""}</div>${ep.o ? `<div class="ep-o"><span class="spoiler">${esc(ep.o)}</span></div>` : ""}</div><div class="ep-d">${ep.d ? fmtDate(ep.d) : ""}</div></div>`).join("") +
     `</details>`).join("") + `</div>` : ""}
+  ${(COMPOSERS[id] || SONGS[id]) ? `<div class="fp-section"><div class="fp-label">${lang === "de" ? "🎵 Musik" : "🎵 Music"}</div>` +
+    (COMPOSERS[id] ? `<p><b>${lang === "de" ? "Filmmusik" : "Score"}:</b> ${COMPOSERS[id].map(esc).join(" & ")}</p>` : "") +
+    (SONGS[id] ? `<ul style="margin-top:${COMPOSERS[id] ? "10px" : "0"}">${SONGS[id].map((s) => `<li>${esc(s)}</li>`).join("")}</ul>` : "") + `</div>` : ""}
+  ${COMICS[id] ? `<div class="fp-section"><div class="fp-label">${lang === "de" ? "📖 Comic-Vorlagen" : "📖 Comic sources"}</div>` +
+    COMICS[id].map((c) => `<div class="comic-row"><b>${esc(c.t)}</b> <span class="comic-y">(${c.y})</span><p>${esc(c.n)}</p></div>`).join("") + `</div>` : ""}
   ${(pc || f.prio !== "future") ? `<div class="fp-section"><div class="fp-label">${L.pc}${pc && pc.scenes.length ? " · " + pc.scenes.length : ""}</div>` +
     (!pc ? `<p style="color:var(--faint)">${L.pc_none}</p>` :
       (pc.note ? `<p class="pc-note">${esc(pc.note)}</p>` : "") +
@@ -976,6 +985,22 @@ for (const lang of LANGS) {
   </main>` }));
 }
 
+/* Spiele */
+for (const lang of LANGS) {
+  const de = lang === "de";
+  const prefix = lang === "en" ? "/en" : "";
+  emit(lang, "/spiele/", page({ lang, path: "/spiele/", title: (de ? "Marvel-Videospiele: von Spider-Man bis Rivals" : "Marvel video games") + " · Knowhere", desc: de ? "Die wichtigsten Marvel-Spiele im Überblick — von Insomniacs Spider-Man über Marvel Rivals bis zu den legendären Tie-ins." : "The most important Marvel games — from Insomniac's Spider-Man to Marvel Rivals.", dataPage: "games", body:
+    `<main class="wrap" style="padding:50px 22px 60px">
+    ${secHead(de ? "Jenseits des Kinos" : "Beyond the movies", de ? "Die Spiele" : "The Games", de ? "Was sich zu spielen lohnt — und welche Filme dazu passen. Von AAA-Meisterwerken bis Kult-Tie-ins." : "What is worth playing — and which films go with it.")}
+    <div class="games-grid">${GAMES.map((gm) => `<div class="game-card" id="${gm.id}">
+      <div class="game-head"><div class="game-t">${esc(gm.t)}</div><div class="game-y">${esc(gm.y)}</div></div>
+      <div class="game-plat">${esc(gm.plat)}</div>
+      <p>${esc(gm.d)}</p>
+      ${gm.rel && gm.rel.length ? `<div class="lex-films">${gm.rel.map((fid) => byId[fid] ? `<a href="${prefix}${filmUrl(fid)}">${esc(byId[fid].t)}</a>` : "").join("")}</div>` : ""}
+    </div>`).join("")}</div>
+  </main>` }));
+}
+
 /* Lexikon & FAQ */
 const LEX_CATS = { ereignis: ["Ereignisse", "Events"], konzept: ["Konzepte & Kräfte", "Concepts & powers"] };
 function lexikonBody(lang) {
@@ -1070,6 +1095,7 @@ const search = [
   ...ARTIFACTS.map((a) => ({ t: a.n, s: a.sub, u: artUrl(a.id), i: null, k: "a", q: (a.n + " " + a.sub).toLowerCase() })),
   ...Object.entries(PERSONS).map(([pid, p]) => ({ t: p.n, s: "Schauspieler:in", u: personUrl(pid), i: existsSync(`public/img/a/${pid}.jpg`) ? `/img/a/${pid}.jpg` : null, k: "c", q: p.n.toLowerCase() })),
   ...LEXIKON.map((e) => ({ t: e.n, s: e.sub || "Lexikon", u: lexUrl(e), i: null, k: "l", q: (e.n + " " + e.d.slice(0, 80)).toLowerCase() })),
+  ...GAMES.map((gm) => ({ t: gm.t, s: `${gm.y} · Spiel`, u: `/spiele/#${gm.id}`, i: null, k: "g", q: (gm.t + " spiel game " + gm.plat).toLowerCase() })),
 ];
 mkdirSync(join(OUT, "assets"), { recursive: true });
 writeFileSync(join(OUT, "assets", "search.json"), JSON.stringify(search));
