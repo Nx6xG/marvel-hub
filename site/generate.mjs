@@ -1,6 +1,7 @@
 // Marvel Hub — Static Site Generator
 // Erzeugt aus site/data/*.json + site/fragments/ die komplette Seite unter public/
 import { readFileSync, writeFileSync, mkdirSync, cpSync, existsSync } from "node:fs";
+import { createHash } from "node:crypto";
 import { join } from "node:path";
 
 /* ================= Konfiguration ================= */
@@ -16,6 +17,9 @@ const FILMS = D("films"), CHARS = D("chars"), TEAMS = D("teams"), ARTIFACTS = D(
   VARIANTS = D("variants"), STREAM = D("stream"), WIKI = D("wiki_titles"), BREAKS = D("saga_breaks");
 
 const frag = (n) => readFileSync(`site/fragments/${n}.html`, "utf8");
+const assetV = (p) => createHash("md5").update(readFileSync(p)).digest("hex").slice(0, 8);
+const V_CSS = assetV("site/static/style.css");
+const V_JS = assetV("site/static/app.js");
 const byId = {}; FILMS.forEach((f) => (byId[f.id] = f));
 const charById = {}; CHARS.forEach((c) => (charById[c.id] = c));
 const teamById = {}; TEAMS.forEach((t) => (teamById[t.id] = t));
@@ -199,7 +203,7 @@ ${noindex ? '<meta name="robots" content="noindex">' : ""}
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="/assets/style.css?v=${V_CSS}">
 ${(() => {
   const ld = [];
   if (jsonld) ld.push(jsonld);
@@ -228,7 +232,7 @@ ${body}
   <p><a href="/impressum/">Impressum</a> · <a href="/datenschutz/">Datenschutz</a></p>
   <p class="f-sig">▚ Every Story leads to Doom ▞</p>
 </footer>
-<script src="/assets/app.js" defer></script>
+<script src="/assets/app.js?v=${V_JS}" defer></script>
 </body></html>`;
 }
 
