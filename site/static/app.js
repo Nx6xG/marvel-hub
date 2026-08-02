@@ -218,17 +218,19 @@
   }
 
   /* ---------- Nav-Untermenü: Klick-Toggle für Touch ---------- */
-  var drop = $(".nav-drop"), dropBtn = $(".nav-drop-btn");
-  if (dropBtn) {
-    dropBtn.addEventListener("click", function (ev) {
+  var drops = $$(".nav-drop");
+  drops.forEach(function (drop) {
+    var btn = $(".nav-drop-btn", drop);
+    btn.addEventListener("click", function (ev) {
       ev.stopPropagation();
+      drops.forEach(function (d) { if (d !== drop) { d.classList.remove("open"); $(".nav-drop-btn", d).setAttribute("aria-expanded", "false"); } });
       var open = drop.classList.toggle("open");
-      dropBtn.setAttribute("aria-expanded", String(open));
+      btn.setAttribute("aria-expanded", String(open));
     });
-    document.addEventListener("click", function (ev) {
-      if (!ev.target.closest(".nav-drop")) { drop.classList.remove("open"); dropBtn.setAttribute("aria-expanded", "false"); }
-    });
-  }
+  });
+  document.addEventListener("click", function (ev) {
+    if (!ev.target.closest(".nav-drop")) drops.forEach(function (d) { d.classList.remove("open"); $(".nav-drop-btn", d).setAttribute("aria-expanded", "false"); });
+  });
 
   /* ---------- Wiki-/Charakter-Index: Filter ---------- */
   var wikiGrid = $("#wikiGrid");

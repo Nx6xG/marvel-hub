@@ -32,7 +32,7 @@ const REL_NAME = { verbuendet: "Verbündete", feind: "Feinde", familie: "Familie
 const T = {
   de: {
     langName: "Deutsch", other: "English", tagline: "Das Marvel-Fanarchiv aller Universen",
-    nav: { home: "Start", films: "Filme & Serien", chars: "Charaktere", teams: "Teams", multi: "Multiversum", arts: "Artefakte", paths: "Pfade", records: "Rekorde", chron: "Chronik", threads: "Offene Fäden", lex: "Lexikon", faq: "FAQ", event: "★ Doomsday" },
+    nav: { home: "Start", films: "Filme & Serien", chars: "Charaktere", teams: "Teams & Organisationen", multi: "Multiversum", arts: "Artefakte", paths: "Pfade", records: "Rekorde", chron: "Chronik", threads: "Offene Fäden", lex: "Lexikon", faq: "FAQ", db: "Datenbank", know: "Wissen", actors: "Schauspieler", places: "Orte & Welten", peoples: "Völker & Spezies", event: "★ Doomsday" },
     spoiler_off: "Spoiler: aus", search_ph: "Suche …",
     home_sub: "Von Iron Man bis Doomsday: Filme, Serien, Charaktere und die ganze Lore — quer durch alle Marvel-Universen.",
     home_desc: "Marvel Hub: das Fan-Wiki über alle Marvel-Film-Universen — MCU, X-Men, Sony, Klassiker und TV-Ära. Mit Doomsday-Countdown, Watchlist, Charakteren, Teams und Lore.",
@@ -55,7 +55,7 @@ const T = {
   },
   en: {
     langName: "English", other: "Deutsch", tagline: "The Marvel fan archive of every universe",
-    nav: { home: "Home", films: "Films & Shows", chars: "Characters", teams: "Teams", multi: "Multiverse", arts: "Artifacts", paths: "Storylines", records: "Records", chron: "Timeline", threads: "Loose Ends", lex: "Lexicon", faq: "FAQ", event: "★ Doomsday" },
+    nav: { home: "Home", films: "Films & Shows", chars: "Characters", teams: "Teams & orgs", multi: "Multiverse", arts: "Artifacts", paths: "Storylines", records: "Records", chron: "Timeline", threads: "Loose Ends", lex: "Lexicon", faq: "FAQ", db: "Database", know: "Knowledge", actors: "Actors", places: "Places & worlds", peoples: "Peoples & species", event: "★ Doomsday" },
     spoiler_off: "Spoilers: off", search_ph: "Search …",
     home_sub: "From Iron Man to Doomsday: films, shows, characters and all the lore — across every Marvel universe. (Article texts are German-first for now.)",
     home_desc: "Marvel Hub: the fan wiki covering every Marvel movie universe — MCU, X-Men, Sony, classics and the TV era. With Doomsday countdown, watchlist, characters, teams and lore.",
@@ -135,6 +135,16 @@ const DETAILS = existsSync("site/data/details.json") ? JSON.parse(readFileSync("
 const EXTRA = existsSync("site/data/extra.json") ? JSON.parse(readFileSync("site/data/extra.json", "utf8")) : { films: {}, collections: {}, providers: {} };
 const PERSONS = existsSync("site/data/persons.json") ? JSON.parse(readFileSync("site/data/persons.json", "utf8")) : {};
 const LEXIKON = existsSync("site/data/lexikon.json") ? JSON.parse(readFileSync("site/data/lexikon.json", "utf8")) : [];
+const LEX_BY_CAT = (c) => LEXIKON.filter((e) => e.cat === c);
+const LSLUG = {};
+{ const used = new Set();
+  for (const e of LEXIKON) {
+    let s = slugify(e.n) || e.id;
+    if (used.has(s)) s = e.id;
+    used.add(s); LSLUG[e.id] = s;
+  } }
+const CAT_URL = { ort: "/ort/", volk: "/volk/", org: "/org/" };
+const lexUrl = (e) => CAT_URL[e.cat] ? `${CAT_URL[e.cat]}${LSLUG[e.id]}/` : `/lexikon/#${e.id}`;
 const PSLUG = {};
 { const used = new Set();
   for (const [pid, p] of Object.entries(PERSONS)) {
@@ -172,14 +182,16 @@ function page({ lang, path, title, desc, ogImage, body, dataPage, jsonld, noinde
     if (extra) cls.push(extra);
     return `<a href="${prefix}${p}"${cls.length ? ` class="${cls.join(" ")}"` : ""}>${L.nav[k]}</a>`;
   };
-  const loreItems = [["lex", "/lexikon/"], ["chron", "/chronik/"], ["multi", "/multiversum/"], ["arts", "/artefakte/"], ["paths", "/pfade/"], ["threads", "/faeden/"], ["records", "/rekorde/"], ["faq", "/faq/"]];
-  const loreActive = loreItems.some(([, p]) => isActive(p));
+  const dbItems = [["films", "/filme/"], ["chars", "/charaktere/"], ["actors", "/schauspieler/"], ["teams", "/teams/"], ["arts", "/artefakte/"], ["places", "/orte/"], ["peoples", "/voelker/"]];
+  const knowItems = [["chron", "/chronik/"], ["paths", "/pfade/"], ["threads", "/faeden/"], ["lex", "/lexikon/"], ["records", "/rekorde/"], ["faq", "/faq/"]];
+  const drop = (label, items) => {
+    const act = items.some(([, p]) => isActive(p));
+    return `<div class="nav-drop${act ? " child-active" : ""}"><button class="nav-drop-btn${act ? " active" : ""}" aria-haspopup="true" aria-expanded="false">${label} <span class="nd-arr">▾</span></button><div class="nav-drop-menu">${items.map(([k, p]) => navLink(k, p)).join("")}</div></div>`;
+  };
   const nav =
-    navLink("home", "/") + navLink("films", "/filme/") + navLink("chars", "/charaktere/") + navLink("teams", "/teams/") +
-    `<div class="nav-drop${loreActive ? " child-active" : ""}">
-      <button class="nav-drop-btn${loreActive ? " active" : ""}" aria-haspopup="true" aria-expanded="false">${lang === "de" ? "Lore" : "Lore"} <span class="nd-arr">▾</span></button>
-      <div class="nav-drop-menu">${loreItems.map(([k, p]) => navLink(k, p)).join("")}</div>
-    </div>` +
+    navLink("home", "/") +
+    drop(L.nav.db, dbItems) +
+    drop(L.nav.know, knowItems) +
     navLink("event", "/event/", "ev-link");
   return `<!doctype html>
 <html lang="${lang}" data-prefix="${prefix}">
@@ -514,6 +526,7 @@ function teamsIndexBody(lang) {
   <div class="char-grid">
     <div class="tgroup-head">${lang === "de" ? "Helden, Familien &amp; Institutionen" : "Heroes, families &amp; institutions"}</div>${heroes.map(card).join("")}
     <div class="tgroup-head vill">${lang === "de" ? "Schurken-Fraktionen" : "Villain factions"}</div>${villains.map(card).join("")}
+    <div class="tgroup-head">${lang === "de" ? "Organisationen &amp; Institutionen" : "Organizations &amp; institutions"}</div>${catIndexCards("org", lang)}
   </div></main>`;
 }
 
@@ -741,7 +754,7 @@ function homeBody(lang) {
     { href: "/chronik/", t: L.nav.chron, s: de ? "Die Geschichte in richtiger Reihenfolge — von 1943 bis Battleworld" : "The story in order — from 1943 to Battleworld", imgs: ["p/cap1", "p/av1", "p/f4"] },
     { href: "/faeden/", t: L.nav.threads, s: de ? "15 Cliffhanger, die nie aufgelöst wurden" : "15 cliffhangers that were never resolved", imgs: ["p/sc", "p/et", "p/venom3"] },
     { href: "/rekorde/", t: L.nav.records, s: de ? "Top 10, Flop 10 — und jeder Stan-Lee-Cameo" : "Top 10, flop 10 — and every Stan Lee cameo", imgs: ["p/logan", "p/howard", "p/morbius"] },
-    { href: "/multiversum/", t: L.nav.multi, s: de ? "Erde-616, 828, 838 … wo welcher Film spielt" : "Earth-616, 828, 838 … which film happens where", imgs: ["p/mom", "p/dw", "p/sv2"] },
+    { href: "/orte/", t: L.nav.places, s: de ? "Von Asgard bis Battleworld — plus alle Erde-Nummern" : "From Asgard to Battleworld — plus every Earth number", imgs: ["p/mom", "p/dw", "p/sv2"] },
   ];
   const strip = (id, label, sub, featured) => `<a class="strip-card${featured ? " now" : ""}" href="${prefix}${filmUrl(id)}">
     <img src="/img/p/${id}.jpg" alt="" loading="lazy">
@@ -801,7 +814,7 @@ for (const lang of LANGS) {
   emit(lang, "/filme/", page({ lang, path: "/filme/", title: (lang === "de" ? "Alle Marvel-Filme & -Serien" : "All Marvel films & shows") + " · Knowhere", desc: lang === "de" ? "108 Marvel-Filme und -Serien aus MCU, X-Men, Sony, Klassikern und TV-Ära — mit Scores, Trivia und Post-Credit-Szenen." : "108 Marvel films and shows across the MCU, X-Men, Sony, classics and the TV era.", dataPage: "wiki", body: wikiIndexBody(lang) }));
   emit(lang, "/charaktere/", page({ lang, path: "/charaktere/", title: (lang === "de" ? "Marvel-Charaktere" : "Marvel characters") + " · Knowhere", desc: lang === "de" ? "128 Marvel-Charaktere mit Biografien, Kräften und Beziehungs-Netzen." : "128 Marvel characters with bios, powers and relationship webs.", dataPage: "wiki", body: charIndexBody(lang) }));
   emit(lang, "/teams/", page({ lang, path: "/teams/", title: "Marvel-Teams · Knowhere", desc: lang === "de" ? "Von den Avengers bis Haus Doom: 21 Marvel-Teams und Schurken-Fraktionen." : "From the Avengers to House Doom: 21 Marvel teams and villain factions.", dataPage: "teams", body: teamsIndexBody(lang) }));
-  emit(lang, "/multiversum/", page({ lang, path: "/multiversum/", title: (lang === "de" ? "Das Marvel-Multiversum: alle Erde-Nummern" : "The Marvel multiverse: every Earth number") + " · Knowhere", desc: lang === "de" ? "Erde-616, 828, 838, 10005 & Co.: Welche Marvel-Filme in welchem Universum spielen." : "Earth-616, 828, 838, 10005 & co: which Marvel films happen in which universe.", dataPage: "multi", body: multiBody(lang) }));
+  emit(lang, "/multiversum/", page({ lang, path: "/multiversum/", title: "Multiversum · Knowhere", desc: "Umgezogen: Die Welten des Multiversums findest du jetzt unter Orte & Welten.", dataPage: "multi", noindex: true, body: `<main class="wrap" style="padding:100px 22px;text-align:center"><h2 class="metal">${lang === "de" ? "Umgezogen" : "Moved"}</h2><p class="sec-sub">${lang === "de" ? "Die Welten &amp; Erde-Nummern wohnen jetzt bei" : "The worlds now live at"} <a href="${lang === "en" ? "/en" : ""}/orte/">${T[lang].nav.places}</a>.</p></main>` }));
   emit(lang, "/artefakte/", page({ lang, path: "/artefakte/", title: (lang === "de" ? "Marvel-Artefakte" : "Marvel artifacts") + " · Knowhere", desc: lang === "de" ? "Infinity-Steine, Mjölnir, Darkhold & Co. — 26 legendäre Marvel-Objekte." : "Infinity Stones, Mjölnir, the Darkhold & more — 26 legendary Marvel objects.", dataPage: "arts", body: artsIndexBody(lang) }));
   emit(lang, "/pfade/", page({ lang, path: "/pfade/", title: (lang === "de" ? "Storyline-Pfade & Post-Credit-Kette" : "Storylines & the post-credit chain") + " · Knowhere", desc: lang === "de" ? "16 kuratierte Handlungsstränge durchs Marvel-Universum plus die komplette Post-Credit-Verkettung." : "16 curated story threads plus the complete post-credit chain.", dataPage: "paths", body: pathsIndexBody(lang) }));
   emit(lang, "/rekorde/", page({ lang, path: "/rekorde/", title: (lang === "de" ? "Marvel-Rekorde: Top & Flop" : "Marvel records: top & flop") + " · Knowhere", desc: lang === "de" ? "Die besten und schlechtesten Marvel-Filme, Kino-Rekorde und alle Stan-Lee-Cameos." : "The best and worst Marvel films, box-office records and every Stan Lee cameo.", dataPage: "records", body: recordsBody(lang) }));
@@ -865,8 +878,75 @@ for (const lang of LANGS) {
   }
 }
 
+/* Datenbank-Sektionen: Orte & Welten, Völker, Organisationen, Schauspieler-Index */
+const CAT_META = {
+  ort: { badge: "lc-ort", de: "Ort", en: "Place" },
+  volk: { badge: "lc-volk", de: "Volk", en: "People" },
+  org: { badge: "lc-org", de: "Organisation", en: "Organization" },
+};
+function lexDetailBody(e, lang, backPath, backLabel) {
+  const prefix = lang === "en" ? "/en" : "";
+  const m = CAT_META[e.cat];
+  return `<main class="wrap fp" style="padding-bottom:70px;max-width:820px">
+  <a class="backlink" href="${prefix}${backPath}">${T[lang].back}</a>
+  <span class="lex-cat ${m.badge}">${lang === "de" ? m.de : m.en}</span>
+  <h1 class="metal fp-h1">${esc(e.n)}</h1>
+  ${e.sub ? `<div class="fp-meta"><b>${esc(e.sub)}</b></div>` : ""}
+  <div class="fp-section"><div class="fp-label">${T[lang].story}</div><p>${esc(e.d)}</p></div>
+  ${e.films && e.films.length ? `<div class="fp-section"><div class="fp-label">${T[lang].seen_in}</div>${miniFilmChips(e.films, lang)}</div>` : ""}
+</main>`;
+}
+function catIndexCards(cat, lang) {
+  const prefix = lang === "en" ? "/en" : "";
+  return LEX_BY_CAT(cat).map((e) => `<a class="char-card" href="${prefix}${lexUrl(e)}" style="text-decoration:none;color:inherit">
+    <div class="cc-n">${esc(e.n)}</div><div class="cc-a">${esc(e.sub || "")}</div>
+    <div class="cc-p">${esc(e.d.slice(0, 110))}…</div></a>`).join("");
+}
+function universesGrid(lang) {
+  const prefix = lang === "en" ? "/en" : "";
+  return `<div class="uni-grid">` + UNIVERSES.map((u) => `<div class="uni-card${u.ev ? " ev" : ""}">
+    <div class="uni-head"><div class="uni-num metal">${esc(u.num)}</div><div><div class="uni-name">${esc(u.n)}</div><div class="uni-status">${esc(u.status)}</div></div></div>
+    <p>${esc(u.d)}</p>
+    <div class="cp-films">${u.sample.map((fid) => byId[fid] ? `<a class="radar-film" href="${prefix}${filmUrl(fid)}" title="${esc(byId[fid].t)}">${posterImgW(fid, byId[fid].t)}</a>` : "").join("")}</div>
+  </div>`).join("") + `</div>`;
+}
+for (const lang of LANGS) {
+  const de = lang === "de";
+  emit(lang, "/orte/", page({ lang, path: "/orte/", title: (de ? "Marvel-Orte & Welten: von Asgard bis Battleworld" : "Marvel places & worlds") + " · Knowhere", desc: de ? "Alle wichtigen Orte und Welten des Marvel-Kinos: Asgard, Wakanda, das Quantenreich — plus alle Erde-Nummern des Multiversums." : "Every important place and world of Marvel cinema, plus all Earth numbers of the multiverse.", dataPage: "places", body:
+    `<main class="wrap" style="padding:50px 22px 60px">
+    ${secHead(de ? "Von Asgard bis Battleworld" : "From Asgard to Battleworld", de ? "Orte &amp; Welten" : "Places &amp; Worlds", de ? "Erst die Welten des Multiversums — dann die Orte, an denen die Geschichten spielen." : "First the worlds of the multiverse — then the places where the stories happen.")}
+    <div class="subhead">${de ? "Die Welten · Erde-Nummern" : "The worlds · Earth numbers"}</div>
+    ${universesGrid(lang)}
+    <div class="subhead">${de ? "Die Orte" : "The places"}</div>
+    <div class="char-grid">${catIndexCards("ort", lang)}</div>
+  </main>` }));
+  emit(lang, "/voelker/", page({ lang, path: "/voelker/", title: (de ? "Marvel-Völker & Spezies" : "Marvel peoples & species") + " · Knowhere", desc: de ? "Skrulle, Kree, Celestials, Mutanten & Co.: alle Völker und Spezies des Marvel-Kinos erklärt." : "Skrulls, Kree, Celestials, mutants & co: every people and species of Marvel cinema explained.", dataPage: "peoples", body:
+    `<main class="wrap" style="padding:50px 22px 60px">
+    ${secHead(de ? "Wer das Universum bevölkert" : "Who populates the universe", de ? "Völker &amp; Spezies" : "Peoples &amp; Species", "")}
+    <div class="char-grid">${catIndexCards("volk", lang)}</div>
+  </main>` }));
+  for (const cat of ["ort", "volk", "org"]) {
+    const backPath = cat === "ort" ? "/orte/" : cat === "volk" ? "/voelker/" : "/teams/";
+    for (const e of LEX_BY_CAT(cat)) {
+      emit(lang, lexUrl(e), page({ lang, path: lexUrl(e), title: `${e.n} — ${CAT_META[cat][lang === "de" ? "de" : "en"]} · Knowhere`, desc: e.d.slice(0, 158), dataPage: "lexdetail",
+        crumbs: [[cat === "ort" ? T[lang].nav.places : cat === "volk" ? T[lang].nav.peoples : T[lang].nav.teams, backPath], [esc(e.n)]],
+        body: lexDetailBody(e, lang, backPath, "") }));
+    }
+  }
+  // Schauspieler-Index
+  const actorList = Object.entries(PERSONS).sort((a, b) => a[1].n.localeCompare(b[1].n));
+  emit(lang, "/schauspieler/", page({ lang, path: "/schauspieler/", title: (de ? "Alle Marvel-Schauspieler:innen" : "All Marvel actors") + " · Knowhere", desc: de ? `${actorList.length} Schauspieler:innen des Marvel-Kinos mit Biografie und kompletter Marvel-Filmografie.` : `${actorList.length} Marvel actors with bios and full Marvel filmographies.`, dataPage: "actors", body:
+    `<main class="wrap" style="padding:50px 22px 60px">
+    ${secHead(de ? "Das Ensemble hinter dem Ensemble" : "The ensemble behind the ensemble", de ? "Schauspieler:innen" : "Actors", de ? actorList.length + " Menschen, die das Marvel-Kino tragen — jede:r mit eigener Seite." : "")}
+    <div class="wiki-tools"><input class="wiki-search" id="wikiSearch" type="search" placeholder="${de ? "Name suchen …" : "Search names …"}"></div>
+    <div class="wgrid" id="wikiGrid">${actorList.map(([pid, p]) => `<a class="wcard" href="${lang === "en" ? "/en" : ""}${personUrl(pid)}" data-uni="p" data-type="P" data-t="${esc(p.n.toLowerCase())}">
+      <div class="pw">${existsSync(`public/img/a/${pid}.jpg`) ? `<img src="/img/a/${pid}.jpg" class="cface" alt="${esc(p.n)}" loading="lazy">` : `<div class="poster-fallback"><div class="pf-t metal">${esc(p.n)}</div></div>`}</div>
+      <div class="wt">${esc(p.n)}</div>${p.b ? `<div class="wy">*${p.b.slice(0, 4)}</div>` : ""}</a>`).join("")}</div>
+  </main>` }));
+}
+
 /* Lexikon & FAQ */
-const LEX_CATS = { ort: ["Orte", "Places"], volk: ["Völker & Spezies", "Peoples & species"], org: ["Organisationen", "Organizations"], ereignis: ["Ereignisse", "Events"], konzept: ["Konzepte & Kräfte", "Concepts & powers"] };
+const LEX_CATS = { ereignis: ["Ereignisse", "Events"], konzept: ["Konzepte & Kräfte", "Concepts & powers"] };
 function lexikonBody(lang) {
   const de = lang === "de";
   const prefix = lang === "en" ? "/en" : "";
@@ -876,7 +956,7 @@ function lexikonBody(lang) {
     <input class="wiki-search" id="lexSearch" type="search" placeholder="${de ? "Begriff suchen …" : "Search terms …"}">
     <div class="seg" id="lexCat"><button class="sel" data-cat="alle">${T[lang].all}</button>${Object.entries(LEX_CATS).map(([k, v]) => `<button data-cat="${k}">${de ? v[0] : v[1]}</button>`).join("")}</div>
   </div>
-  <div class="lex-grid">${LEXIKON.map((e) => `<div class="lex-card" id="${e.id}" data-cat="${e.cat}" data-t="${esc(e.n.toLowerCase() + " " + e.d.toLowerCase())}">
+  <div class="lex-grid">${LEXIKON.filter((e) => LEX_CATS[e.cat]).map((e) => `<div class="lex-card" id="${e.id}" data-cat="${e.cat}" data-t="${esc(e.n.toLowerCase() + " " + e.d.toLowerCase())}">
     <span class="lex-cat lc-${e.cat}">${de ? LEX_CATS[e.cat][0] : LEX_CATS[e.cat][1]}</span>
     <div class="lex-n">${esc(e.n)}</div>
     <p>${esc(e.d)}</p>
@@ -958,7 +1038,7 @@ const search = [
   ...TEAMS.map((t) => ({ t: t.n, s: t.sub, u: teamUrl(t.id), i: null, k: "t", q: (t.n + " " + t.sub).toLowerCase() })),
   ...ARTIFACTS.map((a) => ({ t: a.n, s: a.sub, u: artUrl(a.id), i: null, k: "a", q: (a.n + " " + a.sub).toLowerCase() })),
   ...Object.entries(PERSONS).map(([pid, p]) => ({ t: p.n, s: "Schauspieler:in", u: personUrl(pid), i: existsSync(`public/img/a/${pid}.jpg`) ? `/img/a/${pid}.jpg` : null, k: "c", q: p.n.toLowerCase() })),
-  ...LEXIKON.map((e) => ({ t: e.n, s: "Lexikon", u: `/lexikon/#${e.id}`, i: null, k: "l", q: (e.n + " " + e.d.slice(0, 80)).toLowerCase() })),
+  ...LEXIKON.map((e) => ({ t: e.n, s: e.sub || "Lexikon", u: lexUrl(e), i: null, k: "l", q: (e.n + " " + e.d.slice(0, 80)).toLowerCase() })),
 ];
 mkdirSync(join(OUT, "assets"), { recursive: true });
 writeFileSync(join(OUT, "assets", "search.json"), JSON.stringify(search));
