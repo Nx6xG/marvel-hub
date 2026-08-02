@@ -1446,3 +1446,35 @@ a.ens-card:hover .ens-img { transform: scale(1.08); border-color: #3fdc8c; box-s
 body:not(.neutral) .nav-search input { background: #0b120e; }
 .nav-search input:focus { background: #191722; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6); }
 body:not(.neutral) .nav-search input:focus { background: #0e1a13; }
+
+/* ===== Lexikon ===== */
+.lex-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; max-width: 980px; margin: 0 auto; }
+@media (max-width: 780px) { .lex-grid { grid-template-columns: 1fr; } }
+.lex-card {
+  background: rgba(16, 14, 16, 0.5); border: 1px solid rgba(170, 175, 182, 0.12);
+  border-radius: 12px; padding: 18px 20px; scroll-margin-top: 130px;
+}
+.lex-card:target { border-color: var(--green); box-shadow: 0 0 0 1px var(--green), 0 0 30px rgba(232, 53, 59, 0.15); }
+.lex-cat {
+  display: inline-block; font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.22em;
+  text-transform: uppercase; padding: 3px 9px; border-radius: 3px; margin-bottom: 8px;
+}
+.lc-ort { color: #7db7ec; background: rgba(90, 169, 230, 0.12); }
+.lc-volk { color: #8fd6a2; background: rgba(80, 200, 120, 0.12); }
+.lc-org { color: #ffc45e; background: rgba(217, 164, 65, 0.12); }
+.lc-ereignis { color: #ff8a8e; background: rgba(232, 53, 59, 0.12); }
+.lc-konzept { color: #c9a6ee; background: rgba(160, 107, 230, 0.13); }
+.lex-n { font-family: var(--display); font-weight: 700; font-size: 19px; text-transform: uppercase; letter-spacing: 0.04em; }
+.lex-card p { font-size: 13.5px; color: #b6b2b4; margin-top: 6px; line-height: 1.65; }
+.lex-films { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+.lex-films a {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.04em; text-decoration: none;
+  color: var(--muted); border: 1px solid var(--line); border-radius: 20px; padding: 3px 10px;
+}
+.lex-films a:hover { color: var(--green); border-color: var(--green-deep); }
+
+/* FAQ */
+.faq-item summary { font-size: 15.5px; letter-spacing: 0.04em; text-transform: none; font-family: var(--body); font-weight: 600; }
+.faq-a { padding: 0 18px 16px; }
+.faq-a p { font-size: 14.5px; color: #b6b2b4; line-height: 1.7; }
+.faq-a a { text-decoration: underline; text-underline-offset: 3px; }

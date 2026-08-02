@@ -32,7 +32,7 @@ const REL_NAME = { verbuendet: "Verbündete", feind: "Feinde", familie: "Familie
 const T = {
   de: {
     langName: "Deutsch", other: "English", tagline: "Das Marvel-Fanarchiv aller Universen",
-    nav: { home: "Start", films: "Filme & Serien", chars: "Charaktere", teams: "Teams", multi: "Multiversum", arts: "Artefakte", paths: "Pfade", records: "Rekorde", chron: "Chronik", threads: "Offene Fäden", event: "★ Doomsday" },
+    nav: { home: "Start", films: "Filme & Serien", chars: "Charaktere", teams: "Teams", multi: "Multiversum", arts: "Artefakte", paths: "Pfade", records: "Rekorde", chron: "Chronik", threads: "Offene Fäden", lex: "Lexikon", faq: "FAQ", event: "★ Doomsday" },
     spoiler_off: "Spoiler: aus", search_ph: "Suche …",
     home_sub: "Von Iron Man bis Doomsday: Filme, Serien, Charaktere und die ganze Lore — quer durch alle Marvel-Universen.",
     home_desc: "Marvel Hub: das Fan-Wiki über alle Marvel-Film-Universen — MCU, X-Men, Sony, Klassiker und TV-Ära. Mit Doomsday-Countdown, Watchlist, Charakteren, Teams und Lore.",
@@ -55,7 +55,7 @@ const T = {
   },
   en: {
     langName: "English", other: "Deutsch", tagline: "The Marvel fan archive of every universe",
-    nav: { home: "Home", films: "Films & Shows", chars: "Characters", teams: "Teams", multi: "Multiverse", arts: "Artifacts", paths: "Storylines", records: "Records", chron: "Timeline", threads: "Loose Ends", event: "★ Doomsday" },
+    nav: { home: "Home", films: "Films & Shows", chars: "Characters", teams: "Teams", multi: "Multiverse", arts: "Artifacts", paths: "Storylines", records: "Records", chron: "Timeline", threads: "Loose Ends", lex: "Lexicon", faq: "FAQ", event: "★ Doomsday" },
     spoiler_off: "Spoilers: off", search_ph: "Search …",
     home_sub: "From Iron Man to Doomsday: films, shows, characters and all the lore — across every Marvel universe. (Article texts are German-first for now.)",
     home_desc: "Marvel Hub: the fan wiki covering every Marvel movie universe — MCU, X-Men, Sony, classics and the TV era. With Doomsday countdown, watchlist, characters, teams and lore.",
@@ -134,6 +134,7 @@ const CREDITS = existsSync("site/data/credits.json") ? JSON.parse(readFileSync("
 const DETAILS = existsSync("site/data/details.json") ? JSON.parse(readFileSync("site/data/details.json", "utf8")) : {};
 const EXTRA = existsSync("site/data/extra.json") ? JSON.parse(readFileSync("site/data/extra.json", "utf8")) : { films: {}, collections: {}, providers: {} };
 const PERSONS = existsSync("site/data/persons.json") ? JSON.parse(readFileSync("site/data/persons.json", "utf8")) : {};
+const LEXIKON = existsSync("site/data/lexikon.json") ? JSON.parse(readFileSync("site/data/lexikon.json", "utf8")) : [];
 const PSLUG = {};
 { const used = new Set();
   for (const [pid, p] of Object.entries(PERSONS)) {
@@ -171,7 +172,7 @@ function page({ lang, path, title, desc, ogImage, body, dataPage, jsonld, noinde
     if (extra) cls.push(extra);
     return `<a href="${prefix}${p}"${cls.length ? ` class="${cls.join(" ")}"` : ""}>${L.nav[k]}</a>`;
   };
-  const loreItems = [["chron", "/chronik/"], ["multi", "/multiversum/"], ["arts", "/artefakte/"], ["paths", "/pfade/"], ["threads", "/faeden/"], ["records", "/rekorde/"]];
+  const loreItems = [["lex", "/lexikon/"], ["chron", "/chronik/"], ["multi", "/multiversum/"], ["arts", "/artefakte/"], ["paths", "/pfade/"], ["threads", "/faeden/"], ["records", "/rekorde/"], ["faq", "/faq/"]];
   const loreActive = loreItems.some(([, p]) => isActive(p));
   const nav =
     navLink("home", "/") + navLink("films", "/filme/") + navLink("chars", "/charaktere/") + navLink("teams", "/teams/") +
@@ -864,6 +865,52 @@ for (const lang of LANGS) {
   }
 }
 
+/* Lexikon & FAQ */
+const LEX_CATS = { ort: ["Orte", "Places"], volk: ["Völker & Spezies", "Peoples & species"], org: ["Organisationen", "Organizations"], ereignis: ["Ereignisse", "Events"], konzept: ["Konzepte & Kräfte", "Concepts & powers"] };
+function lexikonBody(lang) {
+  const de = lang === "de";
+  const prefix = lang === "en" ? "/en" : "";
+  return `<main class="wrap" style="padding:50px 22px 60px">
+  ${secHead(de ? "Alles, was man wissen muss" : "Everything you need to know", de ? "Das Lexikon" : "The Lexicon", de ? "Orte, Völker, Organisationen, Ereignisse und Konzepte des Marvel-Kinos — jeder Begriff erklärt, mit den Filmen dazu. Auch über die Suche oben erreichbar." : "Places, peoples, organizations, events and concepts of Marvel cinema — every term explained, with the films to match.")}
+  <div class="wiki-tools">
+    <input class="wiki-search" id="lexSearch" type="search" placeholder="${de ? "Begriff suchen …" : "Search terms …"}">
+    <div class="seg" id="lexCat"><button class="sel" data-cat="alle">${T[lang].all}</button>${Object.entries(LEX_CATS).map(([k, v]) => `<button data-cat="${k}">${de ? v[0] : v[1]}</button>`).join("")}</div>
+  </div>
+  <div class="lex-grid">${LEXIKON.map((e) => `<div class="lex-card" id="${e.id}" data-cat="${e.cat}" data-t="${esc(e.n.toLowerCase() + " " + e.d.toLowerCase())}">
+    <span class="lex-cat lc-${e.cat}">${de ? LEX_CATS[e.cat][0] : LEX_CATS[e.cat][1]}</span>
+    <div class="lex-n">${esc(e.n)}</div>
+    <p>${esc(e.d)}</p>
+    ${e.films && e.films.length ? `<div class="lex-films">${e.films.map((fid) => byId[fid] ? `<a href="${prefix}${filmUrl(fid)}">${esc(byId[fid].t)}</a>` : "").join("")}</div>` : ""}
+  </div>`).join("")}</div>
+</main>`;
+}
+const FAQ = [
+  ["In welcher Reihenfolge soll ich die Marvel-Filme schauen?", `Für Einsteiger: Release-Reihenfolge — so wurden die Geschichten erzählt und Überraschungen funktionieren. Wer die Geschichte in-universe erleben will, findet in der <a href="/chronik/">Chronik</a> die Ereignis-Reihenfolge und auf der <a href="/event/">Doomsday-Seite</a> die komplette Saga-Timeline zum Abhaken.`],
+  ["Was muss ich vor Avengers: Doomsday gesehen haben?", `Die kurze Antwort: Loki (beide Staffeln), No Way Home, Multiverse of Madness, Deadpool & Wolverine, Thunderbolts* und First Steps. Die komplette gewichtete Liste mit Pflicht/Empfohlen-Filter steht im <a href="/event/">Event-Hub</a> — Häkchen setzen, Restzeit ablesen.`],
+  ["Was ist der Unterschied zwischen MCU, X-Men-Filmen und den Sony-Filmen?", `Drei getrennt gestartete Film-Universen: das MCU (Disney/Marvel Studios, seit 2008), die Fox-X-Men-Welt (2000–2020) und Sonys Spider-Man-Kosmos. Seit dem Multiversum sind sie offiziell Parallelwelten derselben Realität — die Details erklärt die <a href="/multiversum/">Multiversum-Karte</a>.`],
+  ["Sind die Netflix-Serien (Daredevil & Co.) Kanon?", `Grauzone mit klarer Tendenz: Charlie Cox' Daredevil, D'Onofrios Kingpin und Bernthals Punisher wurden ins MCU übernommen und sind damit faktisch Kanon. Der Rest (Jessica Jones, Luke Cage, Iron Fist) schwebt — nichts widerspricht ihnen, nichts bestätigt sie.`],
+  ["Was sind der Snap und der Blip?", `Der Snap (2018): Thanos löscht mit den Infinity-Steinen die Hälfte allen Lebens aus. Der Blip (2023): Die Avengers holen alle zurück — fünf Jahre später, kein Tag gealtert. Das Trauma dazwischen prägt fast jede Geschichte seither. Mehr im <a href="/lexikon/#snap-lex">Lexikon</a>.`],
+  ["Lohnt es sich, im Kino bis nach dem Abspann zu bleiben?", `Bei Marvel: praktisch immer. Auf jeder Filmseite hier stehen die Szenen (spoiler-geschützt) samt „Führt zu"-Verkettung — und die <a href="/pfade/">Post-Credit-Karte</a> zeigt, wie seit 2008 alles zusammenhängt.`],
+  ["Was bedeutet Erde-616?", `Die offizielle Nummer des Haupt-MCU-Universums (vergeben in Multiverse of Madness). Comic-Puristen meinen mit 616 allerdings die Haupt-Comicwelt — der Nerd-Streit dazu ist selbst schon Folklore. Alle Erde-Nummern: <a href="/multiversum/">Multiversum</a>.`],
+  ["Wo kann ich die Filme streamen?", `Auf jeder Filmseite steht die aktuelle Verfügbarkeit für Deutschland (Abo und Leihe), live gespeist aus TMDB/JustWatch-Daten. Kurzfassung: MCU und X-Men fast komplett auf Disney+, die Sony-Spider-Man-Ecke wechselnd bei Netflix & Co.`],
+  ["Warum spielt Robert Downey Jr. jetzt Doctor Doom?", `Nach der Trennung von Jonathan Majors brauchte die Saga 2023 einen neuen Endgegner — Marvel ersetzte Kang durch den größten Marvel-Schurken überhaupt und besetzte ihn mit dem Gesicht des MCU: „New mask, same task." Ob Doom eine Stark-Variante ist, ist DIE Theorie-Frage — mehr im <a href="/event/">Event-Hub</a>.`],
+  ["Wann kommen Avengers: Secret Wars und die neuen X-Men?", `Secret Wars beendet die Multiverse Saga am 17. Dezember 2027. Danach gilt ein Neustart der X-Men mit frischem Cast als sicherster offener Plan Hollywoods — vermutlich in einer durch Secret Wars neu geordneten Zeitlinie.`],
+  ["Ist Deadpool jetzt im MCU?", `Ja — über die TVA: Deadpool & Wolverine verdrahtete das alte Fox-Universum (Erde-10005) offiziell mit dem MCU-Multiversum. Wade nennt sich seitdem „Marvel Jesus" und niemand kann es ihm verbieten.`],
+  ["Wer ist der stärkste Charakter im Marvel-Kino?", `Ehrliche Antwort: Es gibt kein offizielles Ranking, und Drehbücher schlagen Kräftetabellen. Die üblichen Verdächtigen: Wanda (Chaosmagie), Sentry (tausend explodierende Sonnen), Captain Marvel, der Phoenix — und ab Dezember vermutlich Doom. Messbares gibt es bei den <a href="/rekorde/">Rekorden</a>.`],
+];
+function faqBody(lang) {
+  const de = lang === "de";
+  return `<main class="wrap" style="padding:50px 22px 60px;max-width:800px">
+  ${secHead("FAQ", de ? "Häufige Fragen" : "Frequently asked questions", de ? "Die Fragen, die jeder googelt — beantwortet und verlinkt. (Antworten derzeit auf Deutsch.)" : "The questions everyone googles — answered and linked (answers currently in German).")}
+  ${FAQ.map(([q, a]) => `<details class="season faq-item"><summary>${q}</summary><div class="faq-a"><p>${a}</p></div></details>`).join("")}
+</main>`;
+}
+const faqLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: FAQ.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: stripTags(a) } })) };
+for (const lang of LANGS) {
+  emit(lang, "/lexikon/", page({ lang, path: "/lexikon/", title: (lang === "de" ? "Das Marvel-Lexikon: alle Begriffe erklärt" : "The Marvel lexicon") + " · Knowhere", desc: lang === "de" ? "Orte, Völker, Organisationen, Ereignisse und Konzepte des Marvel-Kinos — über 70 Begriffe erklärt, von Asgard bis Vibranium." : "Places, peoples, organizations, events and concepts of Marvel cinema — 70+ terms explained.", dataPage: "lex", body: lexikonBody(lang) }));
+  emit(lang, "/faq/", page({ lang, path: "/faq/", title: (lang === "de" ? "Marvel-FAQ: die häufigsten Fragen" : "Marvel FAQ") + " · Knowhere", desc: lang === "de" ? "Reihenfolge, Kanon, Snap & Blip, Streaming, Doomsday-Vorbereitung: die häufigsten Marvel-Fragen beantwortet." : "Watch order, canon, Snap & Blip, streaming — the most common Marvel questions answered.", dataPage: "faq", jsonld: faqLd, body: faqBody(lang) }));
+}
+
 /* Rechtliches */
 for (const lang of LANGS) {
   const imp = `<main class="wrap fp" style="padding-bottom:70px;max-width:760px">
@@ -911,6 +958,7 @@ const search = [
   ...TEAMS.map((t) => ({ t: t.n, s: t.sub, u: teamUrl(t.id), i: null, k: "t", q: (t.n + " " + t.sub).toLowerCase() })),
   ...ARTIFACTS.map((a) => ({ t: a.n, s: a.sub, u: artUrl(a.id), i: null, k: "a", q: (a.n + " " + a.sub).toLowerCase() })),
   ...Object.entries(PERSONS).map(([pid, p]) => ({ t: p.n, s: "Schauspieler:in", u: personUrl(pid), i: existsSync(`public/img/a/${pid}.jpg`) ? `/img/a/${pid}.jpg` : null, k: "c", q: p.n.toLowerCase() })),
+  ...LEXIKON.map((e) => ({ t: e.n, s: "Lexikon", u: `/lexikon/#${e.id}`, i: null, k: "l", q: (e.n + " " + e.d.slice(0, 80)).toLowerCase() })),
 ];
 mkdirSync(join(OUT, "assets"), { recursive: true });
 writeFileSync(join(OUT, "assets", "search.json"), JSON.stringify(search));

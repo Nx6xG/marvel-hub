@@ -280,6 +280,20 @@
     if (uniMode !== "alle" || query || sortMode2 !== "y") applyWiki();
   }
 
+  /* ---------- Lexikon: Filter ---------- */
+  var lexSearch = $("#lexSearch");
+  if (lexSearch) {
+    var lexCat = "alle", lexQ = "";
+    function applyLex() {
+      $$(".lex-card").forEach(function (c) {
+        var ok = (lexCat === "alle" || c.getAttribute("data-cat") === lexCat) && (!lexQ || c.getAttribute("data-t").indexOf(lexQ) !== -1);
+        c.style.display = ok ? "" : "none";
+      });
+    }
+    wireSeg("lexCat", function (d) { lexCat = d.cat; applyLex(); });
+    lexSearch.addEventListener("input", function () { lexQ = lexSearch.value.trim().toLowerCase(); applyLex(); });
+  }
+
   /* ---------- Glossar-Suche (Event) ---------- */
   var gs2 = $("#glossSearch");
   if (gs2) gs2.addEventListener("input", function () {
