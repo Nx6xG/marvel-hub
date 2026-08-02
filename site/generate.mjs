@@ -135,6 +135,7 @@ const DETAILS = existsSync("site/data/details.json") ? JSON.parse(readFileSync("
 const EXTRA = existsSync("site/data/extra.json") ? JSON.parse(readFileSync("site/data/extra.json", "utf8")) : { films: {}, collections: {}, providers: {} };
 const PERSONS = existsSync("site/data/persons.json") ? JSON.parse(readFileSync("site/data/persons.json", "utf8")) : {};
 const LEXIKON = existsSync("site/data/lexikon.json") ? JSON.parse(readFileSync("site/data/lexikon.json", "utf8")) : [];
+const HOME = existsSync("site/data/home.json") ? JSON.parse(readFileSync("site/data/home.json", "utf8")) : { trending: [], upcoming: [] };
 const LEX_BY_CAT = (c) => LEXIKON.filter((e) => e.cat === c);
 const LSLUG = {};
 { const used = new Set();
@@ -750,41 +751,72 @@ function homeBody(lang) {
   const de = lang === "de";
   const prefix = lang === "en" ? "/en" : "";
   const tiles = [
-    { href: "/filme/", t: L.nav.films, s: de ? "108 Einträge aus fünf Universen — mit Scores, Trivia & Post-Credits" : "108 entries across five universes — scores, trivia & post-credits", imgs: ["p/eg", "p/xmen1", "p/sv1"] },
+    { href: "/filme/", t: L.nav.films, s: de ? "108 Einträge aus fünf Universen — mit Scores, Trivia & Post-Credits" : "108 entries across five universes", imgs: ["p/eg", "p/xmen1", "p/sv1"] },
     { href: "/charaktere/", t: L.nav.chars, s: de ? "128 Figuren mit Biografien und Beziehungs-Netz" : "128 characters with bios and relationship webs", imgs: ["c/doom", "c/wolverine", "c/wanda"] },
-    { href: "/chronik/", t: L.nav.chron, s: de ? "Die Geschichte in richtiger Reihenfolge — von 1943 bis Battleworld" : "The story in order — from 1943 to Battleworld", imgs: ["p/cap1", "p/av1", "p/f4"] },
-    { href: "/faeden/", t: L.nav.threads, s: de ? "15 Cliffhanger, die nie aufgelöst wurden" : "15 cliffhangers that were never resolved", imgs: ["p/sc", "p/et", "p/venom3"] },
-    { href: "/rekorde/", t: L.nav.records, s: de ? "Top 10, Flop 10 — und jeder Stan-Lee-Cameo" : "Top 10, flop 10 — and every Stan Lee cameo", imgs: ["p/logan", "p/howard", "p/morbius"] },
-    { href: "/orte/", t: L.nav.places, s: de ? "Von Asgard bis Battleworld — plus alle Erde-Nummern" : "From Asgard to Battleworld — plus every Earth number", imgs: ["p/mom", "p/dw", "p/sv2"] },
+    { href: "/orte/", t: L.nav.places, s: de ? "Von Asgard bis Battleworld — plus alle Erde-Nummern" : "From Asgard to Battleworld", imgs: ["p/mom", "p/dw", "p/sv2"] },
+    { href: "/chronik/", t: L.nav.chron, s: de ? "Die Geschichte in richtiger Reihenfolge — von 1943 bis Battleworld" : "The story in order", imgs: ["p/cap1", "p/av1", "p/f4"] },
+    { href: "/faeden/", t: L.nav.threads, s: de ? "15 Cliffhanger, die nie aufgelöst wurden" : "15 unresolved cliffhangers", imgs: ["p/sc", "p/et", "p/venom3"] },
+    { href: "/lexikon/", t: L.nav.lex, s: de ? "Snap, Inkursion, Vibranium — jeder Begriff erklärt" : "Every term explained", imgs: ["p/l1", "p/iw", "p/wv"] },
   ];
-  const strip = (id, label, sub, featured) => `<a class="strip-card${featured ? " now" : ""}" href="${prefix}${filmUrl(id)}">
-    <img src="/img/p/${id}.jpg" alt="" loading="lazy">
-    <div><div class="sc-k">${esc(label)}</div><div class="sc-t">${esc(byId[id].t)}</div><div class="sc-s">${sub}</div></div></a>`;
+  // Kommende Projekte (live aus der DB)
+  const upcomingRow = HOME.upcoming.map((u2) => {
+    const img = u2.img && existsSync(`public/img/${u2.img}.jpg`) ? `<img src="/img/${u2.img}.jpg" alt="" loading="lazy">` : `<div class="poster-fallback"><div class="pf-t metal">${esc(u2.t)}</div></div>`;
+    const [y, m, dd] = u2.d.split("-");
+    const inner = `${img}<div class="rf-t">${esc(u2.t)}</div><div class="rf-d">${dd}.${m}.${y}${u2.id ? "" : de ? " · angekündigt" : " · announced"}</div>`;
+    return u2.id ? `<a class="radar-film up-card" href="${prefix}${filmUrl(u2.id)}">${inner}</a>` : `<div class="radar-film up-card up-new">${inner}</div>`;
+  }).join("");
+  // Angesagt: echte Trends + Auffüllung mit Archiv-Favoriten
+  const fillIds = FILMS.filter((f) => DETAILS[f.id] && DETAILS[f.id].vote).sort((a, b) => DETAILS[b.id].vote[1] - DETAILS[a.id].vote[1]).map((f) => f.id);
+  const trendIds = [...HOME.trending, ...fillIds.filter((id) => !HOME.trending.includes(id))].slice(0, 6);
+  const trendRow = trendIds.map((id, i) => `<a class="radar-film up-card" href="${prefix}${filmUrl(id)}">
+    <span class="trend-rank metal">${i + 1}</span>${posterImgW(id, byId[id].t)}<div class="rf-t">${esc(byId[id].t)}</div></a>`).join("");
+  // Tages-Daten (Client wählt per Datum)
+  const daily = {
+    film: FILMS.filter((f) => f.prio !== "future").map((f) => ({ t: f.t, u: prefix + filmUrl(f.id), i: `/img/p/${f.id}.jpg`, s: `${f.y} · ${UNI_LABEL[f.uni]}` })),
+    char: CHARS.map((c) => ({ t: c.n, u: prefix + charUrl(c.id), i: existsSync(`public/img/c/${c.id}.jpg`) ? `/img/c/${c.id}.jpg` : null, s: c.act.split("·")[0].trim() })),
+    lex: LEXIKON.map((e) => ({ t: e.n, u: prefix + lexUrl(e), i: null, s: e.sub || (de ? "Lexikon" : "Lexicon") })),
+    anniversaries: FILMS.filter((f) => DETAILS[f.id] && DETAILS[f.id].deDate).map((f) => ({ d: DETAILS[f.id].deDate, t: f.t, u: prefix + filmUrl(f.id), i: `/img/p/${f.id}.jpg` })),
+  };
   return `<header class="hub-hero">
     <div class="hero-rule">${L.tagline}</div>
     <h1 class="metal">Knowhere</h1>
     <p class="hub-sub">${L.home_sub}</p>
   </header>
   <main class="wrap" style="padding-bottom:50px">
-
     <a class="home-doom" href="${prefix}/event/">
       <div class="hd-poster"><img src="/img/p/doomsday.jpg" alt="Avengers: Doomsday" fetchpriority="high"></div>
       <div class="hd-body">
         <div class="hd-k">${de ? "Das Event · 18. Dezember 2026" : "The Event · December 18, 2026"}</div>
         <div class="hd-title metal">Avengers:<br>Doomsday</div>
         <div class="hd-cd"><span class="hd-cd-n metal" id="hubCd">···</span><span class="hd-cd-l">${L.days}</span><span class="hd-clock" id="hubClock"></span></div>
-        <p class="hd-s">${de ? "Lore, fokussierte Watchlist, Theorien und die komplette Saga-Timeline — alles zum größten Marvel-Film seit Endgame." : "Lore, a focused watchlist, theories and the full saga timeline — everything on the biggest Marvel film since Endgame."}</p>
+        <p class="hd-s">${de ? "Lore, fokussierte Watchlist, Theorien und die komplette Saga-Timeline — alles zum größten Marvel-Film seit Endgame." : "Lore, watchlist, theories and the full saga timeline."}</p>
         <span class="hd-cta">${L.event_cta}</span>
       </div>
     </a>
 
-    <div class="strip">
-      ${strip("bnd", de ? "Jetzt im Kino" : "In theaters now", de ? "seit 31. Juli 2026" : "since July 31, 2026", true)}
-      ${strip("f4", de ? "Zuletzt im Kino" : "Recently", "Juli 2025")}
-      ${strip("ih", de ? "Zuletzt auf Disney+" : "Recently on Disney+", "Juni 2025")}
-      ${strip("secretwars", de ? "Danach" : "After that", de ? `Dez 2027 · in <span id="hubCdSW">…</span> Tagen` : `Dec 2027 · <span id="hubCdSW">…</span> days`)}
-    </div>
+    <div class="subhead">${de ? "Demnächst im Marvel-Kosmos" : "Coming up"} <span class="live-dot" title="live aus der Datenbank"></span></div>
+    <div class="cp-films up-row">${upcomingRow}</div>
 
+    <div class="home-cols">
+      <section>
+        <div class="subhead">${de ? "Heute im Archiv" : "Today in the archive"}</div>
+        <div class="daily" id="dailyMod">
+          <a class="daily-card" data-kind="film" href="#"><span class="daily-k">${de ? "Film des Tages" : "Film of the day"}</span><img alt="" hidden><b></b><small></small></a>
+          <a class="daily-card" data-kind="char" href="#"><span class="daily-k">${de ? "Charakter des Tages" : "Character of the day"}</span><img alt="" hidden><b></b><small></small></a>
+          <a class="daily-card" data-kind="lex" href="#"><span class="daily-k">${de ? "Begriff des Tages" : "Term of the day"}</span><img alt="" hidden><b></b><small></small></a>
+        </div>
+      </section>
+      <section>
+        <div class="subhead">${de ? "An diesem Tag" : "On this day"}</div>
+        <div class="anniv" id="annivMod"><p class="anniv-empty">…</p></div>
+      </section>
+    </div>
+    <script type="application/json" id="dailyData">${JSON.stringify(daily)}</script>
+
+    <div class="subhead">${de ? "Angesagt & beliebt" : "Trending & popular"} <span class="live-dot"></span></div>
+    <div class="cp-films up-row">${trendRow}</div>
+    ${adSlot(L)}
+    <div class="subhead">${L.dive}</div>
     <div class="tiles">
       ${tiles.map((t) => `<a class="tile" href="${prefix}${t.href}">
         <div class="tile-imgs">${t.imgs.map((i) => `<img src="/img/${i}.jpg" alt="" loading="lazy">`).join("")}</div>
@@ -792,9 +824,6 @@ function homeBody(lang) {
         <span class="tile-arr">➤</span>
       </a>`).join("")}
     </div>
-    ${adSlot(L)}
-    <div class="subhead">${L.news}</div>
-    ${frag("hub-news")}
   </main>`;
 }
 

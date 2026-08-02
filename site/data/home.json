@@ -1,0 +1,37 @@
+{
+ "fetched": "2026-08-02",
+ "trending": [
+  "bnd",
+  "doomsday"
+ ],
+ "upcoming": [
+  {
+   "t": "VisionQuest",
+   "d": "2026-10-14",
+   "id": "vq",
+   "img": "p/vq",
+   "tv": true
+  },
+  {
+   "t": "Avengers: Doomsday",
+   "d": "2026-12-16",
+   "id": "doomsday",
+   "img": "p/doomsday",
+   "tv": false
+  },
+  {
+   "t": "Avengers: Secret Wars",
+   "d": "2027-12-16",
+   "id": "secretwars",
+   "img": "p/secretwars",
+   "tv": false
+  },
+  {
+   "t": "Black Panther 3",
+   "d": "2028-12-14",
+   "id": null,
+   "img": "u/1386618",
+   "tv": false
+  }
+ ]
+}

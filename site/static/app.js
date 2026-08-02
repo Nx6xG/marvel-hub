@@ -282,6 +282,46 @@
     if (uniMode !== "alle" || query || sortMode2 !== "y") applyWiki();
   }
 
+  /* ---------- Startseite: Tages-Module ---------- */
+  var dailyData = $("#dailyData");
+  if (dailyData) {
+    var dd = JSON.parse(dailyData.textContent);
+    var now = new Date();
+    var doy = Math.floor((now - new Date(now.getFullYear(), 0, 0)) / 864e5);
+    $$(".daily-card").forEach(function (card) {
+      var list = dd[card.getAttribute("data-kind")];
+      if (!list || !list.length) return;
+      var e = list[(doy * 7 + now.getFullYear()) % list.length];
+      card.href = e.u;
+      $("b", card).textContent = e.t;
+      $("small", card).textContent = e.s || "";
+      var img = $("img", card);
+      if (e.i) { img.src = e.i; img.hidden = false; }
+    });
+    // Jahrestage: heute, sonst ±3 Tage
+    var ann = $("#annivMod");
+    if (ann && dd.anniversaries) {
+      var pad = function (n) { return String(n).padStart(2, "0"); };
+      function hits(offset) {
+        var d = new Date(now.getTime() + offset * 864e5);
+        var md = pad(d.getMonth() + 1) + "-" + pad(d.getDate());
+        return dd.anniversaries.filter(function (a2) { return a2.d.slice(5) === md && +a2.d.slice(0, 4) < now.getFullYear(); })
+          .map(function (a2) { return { a: a2, off: offset, years: now.getFullYear() - +a2.d.slice(0, 4) }; });
+      }
+      var found = [];
+      for (var off = 0; off <= 3 && found.length < 3; off++) {
+        found = found.concat(hits(off));
+        if (off > 0) found = found.concat(hits(-off));
+      }
+      ann.innerHTML = found.length
+        ? found.slice(0, 3).map(function (h) {
+            var when = h.off === 0 ? "Heute" : h.off > 0 ? "In " + h.off + " Tag" + (h.off > 1 ? "en" : "") : "Vor " + (-h.off) + " Tag" + (h.off < -1 ? "en" : "");
+            return '<a class="anniv-row" href="' + h.a.u + '"><img src="' + h.a.i + '" alt="" loading="lazy"><div><b>' + when + " vor " + h.years + " Jahren:</b> " + h.a.t + " <span>(Kinostart " + h.a.d.split("-").reverse().join(".") + ")</span></div></a>";
+          }).join("")
+        : '<p class="anniv-empty">Diese Woche jährt sich kein Kinostart — das Multiversum macht Pause.</p>';
+    }
+  }
+
   /* ---------- Lexikon: Filter ---------- */
   var lexSearch = $("#lexSearch");
   if (lexSearch) {
