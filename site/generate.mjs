@@ -782,12 +782,36 @@ function eventBody(lang) {
   let doomFrag = fragL("event-doom", lang);
   const ci = doomFrag.indexOf('<div class="cast-cols">');
   if (ci !== -1) doomFrag = doomFrag.slice(0, ci) + ensWall + "</div></section>";
+  const prefix = lang === "en" ? "/en" : "";
+  const FOX = [
+    ["xmen1", "pflicht", de ? "Der Grundstein: wer Xavier, Magneto, Mystique und Sabretooth sind." : "The foundation: who Xavier, Magneto, Mystique and Sabretooth are."],
+    ["x2", "empfohlen", de ? "Der beste Teil der Trilogie — mit Nightcrawlers legendärem Auftritt (Cumming kehrt zurück)." : "The best of the trilogy — with Nightcrawler's legendary entrance (Cumming returns)."],
+    ["x3", "empfohlen", de ? "Kelsey Grammers Beast debütiert — exakt die Version aus dem Doomsday-Cast." : "Kelsey Grammer's Beast debuts — exactly the version in the Doomsday cast."],
+    ["logan", "pflicht", de ? "Das Anker-Wesen-Fundament: ohne Logans Ende ergibt Deadpool & Wolverine keinen Sinn." : "The anchor-being foundation: without Logan's end, Deadpool & Wolverine makes no sense."],
+    ["dp1", "empfohlen", de ? "Wades Ursprung — der Vorlauf zur Fox-MCU-Brücke." : "Wade's origin — the run-up to the Fox-MCU bridge."],
+    ["dp2", "optional", de ? "Vertieft Wades Welt (und Cable), fürs Verständnis verzichtbar." : "Deepens Wade's world (and Cable), skippable for understanding."],
+    ["dofp", "optional", de ? "Erklärt, warum die Fox-Timeline ein Flickenteppich ist — Kür für Komplettisten." : "Explains why the Fox timeline is a patchwork — extra credit for completionists."],
+  ];
+  const foxRows = FOX.map(([fid, prio, why]) => { const f = byId[fid]; return `<div class="ewl-row" data-prio="${prio}">
+    <a class="ewl-poster" href="${prefix}${filmUrl(fid)}">${posterImgW(fid, f.t)}</a>
+    <a class="ewl-main" href="${prefix}${filmUrl(fid)}" style="text-decoration:none;color:inherit"><div class="ewl-t">${esc(f.t)}</div><div class="ewl-sub"><span class="prio-dot pd-${prio}" style="display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:5px"></span>${f.y} · ${prioL(prio, lang)} — ${why}</div></a>
+    <div class="ewl-side"><span class="ewl-time">≈ ${fmtMin(f.min)}</span><button class="ewl-check" data-watch="${fid}" aria-label="${de ? "gesehen" : "watched"}">✓</button></div>
+  </div>`; }).join("");
+  const foxBlock = `<section class="block" id="foxlegacy"><div class="wrap" style="max-width:860px">
+    <div class="sec-head">
+      <div class="sec-kicker">${de ? "Die Hausaufgabe aus einem anderen Universum" : "Homework from another universe"}</div>
+      <h2 class="metal">${de ? "Das Fox-Erbe" : "The Fox Legacy"}</h2>
+      <p class="sec-sub">${de ? "Doomsday bringt den Original-Cast der X-Men-Trilogie zurück — Stewart, McKellen, Grammer, Marsden, Romijn, Cumming. Diese Filme laufen außerhalb der MCU-Timeline, sind aber plötzlich wieder Pflichtstoff. Die Haken zählen zur selben Watchlist." : "Doomsday brings back the original X-Men trilogy cast — Stewart, McKellen, Grammer, Marsden, Romijn, Cumming. These films sit outside the MCU timeline, but they are suddenly required material again. The checkmarks count toward the same watchlist."}</p>
+    </div>
+    ${foxRows}
+  </div></section>`;
   return `<div class="event-theme"><div class="ev-progress" id="evProgress"></div>${fragL("event-hero", lang)}
   <a class="ev-sticky" id="evSticky" href="#event-top" hidden><img class="evs-logo" src="/img/l/doomsday.png" alt="Avengers: Doomsday"><span class="evs-time" id="evStickyD">…</span></a>
   <main>
     ${trailer}
     ${act("I", de ? "Der Weg" : "The Road", de ? "33 Filme & Serien. Ein Ziel. Deine Watchlist." : "33 films & shows. One destination. Your watchlist.")}
     ${saga}
+    ${foxBlock}
     ${act("II", de ? "Die Lage" : "The Situation", de ? "Fakten, News und das größte Ensemble aller Zeiten" : "Facts, news and the biggest ensemble ever")}
     ${doomFrag}
     ${act("III", de ? "Das Wissen" : "The Knowledge", de ? "Die komplette Lore hinter Doom" : "The complete lore behind Doom")}
