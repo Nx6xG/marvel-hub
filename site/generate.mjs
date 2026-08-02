@@ -236,8 +236,8 @@ ${(() => {
   </div>
   <button class="nav-burger" id="navBurger" aria-expanded="false" aria-label="Menü">☰</button>
 </div></nav>
-${crumbs && crumbs.length ? `<div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="${prefix}/">${L.nav.home}</a>${crumbs.map(([n, u]) => u ? ` › <a href="${prefix}${u}">${n}</a>` : ` › <span>${n}</span>`).join("")}</nav></div>` : ""}
 ${dataPage !== "event" && dataPage !== "home" ? `<a class="promo" href="${prefix}/event/">★ <b>Avengers: Doomsday</b><span class="promo-x">${lang === "de" ? "Erfahre alles zum kommenden Film" : "Everything about the upcoming film"}</span><span class="promo-cd"><span id="promoCd">…</span> ${lang === "de" ? "Tage" : "days"}</span><span class="promo-arr">➤</span></a>` : ""}
+${crumbs && crumbs.length ? `<div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="${prefix}/">${L.nav.home}</a>${crumbs.map(([n, u]) => u ? ` › <a href="${prefix}${u}">${n}</a>` : ` › <span>${n}</span>`).join("")}</nav></div>` : ""}
 ${body}
 <footer>
   <p><strong style="color:var(--muted)">Knowhere</strong> · ${L.footer1}</p>
