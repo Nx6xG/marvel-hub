@@ -627,8 +627,11 @@
     var TSTR = TD.str;
     var TIERS = ["s", "a", "b", "c", "d"];
     var board = $("#tierBoard"), poolEl = $("#tierPool");
-    var state = {};
-    try { state = JSON.parse(localStorage.getItem("msa-tierlist") || "{}"); } catch (e) {}
+    var state = {}, seq = null;
+    try {
+      var raw = JSON.parse(localStorage.getItem("msa-tierlist") || "{}");
+      if (raw && raw.t) { state = raw.t; seq = raw.seq || null; } else state = raw;
+    } catch (e) {}
     var sharedStr = new URLSearchParams(location.search).get("t");
     var shared = null;
     if (sharedStr) {
@@ -663,6 +666,13 @@
         var t = active[it.getAttribute("data-id")];
         (D[t && D[t] ? t : "pool"]).appendChild(it);
       });
+      if (seq && !readOnly) for (var key in D) {
+        var want = seq[key] || [];
+        var have = {};
+        $$(".tier-item[data-id]", D[key]).forEach(function (x) { have[x.getAttribute("data-id")] = x; });
+        want.forEach(function (id) { if (have[id]) { D[key].appendChild(have[id]); delete have[id]; } });
+        for (var rest in have) D[key].appendChild(have[rest]);
+      }
       stats();
     }
     function stats() {
@@ -670,14 +680,29 @@
       for (var k in active) if (D[active[k]]) n++;
       $("#tierStats").textContent = n + " / " + TD.order.length + " " + TSTR.sorted;
     }
-    function save() { if (!readOnly) try { localStorage.setItem("msa-tierlist", JSON.stringify(active)); } catch (e) {} }
-    function place(id, tier) {
+    function save() {
+      if (readOnly) return;
+      seq = {};
+      for (var key in D) seq[key] = $$(".tier-item[data-id]", D[key]).map(function (x) { return x.getAttribute("data-id"); });
+      try { localStorage.setItem("msa-tierlist", JSON.stringify({ t: active, seq: seq })); } catch (e) {}
+    }
+    function place(id, tier, before) {
       if (readOnly) return;
       if (tier === "pool") delete active[id]; else active[id] = tier;
       var it = $(".tier-item[data-id=\"" + id + "\"]");
-      if (it) { D[tier].appendChild(it); it.classList.remove("sel"); }
+      if (it) { D[tier].insertBefore(it, before && before !== it ? before : null); it.classList.remove("sel"); }
       selId = null;
       save(); stats();
+    }
+    /* Einfügeposition im (umbrechenden) Flex-Container aus Mausposition bestimmen */
+    function beforeAt(container, x, y) {
+      var kids = $$(".tier-item[data-id]", container);
+      for (var i = 0; i < kids.length; i++) {
+        var r = kids[i].getBoundingClientRect();
+        if (y < r.top - 2) return kids[i];
+        if (y <= r.bottom + 2 && x < r.left + r.width / 2) return kids[i];
+      }
+      return null;
     }
 
     /* Klick-Flow (Touch & Maus) */
@@ -701,11 +726,21 @@
     });
 
     /* Drag & Drop */
+    var dragging = false;
     document.addEventListener("dragstart", function (ev) {
       var it = ev.target.closest(".tier-item[data-id]");
       if (!it || readOnly) return;
+      dragging = true;
       ev.dataTransfer.setData("text/plain", it.getAttribute("data-id"));
       ev.dataTransfer.effectAllowed = "move";
+    });
+    document.addEventListener("dragend", function () { dragging = false; });
+    /* Seite scrollt mit, wenn man beim Ziehen an den Rand kommt (z. B. Pool → S-Reihe) */
+    document.addEventListener("dragover", function (ev) {
+      if (!dragging) return;
+      var m = 110, y = ev.clientY;
+      if (y < m) window.scrollBy(0, -Math.ceil((m - y) / 4));
+      else if (window.innerHeight - y < m) window.scrollBy(0, Math.ceil((m - (window.innerHeight - y)) / 4));
     });
     $$(".tier-row:not(.rt) .tier-drop, #tierPool").forEach(function (d) {
       d.addEventListener("dragover", function (ev) { if (!readOnly) { ev.preventDefault(); d.classList.add("over"); } });
@@ -713,7 +748,7 @@
       d.addEventListener("drop", function (ev) {
         ev.preventDefault(); d.classList.remove("over");
         var id = ev.dataTransfer.getData("text/plain");
-        if (id) place(id, d.getAttribute("data-tier") === "pool" ? "pool" : d.getAttribute("data-tier"));
+        if (id) place(id, d.getAttribute("data-tier") === "pool" ? "pool" : d.getAttribute("data-tier"), beforeAt(d, ev.clientX, ev.clientY));
       });
     });
 
@@ -736,12 +771,15 @@
       var b = $("#tierReset");
       if (!armed) { armed = true; b.textContent = TSTR.sure; setTimeout(function () { armed = false; b.textContent = TSTR.reset; }, 3000); return; }
       armed = false; b.textContent = TSTR.reset;
-      active = {}; save(); apply();
+      active = {}; seq = null;
+      try { localStorage.removeItem("msa-tierlist"); } catch (e) {}
+      TD.order.forEach(function (id) { var it = $(".tier-item[data-id=\"" + id + "\"]"); if (it) D.pool.appendChild(it); });
+      stats();
     });
 
     /* Geteilte Liste übernehmen */
     if (readOnly) $("#tierAdopt").addEventListener("click", function () {
-      try { localStorage.setItem("msa-tierlist", JSON.stringify(shared)); } catch (e) {}
+      try { localStorage.setItem("msa-tierlist", JSON.stringify({ t: shared, seq: null })); } catch (e) {}
       location.href = location.pathname;
     });
 
