@@ -299,13 +299,7 @@ function filmBody(f, lang) {
     (d.cert ? `<div class="fact-box"><div class="fb-k">FSK</div><div class="fb-v">ab ${esc(d.cert)}</div></div>` : "") +
     (d.budget ? `<div class="fact-box"><div class="fb-k">Budget</div><div class="fb-v">${fmtMoney(d.budget)}</div></div>` : "") +
     (d.revenue ? `<div class="fact-box"><div class="fb-k">${lang === "de" ? "Einspielergebnis" : "Box office"}</div><div class="fb-v">${fmtMoney(d.revenue)}</div></div>` : "") + `</div>` : ""}
-  ${(() => {
-    const db = lang === "en" ? f.plot_en : f.plot_db;
-    const main = db || tr(f, "plot", lang);
-    const note = lang === "de" && db && f.plot ? f.plot : null;
-    return `<div class="fp-section"><div class="fp-label">${L.plot}</div><p>${esc(main)}</p></div>` +
-      (note ? `<div class="fp-section"><div class="fp-label">${L.note_lbl}</div><p>${esc(note)}</p></div>` : "");
-  })()}
+  <div class="fp-section"><div class="fp-label">${L.plot}</div><p>${esc((lang === "en" ? f.plot_en : f.plot_db) || tr(f, "plot", lang))}</p></div>
   ${inFilm.length ? `<div class="fp-section"><div class="fp-label">${L.figures}</div><div class="fp-chars">` +
     inFilm.map((c) => `<a class="fp-char" href="${prefix}${charUrl(c.id)}">${charImg(c.id, c.n, "fc-img")}<div class="fc-n">${esc(c.n)}</div><div class="fc-a">${esc(c.act.split("·")[0].split("(")[0].trim())}</div></a>`).join("") + `</div>` +
     (restCast.length ? `<details class="more-cast"><summary>${L.cast_more} · ${restCast.length}</summary><div class="fp-chars">${restHtml}</div></details>` : "") + `</div>`
