@@ -1478,3 +1478,27 @@ body:not(.neutral) .nav-search input:focus { background: #0e1a13; }
 .faq-a { padding: 0 18px 16px; }
 .faq-a p { font-size: 14.5px; color: #b6b2b4; line-height: 1.7; }
 .faq-a a { text-decoration: underline; text-underline-offset: 3px; }
+
+/* ===== Orte/Völker/Organisationen: Bild-Karten ===== */
+.place-card {
+  position: relative; display: block; aspect-ratio: 16 / 9;
+  border-radius: 12px; overflow: hidden;
+  border: 1px solid rgba(170, 175, 182, 0.14);
+  background: #0d0b0e;
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+.place-card:hover { transform: translateY(-3px); border-color: rgba(232, 53, 59, 0.6); box-shadow: 0 12px 30px rgba(0,0,0,0.55); }
+body:not(.neutral) .place-card:hover { border-color: rgba(63, 220, 140, 0.6); }
+.place-card img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.25s ease; }
+.place-card:hover img { transform: scale(1.05); }
+.pc-fb { width: 100%; height: 100%; background: radial-gradient(120% 90% at 50% 30%, #1c1a1e, #0a0709); }
+.place-ov {
+  position: absolute; inset: auto 0 0 0; padding: 34px 16px 12px;
+  background: linear-gradient(180deg, transparent, rgba(5, 4, 6, 0.92));
+}
+.place-n { font-family: var(--display); font-weight: 700; font-size: 18px; text-transform: uppercase; letter-spacing: 0.05em; color: #f0ecee; text-shadow: 0 2px 8px rgba(0,0,0,0.8); }
+.place-s { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #b8b2b5; margin-top: 2px; }
+
+/* Karten-Raster der Kategorie-Seiten: 3 Spalten */
+.char-grid .place-card { min-width: 0; }
+@media (min-width: 861px) { .char-grid:has(.place-card) { grid-template-columns: repeat(3, 1fr); } }

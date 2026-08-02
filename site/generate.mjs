@@ -888,6 +888,7 @@ function lexDetailBody(e, lang, backPath, backLabel) {
   const prefix = lang === "en" ? "/en" : "";
   const m = CAT_META[e.cat];
   return `<main class="wrap fp" style="padding-bottom:70px;max-width:820px">
+  ${e.img && existsSync(`public/img/${e.img}.jpg`) ? `<div class="fp-backdrop"><img src="/img/${e.img}.jpg" alt="" aria-hidden="true" fetchpriority="high"></div>` : ""}
   <a class="backlink" href="${prefix}${backPath}">${T[lang].back}</a>
   <span class="lex-cat ${m.badge}">${lang === "de" ? m.de : m.en}</span>
   <h1 class="metal fp-h1">${esc(e.n)}</h1>
@@ -898,9 +899,9 @@ function lexDetailBody(e, lang, backPath, backLabel) {
 }
 function catIndexCards(cat, lang) {
   const prefix = lang === "en" ? "/en" : "";
-  return LEX_BY_CAT(cat).map((e) => `<a class="char-card" href="${prefix}${lexUrl(e)}" style="text-decoration:none;color:inherit">
-    <div class="cc-n">${esc(e.n)}</div><div class="cc-a">${esc(e.sub || "")}</div>
-    <div class="cc-p">${esc(e.d.slice(0, 110))}…</div></a>`).join("");
+  return LEX_BY_CAT(cat).map((e) => `<a class="place-card" href="${prefix}${lexUrl(e)}">
+    ${e.img && existsSync(`public/img/${e.img}.jpg`) ? `<img src="/img/${e.img}.jpg" alt="" loading="lazy">` : `<div class="pc-fb"></div>`}
+    <div class="place-ov"><div class="place-n">${esc(e.n)}</div><div class="place-s">${esc(e.sub || "")}</div></div></a>`).join("");
 }
 function universesGrid(lang) {
   const prefix = lang === "en" ? "/en" : "";

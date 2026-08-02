@@ -10,7 +10,8 @@
    "eg",
    "tlt"
   ],
-  "sub": "Das goldene Reich · eine der Neun Welten"
+  "sub": "Das goldene Reich · eine der Neun Welten",
+  "img": "g/thor3-0"
  },
  {
   "id": "wakanda",
@@ -22,7 +23,8 @@
    "iw",
    "bpwf"
   ],
-  "sub": "Die Vibranium-Nation"
+  "sub": "Die Vibranium-Nation",
+  "img": "b/bp1"
  },
  {
   "id": "kamartaj",
@@ -33,7 +35,8 @@
    "strange1",
    "mom"
   ],
-  "sub": "Heimat der Meister der Mystik"
+  "sub": "Heimat der Meister der Mystik",
+  "img": "b/strange1"
  },
  {
   "id": "knowhere",
@@ -45,7 +48,8 @@
    "iw",
    "g3"
   ],
-  "sub": "Der Kopf des toten Celestials"
+  "sub": "Der Kopf des toten Celestials",
+  "img": "b/g3"
  },
  {
   "id": "sakaar",
@@ -55,7 +59,8 @@
   "films": [
    "thor3"
   ],
-  "sub": "Der Müllplanet des Grandmasters"
+  "sub": "Der Müllplanet des Grandmasters",
+  "img": "b/thor3"
  },
  {
   "id": "talokan",
@@ -65,7 +70,8 @@
   "films": [
    "bpwf"
   ],
-  "sub": "Das Reich unter dem Meer"
+  "sub": "Das Reich unter dem Meer",
+  "img": "b/bpwf"
  },
  {
   "id": "attilan",
@@ -76,7 +82,8 @@
    "inhumans",
    "mom"
   ],
-  "sub": "Die verborgene Stadt der Inhumans"
+  "sub": "Die verborgene Stadt der Inhumans",
+  "img": "b/inhumans"
  },
  {
   "id": "kunlun",
@@ -86,7 +93,8 @@
   "films": [
    "if1"
   ],
-  "sub": "Die Stadt des Iron Fist"
+  "sub": "Die Stadt des Iron Fist",
+  "img": "b/if1"
  },
  {
   "id": "genosha",
@@ -96,7 +104,8 @@
   "films": [
    "x97"
   ],
-  "sub": "Die Mutanten-Heimstatt"
+  "sub": "Die Mutanten-Heimstatt",
+  "img": "b/x97"
  },
  {
   "id": "xandar",
@@ -107,7 +116,8 @@
    "gotg1",
    "iw"
   ],
-  "sub": "Sitz des Nova Corps"
+  "sub": "Sitz des Nova Corps",
+  "img": "b/gotg1"
  },
  {
   "id": "titan",
@@ -117,7 +127,8 @@
   "films": [
    "iw"
   ],
-  "sub": "Thanos' tote Heimatwelt"
+  "sub": "Thanos' tote Heimatwelt",
+  "img": "g/iw-0"
  },
  {
   "id": "vormir",
@@ -128,7 +139,8 @@
    "iw",
    "eg"
   ],
-  "sub": "Ruhestätte des Seelensteins"
+  "sub": "Ruhestätte des Seelensteins",
+  "img": "g/eg-0"
  },
  {
   "id": "nidavellir",
@@ -138,7 +150,8 @@
   "films": [
    "iw"
   ],
-  "sub": "Die Schmiede der Zwerge"
+  "sub": "Die Schmiede der Zwerge",
+  "img": "g/iw-1"
  },
  {
   "id": "quantenreich",
@@ -151,7 +164,8 @@
    "eg",
    "qm"
   ],
-  "sub": "Die Welt unter allen Welten"
+  "sub": "Die Welt unter allen Welten",
+  "img": "b/qm"
  },
  {
   "id": "void-ort",
@@ -162,7 +176,8 @@
    "l1",
    "dw"
   ],
-  "sub": "Die Müllhalde am Ende der Zeit"
+  "sub": "Die Müllhalde am Ende der Zeit",
+  "img": "b/dw"
  },
  {
   "id": "newyork-sanctum",
@@ -174,7 +189,8 @@
    "iw",
    "nwh"
   ],
-  "sub": "Bleecker Street 177A"
+  "sub": "Bleecker Street 177A",
+  "img": "g/strange1-0"
  },
  {
   "id": "avengers-tower",
@@ -186,7 +202,8 @@
    "av2",
    "eg"
   ],
-  "sub": "Vom Tower zum Compound"
+  "sub": "Vom Tower zum Compound",
+  "img": "b/av1"
  },
  {
   "id": "latveria-lex",
@@ -196,7 +213,8 @@
   "films": [
    "doomsday"
   ],
-  "sub": "Dooms Königreich"
+  "sub": "Dooms Königreich",
+  "img": "b/doomsday"
  },
  {
   "id": "battleworld-lex",
@@ -206,7 +224,8 @@
   "films": [
    "secretwars"
   ],
-  "sub": "Die Flickenwelt der Secret Wars"
+  "sub": "Die Flickenwelt der Secret Wars",
+  "img": "b/secretwars"
  },
  {
   "id": "skrulle",
@@ -218,7 +237,8 @@
    "spider2",
    "si"
   ],
-  "sub": "Die Gestaltwandler"
+  "sub": "Die Gestaltwandler",
+  "img": "b/si"
  },
  {
   "id": "kree",
@@ -230,7 +250,8 @@
    "gotg1",
    "msm"
   ],
-  "sub": "Das blaue Imperium"
+  "sub": "Das blaue Imperium",
+  "img": "b/cm"
  },
  {
   "id": "chitauri",
@@ -241,7 +262,8 @@
    "av1",
    "eg"
   ],
-  "sub": "Thanos' Schwarmarmee"
+  "sub": "Thanos' Schwarmarmee",
+  "img": "g/av1-0"
  },
  {
   "id": "celestials-lex",
@@ -253,7 +275,8 @@
    "et",
    "bnw"
   ],
-  "sub": "Die kosmischen Titanen"
+  "sub": "Die kosmischen Titanen",
+  "img": "b/et"
  },
  {
   "id": "eternals-volk",
@@ -263,7 +286,8 @@
   "films": [
    "et"
   ],
-  "sub": "Die unsterblichen Wächter"
+  "sub": "Die unsterblichen Wächter",
+  "img": "g/et-0"
  },
  {
   "id": "asgardier",
@@ -275,7 +299,8 @@
    "thor3",
    "eg"
   ],
-  "sub": "Das Göttervolk"
+  "sub": "Das Göttervolk",
+  "img": "g/thor1-0"
  },
  {
   "id": "inhumans-volk",
@@ -286,7 +311,8 @@
    "inhumans",
    "msm"
   ],
-  "sub": "Die Terrigen-Veränderten"
+  "sub": "Die Terrigen-Veränderten",
+  "img": "g/inhumans-0"
  },
  {
   "id": "mutanten",
@@ -299,7 +325,8 @@
    "bpwf",
    "doomsday"
   ],
-  "sub": "Die Kinder des X-Gens"
+  "sub": "Die Kinder des X-Gens",
+  "img": "b/msm"
  },
  {
   "id": "symbionten-lex",
@@ -312,7 +339,8 @@
    "nwh",
    "venom3"
   ],
-  "sub": "Die hungrigen Mitbewohner"
+  "sub": "Die hungrigen Mitbewohner",
+  "img": "b/venom1"
  },
  {
   "id": "flerken-lex",
@@ -323,7 +351,8 @@
    "cm",
    "mv"
   ],
-  "sub": "Keine Katzen"
+  "sub": "Keine Katzen",
+  "img": "g/cm-0"
  },
  {
   "id": "watcher-volk",
@@ -334,7 +363,8 @@
    "wi",
    "gotg2"
   ],
-  "sub": "Die ewigen Beobachter"
+  "sub": "Die ewigen Beobachter",
+  "img": "b/wi"
  },
  {
   "id": "shield",
@@ -347,7 +377,8 @@
    "cap2",
    "aos"
   ],
-  "sub": "Der Geheimdienst der Helden"
+  "sub": "Der Geheimdienst der Helden",
+  "img": "b/cap2"
  },
  {
   "id": "hydra-lex",
@@ -359,7 +390,8 @@
    "cap2",
    "av2"
   ],
-  "sub": "Schneidet einen Kopf ab …"
+  "sub": "Schneidet einen Kopf ab …",
+  "img": "g/cap2-0"
  },
  {
   "id": "saber",
@@ -371,7 +403,8 @@
    "si",
    "mv"
   ],
-  "sub": "Furys Auge im Orbit"
+  "sub": "Furys Auge im Orbit",
+  "img": "g/si-0"
  },
  {
   "id": "tenrings-org",
@@ -383,7 +416,8 @@
    "iron3",
    "sc"
   ],
-  "sub": "Wenwus Schattenimperium"
+  "sub": "Wenwus Schattenimperium",
+  "img": "b/sc"
  },
  {
   "id": "damagecontrol",
@@ -395,7 +429,8 @@
    "msm",
    "shk"
   ],
-  "sub": "Die Aufräumer"
+  "sub": "Die Aufräumer",
+  "img": "g/msm-0"
  },
  {
   "id": "oscorp",
@@ -407,7 +442,8 @@
    "tasm1",
    "sv1"
   ],
-  "sub": "Der Ursprung des Übels"
+  "sub": "Der Ursprung des Übels",
+  "img": "b/raimi1"
  },
  {
   "id": "starkindustries",
@@ -419,7 +455,8 @@
    "iron2",
    "spider2"
   ],
-  "sub": "Howards & Tonys Erbe"
+  "sub": "Howards & Tonys Erbe",
+  "img": "b/iron1"
  },
  {
   "id": "pymtech",
@@ -430,7 +467,8 @@
    "antman1",
    "antman2"
   ],
-  "sub": "Hüter der Partikel"
+  "sub": "Hüter der Partikel",
+  "img": "b/antman1"
  },
  {
   "id": "roxxon",
@@ -441,7 +479,8 @@
    "iron3",
    "l2"
   ],
-  "sub": "Der ewige Hintergrund-Konzern"
+  "sub": "Der ewige Hintergrund-Konzern",
+  "img": "g/iron3-0"
  },
  {
   "id": "hand",
@@ -452,7 +491,8 @@
    "dd1",
    "def"
   ],
-  "sub": "Der Ninja-Kult"
+  "sub": "Der Ninja-Kult",
+  "img": "b/dd1"
  },
  {
   "id": "weaponx",
@@ -464,7 +504,8 @@
    "dp1",
    "logan"
   ],
-  "sub": "Das Adamantium-Programm"
+  "sub": "Das Adamantium-Programm",
+  "img": "b/origins"
  },
  {
   "id": "essex",
@@ -475,7 +516,8 @@
    "apoc",
    "logan"
   ],
-  "sub": "Der nie eingelöste Faden"
+  "sub": "Der nie eingelöste Faden",
+  "img": "b/apoc"
  },
  {
   "id": "tva-lex",
@@ -487,7 +529,8 @@
    "l2",
    "dw"
   ],
-  "sub": "Die Behörde am Ende der Zeit"
+  "sub": "Die Behörde am Ende der Zeit",
+  "img": "b/l1"
  },
  {
   "id": "ravagers-lex",
@@ -498,7 +541,8 @@
    "gotg1",
    "gotg2"
   ],
-  "sub": "Piraten mit Ehrenkodex"
+  "sub": "Piraten mit Ehrenkodex",
+  "img": "b/gotg2"
  },
  {
   "id": "snap-lex",
