@@ -434,6 +434,7 @@ function artBody(a, lang) {
   const L = T[lang];
   const prefix = lang === "en" ? "/en" : "";
   return `<main class="wrap fp" style="padding-bottom:70px">
+  ${a.img && existsSync(`public/img/${a.img}.jpg`) ? `<div class="fp-backdrop"><img src="/img/${a.img}.jpg" alt="" aria-hidden="true" fetchpriority="high"></div>` : ""}
   <a class="backlink" href="${prefix}/artefakte/">${L.back}</a>
   <div class="art-sym metal" style="font-size:64px">${a.sym}</div>
   <h1 class="metal fp-h1">${esc(a.n)}</h1>
@@ -536,9 +537,9 @@ function artsIndexBody(lang) {
   return `<main class="wrap" style="padding:50px 22px 60px">
   ${secHead(lang === "de" ? "Waffen, Bücher, Wundermetalle" : "Weapons, books, wonder metals", lang === "de" ? "Die Artefakte" : "The Artifacts", "")}
   <div class="char-grid">` + ARTIFACTS.map((a) =>
-    `<a class="char-card${a.ev ? " ev-team" : ""}" href="${prefix}${artUrl(a.id)}" style="text-decoration:none;color:inherit">
-      <div class="art-sym metal">${a.sym}</div>
-      <div class="cc-n">${esc(a.n)}</div><div class="cc-a">${esc(a.sub)}</div><div class="cc-p">${esc(a.status)}</div></a>`).join("") +
+    `<a class="place-card${a.ev ? " ev-place" : ""}" href="${prefix}${artUrl(a.id)}">
+      ${a.img && existsSync(`public/img/${a.img}.jpg`) ? `<img src="/img/${a.img}.jpg" alt="" loading="lazy">` : `<div class="pc-fb"></div>`}
+      <div class="place-ov"><div class="place-n"><span class="place-sym metal">${a.sym}</span> ${esc(a.n)}</div><div class="place-s">${esc(tr(a, "sub", lang))}</div></div></a>`).join("") +
   `</div></main>`;
 }
 

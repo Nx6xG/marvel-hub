@@ -1502,3 +1502,8 @@ body:not(.neutral) .place-card:hover { border-color: rgba(63, 220, 140, 0.6); }
 /* Karten-Raster der Kategorie-Seiten: 3 Spalten */
 .char-grid .place-card { min-width: 0; }
 @media (min-width: 861px) { .char-grid:has(.place-card) { grid-template-columns: repeat(3, 1fr); } }
+
+/* Artefakte: Symbol im Bild-Overlay + Event-Variante */
+.place-sym { font-size: 17px; margin-right: 2px; }
+.place-card.ev-place { border-color: rgba(63, 220, 140, 0.45); }
+.place-card.ev-place:hover { border-color: rgba(63, 220, 140, 0.8); box-shadow: 0 12px 30px rgba(0,0,0,0.55), 0 0 24px rgba(63, 220, 140, 0.2); }
