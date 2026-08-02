@@ -1440,3 +1440,9 @@ a.ens-card:hover .ens-img { transform: scale(1.08); border-color: #3fdc8c; box-s
 @media (max-width: 480px) {
   .nav-search input:focus { width: calc(100vw - 150px); }
 }
+
+/* Suche: deckender Hintergrund, damit beim Überlagern nichts durchscheint */
+.nav-search input { background: #141218; }
+body:not(.neutral) .nav-search input { background: #0b120e; }
+.nav-search input:focus { background: #191722; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6); }
+body:not(.neutral) .nav-search input:focus { background: #0e1a13; }
