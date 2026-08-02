@@ -17,7 +17,8 @@
   "plot": "Tony Stark baut sich in einer Höhle aus Schrott eine Rüstung — und startet damit das gesamte MCU.",
   "note": "Der Anfang von allem. Und der Mann, der jetzt Doom spielt, wurde hier zur Ikone — genau deshalb trifft das Casting so hart.",
   "uni": "mcu",
-  "plot_en": "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil."
+  "plot_en": "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
+  "plot_db": "Der Großindustrielle und Erfinder Tony Stark weiß zu leben: Als Milliardär liegen ihm die Frauen zu Füßen, er feiert Partys im Privatjet und verspielt Riesensummen im Casino, während seine Rüstungsfirma unter Obadiah Stane Rekordumsätze erzielt. Bei einem Waffentestlauf in Afghanistan wird er jedoch Opfer eines Bombenanschlags. Stark überlebt schwer verletzt und wird von einer Gruppe Aufständischer unter Führung des Warlords Raza dazu gezwungen, eine Superwaffe zu entwickeln. Es gelingt ihm jedoch, heimlich eine eiserne Schutzrüstung zu bauen, die ihn dank neuster Technologie zu Superkräften befähigt. Nach einer spektakulären Flucht zurück in die USA muss sich der Iron Man allerdings einem ersten übermächtigen Gegner stellen."
  },
  {
   "id": "hulk",
@@ -38,7 +39,8 @@
   "plot": "Bruce Banner auf der Flucht vor General Ross — der vergessene MCU-Film.",
   "note": "Ross wird später Präsident und Red Hulk (Brave New World). Sonst verzichtbar.",
   "uni": "mcu",
-  "plot_en": "Scientist Bruce Banner scours the planet for an antidote to the unbridled force of rage within him: the Hulk. But when the military masterminds who dream of exploiting his powers force him back to civilization, he finds himself coming face to face with a new, deadly foe."
+  "plot_en": "Scientist Bruce Banner scours the planet for an antidote to the unbridled force of rage within him: the Hulk. But when the military masterminds who dream of exploiting his powers force him back to civilization, he finds himself coming face to face with a new, deadly foe.",
+  "plot_db": "Nachdem er bei einem biochemischen Experiment so stark verstrahlt wurde, dass er sich, wann immer er gereizt oder wütend wird, in das grüne Monstrum Hulk verwandelt, lebt der Wissenschaftler Bruce Banner ein zurückgezogenes Leben im brasilianischen Exil. Dorthin hat es ihn auf der Flucht vor dem Militärgeneral Ross verschlagen, der alles unternimmt, um den ehemaligen Freund seiner Tochter Betty für seine Zwecke zu missbrauchen. Während sich für Banner die Uhr rückwärts dreht, er nach einem Gegenmittel für die Mutation forscht und seine Wut unter Kontrolle zu bringen versucht, unterläuft ihm ein Missgeschick: General Ross gelingt es, Banner ausfindig zu machen. Auf der Flucht vor dem Militär und dem ehrgeizigen Soldaten Blonsky sucht er Zuflucht bei Betty, die ihm dabei hilft, die unfreiwil"
  },
  {
   "id": "iron2",
@@ -58,7 +60,8 @@
   "plot": "Tony gegen Whiplash und sein eigenes Ego — mit dem Debüt von Black Widow.",
   "note": "Erster Auftritt von Natasha Romanoff. Für Doomsday nicht nötig.",
   "uni": "mcu",
-  "plot_en": "With the world now aware of his dual life as the armored superhero Iron Man, billionaire inventor Tony Stark faces pressure from the government, the press and the public to share his technology with the military. Unwilling to let go of his invention, Stark, with Pepper Potts and James 'Rhodey' Rhodes at his side, must forge new alliances – and confront powerful enemies."
+  "plot_en": "With the world now aware of his dual life as the armored superhero Iron Man, billionaire inventor Tony Stark faces pressure from the government, the press and the public to share his technology with the military. Unwilling to let go of his invention, Stark, with Pepper Potts and James 'Rhodey' Rhodes at his side, must forge new alliances – and confront powerful enemies.",
+  "plot_db": "Tony Stark ist Iron Man. Nach der Öffentlichmachung dieser Doppelidentität sonnt sich der selbstverliebte Egomane in seinem noch jungen Ruhm als eiserner Weltenretter. Die Eröffnung der eigenen Expo inszeniert er wie ein Popkonzert, den Begehrlichkeiten des US-Militärs hinsichtlich seines Kampfanzugs erteilt er bei einem Untersuchungsausschuss vor laufenden Kameras eine arrogant-zynische Absage. Erst als ihm der russische Physiker und Exsträfling Ivan Vanko bei einem Show Grand Prix in Monte Carlo die Grenzen seiner Erfindung aufzeigt, bekommt Starks ehernes Ego erste Kratzer. Dazu kommt eine von Starks lebenswichtigem Minireaktor ausgehende Paladium-Vergiftung, die, sofern er keine Ersatzquelle auftut, unweigerlich zu seinem Tod führt."
  },
  {
   "id": "thor1",
@@ -79,7 +82,8 @@
   "plot": "Der arrogante Donnergott wird auf die Erde verbannt — und Loki betritt die Bühne.",
   "note": "Ursprung von Thor UND Loki, zwei zentralen Doomsday-Figuren.",
   "uni": "mcu",
-  "plot_en": "Against his father Odin's will, The Mighty Thor - a powerful but arrogant warrior god - recklessly reignites an ancient war. Thor is cast down to Earth and forced to live among humans as punishment. Once here, Thor learns what it takes to be a true hero when the most dangerous villain of his world sends the darkest forces of Asgard to invade Earth."
+  "plot_en": "Against his father Odin's will, The Mighty Thor - a powerful but arrogant warrior god - recklessly reignites an ancient war. Thor is cast down to Earth and forced to live among humans as punishment. Once here, Thor learns what it takes to be a true hero when the most dangerous villain of his world sends the darkest forces of Asgard to invade Earth.",
+  "plot_db": "Der mächtige Thor ist ein überragender Krieger im Königreich Asgard, dessen Überheblichkeit und Arroganz seine größte Schwäche ist. Wegen seiner Gedankenlosigkeit wird ein lange vergessen geglaubter Krieg neu entfacht. Die Strafe folgt umgehend: Unter den Menschen soll Thor auf der Erde Demut lernen, was dem Krieger zunächst nicht leicht fällt. Doch dann ist er zur Stelle, als es die Menschheit mit einem übermächtigen Gegner zu tun bekommt, der Unterstützung aus Asgard zu erhalten scheint."
  },
  {
   "id": "cap1",
@@ -99,7 +103,8 @@
   "plot": "Steve Rogers wird 1943 zum Supersoldaten — der chronologische Anfang des MCU.",
   "note": "Evans-Ursprung; chronologisch Startpunkt 1943.",
   "uni": "mcu",
-  "plot_en": "During World War II, Steve Rogers is a sickly man from Brooklyn who's transformed into super-soldier Captain America to aid in the war effort. Rogers must stop the Red Skull – Adolf Hitler's ruthless head of weaponry, and the leader of an organization that intends to use a mysterious device of untold powers for world domination."
+  "plot_en": "During World War II, Steve Rogers is a sickly man from Brooklyn who's transformed into super-soldier Captain America to aid in the war effort. Rogers must stop the Red Skull – Adolf Hitler's ruthless head of weaponry, and the leader of an organization that intends to use a mysterious device of untold powers for world domination.",
+  "plot_db": "1942 – die USA ziehen in den Kampf gegen Hitler-Deutschland. Steve Rogers wird auf Grund seines Gesundheitszustands als ungeeignet eingestuft. Mit Hilfe des Project: Rebirth soll er trotzdem in den Kampf gegen Nazis ziehen. Der kränkliche Steve wird in eine Art Super-Soldaten namens Captain America transformiert. Hilfe bekommt der neue Superheld dabei von seinem Freund Bucky Barnes. Gemeinsam kämpfen sie gegen Red Skul, Hitlers Geheimwaffe im Krieg gegen den Rest der Welt."
  },
  {
   "id": "av1",
@@ -120,7 +125,8 @@
   "plot": "Sechs Helden, ein Team, die Schlacht von New York — das erste große Crossover der Kinogeschichte.",
   "note": "Die Schlacht von New York ist der Dreh- und Angelpunkt von Endgame UND Loki: Genau hier entsteht die Variante, die heute alle Zeitlinien hält.",
   "uni": "mcu",
-  "plot_en": "When an unexpected enemy emerges and threatens global safety and security, Nick Fury, director of the international peacekeeping agency known as S.H.I.E.L.D., finds himself in need of a team to pull the world back from the brink of disaster. Spanning the globe, a daring recruitment effort begins!"
+  "plot_en": "When an unexpected enemy emerges and threatens global safety and security, Nick Fury, director of the international peacekeeping agency known as S.H.I.E.L.D., finds himself in need of a team to pull the world back from the brink of disaster. Spanning the globe, a daring recruitment effort begins!",
+  "plot_db": "Nick Fury ist der Anführer der Organisation S.H.I.E.L.D., einer internationalen Friedensorganisation. Die Behörde ist ein Who's Who der Marvel Superhelden, mit Iron Man, Thor, Captain America, Hawkeye, dem Unglaublichen Hulk und Black Widow. Als die weltweite Sicherheit von Thors sinistrem Halbbruder Loki und seiner Schar bedroht wird, werden Nick Fury und sein Team all ihre Kräfte brauchen, um die Welt vor einer Katastrophe zu bewahren ..."
  },
  {
   "id": "iron3",
@@ -140,7 +146,8 @@
   "plot": "Tony nach dem New-York-Trauma — Panikattacken, Mandarin-Twist, Trevor Slattery.",
   "note": "Trevor kehrt in Wonder Man zurück. Sonst optional.",
   "uni": "mcu",
-  "plot_en": "When Tony Stark's world is torn apart by a formidable terrorist called the Mandarin, he starts an odyssey of rebuilding and retribution."
+  "plot_en": "When Tony Stark's world is torn apart by a formidable terrorist called the Mandarin, he starts an odyssey of rebuilding and retribution.",
+  "plot_db": "Die Dellen, die sich Iron Man im Kampf gegen seine Widersacher Justin Hammer und Ivan Vanko zugezogen hatte, sind kaum ausgebeult, da droht neue Gefahr. Ein streng geheimes Serum, welches Extremis genannt wird und auf Nanotechnologie basiert, ermöglicht es den mit dem Serum injizierten Menschen, ungeahnte Kräfte zu entwickeln, allerdings mit einer Tendenz zu ungezügelter Aggressivität. Aldrichs Kollegin Maya Hansen, baut auf die Hilfe von Visionär Tony Stark. Währendessen bedroht eine dunkle Macht in Gestalt von The Mandarin die Welt und möchte dem Wettrüsten ein Ende zu seinen Gunsten setzen. Dabei verübt er einen Anschlag auf die amerikanische Regierung und dessen Präsidenten, sowie auf die Air Force, bei der Tony Starks Freund Rhodey dient. Als ein Anschlag auf Tony Starks Eigenheim fol"
  },
  {
   "id": "thor2",
@@ -160,7 +167,8 @@
   "plot": "Dunkelelfen jagen den Äther — den späteren Realitätsstein.",
   "note": "Lokis 'Tod' Nr. 2; Endgame-Zeitreise-Ziel. Verzichtbar.",
   "uni": "mcu",
-  "plot_en": "Thor fights to restore order across the cosmos… but an ancient race led by the vengeful Malekith returns to plunge the universe back into darkness. Faced with an enemy that even Odin and Asgard cannot withstand, Thor must embark on his most perilous and personal journey yet, one that will reunite him with Jane Foster and force him to sacrifice everything to save us all."
+  "plot_en": "Thor fights to restore order across the cosmos… but an ancient race led by the vengeful Malekith returns to plunge the universe back into darkness. Faced with an enemy that even Odin and Asgard cannot withstand, Thor must embark on his most perilous and personal journey yet, one that will reunite him with Jane Foster and force him to sacrifice everything to save us all.",
+  "plot_db": "Thor und Loki kehren in ihre Heimat Asgard zurück, wo Göttervater Odin darüber entscheidet, wie mit dem adoptierten Prinzen verfahren werden soll. Währenddessen erhebt sich eine andere Macht in einem der 9 Realms. Der Dunkelelf Malekith schart eine Armee uralter Wesen und Monster um sich, mit denen er nicht nur Asgard, sondern den ganzen Kosmos bedroht.  Der Donnergott trifft auf seine Angebetete Jane, die von einem Dämon besessen ist, dessen Verbindung mit den Dunkelelfen sehr nahe liegt. Thor muss also nicht nur seine Menschenfreundin retten, sondern auch eine eigene Streitkraft zusammenstellen, mit der er Malekith besiegen kann. Dafür muss er in die düstersten Ecken Asgards vordringen, wobei ihm jedoch nur eine Person helfen kann: Loki."
  },
  {
   "id": "cap2",
@@ -181,7 +189,8 @@
   "plot": "Hydra sitzt in S.H.I.E.L.D., Steves toter bester Freund ist eine Killermaschine — der erste Russo-Film.",
   "note": "Debüt von Sam UND Bucky-als-Winter-Soldier — zwei Doomsday-Hauptfiguren. Und der Film, mit dem die Russos das Vertrauen für Endgame & Doomsday verdienten.",
   "uni": "mcu",
-  "plot_en": "After the cataclysmic events in New York with The Avengers, Steve Rogers, aka Captain America is living quietly in Washington, D.C. and trying to adjust to the modern world. But when a S.H.I.E.L.D. colleague comes under attack, Steve becomes embroiled in a web of intrigue that threatens to put the world at risk. Joining forces with the Black Widow, Captain America struggles to expose the ever-widening conspiracy while fighting off professional assassins sent to silence him at every turn. When the full scope of the villainous plot is revealed, Captain America and the Black Widow enlist the help"
+  "plot_en": "After the cataclysmic events in New York with The Avengers, Steve Rogers, aka Captain America is living quietly in Washington, D.C. and trying to adjust to the modern world. But when a S.H.I.E.L.D. colleague comes under attack, Steve becomes embroiled in a web of intrigue that threatens to put the world at risk. Joining forces with the Black Widow, Captain America struggles to expose the ever-widening conspiracy while fighting off professional assassins sent to silence him at every turn. When the full scope of the villainous plot is revealed, Captain America and the Black Widow enlist the help",
+  "plot_db": "Nach den Geschehnissen mit den Avengers in New York zieht sich Steve Rogers nach Washington zurück. Dort hat er nach wie vor Probleme, sich an das moderne Leben zu gewöhnen. Doch er wird wieder in den Einsatz berufen, als ein S.H.I.E.L.D.-Agent Ziel eines Angriffs wird. Dies ist nur der Beginn eines größeren Plans, der die ganze Welt in Gefahr bringen könnte. Steve kehrt als Captain America zurück und versucht mit Hilfe von Agentin Romanoff, auch bekannt als Black Widow, die Verschwörung aufzuklären. Die Beiden erhalten zusätzliche Unterstützung vom Falken. Die Mission birgt einige Gefahren und die beiden werden oftmals Ziel von Attentaten. Doch die größte Gefahr ist der Gegner selbst: der Winter Soldier."
  },
  {
   "id": "gotg1",
@@ -201,7 +210,8 @@
   "plot": "Ein Dieb, zwei Killer, ein Baum und ein Waschbär retten die Galaxie.",
   "note": "Kosmisches MCU-Fundament; für Doomsday randständig.",
   "uni": "mcu",
-  "plot_en": "Light years from Earth, 26 years after being abducted, Peter Quill finds himself the prime target of a manhunt after discovering an orb wanted by Ronan the Accuser."
+  "plot_en": "Light years from Earth, 26 years after being abducted, Peter Quill finds himself the prime target of a manhunt after discovering an orb wanted by Ronan the Accuser.",
+  "plot_db": "Nachdem der Abenteurer Peter Quill eine geheimnisvolle Kugel gestohlen hat, wird er das Opfer einer unerbittlichen Kopfgeldjagd mit Ronan the Accuser. Die Ziele des mächtigen Bösewichts bedrohen die Sicherheit des Universums. Um dem hartnäckigen Ronan und seinen Schergen zu entgehen, ist Quill gezwungen, einen nicht gerade einfach einzuhaltenden Waffenstillstand mit einem Quartett von ungleichen Außenseitern einzugehen - dazu gehört der waffenliebende Waschbär Rocket, der Baummensch Groot, die tödliche und rätselhafte Gamora und der rachsüchtige Drax the Destroyer. Als Peter dann die wahre Macht der Kugel und dessen Bedrohung für den Kosmos bewusst wird, muss er sein Bestes geben, um die bunt zusammengewürfelten Rivalen für einen letzten, verzweifelten Widerstand zu vereinen und eine Helde"
  },
  {
   "id": "av2",
@@ -222,7 +232,8 @@
   "plot": "Tonys Schutz-KI wird zum Auslöschungsprogramm; Wanda und Vision debütieren.",
   "note": "Wegen Vision Quest wieder hochrelevant: Ultron (James Spader!) und Visions Ursprung liegen hier.",
   "uni": "mcu",
-  "plot_en": "When Tony Stark tries to jumpstart a dormant peacekeeping program, things go awry and Earth’s Mightiest Heroes are put to the ultimate test as the fate of the planet hangs in the balance. As the villainous Ultron emerges, it is up to The Avengers to stop him from enacting his terrible plans, and soon uneasy alliances and unexpected action pave the way for an epic and unique global adventure."
+  "plot_en": "When Tony Stark tries to jumpstart a dormant peacekeeping program, things go awry and Earth’s Mightiest Heroes are put to the ultimate test as the fate of the planet hangs in the balance. As the villainous Ultron emerges, it is up to The Avengers to stop him from enacting his terrible plans, and soon uneasy alliances and unexpected action pave the way for an epic and unique global adventure.",
+  "plot_db": "Milliardär, Lebemann und Genie Tony Stark aka Iron Man will ein inaktives Friedensprogramm in Gang bringen, doch dabei geht etwas schief. So taucht der niederträchtige Roboter-Bösewicht Ultron auf und verfolgt Pläne zur Ausrottung der Menschheit. Nun ist es an den Helden, sich wieder zu sammeln und das schreckliche Schicksal der Welt abzuwenden. Zusammen mit Iron Man treten Thor, Captain America, Hulk, Black Widow und Hawkeye dem fiesen Ultron entgegen und bekommen dabei Unterstützung von den ehemaligen S.H.I.E.L.D.-Agenten Nick Fury und Maria Hill. Außerdem kreuzen die geheimnisvollen und mit besonderen Fähigkeiten ausgestatteten Newcomer Wanda und Pietro Maximoff den Weg der Helden, wie auch ein alter Bekannter in neuer Gestalt: Vision. Die Rächer müssen ihre Kräfte vereinen, unsichere A"
  },
  {
   "id": "antman1",
@@ -242,7 +253,8 @@
   "plot": "Meisterdieb Scott Lang schrumpft — und öffnet nebenbei die Tür zum Quantenreich.",
   "note": "Das Quantenreich wird später Endgames Zeitmaschine und Kangs Gefängnis.",
   "uni": "mcu",
-  "plot_en": "Armed with the astonishing ability to shrink in scale but increase in strength, master thief Scott Lang must embrace his inner-hero and help his mentor, Doctor Hank Pym, protect the secret behind his spectacular Ant-Man suit from a new generation of towering threats. Against seemingly insurmountable obstacles, Pym and Lang must plan and pull off a heist that will save the world."
+  "plot_en": "Armed with the astonishing ability to shrink in scale but increase in strength, master thief Scott Lang must embrace his inner-hero and help his mentor, Doctor Hank Pym, protect the secret behind his spectacular Ant-Man suit from a new generation of towering threats. Against seemingly insurmountable obstacles, Pym and Lang must plan and pull off a heist that will save the world.",
+  "plot_db": "Als Hank Pym den smarten Superdieb Scott Lang für einen großen Coup anwirbt, setzt der Knastveteran seine Qualitäten erstmals für das Gute ein. Um zu verhindern, dass Pyms Technologie, mit der Belebtes und Unbelebtes auf Miniaturgröße geschrumpft werden kann, militärisch genutzt wird, soll Lang die Fortschritte von Pyms skrupellosem Kontrahenten Cross sabotieren und dessen Spezialanzug stehlen. Doch dafür muss Lang ein Superheldentraining absolvieren und lernen, ein Heer von Ameisen für seinen Raubüberfall zu kontrollieren."
  },
  {
   "id": "cw",
@@ -263,7 +275,8 @@
   "plot": "Das Sokovia-Abkommen spaltet die Avengers in Team Stark und Team Cap — am Ende steht der Bruch.",
   "note": "Das Fundament: Die Avengers zerbrechen. Ohne diesen Bruch ergibt nichts danach Sinn.",
   "uni": "mcu",
-  "plot_en": "Following the events of Age of Ultron, the collective governments of the world pass an act designed to regulate all superhuman activity. This polarizes opinion amongst the Avengers, causing two factions to side with Iron Man or Captain America, which causes an epic battle between former allies."
+  "plot_en": "Following the events of Age of Ultron, the collective governments of the world pass an act designed to regulate all superhuman activity. This polarizes opinion amongst the Avengers, causing two factions to side with Iron Man or Captain America, which causes an epic battle between former allies.",
+  "plot_db": "Als bei einem Einsatz der Avengers in Lagos zwar der Diebstahl eines biologischen Kampfstoffes verhindert wird, dabei aber mehrere Zivilisten sterben, beschließen die Vereinten Nationen ein neues Gesetz, das die Avengers unter ihre Aufsicht bringen soll. Während Tony Stark alias Iron Man für eine Kontrolle der Superhelden votiert, stimmt Steve Rogers alias Captain America für ihre Unabhängigkeit. Auch die Teammitglieder sind uneinig und verteilen sich auf die beiden Wortführer. Als ein Bombenattentat auf jene UN-Versammlung verübt wird und man als vermeintlichen Schuldigen Steves alten Freund Bucky Barnes, nun als Winter Soldier bekannt, ausmacht, verschärft sich die Lage. Nachdem Steve Anweisungen missachtet und versucht Bucky auf eigene Faust zu stellen, damit dieser bei seiner Verhaftun"
  },
  {
   "id": "strange1",
@@ -283,7 +296,8 @@
   "plot": "Ein arroganter Chirurg verliert seine Hände und findet die Magie — Multiversum inklusive.",
   "note": "Magie-Grundlagen des MCU. Dooms zweite Machtquelle neben der Technik.",
   "uni": "mcu",
-  "plot_en": "After his career is destroyed, a brilliant but arrogant surgeon gets a new lease on life when a sorcerer takes him under her wing and trains him to defend the world against evil."
+  "plot_en": "After his career is destroyed, a brilliant but arrogant surgeon gets a new lease on life when a sorcerer takes him under her wing and trains him to defend the world against evil.",
+  "plot_db": "Doctor Stephen Strange ist ein arroganter, aber auch unglaublich talentierter Neurochirurg. Nach einem schweren Autounfall kann er seiner Tätigkeit trotz mehrerer Operationen und Therapien nicht mehr nachgehen. In seiner Verzweiflung wendet er sich schließlich von der Schulmedizin ab und reist nach Tibet, wo er bei der Einsiedlerin The Ancient One und ihrer Glaubensgemeinschaft lernt, sein verletztes Ego hinten anzustellen und in die Geheimnisse einer verborgenen mystischen Welt voller alternativer Dimensionen eingeführt wird. So entwickelt sich Doctor Strange nach und nach zu einem der mächtigsten Magier der Welt. Doch schon bald muss er seine neu gewonnenen mystischen Kräfte nutzen, um die Welt vor einer Bedrohung aus einer anderen Dimension zu beschützen."
  },
  {
   "id": "gotg2",
@@ -303,7 +317,8 @@
   "plot": "Quill trifft seinen Gott-Vater Ego — Familiendrama in Neonfarben.",
   "note": "Für Doomsday ohne Fäden.",
   "uni": "mcu",
-  "plot_en": "The Guardians must fight to keep their newfound family together as they unravel the mysteries of Peter Quill's true parentage."
+  "plot_en": "The Guardians must fight to keep their newfound family together as they unravel the mysteries of Peter Quill's true parentage.",
+  "plot_db": "Gerade erst sind in Guardians of the Galaxy aus Feinden Freunde geworden und schon machen die fünf Verbündeten gemeinsam das All unsicher. Peter Quill, Gamora, Rocket Raccoon, Groot und Drax the Destroyer bereisen als Weltraum-Abenteurer diesmal nicht nur bereits bekannte Orte, sondern stoßen auch in neue Winkel der Galaxie vor.  Nachdem die vergangenen Erlebnisse ihnen einige Rätsel aufgegeben haben, machen sie sich nun daran, diese zu lösen. ‚Star-Lord‘ Peter Quill hat beispielsweise gerade entdeckt, dass er nicht rein menschlicher Herkunft ist, und – auch wenn er es noch nicht weiß – rückt ein Zusammentreffen mit seinem Vater nun in greifbare Nähe."
  },
  {
   "id": "spider1",
@@ -323,7 +338,8 @@
   "plot": "Peter Parker zwischen Abschlussball und Vulture — mit Tony als Mentor.",
   "note": "Hollands Peter beginnt hier; sein Weg endet (vorerst) in Brand New Day.",
   "uni": "mcu",
-  "plot_en": "Following the events of Captain America: Civil War, Peter Parker, with the help of his mentor Tony Stark, tries to balance his life as an ordinary high school student in Queens, New York City, with fighting crime as his superhero alter ego Spider-Man as a new threat, the Vulture, emerges."
+  "plot_en": "Following the events of Captain America: Civil War, Peter Parker, with the help of his mentor Tony Stark, tries to balance his life as an ordinary high school student in Queens, New York City, with fighting crime as his superhero alter ego Spider-Man as a new threat, the Vulture, emerges.",
+  "plot_db": "Nach seinem Aufeinandertreffen mit den Avengers ist Peter Parker alias Spider-Man wieder zurück in New York, wo er bei seiner Tante May wohnt. Seitdem er mit bzw. gegen die anderen Helden kämpfte, fragt er sich, ob er mit seinen herausragenden Fähigkeiten nicht mehr machen sollte, als nur die freundliche Spinne aus der Nachbarschaft zu sein, die den einen oder anderen Einbruch verhindert und Taschendiebe stoppt. Doch daneben muss der von seinem neuen Mentor Tony Stark geförderte Jugendliche auch noch den Alltag auf die Reihe bekommen, den Alltag als Teenager an einer Highschool, wo er sich in Liz verguckt hat. Blöd, dass ausgerechnet in dieser Situation ein Bösewicht für Unruhe sorgt, der technisch bestens ausgestattet ist und von Rachedurst getrieben: der Vogelmann Vulture."
  },
  {
   "id": "thor3",
@@ -344,7 +360,8 @@
   "plot": "Asgard fällt, Thor verliert Hammer und Auge — und findet seinen Humor.",
   "note": "Thors Neuerfindung; Asgards Ende erklärt seinen heutigen Status.",
   "uni": "mcu",
-  "plot_en": "Thor is imprisoned on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the destruction of his home-world and the end of Asgardian civilization, at the hands of a powerful new threat, the ruthless Hela."
+  "plot_en": "Thor is imprisoned on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the destruction of his home-world and the end of Asgardian civilization, at the hands of a powerful new threat, the ruthless Hela.",
+  "plot_db": "Donnergott Thor wird auf der anderen Seite des Universums gefangengenommen. Ohne seinen nützlichen Hammer Mjölnir scheint eine Flucht nahezu ausgeschlossen. Dabei läuft ihm allmählich die Zeit davon. Denn die ebenso mächtige wie erbarmungslose Hela, die nach jahrtausendlanger Gefangenschaft aus ihrem Gefängnis freigekommen ist, macht sich daran, die Macht auf Thors Heimatwelt Asgard zu übernehmen. Um das zu verhindern, setzt Thor alles daran, nach Hause zurückzukehren. Zwischen ihm und seiner Freiheit stehen jedoch tödliche Gladiatorenkämpfe auf dem Planeten Sakaar, die Mülldeponie des Universums. Bei einem dieser Duelle trifft Thor auf den Ex-Avenger und seinen früheren Mitstreiter Hulk den beliebtesten und erfolgreichsten Kämpfer auf Sakaar…"
  },
  {
   "id": "bp1",
@@ -364,7 +381,8 @@
   "plot": "T'Challa wird König von Wakanda und öffnet das verborgene Land der Welt.",
   "note": "Wakanda-Fundament für Shuri, M'Baku und Wakanda Forever.",
   "uni": "mcu",
-  "plot_en": "King T'Challa returns home to the reclusive, technologically advanced African nation of Wakanda to serve as his country's new leader. However, T'Challa soon finds that he is challenged for the throne by factions within his own country as well as without. Using powers reserved to Wakandan kings, T'Challa assumes the Black Panther mantle to join with ex-girlfriend Nakia, the queen-mother, his princess-kid sister, members of the Dora Milaje (the Wakandan 'special forces') and an American secret agent, to prevent Wakanda from being dragged into a world war."
+  "plot_en": "King T'Challa returns home to the reclusive, technologically advanced African nation of Wakanda to serve as his country's new leader. However, T'Challa soon finds that he is challenged for the throne by factions within his own country as well as without. Using powers reserved to Wakandan kings, T'Challa assumes the Black Panther mantle to join with ex-girlfriend Nakia, the queen-mother, his princess-kid sister, members of the Dora Milaje (the Wakandan 'special forces') and an American secret agent, to prevent Wakanda from being dragged into a world war.",
+  "plot_db": "Aufgrund von Bodenschätzen außerirdischen Ursprungs ist das afrikanische Königreich Wakanda unermesslich reich. Nur hier kommt das Vibrationen jeder Art und Stärke absorbierende Mineral Vibranium vor. Den Bewohnern von Wakanda ist sehr daran gelegen, vor den Augen Fremder verborgen zu bleiben.  Reichtum weckt Begehrlichkeiten, und es braucht einen starken Führer, ihn zu verteidigen: Den Black Panther! Die Verantwortung des Black Panther wird vom König Wakandas an den jeweiligen Nachfolger weitergegeben. Und so nimmt T’Challa die Bürde und die Würde des ihm vorbestimmten Schicksals von seinem Vater T’Chaka nach dessen tragischen Tod entgegen."
  },
  {
   "id": "iw",
@@ -385,7 +403,8 @@
   "plot": "Thanos sammelt alle sechs Infinity-Steine und löscht mit einem Schnipsen die Hälfte allen Lebens aus.",
   "note": "Die Russo-Blaupause für Doomsday: Der Schurke gewinnt.",
   "uni": "mcu",
-  "plot_en": "As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment - the fate of Earth and existence itself has never been more uncertain."
+  "plot_en": "As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment - the fate of Earth and existence itself has never been more uncertain.",
+  "plot_db": "Der mächtige Titan Thanos  hat es sich zur Aufgabe gemacht das halbe Universum auszulöschen. Um diesen perfiden Plan Realität werden zu lassen, benötigt er allerdings zuerst alle sechs Infinity-Steine, die ihm in Verbindung mit einem speziell gefertigten Handschuh, gottgleiche Kräfte verleihen. Da sich unglücklicherweise auch auf der Erde zwei dieser Steine befinden, betraut er seine treu ergebene Black Order mit deren Beschaffung. Sowohl die Avengers, als auch die Guardians of the Galaxy und Thor erfahren jedoch von Thanos' Plänen und stellen sich dem Schurken entgegen. Doch mit einen derart mächtigen Gegner hatte es bisher keiner von ihnen zu tun..."
  },
  {
   "id": "antman2",
@@ -405,7 +424,8 @@
   "plot": "Rettung aus dem Quantenreich — und Scott sitzt beim Snap genau dort fest.",
   "note": "Der Quantenreich-Zufall, der Endgame überhaupt möglich macht.",
   "uni": "mcu",
-  "plot_en": "Just when his time under house arrest is about to end, Scott Lang once again puts his freedom at risk to help Hope van Dyne and Dr. Hank Pym dive into the quantum realm and try to accomplish, against time and any chance of success, a very dangerous rescue mission."
+  "plot_en": "Just when his time under house arrest is about to end, Scott Lang once again puts his freedom at risk to help Hope van Dyne and Dr. Hank Pym dive into the quantum realm and try to accomplish, against time and any chance of success, a very dangerous rescue mission.",
+  "plot_db": "Scott Lang hadert  mit den Konsequenzen seiner Taten als Superheld und Vater. Auf Drängen von Hope van Dyne (alias Wasp) und Dr. Hank Pym schlüpft er erneut in die Rolle des Ant-Mans und taucht in die Quantenwelt ein, um eine sehr gefährliche Rettungsmission gegen die Zeit und jede Chance auf Erfolg durchzuführen."
  },
  {
   "id": "cm",
@@ -425,7 +445,8 @@
   "plot": "Carol Danvers entdeckt 1995 ihre Kräfte und ihre Vergangenheit — mit jungem Nick Fury.",
   "note": "Carols Ursprung; Basis für The Marvels.",
   "uni": "mcu",
-  "plot_en": "The story follows Carol Danvers as she becomes one of the universe’s most powerful heroes when Earth is caught in the middle of a galactic war between two alien races. Set in the 1990s, Captain Marvel is an all-new adventure from a previously unseen period in the history of the Marvel Cinematic Universe."
+  "plot_en": "The story follows Carol Danvers as she becomes one of the universe’s most powerful heroes when Earth is caught in the middle of a galactic war between two alien races. Set in the 1990s, Captain Marvel is an all-new adventure from a previously unseen period in the history of the Marvel Cinematic Universe.",
+  "plot_db": "Bei einem Einsatz wird die Kree-Soldatin Vers von den Skrull gefangengenommen. Als die Gestaltenwandler auf Anweisung ihres Kapitäns Talos versuchen, mit einer Maschine Informationen aus dem Gehirn ihrer Geisel herauszuziehen, kann Vers mit einer Fluchtkapsel entkommen, woraufhin sie anschließend in den USA der 1990er Jahre durch das Dach einer Videothek kracht. Während die S.H.I.E.L.D.-Agenten Nick Fury und Phil Coulson erst einmal alles daransetzen, die vermeintliche Außerirdische zu fangen, findet Vers schon bald heraus, dass sie offenbar schon einmal auf diesem Planeten war und unter dem Namen Carol Danvers als Kampfpilotin für das US-Militär gearbeitet hat …"
  },
  {
   "id": "eg",
@@ -446,7 +467,8 @@
   "plot": "Fünf Jahre nach dem Snap holen die Avengers die Steine per Zeitreise zurück. Tony opfert sich, Steve bleibt in der Vergangenheit.",
   "note": "Die Zeitreise-Mechanik öffnet die Multiversum-Tür — und Tonys Abschied ist der Kontext, vor dem RDJs Rückkehr als Doom erst richtig wehtut.",
   "uni": "mcu",
-  "plot_en": "After the devastating events of Avengers: Infinity War, the universe is in ruins due to the efforts of the Mad Titan, Thanos. With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos' actions and restore order to the universe once and for all, no matter what consequences may be in store."
+  "plot_en": "After the devastating events of Avengers: Infinity War, the universe is in ruins due to the efforts of the Mad Titan, Thanos. With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos' actions and restore order to the universe once and for all, no matter what consequences may be in store.",
+  "plot_db": "Thanos hat also tatsächlich Wort gehalten, seinen Plan in die Tat umgesetzt und die Hälfte allen Lebens im Universum ausgelöscht. Die Avengers? Machtlos. Iron Man und Nebula sitzen auf dem Planeten Titan fest, während auf der Erde absolutes Chaos herrscht. Doch dann finden Captain America und die anderen überlebenden Helden auf der Erde heraus, dass Nick Fury vor den verheerenden Ereignissen gerade noch ein Notsignal absetzen konnte, um Verstärkung auf den Plan zu rufen. Die Superhelden-Gemeinschaft bekommt mit Captain Marvel kurzerhand tatkräftige Unterstützung im Kampf gegen ihren vermeintlich übermächtigen Widersacher. Und dann ist da auch noch Ant-Man, der wie aus dem Nichts auftaucht und sich der Truppe erneut anschließt, um die ganze Sache womöglich doch noch zu einem guten Ende zu b"
  },
  {
   "id": "spider2",
@@ -466,7 +488,8 @@
   "plot": "Mysterio verkauft Peter ein falsches Multiversum — und enttarnt ihn am Ende vor der ganzen Welt.",
   "note": "Die Enttarnung ist der direkte Auslöser von No Way Home. Fun Fact: Mysterios Multiversum-Lüge wurde zwei Jahre später wahr.",
   "uni": "mcu",
-  "plot_en": "Peter Parker and his friends go on a summer trip to Europe. However, they will hardly be able to rest - Peter will have to agree to help Nick Fury uncover the mystery of creatures that cause natural disasters and destruction throughout the continent."
+  "plot_en": "Peter Parker and his friends go on a summer trip to Europe. However, they will hardly be able to rest - Peter will have to agree to help Nick Fury uncover the mystery of creatures that cause natural disasters and destruction throughout the continent.",
+  "plot_db": "Nach der epischen Schlacht gegen Thanos und den schicksalshaften Ereignissen um die Avengers ist Peter zurück an seiner alten Schule. Um vom Superheldendasein etwas auszuruhen, kommt ihm eine Klassenfahrt nach Europa gerade recht, auch um seiner heimlichen Liebe \"MJ\" endlich seine Gefühle gestehen zu können. Die erste Station ist Venedig in Italien. Nach einer entspannten Gondelfahrt mit der Reisegruppe bricht aber plötzlich das Chaos los: Ein riesiges Monster kommt aus dem Wasser und greift die Stadt an. Dem stellt sich ein bisher unbekannter Superheld namens Mysterio entgegen. Und als wäre das nicht genug, taucht dann noch Nick Fury auf, um Spider-Man für eine Mission zu rekrutieren..."
  },
  {
   "id": "wv",
@@ -486,7 +509,8 @@
   "plot": "In der Sitcom-Blase von Westview verarbeitet Wanda ihre Trauer, erschafft Ehemann und Zwillinge — und wird zur Scarlet Witch.",
   "note": "9 Episoden. Chaosmagie und Realitäts-Umschreibung — Basis für MoM, Agatha und Vision Quest.",
   "uni": "mcu",
-  "plot_en": "Wanda Maximoff and Vision—two super-powered beings living idealized suburban lives—begin to suspect that everything is not as it seems."
+  "plot_en": "Wanda Maximoff and Vision—two super-powered beings living idealized suburban lives—begin to suspect that everything is not as it seems.",
+  "plot_db": "Wanda Maximoff und Vision – zwei Wesen mit Superkräften, die ein idyllisches Vorstadtleben führen – vermuten, dass nicht alles so ist, wie es scheint."
  },
  {
   "id": "fws",
@@ -506,7 +530,8 @@
   "plot": "Sam ringt mit dem Erbe des Schilds, John Walker zeigt, wie Cap nicht geht — am Ende nimmt Sam den Titel an.",
   "note": "6 Episoden. Sams Weg zum Captain America, der in Doomsday die Helden führt.",
   "uni": "mcu",
-  "plot_en": "Following the events of “Avengers: Endgame”, the Falcon, Sam Wilson and the Winter Soldier, Bucky Barnes team up in a global adventure that tests their abilities, and their patience."
+  "plot_en": "Following the events of “Avengers: Endgame”, the Falcon, Sam Wilson and the Winter Soldier, Bucky Barnes team up in a global adventure that tests their abilities, and their patience.",
+  "plot_db": "Sam Wilson aka Falcon und Bucky Barnes aka Winter Soldier waren beide auf unterschiedliche Weise Freunde von Steve Rogers, dem Captain America. Nachdem dieser seine Rolle als heldenhaftes Vorbild der amerikanischen Nation nicht mehr ausführen kann, liegt es an den beiden, sein Schild hochzuhalten – im wahrsten Sinn des Wortes. An Herausforderungen mangelt es für die ungleichen Verbündeten nicht: Der aus Sokovian stammende Helmut Zemo sinnt nach dem Tod seiner Familie im Kampf zwischen Avengers und Ultron in seiner Heimat weiterhin auf die Auslöschung aller Superhelden."
  },
  {
   "id": "l1",
@@ -527,7 +552,8 @@
   "plot": "Ein 2012er-Loki landet bei der TVA und erfährt die Wahrheit über die Heilige Zeitlinie. Sylvie tötet 'Er, der bleibt' — das Multiversum verzweigt unkontrolliert.",
   "note": "DIE Grundlagen-Serie der Saga: TVA, Zeitlinien, Kang. Ohne sie versteht man Doomsday nur halb.",
   "uni": "mcu",
-  "plot_en": "After stealing the Tesseract during the events of “Avengers: Endgame,” an alternate version of Loki is brought to the mysterious Time Variance Authority, a bureaucratic organization that exists outside of time and space and monitors the timeline. They give Loki a choice: face being erased from existence due to being a “time variant” or help fix the timeline and stop a greater threat."
+  "plot_en": "After stealing the Tesseract during the events of “Avengers: Endgame,” an alternate version of Loki is brought to the mysterious Time Variance Authority, a bureaucratic organization that exists outside of time and space and monitors the timeline. They give Loki a choice: face being erased from existence due to being a “time variant” or help fix the timeline and stop a greater threat.",
+  "plot_db": "Der launische Schurke Loki nimmt seine Rolle als Gott des Schabernacks wieder auf."
  },
  {
   "id": "bw",
@@ -548,7 +574,8 @@
   "plot": "Natashas Vergangenheit, ihre Ersatzfamilie — und das Debüt von Yelena und Red Guardian.",
   "note": "Die halbe Thunderbolts-Familie startet hier. Direkter Zulauf zu den New Avengers.",
   "uni": "mcu",
-  "plot_en": "Natasha Romanoff, also known as Black Widow, confronts the darker parts of her ledger when a dangerous conspiracy with ties to her past arises. Pursued by a force that will stop at nothing to bring her down, Natasha must deal with her history as a spy and the broken relationships left in her wake long before she became an Avenger."
+  "plot_en": "Natasha Romanoff, also known as Black Widow, confronts the darker parts of her ledger when a dangerous conspiracy with ties to her past arises. Pursued by a force that will stop at nothing to bring her down, Natasha must deal with her history as a spy and the broken relationships left in her wake long before she became an Avenger.",
+  "plot_db": "Nachdem sie das Sokovia-Abkommen abgelehnt und Steve Rogers zur Flucht verholfen hat, befindet sich Natasha Romanoff auf der Flucht. Von der Regierung gejagt, führt sie ihr Weg nach Russland, wo sie auf alte Verbündete und neue Feinde trifft."
  },
  {
   "id": "wi",
@@ -567,7 +594,8 @@
   "plot": "Der Watcher erzählt Was-wäre-wenn-Geschichten aus dem ganzen Multiversum — und greift am Ende selbst ein.",
   "note": "Multiversum-Gefühl in Reinform; Captain Carter und Infinity Ultron als Vorgeschmack auf Varianten-Chaos.",
   "uni": "mcu",
-  "plot_en": "Taking inspiration from the comic books of the same name, each episode of this animated anthology series questions, revisits and twists classic Marvel Cinematic moments."
+  "plot_en": "Taking inspiration from the comic books of the same name, each episode of this animated anthology series questions, revisits and twists classic Marvel Cinematic moments.",
+  "plot_db": "„What If…?“ stellt das MCU auf den Kopf und lenkt die Handlung der Filme in eine ganz neue Richtung."
  },
  {
   "id": "sc",
@@ -587,7 +615,8 @@
   "plot": "Shang-Chi stellt sich seinem Vater und übernimmt die Zehn Ringe — die am Ende ein ungeklärtes Signal senden.",
   "note": "Simu Liu ist im Doomsday-Cast; das Ringe-Signal ist bis heute offen.",
   "uni": "mcu",
-  "plot_en": "Shang-Chi must confront the past he thought he left behind when he is drawn into the web of the mysterious Ten Rings organization."
+  "plot_en": "Shang-Chi must confront the past he thought he left behind when he is drawn into the web of the mysterious Ten Rings organization.",
+  "plot_db": "Shang-Chi wurde von der terroristischen Geheimorganisation der Ten Rings seit frühster Kindheit zum Killer ausgebildet. Trotz dieses intensiven Martial-Arts-Trainings hat der junge Mann aber versucht, sich ein normales Leben in San Francisco aufzubauen.  Doch als er gerade glaubt, sein früheres Leben vielleicht wirklich hinter sich gelassen zu haben, holt die Vergangenheit ihn wieder ein. Zusammen mit seiner alten Kindheitsfreundin Katy wird er von seinem kriminellen Vater Wenwu in eine Welt gezogen, in der niemand irgendjemanden mit Samthandschuhen anfasst. Nur die zehn Ringe des Mandarin können das Blatt im Kampf gegen das Böse vielleicht noch wenden."
  },
  {
   "id": "et",
@@ -607,7 +636,8 @@
   "plot": "Uralte Beschützer verhindern die Geburt eines Celestials aus dem Erdkern — dessen Hand seitdem aus dem Ozean ragt.",
   "note": "Der tote Celestial wird zur Adamantium-Quelle von Brave New World.",
   "uni": "mcu",
-  "plot_en": "The Eternals are a team of ancient aliens who have been living on Earth in secret for thousands of years. When an unexpected tragedy forces them out of the shadows, they are forced to reunite against mankind’s most ancient enemy, the Deviants."
+  "plot_en": "The Eternals are a team of ancient aliens who have been living on Earth in secret for thousands of years. When an unexpected tragedy forces them out of the shadows, they are forced to reunite against mankind’s most ancient enemy, the Deviants.",
+  "plot_db": "Die Eternals sind ein Team aus uralten Außerirdischen, die seit Tausenden von Jahren im Verborgenen auf der Erde gelebt haben. Als eine unerwartete Tragödie sie dazu zwingt, aus dem Schatten zu treten, sind sie gezwungen, sich gegen den ältesten Feind der Menschheit, die Deviants, zu vereinen."
  },
  {
   "id": "hk",
@@ -627,7 +657,8 @@
   "plot": "Clint will nur Weihnachten nach Hause — bekommt aber Nachfolgerin Kate Bishop und Kingpin-Ärger.",
   "note": "6 Episoden. Kate Bishop — Young-Avengers-Baustein.",
   "uni": "mcu",
-  "plot_en": "Former Avenger Clint Barton has a seemingly simple mission: get back to his family for Christmas. Possible? Maybe with the help of Kate Bishop, a 22-year-old archer with dreams of becoming a superhero. The two are forced to work together when a presence from Barton’s past threatens to derail far more than the festive spirit."
+  "plot_en": "Former Avenger Clint Barton has a seemingly simple mission: get back to his family for Christmas. Possible? Maybe with the help of Kate Bishop, a 22-year-old archer with dreams of becoming a superhero. The two are forced to work together when a presence from Barton’s past threatens to derail far more than the festive spirit.",
+  "plot_db": "Der ehemalige Avenger Clint Barton hat eine scheinbar einfache Mission: zu Weihnachten zu seiner Familie zurückzukehren. Wird ihm das gelingen? Vielleicht mithilfe von Kate Bishop, einer 22-jährigen Bogenschützin, die davon träumt, eine Superheldin zu werden. Die beiden sind gezwungen, zusammenzuarbeiten, als jemand aus Bartons Vergangenheit weit mehr zu entgleisen droht als die weihnachtlich-festliche Stimmung."
  },
  {
   "id": "nwh",
@@ -648,7 +679,8 @@
   "plot": "Ein verpatzter Vergessenszauber zieht Schurken und Spider-Männer aus fremden Universen an. Am Ende vergisst die Welt Peter komplett.",
   "note": "Das Multiversum bricht erstmals groß ins Kino — Fox- und Sony-Welten sind offiziell real.",
   "uni": "mcu",
-  "plot_en": "Peter Parker is unmasked and no longer able to separate his normal life from the high-stakes of being a super-hero. When he asks for help from Doctor Strange the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man."
+  "plot_en": "Peter Parker is unmasked and no longer able to separate his normal life from the high-stakes of being a super-hero. When he asks for help from Doctor Strange the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man.",
+  "plot_db": "Peter Parker ist demaskiert und kann sein normales Leben nicht mehr von den hohen Einsätzen als Superheld trennen. Als er Doctor Strange um Hilfe bittet, wird die Lage noch gefährlicher und er muss entdecken, was es wirklich bedeutet, Spider-Man zu sein."
  },
  {
   "id": "mk",
@@ -667,7 +699,8 @@
   "plot": "Marc, Steven und der Mondgott Khonshu teilen sich einen Körper — Marvels psychologischster Trip.",
   "note": "6 Episoden. Stark, aber (bisher) ohne Saga-Anschluss.",
   "uni": "mcu",
-  "plot_en": "When Steven Grant, a mild-mannered gift-shop employee, becomes plagued with blackouts and memories of another life, he discovers he has dissociative identity disorder and shares a body with mercenary Marc Spector. As Steven/Marc’s enemies converge upon them, they must navigate their complex identities while thrust into a deadly mystery among the powerful gods of Egypt."
+  "plot_en": "When Steven Grant, a mild-mannered gift-shop employee, becomes plagued with blackouts and memories of another life, he discovers he has dissociative identity disorder and shares a body with mercenary Marc Spector. As Steven/Marc’s enemies converge upon them, they must navigate their complex identities while thrust into a deadly mystery among the powerful gods of Egypt.",
+  "plot_db": "Als dem sanftmütigen Souvenirverkäufer Steven Grant auf einmal Filmrisse und Erinnerungen an ein anderes Leben zu schaffen machen, findet er heraus, dass er an einer dissoziativen Identitätsstörung leidet, und seinen Körper mit dem Söldner Marc Spector teilt. Dann tauchen dessen Feinde in Stevens / Marcs Leben auf und während die beiden ihre komplexen Identitäten miteinander ausverhandeln und steuern müssen, finden sie sich inmitten der mächtigen Götter Ägyptens wieder."
  },
  {
   "id": "mom",
@@ -687,7 +720,8 @@
   "plot": "Strange und America Chavez fliehen durchs Multiversum vor der Scarlet Witch, die auf Erde-838 die Illuminati auslöscht.",
   "note": "Führt Inkursionen ein — den Mechanismus hinter Doomsday und Secret Wars. Plus: Welten, in denen X-Men und F4 längst existieren.",
   "uni": "mcu",
-  "plot_en": "Doctor Strange, with the help of mystical allies both old and new, traverses the mind-bending and dangerous alternate realities of the Multiverse to confront a mysterious new adversary."
+  "plot_en": "Doctor Strange, with the help of mystical allies both old and new, traverses the mind-bending and dangerous alternate realities of the Multiverse to confront a mysterious new adversary.",
+  "plot_db": "Eigentlich wollte Doctor Strange nur seiner Ex-Freundin Christine zur Hochzeit gratulieren. Zum Feiern ist jedoch keine Zeit: Ein riesiges Monster droht, die Stadt in Schutt und Asche zu legen. Ziel des Wesens ist die Teenagerin America Chavez, welche die außergewöhnliche Gabe besitzt, zwischen Paralleluniversen reisen zu können. Zusammen mit dem Obersten Zauberer Wong versucht Strange das Mädchen zu beschützen und dafür zu sorgen, dass ihre mächtige aber zugleich gefährliche Fähigkeit nicht in die falschen Hände gerät."
  },
  {
   "id": "msm",
@@ -706,7 +740,8 @@
   "plot": "Kamala Khan entdeckt ihre Kräfte — und im Finale fällt zum ersten Mal im MCU das Wort 'Mutation'.",
   "note": "6 Episoden. Die allererste Mutanten-Erwähnung des MCU. Post-Credits führt in The Marvels.",
   "uni": "mcu",
-  "plot_en": "A great student, avid gamer, and voracious fan-fic scribe, Kamala Khan has a special affinity for superheroes, particularly Captain Marvel. However, she struggles to fit in at home and at school — that is, until she gets superpowers like the heroes she’s always looked up to. Life is easier with superpowers, right?"
+  "plot_en": "A great student, avid gamer, and voracious fan-fic scribe, Kamala Khan has a special affinity for superheroes, particularly Captain Marvel. However, she struggles to fit in at home and at school — that is, until she gets superpowers like the heroes she’s always looked up to. Life is easier with superpowers, right?",
+  "plot_db": "Kamala Khan ist eine muslimisch-amerikanische Teenagerin, die in Jersey City aufwächst. Als begeisterte Gamerin und Verfasserin von Fan Fiction ist Kamala ein Superhelden-Fan mit einer blühenden Fantasie - vor allem, wenn es um Captain Marvel geht. Allerdings hat Kamala das Gefühl, in der Schule und manchmal auch zu Hause nicht so recht reinzupassen. Aber nur, bis sie Superkräfte bekommt wie die Helden, zu denen sie immer aufgesehen hat. Das Leben ist besser mit Superkräften, oder?"
  },
  {
   "id": "tlt",
@@ -726,7 +761,8 @@
   "plot": "Thor gegen Gorr den Götterschlächter; Jane schwingt Mjölnir. Am Ende adoptiert Thor Gorrs Tochter Love.",
   "note": "Thors Status quo vor seiner Doomsday-Rückkehr.",
   "uni": "mcu",
-  "plot_en": "After his retirement is interrupted by Gorr the God Butcher, a galactic killer who seeks the extinction of the gods, Thor Odinson enlists the help of King Valkyrie, Korg, and ex-girlfriend Jane Foster, who now wields Mjolnir as the Mighty Thor. Together they embark upon a harrowing cosmic adventure to uncover the mystery of the God Butcher’s vengeance and stop him before it’s too late."
+  "plot_en": "After his retirement is interrupted by Gorr the God Butcher, a galactic killer who seeks the extinction of the gods, Thor Odinson enlists the help of King Valkyrie, Korg, and ex-girlfriend Jane Foster, who now wields Mjolnir as the Mighty Thor. Together they embark upon a harrowing cosmic adventure to uncover the mystery of the God Butcher’s vengeance and stop him before it’s too late.",
+  "plot_db": "Nachdem sein Ruhestand von Gorr dem Götterschlächter, einem galaktischen Killer, der die Auslöschung der Götter anstrebt, unterbrochen wird, bittet Thor Odinson um die Hilfe von König Walküre, Korg und seiner Ex-Freundin Jane Foster, die nun als Mighty Thor den Mjolnir schwingt. Gemeinsam begeben sie sich auf ein erschütterndes kosmisches Abenteuer, um das Geheimnis der Rache des Götterschlächters zu lüften und ihn aufzuhalten, bevor es zu spät ist."
  },
  {
   "id": "shk",
@@ -746,7 +782,8 @@
   "plot": "Jen Walters wird unfreiwillig Hulk-Anwältin und bricht im Finale die vierte Wand bis in Marvels Autorenzimmer.",
   "note": "9 Episoden. Meta-Multiversum inklusive K.E.V.I.N.-KI.",
   "uni": "mcu",
-  "plot_en": "Jennifer Walters navigates the complicated life of a single, 30-something attorney who also happens to be a green 6-foot-7-inch superpowered hulk."
+  "plot_en": "Jennifer Walters navigates the complicated life of a single, 30-something attorney who also happens to be a green 6-foot-7-inch superpowered hulk.",
+  "plot_db": "Die auf Supermenschenrecht spezialisierte Anwältin Jennifer Walters muss sich nicht nur mit den alltäglichen Schwierigkeiten als Single in den 30ern rumschlagen, sondern auch lernen, das Leben als 2-Meter großer Hulk zu meistern."
  },
  {
   "id": "wbn",
@@ -784,7 +821,8 @@
   "plot": "Wakanda trauert um T'Challa, Namors Unterwasserreich erklärt den Krieg — Shuri wird zur neuen Black Panther.",
   "note": "Shuri, M'Baku, Namor und Namora sind alle im Doomsday-Cast.",
   "uni": "mcu",
-  "plot_en": "Queen Ramonda, Shuri, M’Baku, Okoye and the Dora Milaje fight to protect their nation from intervening world powers in the wake of King T’Challa’s death.  As the Wakandans strive to embrace their next chapter, the heroes must band together with the help of War Dog Nakia and Everett Ross and forge a new path for the kingdom of Wakanda."
+  "plot_en": "Queen Ramonda, Shuri, M’Baku, Okoye and the Dora Milaje fight to protect their nation from intervening world powers in the wake of King T’Challa’s death.  As the Wakandans strive to embrace their next chapter, the heroes must band together with the help of War Dog Nakia and Everett Ross and forge a new path for the kingdom of Wakanda.",
+  "plot_db": "Der König ist tot! König T'Challa, der als Black Panther auch Mitglied der Avengers-Heldentruppe war, stirbt an einer unbekannten Krankheit und ganz Wakanda ist in Trauer. Die Weltgemeinschaft sieht ihre Chance gekommen, um das vermeintlich geschwächte Königreich endlich zu Zugeständnissen bei der Lieferung des mächtigen Minerals Vibranium zu bewegen - und scheut dabei auch vor bewaffneten Überfällen nicht zurück. Doch Königin Ramonda bleibt standhaft und weist die Staatsoberhäupter in ihre Schranken. Wakanda wird auch ohne König T'Challa und den Black Panther weiter existieren und nicht vor anderen Nationen buckeln. Zur selben Zeit haben die USA mithilfe der erst 19 Jahre alten MIT-Studentin Riri Williams ein Gerät zur Aufspürung von Vibranium entwickelt und werden auch auf dem Grund des "
  },
  {
   "id": "ghs",
@@ -824,7 +862,8 @@
   "plot": "Familie Lang strandet im Quantenreich beim verbannten Kang. Post-Credits: eine Arena voller Kang-Varianten.",
   "note": "Der Saga-Plan, den Doom beerbt — und der Council of Kangs ist bis heute ein offener Faden. Cassie Lang startet hier.",
   "uni": "mcu",
-  "plot_en": "Super-Hero partners Scott Lang and Hope van Dyne, along with with Hope's parents Janet van Dyne and Hank Pym, and Scott's daughter Cassie Lang, find themselves exploring the Quantum Realm, interacting with strange new creatures and embarking on an adventure that will push them beyond the limits of what they thought possible."
+  "plot_en": "Super-Hero partners Scott Lang and Hope van Dyne, along with with Hope's parents Janet van Dyne and Hank Pym, and Scott's daughter Cassie Lang, find themselves exploring the Quantum Realm, interacting with strange new creatures and embarking on an adventure that will push them beyond the limits of what they thought possible.",
+  "plot_db": "Als Scott Langs Tochter Cassie ein Gerät entwickelt, durch das eine Kommunikation mit der Quantenebene möglich werden soll, endet das Experiment in einer Katastrophe: Cassie, Scott und seine Mitstreiterin Hope van Dyne finden sich ungewollt in dem mystischen Reich wieder. Gemeinsam mit Hopes Eltern Hank Pym und Janet van Dyne arbeitet das Trio an einem Weg zurück, während sie die mysteriöse Welt des Quantenreichs, in der sie auf fremde Kreaturen und eine versteckte Zivilisation treffen, auf Entdeckungsreise lockt. Dabei erfahren sie auch, dass Janet, die 30 Jahre lang hier gefangen war, noch das ein oder andere Geheimnis aus ihrer Vergangenheit vor ihnen verbirgt: Denn ebenso gefangen in der Quantendimension ist der mysteriöse Kang, der die Fähigkeit besitzt, durch Zeit und Multiversum zu "
  },
  {
   "id": "g3",
@@ -844,7 +883,8 @@
   "plot": "Rockets Vergangenheit, der High Evolutionary — der emotionale Schlusspunkt der Guardians.",
   "note": "Abschluss der Trilogie; für Doomsday ohne direkte Fäden.",
   "uni": "mcu",
-  "plot_en": "Peter Quill, still reeling from the loss of Gamora, must rally his team around him to defend the universe along with protecting one of their own. A mission that, if not completed successfully, could quite possibly lead to the end of the Guardians as we know them."
+  "plot_en": "Peter Quill, still reeling from the loss of Gamora, must rally his team around him to defend the universe along with protecting one of their own. A mission that, if not completed successfully, could quite possibly lead to the end of the Guardians as we know them.",
+  "plot_db": "Peter Quill, der immer noch unter dem Verlust von Gamora leidet, muss sein Team um sich versammeln, um das Universum zu verteidigen und gleichzeitig einen der Seinen zu schützen. Eine Mission, die, wenn sie nicht erfolgreich abgeschlossen wird, möglicherweise zum Ende der Guardians, wie wir sie kennen, führen könnte."
  },
  {
   "id": "si",
@@ -864,7 +904,8 @@
   "plot": "Gestaltwandelnde Skrulle unterwandern die Erde; Nick Furys einsamster Kampf — mit folgenreichem Rhodey-Twist.",
   "note": "6 Episoden. Für Doomsday randständig.",
   "uni": "mcu",
-  "plot_en": "Nick Fury and Talos discover a faction of shapeshifting Skrulls who have been infiltrating Earth for years."
+  "plot_en": "Nick Fury and Talos discover a faction of shapeshifting Skrulls who have been infiltrating Earth for years.",
+  "plot_db": "Nick Fury erfährt von einer geheimen Invasion der Erde durch eine Fraktion der formwandelnden Skrulls. Fury versammelt seine Verbündeten, darunter Everett Ross, Maria Hill und den Skrull Talos, der sich ein Leben auf der Erde aufgebaut hat. Es beginnt ein Wettlauf gegen die Zeit, um die drohende Skrull Invasion zu vereiteln und die Menschheit zu retten."
  },
  {
   "id": "l2",
@@ -884,7 +925,8 @@
   "plot": "Der Zeitwebstuhl kollabiert. Loki lernt Jahrhunderte, scheitert unendlich oft — und opfert sich: Als Gott der Geschichten hält er alle Zeitlinien zusammen.",
   "note": "Vermutlich das wichtigste Einzel-Setup für Doomsday überhaupt. Lokis Zeitlinien-Thron ist der offensichtlichste Angriffspunkt für Doom.",
   "uni": "mcu",
-  "plot_en": "After stealing the Tesseract during the events of “Avengers: Endgame,” an alternate version of Loki is brought to the mysterious Time Variance Authority, a bureaucratic organization that exists outside of time and space and monitors the timeline. They give Loki a choice: face being erased from existence due to being a “time variant” or help fix the timeline and stop a greater threat."
+  "plot_en": "After stealing the Tesseract during the events of “Avengers: Endgame,” an alternate version of Loki is brought to the mysterious Time Variance Authority, a bureaucratic organization that exists outside of time and space and monitors the timeline. They give Loki a choice: face being erased from existence due to being a “time variant” or help fix the timeline and stop a greater threat.",
+  "plot_db": "Der launische Schurke Loki nimmt seine Rolle als Gott des Schabernacks wieder auf."
  },
  {
   "id": "mv",
@@ -904,7 +946,8 @@
   "plot": "Carol, Monica und Kamala tauschen bei jeder Kraftnutzung die Plätze; Monica verschließt am Ende einen Riss — von der falschen Seite.",
   "note": "Die Post-Credit-Szene ist der X-Men-Türöffner: Monica erwacht in einem fremden Universum neben Beast (Kelsey Grammer, Doomsday-Cast).",
   "uni": "mcu",
-  "plot_en": "When her duties send her to an anomalous wormhole linked to a Kree revolutionary, Carol's powers become entangled with that of Jersey City super-fan Kamala Khan, aka Ms. Marvel, and Carol's estranged niece, now S.A.B.E.R. astronaut Captain Monica Rambeau. Together, this unlikely trio must team up and learn to work in concert to save the universe."
+  "plot_en": "When her duties send her to an anomalous wormhole linked to a Kree revolutionary, Carol's powers become entangled with that of Jersey City super-fan Kamala Khan, aka Ms. Marvel, and Carol's estranged niece, now S.A.B.E.R. astronaut Captain Monica Rambeau. Together, this unlikely trio must team up and learn to work in concert to save the universe.",
+  "plot_db": "Als die Pflicht sie zu einem anomalen Wurmloch ruft, das ein Kree-Revolutionär ausgelöst hat, werden die Kräfte von Carol Danvers (Captain Marvel), Kamala Khan (Ms. Marvel), ein Superfan Jersey Citys, und Carols Nichte, die S.A.B.E.R.-Astronautin Captain Monica Rambeau, vereint. Das ungleiche Trio muss als „The Marvels“ das Universum retten."
  },
  {
   "id": "ec",
@@ -923,7 +966,8 @@
   "plot": "Maya Lopez kehrt nach Oklahoma zurück und stellt sich Kingpin — Street-Level pur.",
   "note": "5 Episoden. Brücke zu Daredevil: Born Again.",
   "uni": "mcu",
-  "plot_en": "Pursued by Wilson Fisk's criminal empire, Maya's journey brings her home and she must confront her own family and legacy."
+  "plot_en": "Pursued by Wilson Fisk's criminal empire, Maya's journey brings her home and she must confront her own family and legacy.",
+  "plot_db": "Maya Lopez wird von Wilson Fisks Verbrecherbande verfolgt. Der Weg führt sie in ihre Heimatstadt, wo sie sich ihrer Familie und deren Vermächtnis stellen muss."
  },
  {
   "id": "x97",
@@ -942,7 +986,8 @@
   "plot": "Die Fortsetzung der 90er-Zeichentrickserie — von Genosha bis Bastion emotional gnadenloser als die meisten Realfilme.",
   "note": "Eigenes (Animations-)Universum, aber DER Liebesbrief an genau die X-Men-Ära, die Doomsday zurückbringt.",
   "uni": "mcu",
-  "plot_en": "The X-Men, a band of mutants who use their uncanny gifts to protect a world that hates and fears them, are challenged like never before, forced to face a dangerous and unexpected new future."
+  "plot_en": "The X-Men, a band of mutants who use their uncanny gifts to protect a world that hates and fears them, are challenged like never before, forced to face a dangerous and unexpected new future.",
+  "plot_db": "Eine Gruppe Mutanten beschützt mit ihren erstaunlichen Kräften die Welt, die sie hasst und fürchtet."
  },
  {
   "id": "dw",
@@ -963,7 +1008,8 @@
   "plot": "Die TVA eröffnet Wade: Seine Zeitlinie stirbt, weil ihr Anker-Wesen Logan tot ist. Im Void warten Cassandra Nova, das Fox-Erbe — und der eine Wolverine, der mitkommt.",
   "note": "Anker-Wesen, Void, Fox-Multiversum, Gambit-Debüt — die Brücke, über die die alten X-Men ins MCU laufen.",
   "uni": "mcu",
-  "plot_en": "A listless Wade Wilson toils away in civilian life with his days as the morally flexible mercenary, Deadpool, behind him. But when his homeworld faces an existential threat, Wade must reluctantly suit-up again with an even more reluctant Wolverine."
+  "plot_en": "A listless Wade Wilson toils away in civilian life with his days as the morally flexible mercenary, Deadpool, behind him. But when his homeworld faces an existential threat, Wade must reluctantly suit-up again with an even more reluctant Wolverine.",
+  "plot_db": "Seit Jahren träumt Deadpool davon, ein Avenger zu werden – und nun bietet ihm der zwielichtige TVA-Agent Mr. Paradox an, in die heilige Zeitlinie zu wechseln, um dort Teil des MCU zu sein. Doch dafür muss der vorlaute Söldner ein großes Opfer bringen: Seine Welt wird ausgelöscht. Weil Deadpool dies nicht zulassen will, schickt Mr. Paradox ihn und eine von Deadpool rekrutierte, abgehalfterte Variante von Wolverine in die Leere – die große Müllhalde aller Universen. Dort hat die finstere Cassandra Nova ein Schreckens-Regime errichtet. Deadpool ist klar: Will er seine Welt, all seine Freunde und seine große Liebe Vanessa retten, muss er an ihr vorbei und auch Mr. Paradox aufhalten. Doch dazu muss er erst einmal den verbitterten Wolverine überzeugen, ihm zu helfen …"
  },
  {
   "id": "ag",
@@ -983,7 +1029,8 @@
   "plot": "Agatha wandert den Hexenpfad — mit einem Teen, der sich als Billy Maximoff entpuppt: Wandas Sohn lebt, als Wiccan.",
   "note": "9 Episoden. Wiccan ist der Young-Avengers-Schlüsselstein — und Wandas Vermächtnis wirkt weiter.",
   "uni": "mcu",
-  "plot_en": "Agatha Harkness gathers a coven of witches and sets off down, down, down The Witches' Road."
+  "plot_en": "Agatha Harkness gathers a coven of witches and sets off down, down, down The Witches' Road.",
+  "plot_db": "Agatha Harkness versammelt einen Hexenzirkel und begibt sich auf eine gefährliche Reise."
  },
  {
   "id": "dba",
@@ -1003,7 +1050,8 @@
   "plot": "Matt Murdock hat den Anzug abgelegt, Fisk ist Bürgermeister von New York — bis beide wieder werden, was sie sind.",
   "note": "9 Episoden. Der Zustand der Straßen vor Doomsday.",
   "uni": "mcu",
-  "plot_en": "Matt Murdock, a blind lawyer with heightened abilities, is fighting for justice through his bustling law firm, while former mob boss Wilson Fisk pursues his own political endeavors in New York. When their past identities begin to emerge, both men find themselves on an inevitable collision course."
+  "plot_en": "Matt Murdock, a blind lawyer with heightened abilities, is fighting for justice through his bustling law firm, while former mob boss Wilson Fisk pursues his own political endeavors in New York. When their past identities begin to emerge, both men find themselves on an inevitable collision course.",
+  "plot_db": "Matt Murdock, ein blinder Anwalt mit besonderen Fähigkeiten, kämpft in seiner geschäftigen Anwaltskanzlei für Gerechtigkeit, während der ehemalige Mafiaboss Wilson Fisk seine eigenen politischen Ziele in New York verfolgt. Als ihre früheren Identitäten sich ihren Weg an die Oberfläche bahnen, befinden sich beide Männer unausweichlich auf Kollisionskurs."
  },
  {
   "id": "bnw",
@@ -1023,7 +1071,8 @@
   "plot": "Sam beweist sich als Cap ohne Serum, Präsident Ross wird zum Red Hulk — und aus dem toten Celestial wird Adamantium gewonnen.",
   "note": "Sam als amtierender Captain America, Adamantium im Spiel, kein stehendes Avengers-Team: die verwundbare Welt, die Doom vorfindet.",
   "uni": "mcu",
-  "plot_en": "After meeting with newly elected U.S. President Thaddeus Ross, Sam finds himself in the middle of an international incident. He must discover the reason behind a nefarious global plot before the true mastermind has the entire world seeing red."
+  "plot_en": "After meeting with newly elected U.S. President Thaddeus Ross, Sam finds himself in the middle of an international incident. He must discover the reason behind a nefarious global plot before the true mastermind has the entire world seeing red.",
+  "plot_db": "Einfache, freundschaftliche Meetings scheint es für Sam Wilson aka Captain America nicht zu geben. Denn das Treffen mit dem gerade erst ins Amt gewählten US-Präsidenten Thaddeus Ross verwickelt den Avenger mit dem ikonischen Vibranium-Schild in einen Konflikt globalen Ausmaßes. Doch noch ist Zeit, die Welt davor zu bewahren, ins absolute Chaos zu stürzen. Nur drängt die Zeit..."
  },
  {
   "id": "tb",
@@ -1044,7 +1093,8 @@
   "plot": "Valentinas Himmelfahrtskommando trifft auf Bob — den Sentry, dessen dunkles Ich halb New York verschlingt. Danach werden sie als 'New Avengers' vermarktet.",
   "note": "Das aktive Heldenteam von Doomsday formiert sich — und mit Sentry hat das MCU erstmals ein heldenseitiges Wesen auf Doom-Niveau. Instabil allerdings.",
   "uni": "mcu",
-  "plot_en": "After finding themselves ensnared in a death trap, seven disillusioned castoffs must embark on a dangerous mission that will force them to confront the darkest corners of their pasts."
+  "plot_en": "After finding themselves ensnared in a death trap, seven disillusioned castoffs must embark on a dangerous mission that will force them to confront the darkest corners of their pasts.",
+  "plot_db": "Marvel Studios und eine Crew von Indie-Veteranen, die sich selbst verkauft haben, präsentieren Thunderbolts*, ein unkonventionelles Team bestehend aus der depressiven Attentäterin Yelena Belova zusammen mit den sonderbarsten Außenseitern des MCU. Neben einigen spannenden neuen Gesichtern, bringt der Film außerdem die Marvel-Cinematic-Universe-Charaktere Bucky Barnes, Red Guardian, John Walker, Taskmaster, Ghost und Valentina Allegra de Fontaine zurück auf die Leinwand.\r Nachdem sie in eine Todesfalle geraten ist, muss sich eine eigenwillige Gruppe von Antihelden auf eine gefährliche Mission begeben, die sie zwingt, sich den dunkelsten Ecken ihrer Vergangenheit zu stellen."
  },
  {
   "id": "ih",
@@ -1064,7 +1114,8 @@
   "plot": "Riri Williams baut ihre eigene Rüstung und gerät an The Hood — dessen Gönner sich im Finale als Mephisto offenbart.",
   "note": "6 Episoden. Mephistos MCU-Debüt, direkt vor dem Multiversum-Finale — kein Zufall. Phase-5-Abschluss.",
   "uni": "mcu",
-  "plot_en": "After the events of Black Panther: Wakanda Forever, technology is pitted against magic when Riri Williams, a young, genius inventor determined to make her mark on the world, returns to her hometown of Chicago. Her unique take on building iron suits is brilliant, but in pursuit of her ambitions, she finds herself wrapped up with the mysterious yet charming Parker Robbins aka \"The Hood.\""
+  "plot_en": "After the events of Black Panther: Wakanda Forever, technology is pitted against magic when Riri Williams, a young, genius inventor determined to make her mark on the world, returns to her hometown of Chicago. Her unique take on building iron suits is brilliant, but in pursuit of her ambitions, she finds herself wrapped up with the mysterious yet charming Parker Robbins aka \"The Hood.\"",
+  "plot_db": "Die geniale Erfinderin Riri Williams entwickelt die modernste Rüstung seit Iron Man und wird zu Ironheart."
  },
  {
   "id": "f4",
@@ -1085,7 +1136,8 @@
   "plot": "Auf der Retro-Zukunftswelt Erde-828 retten die F4 ihre Erde vor Galactus — der als Preis das Baby Franklin fordert.",
   "note": "Der direkte Vorfilm: Die Post-Credit-Szene ist praktisch die erste Szene von Doomsday. Phase-6-Auftakt.",
   "uni": "mcu",
-  "plot_en": "Against the vibrant backdrop of a 1960s-inspired, retro-futuristic world, Marvel's First Family is forced to balance their roles as heroes with the strength of their family bond, while defending Earth from a ravenous space god called Galactus and his enigmatic Herald, Silver Surfer."
+  "plot_en": "Against the vibrant backdrop of a 1960s-inspired, retro-futuristic world, Marvel's First Family is forced to balance their roles as heroes with the strength of their family bond, while defending Earth from a ravenous space god called Galactus and his enigmatic Herald, Silver Surfer.",
+  "plot_db": "Reed Richards aka Mister Fantastic, Sue Storm aka Invisible Woman, Johnny Storm aka Human Torch und Ben Grimm aka The Thing sind allesamt als Superhelden mit außergewöhnlichen Kräften ausgestattet und gewissermaßen eine große Familie. Doch genau diese Familienbande wird auf ihre bisher größte Probe gestellt, als der mysteriöse Weltraumgott Galactus auf den Plan tritt, der es auf die Erde abgesehen hat. Partner in Crime von Galactus ist dabei Silver Surfer, die ihm dabei helfen soll, dem Planeten und allem Leben darauf den Garaus zu machen. Darüber hinaus werden die Fantastic Four auch mit sich selbst und den Differenzen untereinander konfrontiert. Die müssen natürlich erst mal überwunden werden, bevor die fantastische Familie Galactus und Silver Surfer wirklich geschlossen entgegentreten k"
  },
  {
   "id": "eow",
@@ -1103,7 +1155,8 @@
   "plot": "Wakandas Krieger jagen über Jahrhunderte verlorene Vibranium-Artefakte.",
   "note": "4 Episoden Animation. Für Doomsday verzichtbar.",
   "uni": "mcu",
-  "plot_en": "Follow the adventures of brave Wakandan warriors throughout history in this globe-trotting adventure, where they must carry out dangerous missions to retrieve Vibranium artifacts from the enemies of Wakanda. They are the Hatut Zaraze and this is their story."
+  "plot_en": "Follow the adventures of brave Wakandan warriors throughout history in this globe-trotting adventure, where they must carry out dangerous missions to retrieve Vibranium artifacts from the enemies of Wakanda. They are the Hatut Zaraze and this is their story.",
+  "plot_db": "Wakandische Krieger sind auf gefährlichen historischen Missionen um Vibranium Artefakte zu retten."
  },
  {
   "id": "wm",
@@ -1122,7 +1175,8 @@
   "plot": "Stuntman Simon Williams kämpft sich durch Hollywood — Marvels Satire aufs eigene Geschäft, mit Trevor Slattery.",
   "note": "Randnotiz zur Saga.",
   "uni": "mcu",
-  "plot_en": "Simon and Trevor, two actors at opposite ends of their careers, chase life-changing roles."
+  "plot_en": "Simon and Trevor, two actors at opposite ends of their careers, chase life-changing roles.",
+  "plot_db": "Der aufstrebende Hollywood-Schauspieler Simon Williams kämpft darum, seine Karriere in Gang zu bringen. Bei einer zufälligen Begegnung mit Trevor Slattery, einem Schauspieler, dessen größte Rollen wohl schon hinter ihm liegen, erfährt Simon, dass der legendäre Regisseur Von Kovak eine Neuverfilmung des Superheldenfilms „Wonder Man“ plant. Die beiden Schauspieler, die sich an entgegengesetzten Enden ihrer Karriere befinden, streben verbissen nach Rollen in diesem Film, die ihr Leben verändern könnten, während das Publikum einen Blick hinter die Kulissen der Unterhaltungsindustrie werfen kann."
  },
  {
   "id": "bnd",
@@ -1143,7 +1197,8 @@
   "plot": "Peter, von aller Welt vergessen, baut sich ein neues Leben als Spider-Man aus der Nachbarschaft — bis Punisher und Hulk seine Straßen aufmischen.",
   "note": "Seit HEUTE (31.07.2026) im Kino — der letzte Kinofilm vor Doomsday.",
   "uni": "mcu",
-  "plot_en": "Fighting crime full-time as Spider-Man in a world that doesn't remember him—and the pressure of seeing his old friends move on without him—sparks a change in Peter Parker he may not have the power to control. But that transformation might also be the only thing that can stop a shocking new threat to the city and those he loves - a powerful villain no one can even see."
+  "plot_en": "Fighting crime full-time as Spider-Man in a world that doesn't remember him—and the pressure of seeing his old friends move on without him—sparks a change in Peter Parker he may not have the power to control. But that transformation might also be the only thing that can stop a shocking new threat to the city and those he loves - a powerful villain no one can even see.",
+  "plot_db": "Vier Jahre sind seit den Ereignissen von „No Way Home“ vergangen. Peter ist nun erwachsen und lebt für sich allein, nachdem er sich freiwillig aus dem Leben und den Erinnerungen derer, die er liebt, ausgelöscht hat. Er bekämpft Verbrechen in einem New York, das ihn und seinen Namen nicht mehr kennt, und widmet sich ganz dem Schutz seiner Stadt: Spider-Man in Vollzeit. Doch mit den steigenden Anforderungen löst der Druck eine überraschende körperliche Veränderung aus, die seine Existenz bedroht – gerade als eine seltsame neue Art von Verbrechen eine der mächtigsten Bedrohungen hervorbringt, denen er je gegenüberstand."
  },
  {
   "id": "vq",
@@ -1181,7 +1236,8 @@
   "plot": "Doctor Doom tritt aus dem Schatten des Multiversums — Avengers, New Avengers, Fantastic Four und die originalen X-Men kollidieren im größten Ensemble der MCU-Geschichte.",
   "note": "Das Ziel dieser Timeline. Kinostart: 18.12.2026 (DE vsl. 16.12.).",
   "uni": "mcu",
-  "plot_en": "Beloved heroes from three distinct universes are set on a deadly collision course and face an existential threat unlike anything they've ever encountered."
+  "plot_en": "Beloved heroes from three distinct universes are set on a deadly collision course and face an existential threat unlike anything they've ever encountered.",
+  "plot_db": "Geliebte Helden aus drei unterschiedlichen Universen befinden sich auf einem tödlichen Kollisionskurs und sehen sich einer existenziellen Bedrohung gegenüber, wie sie sie noch nie zuvor erlebt haben."
  },
  {
   "id": "secretwars",
@@ -1243,7 +1299,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "Professor Charles Xavier and his team of genetically gifted superheroes face a rising tide of anti-mutant sentiment led by Col. William Stryker. Storm, Wolverine and Jean Grey must join Magneto and Mystique to unhinge Stryker's scheme to exterminate all mutants."
+  "plot_en": "Professor Charles Xavier and his team of genetically gifted superheroes face a rising tide of anti-mutant sentiment led by Col. William Stryker. Storm, Wolverine and Jean Grey must join Magneto and Mystique to unhinge Stryker's scheme to exterminate all mutants.",
+  "plot_db": "Sie sind das nächste Glied in der Evolutionskette. Jeder von ihnen kam mit einer einzigartigen genetischen Mutation auf die Welt, jeder mit einer anderen außergewöhnlichen Fähigkeit, die sich erstmals in der Jugend zeigt. In einer zunehmend von Vorurteilen und Hass beherrschten Welt interessieren sie jedoch nur als wissenschaftliche Kuriositäten ... als Launen der Natur ... als Ausgestoßene, gefürchtet und verachtet, weil Andersartigkeit nicht akzeptiert wird. Trotz der weit verbreiteten Ignoranz der Gesellschaft schaffen es die X-Men, und mit ihnen weltweit Tausende anderer Mutanten zu überleben. Unter den Fittichen des mächtigsten Telepathen der Welt, Professor Charles Xavier, lernen diese \"begabten\" Studenten, ihre Kräfte zu kontrollieren und sie zum Vorteil der Menschheit einzusetzen. "
  },
  {
   "id": "x3",
@@ -1264,7 +1321,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "When a cure is found to treat mutations, lines are drawn amongst the X-Men led by Professor Charles Xavier, and Magneto's Brotherhood of Mutants."
+  "plot_en": "When a cure is found to treat mutations, lines are drawn amongst the X-Men led by Professor Charles Xavier, and Magneto's Brotherhood of Mutants.",
+  "plot_db": "Die Veröffentlichung eines \"Heilmittels\" für Mutanten schreckt die bisher friedlich mit den Menschen lebende Gesellschaft auf. Magneto nimmt das zum Anlaß einen Kriegszug gegen die Menschen zu führen, um endlich die Herrschaft zu erlangen. Doch die X-Men um Professor Xavier versuchen dem Treiben ein Ende zu bereiten, das Gleichgewicht und den Frieden wieder herzustellen."
  },
  {
   "id": "origins",
@@ -1284,7 +1342,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "After seeking to live a normal life after 200 years, Logan sets out to avenge a death by undergoing the mutant Weapon X program and becoming Wolverine."
+  "plot_en": "After seeking to live a normal life after 200 years, Logan sets out to avenge a death by undergoing the mutant Weapon X program and becoming Wolverine.",
+  "plot_db": "James Howlett verfügt über die seltene Gabe, sich in Wolverine verwandeln zu können. Er ist nicht der einzige, in dem übermenschliche Kräfte stecken. Auch Victor Creed alias Sabretooth hat sie. Beide verbindet eine enge Beziehung, bis Wolverines Freundin durch Victor umkommt. Fortan ist er auf Rache aus und tritt dem Weapon X-Programm bei, um eine lebende Waffe zu werden. Dort lernt er weitere Mutanten kennen."
  },
  {
   "id": "firstclass",
@@ -1304,7 +1363,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "Before Charles Xavier and Erik Lensherr took the names Professor X and Magneto, they were two young men discovering their powers for the first time. Before they were arch-enemies, they were closest of friends, working together with other mutants (some familiar, some new), to stop the greatest threat the world has ever known."
+  "plot_en": "Before Charles Xavier and Erik Lensherr took the names Professor X and Magneto, they were two young men discovering their powers for the first time. Before they were arch-enemies, they were closest of friends, working together with other mutants (some familiar, some new), to stop the greatest threat the world has ever known.",
+  "plot_db": "Der junge Professor Charles Xavier, in seinen Zwanzigern, mit üppiger Haarpracht und zu Beginn des Films noch nicht im Rollstuhl, studiert in Oxford und trifft auf den gleichaltrigen Erik Lensherr. Beide sind Mutanten mit außergewöhnlichen Fähigkeiten. Gemeinsam erdenken sie eine Zukunft, in der Mutanten und Menschen vereint leben können. Als das Wohl der Welt auf dem Spiel steht, kämpfen sie mit vereinten Kräften und der Hilfe von anderen Mutanten gegen die drohende Gefahr des Hellfire Clubs mit Emma Frost und Sebastian Shaw. Erst im Laufe dieses Kampfes werden die beiden zu den Todfeinden der vorherigen Filme."
  },
  {
   "id": "wolv13",
@@ -1324,7 +1384,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "Wolverine faces his ultimate nemesis - and tests of his physical, emotional, and mortal limits - in a life-changing voyage to modern-day Japan."
+  "plot_en": "Wolverine faces his ultimate nemesis - and tests of his physical, emotional, and mortal limits - in a life-changing voyage to modern-day Japan.",
+  "plot_db": "Nachdem viele der X-Men gestorben sind und die Allianz der Kämpfer mit den übernatürlichen Kräften aufgelöst wurde, befindet sich Logan aka Wolverine in einer Situation, in der er von der Verantwortung gegenüber seinem alten Team entbunden ist. Auf der Suche nach einem Grund zu leben, begibt er sich in das moderne Japan. Dort trifft er sowohl ihm gut und schlecht gesonnene Menschen und muss sich fragen, wem er trauen kann. Neben Feinden wie Industriellen, Politikern, Frauen und Ninjas trifft er auch auf seinen Erzfeind: Kenuichio Harada, besser bekannt als Silver Samurai. Als Mutant kann er verschiedene Stoffe mit Energie beladen und so mit seinem Samurai-Stahl jede Materie durchdringen. Wolverine entdeckt zum ersten Mal, dass es etwas gibt, das ihn verwundbar macht und stößt an seine körp"
  },
  {
   "id": "dofp",
@@ -1345,7 +1406,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "The ultimate X-Men ensemble fights a war for the survival of the species across two time periods as they join forces with their younger selves in an epic battle that must change the past – to save our future."
+  "plot_en": "The ultimate X-Men ensemble fights a war for the survival of the species across two time periods as they join forces with their younger selves in an epic battle that must change the past – to save our future.",
+  "plot_db": "In der Zukunft stehen die Mutanten kurz vor dem Aussterben, weil sie von Killer-Robotern gejagt und getötet werden: den Sentinels. Aufgrund der Bedrohung arbeiten die Gegner Magneto und Charles Xavier zusammen - ihr Plan sieht vor, den Terror durch die Sentinels gar nicht erst zuzulassen. Dazu schicken sie Wolverines Bewusstsein mit Hilfe von Kitty Pryde in die Vergangenheit, da sich sein Geist von den Folgen einer solchen Zeitreise erholen kann. In der Vergangenheit soll Wolverine eine Tat Mystiques verhindern, die den Bau der Sentinels erst möglich machte; der Eingriff würde also die Zukunft im Sinne der Mutanten verändern. Doch dafür muss Wolverine erst ein Team aus Mutanten zusammenstellen – was sich als schwierig erweist. Der junge Charles Xavier etwa ist in einem miserablen psychisch"
  },
  {
   "id": "apoc",
@@ -1365,7 +1427,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "After the re-emergence of the world's first mutant, world-destroyer Apocalypse, the X-Men must unite to defeat his extinction level plan."
+  "plot_en": "After the re-emergence of the world's first mutant, world-destroyer Apocalypse, the X-Men must unite to defeat his extinction level plan.",
+  "plot_db": "Der Motor für das Fortbestehen einer Art ist die Mutation, die unter bestimmten sich ändernden Umweltbedingungen sich von größtem Vorteil erweist. Noch sah sich immer der Mensch, der Homo sapiens, als die Krone der Schöpfung. Doch nun – mit dem Auftritt der Mutanten – sehen sich die Menschen in ihrer Alleinstellung bedroht vom Homo sapiens superior. Und tatsächlich sollen sie von ihrem Thron gestürzt werden. Denn keiner vertritt mehr die Maxime des Survival of the Fittest als Apocalypse, der erste der Mutanten.  Doch Apocalypse ist wenig zimperlich im Kampf ums Überleben, auch Mutanten, die Schwäche zeigen, müssen ausgetilgt und vernichtet werden.  Und so müssen die Menschen und die Mutanten um Professor Xavier und Magneto Seite an Seite stehen, um gegen Apocalypse und seinen Selektionsdru"
  },
  {
   "id": "darkphoenix",
@@ -1385,7 +1448,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "The X-Men face their most formidable and powerful foe when one of their own, Jean Grey, starts to spiral out of control. During a rescue mission in outer space, Jean is nearly killed when she's hit by a mysterious cosmic force. Once she returns home, this force not only makes her infinitely more powerful, but far more unstable. The X-Men must now band together to save her soul and battle aliens that want to use Grey's new abilities to rule the galaxy."
+  "plot_en": "The X-Men face their most formidable and powerful foe when one of their own, Jean Grey, starts to spiral out of control. During a rescue mission in outer space, Jean is nearly killed when she's hit by a mysterious cosmic force. Once she returns home, this force not only makes her infinitely more powerful, but far more unstable. The X-Men must now band together to save her soul and battle aliens that want to use Grey's new abilities to rule the galaxy.",
+  "plot_db": "Etwa zehn Jahre nachdem sie es mit dem mächtigen Mutanten Apocalypse aufgenommen haben, sind die X-Men rund um Charles Xavier zu Helden geworden. Doch der damit einhergehende Ruhm steigt dem an den Rollstuhl gefesselten Telepathen zu Kopf, so dass er seine Schützlinge auf immer gefährlichere Missionen schickt. Für ihren jüngsten Auftrag schickt er die X-Men ins Weltall, wo sie verunglückte Astronauten retten sollen. Doch dabei wird ihr Raumschiff von einer Sonneneruption getroffen, die Jean Grey zwar absorbieren und umlenken kann, doch durch die enorme Energie erwacht eine mysteriöse Macht in ihr: die Phoenix Force. Jeans neue Kräfte lassen sich nur schwer kontrollieren und rufen schließlich auch eine außerirdische Gestaltwandlerin auf den Plan, die Jagd auf sie macht…"
  },
  {
   "id": "logan",
@@ -1405,7 +1469,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "In the near future, a weary Logan cares for an ailing Professor X in a hideout on the Mexican border. But Logan's attempts to hide from the world and his legacy are upended when a young mutant arrives, pursued by dark forces."
+  "plot_en": "In the near future, a weary Logan cares for an ailing Professor X in a hideout on the Mexican border. But Logan's attempts to hide from the world and his legacy are upended when a young mutant arrives, pursued by dark forces.",
+  "plot_db": "In naher Zukunft schützt ein abgekämpfter Logan einen gebrochenen Professor X in einem Versteck nahe der mexikanischen Grenze. Doch Logans Versuche, sich vor der Welt und seinem Vermächtnis zu verstecken, misslingen, als ein junger Mutant, von dunklen Kräften verfolgt, bei ihnen Zuflucht sucht."
  },
  {
   "id": "dp1",
@@ -1425,7 +1490,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "The origin story of former Special Forces operative turned mercenary Wade Wilson, who, after being subjected to a rogue experiment that leaves him with accelerated healing powers, adopts the alter ego Deadpool. Armed with his new abilities and a dark, twisted sense of humor, Deadpool hunts down the man who nearly destroyed his life."
+  "plot_en": "The origin story of former Special Forces operative turned mercenary Wade Wilson, who, after being subjected to a rogue experiment that leaves him with accelerated healing powers, adopts the alter ego Deadpool. Armed with his new abilities and a dark, twisted sense of humor, Deadpool hunts down the man who nearly destroyed his life.",
+  "plot_db": "Um seinem sicheren Tod durch Krebs zu entkommen, willigt Wade Wilson in ein riskantes Experiment ein, das ihn heilen und in einen Supersöldner verwandeln soll. Doch den Preis für sein Überleben bezahlt Wilson am Ende mit schweren Qualen und körperlicher Entstellung. Getrieben von Rache und durch Selbstheilungskräfte nahezu unsterblich geworden, jagt Wilson nun als Mutant Deadpool seine Peiniger und gefährdet damit seine große Liebe Vanessa, die er nach seiner Verwandlung voller Scham aus seinem Leben verbannte."
  },
  {
   "id": "dp2",
@@ -1445,7 +1511,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "Wisecracking mercenary Deadpool battles the evil and powerful Cable and other bad guys to save a boy's life."
+  "plot_en": "Wisecracking mercenary Deadpool battles the evil and powerful Cable and other bad guys to save a boy's life.",
+  "plot_db": "Nach einem weiteren herben Schicksalsschlag ist Deadpool des Lebens überdrüssig und versucht sich mithilfe von Benzinkanistern und einer Zigarette umzubringen. Doch der unkaputtbare Antiheld wird von seinem X-Men-Kumpanen Colossus gerettet und mit auf das abgeschiedene Anwesen der Mutanten genommen. Durch einen Zwischenfall mit dem Teenager-Mutanten Russell lernt Deadpool den Superschurken Cable kennen, der es auf den wütenden Halbstarken abgesehen hat. Zunächst kann Deadpool die Situation entschärfen – doch dann landen Russell und er plötzlich im Knast. Nun stellt er sich seine eigene Superheldencrew zusammen und rekrutiert unter anderem Domino und Zeitgeist um es mit Cable aufzunehmen …"
  },
  {
   "id": "newmutants",
@@ -1464,7 +1531,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "Five young mutants, just discovering their abilities while held in a secret facility against their will, fight to escape their past sins and save themselves."
+  "plot_en": "Five young mutants, just discovering their abilities while held in a secret facility against their will, fight to escape their past sins and save themselves.",
+  "plot_db": "New Mutants führt neue Mutanten ein. Sie sind eine weitere Generation von übersinnlich begabten Teenagern, die allerdings nicht in Professor Xaviers Schule an den Umgang mit ihren besonderen Fähigkeiten herangeführt werden müssen und dabei zugleich mit ihrer Andersartigkeit und dem Erwachsenwerden zu kämpfen haben, sondern in einer geheimen Einrichtung eingesperrt sind."
  },
  {
   "id": "f405",
@@ -1485,7 +1553,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "During a space voyage, four scientists are altered by cosmic rays: Reed Richards gains the ability to stretch his body; Sue Storm can become invisible; Johnny Storm controls fire; and Ben Grimm is turned into a super-strong … thing. Together, these \"Fantastic Four\" must now thwart the evil plans of Dr. Doom and save the world from certain destruction."
+  "plot_en": "During a space voyage, four scientists are altered by cosmic rays: Reed Richards gains the ability to stretch his body; Sue Storm can become invisible; Johnny Storm controls fire; and Ben Grimm is turned into a super-strong … thing. Together, these \"Fantastic Four\" must now thwart the evil plans of Dr. Doom and save the world from certain destruction.",
+  "plot_db": "Es sollte eigentlich keine große Angelegenheit werden. Die vier Wissenschaftler, Reed Richards, Susan Storm, Johnny Storm und Ben Grimm, sollten nur ins All fliegen, um eine Theorie ihres Vorgesetzten Victor von Doom zu testen. Doch alles geht schief, das Raumschiff explodiert und die vier werden einer Strahlung ausgesetzt, durch die sie fortan mit Superkräften ausgestattet sind. Mr Fantastic Reed, ist ab jetzt besonders elastisch, Invisible Girl Susan, kann sich unsichtbar machen und Kraftfelder erzeugen, Human Torch Johnny, kontrolliert von nun an das Feuer und Thing Ben, verwandelt sich in ein riesiges Steinmonster. Noch nicht recht wissend was sie mit ihren neuen Fähigkeiten anstellen sollen, wartet auf der Erde auch schon der erste Verbrecher, der nur von den \"Fantastic Four\" aufgehal"
  },
  {
   "id": "f407",
@@ -1505,7 +1574,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "The Fantastic Four return to the big screen as a new and all powerful enemy threatens the Earth. The seemingly unstoppable 'Silver Surfer', but all is not what it seems and there are old and new enemies that pose a greater threat than the intrepid superheroes realize."
+  "plot_en": "The Fantastic Four return to the big screen as a new and all powerful enemy threatens the Earth. The seemingly unstoppable 'Silver Surfer', but all is not what it seems and there are old and new enemies that pose a greater threat than the intrepid superheroes realize.",
+  "plot_db": "Reed Richards und Susan Storm alias Mr. Fantastic und Invisible Woman wollen heiraten - wieder einmal. Dieses Mal stört der geheimnisvolle Silver Surfer die Zeremonie. Dort, wo er auftaucht, hinterlässt er Zerstörung, und zwar letztlich die ganzer Planeten. Um das aufzuhalten, müssen die Fantastic Four ausgerechnet mit ihrem ärgsten Feind, Dr. Doom, zusammenarbeiten. Doch der Surfer, der ohne sein Brett fast machtlos ist, entpuppt sich als gar nicht so böse, und Doom als gewohnt verräterisch."
  },
  {
   "id": "f415",
@@ -1525,7 +1595,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "Four young outsiders teleport to a dangerous universe, which alters their physical form in shocking ways. Their lives irrevocably upended, the team must learn to harness their daunting new abilities and work together to save Earth from a former friend turned enemy."
+  "plot_en": "Four young outsiders teleport to a dangerous universe, which alters their physical form in shocking ways. Their lives irrevocably upended, the team must learn to harness their daunting new abilities and work together to save Earth from a former friend turned enemy.",
+  "plot_db": "Johnny Storm seine Schwester Sue, Reed Richards und Ben Grimm sind vier Freunde, die einen Forschungsunfall mit einschneidenden Veränderungen erleben: Nachdem Tüftler und Genie Reed die Grundlagen für das entsprechende Verfahren entwickelt hat, werden die Vier in ein Paralleluniversum teleportiert und verfügen danach über Superkräfte. Storm wird zur menschlichen Fackel, Sue kann unsichtbar werden, Reed seine Gliedmaßen gummiartig verlängern und Grimm verwandelt sich in den klobigen Steinkoloss „Das Ding“. Doch die neuen Fähigkeiten sind keine harmlose Spielerei, sie wecken das Interesse des Militärs – und das des sinisteren Forschers Dr. Victor von Doom, der ausgerechnet in Johnnys und Sues Vater Dr. Franklin Storm einen Mentor fand…"
  },
  {
   "id": "raimi1",
@@ -1545,7 +1616,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "After being bitten by a genetically altered spider at Oscorp, nerdy but endearing high school student Peter Parker is endowed with amazing powers to become the superhero known as Spider-Man."
+  "plot_en": "After being bitten by a genetically altered spider at Oscorp, nerdy but endearing high school student Peter Parker is endowed with amazing powers to become the superhero known as Spider-Man.",
+  "plot_db": "Peter Parker ist nicht gerade angesehen an seiner Uni, denn er ist schmächtig und ungeschickt, was seine Chancen beim Mädchen seiner Träume, Mary Jane nicht gerade erhöht. Als er eines Tages jedoch von einer genmanipulierten Spinne gebissen wird, wacht er am nächsten Morgen auf und findet seine Sinne geschärft vor und entwickelt auch weitere übermenschliche, aber sehr spinnenähnliche Fähigkeiten. Nachdem er damit zunächst sein Traummädchen beeindruckt hat, wächst er schon bald zu dem maskierten Helden Spider-Man heran, spätestens als ein Superschurke namens Grüner Kobold, der die Mr.Hyde-Variante des Wissenschaftlers Norman Osborn ist, die Stadt bedroht..."
  },
  {
   "id": "raimi2",
@@ -1565,7 +1637,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "Peter Parker is going through a major identity crisis. Burned out from being Spider-Man, he decides to shelve his superhero alter ego, which leaves the city suffering in the wake of carnage left by the evil Doc Ock. In the meantime, Parker still can't act on his feelings for Mary Jane Watson, a girl he's loved since childhood. A certain anger begins to brew in his best friend Harry Osborn as well..."
+  "plot_en": "Peter Parker is going through a major identity crisis. Burned out from being Spider-Man, he decides to shelve his superhero alter ego, which leaves the city suffering in the wake of carnage left by the evil Doc Ock. In the meantime, Parker still can't act on his feelings for Mary Jane Watson, a girl he's loved since childhood. A certain anger begins to brew in his best friend Harry Osborn as well...",
+  "plot_db": "Zwei Jahre sind inzwischen vergangen, als Peter Parker von einer genmutierten Spinne gebissen wurde und sein Leben sich radikal verändert hat. Bei der Verbrechensbekämpferei lässt er sein College-Studium schleifen und verspätet sich permanent bei seinen beiden Jobs. Zu allem Überfluss muss Peter mit ansehen, wie Mary Jane im Gegensatz zu ihm ihr Leben meistert. Nun allerdings streckt ein neuer Bösewicht namens Dr. Octavius seine metallischen Tentakel nach der Zivilisation aus. Mit ihm ist nicht zu spaßen.."
  },
  {
   "id": "raimi3",
@@ -1585,7 +1658,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "The seemingly invincible Spider-Man goes up against an all-new crop of villains—including the shape-shifting Sandman. While Spider-Man’s superpowers are altered by an alien organism, his alter ego, Peter Parker, deals with nemesis Eddie Brock and also gets caught up in a love triangle."
+  "plot_en": "The seemingly invincible Spider-Man goes up against an all-new crop of villains—including the shape-shifting Sandman. While Spider-Man’s superpowers are altered by an alien organism, his alter ego, Peter Parker, deals with nemesis Eddie Brock and also gets caught up in a love triangle.",
+  "plot_db": "Eigentlich könnte alles wunderbar laufen für Peter Parker, seit er seiner Freundin Mary Jane Watson seine Geheimidentität \"Spiderman\" offenbart hat. Doch am Horizont zeigen sich bald neue dunkle Wolken, als der Ausbrecher Flint Marko durch einen Unfall in den geheimnisvollen \"Sandman\" verwandelt wird, einen Mutanten, der seine Moleküle verändern kann. Peter ist bald persönlich betroffen, denn offenbar hat Marko etwas mit dem Mord an seinem Onkel zu tun. Doch es zeigt sich neues Unheil: eine außerirdische schwarze Substanz ergreift von Peter Besitz, die seine dunkle, machtstrebende Seite zum Vorschein bringt."
  },
  {
   "id": "tasm1",
@@ -1605,7 +1679,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "A teenage Peter Parker grapples with both high school and amazing super-human crises as his alter-ego Spider-Man."
+  "plot_en": "A teenage Peter Parker grapples with both high school and amazing super-human crises as his alter-ego Spider-Man.",
+  "plot_db": "Peter Parker ist ein Außenseiter, der als kleiner Junge von seinen Eltern verlassen worden ist und seitdem von seinem Onkel Ben und Tante May aufgezogen wird. Wie die meisten Teenager, versucht Peter herauszufinden, wer er ist und wie er zu der Person geworden ist, die er heute ist. Außerdem findet er seine erste High School Liebe, Gwen Stacy. Gemeinsam kämpfen die beiden um Liebe, Hingabe und Geheimnisse. Als Peter einen mysteriösen Aktenkoffer entdeckt, der einst seinem Vater gehört hat, fängt er damit an, Nachforschungen anzustellen, weil er verstehen will, warum seine Eltern damals so plötzlich verschwunden sind. Seine Recherchen führen ihn direkt zu Oscorp und dem Labor von Dr. Curt Connors, dem ehemaligen Partner seines Vaters. Nachdem Spider-Man sich auf einen Kollisionskurs mit Con"
  },
  {
   "id": "tasm2",
@@ -1625,7 +1700,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "For Peter Parker, life is busy. Between taking out the bad guys as Spider-Man and spending time with the person he loves, Gwen Stacy, high school graduation cannot come quickly enough. Peter has not forgotten about the promise he made to Gwen’s father to protect her by staying away, but that is a promise he cannot keep. Things will change for Peter when a new villain, Electro, emerges, an old friend, Harry Osborn, returns, and Peter uncovers new clues about his past."
+  "plot_en": "For Peter Parker, life is busy. Between taking out the bad guys as Spider-Man and spending time with the person he loves, Gwen Stacy, high school graduation cannot come quickly enough. Peter has not forgotten about the promise he made to Gwen’s father to protect her by staying away, but that is a promise he cannot keep. Things will change for Peter when a new villain, Electro, emerges, an old friend, Harry Osborn, returns, and Peter uncovers new clues about his past.",
+  "plot_db": "Für Peter Parker bedeutet das Leben aktuell vor allem eines: Stress! Auf der einen Seite fühlt er sich aufgrund seiner übermenschlichen Fähigkeiten dazu verpflichtet, als Spider-Man die Bevölkerung New Yorks zu beschützen. Auf der anderen Seite hat er aber auch ganz alltägliche Pflichten, die eines jungen Mannes eben. Daher sehnt Peter seinen Highschool-Abschluss herbei, um endlich eine Verpflichtung weniger und damit mehr Zeit für die Verbrechungsbekämpfung zu haben – und für Freundin Gwen Stacy. Dann taucht plötzlich eine ganz neue Bedrohung auf: Electro, dessen Fähigkeiten denen Peters weit überlegen sind. Doch als auch noch Peters alter Freund und OsCorp-Erbe Harry Osborn zurückkehrt, merkt der junge Held schnell, dass die größte Bedrohung ganz woanders liegt…"
  },
  {
   "id": "venom1",
@@ -1645,7 +1721,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "Investigative journalist Eddie Brock attempts a comeback following a scandal, but accidentally becomes the host of Venom, a violent, super powerful alien symbiote. Soon, he must rely on his newfound powers to protect the world from a shadowy organization looking for a symbiote of their own."
+  "plot_en": "Investigative journalist Eddie Brock attempts a comeback following a scandal, but accidentally becomes the host of Venom, a violent, super powerful alien symbiote. Soon, he must rely on his newfound powers to protect the world from a shadowy organization looking for a symbiote of their own.",
+  "plot_db": "Als Dr. Carlton, Chef der mysteriösen Life Foundation, in den Besitz eines Organismus außerirdischen Ursprungs kommt, benutzt er diese sogenannten Symbionten, um mit ihnen Experimente an Menschen durchzuführen. Dank des Tipps einer Konzern-Insiderin bekommt der Reporter Eddie Brock Wind von Drakes fragwürdigen Machenschaften und beschließt – entgegen der Warnung seiner Freundin Anne – der Sache auf den Grund zu gehen. Bei seinen Nachforschungen in den Labors der Life Foundation kommt Eddie jedoch selbst mit einem Symbionten in Kontakt, der mit ihm zu einem neuen Wesen verschmilzt: dem mit übermenschlichen Kräften ausgestatteten Venom."
  },
  {
   "id": "venom2",
@@ -1665,7 +1742,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "After finding a host body in investigative reporter Eddie Brock, the alien symbiote must face a new enemy, Carnage, the alter ego of serial killer Cletus Kasady."
+  "plot_en": "After finding a host body in investigative reporter Eddie Brock, the alien symbiote must face a new enemy, Carnage, the alter ego of serial killer Cletus Kasady.",
+  "plot_db": "Venom und sein Wirt Eddie Brock bekommen es mit dem Serienkiller Cletus Kasady zu tun, der sich in den blutrünstigen Carnage verwandelt, nachdem er ebenfalls mit einem Symbiont in Kontakt gekommen ist."
  },
  {
   "id": "venom3",
@@ -1685,7 +1763,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "Eddie and Venom are on the run. Hunted by both of their worlds and with the net closing in, the duo are forced into a devastating decision that will bring the curtains down on Venom and Eddie's last dance."
+  "plot_en": "Eddie and Venom are on the run. Hunted by both of their worlds and with the net closing in, the duo are forced into a devastating decision that will bring the curtains down on Venom and Eddie's last dance.",
+  "plot_db": "Als ihm nach dem Triumph über Carnage der Mord am Polizisten Patrick Mulliganin in die Schuhe geschoben wird, ist Reporter Eddie Brock mitsamt seinem Alien-Symbionten Venom endgültig auf der Flucht vor dem Gesetz. Auch eine geheime Spezialeinheit des US-Militärs unter Führung des skrupellosen General Rex Strickland hat es auf Eddie oder vielmehr auf Venom abgesehen. Doch das ist längst nicht die größte Gefahr für das ungleiche Duo. Verbannt in ein fernes kosmisches Gefängnis, entsendet der Symbionten-Schöpfer Knull mehrere blutrünstige Kreaturen in die Weiten des Universums, um die beiden ausfindig zu machen, da sie den Schlüssel in sich tragen, der den finsteren außerirdischen Herrscher von seinen Fesseln befreien würde. Bald steht nicht nur das Leben von Eddie und Venom, sondern das Schi"
  },
  {
   "id": "morbius",
@@ -1705,7 +1784,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "Dangerously ill with a rare blood disorder, and determined to save others suffering his same fate, Dr. Michael Morbius attempts a desperate gamble. What at first appears to be a radical success soon reveals itself to be a remedy potentially worse than the disease."
+  "plot_en": "Dangerously ill with a rare blood disorder, and determined to save others suffering his same fate, Dr. Michael Morbius attempts a desperate gamble. What at first appears to be a radical success soon reveals itself to be a remedy potentially worse than the disease.",
+  "plot_db": "Dr. Michael Morbius leidet an einer seltenen Blutkrankheit und experimentiert mit biochemischen Elementen, um sich selbst zu heilen. Er infiziert sich jedoch versehentlich mit einer vampirähnlichen Krankheit."
  },
  {
   "id": "madameweb",
@@ -1725,7 +1805,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "Forced to confront revelations about her past, paramedic Cassandra Webb forges a relationship with three young women destined for powerful futures...if they can all survive a deadly present."
+  "plot_en": "Forced to confront revelations about her past, paramedic Cassandra Webb forges a relationship with three young women destined for powerful futures...if they can all survive a deadly present.",
+  "plot_db": "Cassandra Webb ist eine ganz normale Rettungssanitäterin in Manhattan, bis sie entdeckt, dass sie möglicherweise über hellseherische Fähigkeiten verfügt – was ihre lebensrettenden Fähigkeiten auf eine harte Probe stellt. Als sie plötzlich mit Enthüllungen über ihre Vergangenheit konfrontiert wird, knüpft sie eine Beziehung zu drei jungen Frauen, die für eine mächtige Zukunft bestimmt sind ... wenn sie alle eine tödliche Gegenwart überleben."
  },
  {
   "id": "kraven",
@@ -1745,7 +1826,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "Kraven Kravinoff's complex relationship with his ruthless gangster father, Nikolai, starts him down a path of vengeance with brutal consequences, motivating him to become not only the greatest hunter in the world, but also one of its most feared."
+  "plot_en": "Kraven Kravinoff's complex relationship with his ruthless gangster father, Nikolai, starts him down a path of vengeance with brutal consequences, motivating him to become not only the greatest hunter in the world, but also one of its most feared.",
+  "plot_db": "Der russische Immigrant Sergei Kravinoff (Aaron Taylor-Johnson) ist Großwildjäger, versteht sich selbst aber als Beschützer der Natur. Als Tierliebhaber stehen ihm viele Kreaturen näher als die Menschen. Was vielleicht auch daran liegt, dass sein Vater (Russell Crowe) ihn in jungen Jahren (Levi Miller) fallengelassen hat und stattdessen seinen Halbbruder Dmitri (Fred Hechinger) bevorzugte.  Als Erwachsene führt das Schicksal sie wieder zusammen. Zu diesem Zeitpunkt hat Sergei sich mittlerweile sein Alter Ego als Kraven the Hunter aufgebaut, dem die Tiere bei seiner besonderen Art der Kriegsführung dienen."
  },
  {
   "id": "sv1",
@@ -1765,7 +1847,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "Struggling to find his place in the world while juggling school and family, Brooklyn teenager Miles Morales is unexpectedly bitten by a radioactive spider and develops unfathomable powers just like the one and only Spider-Man. While wrestling with the implications of his new abilities, Miles discovers a super collider created by the madman Wilson \"Kingpin\" Fisk, causing others from across the Spider-Verse to be inadvertently transported to his dimension."
+  "plot_en": "Struggling to find his place in the world while juggling school and family, Brooklyn teenager Miles Morales is unexpectedly bitten by a radioactive spider and develops unfathomable powers just like the one and only Spider-Man. While wrestling with the implications of his new abilities, Miles discovers a super collider created by the madman Wilson \"Kingpin\" Fisk, causing others from across the Spider-Verse to be inadvertently transported to his dimension.",
+  "plot_db": "Miles Morales wurde von einer genetisch veränderten Spinne gebissen. Das macht ihn schnell zum neuen Spider-Man mit den bekannten Fähigkeiten. Aber Miles ist ein Teenager ohne Ahnung von der verantwortungsvollen Nutzung seiner eigenen Kräfte. Doch Hilfe naht, denn durch eine scheinbar zufällig auftretende Verkettung mehrerer Paralleluniversen trifft Miles auf Spider-Man aka Peter Parker und dieser unterweist ihn in den neuen Superkräften und überträgt ihm Verantwortung. Während beide einen Reifeprozess durchmachen, der eine als Schüler, der andere als Lehrer, treffen immer mehr Superhelden mit ähnlichen Kräften ein - ihre bösen Gegenspieler aber auch ..."
  },
  {
   "id": "sv2",
@@ -1785,7 +1868,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "After reuniting with Gwen Stacy, Brooklyn’s full-time, friendly neighborhood Spider-Man is catapulted across the Multiverse, where he encounters the Spider Society, a team of Spider-People charged with protecting the Multiverse's very existence. But when the heroes clash on how to handle a new threat, Miles finds himself pitted against the other Spiders and must set out on his own to save those he loves most."
+  "plot_en": "After reuniting with Gwen Stacy, Brooklyn’s full-time, friendly neighborhood Spider-Man is catapulted across the Multiverse, where he encounters the Spider Society, a team of Spider-People charged with protecting the Multiverse's very existence. But when the heroes clash on how to handle a new threat, Miles finds himself pitted against the other Spiders and must set out on his own to save those he loves most.",
+  "plot_db": "Brooklyns freundliche Spinne aus der Nachbarschaft ist zurück! Nachdem sich Miles Morales aka Spider-Man gerade erst an seine Rolle gewöhnt hat, wird er bereits in sein nächstes Abenteuer und quer durch das neu entdeckte Multiversum geschleudert. Um dessen Existenz zu schützen, muss sich Spider-Man zusammen mit Gwen Stacy und einem neuen Spider-Team einem Bösewicht stellen, der mächtiger ist als alles, was ihnen bisher begegnet ist. Nur mit vereinten Kräften ist es ihnen vielleicht möglich, die Welt zu retten. Doch welche ist die richtige Vorgehensweise, um der Bedrohung zu begegnen? Als die vielen Helden der Spider-People über diese Frage aneinander geraten, muss Miles seine eigene Rolle als Held neu definieren, um die Menschen zu retten, die er liebt."
  },
  {
   "id": "howard",
@@ -1805,7 +1889,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "A scientific experiment unknowingly brings extraterrestrial life forms to the Earth through a laser beam. First is the cigar-smoking drake, Howard, from the duck's planet. A few kids try to keep him from the greedy scientists and help him back to his planet, but then a much less friendly being arrives through the beam..."
+  "plot_en": "A scientific experiment unknowingly brings extraterrestrial life forms to the Earth through a laser beam. First is the cigar-smoking drake, Howard, from the duck's planet. A few kids try to keep him from the greedy scientists and help him back to his planet, but then a much less friendly being arrives through the beam...",
+  "plot_db": "Howard sitzt, gemütlich Zigarre paffend, vor dem Fernseher zuhause auf dem Entenplaneten. Doch plötzlich wirbelt es ihn durch den Weltraum. Wenig später landet er wieder im Sessel ? Der steht dieses Mal allerdings auf der Erde, im Hinterhof einer Punk-Bar in Cleveland. Der intelligente Enterich wundert sich weniger über den Lokalitätenwechsel als über die \"haarlosen Affen\", die etwas zurückgeblieben zu sein scheinen. Erst als die Rocksängerin Beverly auftaucht, findet Howard Gefallen an den Menschen. Doch unter allen Umständen will er zurück in seine Entenwelt. Der Wissenschaftler Dr. Jenning, dessen missglücktes Experiment für Howards Erdenbesuch verantwortlich ist, soll ihn mit seiner Laserkanone dorthin zurückbefördern. Doch etwas geht schief. Statt in seinem Fernsehsessel zu landen, si"
  },
  {
   "id": "blade1",
@@ -1825,7 +1910,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "The Daywalker known as \"Blade\" - a half-vampire, half-mortal man - becomes the protector of humanity against an underground army of vampires."
+  "plot_en": "The Daywalker known as \"Blade\" - a half-vampire, half-mortal man - becomes the protector of humanity against an underground army of vampires.",
+  "plot_db": "Der ultimative Vampirjäger, Blade, hat die Kräfte eines Unsterblichen, die Seele eines Menschen und das Herz eines Helden. Es ist seine Aufgabe, mit Hilfe seiner Stärken und seiner Waffen die menschliche Rasse vor der Auslöschung zu bewahren. Denn ihnen wurde vom Anführer der blutdurstigen Vampire, Deacon Frost, der Krieg erklärt. Frost glaubt, durch einen langen vergessenen Fluch die Erde buchstäblich in die Hölle verwandeln zu können. Blade und sein Mentor Whistler haben alle Hände voll zu tun, um Frost bei seinem Vorhaben aufzuhalten."
  },
  {
   "id": "blade2",
@@ -1845,7 +1931,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "Blade forms an uneasy alliance with the vampire council in order to combat the Reapers, who are feeding on vampires."
+  "plot_en": "Blade forms an uneasy alliance with the vampire council in order to combat the Reapers, who are feeding on vampires.",
+  "plot_db": "Der Daywalker Blade, halb Mensch, halb Vampir, wird nur von einem Ziel getrieben: Rache für den Fluch, der von Geburt an auf ihm lastet – und die Rettung der Menschheit vor einem blutigen Weltuntergang. In seinem neuen Action-Abenteuer muss Blade sich mit einem Team mächtiger Vampire verbünden, denn sie stehen einem Gegner gegenüber, der in seiner Boshaftigkeit alles Dagewesene in den Schatten stellt: ein neuer Super-Vampir, der sich vorgenommen hat, sowohl die Menschen als auch die Vampire vom Erdboden zu vertilgen…"
  },
  {
   "id": "blade3",
@@ -1865,7 +1952,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "For years, Blade has fought against the vampires in the cover of the night. But now, after falling into the crosshairs of the FBI, he is forced out into the daylight, where he is driven to join forces with a clan of human vampire hunters he never knew existed—The Nightstalkers. Together with Abigail and Hannibal, two deftly trained Nightstalkers, Blade follows a trail of blood to the ancient creature that is also hunting him—the original vampire, Dracula."
+  "plot_en": "For years, Blade has fought against the vampires in the cover of the night. But now, after falling into the crosshairs of the FBI, he is forced out into the daylight, where he is driven to join forces with a clan of human vampire hunters he never knew existed—The Nightstalkers. Together with Abigail and Hannibal, two deftly trained Nightstalkers, Blade follows a trail of blood to the ancient creature that is also hunting him—the original vampire, Dracula.",
+  "plot_db": "In Blade: Trinity bekommt es der Daywalker zum ersten Mal mit dem Vampir aller Vampire Drake alias Dracula zu tun. Dieser, gespielt von Prison Break – Star Dominic Purcell, wird von einer Gruppe Vampire aus seinem Grab befreit, mit dem Ziel sie alle zu Daywalkern zu transformieren. Nach Whistlers Tod muss Blade mit der Untergrundorganisation Nightstalker zusammen arbeiten, die auch in den Kampf gegen Vampire geht. Zu dieser gehört neben Whistlers Tochter Abigail auch der Draufgänger Hanibal King. Ziel der Gruppe ist es, mit dem von ihnen entwickelten Virus Day Star alle Vampire zu vernichten. Dafür brauchen sie jedoch als letztes Element einen Tropfen von Drakes Blut, der das Virus erst wirkungsvoll genug macht. Die Schlacht zwischen den Nightstalkern rund um Blade und den Vampiren beginnt"
  },
  {
   "id": "hulk03",
@@ -1885,7 +1973,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "Bruce Banner, a genetics researcher with a tragic past, suffers massive radiation exposure in his laboratory that causes him to transform into a raging green monster when he gets angry."
+  "plot_en": "Bruce Banner, a genetics researcher with a tragic past, suffers massive radiation exposure in his laboratory that causes him to transform into a raging green monster when he gets angry.",
+  "plot_db": "Der Forscher Dr. Bruce Banner mutiert als Folge eines fehlgeschlagenen Experiments zum zerstörerischen grünen Muskelberg, sobald er wütend wird. Während Kollegin Betty, mit der ihn mehr als nur die Arbeit verbindet, zu dem vermeintlichen Monster hält, hat der Hulk auch viele Feinde. Beispielsweise den fiesen Wissenschaftler Glenn Talbot, der die \"Kampfmaschine\" militärisch \"nützen\" will, General Ross, der sie \"ausschalten\" möchte, und natürlich Vater David, der Schuld daran trägt, dass Bruce zum Ungetüm wurde."
  },
  {
   "id": "daredevil03",
@@ -1906,7 +1995,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "A man blinded in a childhood accident fights crime using his superhumanly-elevated remaining senses."
+  "plot_en": "A man blinded in a childhood accident fights crime using his superhumanly-elevated remaining senses.",
+  "plot_db": "Anwalt Matt Murdock hatte keine einfache Kindheit: Zuerst verlor er sein Augenlicht bei einem Unfall mit radioaktiven Chemikalien und später wurde sein Vater von einem Unbekannten ermordet. Doch bei dem Unfall wurden Matts verbleibende Sinne auf übermenschliche Weise geschärft. Nun tritt er für die Gerechtigkeit ein: Tagsüber als Anwalt und nachts als kostümierter Rächer Daredevil, der freigesprochene Kriminelle heimsucht. Sein größer Gegenspieler ist der Gangsterboss Kingpin und Matt kann nicht verhindern, dass seine große Liebe Elektra Natchios in diesen Privatkrieg hineingezogen wird..."
  },
  {
   "id": "elektra05",
@@ -1926,7 +2016,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "Elektra the warrior survives a near-death experience, becomes an assassin-for-hire, and tries to protect her two latest targets, a single father and his young daughter, from a group of supernatural assassins."
+  "plot_en": "Elektra the warrior survives a near-death experience, becomes an assassin-for-hire, and tries to protect her two latest targets, a single father and his young daughter, from a group of supernatural assassins.",
+  "plot_db": "Sie ist schnell, durchtrainiert, perfekt - Elektra ist nach ihrem Beinahe-Tod in \"Daredevil\" nach wie vor die beste Auftragsmörderin der Welt. Man vergleicht sie mit einem tödlichen Phantom und keine kann so elegant mit Messern umgehen wie sie. Doch als Elektra die 13-jährige Abby und deren Vater Mark töten soll, bringt sie es nicht übers Herz, beschützt die beiden sogar vor einen Anschlag des dunklen Geheimbunds \"The Hand\". Ein gnadenloser Krieg zwischen Gut und Böse beginnt, bei dem Elektra all ihr Können und Wissen auf eine Karte setzen muss, um Mark und Abby zu retten..."
  },
  {
   "id": "punisher04",
@@ -1945,7 +2036,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "When undercover FBI agent Frank Castle's wife and son are slaughtered, he becomes 'the Punisher' -- a ruthless vigilante willing to go to any length to avenge his family."
+  "plot_en": "When undercover FBI agent Frank Castle's wife and son are slaughtered, he becomes 'the Punisher' -- a ruthless vigilante willing to go to any length to avenge his family.",
+  "plot_db": "Bei seinem letzten Undercovereinsatz als FBI-Special-Agent läuft es schlecht für Frank Castle, denn versehentlich wird ein junger Mann dabei getötet. Leider handelt es sich dabei um den Sohn des wohlhabenden Howard Saint, der dem Verantwortlichen daraufhin Rache schwört, denn hinter Saints Fassade lauert ein Magnat des Verbrechens. Dem beauftragten Killertrupp fällt dann auch Castles komplette Familie zum Opfer, er selbst überlebt schwer verletzt. Von dem Wunsch nach Vergeltung getrieben und mit schwerer Artillerie bewaffnet nimmt er die Tarnexistenz des \"Punisher\" an und beginnt, die Verantwortlichen aufzuspüren und auszulöschen, während er sich als Mensch schwertut, in menschliche Gesellschaft wieder hineinzuwachsen ..."
  },
  {
   "id": "ghostrider07",
@@ -1965,7 +2057,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "In order to save his dying father, young stunt cyclist Johnny Blaze sells his soul to Mephistopheles and sadly parts from the pure-hearted Roxanne Simpson, the love of his life. Years later, Johnny's path crosses again with Roxanne, now a go-getting reporter, and also with Mephistopheles, who offers to release Johnny's soul if Johnny becomes the fabled, fiery 'Ghost Rider'."
+  "plot_en": "In order to save his dying father, young stunt cyclist Johnny Blaze sells his soul to Mephistopheles and sadly parts from the pure-hearted Roxanne Simpson, the love of his life. Years later, Johnny's path crosses again with Roxanne, now a go-getting reporter, and also with Mephistopheles, who offers to release Johnny's soul if Johnny becomes the fabled, fiery 'Ghost Rider'.",
+  "plot_db": "Um seinen todkranken Vater zu retten, überschreibt der junge Motorradfahrer Johnny Blaze seine Seele Mephistopheles. Jahre später ist er zum gefeierten Stuntstar aufgestiegen, doch die Liebe seines Lebens, Roxanne, mußte er damals aufgeben. Doch eines Tages ist Roxanne, inzwischen Reporterin, wieder da - und Mephistopheles offeriert Blaze, die Möglichkeit, seine Seele zurückzugewinnen, wenn er als der Ghost Rider gegen den machthungrigen Sohn des Teufels, Blackheart antritt, der eine neue Hölle auf Erden errichten will. Ghost Riders Zeichen ist eine höllische Maschine und ein Gesicht, das einem flammenden Totenschädel gleicht..."
  },
  {
   "id": "ghostrider12",
@@ -1984,7 +2077,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "When the devil resurfaces with aims to take over the world in human form, Johnny Blaze reluctantly comes out of hiding to transform into the flame-spewing supernatural hero Ghost Rider -- and rescue a 10-year-old boy from an unsavory end."
+  "plot_en": "When the devil resurfaces with aims to take over the world in human form, Johnny Blaze reluctantly comes out of hiding to transform into the flame-spewing supernatural hero Ghost Rider -- and rescue a 10-year-old boy from an unsavory end.",
+  "plot_db": "Vom Teufel persönlich aufs Kreuz gelegt – Eigentlich wollte der junge Johnny Blaze nur seinen Vater retten, doch statt dessen wurde er zu einem machtvollen Diener des Teufels. Nur mit Mühe hat er es geschafft, dem Teufel zu entkommen und versteckt sich nun seit Jahren in Osteuropa – immer darum bemüht ihm nicht nachzugeben, dem Ghost Rider: Spirit of Vengeance. Doch der Teufel hat vor, mithilfe des jungen Danny in neuer Gestalt auf Erden zu wandeln, weshalb eine Sekte Johnny Blaze bittet, als Ghost Rider wieder auf sein brennendes Motorad zu steigen. Johnny ist gezwungen, wieder seinen inneren Dämon zu wecken. Doch wird er ihn unter Kontrolle halten können?"
  },
  {
   "id": "dd1",
@@ -2005,7 +2099,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "Lawyer-by-day Matt Murdock uses his heightened senses from being blinded as a young boy to fight crime at night on the streets of Hell’s Kitchen as Daredevil."
+  "plot_en": "Lawyer-by-day Matt Murdock uses his heightened senses from being blinded as a young boy to fight crime at night on the streets of Hell’s Kitchen as Daredevil.",
+  "plot_db": "Der als Kind erblindete Matt Murdock kämpft im New Yorker Stadtteil Hell's Kitchen gegen Unrecht und Verbrechen – tagsüber als Anwalt, nachts als Superheld Daredevil."
  },
  {
   "id": "jj",
@@ -2025,7 +2120,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "After a tragic ending to her short-lived super hero stint, Jessica Jones is rebuilding her personal life and career as a detective who gets pulled into cases involving people with extraordinary abilities in New York City."
+  "plot_en": "After a tragic ending to her short-lived super hero stint, Jessica Jones is rebuilding her personal life and career as a detective who gets pulled into cases involving people with extraordinary abilities in New York City.",
+  "plot_db": "Nach dem tragischen Ende ihrer Superheldenkarriere versucht sich Jessica Jones als Privtadetektivin in New York, wo sie immer wieder mit Menschen mit außergewöhnlichen Fähigkeiten in Kontakt kommt."
  },
  {
   "id": "lc",
@@ -2045,7 +2141,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "Given superstrength and durability by a sabotaged experiment, a wrongly accused man escapes prison to become a superhero for hire."
+  "plot_en": "Given superstrength and durability by a sabotaged experiment, a wrongly accused man escapes prison to become a superhero for hire.",
+  "plot_db": "Ein sabotiertes Experiment verleiht Luke Cage übermenschliche Stärke und eine undurchdringbare Haut. Er versucht im heutigen Harlem sein Leben wieder auf die Reihe zu bekommen, allerdings wird er aus dem Schatten geschreckt und muss für das Herz seiner Stadt kämpfen. Sein Freund und Arbeitgeber Pop wird aus Versehen von einem Gangster erschossen, der den Gangsterboss Cornell „Cottonmouth“ Stokes beeindrucken will. Luke nimmt den Kampf gegen den Gangsterboss und dessen korrupte Cousine auf. Bei diesem Kampf muss er sich seiner Vergangenheit stellen, welche er zu vergessen versuchte."
  },
  {
   "id": "if1",
@@ -2064,7 +2161,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "Danny Rand resurfaces 15 years after being presumed dead. Now, with the power of the Iron Fist, he seeks to reclaim his past and fulfill his destiny."
+  "plot_en": "Danny Rand resurfaces 15 years after being presumed dead. Now, with the power of the Iron Fist, he seeks to reclaim his past and fulfill his destiny.",
+  "plot_db": "Danny Rand taucht 15 Jahre nach seinem vermeintlichen Tod wieder auf. Als „Iron Fist“ kämpft er nun für seine Vergangenheit und die Erfüllung seines Schicksals."
  },
  {
   "id": "pun",
@@ -2084,7 +2182,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "A former Marine out to punish the criminals responsible for his family's murder finds himself ensnared in a military conspiracy."
+  "plot_en": "A former Marine out to punish the criminals responsible for his family's murder finds himself ensnared in a military conspiracy.",
+  "plot_db": "Ein ehemaliger Marine befindet sich auf einem Rachefeldzug gegen die Mörder seiner Familie und wird in eine militärische Verschwörung hineingezogen."
  },
  {
   "id": "def",
@@ -2105,7 +2204,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "Daredevil, Jessica Jones, Luke Cage and Iron Fist join forces to take on common enemies as a sinister conspiracy threatens New York City."
+  "plot_en": "Daredevil, Jessica Jones, Luke Cage and Iron Fist join forces to take on common enemies as a sinister conspiracy threatens New York City.",
+  "plot_db": "New York City wird von einer bösen Verschwörung in Atem gehalten. Doch Daredevil, Jessica Jones, Luke Cage und Iron Fist stellen sich der Bedrohung mit vereinten Kräften."
  },
  {
   "id": "agentcarter",
@@ -2124,7 +2224,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "It's 1946, and peace has dealt Peggy Carter a serious blow as she finds herself marginalized when the men return home from fighting abroad. Working for the covert SSR (Strategic Scientific Reserve), Peggy must balance doing administrative work and going on secret missions for Howard Stark all while trying to navigate life as a single woman in America, in the wake of losing the love of her life - Steve Rogers."
+  "plot_en": "It's 1946, and peace has dealt Peggy Carter a serious blow as she finds herself marginalized when the men return home from fighting abroad. Working for the covert SSR (Strategic Scientific Reserve), Peggy must balance doing administrative work and going on secret missions for Howard Stark all while trying to navigate life as a single woman in America, in the wake of losing the love of her life - Steve Rogers.",
+  "plot_db": "New York, 1946: Top-Agentin Peggy Carter hat noch immer mit dem Verlust von Steve Rogers alias Captain America zu kämpfen. Zudem wird sie seit Ende des Krieges nur noch mit anspruchslosen Verwaltungsaufgaben betreut - bis ihr alter Bekannter Howard Stark auftaucht und durch den Verkauf von hochentwickelten tödlichen Waffen in Schwierigkeiten gerät. Nun muss Peggy mit Hilfe von Edwin Jarvis als geheime Doppelagentin arbeiten, um eine Massenvernichtung zu verhindern und Starks Namen reinzuwaschen. Danach macht sich Peggy nach Hollywood auf, um einen rätselhaften Fall zu lösen: in einem gefrorenen See wurde eine Leiche entdeckt... während einer Hitzewelle! Schließlich stellt sich heraus, dass (das Unternehmen) Isodyne Energy hinter dem mysteriösen Phänomen steckt. Beim Aufdecken der Verschwör"
  },
  {
   "id": "aos",
@@ -2144,7 +2245,8 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "Agent Phil Coulson of S.H.I.E.L.D. (Strategic Homeland Intervention, Enforcement and Logistics Division) puts together a team of agents to investigate the new, the strange and the unknown around the globe, protecting the ordinary from the extraordinary."
+  "plot_en": "Agent Phil Coulson of S.H.I.E.L.D. (Strategic Homeland Intervention, Enforcement and Logistics Division) puts together a team of agents to investigate the new, the strange and the unknown around the globe, protecting the ordinary from the extraordinary.",
+  "plot_db": "Marvel’s Agents of S.H.I.E.L.D. ist eine US-amerikanische Fernsehserie, die Teil des Marvel Cinematic Universe ist. Sie wurde von den Brüdern Joss und Jed Whedon und Maurissa Tancharoen entwickelt und handelt von der fiktiven Marvel-Geheimdienstorganisation S.H.I.E.L.D., deren Hauptfigur der von Clark Gregg gespielte Phil Coulson ist."
  },
  {
   "id": "inhumans",
@@ -2163,6 +2265,7 @@
   "chrono": 0,
   "prio": null,
   "note": null,
-  "plot_en": "After the Royal Family of Inhumans is splintered by a military coup, they barely escape to Hawaii where their surprising interactions with the lush world and humanity around them may prove to not only save them, but Earth itself."
+  "plot_en": "After the Royal Family of Inhumans is splintered by a military coup, they barely escape to Hawaii where their surprising interactions with the lush world and humanity around them may prove to not only save them, but Earth itself.",
+  "plot_db": "Die Handlung dreht sich um eine Superhelden-Gruppe, die königliche Inhumans-Familie, die ihren Heimatplaneten verlassen muss und den Kampf gegen die bösen Mächte der Finsternis aufnimmt."
  }
 ]

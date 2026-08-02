@@ -35,7 +35,7 @@ const T = {
     days: "Tage", radar_last: "Zuletzt erschienen", radar_now: "● Jetzt im Kino", radar_next: "Als Nächstes",
     event_k: "· Das Event ·", event_cta: "Zum Event-Hub ➤", news: "Neuigkeiten", dive: "Direkt eintauchen",
     watch: "Als gesehen markieren", watched: "✓ Gesehen", trailer: "Trailer ansehen", trailer_s: "öffnet YouTube in neuem Tab",
-    plot: "Worum es geht", cast: "Besetzung", cast_more: "Weitere Besetzung", figures: "Wichtige Figuren", trivia: "Trivia & Hintergrund",
+    plot: "Worum es geht", note_lbl: "Knowhere-Einordnung", cast: "Besetzung", cast_more: "Weitere Besetzung", figures: "Wichtige Figuren", trivia: "Trivia & Hintergrund",
     pc: "Post-Credit-Szenen", pc_none: "Keine (nennenswerte) Post-Credit-Szene verzeichnet.", pc_to: "Führt zu:",
     cameo: "🥸 Stan-Lee-Cameo", doom_note: "Bedeutung für Doomsday", to_event: "Zum Doomsday-Event-Hub →",
     where: "Wo schauen", asof: "Stand 08/2026", back: "← Zurück", phase: "Phase",
@@ -58,7 +58,7 @@ const T = {
     days: "Days", radar_last: "Recently released", radar_now: "● In theaters now", radar_next: "Up next",
     event_k: "· The Event ·", event_cta: "Enter the Event Hub ➤", news: "News", dive: "Dive in",
     watch: "Mark as watched", watched: "✓ Watched", trailer: "Watch the trailer", trailer_s: "opens YouTube in a new tab",
-    plot: "The story", cast: "Cast", cast_more: "More cast", figures: "Key characters", trivia: "Trivia & background",
+    plot: "The story", note_lbl: "Knowhere notes", cast: "Cast", cast_more: "More cast", figures: "Key characters", trivia: "Trivia & background",
     pc: "Post-credit scenes", pc_none: "No (notable) post-credit scene on record.", pc_to: "Leads to:",
     cameo: "🥸 Stan Lee cameo", doom_note: "Why it matters for Doomsday", to_event: "To the Doomsday event hub →",
     where: "Where to watch", asof: "as of 08/2026", back: "← Back", phase: "Phase",
@@ -299,7 +299,13 @@ function filmBody(f, lang) {
     (d.cert ? `<div class="fact-box"><div class="fb-k">FSK</div><div class="fb-v">ab ${esc(d.cert)}</div></div>` : "") +
     (d.budget ? `<div class="fact-box"><div class="fb-k">Budget</div><div class="fb-v">${fmtMoney(d.budget)}</div></div>` : "") +
     (d.revenue ? `<div class="fact-box"><div class="fb-k">${lang === "de" ? "Einspielergebnis" : "Box office"}</div><div class="fb-v">${fmtMoney(d.revenue)}</div></div>` : "") + `</div>` : ""}
-  <div class="fp-section"><div class="fp-label">${L.plot}</div><p>${esc(tr(f, "plot", lang))}</p></div>
+  ${(() => {
+    const db = lang === "en" ? f.plot_en : f.plot_db;
+    const main = db || tr(f, "plot", lang);
+    const note = lang === "de" && db && f.plot ? f.plot : null;
+    return `<div class="fp-section"><div class="fp-label">${L.plot}</div><p>${esc(main)}</p></div>` +
+      (note ? `<div class="fp-section"><div class="fp-label">${L.note_lbl}</div><p>${esc(note)}</p></div>` : "");
+  })()}
   ${inFilm.length ? `<div class="fp-section"><div class="fp-label">${L.figures}</div><div class="fp-chars">` +
     inFilm.map((c) => `<a class="fp-char" href="${prefix}${charUrl(c.id)}">${charImg(c.id, c.n, "fc-img")}<div class="fc-n">${esc(c.n)}</div><div class="fc-a">${esc(c.act.split("·")[0].split("(")[0].trim())}</div></a>`).join("") + `</div>` +
     (restCast.length ? `<details class="more-cast"><summary>${L.cast_more} · ${restCast.length}</summary><div class="fp-chars">${restHtml}</div></details>` : "") + `</div>`
