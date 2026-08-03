@@ -39,7 +39,7 @@ const relN = (t, lang) => (lang === "en" ? REL_NAME_EN[t] : REL_NAME[t]);
 const T = {
   de: {
     langName: "Deutsch", other: "English", tagline: "Das Marvel-Fanarchiv aller Universen",
-    nav: { home: "Start", films: "Filme & Serien", chars: "Charaktere", teams: "Teams & Organisationen", multi: "Multiversum", arts: "Artefakte", paths: "Pfade", records: "Rekorde", chron: "Chronik", threads: "Offene Fäden", lex: "Lexikon", faq: "FAQ", db: "Datenbank", know: "Wissen", games: "Spiele", tier: "Tier-List", actors: "Schauspieler", places: "Orte & Welten", peoples: "Völker & Spezies", event: "★ Doomsday" },
+    nav: { home: "Start", films: "Filme & Serien", chars: "Charaktere", teams: "Teams & Organisationen", multi: "Multiversum", arts: "Artefakte", paths: "Pfade", records: "Rekorde", chron: "Chronik", threads: "Offene Fäden", lex: "Lexikon", faq: "FAQ", db: "Datenbank", know: "Wissen", games: "Spiele", tier: "Tier-List", quotes: "Zitate", roadmap: "Roadmap", grave: "Der Friedhof", actors: "Schauspieler", places: "Orte & Welten", peoples: "Völker & Spezies", event: "★ Doomsday" },
     spoiler_off: "Spoiler: aus", search_ph: "Suche …",
     home_sub: "Von Iron Man bis Doomsday: Filme, Serien, Charaktere und die ganze Lore — quer durch alle Marvel-Universen.",
     home_desc: "Marvel Hub: das Fan-Wiki über alle Marvel-Film-Universen — MCU, X-Men, Sony, Klassiker und TV-Ära. Mit Doomsday-Countdown, Watchlist, Charakteren, Teams und Lore.",
@@ -62,7 +62,7 @@ const T = {
   },
   en: {
     langName: "English", other: "Deutsch", tagline: "The Marvel fan archive of every universe",
-    nav: { home: "Home", films: "Films & Shows", chars: "Characters", teams: "Teams & orgs", multi: "Multiverse", arts: "Artifacts", paths: "Storylines", records: "Records", chron: "Timeline", threads: "Loose Ends", lex: "Lexicon", faq: "FAQ", db: "Database", know: "Knowledge", games: "Games", tier: "Tier list", actors: "Actors", places: "Places & worlds", peoples: "Peoples & species", event: "★ Doomsday" },
+    nav: { home: "Home", films: "Films & Shows", chars: "Characters", teams: "Teams & orgs", multi: "Multiverse", arts: "Artifacts", paths: "Storylines", records: "Records", chron: "Timeline", threads: "Loose Ends", lex: "Lexicon", faq: "FAQ", db: "Database", know: "Knowledge", games: "Games", tier: "Tier list", quotes: "Quotes", roadmap: "Roadmap", grave: "The Graveyard", actors: "Actors", places: "Places & worlds", peoples: "Peoples & species", event: "★ Doomsday" },
     spoiler_off: "Spoilers: off", search_ph: "Search …",
     home_sub: "From Iron Man to Doomsday: films, shows, characters and all the lore — across every Marvel universe. (Article texts are German-first for now.)",
     home_desc: "Marvel Hub: the fan wiki covering every Marvel movie universe — MCU, X-Men, Sony, classics and the TV era. With Doomsday countdown, watchlist, characters, teams and lore.",
@@ -147,6 +147,13 @@ const COMICS = existsSync("site/data/comics.json") ? JSON.parse(readFileSync("si
 const SONGS = existsSync("site/data/songs.json") ? JSON.parse(readFileSync("site/data/songs.json", "utf8")) : {};
 const COMPOSERS = existsSync("site/data/composers.json") ? JSON.parse(readFileSync("site/data/composers.json", "utf8")) : {};
 const GAMES = existsSync("site/data/games.json") ? JSON.parse(readFileSync("site/data/games.json", "utf8")) : [];
+const GRAVEYARD = existsSync("site/data/graveyard.json") ? JSON.parse(readFileSync("site/data/graveyard.json", "utf8")) : [];
+const ROADMAP = existsSync("site/data/roadmap.json") ? JSON.parse(readFileSync("site/data/roadmap.json", "utf8")) : [];
+const QUOTES = existsSync("site/data/quotes.json") ? JSON.parse(readFileSync("site/data/quotes.json", "utf8")) : [];
+const MULTIROLE = existsSync("site/data/multirole.json") ? JSON.parse(readFileSync("site/data/multirole.json", "utf8")) : [];
+const EGGS = existsSync("site/data/eggs.json") ? JSON.parse(readFileSync("site/data/eggs.json", "utf8")) : {};
+const LOCATIONS = existsSync("site/data/locations.json") ? JSON.parse(readFileSync("site/data/locations.json", "utf8")) : {};
+const pairL = (arr, lang) => arr.map((p2) => (lang === "en" && p2[1] ? p2[1] : p2[0]));
 
 /* Englische Übersetzungen (site/i18n/*.json) in die Datenobjekte mischen — tr() greift auf die _en-Felder zu */
 const I18N = (n) => (existsSync(`site/i18n/${n}.json`) ? JSON.parse(readFileSync(`site/i18n/${n}.json`, "utf8")) : {});
@@ -227,7 +234,7 @@ function page({ lang, path, title, desc, ogImage, body, dataPage, jsonld, noinde
     return `<a href="${prefix}${p}"${cls.length ? ` class="${cls.join(" ")}"` : ""}>${L.nav[k]}</a>`;
   };
   const dbItems = [["films", "/filme/"], ["chars", "/charaktere/"], ["actors", "/schauspieler/"], ["teams", "/teams/"], ["arts", "/artefakte/"], ["places", "/orte/"], ["peoples", "/voelker/"]];
-  const knowItems = [["chron", "/chronik/"], ["paths", "/pfade/"], ["threads", "/faeden/"], ["lex", "/lexikon/"], ["games", "/spiele/"], ["tier", "/tierlist/"], ["records", "/rekorde/"], ["faq", "/faq/"]];
+  const knowItems = [["chron", "/chronik/"], ["paths", "/pfade/"], ["threads", "/faeden/"], ["lex", "/lexikon/"], ["games", "/spiele/"], ["tier", "/tierlist/"], ["quotes", "/zitate/"], ["roadmap", "/roadmap/"], ["grave", "/friedhof/"], ["records", "/rekorde/"], ["faq", "/faq/"]];
   const drop = (label, items) => {
     const act = items.some(([, p]) => isActive(p));
     return `<div class="nav-drop${act ? " child-active" : ""}"><button class="nav-drop-btn${act ? " active" : ""}" aria-haspopup="true" aria-expanded="false">${label} <span class="nd-arr">▾</span></button><div class="nav-drop-menu">${items.map(([k, p]) => navLink(k, p)).join("")}</div></div>`;
@@ -376,6 +383,8 @@ function filmBody(f, lang) {
     ? `<div class="fp-section"><div class="fp-label">${L.cast}</div><div class="fp-chars">${restHtml}</div></div>`
     : `<div class="fp-section"><div class="fp-label">${L.cast}</div><p>${f.cast.map(esc).join(" · ")}</p></div>`}
   ${TRIVIA[id] ? `<div class="fp-section"><div class="fp-label">${L.trivia}</div><ul>${trivL(id, lang).map((t) => `<li>${esc(t)}</li>`).join("")}</ul></div>` : ""}
+  ${EGGS[id] ? `<div class="fp-section"><div class="fp-label">${lang === "de" ? "🥚 Easter Eggs & Referenzen" : "🥚 Easter eggs & references"}</div><ul>${pairL(EGGS[id], lang).map((t) => `<li>${esc(t)}</li>`).join("")}</ul></div>` : ""}
+  ${LOCATIONS[id] ? `<div class="fp-section"><div class="fp-label">${lang === "de" ? "📍 Drehorte" : "📍 Filming locations"}</div><ul>${pairL(LOCATIONS[id], lang).map((t) => `<li>${esc(t)}</li>`).join("")}</ul></div>` : ""}
   ${(x.gal || (x.videos && x.videos.length)) ? `<div class="fp-section"><div class="fp-label">${lang === "de" ? "Galerie & Videos" : "Gallery & videos"}</div><div class="gal">` +
     (x.gal ? Array.from({ length: x.gal }, (_, i) => `<button class="glight gal-item" data-img="/img/g/${id}-${i}.jpg" aria-label="Bild ${i + 1}"><img src="/img/g/${id}-${i}.jpg" alt="" loading="lazy"></button>`).join("") : "") +
     (x.videos || []).filter((v) => v.k !== TRAILERS[id]).slice(0, 4).map((v) => `<button class="glight gal-item gal-video" data-yt="${v.k}" aria-label="${esc(v.n)}"><img src="https://i.ytimg.com/vi/${v.k}/hqdefault.jpg" alt="" loading="lazy"><span class="gv-play">▶</span><span class="gv-t">${esc(v.t)}</span></button>`).join("") +
@@ -439,6 +448,15 @@ function charBody(c, lang) {
   <div class="fp-section"><div class="fp-label">${L.who}</div><p>${esc(tr(c, "bio", lang))}</p></div>
   ${ts.length ? `<div class="fp-section"><div class="fp-label">${L.teams_lbl}</div><div class="ext-links">` +
     ts.map((t) => `<a href="${prefix}${teamUrl(t.id)}">${esc(tr(t, "n", lang))}${t.lead === c.id ? " ★" : ""}</a>`).join("") + `</div></div>` : ""}
+  ${(() => {
+    const mr = MULTIROLE.find((m) => m.roles.some((r) => r.c === c.id) && m.roles.length > 1);
+    if (!mr) return "";
+    const other = mr.roles.filter((r) => r.c !== c.id);
+    return `<div class="fp-section"><div class="fp-label">${lang === "de" ? "🎭 Doppelleben" : "🎭 Double life"}</div><p>${esc(mr.actor)} ${lang === "de" ? "spielt im Marvel-Kosmos außerdem" : "also plays"}: ${other.map((r) => {
+      const href = r.c && CSLUG[r.c] ? `${prefix}${charUrl(r.c)}` : r.f && FSLUG[r.f] ? `${prefix}${filmUrl(r.f)}` : null;
+      return href ? `<a href="${href}" style="text-decoration:underline">${esc(r.r)}</a>` : esc(r.r);
+    }).join(", ")}${lang === "de" ? "." : "."} ${esc(tr(mr, "d", lang))}</p></div>`;
+  })()}
   ${vGroup ? `<div class="fp-section"><div class="fp-label">${L.variants} · ${esc(tr(vGroup, "n", lang))}</div><p style="font-size:13.5px;color:var(--muted);margin-bottom:12px">${esc(tr(vGroup, "note", lang))}</p><div class="fp-chars">` +
     vGroup.ids.filter((x) => x !== c.id).map((oid) => `<a class="fp-char" href="${prefix}${charUrl(oid)}">${charImg(oid, charById[oid].n, "fc-img")}<div class="fc-n">${esc(charById[oid].n)}</div></a>`).join("") + `</div></div>` : ""}
   ${netData ? `<div class="fp-section"><div class="fp-label">${L.net}</div><canvas id="miniNet"></canvas>
@@ -859,6 +877,7 @@ function homeBody(lang) {
     film: FILMS.filter((f) => f.prio !== "future").map((f) => ({ t: f.t, u: prefix + filmUrl(f.id), i: `/img/p/${f.id}.jpg`, s: `${f.y} · ${uniL(f.uni, lang)}` })),
     char: CHARS.map((c) => ({ t: c.n, u: prefix + charUrl(c.id), i: existsSync(`public/img/c/${c.id}.jpg`) ? `/img/c/${c.id}.jpg` : null, s: c.act.split("·")[0].trim() })),
     lex: LEXIKON.map((e) => ({ t: tr(e, "n", lang), u: prefix + lexUrl(e), i: null, s: tr(e, "sub", lang) || (de ? "Lexikon" : "Lexicon") })),
+    quote: QUOTES.filter((q) => q.f && byId[q.f]).map((q) => ({ t: de ? `„${q.q}“` : `“${q.q}”`, u: prefix + filmUrl(q.f), i: null, s: `${q.by} · ${byId[q.f].t}` })),
     anniversaries: FILMS.filter((f) => DETAILS[f.id] && DETAILS[f.id].deDate).map((f) => ({ d: DETAILS[f.id].deDate, t: f.t, u: prefix + filmUrl(f.id), i: `/img/p/${f.id}.jpg` })),
   };
   return `<header class="hub-hero">
@@ -888,6 +907,7 @@ function homeBody(lang) {
           <a class="daily-card" data-kind="film" href="#"><span class="daily-k">${de ? "Film des Tages" : "Film of the day"}</span><img alt="" hidden><b></b><small></small></a>
           <a class="daily-card" data-kind="char" href="#"><span class="daily-k">${de ? "Charakter des Tages" : "Character of the day"}</span><img alt="" hidden><b></b><small></small></a>
           <a class="daily-card" data-kind="lex" href="#"><span class="daily-k">${de ? "Begriff des Tages" : "Term of the day"}</span><img alt="" hidden><b></b><small></small></a>
+          <a class="daily-card" data-kind="quote" href="#"><span class="daily-k">${de ? "Zitat des Tages" : "Quote of the day"}</span><img alt="" hidden><b></b><small></small></a>
         </div>
       </section>
       <section>
@@ -979,6 +999,17 @@ for (const lang of LANGS) {
     </div>
   </div>
   ${p.bio ? `<div class="fp-section"><div class="fp-label">${lang === "de" ? "Biografie" : "Biography"}</div><p>${esc(tr(p, "bio", lang))}${tr(p, "bio", lang).length >= 700 ? " …" : ""}</p></div>` : ""}
+  ${(() => {
+    const mr = MULTIROLE.find((m) => m.actor === p.n);
+    if (!mr || mr.roles.length < 2) return "";
+    return `<div class="fp-section"><div class="fp-label">${lang === "de" ? "🎭 Mehrfachrollen im Marvel-Kosmos" : "🎭 Multiple Marvel roles"}</div>
+      <p style="margin-bottom:10px">${esc(tr(mr, "d", lang))}</p>
+      <div class="ext-links">${mr.roles.map((r) => {
+        const href = r.c && CSLUG[r.c] ? `${prefix}${charUrl(r.c)}` : r.f && FSLUG[r.f] ? `${prefix}${filmUrl(r.f)}` : null;
+        const label = `${esc(r.r)}${r.note ? ` · ${esc(r.note)}` : ""}`;
+        return href ? `<a href="${href}">${label}</a>` : `<span class="ext-links-static">${label}</span>`;
+      }).join("")}</div></div>`;
+  })()}
   ${wikiChars.length ? `<div class="fp-section"><div class="fp-label">${lang === "de" ? "Figuren im Wiki" : "Characters in the wiki"}</div><div class="fp-chars">${wikiChars.map((c) => `<a class="fp-char" href="${prefix}${charUrl(c.id)}">${charImg(c.id, c.n, "fc-img")}<div class="fc-n">${esc(c.n)}</div></a>`).join("")}</div></div>` : ""}
   ${filmo.length ? `<div class="fp-section"><div class="fp-label">${lang === "de" ? "Im Marvel-Kosmos" : "In the Marvel universe"} · ${filmo.length}</div><div class="cp-films">${filmo.map(({ f, role }) => `<a class="radar-film" href="${prefix}${filmUrl(f.id)}" title="${esc(f.t)}">${posterImgW(f.id, f.t)}<div class="rf-t">${esc(f.t)}</div><div class="rf-d">${esc(role)}</div></a>`).join("")}</div></div>` : ""}
 </main>`;
@@ -1143,6 +1174,56 @@ for (const lang of LANGS) {
   }
 }
 
+/* Friedhof, Roadmap, Zitate */
+for (const lang of LANGS) {
+  const de = lang === "de";
+  const prefix = lang === "en" ? "/en" : "";
+
+  const graveBody = `<main class="wrap" style="padding:50px 22px 60px;max-width:900px">
+  ${secHead(de ? "Was fast passiert wäre" : "What almost happened", de ? "Der Friedhof" : "The Graveyard", de ? "Gecancelte Filme, beerdigte Serien, verlorene Visionen — die Marvel-Geschichte, die nie ins Kino kam. Jede Grabstelle mit dem, was von ihr übrig blieb." : "Canceled films, buried shows, lost visions — the Marvel history that never reached theaters. Every grave with what remained of it.")}
+  ${GRAVEYARD.map((e) => `<div class="grave-card" id="${e.id}">
+    <div class="grave-head"><div><div class="grave-t">${esc(e.t)}</div><div class="grave-y">${esc(e.y)} · ${esc(tr(e, "status", lang))}</div></div><div class="grave-cross metal">✝</div></div>
+    <div class="grave-sub">${esc(tr(e, "sub", lang))}</div>
+    <p>${esc(tr(e, "d", lang))}</p>
+    <div class="grave-legacy"><b>${de ? "Was blieb:" : "What remained:"}</b> ${esc(tr(e, "legacy", lang))}</div>
+  </div>`).join("")}
+  ${adSlot(T[lang])}
+</main>`;
+  emit(lang, "/friedhof/", page({ lang, path: "/friedhof/", title: (de ? "Der Friedhof: Marvels gecancelte Filme & Projekte" : "The Graveyard: Marvel's canceled films & projects") + " · Knowhere", desc: de ? "Raimis Spider-Man 4, Edgar Wrights Ant-Man, die Sinister Six, Kang Dynasty: alle gecancelten Marvel-Projekte — und was von ihnen überlebte." : "Raimi's Spider-Man 4, Edgar Wright's Ant-Man, the Sinister Six, Kang Dynasty: every canceled Marvel project — and what survived of them.", dataPage: "grave", body: graveBody }));
+
+  const RM_STATUS = de
+    ? { fix: ["Termin steht", "st-fix"], sicher: ["kommt sicher", "st-sicher"], wackelt: ["wackelt", "st-wackel"], geruecht: ["Gerücht", "st-ger"] }
+    : { fix: ["date locked", "st-fix"], sicher: ["definitely coming", "st-sicher"], wackelt: ["shaky", "st-wackel"], geruecht: ["rumor", "st-ger"] };
+  const roadmapBody = `<main class="wrap" style="padding:50px 22px 60px;max-width:900px">
+  ${secHead(de ? "Was als Nächstes kommt" : "What comes next", de ? "Roadmap & Gerüchteküche" : "Roadmap & Rumor Mill", de ? "Alles Angekündigte, alles Wahrscheinliche und die heißesten Gerüchte — mit ehrlicher Status-Ampel. Wird nach jeder Marvel-Ankündigung aktualisiert." : "Everything announced, everything likely and the hottest rumors — with an honest status light. Updated after every Marvel announcement.")}
+  <div class="rm-legend">${Object.values(RM_STATUS).map(([l, c]) => `<span><i class="rm-dot ${c}"></i> ${l}</span>`).join("")}</div>
+  ${ROADMAP.map((e) => `<div class="rm-row">
+    <div class="rm-main"><div class="rm-t">${esc(e.t)} <span class="rm-type">${esc(tr(e, "type", lang))}</span></div>
+    <div class="rm-w"><i class="rm-dot ${RM_STATUS[e.status][1]}"></i> ${esc(tr(e, "w", lang))} · ${RM_STATUS[e.status][0]}</div>
+    <p>${esc(tr(e, "d", lang))}</p>
+    ${e.rel && byId[e.rel] ? `<a class="rm-rel" href="${prefix}${filmUrl(e.rel)}">→ ${esc(byId[e.rel].t)}</a>` : ""}</div>
+  </div>`).join("")}
+  ${adSlot(T[lang])}
+</main>`;
+  emit(lang, "/roadmap/", page({ lang, path: "/roadmap/", title: (de ? "Marvel-Roadmap: alle kommenden Filme, Serien & Gerüchte" : "Marvel roadmap: every upcoming film, series & rumor") + " · Knowhere", desc: de ? "Von Doomsday über Secret Wars bis zum X-Men-Neustart: alle kommenden Marvel-Projekte und die heißesten Gerüchte mit Status-Einschätzung." : "From Doomsday through Secret Wars to the X-Men reboot: every upcoming Marvel project and the hottest rumors, with status ratings.", dataPage: "roadmap", body: roadmapBody }));
+
+  const quotesBody = `<main class="wrap" style="padding:50px 22px 60px">
+  ${secHead(de ? "Sätze, die blieben" : "Lines that stayed", de ? "Das Zitate-Archiv" : "The Quote Archive", de ? QUOTES.length + " ikonische Zeilen im Original — mit Sprecher:in und Film. Eines davon steht jeden Tag auf der Startseite." : QUOTES.length + " iconic lines in the original — with speaker and film. One of them is on the homepage every day.")}
+  <div class="wiki-tools"><input class="wiki-search" id="quoteSearch" type="search" placeholder="${de ? "Zitat, Figur oder Film suchen …" : "Search quote, character or film …"}"></div>
+  <div class="q-grid" id="quoteGrid">${QUOTES.map((q) => {
+    const f = q.f && byId[q.f];
+    const note = lang === "en" ? q.n_en : q.n;
+    return `<div class="q-card" data-t="${esc((q.q + " " + q.by + " " + (f ? f.t : "")).toLowerCase())}">
+    <div class="q-text">${de ? "„" : "“"}${esc(q.q)}${de ? "“" : "”"}</div>
+    <div class="q-by">— ${q.c && CSLUG[q.c] ? `<a href="${prefix}${charUrl(q.c)}">${esc(q.by)}</a>` : esc(q.by)}${f ? ` · <a href="${prefix}${filmUrl(q.f)}">${esc(f.t)}</a>` : ""}</div>
+    ${note ? `<div class="q-note">${esc(note)}</div>` : ""}
+  </div>`;
+  }).join("")}</div>
+  ${adSlot(T[lang])}
+</main>`;
+  emit(lang, "/zitate/", page({ lang, path: "/zitate/", title: (de ? "Marvel-Zitate: die ikonischen Zeilen des Franchise" : "Marvel quotes: the franchise's iconic lines") + " · Knowhere", desc: de ? `${QUOTES.length} ikonische Marvel-Zitate von „I am Iron Man" bis „New mask, same task" — durchsuchbar, mit Figur und Film.` : `${QUOTES.length} iconic Marvel quotes from 'I am Iron Man' to 'New mask, same task' — searchable, with character and film.`, dataPage: "quotes", body: quotesBody }));
+}
+
 /* Lexikon & FAQ */
 const LEX_CATS = { ereignis: ["Ereignisse", "Events"], konzept: ["Konzepte & Kräfte", "Concepts & powers"] };
 function lexikonBody(lang) {
@@ -1257,6 +1338,7 @@ for (const lang of LANGS) {
     ...Object.entries(PERSONS).map(([pid, p]) => ({ t: p.n, s: en ? "Actor" : "Schauspieler:in", u: personUrl(pid), i: existsSync(`public/img/a/${pid}.jpg`) ? `/img/a/${pid}.jpg` : null, k: "c", q: p.n.toLowerCase() })),
     ...LEXIKON.map((e) => ({ t: tr(e, "n", lang), s: tr(e, "sub", lang) || (en ? "Lexicon" : "Lexikon"), u: lexUrl(e), i: null, k: "l", q: (e.n + " " + tr(e, "n", lang) + " " + tr(e, "d", lang).slice(0, 80)).toLowerCase() })),
     ...GAMES.map((gm) => ({ t: gm.t, s: `${tr(gm, "y", lang)} · ${en ? "Game" : "Spiel"}`, u: `/spiele/#${gm.id}`, i: null, k: "g", q: (gm.t + " spiel game " + gm.plat).toLowerCase() })),
+    ...GRAVEYARD.map((e) => ({ t: e.t, s: tr(e, "sub", lang), u: `/friedhof/#${e.id}`, i: null, k: "l", q: (e.t + " " + e.sub + " " + (e.sub_en || "") + " gecancelt canceled friedhof graveyard").toLowerCase() })),
   ];
   searchCount = search.length;
   writeFileSync(join(OUT, "assets", en ? "search-en.json" : "search.json"), JSON.stringify(search));

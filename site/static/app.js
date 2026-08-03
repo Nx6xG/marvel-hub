@@ -621,6 +621,17 @@
     window.addEventListener("resize", render);
   }
 
+  /* ---------- Zitate: Suche ---------- */
+  var qs = $("#quoteSearch");
+  if (qs) {
+    qs.addEventListener("input", function () {
+      var q = qs.value.trim().toLowerCase();
+      $$("#quoteGrid .q-card").forEach(function (card) {
+        card.style.display = !q || card.getAttribute("data-t").indexOf(q) !== -1 ? "" : "none";
+      });
+    });
+  }
+
   /* ---------- Tier-List-Builder ---------- */
   if (document.body.getAttribute("data-page") === "tierlist") {
     var TD = JSON.parse($("#tierData").textContent);

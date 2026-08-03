@@ -1,0 +1,699 @@
+[
+{
+"q": "I am Iron Man.",
+"by": "Tony Stark",
+"c": "tony",
+"f": "iron1"
+},
+{
+"q": "I am Iron Man.",
+"by": "Tony Stark",
+"c": "tony",
+"f": "eg",
+"n": "Dieselben Worte, elf Jahre später — als Abschied.",
+"n_en": "The same words, eleven years later — as a farewell."
+},
+{
+"q": "With great power comes great responsibility.",
+"by": "May Parker",
+"c": "may",
+"f": "nwh",
+"n": "Im MCU sagt es May, nicht Onkel Ben.",
+"n_en": "In the MCU it is May who says it, not Uncle Ben."
+},
+{
+"q": "I can do this all day.",
+"by": "Steve Rogers",
+"c": "steve",
+"f": "cap1"
+},
+{
+"q": "Avengers … assemble.",
+"by": "Steve Rogers",
+"c": "steve",
+"f": "eg",
+"n": "Elf Jahre Anlauf für zwei Worte.",
+"n_en": "Eleven years of build-up for two words."
+},
+{
+"q": "I am inevitable.",
+"by": "Thanos",
+"c": "thanos",
+"f": "eg"
+},
+{
+"q": "Perfectly balanced, as all things should be.",
+"by": "Thanos",
+"c": "thanos",
+"f": "iw"
+},
+{
+"q": "Reality is often disappointing.",
+"by": "Thanos",
+"c": "thanos",
+"f": "iw"
+},
+{
+"q": "Mr. Stark, I don't feel so good…",
+"by": "Peter Parker",
+"c": "spidey",
+"f": "iw"
+},
+{
+"q": "I love you 3000.",
+"by": "Morgan Stark",
+"f": "eg"
+},
+{
+"q": "That's my secret, Cap: I'm always angry.",
+"by": "Bruce Banner",
+"c": "hulk",
+"f": "av1"
+},
+{
+"q": "Puny god.",
+"by": "Hulk",
+"c": "hulk",
+"f": "av1",
+"n": "Nach dem berühmtesten Ragdoll der Kinogeschichte.",
+"n_en": "After the most famous ragdoll in cinema history."
+},
+{
+"q": "There was an idea … to bring together a group of remarkable people.",
+"by": "Nick Fury",
+"c": "nick",
+"f": "av1"
+},
+{
+"q": "If we can't protect the Earth, you can be damn well sure we'll avenge it.",
+"by": "Tony Stark",
+"c": "tony",
+"f": "av1"
+},
+{
+"q": "I'm with you till the end of the line.",
+"by": "Bucky Barnes",
+"c": "bucky",
+"f": "cap2"
+},
+{
+"q": "Wakanda forever!",
+"by": "T'Challa",
+"c": "tchalla",
+"f": "bp1"
+},
+{
+"q": "Bury me in the ocean, with my ancestors that jumped from the ships — because they knew death was better than bondage.",
+"by": "Killmonger",
+"c": "killmonger",
+"f": "bp1"
+},
+{
+"q": "Just because something works doesn't mean it can't be improved.",
+"by": "Shuri",
+"c": "shuri",
+"f": "bp1"
+},
+{
+"q": "I'm Mary Poppins, y'all!",
+"by": "Yondu",
+"c": "yondu",
+"f": "gotg2"
+},
+{
+"q": "He may have been your father, boy, but he wasn't your daddy.",
+"by": "Yondu",
+"c": "yondu",
+"f": "gotg2"
+},
+{
+"q": "We are Groot.",
+"by": "Groot",
+"c": "groot",
+"f": "gotg1"
+},
+{
+"q": "I am Groot.",
+"by": "Groot",
+"c": "groot",
+"f": "g3",
+"n": "Diesmal für alle hörbar: „I love you guys.“",
+"n_en": "This time audible to everyone: 'I love you guys.'"
+},
+{
+"q": "Dance-off, bro. Me and you.",
+"by": "Peter Quill",
+"c": "quill",
+"f": "gotg1"
+},
+{
+"q": "Why is Gamora?",
+"by": "Drax",
+"c": "drax",
+"f": "iw"
+},
+{
+"q": "I have lived most of my life surrounded by my enemies. I would be grateful to die among my friends.",
+"by": "Gamora",
+"c": "gamora",
+"f": "gotg1"
+},
+{
+"q": "Dormammu, I've come to bargain.",
+"by": "Doctor Strange",
+"c": "strange",
+"f": "strange1"
+},
+{
+"q": "We're in the endgame now.",
+"by": "Doctor Strange",
+"c": "strange",
+"f": "iw"
+},
+{
+"q": "It's not about how much we lost. It's about how much we have left.",
+"by": "Tony Stark",
+"c": "tony",
+"f": "eg"
+},
+{
+"q": "Whatever it takes.",
+"by": "Clint Barton",
+"c": "clint",
+"f": "eg"
+},
+{
+"q": "I went for the head.",
+"by": "Thor",
+"c": "thor",
+"f": "eg"
+},
+{
+"q": "You should have gone for the head.",
+"by": "Thanos",
+"c": "thanos",
+"f": "iw"
+},
+{
+"q": "Bring me Thanos!",
+"by": "Thor",
+"c": "thor",
+"f": "iw"
+},
+{
+"q": "What is grief, if not love persevering?",
+"by": "Vision",
+"c": "vision",
+"f": "wv"
+},
+{
+"q": "You didn't see that coming?",
+"by": "Pietro Maximoff",
+"c": "quicksilver",
+"f": "av2",
+"n": "Whedons Pietro — nicht der Fox-Peter.",
+"n_en": "Whedon's Pietro — not Fox's Peter."
+},
+{
+"q": "I can't control their fear, only my own.",
+"by": "Wanda Maximoff",
+"c": "wanda",
+"f": "cw"
+},
+{
+"q": "You took everything from me.",
+"by": "Wanda Maximoff",
+"c": "wanda",
+"f": "wv",
+"n": "Monicas Antwort: „Ich weiß nicht mal, was ich hatte.“",
+"n_en": "Monica's reply lands just as hard."
+},
+{
+"q": "I'm not a monster. I'm a mom.",
+"by": "Wanda Maximoff",
+"c": "wanda",
+"f": "mom"
+},
+{
+"q": "This is chaos magic, Wanda. And that makes you the Scarlet Witch.",
+"by": "Agatha Harkness",
+"c": "agatha",
+"f": "wv"
+},
+{
+"q": "On your left.",
+"by": "Sam Wilson",
+"c": "sam",
+"f": "cap2",
+"n": "In Endgame zur Gänsehaut-Zeile recycelt.",
+"n_en": "Recycled into the goosebumps line of Endgame."
+},
+{
+"q": "I'm loving you lots. Doing my best.",
+"by": "Kamala Khan",
+"c": "kamala",
+"f": "msm"
+},
+{
+"q": "Higher, further, faster, baby.",
+"by": "Carol Danvers",
+"c": "carol",
+"f": "cm"
+},
+{
+"q": "I have nothing to prove to you.",
+"by": "Carol Danvers",
+"c": "carol",
+"f": "cm"
+},
+{
+"q": "I choose to run towards my problems and not away from them. Because that's what heroes do.",
+"by": "Thor",
+"c": "thor",
+"f": "thor3"
+},
+{
+"q": "Asgard is not a place. It's a people.",
+"by": "Odin",
+"c": "odin",
+"f": "thor3"
+},
+{
+"q": "We know each other! He's a friend from work!",
+"by": "Thor",
+"c": "thor",
+"f": "thor3",
+"n": "Improvisiert — Vorschlag eines Kindes von der Make-a-Wish-Foundation.",
+"n_en": "Improvised — suggested by a child from the Make-A-Wish Foundation."
+},
+{
+"q": "I've been falling for thirty minutes!",
+"by": "Loki",
+"c": "loki",
+"f": "thor3"
+},
+{
+"q": "I am Loki of Asgard, and I am burdened with glorious purpose.",
+"by": "Loki",
+"c": "loki",
+"f": "av1"
+},
+{
+"q": "Glorious purpose.",
+"by": "Loki",
+"c": "loki",
+"f": "l2",
+"n": "Vom Größenwahn zur Selbstaufopferung: dieselben Worte, neue Bedeutung.",
+"n_en": "From megalomania to self-sacrifice: the same words, new meaning."
+},
+{
+"q": "I know what it's like to lose. To feel so desperately that you're right, yet to fail nonetheless.",
+"by": "Thanos",
+"c": "thanos",
+"f": "iw"
+},
+{
+"q": "You're embarrassing me in front of the wizards.",
+"by": "Tony Stark",
+"c": "tony",
+"f": "iw"
+},
+{
+"q": "Underoos!",
+"by": "Tony Stark",
+"c": "tony",
+"f": "cw"
+},
+{
+"q": "He's my friend. — So was I.",
+"by": "Steve Rogers & Tony Stark",
+"f": "cw",
+"n": "Der Kern des ganzen Bürgerkriegs in vier Worten.",
+"n_en": "The core of the whole civil war in five words."
+},
+{
+"q": "If you're nothing without this suit, then you shouldn't have it.",
+"by": "Tony Stark",
+"c": "tony",
+"f": "spider1"
+},
+{
+"q": "When you can do the things that I can, but you don't — and then the bad things happen — they happen because of you.",
+"by": "Peter Parker",
+"c": "spidey",
+"f": "cw"
+},
+{
+"q": "You have the right to remain silent!",
+"by": "Spider-Man",
+"c": "miles",
+"f": "sv1",
+"n": "Miles' erster eigener Moment als Spider-Man.",
+"n_en": "Miles' first moment of his own as Spider-Man."
+},
+{
+"q": "Anyone can wear the mask.",
+"by": "Miles Morales",
+"c": "miles",
+"f": "sv1"
+},
+{
+"q": "It's a leap of faith. That's all it is, Miles. A leap of faith.",
+"by": "Peter B. Parker",
+"c": "peterb",
+"f": "sv1"
+},
+{
+"q": "Nah, imma do my own thing.",
+"by": "Miles Morales",
+"c": "miles",
+"f": "sv2"
+},
+{
+"q": "Maximum effort.",
+"by": "Deadpool",
+"c": "deadpool",
+"f": "dp1"
+},
+{
+"q": "You're welcome, Canada.",
+"by": "Deadpool",
+"c": "deadpool",
+"f": "dw"
+},
+{
+"q": "I'm Marvel Jesus.",
+"by": "Deadpool",
+"c": "deadpool",
+"f": "dw"
+},
+{
+"q": "Four or five moments — that's all it takes to be a hero.",
+"by": "Colossus",
+"c": "colossus",
+"f": "dp1"
+},
+{
+"q": "Don't be what they made you.",
+"by": "Logan",
+"c": "wolverine",
+"f": "logan"
+},
+{
+"q": "So this is what it feels like.",
+"by": "Logan",
+"c": "wolverine",
+"f": "logan",
+"n": "Seine letzten Worte — nach 200 Jahren.",
+"n_en": "His last words — after 200 years."
+},
+{
+"q": "I'm the Juggernaut, bitch!",
+"by": "Juggernaut",
+"c": "juggernaut",
+"f": "x3"
+},
+{
+"q": "Mutation: it is the key to our evolution.",
+"by": "Charles Xavier",
+"c": "xavier",
+"f": "xmen1"
+},
+{
+"q": "You know what happens to a toad when it's struck by lightning? The same thing that happens to everything else.",
+"by": "Storm",
+"c": "storm",
+"f": "xmen1"
+},
+{
+"q": "We are the future, Charles, not them!",
+"by": "Magneto",
+"c": "magneto",
+"f": "xmen1"
+},
+{
+"q": "Just because someone stumbles and loses their path doesn't mean they're lost forever.",
+"by": "Charles Xavier",
+"c": "xavier",
+"f": "dofp"
+},
+{
+"q": "Hello, Peter.",
+"by": "Otto Octavius",
+"c": "docock",
+"f": "nwh"
+},
+{
+"q": "I believe there's a hero in all of us, that keeps us honest, gives us strength.",
+"by": "Aunt May (Raimi)",
+"f": "raimi2"
+},
+{
+"q": "This is my gift, my curse.",
+"by": "Peter Parker (Maguire)",
+"c": "tobey",
+"f": "raimi1"
+},
+{
+"q": "Go get 'em, tiger.",
+"by": "Mary Jane",
+"f": "raimi2"
+},
+{
+"q": "I missed you so much.",
+"by": "Gwen Stacy",
+"f": "tasm2",
+"n": "Kurz vor dem Fall, der das Franchise brach.",
+"n_en": "Shortly before the fall that broke the franchise."
+},
+{
+"q": "We are Venom.",
+"by": "Venom",
+"c": "venom",
+"f": "venom1"
+},
+{
+"q": "Eyes, lungs, pancreas. So many snacks, so little time.",
+"by": "Venom",
+"c": "venom",
+"f": "venom1"
+},
+{
+"q": "Some people say the world ends in fire, some say ice — trust me, it ends in paperwork.",
+"by": "Mobius (sinngemäß)",
+"c": "mobius",
+"f": "l1",
+"n": "Frei nach der TVA-Bürokratie — Miss Minutes' Reich.",
+"n_en": "In the spirit of TVA bureaucracy — Miss Minutes' realm."
+},
+{
+"q": "For all time. Always.",
+"by": "TVA-Motto",
+"f": "l1"
+},
+{
+"q": "We don't get to choose our time. Death is what gives life meaning.",
+"by": "The Ancient One",
+"f": "strange1"
+},
+{
+"q": "It's not about you.",
+"by": "The Ancient One",
+"f": "strange1"
+},
+{
+"q": "I'm sorry. The Illuminati will see you now.",
+"by": "Wanda Maximoff",
+"c": "wanda",
+"f": "mom",
+"n": "Vier Minuten später existieren die Illuminati nicht mehr.",
+"n_en": "Four minutes later the Illuminati no longer exist."
+},
+{
+"q": "You break the rules and become a hero. I do it and I become the enemy. That doesn't seem fair.",
+"by": "Wanda Maximoff",
+"c": "wanda",
+"f": "mom"
+},
+{
+"q": "Blood on my hands? You wanna see blood on my hands?",
+"by": "Matt Murdock",
+"c": "daredevil",
+"f": "dba",
+"n": "Die Kirchen-Beichten der Netflix-Ära bleiben trotzdem unerreicht.",
+"n_en": "The Netflix-era church confessions remain unmatched even so."
+},
+{
+"q": "I'm not seeking penance for what I've done, Father. I'm asking forgiveness for what I'm about to do.",
+"by": "Matt Murdock",
+"c": "daredevil",
+"f": "dd1"
+},
+{
+"q": "You know I'm a man of my word.",
+"by": "Wilson Fisk",
+"c": "kingpin",
+"f": "dd1"
+},
+{
+"q": "One batch, two batch. Penny and dime.",
+"by": "Frank Castle",
+"c": "punisher",
+"f": "dd1"
+},
+{
+"q": "Sweet Christmas.",
+"by": "Luke Cage",
+"f": "lc"
+},
+{
+"q": "Is this the hill you wanna die on? — At least it's a hill. Some people die on their way to the bathroom.",
+"by": "Yelena Belova",
+"c": "yelena",
+"f": "tb",
+"n": "Sinngemäß — Yelenas Galgenhumor trägt den halben Film.",
+"n_en": "In spirit — Yelena's gallows humor carries half the film."
+},
+{
+"q": "That was the best moment of my life. And I was strapped to a table.",
+"by": "Bob Reynolds",
+"c": "sentry",
+"f": "tb"
+},
+{
+"q": "There is no version of this where you come out on top.",
+"by": "Tony Stark",
+"c": "tony",
+"f": "av1"
+},
+{
+"q": "A thing isn't beautiful because it lasts.",
+"by": "Vision",
+"c": "vision",
+"f": "av2"
+},
+{
+"q": "But a thing isn't beautiful because it lasts. It is a privilege to be among them.",
+"by": "Vision",
+"c": "vision",
+"f": "av2"
+},
+{
+"q": "You get hurt, hurt 'em back. You get killed … walk it off.",
+"by": "Steve Rogers",
+"c": "steve",
+"f": "av2"
+},
+{
+"q": "Language!",
+"by": "Steve Rogers",
+"c": "steve",
+"f": "av2"
+},
+{
+"q": "Sometimes the best we can do is start over.",
+"by": "Peggy Carter",
+"c": "peggy",
+"f": "agentcarter"
+},
+{
+"q": "I know my value. Anyone else's opinion doesn't really matter.",
+"by": "Peggy Carter",
+"c": "peggy",
+"f": "agentcarter"
+},
+{
+"q": "The world has changed, and none of us can go back.",
+"by": "Steve Rogers",
+"c": "steve",
+"f": "cap2"
+},
+{
+"q": "The price of freedom is high. It always has been. And it's a price I'm willing to pay.",
+"by": "Steve Rogers",
+"c": "steve",
+"f": "cap2"
+},
+{
+"q": "Every story leads to Doom.",
+"by": "Marvel-Marketing",
+"f": "doomsday",
+"n": "Die Tagline, die dieser Website ihren Event-Bereich gab.",
+"n_en": "The tagline that gave this website its event section."
+},
+{
+"q": "New mask, same task.",
+"by": "Robert Downey Jr.",
+"f": "doomsday",
+"n": "Hall H, Juli 2024 — der Satz, der die Saga neu startete.",
+"n_en": "Hall H, July 2024 — the sentence that restarted the saga."
+},
+{
+"q": "The others are coming.",
+"by": "The Leader",
+"c": "leader",
+"f": "bnw",
+"n": "Er meinte keine Menschen.",
+"n_en": "He did not mean people."
+},
+{
+"q": "Sure you're ready for that, Mr. Whitman?",
+"by": "Blade (Stimme)",
+"c": "blade",
+"f": "et",
+"n": "Fünf Jahre später warten wir immer noch.",
+"n_en": "Five years later we are still waiting."
+},
+{
+"q": "If you fail, then the shield means nothing.",
+"by": "Isaiah Bradley",
+"f": "fws"
+},
+{
+"q": "They will never let a Black man be Captain America.",
+"by": "Isaiah Bradley",
+"f": "fws"
+},
+{
+"q": "I'm not gonna fight your war. I'm gonna end it.",
+"by": "Carol Danvers",
+"c": "carol",
+"f": "cm"
+},
+{
+"q": "Faster, baby.",
+"by": "Monica Rambeau",
+"c": "monica",
+"f": "mv",
+"n": "Das Familien-Motto, weitergetragen.",
+"n_en": "The family motto, carried on."
+},
+{
+"q": "It's clobberin' time!",
+"by": "The Thing",
+"c": "ben",
+"f": "f4"
+},
+{
+"q": "Flame on!",
+"by": "Johnny Storm",
+"c": "johnny",
+"f": "f4"
+},
+{
+"q": "You are my sun and my stars, Franklin.",
+"by": "Sue Storm",
+"c": "sue",
+"f": "f4",
+"n": "Sinngemäß — der Kern des Films: eine Familie zuerst.",
+"n_en": "In spirit — the core of the film: a family first."
+},
+{
+"q": "I am a god, you dull creature. And I will not be bullied by—",
+"by": "Loki",
+"c": "loki",
+"f": "av1",
+"n": "Der Satz, den Hulk nie ausreden ließ.",
+"n_en": "The sentence Hulk never let him finish."
+}
+]

@@ -1603,3 +1603,34 @@ body.tier-sel-mode .tier-row:not(.rt){cursor:pointer}
 .tier-tabs a:last-child{border-radius:0 8px 8px 0;border-left:0}
 .tier-tabs a.sel{color:#eafff2;background:rgba(255,255,255,.07)}
 .tier-chars .tier-item img{aspect-ratio:2/3;object-fit:cover;object-position:50% 18%}
+
+/* ---------- Friedhof ---------- */
+.grave-card{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin-bottom:16px}
+.grave-head{display:flex;justify-content:space-between;align-items:flex-start;gap:14px}
+.grave-t{font-family:var(--display);font-weight:700;font-size:21px;letter-spacing:.02em}
+.grave-y{color:var(--faint);font-size:12.5px;margin-top:2px}
+.grave-cross{font-size:26px;opacity:.55}
+.grave-sub{color:var(--gold);font-size:13px;text-transform:uppercase;letter-spacing:.08em;margin:10px 0 8px}
+.grave-card p{color:#bcb8ba;font-size:14.5px;line-height:1.65}
+.grave-legacy{margin-top:10px;padding-top:10px;border-top:1px dashed var(--line);color:var(--muted);font-size:13.5px;line-height:1.6}
+.grave-legacy b{color:#cfe0d4}
+/* ---------- Roadmap ---------- */
+.rm-legend{display:flex;gap:18px;flex-wrap:wrap;color:var(--muted);font-size:12.5px;margin-bottom:20px}
+.rm-dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px;vertical-align:1px}
+.st-fix{background:#3fdc8c}.st-sicher{background:#e3c56a}.st-wackel{background:#e58a3a}.st-ger{background:#ff8a8e}
+.rm-row{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:12px}
+.rm-t{font-family:var(--display);font-weight:700;font-size:17.5px}
+.rm-type{font-size:11px;color:var(--faint);text-transform:uppercase;letter-spacing:.08em;border:1px solid var(--line);border-radius:20px;padding:2px 9px;margin-left:8px;vertical-align:2px}
+.rm-w{color:var(--muted);font-size:12.5px;margin:4px 0 8px}
+.rm-row p{color:#bcb8ba;font-size:14px;line-height:1.6}
+.rm-rel{display:inline-block;margin-top:8px;font-size:12.5px;color:var(--gold);text-decoration:none}
+.rm-rel:hover{text-decoration:underline}
+/* ---------- Zitate ---------- */
+.q-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.q-card{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:12px;padding:18px 20px;display:flex;flex-direction:column;gap:8px}
+.q-text{font-family:var(--display);font-weight:600;font-size:17px;line-height:1.45;color:#eae5de}
+.q-by{color:var(--muted);font-size:12.5px}
+.q-by a{color:var(--gold);text-decoration:none}
+.q-by a:hover{text-decoration:underline}
+.q-note{color:var(--faint);font-size:12px;line-height:1.5;border-top:1px dashed var(--line);padding-top:8px}
+.ext-links-static{display:inline-block;padding:7px 12px;border:1px solid var(--line);border-radius:8px;font-size:12.5px;color:var(--muted)}
