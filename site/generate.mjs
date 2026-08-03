@@ -893,6 +893,7 @@ function eventBody(lang) {
     ${act("I", de ? "Der Weg" : "The Road", de ? "33 Filme & Serien. Ein Ziel. Deine Watchlist." : "33 films & shows. One destination. Your watchlist.")}
     ${saga}
     ${foxBlock}
+    <div style="text-align:center;margin:6px 0 10px"><a class="hd-cta" href="${prefix}/tierlist/event/">${de ? "★ Ranke die Road to Doomsday — die Event-Tier-List" : "★ Rank the Road to Doomsday — the event tier list"}</a></div>
     ${act("II", de ? "Die Lage" : "The Situation", de ? "Fakten, News und das größte Ensemble aller Zeiten" : "Facts, news and the biggest ensemble ever")}
     ${doomFrag}
     ${act("III", de ? "Das Wissen" : "The Knowledge", de ? "Die komplette Lore hinter Doom" : "The complete lore behind Doom")}
@@ -1179,7 +1180,7 @@ for (const lang of LANGS) {
     : { copied: "Link copied! Send it to someone who is wrong.", copyFail: "Could not copy — share the URL from the address bar.", hint: "Tap a poster, then tap a row — or just drag it. Quick mode: hover a poster and press S, A, B, C or D (P = back to the pool).", sharedTitle: "You are viewing a shared tier list.", adopt: "Adopt & edit", own: "Build your own list", sorted: "sorted", share: "Copy share link", img: "Save as image", imgEmpty: "Sort something first!", reset: "Reset", sure: "Sure? Click again." };
   const tierRowsHtml = () => [["s", "S"], ["a", "A"], ["b", "B"], ["c", "C"], ["d", "D"]].map(([k, l]) =>
     `<div class="tier-row" data-tier="${k}"><div class="tier-label tl-${k}">${l}</div><div class="tier-drop" data-tier="${k}"></div></div>`).join("");
-  const tabs = (cur) => `<div class="seg tier-tabs"><a href="${prefix}/tierlist/"${cur === "f" ? ' class="sel"' : ""}>${de ? "Filme & Serien" : "Films & shows"}</a><a href="${prefix}/tierlist/charaktere/"${cur === "c" ? ' class="sel"' : ""}>${de ? "Charaktere" : "Characters"}</a></div>`;
+  const tabs = (cur) => `<div class="seg tier-tabs"><a href="${prefix}/tierlist/"${cur === "f" ? ' class="sel"' : ""}>${de ? "Filme & Serien" : "Films & shows"}</a><a href="${prefix}/tierlist/charaktere/"${cur === "c" ? ' class="sel"' : ""}>${de ? "Charaktere" : "Characters"}</a><a href="${prefix}/tierlist/event/"${cur === "e" ? ' class="sel ev" ' : ' class="ev"'}>★ Doomsday</a></div>`;
   const tierPage = (cfg) => `<main class="wrap${cfg.cls ? " " + cfg.cls : ""}" style="padding:50px 22px 60px">
     ${secHead(cfg.kicker, cfg.h2, cfg.sub)}
     ${tabs(cfg.tab)}
@@ -1219,6 +1220,21 @@ for (const lang of LANGS) {
       <div class="tier-board">${rtRows}</div>
     </details>`,
         data: { order: pool.map((f) => f.id), key: "msa-tierlist", file: "knowhere-tierlist", heading: de ? "Meine Marvel-Tier-List" : "My Marvel tier list", str: TIER_STR },
+      }) }));
+  }
+
+  /* Doomsday-Event: nur die Road-to-Doomsday-Titel */
+  {
+    const foxIds = ["xmen1", "x2", "x3", "logan", "dp1", "dp2", "dofp"];
+    const epool = [...FILMS.filter((f) => f.uni === "mcu" && (f.prio === "pflicht" || f.prio === "empfohlen")), ...foxIds.map((id) => byId[id])];
+    const tile = (f) => `<button class="tier-item" data-id="${f.id}" draggable="true" title="${esc(f.t)} (${f.y})">${posterImgW(f.id, f.t)}<span class="ti-n">${esc(f.t)}</span></button>`;
+    emit(lang, "/tierlist/event/", page({ lang, path: "/tierlist/event/", title: (de ? "Doomsday-Tier-List: ranke die Road to Doomsday" : "Doomsday tier list: rank the Road to Doomsday") + " · Knowhere", desc: de ? `Die ${epool.length} Titel der Doomsday-Vorbereitung — Saga-Pflichtprogramm plus Fox-Erbe — in S bis D einsortieren, speichern und teilen.` : `The ${epool.length} titles of the Doomsday prep — saga essentials plus the Fox legacy — sorted into S to D tiers, saved and shareable.`, dataPage: "tierlist", crumbs: [[de ? "Tier-List" : "Tier list", "/tierlist/"], ["★ Doomsday"]], body:
+      tierPage({
+        path: "/tierlist/event/", tab: "e", cls: "tier-event",
+        kicker: "Every Story leads to Doom", h2: de ? "Die Doomsday-Tier-List" : "The Doomsday Tier List",
+        sub: de ? `Nur die ${epool.length} Titel, die für Doomsday zählen: das Pflicht- und Empfohlen-Programm der Saga plus das Fox-Erbe. Welcher Teil der Vorbereitung ist S-Tier — und was hältst du für Kür?` : `Only the ${epool.length} titles that matter for Doomsday: the saga's essential and recommended program plus the Fox legacy. Which part of the prep is S tier — and what do you consider optional?`,
+        tiles: epool.map(tile).join(""),
+        data: { order: epool.map((f) => f.id), key: "msa-tierlist-event", file: "knowhere-tierlist-doomsday", heading: de ? "Meine Road-to-Doomsday-Tier-List" : "My Road to Doomsday tier list", str: TIER_STR },
       }) }));
   }
 

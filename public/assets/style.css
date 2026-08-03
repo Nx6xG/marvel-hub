@@ -1681,3 +1681,7 @@ body.tier-sel-mode .tier-row:not(.rt){cursor:pointer}
 .chart .ch-x{fill:#7a8580;font-size:11px;font-family:var(--mono,monospace)}
 .chart .ch-v{fill:#e9e4dc;font-size:11px;font-weight:600}
 .chart .ch-l{fill:#bcb8ba;font-size:12px}
+.tier-tabs a.ev{color:#3fdc8c}
+.tier-tabs a.ev.sel{background:rgba(63,220,140,.1);color:#7dffb8}
+.tier-event .tier-pool{border-color:rgba(63,220,140,.25)}
+.tier-event .tier-item.sel{outline-color:#3fdc8c;box-shadow:0 0 16px rgba(63,220,140,.4)}
