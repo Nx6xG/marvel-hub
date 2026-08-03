@@ -621,6 +621,12 @@
     window.addEventListener("resize", render);
   }
 
+  /* ---------- Generischer Tage-Countdown (Roadmap-Heroes) ---------- */
+  $$("[data-days-until]").forEach(function (el) {
+    var d = Math.ceil((new Date(el.getAttribute("data-days-until") + "T00:00:00") - Date.now()) / 864e5);
+    el.textContent = d > 0 ? d : "0";
+  });
+
   /* ---------- Zitate: Suche ---------- */
   var qs = $("#quoteSearch");
   if (qs) {

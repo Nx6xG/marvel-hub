@@ -1634,3 +1634,39 @@ body.tier-sel-mode .tier-row:not(.rt){cursor:pointer}
 .q-by a:hover{text-decoration:underline}
 .q-note{color:var(--faint);font-size:12px;line-height:1.5;border-top:1px dashed var(--line);padding-top:8px}
 .ext-links-static{display:inline-block;padding:7px 12px;border:1px solid var(--line);border-radius:8px;font-size:12.5px;color:var(--muted)}
+
+/* ---------- Roadmap v2 (Zeitstrahl) ---------- */
+.rmx-heroes{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:640px){.rmx-heroes{grid-template-columns:1fr}}
+.rmx-hero{position:relative;display:block;border-radius:14px;overflow:hidden;border:1px solid var(--line);min-height:190px;text-decoration:none;color:inherit}
+.rmx-hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.5;transition:transform .5s,opacity .3s}
+.rmx-hero:hover .rmx-hero-bg{transform:scale(1.04);opacity:.65}
+.rmx-hero-in{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:26px 18px;min-height:190px;background:linear-gradient(180deg,rgba(5,8,6,.25),rgba(5,8,6,.78))}
+.rmx-hero-logo{max-width:220px;max-height:56px;object-fit:contain;filter:drop-shadow(0 3px 10px rgba(0,0,0,.6))}
+.rmx-hero-t{font-family:var(--display);font-weight:700;font-size:24px}
+.rmx-hero-cd{display:flex;align-items:baseline;gap:8px}
+.rmx-hero-n{font-family:var(--display);font-weight:700;font-size:46px;line-height:1}
+.rmx-hero-l{font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:var(--muted)}
+.rmx-hero-d{font-size:12.5px;color:var(--muted)}
+.rmx-line{position:relative;margin-top:34px;padding-left:26px}
+.rmx-line::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:linear-gradient(180deg,#3fdc8c55,var(--line) 30%,var(--line) 70%,#ff8a8e44)}
+.rmx-group{margin-bottom:30px}
+.rmx-year{display:flex;align-items:baseline;gap:12px;margin:0 0 14px;position:relative}
+.rmx-year::before{content:"";position:absolute;left:-25px;top:8px;width:14px;height:14px;border-radius:50%;background:#0a0f0c;border:2px solid var(--gold)}
+.rmx-year-t{font-family:var(--display);font-weight:700;font-size:26px;letter-spacing:.03em}
+.rmx-year-k{font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--faint);order:2}
+.rmx-item{position:relative;margin-bottom:12px}
+.rmx-node{position:absolute;left:-23px;top:24px;width:10px;height:10px;border-radius:50%;box-shadow:0 0 10px currentColor}
+.rmx-node.st-fix{background:#3fdc8c;color:#3fdc8c66}
+.rmx-node.st-sicher{background:#e3c56a;color:#e3c56a66}
+.rmx-node.st-wackel{background:#e58a3a;color:#e58a3a55}
+.rmx-node.st-ger{background:#ff8a8e;color:#ff8a8e55}
+.rmx-card{display:flex;gap:16px;background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:12px;padding:14px 18px;transition:border-color .2s}
+.rmx-card:hover{border-color:rgba(255,215,130,.35)}
+.rmx-rumor{border-style:dashed;background:rgba(255,138,142,.035)}
+.rmx-poster{flex:0 0 62px;align-self:flex-start}
+.rmx-poster img{width:62px;border-radius:7px;display:block;border:1px solid rgba(255,255,255,.12)}
+.rmx-main{flex:1;min-width:0}
+.rmx-t{font-family:var(--display);font-weight:700;font-size:17.5px}
+.rmx-card p{color:#bcb8ba;font-size:13.5px;line-height:1.6;margin-top:2px}
+@media (max-width:560px){.rmx-poster{display:none}}

@@ -1194,15 +1194,47 @@ for (const lang of LANGS) {
   const RM_STATUS = de
     ? { fix: ["Termin steht", "st-fix"], sicher: ["kommt sicher", "st-sicher"], wackelt: ["wackelt", "st-wackel"], geruecht: ["Gerücht", "st-ger"] }
     : { fix: ["date locked", "st-fix"], sicher: ["definitely coming", "st-sicher"], wackelt: ["shaky", "st-wackel"], geruecht: ["rumor", "st-ger"] };
-  const roadmapBody = `<main class="wrap" style="padding:50px 22px 60px;max-width:900px">
-  ${secHead(de ? "Was als Nächstes kommt" : "What comes next", de ? "Roadmap & Gerüchteküche" : "Roadmap & Rumor Mill", de ? "Alles Angekündigte, alles Wahrscheinliche und die heißesten Gerüchte — mit ehrlicher Status-Ampel. Wird nach jeder Marvel-Ankündigung aktualisiert." : "Everything announced, everything likely and the hottest rumors — with an honest status light. Updated after every Marvel announcement.")}
-  <div class="rm-legend">${Object.values(RM_STATUS).map(([l, c]) => `<span><i class="rm-dot ${c}"></i> ${l}</span>`).join("")}</div>
-  ${ROADMAP.map((e) => `<div class="rm-row">
-    <div class="rm-main"><div class="rm-t">${esc(e.t)} <span class="rm-type">${esc(tr(e, "type", lang))}</span></div>
-    <div class="rm-w"><i class="rm-dot ${RM_STATUS[e.status][1]}"></i> ${esc(tr(e, "w", lang))} · ${RM_STATUS[e.status][0]}</div>
-    <p>${esc(tr(e, "d", lang))}</p>
-    ${e.rel && byId[e.rel] ? `<a class="rm-rel" href="${prefix}${filmUrl(e.rel)}">→ ${esc(byId[e.rel].t)}</a>` : ""}</div>
-  </div>`).join("")}
+  const rmEntry = (e) => {
+    const f = e.rel && byId[e.rel];
+    const hasPoster = f && existsSync(`public/img/p/${e.rel}.jpg`);
+    return `<div class="rmx-item">
+    <span class="rmx-node ${RM_STATUS[e.status][1]}"></span>
+    <div class="rmx-card${e.status === "geruecht" ? " rmx-rumor" : ""}">
+      ${hasPoster ? `<a class="rmx-poster" href="${prefix}${filmUrl(e.rel)}"><img src="/img/p/${e.rel}.jpg" alt="" loading="lazy"></a>` : ""}
+      <div class="rmx-main">
+        <div class="rmx-t">${esc(e.t)}<span class="rm-type">${esc(tr(e, "type", lang))}</span></div>
+        <div class="rm-w"><i class="rm-dot ${RM_STATUS[e.status][1]}"></i> ${esc(tr(e, "w", lang))} · ${RM_STATUS[e.status][0]}</div>
+        <p>${esc(tr(e, "d", lang))}</p>
+        ${f ? `<a class="rm-rel" href="${prefix}${filmUrl(e.rel)}">→ ${esc(f.t)} ${de ? "im Archiv" : "in the archive"}</a>` : ""}
+      </div>
+    </div></div>`;
+  };
+  const rmGroup = (hz, kicker, title) => {
+    const items = ROADMAP.filter((e) => e.hz === hz);
+    if (!items.length) return "";
+    return `<div class="rmx-group"><div class="rmx-year"><span class="rmx-year-k">${kicker}</span><span class="metal rmx-year-t">${title}</span></div>${items.map(rmEntry).join("")}</div>`;
+  };
+  const heroCard = (id, dateIso, dateTxt, tag) => `<a class="rmx-hero" href="${prefix}${filmUrl(id)}">
+    <img class="rmx-hero-bg" src="/img/b/${id}.jpg" alt="" loading="lazy">
+    <div class="rmx-hero-in">
+      ${existsSync(`public/img/l/${id}.png`) ? `<img class="rmx-hero-logo" src="/img/l/${id}.png" alt="${esc(byId[id].t)}">` : `<div class="rmx-hero-t metal">${esc(byId[id].t)}</div>`}
+      <div class="rmx-hero-cd"><span class="rmx-hero-n metal" data-days-until="${dateIso}">···</span><span class="rmx-hero-l">${de ? "Tage" : "days"}</span></div>
+      <div class="rmx-hero-d">${dateTxt} · ${tag}</div>
+    </div></a>`;
+  const roadmapBody = `<main class="wrap" style="padding:50px 22px 60px;max-width:960px">
+  ${secHead(de ? "Was als Nächstes kommt" : "What comes next", de ? "Die Roadmap" : "The Roadmap", de ? "Zwei fixe Termine, ein Fahrplan dahinter — und die Gerüchteküche brodelt. Status-Ampel: ehrlich, nicht offiziell." : "Two locked dates, a schedule behind them — and the rumor mill is boiling. Status lights: honest, not official.")}
+  <div class="rmx-heroes">
+    ${heroCard("doomsday", "2026-12-18", de ? "18. Dezember 2026" : "December 18, 2026", de ? "Der Anfang vom Ende" : "The beginning of the end")}
+    ${heroCard("secretwars", "2027-12-17", de ? "17. Dezember 2027" : "December 17, 2027", de ? "Das Saga-Finale" : "The saga finale")}
+  </div>
+  <div class="rm-legend" style="margin-top:26px">${Object.values(RM_STATUS).map(([l, c]) => `<span><i class="rm-dot ${c}"></i> ${l}</span>`).join("")}</div>
+  <div class="rmx-line">
+    ${rmGroup("2026", de ? "Der Countdown läuft" : "The countdown is running", "2026")}
+    ${rmGroup("2027", de ? "Das Jahr dazwischen" : "The year in between", "2027")}
+    ${rmGroup("2028", de ? "Die nächste Welle" : "The next wave", "2028")}
+    ${rmGroup("later", de ? "Die neue Welt" : "The new world", de ? "Nach Secret Wars" : "After Secret Wars")}
+    ${rmGroup("rumor", de ? "Nichts davon ist bestätigt — alles davon wird diskutiert" : "None of it confirmed — all of it debated", de ? "Die Gerüchteküche" : "The Rumor Mill")}
+  </div>
   ${adSlot(T[lang])}
 </main>`;
   emit(lang, "/roadmap/", page({ lang, path: "/roadmap/", title: (de ? "Marvel-Roadmap: alle kommenden Filme, Serien & Gerüchte" : "Marvel roadmap: every upcoming film, series & rumor") + " · Knowhere", desc: de ? "Von Doomsday über Secret Wars bis zum X-Men-Neustart: alle kommenden Marvel-Projekte und die heißesten Gerüchte mit Status-Einschätzung." : "From Doomsday through Secret Wars to the X-Men reboot: every upcoming Marvel project and the hottest rumors, with status ratings.", dataPage: "roadmap", body: roadmapBody }));
