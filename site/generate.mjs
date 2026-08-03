@@ -5,10 +5,11 @@ import { createHash } from "node:crypto";
 import { join } from "node:path";
 
 /* ================= Konfiguration ================= */
-const SITE_URL = process.env.SITE_URL || "https://marvel-hub.vercel.app";
+const SITE_URL = process.env.SITE_URL || "https://marvel.nico-grim.me";
 const SITE_NAME = "Knowhere"; // nach Domain-Wechsel anpassen
 const OUT = "public";
 const LANGS = ["de", "en"];
+const BUILD_DATE = new Date().toISOString().slice(0, 10);
 
 const D = (n) => JSON.parse(readFileSync(`site/data/${n}.json`, "utf8"));
 const FILMS = D("films"), CHARS = D("chars"), TEAMS = D("teams"), ARTIFACTS = D("artifacts"),
@@ -42,7 +43,7 @@ const T = {
     nav: { home: "Start", films: "Filme & Serien", chars: "Charaktere", teams: "Teams & Organisationen", multi: "Multiversum", arts: "Artefakte", paths: "Pfade", records: "Rekorde", chron: "Chronik", threads: "Offene Fäden", lex: "Lexikon", faq: "FAQ", db: "Datenbank", know: "Wissen", games: "Spiele", tier: "Tier-List", quotes: "Zitate", roadmap: "Roadmap", grave: "Der Friedhof", actors: "Schauspieler", places: "Orte & Welten", peoples: "Völker & Spezies", event: "★ Doomsday" },
     spoiler_off: "Spoiler: aus", search_ph: "Suche …",
     home_sub: "Von Iron Man bis Doomsday: Filme, Serien, Charaktere und die ganze Lore — quer durch alle Marvel-Universen.",
-    home_desc: "Marvel Hub: das Fan-Wiki über alle Marvel-Film-Universen — MCU, X-Men, Sony, Klassiker und TV-Ära. Mit Doomsday-Countdown, Watchlist, Charakteren, Teams und Lore.",
+    home_desc: "Knowhere: das Fan-Wiki über alle Marvel-Film-Universen — MCU, X-Men, Sony, Klassiker und TV-Ära. Mit Doomsday-Countdown, Watchlist, Charakteren, Teams und Lore.",
     days: "Tage", radar_last: "Zuletzt erschienen", radar_now: "● Jetzt im Kino", radar_next: "Als Nächstes",
     event_k: "· Das Event ·", event_cta: "Zum Event-Hub ➤", news: "Neuigkeiten", dive: "Direkt eintauchen",
     watch: "Als gesehen markieren", watched: "✓ Gesehen", trailer: "Trailer ansehen", trailer_s: "öffnet YouTube in neuem Tab",
@@ -65,7 +66,7 @@ const T = {
     nav: { home: "Home", films: "Films & Shows", chars: "Characters", teams: "Teams & orgs", multi: "Multiverse", arts: "Artifacts", paths: "Storylines", records: "Records", chron: "Timeline", threads: "Loose Ends", lex: "Lexicon", faq: "FAQ", db: "Database", know: "Knowledge", games: "Games", tier: "Tier list", quotes: "Quotes", roadmap: "Roadmap", grave: "The Graveyard", actors: "Actors", places: "Places & worlds", peoples: "Peoples & species", event: "★ Doomsday" },
     spoiler_off: "Spoilers: off", search_ph: "Search …",
     home_sub: "From Iron Man to Doomsday: films, shows, characters and all the lore — across every Marvel universe. (Article texts are German-first for now.)",
-    home_desc: "Marvel Hub: the fan wiki covering every Marvel movie universe — MCU, X-Men, Sony, classics and the TV era. With Doomsday countdown, watchlist, characters, teams and lore.",
+    home_desc: "Knowhere: the fan wiki covering every Marvel movie universe — MCU, X-Men, Sony, classics and the TV era. With Doomsday countdown, watchlist, characters, teams and lore.",
     days: "Days", radar_last: "Recently released", radar_now: "● In theaters now", radar_next: "Up next",
     event_k: "· The Event ·", event_cta: "Enter the Event Hub ➤", news: "News", dive: "Dive in",
     watch: "Mark as watched", watched: "✓ Watched", trailer: "Watch the trailer", trailer_s: "opens YouTube in a new tab",
@@ -261,6 +262,8 @@ function page({ lang, path, title, desc, ogImage, body, dataPage, jsonld, noinde
 <link rel="alternate" hreflang="x-default" href="${SITE_URL}${path}">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Knowhere">
+<meta property="og:locale" content="${lang === "de" ? "de_DE" : "en_US"}">
+<meta property="og:locale:alternate" content="${lang === "de" ? "en_US" : "de_DE"}">
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:url" content="${canonical}">
@@ -1012,8 +1015,14 @@ function emit(lang, path, html) {
 for (const lang of LANGS) {
   const L = T[lang];
   const site = lang === "de" ? "Knowhere — Das Marvel-Fanarchiv: Filme, Serien, Charaktere & Lore" : "Knowhere — the Marvel fan archive: films, shows, characters & lore";
-  emit(lang, "/", page({ lang, path: "/", title: site, desc: L.home_desc, dataPage: "home", ogImage: "/img/p/doomsday.jpg", body: homeBody(lang) }));
-  emit(lang, "/filme/", page({ lang, path: "/filme/", title: (lang === "de" ? "Alle Marvel-Filme & -Serien" : "All Marvel films & shows") + " · Knowhere", desc: lang === "de" ? "108 Marvel-Filme und -Serien aus MCU, X-Men, Sony, Klassikern und TV-Ära — mit Scores, Trivia und Post-Credit-Szenen." : "108 Marvel films and shows across the MCU, X-Men, Sony, classics and the TV era.", dataPage: "wiki", body: wikiIndexBody(lang) }));
+  const siteLd = {
+    "@context": "https://schema.org", "@type": "WebSite",
+    name: "Knowhere", url: SITE_URL + (lang === "en" ? "/en/" : "/"),
+    inLanguage: lang, description: L.home_desc,
+    potentialAction: { "@type": "SearchAction", target: { "@type": "EntryPoint", urlTemplate: SITE_URL + "/filme/?q={search_term_string}" }, "query-input": "required name=search_term_string" },
+  };
+  emit(lang, "/", page({ lang, path: "/", title: site, desc: L.home_desc, dataPage: "home", ogImage: "/img/p/doomsday.jpg", jsonld: siteLd, body: homeBody(lang) }));
+  emit(lang, "/filme/", page({ lang, path: "/filme/", title: (lang === "de" ? "Alle Marvel-Filme & -Serien in der Übersicht (MCU, X-Men, Sony)" : "All Marvel films & shows at a glance (MCU, X-Men, Sony)") + " · Knowhere", desc: lang === "de" ? "108 Marvel-Filme und -Serien aus MCU, X-Men, Sony, Klassikern und TV-Ära — mit Scores, Trivia und Post-Credit-Szenen." : "108 Marvel films and shows across the MCU, X-Men, Sony, classics and the TV era.", dataPage: "wiki", body: wikiIndexBody(lang) }));
   emit(lang, "/charaktere/", page({ lang, path: "/charaktere/", title: (lang === "de" ? "Marvel-Charaktere" : "Marvel characters") + " · Knowhere", desc: lang === "de" ? "128 Marvel-Charaktere mit Biografien, Kräften und Beziehungs-Netzen." : "128 Marvel characters with bios, powers and relationship webs.", dataPage: "wiki", body: charIndexBody(lang) }));
   emit(lang, "/teams/", page({ lang, path: "/teams/", title: "Marvel-Teams · Knowhere", desc: lang === "de" ? "Von den Avengers bis Haus Doom: 21 Marvel-Teams und Schurken-Fraktionen." : "From the Avengers to House Doom: 21 Marvel teams and villain factions.", dataPage: "teams", body: teamsIndexBody(lang) }));
   emit(lang, "/multiversum/", page({ lang, path: "/multiversum/", title: "Multiversum · Knowhere", desc: "Umgezogen: Die Welten des Multiversums findest du jetzt unter Orte & Welten.", dataPage: "multi", noindex: true, body: `<main class="wrap" style="padding:100px 22px;text-align:center"><h2 class="metal">${lang === "de" ? "Umgezogen" : "Moved"}</h2><p class="sec-sub">${lang === "de" ? "Die Welten &amp; Erde-Nummern wohnen jetzt bei" : "The worlds now live at"} <a href="${lang === "en" ? "/en" : ""}/orte/">${T[lang].nav.places}</a>.</p></main>` }));
@@ -1461,11 +1470,19 @@ for (const lang of LANGS) {
 
 /* Assets, Sitemap, Robots, Favicon, vercel */
 cpSync("site/static/style.css", join(OUT, "assets", "style.css"));
+{
+  const inKey = readFileSync("site/static/indexnow-key.txt", "utf8").trim();
+  writeFileSync(join(OUT, inKey + ".txt"), inKey);
+}
 cpSync("site/static/app.js", join(OUT, "assets", "app.js"));
 writeFileSync(join(OUT, "favicon.svg"), `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="20" fill="#07100a"/><circle cx="50" cy="50" r="34" fill="none" stroke="#3fdc8c" stroke-width="5"/><text x="50" y="64" font-size="42" text-anchor="middle" font-family="Arial Narrow, sans-serif" font-weight="bold" fill="#eafff2">K</text></svg>`);
 writeFileSync(join(OUT, "robots.txt"), `User-agent: *\nAllow: /\nSitemap: ${SITE_URL}/sitemap.xml\n`);
 writeFileSync(join(OUT, "sitemap.xml"),
-  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-  written.map((w) => `<url><loc>${SITE_URL}${w.path}</loc></url>`).join("\n") + `\n</urlset>`);
+  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n` +
+  written.map((w) => {
+    const bare = w.path.startsWith("/en/") ? w.path.slice(3) || "/" : w.path;
+    const dePath = bare, enPath = "/en" + (bare === "/" ? "/" : bare);
+    return `<url><loc>${SITE_URL}${w.path}</loc><lastmod>${BUILD_DATE}</lastmod><xhtml:link rel="alternate" hreflang="de" href="${SITE_URL}${dePath}"/><xhtml:link rel="alternate" hreflang="en" href="${SITE_URL}${enPath}"/></url>`;
+  }).join("\n") + `\n</urlset>`);
 
 console.log(`Seiten: ${written.length} | Such-Index: ${searchCount} Einträge x ${LANGS.length} Sprachen | Output: ${OUT}/`);
