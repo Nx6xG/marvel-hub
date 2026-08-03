@@ -1685,3 +1685,6 @@ body.tier-sel-mode .tier-row:not(.rt){cursor:pointer}
 .tier-tabs a.ev.sel{background:rgba(63,220,140,.1);color:#7dffb8}
 .tier-event .tier-pool{border-color:rgba(63,220,140,.25)}
 .tier-event .tier-item.sel{outline-color:#3fdc8c;box-shadow:0 0 16px rgba(63,220,140,.4)}
+a.nav-drop-btn{text-decoration:none;display:inline-flex;align-items:center;gap:5px}
+.ev-drop .nav-drop-menu a:hover{background:rgba(63,220,140,.12)}
+.ev-drop.child-active .nav-drop-btn{color:var(--green)}

@@ -239,11 +239,15 @@ function page({ lang, path, title, desc, ogImage, body, dataPage, jsonld, noinde
     const act = items.some(([, p]) => isActive(p));
     return `<div class="nav-drop${act ? " child-active" : ""}"><button class="nav-drop-btn${act ? " active" : ""}" aria-haspopup="true" aria-expanded="false">${label} <span class="nd-arr">▾</span></button><div class="nav-drop-menu">${items.map(([k, p]) => navLink(k, p)).join("")}</div></div>`;
   };
+  const evItems = lang === "de"
+    ? [["Countdown & Trailer", "/event/#event-top"], ["Saga-Timeline & Watchlist", "/event/#saga"], ["Das Fox-Erbe", "/event/#foxlegacy"], ["Dossier & News", "/event/#doomsday"], ["Die Lore", "/event/#lore"], ["Der Theorien-Tisch", "/event/#theorien"], ["Das Nerd-Glossar", "/event/#glossar"], ["★ Die Event-Tier-List", "/tierlist/event/"]]
+    : [["Countdown & trailer", "/event/#event-top"], ["Saga timeline & watchlist", "/event/#saga"], ["The Fox legacy", "/event/#foxlegacy"], ["Dossier & news", "/event/#doomsday"], ["The lore", "/event/#lore"], ["The theory table", "/event/#theorien"], ["The nerd glossary", "/event/#glossar"], ["★ The event tier list", "/tierlist/event/"]];
+  const evDrop = `<div class="nav-drop ev-drop${isActive("/event/") ? " child-active" : ""}"><a class="nav-drop-btn ev-link${isActive("/event/") ? " active" : ""}" href="${prefix}/event/" aria-haspopup="true" aria-expanded="false">${L.nav.event} <span class="nd-arr">▾</span></a><div class="nav-drop-menu">${evItems.map(([t, p2]) => `<a href="${prefix}${p2}">${t}</a>`).join("")}</div></div>`;
   const nav =
     navLink("home", "/") +
     drop(L.nav.db, dbItems) +
     drop(L.nav.know, knowItems) +
-    navLink("event", "/event/", "ev-link");
+    evDrop;
   return `<!doctype html>
 <html lang="${lang}" data-prefix="${prefix}">
 <head>
