@@ -712,8 +712,71 @@ function recordsBody(lang) {
     "<b>Loki</b> is the only MCU series that ever got a second season.",
     "<b>Howard the Duck</b> (1986) was the very first Marvel theatrical film. Produced by George Lucas. 13%.",
   ];
+  /* Das Franchise in Zahlen: SVG-Charts aus den DB-Daten, zur Build-Zeit gerendert */
+  const de2 = lang === "de";
+  const withRev = FILMS.filter((f) => DETAILS[f.id] && DETAILS[f.id].revenue);
+  const revByYear = {};
+  withRev.forEach((f) => { const y2 = parseInt(f.y); revByYear[y2] = (revByYear[y2] || 0) + DETAILS[f.id].revenue; });
+  const years = Object.keys(revByYear).map(Number).sort((a, b) => a - b);
+  const maxRev = Math.max(...Object.values(revByYear));
+  const BW = 26, BG = 7, CH = 170;
+  const fmtB = (v) => (v / 1e9).toFixed(1).replace(".", de2 ? "," : ".");
+  const revChart = `<svg class="chart" viewBox="0 0 ${years.length * (BW + BG) + 14} ${CH + 44}" role="img" aria-label="Box Office pro Jahr">` +
+    years.map((y2, i) => {
+      const h = Math.max(3, Math.round(revByYear[y2] / maxRev * CH));
+      const x = 8 + i * (BW + BG);
+      const hot = revByYear[y2] >= 3e9;
+      return `<rect x="${x}" y="${CH - h + 14}" width="${BW}" height="${h}" rx="3" fill="${hot ? "#e3c56a" : "#3fdc8c"}" opacity="${hot ? "0.95" : "0.65"}"><title>${y2}: ${fmtMoney(revByYear[y2])}</title></rect>` +
+        (revByYear[y2] >= 2e9 ? `<text x="${x + BW / 2}" y="${CH - h + 6}" text-anchor="middle" class="ch-v">${fmtB(revByYear[y2])}</text>` : "") +
+        `<text x="${x + BW / 2}" y="${CH + 30}" text-anchor="middle" class="ch-x">${String(y2).slice(2)}</text>`;
+    }).join("") + `</svg>`;
+  const phAvg = [1, 2, 3, 4, 5, 6].map((ph) => {
+    const ps = FILMS.filter((f) => f.uni === "mcu" && f.ph === ph && SCORES[f.id]);
+    return ps.length ? Math.round(ps.reduce((s, f) => s + SCORES[f.id][0], 0) / ps.length) : 0;
+  });
+  const PW = 74;
+  const phChart = `<svg class="chart" viewBox="0 0 ${6 * PW + 14} 214" role="img" aria-label="Kritiker-Schnitt pro MCU-Phase">` +
+    phAvg.map((v, i) => {
+      const h = Math.round(v / 100 * 150);
+      const x = 10 + i * PW;
+      const low = v > 0 && v === Math.min(...phAvg.filter(Boolean));
+      return v ? `<rect x="${x}" y="${164 - h}" width="${PW - 18}" height="${h}" rx="4" fill="${low ? "#ff8a8e" : "#3fdc8c"}" opacity="${low ? "0.85" : "0.7"}"><title>Phase ${i + 1}: Ø ${v} % (Rotten Tomatoes)</title></rect>
+        <text x="${x + (PW - 18) / 2}" y="${156 - h}" text-anchor="middle" class="ch-v">${v} %</text>
+        <text x="${x + (PW - 18) / 2}" y="188" text-anchor="middle" class="ch-x">${de2 ? "Phase" : "Phase"} ${i + 1}</text>` : "";
+    }).join("") + `</svg>`;
+  const topRev = withRev.filter((f) => DETAILS[f.id].budget).sort((a, b) => DETAILS[b.id].revenue - DETAILS[a.id].revenue).slice(0, 8);
+  const maxR2 = DETAILS[topRev[0].id].revenue;
+  const bvChart = `<svg class="chart" viewBox="0 0 640 ${topRev.length * 44 + 8}" role="img" aria-label="Budget vs. Einspielergebnis">` +
+    topRev.map((f, i) => {
+      const d3 = DETAILS[f.id];
+      const y2 = 6 + i * 44;
+      const wR = Math.round(d3.revenue / maxR2 * 420);
+      const wB = Math.round(d3.budget / maxR2 * 420);
+      return `<text x="0" y="${y2 + 15}" class="ch-l">${esc(f.t.length > 26 ? f.t.slice(0, 24) + "…" : f.t)}</text>
+        <rect x="200" y="${y2}" width="${wR}" height="13" rx="3" fill="#e3c56a" opacity="0.9"><title>${de2 ? "Einspielergebnis" : "Box office"}: ${fmtMoney(d3.revenue)}</title></rect>
+        <rect x="200" y="${y2 + 16}" width="${Math.max(wB, 2)}" height="7" rx="2" fill="#7a8580" opacity="0.8"><title>Budget: ${fmtMoney(d3.budget)}</title></rect>
+        <text x="${205 + wR}" y="${y2 + 11}" class="ch-v" text-anchor="start">${fmtB(d3.revenue)}</text>`;
+    }).join("") + `</svg>`;
+  const totalMin = FILMS.reduce((s, f) => s + (f.min || 0), 0);
+  const totalRev = withRev.reduce((s, f) => s + DETAILS[f.id].revenue, 0);
+  const allScored = FILMS.filter((f) => SCORES[f.id]);
+  const avgAll = Math.round(allScored.reduce((s, f) => s + SCORES[f.id][0], 0) / allScored.length);
+  const numbers = `
+  <div class="fact-strip" style="margin-bottom:22px">
+    <div class="fact-box"><div class="fb-k">${de2 ? "Titel im Archiv" : "Titles in the archive"}</div><div class="fb-v">${FILMS.length}</div></div>
+    <div class="fact-box"><div class="fb-k">${de2 ? "Alles am Stück" : "Back to back"}</div><div class="fb-v">${Math.floor(totalMin / 1440)} ${de2 ? "Tage" : "days"} ${Math.floor((totalMin % 1440) / 60)} h</div></div>
+    <div class="fact-box"><div class="fb-k">${de2 ? "Box Office gesamt" : "Total box office"}</div><div class="fb-v">${fmtMoney(totalRev)}</div></div>
+    <div class="fact-box"><div class="fb-k">${de2 ? "Ø Rotten Tomatoes" : "Avg Rotten Tomatoes"}</div><div class="fb-v">${avgAll} %</div></div>
+  </div>
+  <div class="chart-card"><div class="chart-t">${de2 ? "Box Office pro Jahr" : "Box office per year"}</div><div class="chart-s">${de2 ? "Gold = 3-Milliarden-Jahre. Der Endgame-Gipfel 2019, das Pandemie-Tal 2020 — und die NWH-Auferstehung." : "Gold = 3-billion years. The Endgame peak of 2019, the pandemic valley of 2020 — and the NWH resurrection."}</div>${revChart}</div>
+  <div class="chart-grid">
+    <div class="chart-card"><div class="chart-t">${de2 ? "Kritiker-Schnitt pro MCU-Phase" : "Critics average per MCU phase"}</div><div class="chart-s">${de2 ? "Der Durchhänger der Multiverse Saga — rot markiert. Phase 6 hat die Kurve gekriegt." : "The Multiverse Saga slump — marked red. Phase 6 turned it around."}</div>${phChart}</div>
+    <div class="chart-card"><div class="chart-t">${de2 ? "Budget vs. Einspielergebnis · Top 8" : "Budget vs. box office · top 8"}</div><div class="chart-s">${de2 ? "Gold = eingespielt, Grau = gekostet. Hover für Zahlen." : "Gold = earned, gray = cost. Hover for numbers."}</div>${bvChart}</div>
+  </div>`;
   return `<main class="wrap" style="padding:50px 22px 60px">
-  ${secHead("Hall of Fame & Hall of Shame", lang === "de" ? "Die Rekorde" : "The Records", lang === "de" ? "Bestwerte, Tiefpunkte und Kuriositäten — direkt aus den Wiki-Daten berechnet." : "Highs, lows and oddities — computed straight from the wiki data.")}
+  ${secHead("Hall of Fame & Hall of Shame", lang === "de" ? "Die Rekorde" : "The Records", lang === "de" ? "Erst das Franchise in Zahlen, dann Bestwerte, Tiefpunkte und Kuriositäten — alles direkt aus den Wiki-Daten berechnet." : "First the franchise in numbers, then highs, lows and oddities — all computed straight from the wiki data.")}
+  <div class="subhead">${lang === "de" ? "Das Franchise in Zahlen" : "The franchise in numbers"}</div>
+  ${numbers}
   <div class="subhead">Top 10 (Rotten Tomatoes)</div>${byRt.slice(0, 10).map((f, i) => recRow(f, i, SCORES[f.id][0] + " %")).join("")}
   <div class="subhead">Flop 10</div>${byRt.slice(-10).reverse().map((f, i) => recRow(f, i, SCORES[f.id][0] + " %")).join("")}
   <div class="subhead">${lang === "de" ? "Serien-Ranking · Top 5" : "Series ranking · top 5"}</div>${scored.filter((f) => f.type === "Serie").sort((a, b) => SCORES[b.id][0] - SCORES[a.id][0]).slice(0, 5).map((f, i) => recRow(f, i, SCORES[f.id][0] + " %")).join("")}
