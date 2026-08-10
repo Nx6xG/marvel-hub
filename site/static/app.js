@@ -865,7 +865,7 @@
           y += rh + 8;
         });
         cx.fillStyle = "#5f6f64"; cx.font = "14px Arial";
-        cx.fillText("KNOW\u00b7HERE \u2014 " + location.host + location.pathname, pad, H - 20);
+        cx.fillText("SANC\u00b7TUM \u2014 " + location.host + location.pathname, pad, H - 20);
         cv.toBlob(function (blob) {
           var a = document.createElement("a");
           a.href = URL.createObjectURL(blob);

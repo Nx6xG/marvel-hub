@@ -6,7 +6,7 @@ import { join } from "node:path";
 
 /* ================= Konfiguration ================= */
 const SITE_URL = process.env.SITE_URL || "https://marvel.nico-grim.me";
-const SITE_NAME = "Knowhere"; // nach Domain-Wechsel anpassen
+const SITE_NAME = "Sanctum"; // Wortmarke: Sanc·tum — nach Domain-Wechsel anpassen
 const OUT = "public";
 const LANGS = ["de", "en"];
 const BUILD_DATE = new Date().toISOString().slice(0, 10);
@@ -43,11 +43,11 @@ const T = {
     nav: { home: "Start", films: "Filme & Serien", chars: "Charaktere", teams: "Teams & Organisationen", multi: "Multiversum", arts: "Artefakte", paths: "Pfade", records: "Rekorde", chron: "Chronik", threads: "Offene Fäden", lex: "Lexikon", faq: "FAQ", db: "Datenbank", know: "Wissen", games: "Spiele", tier: "Tier-List", quotes: "Zitate", roadmap: "Roadmap", grave: "Der Friedhof", actors: "Schauspieler", places: "Orte & Welten", peoples: "Völker & Spezies", event: "★ Doomsday" },
     spoiler_off: "Spoiler: aus", search_ph: "Suche …",
     home_sub: "Von Iron Man bis Doomsday: Filme, Serien, Charaktere und die ganze Lore — quer durch alle Marvel-Universen.",
-    home_desc: "Knowhere: das Fan-Wiki über alle Marvel-Film-Universen — MCU, X-Men, Sony, Klassiker und TV-Ära. Mit Doomsday-Countdown, Watchlist, Charakteren, Teams und Lore.",
+    home_desc: "Sanctum: das Fan-Wiki über alle Marvel-Film-Universen — MCU, X-Men, Sony, Klassiker und TV-Ära. Mit Doomsday-Countdown, Watchlist, Charakteren, Teams und Lore.",
     days: "Tage", radar_last: "Zuletzt erschienen", radar_now: "● Jetzt im Kino", radar_next: "Als Nächstes",
     event_k: "· Das Event ·", event_cta: "Zum Event-Hub ➤", news: "Neuigkeiten", dive: "Direkt eintauchen",
     watch: "Als gesehen markieren", watched: "✓ Gesehen", trailer: "Trailer ansehen", trailer_s: "öffnet YouTube in neuem Tab",
-    plot: "Worum es geht", note_lbl: "Knowhere-Einordnung", cast: "Besetzung", cast_more: "Weitere Besetzung", figures: "Wichtige Figuren", trivia: "Trivia & Hintergrund",
+    plot: "Worum es geht", note_lbl: "Sanctum-Einordnung", cast: "Besetzung", cast_more: "Weitere Besetzung", figures: "Wichtige Figuren", trivia: "Trivia & Hintergrund",
     pc: "Post-Credit-Szenen", pc_none: "Keine (nennenswerte) Post-Credit-Szene verzeichnet.", pc_to: "Führt zu:",
     cameo: "🥸 Stan-Lee-Cameo", doom_note: "Bedeutung für Doomsday", to_event: "Zum Doomsday-Event-Hub →",
     where: "Wo schauen", asof: "Stand 08/2026", back: "← Zurück", phase: "Phase",
@@ -66,11 +66,11 @@ const T = {
     nav: { home: "Home", films: "Films & Shows", chars: "Characters", teams: "Teams & orgs", multi: "Multiverse", arts: "Artifacts", paths: "Storylines", records: "Records", chron: "Timeline", threads: "Loose Ends", lex: "Lexicon", faq: "FAQ", db: "Database", know: "Knowledge", games: "Games", tier: "Tier list", quotes: "Quotes", roadmap: "Roadmap", grave: "The Graveyard", actors: "Actors", places: "Places & worlds", peoples: "Peoples & species", event: "★ Doomsday" },
     spoiler_off: "Spoilers: off", search_ph: "Search …",
     home_sub: "From Iron Man to Doomsday: films, shows, characters and all the lore — across every Marvel universe. (Article texts are German-first for now.)",
-    home_desc: "Knowhere: the fan wiki covering every Marvel movie universe — MCU, X-Men, Sony, classics and the TV era. With Doomsday countdown, watchlist, characters, teams and lore.",
+    home_desc: "Sanctum: the fan wiki covering every Marvel movie universe — MCU, X-Men, Sony, classics and the TV era. With Doomsday countdown, watchlist, characters, teams and lore.",
     days: "Days", radar_last: "Recently released", radar_now: "● In theaters now", radar_next: "Up next",
     event_k: "· The Event ·", event_cta: "Enter the Event Hub ➤", news: "News", dive: "Dive in",
     watch: "Mark as watched", watched: "✓ Watched", trailer: "Watch the trailer", trailer_s: "opens YouTube in a new tab",
-    plot: "The story", note_lbl: "Knowhere notes", cast: "Cast", cast_more: "More cast", figures: "Key characters", trivia: "Trivia & background",
+    plot: "The story", note_lbl: "Sanctum notes", cast: "Cast", cast_more: "More cast", figures: "Key characters", trivia: "Trivia & background",
     pc: "Post-credit scenes", pc_none: "No (notable) post-credit scene on record.", pc_to: "Leads to:",
     cameo: "🥸 Stan Lee cameo", doom_note: "Why it matters for Doomsday", to_event: "To the Doomsday event hub →",
     where: "Where to watch", asof: "as of 08/2026", back: "← Back", phase: "Phase",
@@ -261,7 +261,7 @@ function page({ lang, path, title, desc, ogImage, body, dataPage, jsonld, noinde
 <link rel="alternate" hreflang="${altLang}" href="${SITE_URL}${altPrefix}${path}">
 <link rel="alternate" hreflang="x-default" href="${SITE_URL}${path}">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Knowhere">
+<meta property="og:site_name" content="Sanctum">
 <meta property="og:locale" content="${lang === "de" ? "de_DE" : "en_US"}">
 <meta property="og:locale:alternate" content="${lang === "de" ? "en_US" : "de_DE"}">
 <meta property="og:title" content="${esc(title)}">
@@ -285,7 +285,7 @@ ${(() => {
 </head>
 <body class="${dataPage === "event" ? "" : "neutral"}" data-page="${dataPage || ""}">
 <nav class="nav"><div class="nav-inner">
-  <a class="nav-brand" href="${prefix}/">Know<b>·</b>here</a>
+  <a class="nav-brand" href="${prefix}/">Sanc<b>·</b>tum</a>
   <div class="nav-links" id="navLinks">${nav}</div>
   <div class="nav-tools">
     <div class="nav-search"><input id="globalSearch" type="search" placeholder="${L.search_ph}" aria-label="${L.search_ph}" autocomplete="off"><div class="search-drop" id="searchDrop" hidden></div></div>
@@ -298,7 +298,7 @@ ${dataPage !== "event" && dataPage !== "home" ? `<a class="promo" href="${prefix
 ${crumbs && crumbs.length ? `<div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="${prefix}/">${L.nav.home}</a>${crumbs.map(([n, u]) => u ? ` › <a href="${prefix}${u}">${n}</a>` : ` › <span>${n}</span>`).join("")}</nav></div>` : ""}
 ${body}
 <footer>
-  <p><strong style="color:var(--muted)">Knowhere</strong> · ${L.footer1}</p>
+  <p><strong style="color:var(--muted)">Sanctum</strong> · ${L.footer1}</p>
   <p>${L.footer2}</p>
   <p><a href="/impressum/">Impressum</a> · <a href="/datenschutz/">Datenschutz</a></p>
   <p class="f-sig">▚ Every Story leads to Doom ▞</p>
@@ -953,7 +953,7 @@ function homeBody(lang) {
   };
   return `<header class="hub-hero">
     <div class="hero-rule">${L.tagline}</div>
-    <h1 class="metal">Knowhere</h1>
+    <h1 class="metal">Sanctum</h1>
     <p class="hub-sub">${L.home_sub}</p>
   </header>
   <main class="wrap" style="padding-bottom:50px">
@@ -1014,24 +1014,24 @@ function emit(lang, path, html) {
 
 for (const lang of LANGS) {
   const L = T[lang];
-  const site = lang === "de" ? "Knowhere — Das Marvel-Fanarchiv: Filme, Serien, Charaktere & Lore" : "Knowhere — the Marvel fan archive: films, shows, characters & lore";
+  const site = lang === "de" ? "Sanctum — Das Marvel-Fanarchiv: Filme, Serien, Charaktere & Lore" : "Sanctum — the Marvel fan archive: films, shows, characters & lore";
   const siteLd = {
     "@context": "https://schema.org", "@type": "WebSite",
-    name: "Knowhere", url: SITE_URL + (lang === "en" ? "/en/" : "/"),
+    name: "Sanctum", url: SITE_URL + (lang === "en" ? "/en/" : "/"),
     inLanguage: lang, description: L.home_desc,
     potentialAction: { "@type": "SearchAction", target: { "@type": "EntryPoint", urlTemplate: SITE_URL + "/filme/?q={search_term_string}" }, "query-input": "required name=search_term_string" },
   };
   emit(lang, "/", page({ lang, path: "/", title: site, desc: L.home_desc, dataPage: "home", ogImage: "/img/p/doomsday.jpg", jsonld: siteLd, body: homeBody(lang) }));
-  emit(lang, "/filme/", page({ lang, path: "/filme/", title: (lang === "de" ? "Alle Marvel-Filme & -Serien in der Übersicht (MCU, X-Men, Sony)" : "All Marvel films & shows at a glance (MCU, X-Men, Sony)") + " · Knowhere", desc: lang === "de" ? "108 Marvel-Filme und -Serien aus MCU, X-Men, Sony, Klassikern und TV-Ära — mit Scores, Trivia und Post-Credit-Szenen." : "108 Marvel films and shows across the MCU, X-Men, Sony, classics and the TV era.", dataPage: "wiki", body: wikiIndexBody(lang) }));
-  emit(lang, "/charaktere/", page({ lang, path: "/charaktere/", title: (lang === "de" ? "Marvel-Charaktere" : "Marvel characters") + " · Knowhere", desc: lang === "de" ? "128 Marvel-Charaktere mit Biografien, Kräften und Beziehungs-Netzen." : "128 Marvel characters with bios, powers and relationship webs.", dataPage: "wiki", body: charIndexBody(lang) }));
-  emit(lang, "/teams/", page({ lang, path: "/teams/", title: "Marvel-Teams · Knowhere", desc: lang === "de" ? "Von den Avengers bis Haus Doom: 21 Marvel-Teams und Schurken-Fraktionen." : "From the Avengers to House Doom: 21 Marvel teams and villain factions.", dataPage: "teams", body: teamsIndexBody(lang) }));
-  emit(lang, "/multiversum/", page({ lang, path: "/multiversum/", title: "Multiversum · Knowhere", desc: "Umgezogen: Die Welten des Multiversums findest du jetzt unter Orte & Welten.", dataPage: "multi", noindex: true, body: `<main class="wrap" style="padding:100px 22px;text-align:center"><h2 class="metal">${lang === "de" ? "Umgezogen" : "Moved"}</h2><p class="sec-sub">${lang === "de" ? "Die Welten &amp; Erde-Nummern wohnen jetzt bei" : "The worlds now live at"} <a href="${lang === "en" ? "/en" : ""}/orte/">${T[lang].nav.places}</a>.</p></main>` }));
-  emit(lang, "/artefakte/", page({ lang, path: "/artefakte/", title: (lang === "de" ? "Marvel-Artefakte" : "Marvel artifacts") + " · Knowhere", desc: lang === "de" ? "Infinity-Steine, Mjölnir, Darkhold & Co. — 26 legendäre Marvel-Objekte." : "Infinity Stones, Mjölnir, the Darkhold & more — 26 legendary Marvel objects.", dataPage: "arts", body: artsIndexBody(lang) }));
-  emit(lang, "/pfade/", page({ lang, path: "/pfade/", title: (lang === "de" ? "Storyline-Pfade & Post-Credit-Kette" : "Storylines & the post-credit chain") + " · Knowhere", desc: lang === "de" ? "16 kuratierte Handlungsstränge durchs Marvel-Universum plus die komplette Post-Credit-Verkettung." : "16 curated story threads plus the complete post-credit chain.", dataPage: "paths", body: pathsIndexBody(lang) }));
-  emit(lang, "/rekorde/", page({ lang, path: "/rekorde/", title: (lang === "de" ? "Marvel-Rekorde: Top & Flop" : "Marvel records: top & flop") + " · Knowhere", desc: lang === "de" ? "Die besten und schlechtesten Marvel-Filme, Kino-Rekorde und alle Stan-Lee-Cameos." : "The best and worst Marvel films, box-office records and every Stan Lee cameo.", dataPage: "records", body: recordsBody(lang) }));
-  emit(lang, "/chronik/", page({ lang, path: "/chronik/", title: (lang === "de" ? "Die MCU-Chronik: die Geschichte in richtiger Reihenfolge" : "The MCU timeline: the story in order") + " · Knowhere", desc: lang === "de" ? "Die Weltgeschichte des MCU von der Urzeit bis Battleworld — nach Ereignissen statt Kinostarts." : "The in-universe history of the MCU from prehistory to Battleworld.", dataPage: "chron", body: chronBody(lang) }));
-  emit(lang, "/faeden/", page({ lang, path: "/faeden/", title: (lang === "de" ? "Die offenen Fäden des Marvel-Universums" : "Marvel's loose ends") + " · Knowhere", desc: lang === "de" ? "15 Cliffhanger, die Marvel nie aufgelöst hat — vom Zehn-Ringe-Signal bis Knull." : "15 cliffhangers Marvel never resolved — from the Ten Rings signal to Knull.", dataPage: "threads", body: threadsBody(lang) }));
-  emit(lang, "/event/", page({ lang, path: "/event/", title: "Avengers: Doomsday — Event-Hub · Knowhere", desc: lang === "de" ? "Countdown, Saga-Timeline, Watchlist, Lore und Theorien zu Avengers: Doomsday (18. Dezember 2026)." : "Countdown, saga timeline, watchlist, lore and theories for Avengers: Doomsday (December 18, 2026).", dataPage: "event", ogImage: "/img/p/doomsday.jpg", body: eventBody(lang) }));
+  emit(lang, "/filme/", page({ lang, path: "/filme/", title: (lang === "de" ? "Alle Marvel-Filme & -Serien in der Übersicht (MCU, X-Men, Sony)" : "All Marvel films & shows at a glance (MCU, X-Men, Sony)") + " · Sanctum", desc: lang === "de" ? "108 Marvel-Filme und -Serien aus MCU, X-Men, Sony, Klassikern und TV-Ära — mit Scores, Trivia und Post-Credit-Szenen." : "108 Marvel films and shows across the MCU, X-Men, Sony, classics and the TV era.", dataPage: "wiki", body: wikiIndexBody(lang) }));
+  emit(lang, "/charaktere/", page({ lang, path: "/charaktere/", title: (lang === "de" ? "Marvel-Charaktere" : "Marvel characters") + " · Sanctum", desc: lang === "de" ? "128 Marvel-Charaktere mit Biografien, Kräften und Beziehungs-Netzen." : "128 Marvel characters with bios, powers and relationship webs.", dataPage: "wiki", body: charIndexBody(lang) }));
+  emit(lang, "/teams/", page({ lang, path: "/teams/", title: "Marvel-Teams · Sanctum", desc: lang === "de" ? "Von den Avengers bis Haus Doom: 21 Marvel-Teams und Schurken-Fraktionen." : "From the Avengers to House Doom: 21 Marvel teams and villain factions.", dataPage: "teams", body: teamsIndexBody(lang) }));
+  emit(lang, "/multiversum/", page({ lang, path: "/multiversum/", title: "Multiversum · Sanctum", desc: "Umgezogen: Die Welten des Multiversums findest du jetzt unter Orte & Welten.", dataPage: "multi", noindex: true, body: `<main class="wrap" style="padding:100px 22px;text-align:center"><h2 class="metal">${lang === "de" ? "Umgezogen" : "Moved"}</h2><p class="sec-sub">${lang === "de" ? "Die Welten &amp; Erde-Nummern wohnen jetzt bei" : "The worlds now live at"} <a href="${lang === "en" ? "/en" : ""}/orte/">${T[lang].nav.places}</a>.</p></main>` }));
+  emit(lang, "/artefakte/", page({ lang, path: "/artefakte/", title: (lang === "de" ? "Marvel-Artefakte" : "Marvel artifacts") + " · Sanctum", desc: lang === "de" ? "Infinity-Steine, Mjölnir, Darkhold & Co. — 26 legendäre Marvel-Objekte." : "Infinity Stones, Mjölnir, the Darkhold & more — 26 legendary Marvel objects.", dataPage: "arts", body: artsIndexBody(lang) }));
+  emit(lang, "/pfade/", page({ lang, path: "/pfade/", title: (lang === "de" ? "Storyline-Pfade & Post-Credit-Kette" : "Storylines & the post-credit chain") + " · Sanctum", desc: lang === "de" ? "16 kuratierte Handlungsstränge durchs Marvel-Universum plus die komplette Post-Credit-Verkettung." : "16 curated story threads plus the complete post-credit chain.", dataPage: "paths", body: pathsIndexBody(lang) }));
+  emit(lang, "/rekorde/", page({ lang, path: "/rekorde/", title: (lang === "de" ? "Marvel-Rekorde: Top & Flop" : "Marvel records: top & flop") + " · Sanctum", desc: lang === "de" ? "Die besten und schlechtesten Marvel-Filme, Kino-Rekorde und alle Stan-Lee-Cameos." : "The best and worst Marvel films, box-office records and every Stan Lee cameo.", dataPage: "records", body: recordsBody(lang) }));
+  emit(lang, "/chronik/", page({ lang, path: "/chronik/", title: (lang === "de" ? "Die MCU-Chronik: die Geschichte in richtiger Reihenfolge" : "The MCU timeline: the story in order") + " · Sanctum", desc: lang === "de" ? "Die Weltgeschichte des MCU von der Urzeit bis Battleworld — nach Ereignissen statt Kinostarts." : "The in-universe history of the MCU from prehistory to Battleworld.", dataPage: "chron", body: chronBody(lang) }));
+  emit(lang, "/faeden/", page({ lang, path: "/faeden/", title: (lang === "de" ? "Die offenen Fäden des Marvel-Universums" : "Marvel's loose ends") + " · Sanctum", desc: lang === "de" ? "15 Cliffhanger, die Marvel nie aufgelöst hat — vom Zehn-Ringe-Signal bis Knull." : "15 cliffhangers Marvel never resolved — from the Ten Rings signal to Knull.", dataPage: "threads", body: threadsBody(lang) }));
+  emit(lang, "/event/", page({ lang, path: "/event/", title: "Avengers: Doomsday — Event-Hub · Sanctum", desc: lang === "de" ? "Countdown, Saga-Timeline, Watchlist, Lore und Theorien zu Avengers: Doomsday (18. Dezember 2026)." : "Countdown, saga timeline, watchlist, lore and theories for Avengers: Doomsday (December 18, 2026).", dataPage: "event", ogImage: "/img/p/doomsday.jpg", body: eventBody(lang) }));
 
   for (const f of FILMS) {
     const sc = SCORES[f.id];
@@ -1046,16 +1046,16 @@ for (const lang of LANGS) {
     };
     emit(lang, filmUrl(f.id), page({
       lang, path: filmUrl(f.id),
-      title: `${f.t} (${parseInt(f.y) || f.y}) — ${typeL(f.type, lang)}, ${lang === "de" ? "Cast, Trivia & Post-Credits" : "cast, trivia & post-credits"} · Knowhere`,
+      title: `${f.t} (${parseInt(f.y) || f.y}) — ${typeL(f.type, lang)}, ${lang === "de" ? "Cast, Trivia & Post-Credits" : "cast, trivia & post-credits"} · Sanctum`,
       desc: stripTags(tr(f, "plot", lang)).slice(0, 158),
       ogImage: `/img/p/${f.id}.jpg`, dataPage: "film", jsonld, crumbs: [[T[lang].nav.films, "/filme/"], [esc(f.t)]],
       body: filmBody(f, lang),
     }));
   }
-  for (const c of CHARS) emit(lang, charUrl(c.id), page({ lang, path: charUrl(c.id), title: `${c.n} (${tr(c, "a", lang)}) — ${lang === "de" ? "Marvel-Charakter" : "Marvel character"} · Knowhere`, desc: stripTags(tr(c, "bio", lang)).slice(0, 158), ogImage: existsSync(`public/img/c/${c.id}.jpg`) ? `/img/c/${c.id}.jpg` : undefined, dataPage: "char", crumbs: [[T[lang].nav.chars, "/charaktere/"], [esc(c.n)]], body: charBody(c, lang) }));
-  for (const t of TEAMS) emit(lang, teamUrl(t.id), page({ lang, path: teamUrl(t.id), title: `${tr(t, "n", lang)} — ${lang === "de" ? "Marvel-Team" : "Marvel team"} · Knowhere`, desc: stripTags(tr(t, "desc", lang)).slice(0, 158), dataPage: "team", crumbs: [["Teams", "/teams/"], [esc(tr(t, "n", lang))]], body: teamBody(t, lang) }));
-  for (const a of ARTIFACTS) emit(lang, artUrl(a.id), page({ lang, path: artUrl(a.id), title: `${a.n} — ${lang === "de" ? "Marvel-Artefakt" : "Marvel artifact"} · Knowhere`, desc: stripTags(tr(a, "d", lang)).slice(0, 158), dataPage: "art", crumbs: [[T[lang].nav.arts, "/artefakte/"], [esc(a.n)]], body: artBody(a, lang) }));
-  for (const p of PATHS) emit(lang, pathUrl(p.id), page({ lang, path: pathUrl(p.id), title: `${tr(p, "n", lang)} — ${lang === "de" ? "Storyline-Pfad" : "Storyline path"} · Knowhere`, desc: stripTags(tr(p, "intro", lang)).slice(0, 158), dataPage: "path", crumbs: [[T[lang].nav.paths, "/pfade/"], [esc(tr(p, "n", lang))]], body: pathBody(p, lang) }));
+  for (const c of CHARS) emit(lang, charUrl(c.id), page({ lang, path: charUrl(c.id), title: `${c.n} (${tr(c, "a", lang)}) — ${lang === "de" ? "Marvel-Charakter" : "Marvel character"} · Sanctum`, desc: stripTags(tr(c, "bio", lang)).slice(0, 158), ogImage: existsSync(`public/img/c/${c.id}.jpg`) ? `/img/c/${c.id}.jpg` : undefined, dataPage: "char", crumbs: [[T[lang].nav.chars, "/charaktere/"], [esc(c.n)]], body: charBody(c, lang) }));
+  for (const t of TEAMS) emit(lang, teamUrl(t.id), page({ lang, path: teamUrl(t.id), title: `${tr(t, "n", lang)} — ${lang === "de" ? "Marvel-Team" : "Marvel team"} · Sanctum`, desc: stripTags(tr(t, "desc", lang)).slice(0, 158), dataPage: "team", crumbs: [["Teams", "/teams/"], [esc(tr(t, "n", lang))]], body: teamBody(t, lang) }));
+  for (const a of ARTIFACTS) emit(lang, artUrl(a.id), page({ lang, path: artUrl(a.id), title: `${a.n} — ${lang === "de" ? "Marvel-Artefakt" : "Marvel artifact"} · Sanctum`, desc: stripTags(tr(a, "d", lang)).slice(0, 158), dataPage: "art", crumbs: [[T[lang].nav.arts, "/artefakte/"], [esc(a.n)]], body: artBody(a, lang) }));
+  for (const p of PATHS) emit(lang, pathUrl(p.id), page({ lang, path: pathUrl(p.id), title: `${tr(p, "n", lang)} — ${lang === "de" ? "Storyline-Pfad" : "Storyline path"} · Sanctum`, desc: stripTags(tr(p, "intro", lang)).slice(0, 158), dataPage: "path", crumbs: [[T[lang].nav.paths, "/pfade/"], [esc(tr(p, "n", lang))]], body: pathBody(p, lang) }));
 }
 
 /* Schauspieler-Seiten */
@@ -1092,7 +1092,7 @@ for (const lang of LANGS) {
 </main>`;
     emit(lang, personUrl(pid), page({
       lang, path: personUrl(pid),
-      title: `${p.n} — ${lang === "de" ? "Marvel-Filmografie" : "Marvel filmography"} · Knowhere`,
+      title: `${p.n} — ${lang === "de" ? "Marvel-Filmografie" : "Marvel filmography"} · Sanctum`,
       desc: (tr(p, "bio", lang) || (lang === "de" ? `${p.n}: alle Marvel-Auftritte im Überblick.` : `${p.n}: every Marvel appearance at a glance.`)).slice(0, 158),
       ogImage: existsSync(`public/img/a/${pid}.jpg`) ? `/img/a/${pid}.jpg` : undefined,
       dataPage: "person", crumbs: [[T[lang].nav.films, "/filme/"], [esc(p.n)]], body,
@@ -1135,7 +1135,7 @@ function universesGrid(lang) {
 }
 for (const lang of LANGS) {
   const de = lang === "de";
-  emit(lang, "/orte/", page({ lang, path: "/orte/", title: (de ? "Marvel-Orte & Welten: von Asgard bis Battleworld" : "Marvel places & worlds") + " · Knowhere", desc: de ? "Alle wichtigen Orte und Welten des Marvel-Kinos: Asgard, Wakanda, das Quantenreich — plus alle Erde-Nummern des Multiversums." : "Every important place and world of Marvel cinema, plus all Earth numbers of the multiverse.", dataPage: "places", body:
+  emit(lang, "/orte/", page({ lang, path: "/orte/", title: (de ? "Marvel-Orte & Welten: von Asgard bis Battleworld" : "Marvel places & worlds") + " · Sanctum", desc: de ? "Alle wichtigen Orte und Welten des Marvel-Kinos: Asgard, Wakanda, das Quantenreich — plus alle Erde-Nummern des Multiversums." : "Every important place and world of Marvel cinema, plus all Earth numbers of the multiverse.", dataPage: "places", body:
     `<main class="wrap" style="padding:50px 22px 60px">
     ${secHead(de ? "Von Asgard bis Battleworld" : "From Asgard to Battleworld", de ? "Orte &amp; Welten" : "Places &amp; Worlds", de ? "Erst die Welten des Multiversums — dann die Orte, an denen die Geschichten spielen." : "First the worlds of the multiverse — then the places where the stories happen.")}
     <div class="subhead">${de ? "Die Welten · Erde-Nummern" : "The worlds · Earth numbers"}</div>
@@ -1143,7 +1143,7 @@ for (const lang of LANGS) {
     <div class="subhead">${de ? "Die Orte" : "The places"}</div>
     <div class="char-grid">${catIndexCards("ort", lang)}</div>
   </main>` }));
-  emit(lang, "/voelker/", page({ lang, path: "/voelker/", title: (de ? "Marvel-Völker & Spezies" : "Marvel peoples & species") + " · Knowhere", desc: de ? "Skrulle, Kree, Celestials, Mutanten & Co.: alle Völker und Spezies des Marvel-Kinos erklärt." : "Skrulls, Kree, Celestials, mutants & co: every people and species of Marvel cinema explained.", dataPage: "peoples", body:
+  emit(lang, "/voelker/", page({ lang, path: "/voelker/", title: (de ? "Marvel-Völker & Spezies" : "Marvel peoples & species") + " · Sanctum", desc: de ? "Skrulle, Kree, Celestials, Mutanten & Co.: alle Völker und Spezies des Marvel-Kinos erklärt." : "Skrulls, Kree, Celestials, mutants & co: every people and species of Marvel cinema explained.", dataPage: "peoples", body:
     `<main class="wrap" style="padding:50px 22px 60px">
     ${secHead(de ? "Wer das Universum bevölkert" : "Who populates the universe", de ? "Völker &amp; Spezies" : "Peoples &amp; Species", "")}
     <div class="char-grid">${catIndexCards("volk", lang)}</div>
@@ -1151,14 +1151,14 @@ for (const lang of LANGS) {
   for (const cat of ["ort", "volk", "org"]) {
     const backPath = cat === "ort" ? "/orte/" : cat === "volk" ? "/voelker/" : "/teams/";
     for (const e of LEX_BY_CAT(cat)) {
-      emit(lang, lexUrl(e), page({ lang, path: lexUrl(e), title: `${tr(e, "n", lang)} — ${CAT_META[cat][lang === "de" ? "de" : "en"]} · Knowhere`, desc: tr(e, "d", lang).slice(0, 158), dataPage: "lexdetail",
+      emit(lang, lexUrl(e), page({ lang, path: lexUrl(e), title: `${tr(e, "n", lang)} — ${CAT_META[cat][lang === "de" ? "de" : "en"]} · Sanctum`, desc: tr(e, "d", lang).slice(0, 158), dataPage: "lexdetail",
         crumbs: [[cat === "ort" ? T[lang].nav.places : cat === "volk" ? T[lang].nav.peoples : T[lang].nav.teams, backPath], [esc(tr(e, "n", lang))]],
         body: lexDetailBody(e, lang, backPath, "") }));
     }
   }
   // Schauspieler-Index
   const actorList = Object.entries(PERSONS).sort((a, b) => a[1].n.localeCompare(b[1].n));
-  emit(lang, "/schauspieler/", page({ lang, path: "/schauspieler/", title: (de ? "Alle Marvel-Schauspieler:innen" : "All Marvel actors") + " · Knowhere", desc: de ? `${actorList.length} Schauspieler:innen des Marvel-Kinos mit Biografie und kompletter Marvel-Filmografie.` : `${actorList.length} Marvel actors with bios and full Marvel filmographies.`, dataPage: "actors", body:
+  emit(lang, "/schauspieler/", page({ lang, path: "/schauspieler/", title: (de ? "Alle Marvel-Schauspieler:innen" : "All Marvel actors") + " · Sanctum", desc: de ? `${actorList.length} Schauspieler:innen des Marvel-Kinos mit Biografie und kompletter Marvel-Filmografie.` : `${actorList.length} Marvel actors with bios and full Marvel filmographies.`, dataPage: "actors", body:
     `<main class="wrap" style="padding:50px 22px 60px">
     ${secHead(de ? "Das Ensemble hinter dem Ensemble" : "The ensemble behind the ensemble", de ? "Schauspieler:innen" : "Actors", de ? actorList.length + " Menschen, die das Marvel-Kino tragen — jede:r mit eigener Seite." : "")}
     <div class="wiki-tools"><input class="wiki-search" id="wikiSearch" type="search" placeholder="${de ? "Name suchen …" : "Search names …"}"></div>
@@ -1172,7 +1172,7 @@ for (const lang of LANGS) {
 for (const lang of LANGS) {
   const de = lang === "de";
   const prefix = lang === "en" ? "/en" : "";
-  emit(lang, "/spiele/", page({ lang, path: "/spiele/", title: (de ? "Marvel-Videospiele: von Spider-Man bis Rivals" : "Marvel video games") + " · Knowhere", desc: de ? "Die wichtigsten Marvel-Spiele im Überblick — von Insomniacs Spider-Man über Marvel Rivals bis zu den legendären Tie-ins." : "The most important Marvel games — from Insomniac's Spider-Man to Marvel Rivals.", dataPage: "games", body:
+  emit(lang, "/spiele/", page({ lang, path: "/spiele/", title: (de ? "Marvel-Videospiele: von Spider-Man bis Rivals" : "Marvel video games") + " · Sanctum", desc: de ? "Die wichtigsten Marvel-Spiele im Überblick — von Insomniacs Spider-Man über Marvel Rivals bis zu den legendären Tie-ins." : "The most important Marvel games — from Insomniac's Spider-Man to Marvel Rivals.", dataPage: "games", body:
     `<main class="wrap" style="padding:50px 22px 60px">
     ${secHead(de ? "Jenseits des Kinos" : "Beyond the movies", de ? "Die Spiele" : "The Games", de ? "Was sich zu spielen lohnt — und welche Filme dazu passen. Von AAA-Meisterwerken bis Kult-Tie-ins." : "What is worth playing — and which films go with it.")}
     <div class="games-grid">${GAMES.map((gm) => `<div class="game-card" id="${gm.id}">
@@ -1222,7 +1222,7 @@ for (const lang of LANGS) {
     const rtRows = [["s", "S"], ["a", "A"], ["b", "B"], ["c", "C"], ["d", "D"]].map(([k, l]) =>
       `<div class="tier-row rt"><div class="tier-label tl-${k}">${l}</div><div class="tier-drop">${scored.filter((f) => rtTier(f) === k).map((f) =>
         `<a class="tier-item rt" href="${prefix}${filmUrl(f.id)}" title="${esc(f.t)} · ${SCORES[f.id][0]} %">${posterImgW(f.id, f.t)}<span class="ti-n">${esc(f.t)} · ${SCORES[f.id][0]} %</span></a>`).join("")}</div></div>`).join("");
-    emit(lang, "/tierlist/", page({ lang, path: "/tierlist/", title: (de ? "Marvel-Tier-List: erstelle dein eigenes Ranking" : "Marvel tier list: build your own ranking") + " · Knowhere", desc: de ? `Alle ${pool.length} Marvel-Filme & -Serien per Drag & Drop in S bis D einsortieren, speichern, als Link oder Bild teilen — plus die Daten-Tier-List nach Rotten Tomatoes.` : `Sort all ${pool.length} Marvel films & shows into S to D tiers, save your list and share it as a link or image — plus the data tier list based on Rotten Tomatoes.`, dataPage: "tierlist", body:
+    emit(lang, "/tierlist/", page({ lang, path: "/tierlist/", title: (de ? "Marvel-Tier-List: erstelle dein eigenes Ranking" : "Marvel tier list: build your own ranking") + " · Sanctum", desc: de ? `Alle ${pool.length} Marvel-Filme & -Serien per Drag & Drop in S bis D einsortieren, speichern, als Link oder Bild teilen — plus die Daten-Tier-List nach Rotten Tomatoes.` : `Sort all ${pool.length} Marvel films & shows into S to D tiers, save your list and share it as a link or image — plus the data tier list based on Rotten Tomatoes.`, dataPage: "tierlist", body:
       tierPage({
         path: "/tierlist/", tab: "f",
         kicker: de ? "S-Tier oder Skip?" : "S tier or skip?", h2: de ? "Die Tier-List" : "The Tier List",
@@ -1241,7 +1241,7 @@ for (const lang of LANGS) {
     const foxIds = ["xmen1", "x2", "x3", "logan", "dp1", "dp2", "dofp"];
     const epool = [...FILMS.filter((f) => f.uni === "mcu" && (f.prio === "pflicht" || f.prio === "empfohlen")), ...foxIds.map((id) => byId[id])];
     const tile = (f) => `<button class="tier-item" data-id="${f.id}" draggable="true" title="${esc(f.t)} (${f.y})">${posterImgW(f.id, f.t)}<span class="ti-n">${esc(f.t)}</span></button>`;
-    emit(lang, "/tierlist/event/", page({ lang, path: "/tierlist/event/", title: (de ? "Doomsday-Tier-List: ranke die Road to Doomsday" : "Doomsday tier list: rank the Road to Doomsday") + " · Knowhere", desc: de ? `Die ${epool.length} Titel der Doomsday-Vorbereitung — Saga-Pflichtprogramm plus Fox-Erbe — in S bis D einsortieren, speichern und teilen.` : `The ${epool.length} titles of the Doomsday prep — saga essentials plus the Fox legacy — sorted into S to D tiers, saved and shareable.`, dataPage: "tierlist", crumbs: [[de ? "Tier-List" : "Tier list", "/tierlist/"], ["★ Doomsday"]], body:
+    emit(lang, "/tierlist/event/", page({ lang, path: "/tierlist/event/", title: (de ? "Doomsday-Tier-List: ranke die Road to Doomsday" : "Doomsday tier list: rank the Road to Doomsday") + " · Sanctum", desc: de ? `Die ${epool.length} Titel der Doomsday-Vorbereitung — Saga-Pflichtprogramm plus Fox-Erbe — in S bis D einsortieren, speichern und teilen.` : `The ${epool.length} titles of the Doomsday prep — saga essentials plus the Fox legacy — sorted into S to D tiers, saved and shareable.`, dataPage: "tierlist", crumbs: [[de ? "Tier-List" : "Tier list", "/tierlist/"], ["★ Doomsday"]], body:
       tierPage({
         path: "/tierlist/event/", tab: "e", cls: "tier-event",
         kicker: "Every Story leads to Doom", h2: de ? "Die Doomsday-Tier-List" : "The Doomsday Tier List",
@@ -1255,7 +1255,7 @@ for (const lang of LANGS) {
   {
     const cpool = CHARS;
     const ctile = (c) => `<button class="tier-item" data-id="${c.id}" draggable="true" title="${esc(c.n)}">${charImg(c.id, c.n, "")}<span class="ti-n">${esc(c.n)}</span></button>`;
-    emit(lang, "/tierlist/charaktere/", page({ lang, path: "/tierlist/charaktere/", title: (de ? "Marvel-Charaktere-Tier-List: dein Ranking" : "Marvel character tier list: your ranking") + " · Knowhere", desc: de ? `Alle ${cpool.length} Marvel-Charaktere in S bis D einsortieren — von Doom bis Howard the Duck. Speichern und als Link oder Bild teilen.` : `Sort all ${cpool.length} Marvel characters into S to D tiers — from Doom to Howard the Duck. Save and share as a link or image.`, dataPage: "tierlist", crumbs: [[de ? "Tier-List" : "Tier list", "/tierlist/"], [de ? "Charaktere" : "Characters"]], body:
+    emit(lang, "/tierlist/charaktere/", page({ lang, path: "/tierlist/charaktere/", title: (de ? "Marvel-Charaktere-Tier-List: dein Ranking" : "Marvel character tier list: your ranking") + " · Sanctum", desc: de ? `Alle ${cpool.length} Marvel-Charaktere in S bis D einsortieren — von Doom bis Howard the Duck. Speichern und als Link oder Bild teilen.` : `Sort all ${cpool.length} Marvel characters into S to D tiers — from Doom to Howard the Duck. Save and share as a link or image.`, dataPage: "tierlist", crumbs: [[de ? "Tier-List" : "Tier list", "/tierlist/"], [de ? "Charaktere" : "Characters"]], body:
       tierPage({
         path: "/tierlist/charaktere/", tab: "c", cls: "tier-chars",
         kicker: de ? "Wer trägt das Franchise?" : "Who carries the franchise?", h2: de ? "Die Charaktere-Tier-List" : "The Character Tier List",
@@ -1281,7 +1281,7 @@ for (const lang of LANGS) {
   </div>`).join("")}
   ${adSlot(T[lang])}
 </main>`;
-  emit(lang, "/friedhof/", page({ lang, path: "/friedhof/", title: (de ? "Der Friedhof: Marvels gecancelte Filme & Projekte" : "The Graveyard: Marvel's canceled films & projects") + " · Knowhere", desc: de ? "Raimis Spider-Man 4, Edgar Wrights Ant-Man, die Sinister Six, Kang Dynasty: alle gecancelten Marvel-Projekte — und was von ihnen überlebte." : "Raimi's Spider-Man 4, Edgar Wright's Ant-Man, the Sinister Six, Kang Dynasty: every canceled Marvel project — and what survived of them.", dataPage: "grave", body: graveBody }));
+  emit(lang, "/friedhof/", page({ lang, path: "/friedhof/", title: (de ? "Der Friedhof: Marvels gecancelte Filme & Projekte" : "The Graveyard: Marvel's canceled films & projects") + " · Sanctum", desc: de ? "Raimis Spider-Man 4, Edgar Wrights Ant-Man, die Sinister Six, Kang Dynasty: alle gecancelten Marvel-Projekte — und was von ihnen überlebte." : "Raimi's Spider-Man 4, Edgar Wright's Ant-Man, the Sinister Six, Kang Dynasty: every canceled Marvel project — and what survived of them.", dataPage: "grave", body: graveBody }));
 
   const RM_STATUS = de
     ? { fix: ["Termin steht", "st-fix"], sicher: ["kommt sicher", "st-sicher"], wackelt: ["wackelt", "st-wackel"], geruecht: ["Gerücht", "st-ger"] }
@@ -1329,7 +1329,7 @@ for (const lang of LANGS) {
   </div>
   ${adSlot(T[lang])}
 </main>`;
-  emit(lang, "/roadmap/", page({ lang, path: "/roadmap/", title: (de ? "Marvel-Roadmap: alle kommenden Filme, Serien & Gerüchte" : "Marvel roadmap: every upcoming film, series & rumor") + " · Knowhere", desc: de ? "Von Doomsday über Secret Wars bis zum X-Men-Neustart: alle kommenden Marvel-Projekte und die heißesten Gerüchte mit Status-Einschätzung." : "From Doomsday through Secret Wars to the X-Men reboot: every upcoming Marvel project and the hottest rumors, with status ratings.", dataPage: "roadmap", body: roadmapBody }));
+  emit(lang, "/roadmap/", page({ lang, path: "/roadmap/", title: (de ? "Marvel-Roadmap: alle kommenden Filme, Serien & Gerüchte" : "Marvel roadmap: every upcoming film, series & rumor") + " · Sanctum", desc: de ? "Von Doomsday über Secret Wars bis zum X-Men-Neustart: alle kommenden Marvel-Projekte und die heißesten Gerüchte mit Status-Einschätzung." : "From Doomsday through Secret Wars to the X-Men reboot: every upcoming Marvel project and the hottest rumors, with status ratings.", dataPage: "roadmap", body: roadmapBody }));
 
   const quotesBody = `<main class="wrap" style="padding:50px 22px 60px">
   ${secHead(de ? "Sätze, die blieben" : "Lines that stayed", de ? "Das Zitate-Archiv" : "The Quote Archive", de ? QUOTES.length + " ikonische Zeilen im Original — mit Sprecher:in und Film. Eines davon steht jeden Tag auf der Startseite." : QUOTES.length + " iconic lines in the original — with speaker and film. One of them is on the homepage every day.")}
@@ -1345,7 +1345,7 @@ for (const lang of LANGS) {
   }).join("")}</div>
   ${adSlot(T[lang])}
 </main>`;
-  emit(lang, "/zitate/", page({ lang, path: "/zitate/", title: (de ? "Marvel-Zitate: die ikonischen Zeilen des Franchise" : "Marvel quotes: the franchise's iconic lines") + " · Knowhere", desc: de ? `${QUOTES.length} ikonische Marvel-Zitate von „I am Iron Man" bis „New mask, same task" — durchsuchbar, mit Figur und Film.` : `${QUOTES.length} iconic Marvel quotes from 'I am Iron Man' to 'New mask, same task' — searchable, with character and film.`, dataPage: "quotes", body: quotesBody }));
+  emit(lang, "/zitate/", page({ lang, path: "/zitate/", title: (de ? "Marvel-Zitate: die ikonischen Zeilen des Franchise" : "Marvel quotes: the franchise's iconic lines") + " · Sanctum", desc: de ? `${QUOTES.length} ikonische Marvel-Zitate von „I am Iron Man" bis „New mask, same task" — durchsuchbar, mit Figur und Film.` : `${QUOTES.length} iconic Marvel quotes from 'I am Iron Man' to 'New mask, same task' — searchable, with character and film.`, dataPage: "quotes", body: quotesBody }));
 }
 
 /* Lexikon & FAQ */
@@ -1405,8 +1405,8 @@ function faqBody(lang) {
 }
 const faqLd = (lang) => ({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: FAQI(lang).map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: stripTags(a) } })) });
 for (const lang of LANGS) {
-  emit(lang, "/lexikon/", page({ lang, path: "/lexikon/", title: (lang === "de" ? "Das Marvel-Lexikon: alle Begriffe erklärt" : "The Marvel lexicon") + " · Knowhere", desc: lang === "de" ? "Orte, Völker, Organisationen, Ereignisse und Konzepte des Marvel-Kinos — über 70 Begriffe erklärt, von Asgard bis Vibranium." : "Places, peoples, organizations, events and concepts of Marvel cinema — 70+ terms explained.", dataPage: "lex", body: lexikonBody(lang) }));
-  emit(lang, "/faq/", page({ lang, path: "/faq/", title: (lang === "de" ? "Marvel-FAQ: die häufigsten Fragen" : "Marvel FAQ") + " · Knowhere", desc: lang === "de" ? "Reihenfolge, Kanon, Snap & Blip, Streaming, Doomsday-Vorbereitung: die häufigsten Marvel-Fragen beantwortet." : "Watch order, canon, Snap & Blip, streaming — the most common Marvel questions answered.", dataPage: "faq", jsonld: faqLd(lang), body: faqBody(lang) }));
+  emit(lang, "/lexikon/", page({ lang, path: "/lexikon/", title: (lang === "de" ? "Das Marvel-Lexikon: alle Begriffe erklärt" : "The Marvel lexicon") + " · Sanctum", desc: lang === "de" ? "Orte, Völker, Organisationen, Ereignisse und Konzepte des Marvel-Kinos — über 70 Begriffe erklärt, von Asgard bis Vibranium." : "Places, peoples, organizations, events and concepts of Marvel cinema — 70+ terms explained.", dataPage: "lex", body: lexikonBody(lang) }));
+  emit(lang, "/faq/", page({ lang, path: "/faq/", title: (lang === "de" ? "Marvel-FAQ: die häufigsten Fragen" : "Marvel FAQ") + " · Sanctum", desc: lang === "de" ? "Reihenfolge, Kanon, Snap & Blip, Streaming, Doomsday-Vorbereitung: die häufigsten Marvel-Fragen beantwortet." : "Watch order, canon, Snap & Blip, streaming — the most common Marvel questions answered.", dataPage: "faq", jsonld: faqLd(lang), body: faqBody(lang) }));
 }
 
 /* Rechtliches */
@@ -1418,7 +1418,7 @@ for (const lang of LANGS) {
     <p style="margin-top:10px">Kontakt: <a href="mailto:nicogrim12@gmail.com">nicogrim12@gmail.com</a></p>
     <p style="margin-top:14px">Offenlegung gemäß § 25 MedienG: Diese Website ist ein privates, nicht-kommerzielles Fan-Projekt. Grundlegende Richtung: Katalogisierung und Besprechung von Marvel-Verfilmungen.</p></div>
   <div class="fp-section"><div class="fp-label">Hinweis</div>
-    <p>Knowhere ist ein nicht-kommerzielles Fan-Projekt und steht in keiner Verbindung zu Marvel, The Walt Disney Company, Sony Pictures oder TMDB. Alle Marken, Titel und Filmmaterialien gehören ihren jeweiligen Rechteinhabern. Poster, Szenenbilder und Filmdaten stammen von <a href="https://www.themoviedb.org" target="_blank" rel="noopener">TMDB</a> bzw. Wikipedia (Fair Use).</p></div>
+    <p>Sanctum ist ein nicht-kommerzielles Fan-Projekt und steht in keiner Verbindung zu Marvel, The Walt Disney Company, Sony Pictures oder TMDB. Alle Marken, Titel und Filmmaterialien gehören ihren jeweiligen Rechteinhabern. Poster, Szenenbilder und Filmdaten stammen von <a href="https://www.themoviedb.org" target="_blank" rel="noopener">TMDB</a> bzw. Wikipedia (Fair Use).</p></div>
 </main>`;
   const ds = `<main class="wrap fp" style="padding-bottom:70px;max-width:760px">
   <h1 class="metal fp-h1">Datenschutz</h1>
@@ -1431,17 +1431,17 @@ for (const lang of LANGS) {
   <div class="fp-section"><div class="fp-label">YouTube (Click-to-Play)</div>
     <p>Videos laden erst nach aktivem Klick über youtube-nocookie.com. Erst dann werden Daten an Google übertragen.</p></div>
 </main>`;
-  emit(lang, "/impressum/", page({ lang, path: "/impressum/", title: "Impressum · Knowhere", desc: "Impressum von Knowhere.", dataPage: "legal", noindex: true, body: imp }));
-  emit(lang, "/datenschutz/", page({ lang, path: "/datenschutz/", title: "Datenschutz · Knowhere", desc: "Datenschutzerklärung von Knowhere.", dataPage: "legal", noindex: true, body: ds }));
+  emit(lang, "/impressum/", page({ lang, path: "/impressum/", title: "Impressum · Sanctum", desc: "Impressum von Sanctum.", dataPage: "legal", noindex: true, body: imp }));
+  emit(lang, "/datenschutz/", page({ lang, path: "/datenschutz/", title: "Datenschutz · Sanctum", desc: "Datenschutzerklärung von Sanctum.", dataPage: "legal", noindex: true, body: ds }));
 }
 writeFileSync(join(OUT, "site.webmanifest"), JSON.stringify({
-  name: "Knowhere — Das Marvel-Fanarchiv", short_name: "Knowhere",
+  name: "Sanctum — Das Marvel-Fanarchiv", short_name: "Sanctum",
   start_url: "/", display: "standalone", background_color: "#07100a", theme_color: "#07100a",
   icons: [{ src: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
 }, null, 1));
 
 /* 404 */
-writeFileSync(join(OUT, "404.html"), page({ lang: "de", path: "/404", title: "404 · Knowhere", desc: "Seite nicht gefunden.", dataPage: "404", noindex: true, body: `<main class="wrap fp" style="position:relative;min-height:70vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center">
+writeFileSync(join(OUT, "404.html"), page({ lang: "de", path: "/404", title: "404 · Sanctum", desc: "Seite nicht gefunden.", dataPage: "404", noindex: true, body: `<main class="wrap fp" style="position:relative;min-height:70vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center">
   <div class="fp-backdrop" style="height:100%"><img src="/img/b/doomsday.jpg" alt="" aria-hidden="true"></div>
   <h1 class="metal" style="font-family:var(--display);font-weight:700;font-size:clamp(90px,18vw,180px);line-height:1">404</h1>
   <p style="font-family:var(--display);font-weight:600;font-size:22px;text-transform:uppercase;letter-spacing:0.2em;color:#cfe0d4">Diese Seite wurde gesnapt.</p>
@@ -1475,7 +1475,7 @@ cpSync("site/static/style.css", join(OUT, "assets", "style.css"));
   writeFileSync(join(OUT, inKey + ".txt"), inKey);
 }
 cpSync("site/static/app.js", join(OUT, "assets", "app.js"));
-writeFileSync(join(OUT, "favicon.svg"), `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="20" fill="#07100a"/><circle cx="50" cy="50" r="34" fill="none" stroke="#3fdc8c" stroke-width="5"/><text x="50" y="64" font-size="42" text-anchor="middle" font-family="Arial Narrow, sans-serif" font-weight="bold" fill="#eafff2">K</text></svg>`);
+writeFileSync(join(OUT, "favicon.svg"), `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="20" fill="#07100a"/><circle cx="50" cy="50" r="33" fill="none" stroke="#3fdc8c" stroke-width="4"/><circle cx="50" cy="50" r="12" fill="none" stroke="#3fdc8c" stroke-width="4"/><g stroke="#3fdc8c" stroke-width="4" stroke-linecap="round"><path d="M50 17V34M50 66V83M17 50H34M66 50H83"/></g><g stroke="#3fdc8c" stroke-width="3" stroke-linecap="round" opacity=".65"><path d="M27 27 39 39M73 27 61 39M27 73 39 61M73 73 61 61"/></g></svg>`);
 writeFileSync(join(OUT, "robots.txt"), `User-agent: *\nAllow: /\nSitemap: ${SITE_URL}/sitemap.xml\n`);
 writeFileSync(join(OUT, "sitemap.xml"),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n` +
