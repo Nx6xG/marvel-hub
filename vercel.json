@@ -42,5 +42,17 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/film/vision-quest",
+      "destination": "/film/visionquest",
+      "permanent": true
+    },
+    {
+      "source": "/en/film/vision-quest",
+      "destination": "/en/film/visionquest",
+      "permanent": true
+    }
   ]
 }

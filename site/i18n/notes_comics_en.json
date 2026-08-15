@@ -1,123 +1,258 @@
 {
-"notes":{
-"iron1":"The beginning of everything. And the man who now plays Doom became an icon here — exactly why the casting hits so hard.",
-"hulk":"Ross later becomes President and Red Hulk (Brave New World). Otherwise skippable.",
-"iron2":"First appearance of Natasha Romanoff. Not needed for Doomsday.",
-"thor1":"Origin of Thor AND Loki, two central Doomsday figures.",
-"cap1":"Evans origin; chronologically the starting point, 1943.",
-"av1":"The Battle of New York is the pivot of Endgame AND Loki: this is exactly where the variant is born who holds all timelines today.",
-"iron3":"Trevor returns in Wonder Man. Otherwise optional.",
-"thor2":"Loki's 'death' no. 2; Endgame time-travel destination. Skippable.",
-"cap2":"Debut of Sam AND Bucky-as-Winter-Soldier — two Doomsday leads. And the film with which the Russos earned the trust for Endgame & Doomsday.",
-"gotg1":"Cosmic MCU foundation; marginal for Doomsday.",
-"av2":"Highly relevant again because of Vision Quest: Ultron (James Spader!) and Vision's origin are here.",
-"antman1":"The Quantum Realm later becomes Endgame's time machine and Kang's prison.",
-"cw":"The foundation: the Avengers break apart. Without this rupture, nothing afterwards makes sense.",
-"strange1":"The MCU's magic fundamentals. Doom's second power source beside technology.",
-"gotg2":"No threads for Doomsday.",
-"spider1":"Holland's Peter begins here; his road ends (for now) in Brand New Day.",
-"thor3":"Thor's reinvention; Asgard's end explains his current status.",
-"bp1":"Wakanda foundation for Shuri, M'Baku and Wakanda Forever.",
-"iw":"The Russo blueprint for Doomsday: the villain wins.",
-"antman2":"The Quantum Realm accident that makes Endgame possible in the first place.",
-"cm":"Carol's origin; basis for The Marvels.",
-"eg":"The time-travel mechanic opens the multiverse door — and Tony's farewell is the context that makes RDJ's return as Doom truly hurt.",
-"spider2":"The unmasking is the direct trigger of No Way Home. Fun fact: Mysterio's multiverse lie came true two years later.",
-"wv":"9 episodes. Chaos magic and reality rewriting — the basis for MoM, Agatha and Vision Quest.",
-"fws":"6 episodes. Sam's road to the Captain America who leads the heroes in Doomsday.",
-"l1":"THE foundational series of the saga: TVA, timelines, Kang. Without it you only half understand Doomsday.",
-"bw":"Half the Thunderbolts family starts here. Direct pipeline to the New Avengers.",
-"wi":"Multiverse feeling in its purest form; Captain Carter and Infinity Ultron as a foretaste of variant chaos.",
-"sc":"Simu Liu is in the Doomsday cast; the rings signal is still open.",
-"et":"The dead Celestial becomes the adamantium source of Brave New World.",
-"hk":"6 episodes. Kate Bishop — Young Avengers building block.",
-"nwh":"The multiverse breaks into cinema in a big way for the first time — Fox and Sony worlds are officially real.",
-"mk":"6 episodes. Strong, but (so far) without saga connection.",
-"mom":"Introduces incursions — the mechanism behind Doomsday and Secret Wars. Plus: worlds where X-Men and F4 have long existed.",
-"msm":"6 episodes. The MCU's very first mutant mention. Post-credits leads into The Marvels.",
-"tlt":"Thor's status quo before his Doomsday return.",
-"shk":"9 episodes. Meta multiverse including the K.E.V.I.N. AI.",
-"wbn":"Atmospheric loner without saga threads.",
-"bpwf":"Shuri, M'Baku, Namor and Namora are all in the Doomsday cast.",
-"ghs":"44 minutes of Christmas. Phase 4 closer.",
-"qm":"The saga plan Doom inherits — and the Council of Kangs is an open thread to this day. Cassie Lang starts here.",
-"g3":"Trilogy closer; no direct threads for Doomsday.",
-"si":"6 episodes. Marginal for Doomsday.",
-"l2":"Probably the single most important setup for Doomsday, period. Loki's timeline throne is the most obvious target for Doom.",
-"mv":"The post-credit scene is the X-Men door opener: Monica wakes up in a foreign universe next to Beast (Kelsey Grammer, Doomsday cast).",
-"ec":"5 episodes. Bridge to Daredevil: Born Again.",
-"x97":"Its own (animated) universe, but THE love letter to exactly the X-Men era Doomsday brings back.",
-"dw":"Anchor beings, the Void, the Fox multiverse, Gambit's debut — the bridge the old X-Men walk across into the MCU.",
-"ag":"9 episodes. Wiccan is the Young Avengers keystone — and Wanda's legacy lives on.",
-"dba":"9 episodes. The state of the streets before Doomsday.",
-"bnw":"Sam as sitting Captain America, adamantium in play, no standing Avengers team: the vulnerable world Doom finds.",
-"tb":"Doomsday's active hero team forms — and with Sentry the MCU has, for the first time, a hero-side being on Doom's level. Unstable, though.",
-"ih":"6 episodes. Mephisto's MCU debut, right before the multiverse finale — no coincidence. Phase 5 closer.",
-"f4":"The direct lead-in: the post-credit scene is practically the first scene of Doomsday. Phase 6 opener.",
-"eow":"4 episodes of animation. Skippable for Doomsday.",
-"wm":"A footnote to the saga.",
-"bnd":"In theaters since 07/31/2026 — the last theatrical film before Doomsday.",
-"vq":"The last series before Doomsday; Vision's return could matter in the Avengers conflict.",
-"doomsday":"The destination of this timeline. Theatrical release: 12/18/2026 (Germany likely 12/16).",
-"secretwars":"Theatrical release: 12/17/2027. As soon as the focus shifts, this hub will be expanded for it."
+"notes": {
+"iron1": "The beginning of everything. And the man who now plays Doom became an icon here — exactly why the casting hits so hard.",
+"hulk": "Ross later becomes President and Red Hulk (Brave New World). Otherwise skippable.",
+"iron2": "First appearance of Natasha Romanoff. Not needed for Doomsday.",
+"thor1": "Origin of Thor AND Loki, two central Doomsday figures.",
+"cap1": "Evans origin; chronologically the starting point, 1943.",
+"av1": "The Battle of New York is the pivot of Endgame AND Loki: this is exactly where the variant is born who holds all timelines today.",
+"iron3": "Trevor returns in Wonder Man. Otherwise optional.",
+"thor2": "Loki's 'death' no. 2; Endgame time-travel destination. Skippable.",
+"cap2": "Debut of Sam AND Bucky-as-Winter-Soldier — two Doomsday leads. And the film with which the Russos earned the trust for Endgame & Doomsday.",
+"gotg1": "Cosmic MCU foundation; marginal for Doomsday.",
+"av2": "Highly relevant again because of Vision Quest: Ultron (James Spader!) and Vision's origin are here.",
+"antman1": "The Quantum Realm later becomes Endgame's time machine and Kang's prison.",
+"cw": "The foundation: the Avengers break apart. Without this rupture, nothing afterwards makes sense.",
+"strange1": "The MCU's magic fundamentals. Doom's second power source beside technology.",
+"gotg2": "No threads for Doomsday.",
+"spider1": "Holland's Peter begins here; his road ends (for now) in Brand New Day.",
+"thor3": "Thor's reinvention; Asgard's end explains his current status.",
+"bp1": "Wakanda foundation for Shuri, M'Baku and Wakanda Forever.",
+"iw": "The Russo blueprint for Doomsday: the villain wins.",
+"antman2": "The Quantum Realm accident that makes Endgame possible in the first place.",
+"cm": "Carol's origin; basis for The Marvels.",
+"eg": "The time-travel mechanic opens the multiverse door — and Tony's farewell is the context that makes RDJ's return as Doom truly hurt.",
+"spider2": "The unmasking is the direct trigger of No Way Home. Fun fact: Mysterio's multiverse lie came true two years later.",
+"wv": "9 episodes. Chaos magic and reality rewriting — the basis for MoM, Agatha and Vision Quest.",
+"fws": "6 episodes. Sam's road to the Captain America who leads the heroes in Doomsday.",
+"l1": "THE foundational series of the saga: TVA, timelines, Kang. Without it you only half understand Doomsday.",
+"bw": "Half the Thunderbolts family starts here. Direct pipeline to the New Avengers.",
+"wi": "Multiverse feeling in its purest form; Captain Carter and Infinity Ultron as a foretaste of variant chaos.",
+"sc": "Simu Liu is in the Doomsday cast; the rings signal is still open.",
+"et": "The dead Celestial becomes the adamantium source of Brave New World.",
+"hk": "6 episodes. Kate Bishop — Young Avengers building block.",
+"nwh": "The multiverse breaks into cinema in a big way for the first time — Fox and Sony worlds are officially real.",
+"mk": "6 episodes. Strong, but (so far) without saga connection.",
+"mom": "Introduces incursions — the mechanism behind Doomsday and Secret Wars. Plus: worlds where X-Men and F4 have long existed.",
+"msm": "6 episodes. The MCU's very first mutant mention. Post-credits leads into The Marvels.",
+"tlt": "Thor's status quo before his Doomsday return.",
+"shk": "9 episodes. Meta multiverse including the K.E.V.I.N. AI.",
+"wbn": "Atmospheric loner without saga threads.",
+"bpwf": "Shuri, M'Baku, Namor and Namora are all in the Doomsday cast.",
+"ghs": "44 minutes of Christmas. Phase 4 closer.",
+"qm": "The saga plan Doom inherits — and the Council of Kangs is an open thread to this day. Cassie Lang starts here.",
+"g3": "Trilogy closer; no direct threads for Doomsday.",
+"si": "6 episodes. Marginal for Doomsday.",
+"l2": "Probably the single most important setup for Doomsday, period. Loki's timeline throne is the most obvious target for Doom.",
+"mv": "The post-credit scene is the X-Men door opener: Monica wakes up in a foreign universe next to Beast (Kelsey Grammer, Doomsday cast).",
+"ec": "5 episodes. Bridge to Daredevil: Born Again.",
+"x97": "Its own (animated) universe, but THE love letter to exactly the X-Men era Doomsday brings back.",
+"dw": "Anchor beings, the Void, the Fox multiverse, Gambit's debut — the bridge the old X-Men walk across into the MCU.",
+"ag": "9 episodes. Wiccan is the Young Avengers keystone — and Wanda's legacy lives on.",
+"dba": "9 episodes. The state of the streets before Doomsday.",
+"bnw": "Sam as sitting Captain America, adamantium in play, no standing Avengers team: the vulnerable world Doom finds.",
+"tb": "Doomsday's active hero team forms — and with Sentry the MCU has, for the first time, a hero-side being on Doom's level. Unstable, though.",
+"ih": "6 episodes. Mephisto's MCU debut, right before the multiverse finale — no coincidence. Phase 5 closer.",
+"f4": "The direct lead-in: the post-credit scene is practically the first scene of Doomsday. Phase 6 opener.",
+"eow": "4 episodes of animation. Skippable for Doomsday.",
+"wm": "A footnote to the saga.",
+"bnd": "In theaters since 07/31/2026 — the last theatrical film before Doomsday.",
+"vq": "From October 14, 2026 on Disney+ (8 episodes) — the last series before Doomsday; Vision's return could matter in the Avengers conflict.",
+"doomsday": "The destination of this timeline. Theatrical release: 12/18/2026 (Germany likely 12/16).",
+"secretwars": "Theatrical release: 12/17/2027. As soon as the focus shifts, this hub will be expanded for it."
 },
-"comics":{
-"iron1":["Iron Man's debut — the cave origin comes almost 1:1 from here (only Vietnam became Afghanistan)."],
-"hulk":["Lee/Kirby's origin — modernized in the film from gamma bomb to lab accident."],
-"thor1":["Thor's debut.","The film's grounded small-town tone comes from this run — Straczynski even has a cameo."],
-"cap1":["Cap punches Hitler on the cover — older than the US entry into the war."],
-"av1":["Loki as the first enemy — as in the film.","Modern look, Fury in the Samuel L. Jackson design (with his permission — years before the casting!)."],
-"iron3":["Warren Ellis' tech-virus story is the film's skeleton."],
-"cap2":["Ed Brubaker's run — the Bucky return that was considered unfilmable."],
-"gotg1":["This modern team lineup (not the 1969 one) is the template."],
-"av2":["Ultron's comic origin (there it's Hank Pym who creates him, not Tony)."],
-"antman1":["Scott Lang's debut as the thief who steals the suit — the film's premise."],
-"cw":["Mark Millar's event — registration was slimmed down into the Sokovia Accords."],
-"strange1":["Ditko's psychedelic dimensions shape the look to this day.","The film's tone and medical ethics."],
-"spider1":["The origin — deliberately skipped in the film.","Bendis' teenage tone is the real Homecoming DNA."],
-"thor3":["Gladiator Hulk on Sakaar — half the film.","The twilight of the gods from the classic Thor issues."],
-"bp1":["T'Challa's debut.","Dora Milaje, political-thriller tone, Everett Ross."],
-"iw":["Starlin's event: the Snap, half the universe, everything."],
-"eg":["The second half of the event — plus Marvel's own time-travel logic."],
-"cm":["Carol's modern definition incl. 'Higher, Further, Faster'.","The conflict background."],
-"wv":["Suburban idyll as horror — the series' DNA.","Wanda rewrites reality."],
-"fws":["Isaiah Bradley's story — adopted almost unchanged."],
-"l1":["The likeable trickster Loki.","Debut of the TVA (by Walt Simonson)."],
-"nwh":["The forgetting deal — in the film without Mephisto, with Strange.","Spider-Men across universes."],
-"msm":["Kamala's celebrated origin — fandom, family, Jersey City."],
-"tlt":["Jason Aaron's Gorr — considerably more terrifying in the comic.","Jane Foster as Thor, including the cancer dilemma."],
-"shk":["Jen breaks the fourth wall — long before Deadpool."],
-"wbn":["Moon Knight's debut, by the way — the special only takes the monster tone."],
-"qm":["Kang's debut.","Variant tangle as a feature."],
-"tb":["Villains as fake heroes — one of the best twists in comic history.","Jenkins' Sentry incl. the Void concept."],
-"f4":["The beginning of the Marvel universe.","Galactus, Silver Surfer, the price of salvation."],
-"ih":["Riri Williams' debut under Bendis."],
-"doomsday":["Doom's debut.","Incursions, Battleworld, God Emperor Doom — the presumed blueprint."],
-"secretwars":["The original event.","The multiverse dies, Doom rules the remains."],
-"xmen1":["The team's debut.","The moral template of the early films."],
-"x2":["Stryker comes straight from here."],
-"x3":["Claremont/Byrne's milestone — barely scratched by the film.","Whedon's cure story."],
-"dofp":["Two issues (!) that founded an entire subgenre."],
-"logan":["Millar's end-times western — the film swaps villains, keeps the soul."],
-"dp1":["Deadpool's debut (Liefeld).","The humor tone incl. fourth wall."],
-"firstclass":["Only the name — the 60s origin is a film invention."],
-"raimi1":["The most faithful origin adaptation."],
-"raimi2":["Peter quits — including the legendary trash-can image, restaged in the film."],
-"venom1":["Venom as an antihero in San Francisco — the film's setting and tone."],
-"sv1":["Miles' debut.","The multiverse of the spider people."],
-"sv2":["The Spider-Society mythology."],
-"dd1":["Miller/Romita's origin.","Fisk dismantles Matt's life — season 3 AND the new series carry the name."],
-"jj":["Bendis' noir series — Kilgrave, trauma, all from here."],
-"pun":["Ennis' tone between brutality and black humor."],
-"dba":["The title says it all."],
-"hulk03":["Plus Ang Lee's own father psychoanalysis."],
-"howard":["Steve Gerber's satire duck — the film didn't get the joke."],
-"blade1":["Blade's debut as a side character — the film made him an icon."],
-"ghostrider07":["Johnny Blaze's fiery debut."],
-"dw":["Plus two decades of meta references to everything."],
-"bnw":["Red Hulk's debut mystery."],
-"ag":["Wiccan's road to the Young Avengers (Heinberg/Cheung)."],
-"mk":["The series' identity psychology."],
-"x97":["The series adapts 'Lifedeath' and the Genosha material, among others."]
+"comics": {
+"iron1": [
+"Iron Man's debut — the cave origin comes almost 1:1 from here (only Vietnam became Afghanistan)."
+],
+"hulk": [
+"Lee/Kirby's origin — modernized in the film from gamma bomb to lab accident."
+],
+"thor1": [
+"Thor's debut.",
+"The film's grounded small-town tone comes from this run — Straczynski even has a cameo."
+],
+"cap1": [
+"Cap punches Hitler on the cover — older than the US entry into the war."
+],
+"av1": [
+"Loki as the first enemy — as in the film.",
+"Modern look, Fury in the Samuel L. Jackson design (with his permission — years before the casting!)."
+],
+"iron3": [
+"Warren Ellis' tech-virus story is the film's skeleton."
+],
+"cap2": [
+"Ed Brubaker's run — the Bucky return that was considered unfilmable."
+],
+"gotg1": [
+"This modern team lineup (not the 1969 one) is the template."
+],
+"av2": [
+"Ultron's comic origin (there it's Hank Pym who creates him, not Tony)."
+],
+"antman1": [
+"Scott Lang's debut as the thief who steals the suit — the film's premise."
+],
+"cw": [
+"Mark Millar's event — registration was slimmed down into the Sokovia Accords."
+],
+"strange1": [
+"Ditko's psychedelic dimensions shape the look to this day.",
+"The film's tone and medical ethics."
+],
+"spider1": [
+"The origin — deliberately skipped in the film.",
+"Bendis' teenage tone is the real Homecoming DNA."
+],
+"thor3": [
+"Gladiator Hulk on Sakaar — half the film.",
+"The twilight of the gods from the classic Thor issues."
+],
+"bp1": [
+"T'Challa's debut.",
+"Dora Milaje, political-thriller tone, Everett Ross."
+],
+"iw": [
+"Starlin's event: the Snap, half the universe, everything."
+],
+"eg": [
+"The second half of the event — plus Marvel's own time-travel logic."
+],
+"cm": [
+"Carol's modern definition incl. 'Higher, Further, Faster'.",
+"The conflict background."
+],
+"wv": [
+"Suburban idyll as horror — the series' DNA.",
+"Wanda rewrites reality."
+],
+"fws": [
+"Isaiah Bradley's story — adopted almost unchanged."
+],
+"l1": [
+"The likeable trickster Loki.",
+"Debut of the TVA (by Walt Simonson)."
+],
+"nwh": [
+"The forgetting deal — in the film without Mephisto, with Strange.",
+"Spider-Men across universes."
+],
+"msm": [
+"Kamala's celebrated origin — fandom, family, Jersey City."
+],
+"tlt": [
+"Jason Aaron's Gorr — considerably more terrifying in the comic.",
+"Jane Foster as Thor, including the cancer dilemma."
+],
+"shk": [
+"Jen breaks the fourth wall — long before Deadpool."
+],
+"wbn": [
+"Moon Knight's debut, by the way — the special only takes the monster tone."
+],
+"qm": [
+"Kang's debut.",
+"Variant tangle as a feature."
+],
+"tb": [
+"Villains as fake heroes — one of the best twists in comic history.",
+"Jenkins' Sentry incl. the Void concept."
+],
+"f4": [
+"The beginning of the Marvel universe.",
+"Galactus, Silver Surfer, the price of salvation."
+],
+"ih": [
+"Riri Williams' debut under Bendis."
+],
+"doomsday": [
+"Doom's debut.",
+"Incursions, Battleworld, God Emperor Doom — the presumed blueprint."
+],
+"secretwars": [
+"The original event.",
+"The multiverse dies, Doom rules the remains."
+],
+"xmen1": [
+"The team's debut.",
+"The moral template of the early films."
+],
+"x2": [
+"Stryker comes straight from here."
+],
+"x3": [
+"Claremont/Byrne's milestone — barely scratched by the film.",
+"Whedon's cure story."
+],
+"dofp": [
+"Two issues (!) that founded an entire subgenre."
+],
+"logan": [
+"Millar's end-times western — the film swaps villains, keeps the soul."
+],
+"dp1": [
+"Deadpool's debut (Liefeld).",
+"The humor tone incl. fourth wall."
+],
+"firstclass": [
+"Only the name — the 60s origin is a film invention."
+],
+"raimi1": [
+"The most faithful origin adaptation."
+],
+"raimi2": [
+"Peter quits — including the legendary trash-can image, restaged in the film."
+],
+"venom1": [
+"Venom as an antihero in San Francisco — the film's setting and tone."
+],
+"sv1": [
+"Miles' debut.",
+"The multiverse of the spider people."
+],
+"sv2": [
+"The Spider-Society mythology."
+],
+"dd1": [
+"Miller/Romita's origin.",
+"Fisk dismantles Matt's life — season 3 AND the new series carry the name."
+],
+"jj": [
+"Bendis' noir series — Kilgrave, trauma, all from here."
+],
+"pun": [
+"Ennis' tone between brutality and black humor."
+],
+"dba": [
+"The title says it all."
+],
+"hulk03": [
+"Plus Ang Lee's own father psychoanalysis."
+],
+"howard": [
+"Steve Gerber's satire duck — the film didn't get the joke."
+],
+"blade1": [
+"Blade's debut as a side character — the film made him an icon."
+],
+"ghostrider07": [
+"Johnny Blaze's fiery debut."
+],
+"dw": [
+"Plus two decades of meta references to everything."
+],
+"bnw": [
+"Red Hulk's debut mystery."
+],
+"ag": [
+"Wiccan's road to the Young Avengers (Heinberg/Cheung)."
+],
+"mk": [
+"The series' identity psychology."
+],
+"x97": [
+"The series adapts 'Lifedeath' and the Genosha material, among others."
+]
 }
 }

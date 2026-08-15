@@ -1,8 +1,10 @@
 {
- "fetched": "2026-08-02",
+ "fetched": "2026-08-15",
  "trending": [
   "bnd",
-  "doomsday"
+  "doomsday",
+  "x97",
+  "vq"
  ],
  "upcoming": [
   {
@@ -21,9 +23,23 @@
   },
   {
    "t": "Avengers: Secret Wars",
-   "d": "2027-12-16",
+   "d": "2027-12-15",
    "id": "secretwars",
    "img": "p/secretwars",
+   "tv": false
+  },
+  {
+   "t": "Untitled X-Men Film",
+   "d": "2028-05-05",
+   "id": null,
+   "img": "u/1293690",
+   "tv": false
+  },
+  {
+   "t": "Ghost Rider",
+   "d": "2028-07-28",
+   "id": "ghostrider07",
+   "img": "p/ghostrider07",
    "tv": false
   },
   {
