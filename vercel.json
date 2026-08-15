@@ -46,12 +46,22 @@
   "redirects": [
     {
       "source": "/film/vision-quest",
-      "destination": "/film/visionquest",
+      "destination": "/film/visionquest/",
+      "permanent": true
+    },
+    {
+      "source": "/film/vision-quest/",
+      "destination": "/film/visionquest/",
       "permanent": true
     },
     {
       "source": "/en/film/vision-quest",
-      "destination": "/en/film/visionquest",
+      "destination": "/en/film/visionquest/",
+      "permanent": true
+    },
+    {
+      "source": "/en/film/vision-quest/",
+      "destination": "/en/film/visionquest/",
       "permanent": true
     }
   ]
